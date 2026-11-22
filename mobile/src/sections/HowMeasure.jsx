@@ -13,8 +13,8 @@ const Layers = () => (<svg viewBox="0 0 32 32" {...sv}><path d="M16 4 4 10.2 16 
 
 const CARDS = [
   { n: '01', tag: 'During development', cap: false, q: 'Was it useful?', d: 'After each module, participants rate how relevant and practical it was for their work.', Icon: Bubble, label: ['Short participant feedback'] },
-  { n: '02', tag: 'After 3 months', cap: true, q: 'Is it being used?', d: 'Participants check in on their plan: which actions they have tried at work, and what got in the way.', Icon: Clipboard, label: ['Development', 'plan check-in'] },
-  { n: '03', tag: 'After 6 months', cap: true, q: 'Has behaviour changed?', d: 'The same questionnaires, the same people. Results are compared with the starting point, area by area, from three angles:',
+  { n: '02', tag: 'At the end of training', cap: true, q: 'Is it being used?', d: 'Participants check in on their plan: which actions they have tried at work, and what got in the way.', Icon: Clipboard, label: ['Development', 'plan check-in'] },
+  { n: '03', tag: '3 months after training', cap: true, q: 'Has behaviour changed?', d: 'The same questionnaires, the same people. Results are compared with the starting point, area by area, from three angles:',
     rows: [
       { t: 'The manager’s view', s: 'How they now see their own behaviour.', chip: ['Managerial', 'Profile'], tone: 'blue', Icon: User },
       { t: 'The team’s view', s: 'Whether colleagues see a difference day to day.', chip: ['360°', 'Feedback'], tone: 'violet', Icon: Users },

@@ -22,13 +22,13 @@ export default function Measure() {
       <div className="ms-in">
         <h2 className="ms-title rv" style={{ '--i': 0 }}>Then we run the assessment again.<span>And show you what changed.</span></h2>
         <div className="ms-eyebrow rv" style={{ '--i': 1 }}><em>04</em><i aria-hidden="true" /><span>Measure</span><u aria-hidden="true" /><s>Prove the impact</s></div>
-        <p className="ms-text rv" style={{ '--i': 2 }}>We use the same questions with the same people, six months later. The results sit side by side with where they started.</p>
+        <p className="ms-text rv" style={{ '--i': 2 }}>We use the same questions with the same people, three months after training. The results sit side by side with where they started.</p>
         <p className="ms-text ms-text--2 rv" style={{ '--i': 3 }}>This closes the ROI loop. Not with anecdote, but with data.</p>
 
         <div className="ms-flow rv" style={{ '--i': 4 }}>
           <div className="ms-step"><span className="ms-ico"><Clip /></span><p>Assessment</p></div>
           <i aria-hidden="true" />
-          <div className="ms-step"><b>6</b><p>months later</p></div>
+          <div className="ms-step"><b>3</b><p>months after training</p></div>
           <i aria-hidden="true" />
           <div className="ms-step"><span className="ms-ico"><Bars /></span><p>Results</p></div>
         </div>

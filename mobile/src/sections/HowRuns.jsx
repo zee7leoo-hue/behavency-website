@@ -15,11 +15,11 @@ const Clock = (p) => (<svg viewBox="0 0 24 24" {...sv} {...p}><circle cx="12" cy
 const Users = (p) => (<svg viewBox="0 0 24 24" {...sv} {...p}><circle cx="9" cy="8" r="3.2" /><path d="M3 19.5v-.6A4.9 4.9 0 0 1 7.9 14h2.2a4.9 4.9 0 0 1 4.9 4.9v.6M15.6 5a3.2 3.2 0 0 1 0 6.1M18 14.2a4.9 4.9 0 0 1 3 4.6v.7" /></svg>)
 
 const STEPS = [
-  { Icon: Flag, who: 'You and Behavency', t: 'Kick-off', p: 'We agree the goals, the group of managers and the timeline. Participants get their invitations.', d: '≈ 1 week' },
-  { Icon: Clip, who: 'Managers and their teams', t: 'Assessment', p: 'Self-assessment, 360 feedback, the barriers survey and resilience, with optional interviews.', d: '≈ 2–3 weeks' },
-  { Icon: Pad, who: 'Participants and facilitator', t: 'Results and game', p: 'Individual and group reports. The team game and reflection turn results into commitment.', d: '≈ 1–2 weeks' },
-  { Icon: Cap, who: 'Managers', t: 'Training and Masterplans', p: 'Programmes matched to each manager’s priorities, each with a Masterplan for practice at work.', d: '≈ 2–3 months' },
-  { Icon: Chart, who: 'You and Behavency', t: 'Measure', p: 'A follow-up check shows what changed in behaviour and in the conditions around the managers.', d: 'After 3–6 months' },
+  { Icon: Flag, who: 'You and Behavency', t: 'Kick-off', p: 'We agree the goals, the group and the timeline. Participants get their invitations.', d: 'Week 1' },
+  { Icon: Clip, who: 'Participants', t: 'Assessment', p: 'About 1.5 hours per person, done at their own pace.', d: 'Weeks 2–4' },
+  { Icon: Pad, who: 'Participants and facilitator', t: 'Team game and reflection', p: 'A 2.5-hour session, then the team’s Insight Report.', d: 'Weeks 4–6' },
+  { Icon: Cap, who: 'Participants', t: 'Training and Masterplans', p: 'Programmes matched to each person’s priorities. Length depends on the programmes chosen.', d: 'From week 6' },
+  { Icon: Chart, who: 'Participants', t: 'Re-assessment', p: 'The same questionnaires, the same people, compared with the starting point.', d: '3 months after training' },
 ]
 
 export default function HowRuns() {
@@ -28,7 +28,7 @@ export default function HowRuns() {
     <section ref={ref} className={`hw ${seen ? 'is-in' : ''}`} id="how-it-runs">
       <div className="hw-pill"><b>How it runs</b><u aria-hidden="true" /><span>From kick-off to measurable change</span></div>
       <h2 className="hw-title">One programme, <em>five clear steps.</em></h2>
-      <p className="hw-text">You always know what happens next, who is involved and roughly how long it takes.</p>
+      <p className="hw-text">You always know what happens when, and who is involved.</p>
 
       <div className="hw-panel">
         <div className="hw-bar">
@@ -53,7 +53,7 @@ export default function HowRuns() {
           ))}
         </ol>
       </div>
-      <p className="hw-note">Timings are placeholders to confirm.</p>
+      <p className="hw-note"></p>
     </section>
   )
 }
