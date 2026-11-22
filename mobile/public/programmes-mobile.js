@@ -154,6 +154,7 @@
   .tm .tm-lead { margin-top: 12px !important; font: 400 15.5px/1.55 Inter, sans-serif !important; color: #4f5770 !important; }
   .tm-allbtn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 52px; margin-top: 22px; border: 1.5px solid #0f1b3d; border-radius: 999px; background: transparent; font: 600 15.5px/1 Inter, sans-serif !important; color: #0f1b3d !important; cursor: pointer; }
   .tm-allbtn:active { background: #0f1b3d; color: #fff !important; }
+  .tm .tm-allbtn { margin-top: 22px; } /* gap between the white box above and the "See all" button */
   .tm-tile { width: 40px; height: 40px; border-radius: 12px; background: #f1edfb; color: #5b3fc4; display: grid; place-items: center; flex: none; }
   .tm .tm-for { font: 700 12px/1.3 Inter, sans-serif !important; letter-spacing: .09em !important; text-transform: uppercase !important; color: #6a4bd2 !important; }
   .tm .tm-t { font: 600 19px/1.25 "Source Serif 4", Georgia, serif !important; color: #0f1b3d !important; letter-spacing: -.005em !important; }
