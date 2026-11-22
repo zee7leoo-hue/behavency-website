@@ -1,0 +1,18 @@
+# Dependencies and build output (rebuilt by npm / Netlify)
+node_modules
+dist
+# the combined site Netlify publishes (scripts/build-site.sh)
+site
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local secrets
+.env
+.env.*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode

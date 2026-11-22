@@ -1,0 +1,12 @@
+# One Netlify site for both Behavency websites, on one address:
+#   - desktop/ (the desktop site) is served at the root
+#   - mobile/  (the phone site)   is built into /m/
+#   - the edge function netlify/edge-functions/device.js shows the phone site to phones on the same address
+# Both are built by scripts/build-site.sh.
+
+[build]
+  command = "bash scripts/build-site.sh"
+  publish = "site"
+
+[build.environment]
+  NODE_VERSION = "22"
