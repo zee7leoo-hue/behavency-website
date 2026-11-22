@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react'
+import DemoModal from './DemoModal'
 import logoHead from './assets/logo-full.png'
 
 const LINKS = [
@@ -10,6 +11,8 @@ const LINKS = [
 
 export default function Nav() {
   const [open, setOpen] = useState(false)
+  const [demo, setDemo] = useState(false)
+  const closeDemo = useCallback(() => setDemo(false), [])
   return (
     <header className={`nav ${open ? 'is-open' : ''}`}>
       <a className="nav-logo" href="#top" aria-label="Behavency" onClick={() => setOpen(false)}>
@@ -21,8 +24,9 @@ export default function Nav() {
       </button>
       <nav className="nav-menu" aria-label="Main">
         {LINKS.map((l) => <a key={l.href} href={l.href} onClick={() => setOpen(false)}>{l.label}</a>)}
-        <a className="nav-cta" href="#contact" onClick={() => setOpen(false)}>Request a Demo</a>
+        <a className="nav-cta" href="#contact" onClick={(e) => { e.preventDefault(); setOpen(false); setDemo(true) }}>Request a Demo</a>
       </nav>
+      <DemoModal open={demo} onClose={closeDemo} />
     </header>
   )
 }

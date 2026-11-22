@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
 import ContactForm from './ContactForm'
 import './DemoModal.css'
+import logoFull from './assets/logo-full-white.png'
 
 /* "Request a Demo" popup (from the hero): full screen, close button top right, Escape also closes it.
    It shows the same "Get in touch" form as the contact section at the bottom of the page.
@@ -29,7 +30,7 @@ export default function DemoModal({ open, onClose }) {
     <div className="dm" role="dialog" aria-modal="true" aria-label="Get in touch">
       <div className="dm-top">
         <span className="dm-logo" aria-hidden="true">
-          <span className="dm-mark"><svg viewBox="0 0 12 12"><circle cx="3.2" cy="3.2" r="1.7" /><circle cx="8.8" cy="3.2" r="1.7" /><circle cx="3.2" cy="8.8" r="1.7" /><circle cx="8.8" cy="8.8" r="1.7" /></svg></span>
+          <img className="dm-mark" src={logoFull} alt="" />
           Behavency
         </span>
         <button ref={closeBtn} type="button" className="dm-close" aria-label="Close" onClick={onClose}>

@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useCallback } from 'react'
+import DemoModal from '../DemoModal'
 import './Footer.css'
 import logoHead from '../assets/logo-full-white.png'
 
@@ -10,6 +11,8 @@ const GROUPS = [
 ]
 
 export default function Footer() {
+  const [demo, setDemo] = useState(false)
+  const closeDemo = useCallback(() => setDemo(false), [])
   return (
     <footer className="ft">
       <a className="ft-logo" href="#top" aria-label="Behavency, back to top">
@@ -24,7 +27,8 @@ export default function Footer() {
             <p>{g.t}</p>
             <ul>
               {g.links.map(([l, h]) => (
-                <li key={l}><a href={h} {...(h.startsWith('http') ? { target: '_blank', rel: 'noopener' } : {})}>{l}</a></li>
+                <li key={l}><a href={h} {...(h.startsWith('http') ? { target: '_blank', rel: 'noopener' } : {})}
+                  {...(l === 'Request a Demo' ? { onClick: (e) => { e.preventDefault(); setDemo(true) } } : {})}>{l}</a></li>
               ))}
             </ul>
           </div>
@@ -35,6 +39,7 @@ export default function Footer() {
         <span>© 2026 Behavency. All rights reserved.</span>
         <em>Know your people. Develop what matters.</em>
       </div>
+      <DemoModal open={demo} onClose={closeDemo} />
     </footer>
   )
 }
