@@ -3,7 +3,7 @@
 .ft *, .ft *::before, .ft *::after { box-sizing: border-box; }
 
 .ft-logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
-.ft-mark { display: block; height: 28px; width: auto; }
+.ft-mark { display: block; height: 40px; width: auto; }
 .ft-word { font: 400 22px/1 'Playfair Display', Georgia, serif; color: #fff; }
 .ft-line { margin: 14px 0 0; font-size: 14px; line-height: 1.6; color: #8d8b86; }
 

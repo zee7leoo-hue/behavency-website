@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logoHead from './assets/logo-head.png'
+import logoHead from './assets/logo-full.png'
 
 const LINKS = [
   { href: '#how', label: 'How It Works' },

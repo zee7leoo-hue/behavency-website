@@ -1,6 +1,6 @@
 import React from 'react'
 import './Footer.css'
-import logoHead from '../assets/logo-head-white.png'
+import logoHead from '../assets/logo-full-white.png'
 
 /* Footer (mobile): logo and line, two short link groups, copyright. */
 

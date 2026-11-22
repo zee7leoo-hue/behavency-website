@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import './Navbar.css'
-import logoHead from '../assets/logo-head.png'
+import logoHead from '../assets/logo-full.png'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -29,7 +29,7 @@ export default function Navbar() {
         transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}>
         <div className="nav__inner container">
           <a href="#" className="nav__logo">
-            <img src={logoHead} alt="" aria-hidden="true" style={{ height: 28, width: 'auto', display: 'block' }} />
+            <img src={logoHead} alt="" aria-hidden="true" style={{ height: 38, width: 'auto', display: 'block' }} />
             Behavency
           </a>
 
