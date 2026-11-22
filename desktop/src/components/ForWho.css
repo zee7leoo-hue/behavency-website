@@ -1,0 +1,11 @@
+.forwho__header { margin-bottom: 56px; }
+.forwho__grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.forwho__card { background: white; border-radius: var(--r-lg); border: 1px solid var(--border); overflow: hidden; display: flex; flex-direction: column; transition: var(--t); }
+.forwho__card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.forwho__accent { height: 4px; }
+.forwho__content { padding: 28px; display: flex; flex-direction: column; gap: 16px; flex: 1; }
+.forwho__title { font-family: var(--font-serif); font-size: 24px; font-weight: 400; line-height: 1.25; }
+.forwho__body { font-size: 15px; color: var(--muted); line-height: 1.75; flex: 1; }
+.forwho__detail { border-top: 1px solid var(--border); padding-top: 14px; font-size: 13px; color: var(--subtle); display: flex; flex-direction: column; gap: 3px; }
+.forwho__detail-label { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--subtle); }
+@media (max-width: 900px) { .forwho__grid { grid-template-columns: 1fr; max-width: 560px; } }

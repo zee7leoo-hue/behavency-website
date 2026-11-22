@@ -1,0 +1,21 @@
+.build__visual { display: flex; flex-direction: column; gap: 0; }
+.build__participant { display: flex; align-items: center; gap: 14px; padding: 16px 20px; background: var(--cream); border: 1px solid var(--border); border-radius: var(--r-md); }
+.build__p-avatar { width: 40px; height: 40px; border-radius: 50%; background: #DBEAFE; color: #1E3A5F; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; flex-shrink: 0; }
+.build__p-name { font-size: 15px; font-weight: 700; color: var(--ink); }
+.build__p-role { font-size: 12px; color: var(--subtle); }
+.build__p-tag { margin-left: auto; font-size: 11px; font-weight: 600; color: var(--s3); background: #EDE9FE; padding: 4px 10px; border-radius: 99px; white-space: nowrap; }
+.build__arrow { display: flex; align-items: center; gap: 12px; padding: 16px 20px; }
+.build__arrow-line { flex: 1; height: 1px; background: var(--border); position: relative; }
+.build__arrow-line::after { content: '▼'; position: absolute; right: -1px; bottom: -7px; font-size: 10px; color: var(--border); }
+.build__arrow-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--subtle); white-space: nowrap; }
+.build__modules { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+.build__module { padding: 14px 16px; border-left: 3px solid; border-radius: 0 var(--r-sm) var(--r-sm) 0; background: var(--cream); display: flex; flex-direction: column; gap: 3px; }
+.build__module-area { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.build__module-name { font-size: 15px; font-weight: 700; color: var(--ink); }
+.build__module-format { font-size: 12px; color: var(--subtle); }
+.build__masterplan { display: flex; align-items: flex-start; gap: 14px; padding: 16px 20px; background: #F5F3FF; border: 1px solid #DDD6FE; border-radius: var(--r-md); }
+.build__masterplan-icon { font-size: 18px; color: var(--s3); flex-shrink: 0; }
+.build__masterplan-title { font-size: 14px; font-weight: 700; color: var(--s3); margin-bottom: 4px; }
+.build__masterplan-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+.build__principle { display: flex; align-items: flex-start; gap: 14px; padding: 20px; background: var(--cream); border-radius: var(--r-md); border: 1px solid var(--border); font-size: 15px; color: var(--muted); line-height: 1.6; }
+.build__principle-icon { font-size: 20px; color: var(--s3); flex-shrink: 0; margin-top: 2px; }

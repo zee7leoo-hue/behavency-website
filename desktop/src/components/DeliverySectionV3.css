@@ -1,0 +1,60 @@
+/* "You choose how your people learn." — exact copy of the supplied design, scaled as one piece */
+.dv3 { position: relative; width: 100%; background: linear-gradient(90deg, #f2f1fe 0%, #f0ecfe 50%, #eee7fd 100%); overflow: hidden; }
+.dv3-canvas {
+  position: relative;
+  container-type: inline-size;
+  width: 76%;                    /* smaller than the screen, like the other sections */
+  margin: 0 auto;
+  aspect-ratio: 1600 / 820;
+  font-family: Inter, system-ui, sans-serif;
+  color: #0b1240;
+}
+.dv3-canvas > * { position: absolute; margin: 0; }
+
+.dv3-bg { left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 5%, #000 95%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 5%, #000 95%, transparent 100%); opacity: 0; transition: opacity .55s ease; user-select: none; -webkit-user-drag: none; }
+.dv3-bg.is-on { opacity: 1; }
+
+.dv3-svg { left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+.dv3-svg-stage { opacity: 0; transition: opacity .55s ease; }
+.dv3-svg-stage.is-on { opacity: 1; }
+
+/* left column */
+.dv3-eyebrow { display: flex; align-items: center; gap: calc(14 * var(--u)); }
+.dv3-eyebrow i { display: block; height: calc(2 * var(--u)); background: #0b1240; }
+.dv3-eyebrow span { font-weight: 800; letter-spacing: .13em; color: #0b1240; white-space: nowrap; }
+.dv3-title { font-family: 'Playfair Display', Georgia, serif; font-weight: 800; letter-spacing: -.035em; color: #0b1240; white-space: nowrap; font-optical-sizing: auto; }
+.dv3-title em { font-style: italic; font-weight: 700; letter-spacing: -.03em; color: #f28a1e; }
+.dv3-copy { font-weight: 400; letter-spacing: -.003em; color: #1f2440; white-space: nowrap; }
+.dv3-years { font-weight: 400; color: #2a2f4d; white-space: nowrap; letter-spacing: -.005em; }
+.dv3-years b { font-weight: 800; color: #0b1240; letter-spacing: -.02em; }
+
+/* format cards */
+.dv3-card { padding: 0; border: 0; background: transparent; cursor: pointer; font: inherit; color: inherit; -webkit-tap-highlight-color: transparent; }
+.dv3-card:focus-visible { outline: 2px solid #7c3aed; outline-offset: 3px; }
+.dv3-card-ico { position: absolute; display: grid; place-items: center; color: #6a3de8; }
+.dv3-card-ico svg { width: 100%; height: 100%; }
+.dv3-card-ico--blended { color: #f4902a; }
+.dv3-card-label { position: absolute; left: 0; right: 0; text-align: center; font-weight: 600; letter-spacing: -.02em; color: #0b1240; white-space: nowrap; }
+.dv3-card-go { position: absolute; display: grid; place-items: center; border-radius: 50%; background: #e8eaf4; color: #0b1240; transition: background-color .3s ease, color .3s ease; box-shadow: 0 0 0 calc(2 * var(--u)) #fff; }
+.dv3-card-go svg { width: 58%; height: 58%; }
+.dv3-card.is-on .dv3-card-go { background: #8b3fe8; color: #fff; box-shadow: 0 0 0 calc(3 * var(--u)) #f6edff; }
+.dv3-card:hover .dv3-card-go { background: #dfe2f0; }
+.dv3-card.is-on:hover .dv3-card-go { background: #7a2fd8; }
+
+/* the glass card of the chosen format */
+.dv3-info { inset: 0; pointer-events: none; opacity: 0; transition: opacity .5s ease; }
+.dv3-info.is-on { opacity: 1; }
+.dv3-info > * { position: absolute; margin: 0; }
+.dv3-info-ico { display: grid; place-items: center; color: #6a3de8; }
+.dv3-info-ico--blended { color: #6a3de8; }
+.dv3-info-ico svg { width: 100%; height: 100%; }
+.dv3-info-title { font-weight: 800; letter-spacing: -.03em; color: #0b1240; white-space: nowrap; }
+.dv3-info-desc { font-weight: 400; letter-spacing: -.008em; color: #1f2440; white-space: nowrap; }
+.dv3-pill > * { position: absolute; margin: 0; }
+.dv3-pill-ico { display: grid; place-items: center; color: #6a3de8; }
+.dv3-pill-ico svg { width: 100%; height: 100%; }
+.dv3-pill-text { font-weight: 500; letter-spacing: -.01em; color: #0b1240; white-space: nowrap; }
+
+@media (prefers-reduced-motion: reduce) { .dv3-bg, .dv3-info { transition: none; } }
+
+/* narrow screens: the picture scales down with the section (text stays proportional) */

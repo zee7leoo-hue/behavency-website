@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Behavency Platform Split</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;1,400&family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: one centred website section (eyebrow, serif headline, line of copy) over a large product dashboard that animates in once. */
+:root {
+  color-scheme: light;
+  --page: #fff;
+  --ink: #0f1b3d;
+  --ink-soft: #4a5470;
+  --muted: #7a8296;
+  --line: #e6e8ef;
+  --card: #ffffff;
+  --side: #0f1b33;
+  --side-ink: #aeb7cc;
+  --side-on: #1d2b4f;
+  --blue: #2563eb; --blue-bg: #e8efff;
+  --orange: #ea7a12; --orange-bg: #fff1e3;
+  --teal: #0f9f8f; --teal-bg: #e2f6f2;
+  --violet: #7c3aed; --violet-bg: #f1eafe;
+  --green: #15925a; --green-bg: #e3f6ec;
+  --red: #c2413a; --red-bg: #fdebea;
+  --serif: "Libre Caslon Text", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --sans: Inter, "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--page); color: var(--ink); font-family: var(--sans); }
+
+.section {
+  padding-block: clamp(60px, 7vw, 110px);
+  padding-inline: clamp(20px, 4vw, 60px);
+  overflow: visible;
+  background: var(--page);
+}
+
+.split-wrap {
+  max-width: 1520px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(300px, 0.8fr);
+  gap: clamp(40px, 5vw, 80px);
+  align-items: center;
+}
+
+.stage-col {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10px 70px 20px;
+  min-width: 0;
+}
+
+.stage {
+  width: 1080px;
+  max-width: 1080px;
+  position: relative;
+  margin: 0 auto;
+  container: stage / inline-size;
+  transform-origin: center center;
+}
+
+.intro {
+  max-width: 480px;
+  margin: 0;
+  text-align: left;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .18em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.eyebrow::after {
+  content: "";
+  width: 44px;
+  height: 1px;
+  background: #c9ccd6;
+}
+
+h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(38px, 4.2vw, 54px);
+  line-height: 1.12;
+  letter-spacing: -.02em;
+  margin: 18px 0 0;
+  color: var(--ink);
+}
+h1 em {
+  display: block;
+  font-style: italic;
+  font-weight: 400;
+  color: #189184;
+}
+
+.lede {
+  margin: 22px 0 0;
+  max-width: 440px;
+  font-size: clamp(15px, 1.2vw, 17px);
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 960px) {
+  .split-wrap {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .intro {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 40px;
+    height: 1px;
+    background: #c9ccd6;
+  }
+  .lede {
+    margin-inline: auto;
+  }
+}
+.dash { display: grid; grid-template-columns: 220px minmax(0, 1fr); border-radius: 18px; overflow: hidden; background: var(--card); box-shadow: 0 30px 70px -30px rgba(15, 27, 61, .35), 0 2px 6px rgba(15, 27, 61, .06); border: 1px solid #e3e5ec; }
+.side { background: var(--side); color: var(--side-ink); padding: 22px 14px; display: flex; flex-direction: column; gap: 4px; }
+.brand { display: flex; align-items: center; gap: 10px; color: #fff; font-weight: 700; font-size: 17px; padding: 0 8px 18px; }
+.logo { width: 30px; height: 30px; border-radius: 8px; background: #2b3a63; display: grid; place-items: center; }
+.nav { display: flex; align-items: center; gap: 11px; padding: 10px 12px; border-radius: 9px; font-size: 15px; font-weight: 550; }
+.nav svg { flex-shrink: 0; }
+.nav.on { background: var(--side-on); color: #fff; }
+.nav-label { font-size: 12px; letter-spacing: .14em; font-weight: 700; color: #8692af; padding: 18px 10px 6px; }
+.dot { width: 7px; height: 7px; border-radius: 9px; margin-left: auto; }
+
+.main { padding: 24px 26px 26px; min-width: 0; }
+.top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.prog { font-size: 20px; font-weight: 700; display: flex; align-items: center; gap: 6px; }
+.meta { font-size: 14px; color: var(--muted); margin-top: 5px; }
+.top-right { display: flex; align-items: center; gap: 10px; }
+.pill-date { border: 1px solid var(--line); border-radius: 8px; padding: 8px 13px; font-size: 13.5px; font-weight: 600; display: flex; gap: 6px; align-items: center; }
+.avatar { width: 30px; height: 30px; border-radius: 99px; background: #6b7591; color: #fff; display: grid; place-items: center; font-size: 11.5px; font-weight: 700; }
+
+.kpis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 20px; }
+.kpi { border: 1px solid var(--line); border-radius: 12px; padding: 16px 16px; display: flex; gap: 14px; align-items: flex-start; }
+.kpi-ico { width: 40px; height: 40px; border-radius: 11px; display: grid; place-items: center; flex-shrink: 0; }
+.kpi-num small { font-size: 18px; font-weight: 600; color: var(--muted); }
+.kpi-num { font-size: 32px; font-weight: 800; letter-spacing: -.01em; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.kpi-label { font-size: 14.5px; font-weight: 500; color: var(--ink-soft); margin-top: 3px; }
+.kpi-sub { font-size: 13px; color: var(--muted); margin-top: 8px; font-weight: 500; }
+.kpi-sub.up { color: var(--green); }
+
+.body { display: grid; grid-template-columns: minmax(0, 1fr) 270px; gap: 16px; margin-top: 20px; }
+.tbl-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+.tbl-title { font-size: 17px; font-weight: 700; }
+.tools { display: flex; gap: 8px; }
+.search, .select { border: 1px solid var(--line); border-radius: 8px; padding: 7px 12px; font-size: 13.5px; color: var(--muted); display: flex; gap: 6px; align-items: center; }
+.row { display: grid; grid-template-columns: minmax(160px, 1.6fr) 96px minmax(100px, 1.1fr) 116px 70px; gap: 12px; align-items: center; padding: 10px 6px; border-top: 1px solid #f0f1f5; font-size: 13.5px; }
+.row.head { border-top: 0; font-size: 12px; font-weight: 700; letter-spacing: .08em; color: var(--muted); padding-block: 6px; }
+.who { display: flex; gap: 10px; align-items: center; min-width: 0; }
+.ini { width: 30px; height: 30px; border-radius: 99px; background: #eef0f5; color: #56607a; display: grid; place-items: center; font-size: 10.5px; font-weight: 700; flex-shrink: 0; }
+.name { font-weight: 600; font-size: 15px; }
+.role { font-size: 13px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.chip { display: inline-block; border-radius: 99px; padding: 4px 11px; font-size: 12.5px; font-weight: 600; }
+.bar { display: flex; align-items: center; gap: 8px; font-variant-numeric: tabular-nums; font-weight: 600; }
+.track { flex: 1; height: 5px; border-radius: 9px; background: #eceef4; overflow: hidden; }
+.fill { display: block; height: 100%; border-radius: 9px; transform-origin: left center; }
+.status { display: inline-block; border-radius: 99px; padding: 4px 11px; font-size: 12.5px; font-weight: 600; white-space: nowrap; }
+.ago { color: var(--muted); }
+.tbl-foot { display: flex; justify-content: space-between; font-size: 13.5px; color: var(--muted); padding: 12px 6px 0; border-top: 1px solid #f0f1f5; }
+.tbl-foot b { color: var(--ink); font-weight: 600; }
+
+.next { border: 1px solid var(--line); border-radius: 12px; padding: 14px 14px; display: flex; flex-direction: column; gap: 12px; }
+.next-h { display: flex; justify-content: space-between; font-size: 15.5px; font-weight: 700; }
+.next-h a { font-size: 13.5px; color: var(--blue); font-weight: 600; text-decoration: none; }
+.item { display: flex; gap: 10px; align-items: flex-start; }
+.item-ico { width: 28px; height: 28px; border-radius: 8px; border: 1px solid var(--line); display: grid; place-items: center; flex-shrink: 0; color: var(--ink-soft); }
+.item b { display: block; font-size: 14px; font-weight: 600; }
+.item span { font-size: 13px; color: var(--muted); }
+.cta { margin-top: 2px; background: var(--side); color: #fff; border-radius: 10px; padding: 14px; display: flex; gap: 12px; align-items: center; }
+.cta b { font-size: 14.5px; display: block; }
+.cta span { font-size: 12.5px; color: #b9c2d8; }
+.cta-go { margin-left: auto; width: 28px; height: 28px; border-radius: 99px; background: rgba(255,255,255,.14); display: grid; place-items: center; flex-shrink: 0; }
+
+
+/* Motion: a ~5 s walk through the product, once. The resting state is fully visible; .pre exists only for the moment
+   before the entrance. Each piece gets its own delay (--d, seconds) from the script. */
+.stage { position: relative; }
+.a { transition: opacity .8s cubic-bezier(.2,.7,.2,1) calc(var(--d, 0) * 1s), transform .8s cubic-bezier(.2,.7,.2,1) calc(var(--d, 0) * 1s); }
+.dash.a { transition-duration: 1.3s, 1.3s; }
+.pre .a { opacity: 0; transition: none; }
+.pre .dash.a { transform: translateY(32px) scale(.985); }
+.pre .nav.a { transform: translateX(-10px); }
+.pre .kpi.a, .pre .row.a { transform: translateY(10px); }
+.pre .item.a { transform: translateX(14px); }
+.pre .status.a { transform: scale(.85); }
+.pre .float.a { transform: translateY(16px) scale(.96); }
+.pre .brand.a, .pre .nav-label.a, .pre .top > div.a, .pre .tbl-head.a, .pre .tbl-foot.a, .pre .next-h.a { transform: translateY(8px); }
+.fill { transition: transform 1.3s cubic-bezier(.25,.8,.25,1) calc(var(--d, 0) * 1s); }
+.pre .fill { transform: scaleX(0); transition: none; }
+/* Each stage dot rings once, in journey order */
+.dot.ring { animation: ring 1s ease-out calc(var(--d, 0) * 1s) 1 both; }
+@keyframes ring { 0% { box-shadow: 0 0 0 0 currentColor; } 70% { box-shadow: 0 0 0 7px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
+.nav.lit { animation: lit 1s ease calc(var(--d, 0) * 1s) 1 both; }
+@keyframes lit { 0%, 100% { background: transparent; } 40% { background: rgba(255,255,255,.07); color: #fff; } }
+.cta.glow { animation: glow 1.6s ease calc(var(--d, 0) * 1s) 1 both; }
+@keyframes glow { 0%, 100% { box-shadow: 0 0 0 0 rgba(37,99,235,0); } 45% { box-shadow: 0 0 0 6px rgba(37,99,235,.18); } }
+/* The one card that steps out of the dashboard, and stays */
+.float { position: absolute; right: -44px; top: -38px; width: 350px; background: var(--card); border: 1px solid #e3e5ec; border-radius: 14px; padding: 16px 18px; box-shadow: 0 24px 50px -20px rgba(15,27,61,.35), 0 2px 6px rgba(15,27,61,.06); display: flex; gap: 12px; align-items: flex-start; z-index: 2; }
+.float.insight { top: auto; right: auto; left: -44px; bottom: -84px; width: 370px; }
+.float .warn { width: 36px; height: 36px; border-radius: 99px; background: var(--orange-bg); color: var(--orange); display: grid; place-items: center; flex-shrink: 0; }
+.float .tags i.id { background: var(--blue-bg); color: var(--blue); }
+.float .ok { width: 36px; height: 36px; border-radius: 99px; background: var(--green-bg); color: var(--green); display: grid; place-items: center; flex-shrink: 0; }
+.float b { display: block; font-size: 16px; font-weight: 700; }
+.float span { display: block; font-size: 14px; color: var(--muted); margin-top: 3px; line-height: 1.45; }
+.float .tags { display: flex; gap: 6px; margin-top: 8px; }
+.float .tags i { font-style: normal; font-size: 12.5px; font-weight: 600; border-radius: 99px; padding: 3px 9px; background: var(--teal-bg); color: var(--teal); }
+@media (max-width: 1340px) { .float { right: 12px; top: -46px; } }
+@media (max-width: 860px) { .float { display: none; } }
+@media (max-width: 1340px) { .float.insight { left: 12px; } }
+@media (prefers-reduced-motion: reduce) { .a, .fill { transition: none !important; } .dot.ring, .nav.lit, .cta.glow { animation: none !important; } }
+
+/* Narrower screens */
+/* Because the dashboard now matches the section below (about 1080px wide), the table and side panel
+   use slightly tighter column sizes when the dashboard is narrower than its 1240px design width. */
+@container stage (max-width: 1180px) {
+  .body { grid-template-columns: minmax(0, 1fr) 250px; }
+  .row { grid-template-columns: minmax(130px, 1.5fr) 80px minmax(90px, 1fr) 108px 64px; gap: 10px; }
+}
+@container stage (max-width: 1040px) {
+  .dash { grid-template-columns: 188px minmax(0, 1fr); }
+  .main { padding: 22px 22px 24px; }
+  .row { grid-template-columns: minmax(110px, 1.4fr) 76px minmax(76px, 1fr) 100px 58px; gap: 8px; }
+}
+@media (max-width: 1100px) { .body { grid-template-columns: 1fr; } }
+@media (max-width: 860px) {
+  .dash { grid-template-columns: 1fr; }
+  .side { display: none; }
+  .row { grid-template-columns: minmax(130px, 1.6fr) 90px minmax(90px, 1fr) 104px; }
+  .row > :nth-child(5) { display: none; }
+}
+@media (max-width: 600px) {
+  .kpis { grid-template-columns: 1fr; }
+  .main { padding: 18px 14px; }
+  .row { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
+  .row > :nth-child(2), .row > :nth-child(4) { display: none; }
+  .tools { display: none; }
+}
+</style>
+</head>
+<body>
+<section class="section" id="platform">
+  <div class="split-wrap">
+    <div class="stage-col">
+      <div class="stage" id="stage">
+    <div class="dash" role="img" aria-label="Behavency dashboard: a leadership development programme with 35 managers across the four stages Identify, Engage, Build and Measure.">
+      <aside class="side">
+        <div class="brand"><span class="logo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>Behavency</div>
+        <div class="nav on"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>Dashboard</div>
+        <div class="nav"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>People</div>
+        <div class="nav-label">JOURNEY</div>
+        <div class="nav"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>1. Identify<span class="dot" style="background:var(--blue)"></span></div>
+        <div class="nav"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="10" y1="11" y2="11"/><line x1="8" x2="8" y1="9" y2="13"/><line x1="15" x2="15.01" y1="12" y2="12"/><line x1="18" x2="18.01" y1="10" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59l-.9 7.2A3 3 0 0 0 4.78 19c.98 0 1.86-.53 2.32-1.39L8 16h8l.9 1.61c.46.86 1.34 1.39 2.32 1.39a3 3 0 0 0 2.98-3.21l-.9-7.2A4 4 0 0 0 17.32 5z"/></svg>2. Engage<span class="dot" style="background:var(--orange)"></span></div>
+        <div class="nav"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>3. Build<span class="dot" style="background:var(--teal)"></span></div>
+        <div class="nav"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>4. Measure<span class="dot" style="background:var(--violet)"></span></div>
+        <div class="nav-label">MATERIALS</div>
+        <div class="nav"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>Library</div>
+        <div class="nav"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 13H8"/><path d="M16 17H8"/><path d="M16 13h-2"/></svg>Reports</div>
+      </aside>
+
+      <div class="main">
+        <div class="top">
+          <div>
+            <div class="prog">Leadership Development Programme <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+            <div class="meta">35 managers · Jan – Dec 2026</div>
+          </div>
+          <div class="top-right">
+            <span class="pill-date">Jan – Dec 2026 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+            <span class="avatar">JD</span>
+          </div>
+        </div>
+
+        <div class="kpis">
+          <div class="kpi"><span class="kpi-ico" style="background:var(--blue-bg);color:var(--blue)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <div><div class="kpi-num" data-count="35">35</div><div class="kpi-label">Managers</div><div class="kpi-sub up">↗ +2 since last month</div></div></div>
+          <div class="kpi"><span class="kpi-ico" style="background:var(--violet-bg);color:var(--violet)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></span>
+            <div><div class="kpi-num" data-count="24">24</div><div class="kpi-label">Development journeys</div><div class="kpi-sub">70% on track</div></div></div>
+          <div class="kpi"><span class="kpi-ico" style="background:var(--green-bg);color:var(--green)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg></span>
+            <div><div class="kpi-num" data-count="63" data-suffix="%">63%</div><div class="kpi-label">Improved at re-assessment</div><div class="kpi-sub">vs. first assessment</div></div></div>
+        </div>
+
+        <div class="body">
+          <div style="min-width:0">
+            <div class="tbl-head"><span class="tbl-title">Managers</span>
+              <div class="tools"><span class="search"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>Search managers…</span><span class="select">All stages <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></div></div>
+            <div class="row head"><span>NAME</span><span>STAGE</span><span>PROGRESS</span><span>STATUS</span><span>ACTIVITY</span></div>
+            <div id="rows"></div>
+            <div class="tbl-foot"><span>Showing 5 of 35 managers</span><b>View all managers →</b></div>
+          </div>
+          <div class="next">
+            <div class="next-h">What’s next <a href="#platform">View all →</a></div>
+            <div class="item"><span class="item-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg></span><div><b>3 interviews to schedule</b><span>Team Alpha, EU Senior Leaders</span></div></div>
+            <div class="item"><span class="item-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></span><div><b>2 managers need attention</b><span>Haven’t started for 14+ days</span></div></div>
+            <div class="item"><span class="item-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></svg></span><div><b>New feedback available</b><span>5 managers, 360° results</span></div></div>
+            <div class="item"><span class="item-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span><div><b>4 learning recommendations</b><span>Ready to assign</span></div></div>
+            <div class="cta"><div><b>Turn insight into impact.</b><span>Track progress and see what’s changing.</span></div><span class="cta-go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="float insight a" aria-hidden="true">
+      <span class="warn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
+      <div><b>4 barriers blocking effectiveness</b><span>Team Alpha · unclear priorities, slow approvals, unrealistic deadlines</span><div class="tags"><i class="id">Identify</i></div></div>
+    </div>
+    <div class="float a" aria-hidden="true">
+      <span class="ok"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+      <div><b>Development plan ready</b><span>Elias T. · 4 courses and 4 on-the-job steps, built from his results</span><div class="tags"><i>Build</i></div></div>
+    </div>
+      </div>
+    </div>
+
+    <div class="intro">
+      <div class="eyebrow">The platform</div>
+      <h1>From insight to action. <em>All in one place.</em></h1>
+      <p class="lede">See where the risk is, close the gaps that matter, and prove the change — on one connected platform, all in one place.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+(() => {
+  function scaleStage() {
+    const stage = document.getElementById('stage');
+    const col = document.querySelector('.stage-col');
+    if (!stage || !col) return;
+    const availableW = col.clientWidth - 40;
+    const scale = Math.min(1, Math.max(0.42, availableW / 1080));
+    stage.style.zoom = scale;
+  }
+  window.addEventListener('resize', scaleStage);
+  window.addEventListener('load', scaleStage);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(scaleStage);
+  scaleStage();
+  // The managers, each in one of the four stages.
+  const STAGE = { Identify: ['var(--blue-bg)', 'var(--blue)'], Engage: ['var(--orange-bg)', 'var(--orange)'], Build: ['var(--teal-bg)', 'var(--teal)'], Measure: ['var(--violet-bg)', 'var(--violet)'] };
+  const STATUS = { 'On track': ['var(--green-bg)', 'var(--green)'], 'In progress': ['var(--blue-bg)', 'var(--blue)'], 'Needs attention': ['var(--red-bg)', 'var(--red)'] };
+  const rows = [
+    ['FK', 'Fredrick K.', 'Operations Manager', 'Build', 75, 'On track', '2d ago'],
+    ['SL', 'Sofia L.', 'Marketing Manager', 'Identify', 50, 'In progress', '1d ago'],
+    ['HN', 'Hanna N.', 'Product Development Lead', 'Engage', 20, 'Needs attention', '3d ago'],
+    ['JG', 'Jonas G.', 'Finance Manager', 'Measure', 90, 'On track', '1d ago'],
+    ['ET', 'Elias T.', 'Regional Sales Manager', 'Build', 60, 'On track', 'Today'],
+  ];
+  document.getElementById('rows').innerHTML = rows.map(([ini, name, role, stage, pct, status, ago]) => `
+    <div class="row">
+      <div class="who"><span class="ini">${ini}</span><div style="min-width:0"><div class="name">${name}</div><div class="role">${role}</div></div></div>
+      <span><span class="chip" style="background:${STAGE[stage][0]};color:${STAGE[stage][1]}">${stage}</span></span>
+      <span class="bar">${pct}%<span class="track"><span class="fill" style="width:${pct}%;background:${STAGE[stage][1]}"></span></span></span>
+      <span><span class="status" style="background:${STATUS[status][0]};color:${STATUS[status][1]}">${status}</span></span>
+      <span class="ago">${ago}</span>
+    </div>`).join('');
+
+  const stage = document.getElementById('stage');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const nums = [...stage.querySelectorAll('[data-count]')];
+  const show = (el, n) => { el.textContent = (el.dataset.prefix || '') + n + (el.dataset.suffix || ''); };
+
+  function countUp(el, delay) {
+    setTimeout(() => {
+      const start = performance.now(), dur = 1600;
+      const step = (now) => {
+        const k = Math.min(1, (now - start) / dur), e = 1 - Math.pow(1 - k, 3);
+        show(el, Math.round(+el.dataset.count * e));
+        if (k < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    }, delay * 1000);
+  }
+
+  // The order of the walk-through (seconds from the start).
+  const $$ = (sel) => [...stage.querySelectorAll(sel)];
+  const plan = [];
+  const at = (els, d, gap = 0, cls = 'a') => els.forEach((el, i) => plan.push([el, d + i * gap, cls]));
+  at($$('.dash'), 0);
+  at($$('.brand'), 0.45);
+  at($$('.top > div'), 0.6, 0.12);
+  at($$('.nav-label'), 0.7, 0.35);
+  at($$('.tbl-head'), 1.4);
+  at($$('.row.head'), 1.55);
+  at($$('.next-h'), 2.6);
+  at($$('.tbl-foot'), 2.9);
+  at($$('.nav'), 0.6, 0.07);
+  at($$('.kpi'), 1.0, 0.18);
+  at($$('#rows .row'), 1.7, 0.16);
+  at($$('#rows .status'), 2.7, 0.12);
+  at($$('.item'), 2.9, 0.32);
+  at($$('.cta'), 4.1);
+  at($$('.float.insight'), 4.0);
+  at($$('.float:not(.insight)'), 5.0);
+  const fills = $$('#rows .fill').map((el, i) => [el, 1.9 + i * 0.16]);
+  const dots = $$('.side .dot').map((el, i) => [el, 1.3 + i * 0.35]);
+  const lit = $$('.side .dot').map((el, i) => [el.closest('.nav'), 1.3 + i * 0.35]);
+  const cta = [[stage.querySelector('.cta'), 4.6]];
+
+  // Hide everything up-front (before the section is on screen), so nothing is visible and then replayed.
+  function prepare() {
+    if (reduce) return;
+    plan.forEach(([el, d, cls]) => { el.classList.add(cls); el.style.setProperty('--d', d); });
+    fills.forEach(([el, d]) => el.style.setProperty('--d', d));
+    stage.classList.add('pre');
+    nums.forEach((el) => show(el, 0));
+  }
+
+  // When the section scrolls into view, release it: each piece eases in at its own time.
+  function play() {
+    if (reduce) return;
+    void stage.offsetWidth;
+    requestAnimationFrame(() => {
+      stage.classList.remove('pre');
+      dots.forEach(([el, d]) => { el.style.setProperty('--d', d); el.style.color = el.style.background; el.classList.add('ring'); });
+      lit.forEach(([el, d]) => { el.style.setProperty('--d', d); el.classList.add('lit'); });
+      cta.forEach(([el, d]) => { el.style.setProperty('--d', d); el.classList.add('glow'); });
+      nums.forEach((el, i) => countUp(el, 1.2 + i * 0.18));
+    });
+  }
+
+  prepare();
+  // wait for the web fonts, so the text never re-flows while it is fading in
+  const ready = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
+  let played = false;
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      if (!played && entries.some((e) => e.isIntersecting)) { played = true; io.disconnect(); ready.then(play); }
+    }, { threshold: 0.6 });
+    io.observe(stage);
+  } else {
+    ready.then(play);
+  }
+})();
+</script>
+</body>
+</html>

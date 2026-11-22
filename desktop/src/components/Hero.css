@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&family=Playfair+Display:ital,wght@1,400;1,500;1,600&family=Inter:wght@500;600;700;800&display=swap');
+
+/* Hero content uses the same width as section 2 (The Problem). --u is 1px on desktop and scales text down on narrow screens. */
+.hero {
+  --u: min(1px, calc(100vw / 1200));
+  --hero-nav-h: 80px; /* height of the fixed navbar */
+  --hero-pad: 64px;   /* equal free space above and below the content */
+  --hero-navy: #0d1a3f;
+  --hero-blue: #2273ea;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: calc(var(--hero-nav-h) + var(--hero-pad)) 0 var(--hero-pad);
+  background:
+    radial-gradient(ellipse 60% 70% at 68% 50%, rgba(232, 228, 255, 0.55), transparent 70%),
+    radial-gradient(ellipse 50% 60% at 100% 100%, rgba(226, 228, 250, 0.8), transparent 70%),
+    linear-gradient(180deg, #fcfcff 0%, #f8f8fd 100%);
+}
+
+/* Same width as section 2 (.problem__container): 1320px max + side padding */
+.hero__inner {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 var(--px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: calc(80 * var(--u)); /* minimum breathing room between text and wheel */
+}
+
+/* ── Left column ── */
+.hero__copy {
+  flex: 0 0 auto;
+  width: calc(440 * var(--u));
+}
+
+.hero__eyebrow {
+  font-family: var(--font-sans);
+  font-size: calc(15 * var(--u));
+  font-weight: 700;
+  letter-spacing: 0.125em;
+  line-height: 1;
+  color: #5d6c8b;
+  text-transform: uppercase;
+  margin-bottom: calc(31 * var(--u));
+}
+
+.hero__title {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 400;
+  margin: 0;
+}
+.hero__title-main {
+  display: block;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 700;
+  font-size: calc(62 * var(--u));
+  line-height: calc(57 * var(--u));
+  letter-spacing: -0.03em;
+  color: var(--hero-navy);
+  font-optical-sizing: auto;
+}
+.hero__title-em {
+  display: block;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: calc(55 * var(--u));
+  line-height: calc(53 * var(--u));
+  letter-spacing: -0.04em;
+  color: var(--hero-blue);
+  margin-top: calc(5 * var(--u));
+  margin-left: calc(-2 * var(--u));
+}
+
+.hero__subhead {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 400;
+  font-size: calc(25 * var(--u));
+  line-height: calc(32 * var(--u));
+  letter-spacing: -0.006em;
+  color: #12172a;
+  margin-top: calc(35 * var(--u));
+  white-space: nowrap;
+}
+
+.hero__ctas {
+  display: flex;
+  align-items: center;
+  gap: calc(34 * var(--u));
+  margin-top: calc(40 * var(--u));
+}
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(213 * var(--u));
+  height: calc(57 * var(--u));
+  border-radius: calc(12 * var(--u));
+  background: #081a48;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: calc(19 * var(--u));
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  box-shadow: 0 calc(6 * var(--u)) calc(16 * var(--u)) rgba(8, 26, 72, 0.18);
+  transition: background var(--t), transform var(--t);
+}
+.hero__btn:hover { background: #10276a; transform: translateY(-1px); }
+
+.hero__link {
+  display: inline-flex;
+  align-items: center;
+  gap: calc(10 * var(--u));
+  font-family: var(--font-sans);
+  font-size: calc(20 * var(--u));
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  color: #1113a2;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.hero__link svg { width: calc(24 * var(--u)); height: calc(24 * var(--u)); transition: transform var(--t); }
+.hero__link:hover svg { transform: translateX(4px); }
+
+/* ── Right column: the cycle wheel ── */
+.hero__visual {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 560px;
+}
+
+.hero__visual--wide { max-width: 720px; }
+.hero__inner:has(.hero__visual--wide) { gap: calc(40 * var(--u)); }
+/* Hero 1: the wheel fills the row, keeping ~70px clear of the text */
+.hero__visual--large { flex: 1 1 0; max-width: none; }
+.hero__inner:has(.hero__visual--large) { gap: calc(64 * var(--u)); }
+/* Hero 2: the cards grow into the page's right margin (never closer than 40px
+   to the screen edge, at most 140px past the section edge); the gap to the
+   text on the left stays the same. */
+.hero__visual--bleed {
+  flex: 1 1 0;
+  max-width: none;
+  margin-right: calc(-1 * clamp(0px, max(0px, (100vw - 1320px) / 2) + var(--px) - 40px, 140px));
+}
+
+.hero__wheel {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.hero__wheel-label { font-family: var(--font-sans); }
+.hero__wheel-title {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  fill: #0d1838;
+}
+.hero__wheel-desc {
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  fill: #141b33;
+}
+
+/* ── Smaller screens: stack ── */
+@media (max-width: 900px) {
+  .hero { --u: 1px; --hero-pad: 48px; min-height: 0; }
+  .hero__inner { flex-direction: column; align-items: stretch; gap: 40px; }
+  .hero__copy { width: 100%; }
+  .hero__visual { max-width: 560px; width: 100%; margin: 0 auto; flex: none; }
+  .hero__visual--bleed { margin-right: auto; }
+  .hero__title-main { font-size: 42px; line-height: 44px; }
+  .hero__title-em { font-size: 38px; line-height: 40px; }
+  .hero__subhead { font-size: 20px; line-height: 28px; white-space: normal; }
+  .hero__subhead br { display: none; }
+  .hero__ctas { flex-wrap: wrap; gap: 20px; }
+}
+
+/* Hero versions that use the mock-up artwork directly */
+.hero__ref-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* artwork background is transparent, so it sits on the hero gradient */
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0, #000 2.5%, #000 97.5%, transparent 100%),
+    linear-gradient(to bottom, transparent 0, #000 3%, #000 97%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent 0, #000 2.5%, #000 97.5%, transparent 100%),
+    linear-gradient(to bottom, transparent 0, #000 3%, #000 97%, transparent 100%);
+  mask-composite: intersect;
+}
+/* Hero 4 artwork is opaque: give its section the artwork's own background so the edges disappear */
+#hero-v4 { background: #fefbff; }

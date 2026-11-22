@@ -1,0 +1,95 @@
+/* ══════════════════════════════════════════
+   SHARED SECTION HEADLINE STYLE
+   One look for every section heading: Playfair Display, bold first line,
+   light italic accent line in teal  (as in "One framework. Different levels of the organization.")
+   Edit here to change all section headings at once.
+   ══════════════════════════════════════════ */
+:root {
+  --sh-size: clamp(38px, 4.2vw, 54px);
+  --sh-teal: #189184;
+  --sh-teal-on-dark: #189184;
+}
+
+section h2.identify__headline,
+section h2.bmodel__headline,
+section h2.bs-heading,
+section h2.ds-headline,
+section h2.dsp-headline,
+section h2.ds2-headline,
+section h2.ds3-headline,
+section h2.hwm-headline,
+section h2.headline,
+section.measure h2.headline,
+.be-hero h1,
+.sitx h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: var(--sh-size);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+/* the accent line(s) */
+section h2.identify__headline em,
+section h2.bmodel__headline .bmodel__headline--teal,
+section h2.bmodel__headline .bmodel__headline--italic,
+section h2.ds-headline .ds-headline-italic,
+section h2.dsp-headline .dsp-headline-italic,
+section h2.ds2-headline .ds2-headline-italic,
+section h2.ds3-headline .ds3-headline-italic,
+section h2.hwm-headline em,
+section h2.headline em,
+section.measure h2.headline em {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--sh-teal);
+}
+section h2.headline--white em,
+section.measure h2.headline--white em { color: var(--sh-teal-on-dark); }
+.be-hero h1 .be-emphasis { font-style: italic; font-weight: 400; font-size: 1em; }
+
+/* Identify headline: one step smaller than the shared size */
+section h2.identify__headline { font-size: clamp(36px, 3.85vw, 50px); }
+
+/* Identify: the wider Playfair lines may extend a little into the column gap, so the line breaks stay as designed */
+@media (min-width: 1100px) {
+  section h2.identify__headline { margin-right: -70px; }
+}
+
+/* Situation heading: same size as every other heading; the subtitle and underline sit a little lower to make room */
+@media (min-width: 801px) {
+  .sitx h1 { font-size: var(--sh-size); line-height: 1.1; letter-spacing: -0.02em; color: #0f172a; top: 17.6%; }
+  .sitx .subtitle { top: 42.8%; }
+  .sitx .underline { margin-top: 3.9%; }
+}
+@media (max-width: 800px) { .sitx h1 { font-size: var(--sh-size); letter-spacing: -0.02em; color: #0f172a; } }
+
+/* Highlighted words take the colour of their stage pill: Identify blue, Engage green, Build orange, Measure purple */
+section.identify h2.identify__headline em { color: #0b8de6; }
+section.bs-section h2.bs-heading em { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; color: #ee8416; }
+section.measure h2.headline.headline--white em { color: #a97bff; }
+
+/* second section of each stage: same colour as its stage pill */
+section.bmodel h2.bmodel__headline .bmodel__headline--teal,
+section.bmodel h2.bmodel__headline .bmodel__headline--italic { color: #0b8de6; }                 /* Identify: blue */
+section.ds2-section h2.ds2-headline .ds2-headline-italic { color: #ee8416; }                      /* Build: orange */
+section.hwm-section h2.hwm-headline em { color: #8c52e6; }                                        /* Measure: purple */
+
+/* Sub text under every section headline: one size (18px), same as the Identify intro paragraph */
+section.identify .identify__intro,
+.behavency-engage .be-h2-copy,
+section.bmodel .bmodel__sub,
+section.ds2-section .ds2-subheading,
+section.hwm-section .hwm-subtitle,
+section.measure .body-copy,
+section.bs-section .bs-subheading,
+section .subhead {
+  font-size: 18px;
+  line-height: 1.6;
+}
+section .subhead { font-weight: 400; }
+@media (min-width: 801px) {
+  .sitx .subtitle { font-size: 18px; }
+}

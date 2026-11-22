@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500;1,8..60,600;1,8..60,700&display=swap');
+
+/* ══════════════════════════════════════════
+   STAGE IDENTIFY — Section 01
+   ══════════════════════════════════════════ */
+
+/* Section palette (from the approved design) */
+.identify {
+  --id-navy: #0a0c45;
+  --id-teal: #0b8de6;        /* "listening", 5 and 6: blue, to match the blue Identify pill */
+  --id-teal-line: #1a9db1;   /* line in the chapter label */
+  --id-teal-bright: #06c3d1; /* arrow circle on hover */
+  --id-tint: #e8f5f5;        /* row background on hover */
+  --id-serif: 'Source Serif 4', var(--font-serif);
+}
+.identify .identify__chapter-label { margin-bottom: 12px; }
+
+/* ── Two-column split — left wider ── */
+.identify .container {
+  max-width: 1360px;
+}
+.identify__split {
+  display: grid;
+  grid-template-columns: 0.82fr 1fr;   /* right list wider than the text, as in the approved design */
+  gap: 96px;
+  align-items: flex-start;
+}
+
+/* Tighten chapter label → headline gap for this section */
+.identify .chapter-label {
+  margin-bottom: 8px;
+}
+
+/* Push entire left column down to align with right side */
+.identify__left {
+  padding-top: 18px;
+}
+
+/* ── LEFT: Headline ── */
+.identify__headline {
+  font-family: var(--id-serif);
+  font-size: clamp(40px, 4.2vw, 58px);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  color: var(--id-navy);
+  margin-bottom: 28px;
+}
+.identify__headline em {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--id-teal);
+}
+
+.identify__intro {
+  font-size: 18px;
+  margin-bottom: 40px;
+  max-width: 540px;
+  line-height: 1.6;
+  color: #2b2f43;
+}
+.identify__intro strong {
+  font-weight: 700;
+  color: var(--id-navy);
+}
+
+/* ── Stats — 5 and 6 only, better integrated ── */
+.identify__stats {
+  display: flex;
+  gap: 0;
+  padding-top: 8px;
+}
+.identify .stat__val {
+  font-family: var(--id-serif);
+  font-weight: 700;
+  font-size: 54px;
+  color: var(--id-teal);
+}
+.identify .stat__label {
+  font-size: 16px;
+  font-weight: 700;
+  color: #161c2a;
+  max-width: none;
+  margin-top: 6px;
+}
+.identify .stat__sub {
+  font-size: 14px;
+  line-height: 1.45;
+  color: #636a7a;
+  max-width: 200px;
+}
+.identify .stat + .stat {
+  border-left: 1px solid #e3e7ea;
+  padding-left: 36px;
+  margin-left: 36px;
+}
+
+/* ── RIGHT: Source list ── */
+.identify__right {
+  padding-top: 18px;   /* same start line as the headline on the left */
+}
+
+.identify__sources {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Each row is a button — full width clickable */
+.identify__source {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 8px;
+  border: none;
+  border-bottom: 1px solid #edf0f2;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 0;
+}
+.identify__source:first-child {
+  border-top: 1px solid #edf0f2;
+}
+/* Hover: soft teal background (reaches past the row edges, no layout shift) */
+.identify__source::before {
+  content: '';
+  position: absolute;
+  inset: 4px -14px;
+  border-radius: 20px;
+  background: var(--id-tint);
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: -1;
+}
+.identify__source:hover::before,
+.identify__source:focus-visible::before {
+  opacity: 1;
+}
+.identify__source:focus-visible {
+  outline: none;
+}
+
+/* Number — secondary, italic serif */
+.identify__source-num {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-style: italic;
+  color: #9a9cab;
+  width: 48px;
+  flex-shrink: 0;
+  user-select: none;
+  align-self: flex-start;
+  padding-top: 4px;
+  transition: color 0.2s;
+}
+.identify__source:hover .identify__source-num,
+.identify__source:focus-visible .identify__source-num {
+  color: var(--id-teal);
+}
+
+/* Body — name is strongest element */
+.identify__source-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.identify__source-name {
+  font-family: var(--id-serif);
+  font-size: 23px;
+  font-weight: 600;
+  color: var(--id-navy);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+.identify__source-desc {
+  font-size: 16px;
+  font-weight: 400;
+  color: #4f576b;
+  line-height: 1.65;
+}
+
+/* Arrow in a soft circle; turns solid teal with a white arrow on hover */
+.identify__source-arrow {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #eaf5f7;
+  color: #2b3150;
+  flex-shrink: 0;
+  transition: background 0.2s, color 0.2s;
+}
+.identify__source:hover .identify__source-arrow,
+.identify__source:focus-visible .identify__source-arrow {
+  background: var(--id-teal-bright);
+  color: #fff;
+}
+
+/* ══════════════════════════════════════════
+   MODAL
+   ══════════════════════════════════════════ */
+
+/* ── Overlay — flex centering container ── */
+.id-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.72);
+  z-index: 1000;
+  cursor: pointer;
+  backdrop-filter: blur(2px);
+  /* center the modal */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  overflow-y: auto;
+  will-change: opacity;
+}
+
+/* Modal panel — fixed height, always on screen */
+.id-modal {
+  position: relative;
+  background: var(--white);
+  border-radius: 4px;
+  padding: 36px 48px 48px;
+  width: 90vw;
+  max-width: 660px;
+  height: 700px;
+  max-height: 700px;
+  overflow-y: auto;
+  box-shadow: 0 32px 96px rgba(0, 0, 0, 0.28);
+  cursor: default;
+  flex-shrink: 0;
+  margin: auto;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+.id-modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: var(--subtle);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  transition: color 0.2s;
+  display: flex;
+}
+.id-modal__close:hover { color: var(--ink); }
+
+.id-modal__num {
+  font-family: var(--font-serif);
+  font-size: 14px;
+  font-style: italic;
+  color: var(--subtle);
+  margin-bottom: 6px;
+}
+.id-modal__title {
+  font-family: 'Source Serif 4', var(--font-serif);
+  font-size: clamp(26px, 2.8vw, 35px);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: #0a0c45;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+.id-modal__intro {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 20px;
+}
+
+/* Row key-value structure */
+.id-modal__rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 0;
+}
+.id-modal__row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 16px;
+  padding: 17px 0;
+  border-bottom: 1px solid var(--border);
+}
+.id-modal__row-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #4a5170;
+  padding-top: 2px;
+}
+.id-modal__row-val {
+  font-size: 15px;
+  color: var(--ink-3);
+  line-height: 1.65;
+}
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+  .identify__intro br { display: none; }
+}
+@media (max-width: 940px) {
+  .identify__split {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 52px;
+  }
+}
+@media (max-width: 600px) {
+  .identify__source-num { width: 30px; }
+  .identify__source { gap: 12px; }
+  .id-modal {
+    padding: 36px 28px 48px;
+    width: 95vw;
+  }
+  .id-modal__row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}

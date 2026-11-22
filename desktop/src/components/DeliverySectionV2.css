@@ -1,0 +1,298 @@
+.ds2-section {
+  position: relative;
+  padding: 100px 0 0 0;
+  background-color: #fafafc;
+  background-image: 
+    radial-gradient(circle at 92% 15%, rgba(200, 185, 255, 0.28) 0%, rgba(200, 185, 255, 0) 45%),
+    radial-gradient(circle at 10% 90%, rgba(195, 240, 230, 0.22) 0%, rgba(195, 240, 230, 0) 45%);
+  overflow: hidden;
+  border-top: 1px solid #f1f3f8;
+}
+
+.ds2-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1.05fr 1px 1fr;
+  gap: 40px;
+  align-items: start;
+  position: relative;
+  z-index: 2;
+}
+
+/* Left Column */
+.ds2-left-col {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.ds2-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.ds2-eyebrow-line {
+  width: 32px;
+  height: 1.5px;
+  background: #94a3b8;
+  display: inline-block;
+}
+
+.ds2-eyebrow-text {
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #5a667f;
+  text-transform: uppercase;
+}
+
+.ds2-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(38px, 4.4vw, 54px);
+  font-weight: 400;
+  color: #0d1527;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px 0;
+}
+
+.ds2-headline-italic {
+  font-style: italic;
+  color: #158b99;
+  font-weight: 400;
+}
+
+.ds2-subheading {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.65;
+  color: #55647e;
+  max-width: 460px;
+  margin: 0 0 28px 0;
+}
+
+.ds2-photo-wrap {
+  width: 100%;
+  max-width: 490px;
+  margin-top: auto;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.ds2-photo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Vertical Divider */
+.ds2-vertical-divider {
+  width: 1px;
+  align-self: stretch;
+  background: #eaecf3;
+  margin-top: 15px;
+}
+
+/* Right Column */
+.ds2-right-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 60px;
+}
+
+.ds2-formats-list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.ds2-format-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 0;
+  border-bottom: 1px solid #edf0f5;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.ds2-format-row:first-child {
+  padding-top: 5px;
+}
+
+.ds2-format-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.ds2-format-row:hover .ds2-format-icon-box {
+  transform: scale(1.05);
+}
+
+.ds2-format-icon-box--elearning {
+  background: #f4efff;
+  color: #7c3aed;
+}
+
+.ds2-format-icon-box--live {
+  background: #e8f1ff;
+  color: #2563eb;
+}
+
+.ds2-format-icon-box--inperson {
+  background: #e5f9ef;
+  color: #059669;
+}
+
+.ds2-format-icon-box--blended {
+  background: #fef4dc;
+  color: #d97706;
+}
+
+.ds2-format-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.ds2-format-title {
+  font-family: var(--font-serif);
+  font-size: 21px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+  line-height: 1.25;
+}
+
+.ds2-format-desc {
+  font-family: var(--font-sans);
+  font-size: 15.5px;
+  color: #475569;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.ds2-format-arrow {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #f1f3f7;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.ds2-format-row:hover .ds2-format-arrow {
+  background: #e2e8f0;
+  color: #0f172a;
+  transform: translateX(3px);
+}
+
+/* Bottom Right Watercolor Pill Badge */
+.ds2-badge-wrap {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+.ds2-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(205, 245, 235, 0.75) 0%, rgba(228, 222, 255, 0.8) 100%);
+  box-shadow: 0 4px 20px rgba(130, 110, 220, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+}
+
+.ds2-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ds2-badge-icon--teal {
+  color: #0d9488;
+  display: flex;
+  align-items: center;
+}
+
+.ds2-badge-icon--purple {
+  color: #7c3aed;
+  display: flex;
+  align-items: center;
+}
+
+.ds2-badge-label {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.35;
+}
+
+.ds2-badge-bold {
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.ds2-badge-light {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: #475569;
+}
+
+.ds2-badge-divider {
+  width: 1px;
+  height: 28px;
+  background: #cbd5e1;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .ds2-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .ds2-vertical-divider {
+    display: none;
+  }
+  .ds2-badge-wrap {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .ds2-container {
+    padding: 0 20px;
+  }
+  .ds2-badge {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    border-radius: 20px;
+    padding: 16px 20px;
+  }
+  .ds2-badge-divider {
+    display: none;
+  }
+}

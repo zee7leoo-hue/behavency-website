@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,400;1,500;1,600&display=swap');
+/* "People are at the heart of performance" + rotating "A reality for many HR teams" card.
+   Built on the 1600 x 815 design: every piece is placed in % / cqw of the section, so the whole
+   scene scales as one. (1cqw = 16px of the design.) */
+
+.sx-outer { background: #fff; padding-block: clamp(36px, 5vw, 100px); }
+.sx, .sx * { box-sizing: border-box; }
+
+.sx {
+  position: relative;
+  container-type: inline-size;
+  width: min(86%, 1240px);
+  margin: 0 auto;
+  aspect-ratio: 1600 / 815;
+  overflow: hidden;
+  border-radius: 3.2cqw;
+  box-shadow: 0 2.4cqw 5cqw -2.4cqw rgba(60, 20, 90, 0.35);
+  color: #fff;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(60cqw 26cqw at 56% 0%, rgba(150, 66, 190, 0.55), rgba(150, 66, 190, 0) 70%),
+    linear-gradient(100deg, #733197 0%, #75339a 45%, #6c2a8e 100%);
+}
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+/* woman + wave */
+.sx-lady {
+  position: absolute;
+  left: 80cqw;
+  top: 22.75cqw;
+  width: 20cqw;
+  height: 23.75cqw;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(1.6cqw);
+  transition: opacity 900ms ease 250ms, transform 1100ms cubic-bezier(0.22, 1, 0.36, 1) 250ms;
+}
+.sx.is-visible .sx-lady { opacity: 1; transform: none; }
+
+.sx-art { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none; }
+
+/* left copy */
+.sx-copy { position: absolute; inset: 0; z-index: 3; pointer-events: none; }
+.sx-copy > * { opacity: 0; transform: translateY(1.2cqw); transition: opacity 800ms ease, transform 900ms cubic-bezier(0.22, 1, 0.36, 1); }
+.sx.is-visible .sx-copy > * { opacity: 1; transform: none; }
+.sx.is-visible .sx-copy > :nth-child(2) { transition-delay: 90ms; }
+.sx.is-visible .sx-copy > :nth-child(3) { transition-delay: 180ms; }
+.sx.is-visible .sx-copy > :nth-child(4) { transition-delay: 300ms; }
+.sx.is-visible .sx-copy > :nth-child(5) { transition-delay: 400ms; }
+
+.sx-eyebrow {
+  position: absolute; left: 6cqw; top: 7.2cqw; margin: 0;
+  font-size: 1.42cqw; font-weight: 500; letter-spacing: .02em; line-height: 1; color: #fff;
+}
+.sx-eyebar {
+  position: absolute; left: 6cqw; top: 9.6cqw; width: 9.9cqw; height: .38cqw; border-radius: 999px;
+  background: linear-gradient(90deg, #b27be9, #c9a0f0);
+}
+.sx-title {
+  position: absolute; left: 6cqw; top: 13.6cqw; margin: 0;
+  font-family: 'Playfair Display', 'Source Serif 4', Georgia, serif;
+  font-size: 3.3cqw; line-height: 1.16; font-weight: 600; letter-spacing: -.005em; color: #fff;
+  white-space: nowrap;
+}
+.sx-title em { font-style: italic; font-weight: 500; }
+.sx-sub {
+  position: absolute; left: 6cqw; top: 23.4cqw; margin: 0;
+  font-size: 1.4cqw; line-height: 1.58; font-weight: 400; color: rgba(255, 255, 255, .9);
+  white-space: nowrap;
+}
+.sx-note {
+  position: absolute; left: 6cqw; top: 33.9cqw; margin: 0;
+  font-size: 1.4cqw; line-height: 1.58; font-weight: 600; color: #fff;
+  white-space: nowrap;
+}
+.sx-squiggle { stroke-dasharray: 340; stroke-dashoffset: 340; transition: stroke-dashoffset 1100ms cubic-bezier(0.22, 1, 0.36, 1) 600ms; }
+.sx.is-visible .sx-squiggle { stroke-dashoffset: 0; }
+
+/* white card */
+.sx-card {
+  position: absolute;
+  left: 40.56cqw;
+  top: 8.2cqw;
+  width: 45.5cqw;
+  height: 31cqw;
+  z-index: 4;
+  border-radius: 2.5cqw;
+  background: #fff;
+  color: #0d1230;
+  box-shadow: 0 1.4cqw 3.4cqw -.6cqw rgba(40, 6, 70, .38), 0 .2cqw .8cqw rgba(40, 6, 70, .12);
+  opacity: 0;
+  transform: translateY(1.4cqw);
+  transition: opacity 800ms cubic-bezier(0.22, 1, 0.36, 1) 120ms, transform 900ms cubic-bezier(0.22, 1, 0.36, 1) 120ms;
+}
+.sx.is-visible .sx-card { opacity: 1; transform: none; }
+
+.sx-card-head {
+  position: absolute; left: 3.44cqw; right: 3cqw; top: 2.7cqw;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.sx-card-label { text-transform: uppercase; font-size: 1.18cqw; font-weight: 600; letter-spacing: -.005em; line-height: 1.2; color: #0d1230; }
+.sx-card-count { font-size: 1.3cqw; font-weight: 700; letter-spacing: .03em; color: #0d1230; font-variant-numeric: tabular-nums; }
+
+/* rotating question */
+.sx-stage { position: absolute; left: 0; top: 6.6cqw; width: 100%; height: 17.5cqw; overflow: hidden; }
+
+.sx-slide {
+  position: absolute;
+  inset: 0;
+  padding: .5cqw 3.44cqw 0;
+  transition: transform 950ms cubic-bezier(0.22, 1, 0.36, 1), opacity 700ms ease, filter 950ms ease, visibility 0s linear 950ms;
+  will-change: transform, opacity, filter;
+}
+.sx-slide--out-left,
+.sx-slide--out-right { transition: transform 950ms cubic-bezier(0.22, 1, 0.36, 1), opacity 950ms linear, filter 950ms ease, visibility 0s linear 950ms; }
+.sx-slide--active { opacity: 1; transform: translateX(0); filter: blur(0); visibility: visible; transition-delay: 0s; }
+.sx-slide--out-left,
+.sx-slide--wait-left { opacity: 0; transform: translateX(-12cqw); filter: blur(5px); visibility: hidden; }
+.sx-slide--out-right,
+.sx-slide--wait-right { opacity: 0; transform: translateX(12cqw); filter: blur(5px); visibility: hidden; }
+
+.sx-q {
+  margin: 0;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  font-size: 3.05cqw;
+  font-weight: 700;
+  line-height: 1.125;
+  letter-spacing: -.012em;
+  font-optical-sizing: none; font-variation-settings: 'opsz' 18;
+  color: #0b1030;
+}
+.sx-lead, .sx-accent { display: block; white-space: nowrap; }
+.sx-accent { font-style: italic; font-weight: 700; color: #7e12b4; font-variation-settings: 'opsz' 14; letter-spacing: 0; }
+.sx-support { margin: 1.4cqw 0 0; font-size: 1.55cqw; font-weight: 400; line-height: 1.35; letter-spacing: -.005em; color: #1b1f3a; }
+.sx-support span { display: block; }
+
+/* dots */
+.sx-dots { position: absolute; left: 3.5cqw; top: 25.2cqw; display: flex; align-items: center; gap: 1.05cqw; }
+.sx-dot {
+  width: 1.2cqw; height: 1.2cqw; padding: 0; border: 0; border-radius: 50%;
+  background: #cfcfd5; cursor: pointer;
+  transition: background-color .3s ease, width .3s ease, height .3s ease;
+}
+.sx-dot:hover { background: #b6b6c0; }
+.sx-dot.is-active { width: 1.4cqw; height: 1.4cqw; background: #7a0fa8; }
+
+/* arrows */
+.sx-buttons { position: absolute; right: 2.47cqw; top: 23.47cqw; display: flex; align-items: center; gap: 1.45cqw; }
+.sx-btn {
+  display: grid; place-items: center; width: 4.8cqw; height: 4.8cqw; padding: 0;
+  border: 0; border-radius: 50%; background: #fff; color: #10142e; cursor: pointer;
+  box-shadow: 0 .45cqw 1.5cqw rgba(60, 20, 90, .24), 0 0 0 1px rgba(60, 20, 90, .04);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.sx-btn:hover { transform: translateY(-2px); box-shadow: 0 .7cqw 1.8cqw rgba(60, 20, 90, .3); }
+.sx-btn svg { width: 40%; height: 40%; fill: none; stroke: currentColor; stroke-width: 2.7; stroke-linecap: round; stroke-linejoin: round; }
+.sx-btn--next { background: linear-gradient(145deg, #8d1db7 0%, #6a0f98 100%); color: #fff; box-shadow: 0 .55cqw 1.5cqw rgba(106, 15, 152, .42); }
+
+/* pause control: invisible until a keyboard user focuses it */
+.sx-pause {
+  position: absolute; left: 3.44cqw; bottom: 1cqw; padding: .4cqw 1cqw;
+  border: 1px solid #7a0fa8; border-radius: 999px; background: #fff; color: #7a0fa8;
+  font: 600 1.1cqw Inter, Arial, sans-serif; opacity: 0; pointer-events: none;
+}
+.sx-pause:focus-visible { opacity: 1; pointer-events: auto; outline: 3px solid #b27be9; outline-offset: 2px; }
+.sx-btn:focus-visible, .sx-dot:focus-visible { outline: 3px solid #b27be9; outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .sx-lady, .sx-card, .sx-copy > * { transform: none; transition: opacity 300ms ease; }
+  .sx-squiggle { stroke-dashoffset: 0; transition: none; }
+  .sx-slide, .sx-slide--out-left, .sx-slide--out-right, .sx-slide--wait-left, .sx-slide--wait-right {
+    transform: none !important; filter: none !important; transition: opacity 250ms ease, visibility 0s linear 250ms;
+  }
+}
+
+/* phones / small tablets: the same pieces, stacked */
+@media (max-width: 860px) {
+  .sx {
+    container-type: normal; aspect-ratio: auto; display: flex; flex-direction: column;
+    width: calc(100% - 28px); border-radius: 24px; padding: 36px 20px 0;
+  }
+  .sx-copy { position: static; order: 1; pointer-events: auto; }
+  .sx-copy > * { position: static !important; }
+  .sx-eyebrow { font-size: 15px; }
+  .sx-eyebar { display: block; width: 100px; height: 4px; margin: 10px 0 24px; }
+  .sx-title { font-size: clamp(34px, 9vw, 48px); margin: 0 0 18px; }
+  .sx-sub { font-size: 16px; margin: 0 0 16px; white-space: normal; }
+  .sx-note { font-size: 16px; margin: 0 0 28px; white-space: normal; }
+  .sx-sub br, .sx-title br, .sx-note br { display: none; }
+  .sx-title { white-space: normal; }
+  .sx-squiggle { display: none; }
+
+  .sx-card { position: relative; order: 2; left: auto; top: auto; width: 100%; height: 430px; border-radius: 26px; z-index: 4; }
+  .sx-card-head { left: 22px; right: 22px; top: 22px; }
+  .sx-card-label { font-size: 12px; }
+  .sx-card-count { font-size: 14px; }
+  .sx-stage { left: 0; right: 0; top: 62px; width: auto; height: 255px; }
+  .sx-slide { padding: 4px 22px 0; }
+  .sx-q { font-size: clamp(24px, 6.6vw, 31px); }
+  .sx-lead, .sx-accent { white-space: normal; }
+  .sx-support { margin-top: 10px; font-size: 14px; }
+  .sx-slide--out-left, .sx-slide--wait-left { transform: translateX(-40px); }
+  .sx-slide--out-right, .sx-slide--wait-right { transform: translateX(40px); }
+  .sx-dots { left: 22px; top: auto; bottom: 34px; gap: 9px; }
+  .sx-dot { width: 11px; height: 11px; }
+  .sx-dot.is-active { width: 13px; height: 13px; }
+  .sx-buttons { right: 20px; top: auto; bottom: 18px; gap: 12px; }
+  .sx-btn { width: 48px; height: 48px; }
+  .sx-pause { left: 22px; bottom: 6px; font-size: 12px; padding: 4px 10px; }
+
+  .sx-lady { position: relative; order: 3; left: auto; top: auto; width: min(58vw, 300px); height: auto; align-self: flex-end; margin: -36px -8px 0 0; z-index: 3;
+    -webkit-mask-image: radial-gradient(ellipse 80% 85% at 60% 55%, #000 62%, transparent 100%); mask-image: radial-gradient(ellipse 80% 85% at 60% 55%, #000 62%, transparent 100%); }
+  .sx-art { top: auto; bottom: 0; height: 150px; z-index: 2; }
+}
+
+@keyframes sx-label { from { opacity: 0; transform: translateX(1.2cqw); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .sx-card-label { animation: none; } }
+
+/* plain variant: flat purple, no wave, woman sits on the bottom edge */
+.sx--plain { background: #9f4aca; }
+.sx--plain .sx-wave { display: none; }
+.sx--plain .sx-lady { left: 80cqw; top: 27.19cqw; width: 20cqw; height: 23.75cqw; }
+@media (max-width: 860px) {
+  .sx--plain { background: #9f4aca; }
+  .sx--plain .sx-lady { left: auto; top: auto; width: min(58vw, 300px); height: auto; margin: -36px -8px 0 auto; }
+}
+
+/* Research line on each card: the figure, what it measures and a link to the source. The card is taller to fit it. */
+.sx-stat { margin: 1.6cqw 0 0; padding-top: 1.3cqw; border-top: 1px solid #ebecf1; font: 500 1.15cqw/1.4 Inter, Arial, sans-serif; color: #1b1f3a; }
+.sx-stat b, .sx-txt { display: block; }
+.sx-stat b { margin-bottom: .45cqw; font: 700 2.3cqw/1 "Source Serif 4", Georgia, serif; color: #128a7e; letter-spacing: -.015em; }
+.sx-stat em { font-style: normal; font-weight: 400; color: #8a8fa3; }
+.sx-src { display: inline-block; margin-top: .5cqw; font: 400 1cqw/1.3 Inter, Arial, sans-serif; color: #8a8fa3; text-decoration: none; border-bottom: 1px solid #d7d9e2; pointer-events: auto; }
+.sx-src:hover { color: #128a7e; border-color: #128a7e; }
+@media (min-width: 861px) { .sx-card { height: 36.6cqw; top: 5.9cqw; } .sx-stage { height: 23.6cqw; } .sx-dots { top: 31.6cqw; } .sx-buttons { top: 30.2cqw; } }
+@media (max-width: 860px) { .sx-stat { margin-top: 14px; padding-top: 12px; font-size: 13.5px; } .sx-stat b { font-size: 24px; margin-bottom: 4px; } .sx-src { margin-top: 6px; font-size: 12px; } }
+/* the smallest phones: a little more room so the longer cards aren't cut off */
+@media (max-width: 360px) { .sx-card { height: 490px; } .sx-stage { height: 315px; } }

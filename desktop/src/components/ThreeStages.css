@@ -1,0 +1,782 @@
+/* ═══════════════════════════════════════════
+   THREE STAGES SECTION
+   ═══════════════════════════════════════════ */
+
+.ts-section {
+  background: #f4f5fa;
+  padding: 100px 0 120px;
+}
+
+.ts-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ── Header ── */
+.ts-top {
+  margin-bottom: 48px;
+}
+
+.ts-eyebrow-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.ts-eyebrow-num {
+  width: 36px;
+  height: 36px;
+  background: #e8e6f7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+.ts-eyebrow-label {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #4f46e5;
+  text-transform: uppercase;
+  border-bottom: 2px solid #4f46e5;
+  padding-bottom: 2px;
+}
+
+.ts-main-title {
+  font-family: var(--font-serif);
+  font-size: clamp(42px, 5vw, 62px);
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+/* ── Tab Bar ── */
+.ts-tab-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.ts-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 24px;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s, border-color 0.2s;
+  border-right: 1px solid #f1f5f9;
+}
+.ts-tab-btn:last-child {
+  border-right: none;
+}
+.ts-tab-btn:hover {
+  background: #faf8ff;
+}
+.ts-tab-active {
+  border-bottom: 3px solid #4f46e5;
+  background: #f5f3ff;
+}
+
+.ts-tab-num {
+  font-family: var(--font-sans);
+  font-size: 20px;
+  font-weight: 700;
+  color: #c7c4e8;
+  min-width: 32px;
+}
+.ts-tab-active .ts-tab-num {
+  color: #4f46e5;
+}
+
+.ts-tab-icon {
+  color: #c7c4e8;
+  display: flex;
+  align-items: center;
+}
+.ts-tab-active .ts-tab-icon {
+  color: #4f46e5;
+}
+
+.ts-tab-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.ts-tab-info strong {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e293b;
+}
+.ts-tab-info span {
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  color: #64748b;
+}
+
+/* ── Content Card ── */
+.ts-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+  overflow: hidden;
+  height: 580px;
+}
+.ts-card-inner {
+  display: grid;
+  grid-template-columns: 520px 1fr;
+  height: 580px;
+  border-radius: 20px;
+}
+
+/* ── Left Column ── */
+.ts-col-left {
+  padding: 56px 48px 56px 56px;
+  position: relative;
+  overflow: hidden;
+  line-height: 1.5;
+  border-radius: 20px 0 0 20px;
+}
+
+.ts-col-left--has-graphic {
+  /* extra space at bottom for the decorative bubble */
+}
+
+.ts-stage-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #6366f1;
+  margin: 0 0 12px 0;
+}
+
+.ts-stage-title {
+  font-family: var(--font-serif);
+  font-size: clamp(40px, 4vw, 56px);
+  color: #0f172a;
+  margin: 0 0 16px 0;
+  line-height: 1.05;
+  font-weight: 400;
+}
+
+.ts-stage-sub {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 24px 0;
+  line-height: 1.3;
+}
+
+.ts-stage-body {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.7;
+  margin: 0 0 16px 0;
+  max-width: 340px;
+}
+.ts-stage-body:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Decorative speech bubble for Tab 2 */
+.ts-speech-bubble {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-10%);
+  width: 220px;
+  height: 220px;
+  background: #ebe9f8;
+  border-radius: 50% 50% 50% 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+}
+.ts-speech-dots {
+  display: flex;
+  gap: 8px;
+  transform: translateY(-20px);
+}
+.ts-speech-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #a5b4fc;
+}
+
+/* ── Right Column ── */
+.ts-col-right {
+  padding: 56px 56px 56px 48px;
+  background: #faf8ff;
+  border-left: 1px solid #f1f5f9;
+  border-radius: 0 20px 20px 0;
+}
+
+.ts-glance-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #6366f1;
+  margin-bottom: 32px;
+}
+
+.ts-glance-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid #e8eaf0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.ts-glance-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px;
+  background: #fff;
+  position: relative;
+}
+
+/* Right border for left-column cards */
+.ts-glance-card:nth-child(odd) {
+  border-right: 1px solid #e8eaf0;
+}
+
+/* Bottom border for top-row cards */
+.ts-glance-card:nth-child(1),
+.ts-glance-card:nth-child(2) {
+  border-bottom: 1px solid #e8eaf0;
+}
+
+.ts-glance-icon-wrap {
+  width: 56px;
+  height: 56px;
+  background: #ebe9f8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6366f1;
+  margin-bottom: 4px;
+}
+
+.ts-glance-card strong {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.ts-glance-card span {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .ts-card-inner {
+    grid-template-columns: 1fr;
+  }
+  .ts-col-left {
+    padding: 40px 32px;
+  }
+  .ts-col-right {
+    padding: 40px 32px;
+    border-left: none;
+    border-top: 1px solid #f1f5f9;
+  }
+  .ts-speech-bubble {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .ts-tab-bar {
+    grid-template-columns: 1fr;
+  }
+  .ts-tab-btn {
+    border-right: none;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  .ts-tab-active {
+    border-left: 3px solid #4f46e5;
+    border-bottom-color: #f1f5f9;
+  }
+  .ts-glance-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ══════════════════════════════════════
+   TAB 3 — INSIGHT REPORT
+   ══════════════════════════════════════ */
+
+/* Removing obsolete tab 3 width override */
+
+.ts-mock-scaler {
+  transform: scale(0.85);
+  transform-origin: center;
+  width: 100%;
+  position: relative;
+}
+
+/* Feature list (For facilitators & HR / For participants) */
+.ts-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 28px;
+  margin-bottom: 32px;
+}
+.ts-feature-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.ts-feature-icon-wrap {
+  width: 44px;
+  height: 44px;
+  background: #ebe9f8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6366f1;
+  flex-shrink: 0;
+}
+.ts-feature-row > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.ts-feature-row > div strong {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+}
+.ts-feature-row > div span {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* CTA button */
+.ts-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #4f46e5;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.ts-cta-btn:hover { background: #4338ca; }
+
+/* Right column — mockup layout */
+.ts-col-right--mockup {
+  padding: 32px 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Annotations */
+.ts-annotation {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: absolute;
+  z-index: 10;
+}
+.ts-annotation--top {
+  top: -20px;
+  right: -30px;
+}
+.ts-annotation--bottom {
+  bottom: -30px;
+  right: -50px;
+}
+.ts-annotation-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  max-width: 120px;
+}
+.ts-annotation-text strong {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.2;
+}
+.ts-annotation-text span {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  color: #64748b;
+  line-height: 1.3;
+  margin-top: 2px;
+}
+.ts-annotation-arrow { flex-shrink: 0; }
+
+/* ── BACK CARD (Team Insight Report) ── */
+.ts-mock-back {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  padding: 20px;
+  font-family: var(--font-sans);
+  position: relative;
+  z-index: 1;
+  margin-right: 120px; /* leave space for front card overlap */
+}
+
+.ts-mock-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  gap: 8px;
+}
+.ts-mock-brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.ts-mock-logo-sq {
+  width: 18px;
+  height: 18px;
+  background: #1e293b;
+  border-radius: 4px;
+  display: inline-block;
+}
+.ts-mock-brand-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1e293b;
+}
+.ts-mock-title-block {
+  text-align: center;
+  flex: 1;
+}
+.ts-mock-title-block strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #0f172a;
+}
+.ts-mock-title-block span {
+  font-size: 10px;
+  color: #94a3b8;
+}
+.ts-mock-dl {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #6366f1;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* Nav tabs inside mockup */
+.ts-mock-nav {
+  display: flex;
+  gap: 16px;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+}
+.ts-mock-nav span {
+  font-size: 11px;
+  color: #94a3b8;
+  font-weight: 500;
+  cursor: pointer;
+}
+.ts-mock-nav-active {
+  color: #4f46e5 !important;
+  font-weight: 700 !important;
+  border-bottom: 2px solid #4f46e5;
+  padding-bottom: 10px;
+  margin-bottom: -11px;
+}
+
+/* Snapshot row */
+.ts-mock-snapshot {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+.ts-mock-snapshot-icon {
+  width: 32px;
+  height: 32px;
+  background: #ebe9f8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6366f1;
+  flex-shrink: 0;
+}
+.ts-mock-snapshot strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 3px;
+}
+.ts-mock-snapshot p {
+  margin: 0;
+  font-size: 13.5px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* Bar columns */
+.ts-mock-bars {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.ts-mock-bar-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 8px 0;
+}
+.ts-mock-bar-track {
+  width: 100%;
+  height: 6px;
+  background: #f1f5f9;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.ts-mock-bar-fill { height: 100%; border-radius: 3px; }
+.ts-bar-green  { width: 76%; background: #22c55e; }
+.ts-bar-yellow { width: 52%; background: #f59e0b; }
+.ts-bar-red    { width: 30%; background: #ef4444; }
+
+.ts-mock-bar-meta {
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+}
+.ts-meta-green svg { color: #16a34a; }
+.ts-meta-yellow svg { color: #d97706; }
+.ts-meta-red svg { color: #dc2626; }
+.ts-mock-bar-meta strong {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 2px;
+}
+.ts-mock-bar-meta p {
+  margin: 0;
+  font-size: 9px;
+  color: #64748b;
+  line-height: 1.3;
+}
+
+/* Key Moments */
+.ts-mock-moments {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 12px;
+}
+.ts-mock-moments-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #6366f1;
+  margin: 0 0 12px 0;
+}
+.ts-mock-moments-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 8px;
+}
+.ts-mock-moment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+.ts-mock-moment strong {
+  font-size: 10px;
+  font-weight: 700;
+  color: #0f172a;
+}
+.ts-mock-moment span {
+  font-size: 9px;
+  color: #64748b;
+}
+.ts-mock-arrow {
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+/* ── FRONT CARD (Our Team Results — participant view) ── */
+.ts-mock-front {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-40%);
+  width: 230px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+  padding: 16px;
+  font-family: var(--font-sans);
+  z-index: 2;
+}
+.ts-mock-front-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.ts-mock-brand--sm .ts-mock-logo-sq {
+  width: 14px;
+  height: 14px;
+}
+.ts-mock-brand--sm .ts-mock-brand-name {
+  font-size: 12px;
+}
+.ts-mock-front-title {
+  margin-bottom: 16px;
+}
+.ts-mock-front-title strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 3px;
+}
+.ts-mock-front-title span {
+  font-size: 11px;
+  color: #94a3b8;
+}
+.ts-mock-front-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #f1f5f9;
+}
+.ts-mock-front-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ts-mock-front-row > span {
+  font-size: 11px;
+  font-weight: 600;
+  color: #1e293b;
+  flex: 1;
+  white-space: nowrap;
+}
+.ts-mock-mini-track {
+  width: 60px;
+  height: 5px;
+  background: #f1f5f9;
+  border-radius: 3px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.ts-mock-mini-fill { height: 100%; border-radius: 3px; }
+
+/* Recommendations row */
+.ts-mock-recom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f5f3ff;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+}
+.ts-mock-recom > div {
+  flex: 1;
+}
+.ts-mock-recom strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #0f172a;
+}
+.ts-mock-recom span {
+  font-size: 10px;
+  color: #64748b;
+}
+
+@media (max-width: 900px) {
+  .ts-col-right--mockup {
+    padding: 40px 24px 200px;
+  }
+  .ts-mock-front {
+    top: auto;
+    bottom: 16px;
+    right: 16px;
+    transform: none;
+    width: 200px;
+  }
+  .ts-mock-back {
+    margin-right: 0;
+  }
+}
+
+
+.ts-mockup-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+}

@@ -1,0 +1,87 @@
+/* Top of the landing page: hero ending, "Why now" in navy, The Platform on white.
+   These rules change existing classes. Either add this file after the site's own styles,
+   or change the original rules directly (better). Breakpoints match the site's own: hero 900px, "Why now" 860px. */
+
+/* ---------- 1. Hero: no wave, no hard line at the bottom ---------- */
+/* Laptop layout only: the site switches the hero to the phone layout at 900px (@media (width <= 900px)). */
+@media (min-width: 901px) {
+  .hc {
+    aspect-ratio: 2.12 / 1;            /* was 16 / 9: shorter, removes the empty band */
+    background-size: 100% auto;        /* was 100% 100%: keeps the top of the picture, drops the wave */
+    background-position: top center;
+  }
+}
+/* Soft fade into the white page (all widths). */
+.hc::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 170px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
+  pointer-events: none;
+  z-index: 0;
+}
+.hc-content { z-index: 1; }            /* text and cards stay above the fade */
+@media (max-width: 900px) { .hc::after { height: 70px; } }
+
+/* ---------- 2. "Why now": navy instead of purple, no wave, no photo ---------- */
+.sx {
+  background:
+    radial-gradient(60% 70% at 62% 0%, #213a74 0%, transparent 70%),
+    linear-gradient(110deg, #0f1b3d 0%, #13234d 100%);
+}
+.sx-art, .sx-lady { display: none; }   /* the purple wave and the photo */
+.sx-eyebar { background: #6fe0cf; }    /* line under WHY NOW */
+.sx-title em { color: #6fe0cf; }       /* "see coming." */
+
+/* Card accents: purple to teal */
+.sx-accent { color: #128a7e; }         /* "not performing?" */
+.sx-btn--next { background: #128a7e; box-shadow: 0 8px 20px rgba(18, 138, 126, .35); }
+.sx-pause { color: #128a7e; border-color: #128a7e; }
+.sx-btn:focus-visible, .sx-dot:focus-visible, .sx-pause:focus-visible { outline-color: #6fe0cf; }
+
+/* Laptop layout: the wave is gone, so trim the empty space at the bottom.
+   The site switches "Why now" to the phone layout at 860px (@media (width <= 860px)). */
+@media (min-width: 861px) {
+  .sx { aspect-ratio: 1600 / 760; }
+}
+/* Phone layout: the photo used to sit at the bottom, so give the card some room below. */
+@media (max-width: 860px) {
+  .sx { padding-bottom: 24px; }
+}
+
+/* ---------- 3. The Platform on white ---------- */
+iframe.platform-frame { background: #fff; }
+/* Also needed inside platform-section.html (it is a separate page in a frame):
+   html, body, .section { background: #fff; }   -- was #f0f3fa */
+
+/* "Why now", laptop and wider: headline in the site's heading font (Source Serif 4, not Playfair),
+   card moved right for more air, card text a bit smaller so the headline on the left leads. */
+.sx-title { font-family: "Source Serif 4", Georgia, "Times New Roman", serif; }
+@media (min-width: 861px) {
+  .sx-card { left: 45.5cqw; }                /* was 40.56cqw */
+  .sx-q { font-size: 2.6cqw; }               /* was 3.05cqw */
+  .sx-support { font-size: 1.4cqw; }         /* was 1.55cqw; same as the paragraph on the left */
+}
+
+/* Hero, laptop and wider: less empty space between the menu and the hero text.
+   Moves all hero content (text and cards) up by about 40px at 1440px; the hero is shortened by the same amount above. */
+@media (min-width: 901px) {
+  /* about 40px up at 1440px wide, nothing on smaller laptops where the gap is already right */
+  .hc-content { transform: translateY(min(0px, calc(132px - 12.2cqw))) scale(var(--hc-scale)); }   /* was scale(var(--hc-scale)) */
+}
+
+/* Menu on phones: the menu button sits at the right edge (it was next to the logo, mid-bar). No change on laptops. */
+.nav__actions { margin-left: auto; }
+
+/* "Why now" card dots: the active dot is a short bar that fills while its card is shown (7 seconds),
+   so people can see more cards are coming. The fill stops while the card is paused. */
+.sx-dot.is-active { width: 3.2cqw; height: 1.2cqw; border-radius: 999px; background: #d9dde6; position: relative; overflow: hidden; }
+.sx-dot.is-active::after {
+  content: ""; position: absolute; inset: 0; background: #128a7e;
+  transform-origin: left center; animation: sx-dot-fill var(--sx-interval, 7s) linear forwards;
+}
+.sx-card.is-paused .sx-dot.is-active::after { animation-play-state: paused; }
+@keyframes sx-dot-fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@media (max-width: 860px) { .sx-dot.is-active { width: 30px; height: 11px; } }
+@media (prefers-reduced-motion: reduce) { .sx-dot.is-active::after { animation: none; transform: none; } }

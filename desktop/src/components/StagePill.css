@@ -1,0 +1,71 @@
+/* Stage label pill, identical size and type for all four stages.
+   Colours are taken from the hero stage cards. */
+.stage-pill {
+  --sp-tint: #f1f9ff;
+  --sp-edge: #cfe6ff;
+  --sp-accent: #0b8de6;
+  --sp-shadow: rgba(40, 140, 235, 0.28);
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 15px 26px 15px 20px;
+  border-radius: 999px;
+  background:
+    linear-gradient(112deg, rgba(255,255,255,0) 38%, rgba(255,255,255,0.6) 56%, rgba(255,255,255,0) 72%),
+    linear-gradient(90deg, rgba(255,255,255,0) 66%, var(--sp-edge) 100%),
+    linear-gradient(180deg, #ffffff 0%, var(--sp-tint) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 28px -8px var(--sp-shadow), 0 2px 8px rgba(20, 30, 80, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  white-space: nowrap;
+  max-width: 100%;
+}
+.stage-pill--blue   { --sp-tint: #eef7ff; --sp-edge: #c4e0ff; --sp-accent: #0b8de6; --sp-shadow: rgba(40, 140, 235, 0.30); }
+.stage-pill--green  { --sp-tint: #f2fdee; --sp-edge: #bfeeb4; --sp-accent: #1db23a; --sp-shadow: rgba(60, 190, 70, 0.30); }
+.stage-pill--orange { --sp-tint: #fff6ec; --sp-edge: #ffd3ad; --sp-accent: #ee8416; --sp-shadow: rgba(245, 150, 60, 0.32); }
+.stage-pill--purple { --sp-tint: #f4f0ff; --sp-edge: #d6caf9; --sp-accent: #8c52e6; --sp-shadow: rgba(120, 96, 220, 0.30); }
+
+.stage-pill__num {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 700;
+  color: var(--sp-accent);
+  line-height: 1;
+}
+.stage-pill__line {
+  display: inline-block;
+  width: 34px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--sp-accent);
+}
+.stage-pill__title {
+  font-family: var(--font-sans);
+  font-size: 26px;
+  font-weight: 800;
+  color: #0a0c45;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.stage-pill__sep {
+  display: inline-block;
+  width: 1.5px;
+  height: 22px;
+  background: #3b4468;
+  margin: 0 4px;
+}
+.stage-pill__sub {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 450;
+  color: #596579;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+@media (max-width: 720px) {
+  .stage-pill { white-space: normal; flex-wrap: wrap; row-gap: 8px; gap: 10px; padding: 12px 18px; border-radius: 28px; }
+  .stage-pill__title { font-size: 22px; }
+  .stage-pill__sub { font-size: 15px; }
+  .stage-pill__sep { display: none; }
+  .stage-pill__sub { flex-basis: 100%; }
+}

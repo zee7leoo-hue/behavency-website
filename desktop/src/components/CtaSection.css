@@ -1,0 +1,22 @@
+.cta__inner { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+.cta__options { display:flex; flex-direction:column; gap:20px; }
+.cta__option { display:flex; align-items:flex-start; gap:14px; }
+.cta__option-dot { width:8px; height:8px; border-radius:50%; background:rgba(255,255,255,0.25); flex-shrink:0; margin-top:6px; }
+.cta__form-wrap { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:var(--r-xl); padding:40px; }
+.cta__form { display:flex; flex-direction:column; gap:16px; }
+.cta__row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.cta__field { display:flex; flex-direction:column; gap:6px; }
+.cta__field label { font-size:12px; font-weight:600; color:rgba(255,255,255,0.4); letter-spacing:0.04em; }
+.cta__field input, .cta__field select, .cta__field textarea {
+  background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12);
+  border-radius:var(--r-sm); padding:12px 14px; font-size:14px;
+  font-family:var(--font-sans); color:white; outline:none; transition:border-color 0.2s; resize:vertical;
+}
+.cta__field input::placeholder, .cta__field textarea::placeholder { color:rgba(255,255,255,0.2); }
+.cta__field select option { background:var(--ink-2); color:white; }
+.cta__field input:focus, .cta__field select:focus, .cta__field textarea:focus { border-color:rgba(255,255,255,0.4); }
+.cta__success { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px; min-height:360px; text-align:center; }
+@media (max-width:960px) { .cta__inner { grid-template-columns:1fr; gap:48px; } .cta__row { grid-template-columns:1fr; } .cta__form-wrap { padding:24px; } }
+
+/* wider than the default page column */
+.cta .container { max-width: 1320px; }

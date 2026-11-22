@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+/* "Two kinds of gaps" — built on the 1106px-wide design; sizes are in cqw of that column (1cqw = 11.06px). */
+.tg-outer { background: #fff; padding: 38px 0 64px; }
+.tg, .tg * { box-sizing: border-box; }
+.tg {
+  container-type: inline-size;
+  width: min(1106px, calc(100% - 48px));
+  margin: 0 auto;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  color: #0f1b3d;
+}
+
+.tg-eyebrow { display: flex; align-items: center; gap: 1.45cqw; font-size: 1.18cqw; font-weight: 600; letter-spacing: .17em; line-height: 1; color: #5b6275; }
+.tg-dash { display: block; width: 2.6cqw; height: 1px; background: #5b6275; }
+
+.tg-title {
+  margin: 1.9cqw 0 0;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 5.33cqw; font-weight: 400; line-height: 1.12; letter-spacing: -.005em; color: #0f1b3d; white-space: nowrap;
+}
+.tg-title em { font-style: italic; font-weight: 400; color: #1a9082; }
+
+.tg-sub { margin: 1.5cqw 0 0; font-size: 1.72cqw; line-height: 1.62; font-weight: 400; color: #6b7285; }
+
+.tg-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 2.7cqw; margin-top: 5.5cqw; }
+.tg-card { border: 1px solid #dfe4ee; border-radius: 2.55cqw; padding: 3.35cqw 3.35cqw 3.2cqw; }
+.tg-card--mgr { background: linear-gradient(150deg, #f1f6fe 0%, #f8faff 55%, #ffffff 100%); }
+.tg-card--org { background: linear-gradient(150deg, #fff4e5 0%, #fffaf3 55%, #ffffff 100%); }
+
+.tg-head { display: flex; align-items: center; gap: 1.3cqw; }
+.tg-head h3 { margin: 0; font-family: 'Playfair Display', Georgia, serif; font-size: 2.39cqw; font-weight: 600; letter-spacing: -.005em; line-height: 1.2; color: #0f1b3d; }
+.tg-ico { flex: none; width: 4.2cqw; height: 4.2cqw; border-radius: 1.1cqw; display: grid; place-items: center; }
+.tg-ico svg { width: 2.3cqw; height: 2.3cqw; }
+.tg-ico--mgr { background: #dbe7fa; }
+.tg-ico--mgr svg { fill: #4a2a8c; }
+.tg-ico--org { background: #fde6c6; }
+.tg-ico--org svg { fill: #6c88ad; }
+.tg-ico--org .tg-win rect { fill: #fde6c6; }
+
+.tg-from { margin: 1.2cqw 0 0; font-size: 1.36cqw; font-weight: 400; line-height: 1.4; color: #5f6678; }
+
+.tg-rows { list-style: none; margin: 1.5cqw 0 0; padding: 0; display: flex; flex-direction: column; }
+.tg-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 1cqw;
+  background: #fff; border: 1px solid #e3e7ef; border-radius: 1.25cqw;
+  font-size: 1.44cqw; font-weight: 500; letter-spacing: -.003em; color: #1c2542;
+}
+.tg-card--mgr .tg-row { height: 4.7cqw; padding: 0 1.45cqw; margin-bottom: .95cqw; }
+.tg-card--org .tg-row { height: 4.25cqw; padding: 0 1.45cqw; margin-bottom: 1.05cqw; font-weight: 400; font-size: 1.42cqw; }
+.tg-rows .tg-row:last-child { margin-bottom: 0; }
+
+.tg-badge { flex: none; padding: .5cqw 1.05cqw; border-radius: 999px; font-size: 1.08cqw; font-weight: 600; line-height: 1.25; }
+.tg-badge--dev { background: #fbdbe0; color: #c3233f; }
+.tg-badge--med { background: #fde7c3; color: #b36108; }
+
+.tg-link { margin: 1.5cqw 0 0; font-size: 1.32cqw; font-weight: 600; line-height: 1.3; }
+.tg-link--blue { color: #2f66c8; }
+.tg-link--amber { color: #b45d0e; margin-top: 1.4cqw; }
+
+.tg-foot {
+  margin: 4.9cqw auto 0; text-align: center;
+  font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400;
+  font-size: 2.36cqw; line-height: 1.43; color: #1a9082; white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .tg { container-type: normal; }
+  .tg-outer { padding: 30px 0 48px; }
+  .tg-eyebrow { font-size: 12px; gap: 12px; } .tg-dash { width: 28px; }
+  .tg-title { font-size: clamp(32px, 9vw, 44px); margin-top: 16px; white-space: normal; }
+  .tg-sub { font-size: 16px; margin-top: 14px; } .tg-sub br, .tg-foot br { display: none; }
+  .tg-cards { grid-template-columns: 1fr; gap: 18px; margin-top: 30px; }
+  .tg-card { border-radius: 24px; padding: 24px 20px; }
+  .tg-head { gap: 12px; } .tg-head h3 { font-size: 21px; }
+  .tg-ico { width: 44px; height: 44px; border-radius: 12px; } .tg-ico svg { width: 24px; height: 24px; }
+  .tg-from { font-size: 14px; margin-top: 12px; }
+  .tg-rows { margin-top: 16px; }
+  .tg-row, .tg-card--mgr .tg-row, .tg-card--org .tg-row { height: auto; min-height: 50px; padding: 10px 14px; font-size: 15px; border-radius: 13px; margin-bottom: 10px; flex-wrap: wrap; }
+  .tg-badge { font-size: 12px; padding: 4px 10px; }
+  .tg-link { font-size: 14.5px; margin-top: 16px; }
+  .tg-foot { font-size: 20px; margin-top: 34px; white-space: normal; }
+}

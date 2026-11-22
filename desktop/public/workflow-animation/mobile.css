@@ -1,0 +1,68 @@
+/*
+ * Behavency workflow — MOBILE ONLY (max-width: 767px)
+ * ONE card, ONE list. The same three rows transform in place:
+ * Finding -> Recommended training -> Masterplan tool.
+ */
+.m-story { display: none; }
+
+@media (max-width: 767px) {
+  body { background: transparent; }
+  .page { min-height: auto; padding: 0; background: none; }
+  .product-story { width: 100%; margin: 0; }
+  .product-story .demo-window { display: none; }
+
+  .m-story {
+    display: block; position: relative; overflow: hidden;
+    padding: 18px 14px;
+    border: 1px solid rgba(255,255,255,.95); border-radius: 22px;
+    background: linear-gradient(160deg,#f5faff,#fafefd); box-shadow: var(--shadow);
+  }
+
+  .m-card {
+    max-width: 400px; margin: 0 auto; padding: 16px 14px 14px;
+    border: 1px solid #e1e8ef; border-radius: 16px; background: #fff;
+    box-shadow: 0 14px 34px rgba(48,68,99,.12);
+  }
+
+  /* progress track (inside the card) */
+  .m-steps { position: relative; display: grid; grid-template-columns: repeat(3,1fr); margin: 0 0 12px; padding: 0; list-style: none; }
+  .m-steps-line { position: absolute; left: 16.666%; right: 16.666%; top: 13px; height: 3px; border-radius: 99px; background: #dde5ee; overflow: hidden; list-style: none; }
+  .m-steps-fill { display: block; height: 100%; background: linear-gradient(90deg,#087fd5,#8327dd,#12bfa0); transform-origin: left center; }
+  .m-step { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 6px; color: #8a94ab; font-size: 13px; font-weight: 600; transition: color .6s; }
+  .m-step span { width: 28px; height: 28px; display: grid; place-items: center; border: 3px solid #fff; border-radius: 50%; background: #e3eaf3; color: #7b86a0; font-size: 13px; font-weight: 800; transition: background .6s, color .6s, transform .6s; }
+  .m-step.is-active { color: var(--navy); }
+  .m-step.is-active span { background: linear-gradient(135deg,#087fd5,#8327dd); color: #fff; transform: scale(1.12); }
+  .m-step.is-done { color: #0f8f75; }
+  .m-step.is-done span { background: #13b894; color: #fff; font-size: 0; }
+  .m-step.is-done span:after { content: "✓"; font-size: 14px; }
+
+  .m-lead { min-height: 44px; margin: 0 0 10px; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--navy); font-size: 17px; font-weight: 700; line-height: 1.25; }
+
+  /* the three rows that transform */
+  .m-list { display: grid; gap: 9px; }
+  .m-item {
+    display: grid; grid-template-columns: 38px minmax(0,1fr) auto; align-items: center; gap: 11px;
+    height: 80px; padding: 8px 12px;
+    border: 1px solid #edf0f4; border-radius: 14px; background: #fbfcfe;
+  }
+  .m-num { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 50%; background: #ffe2e5; color: #df4652; font-size: 17px; font-weight: 800; }
+  .m-item:nth-child(n+2) .m-num { background: #fff0d2; color: #dc9000; }
+  .m-main { min-width: 0; }
+  .m-lab { display: block; color: #7a869e; font-size: 11.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+  .m-txt { display: block; margin-top: 2px; font-size: 17px; line-height: 1.15; }
+  .m-bar { display: block; height: 6px; margin-top: 8px; overflow: hidden; border-radius: 99px; background: #e8ebef; }
+  .m-bar b { display: block; width: var(--score); height: 100%; border-radius: inherit; transform-origin: left center; background: linear-gradient(90deg,#fb4b58,#ff6972); }
+  .m-item:nth-child(n+2) .m-bar b { background: linear-gradient(90deg,#f1a200,#ffb92c); }
+  .m-tag { min-width: 46px; height: 32px; display: grid; place-items: center; padding: 0 10px; border-radius: 99px; background: #eef1f6; color: #52607c; font-size: 15px; font-style: normal; font-weight: 800; }
+
+  /* bottom result chip */
+  .m-status { display: flex; align-items: center; gap: 10px; height: 46px; margin-top: 12px; padding: 0 14px; border: 1px solid #dac8f1; border-radius: 12px; background: #f7f1ff; color: #6823b2; font-size: 16px; }
+  .m-status span { width: 22px; height: 22px; display: grid; place-items: center; border-radius: 50%; background: #7d2bd1; color: #fff; font-size: 11px; }
+
+  @media (max-width: 350px) {
+    .m-lead { font-size: 15.5px; }
+    .m-txt { font-size: 15.5px; }
+    .m-item { gap: 9px; padding: 8px 9px; }
+  }
+}
+@media (prefers-reduced-motion: reduce) { .m-step, .m-step span { transition: none; } }

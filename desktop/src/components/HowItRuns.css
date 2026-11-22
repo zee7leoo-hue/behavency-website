@@ -1,0 +1,35 @@
+/* How it runs: five-step timeline (cream ground, thin label pill, serif headings) */
+.hir { background: #f8f6f1; padding: 120px 0 112px; }
+
+.hir__label { display: inline-flex; align-items: center; gap: 12px; padding: 10px 20px; border-radius: 999px; background: linear-gradient(90deg, #fff 0%, #e8edf8 100%); box-shadow: 0 10px 24px -14px rgba(20, 35, 75, .35), 0 0 0 1px rgba(20, 35, 75, .06); white-space: nowrap; }
+.hir__label i { font-family: 'Playfair Display', Georgia, serif; font-size: 15px; font-style: italic; color: #14234b; }
+.hir__ln { width: 22px; height: 1.5px; background: #14234b; }
+.hir__label b { font-family: Inter, system-ui, sans-serif; font-size: 16px; font-weight: 700; color: #14234b; }
+.hir__sep { width: 1px; height: 18px; background: #cfd6de; }
+.hir__t { font-family: Inter, system-ui, sans-serif; font-size: 14px; color: #4f5868; }
+
+.hir__headline { margin: 28px 0 0; color: #15171c; }
+section.hir h2.hir__headline em { color: #e5831a; }
+.hir__lead { margin: 18px 0 0; max-width: 560px; font-family: Inter, system-ui, sans-serif; font-size: 18px; line-height: 1.6; color: #555c6b; }
+
+.hir__tl { position: relative; margin: 64px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px; }
+.hir__tl::before { content: ''; position: absolute; left: 28px; right: 28px; top: 27px; height: 2px; background: linear-gradient(90deg, #14234b, #1a8a7a, #e5831a); }
+.hir__step { position: relative; display: flex; flex-direction: column; gap: 14px; }
+.hir__node { position: relative; z-index: 1; flex: none; width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; background: #fff; box-shadow: 0 0 0 1px #e7e1d6, 0 10px 22px -12px rgba(20, 35, 75, .35); font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 20px; color: #14234b; }
+.hir__box { flex: 1; display: flex; flex-direction: column; gap: 10px; padding: 20px 18px; border-radius: 18px; background: #fff; box-shadow: 0 0 0 1px #e7e1d6, 0 18px 36px -28px rgba(20, 35, 75, .35); }
+.hir__who { font-family: Inter, system-ui, sans-serif; font-size: 12px; font-weight: 600; color: #8a8f9b; }
+.hir__box h3 { margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 500; font-size: 20px; line-height: 1.2; color: #15171c; }
+.hir__box p { margin: 0; font-family: Inter, system-ui, sans-serif; font-size: 14px; line-height: 1.55; color: #555c6b; }
+.hir__dur { margin-top: auto; align-self: flex-start; padding: 4px 10px; border-radius: 99px; background: #f1eee7; font-family: Inter, system-ui, sans-serif; font-size: 12.5px; font-weight: 600; color: #4a4f5c; }
+.hir__foot { margin: 22px 0 0; font-family: Inter, system-ui, sans-serif; font-size: 13px; color: #8a8f9b; }
+
+@media (max-width: 900px) {
+  .hir { padding: 80px 0; }
+  .hir__tl { grid-template-columns: 1fr; gap: 16px; margin-top: 40px; }
+  .hir__tl::before { left: 27px; right: auto; top: 28px; bottom: 28px; width: 2px; height: auto; background: linear-gradient(180deg, #14234b, #1a8a7a, #e5831a); }
+  .hir__step { flex-direction: row; align-items: flex-start; }
+  .hir__t, .hir__sep { display: none; }
+}
+
+/* wider than the default column, as in the mock-up */
+.hir > .container { max-width: 1280px; }

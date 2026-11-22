@@ -1,0 +1,96 @@
+/* Client logos strip, directly under the hero.
+   A quiet line ("A product of OGI Europe | Trusted by teams at") over the logos.
+   All logos in one dark grey, real colours on hover. Slowly moving; stops on hover and keyboard focus;
+   still for people who turn off motion. */
+
+.bh-clients {
+  display: grid;
+  gap: 20px;
+  justify-items: center;
+  padding: 28px 0 8px;
+  background: #fff;                    /* the page behind is cream; the sections around it are white */
+}
+
+.bh-clients__line {
+  margin: 0;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px 18px;
+  font: 400 15px/1.4 Inter, system-ui, sans-serif;
+  color: #6b6f86;
+}
+.bh-clients__line b { font-weight: 700; color: #6b2fd6; }
+/* short purple lines at both ends */
+.bh-clients__line::before,
+.bh-clients__line::after {
+  content: "";
+  width: 32px;
+  height: 2px;
+  border-radius: 2px;
+  background: #a98be8;
+}
+/* thin divider between the two halves */
+.bh-clients__sep { width: 1px; height: 18px; background: #d9d3ea; }
+
+.bh-clients__marquee {
+  width: 100%;
+  max-width: 1240px;
+  overflow: hidden;
+  /* soft fade at both ends */
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.bh-clients__track {
+  display: flex;
+  width: max-content;
+  animation: bh-clients-drift 60s linear infinite;
+}
+
+.bh-clients__group {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  margin: 0;
+  padding: 6px 56px 6px 0;
+  list-style: none;
+}
+.bh-clients__group li { flex: none; display: grid; place-items: center; }
+
+.bh-clients__group img {
+  display: block;
+  width: auto;
+  max-width: none;
+  /* one dark grey for every logo */
+  filter: grayscale(1) brightness(.35);
+  opacity: .7;
+  transition: filter .4s ease, opacity .4s ease;
+}
+.bh-clients__group li:hover img { filter: none; opacity: 1; }
+
+.bh-clients__marquee:hover .bh-clients__track,
+.bh-clients__marquee:focus-within .bh-clients__track { animation-play-state: paused; }
+
+@keyframes bh-clients-drift { to { transform: translateX(-50%); } }
+
+@media (max-width: 640px) {
+  .bh-clients { padding: 22px 0 4px; gap: 14px; }
+  .bh-clients__line { font-size: 13.5px; gap: 4px 12px; }
+  /* on a phone: two centred lines, no dividers */
+  .bh-clients__line { flex-direction: column; gap: 2px; }
+  .bh-clients__line::before, .bh-clients__line::after, .bh-clients__sep { display: none; }
+  .bh-clients__group { gap: 36px; padding-right: 36px; }
+  .bh-clients__group img { transform: scale(.8); }
+  .bh-clients__track { animation-duration: 45s; }
+}
+
+/* People who turn off motion: one still, centred row that wraps. */
+@media (prefers-reduced-motion: reduce) {
+  .bh-clients__track { animation: none; width: auto; justify-content: center; }
+  .bh-clients__group { flex-wrap: wrap; justify-content: center; row-gap: 18px; padding: 6px 22px; }
+  .bh-clients__group[aria-hidden="true"] { display: none; }
+  .bh-clients__marquee { -webkit-mask-image: none; mask-image: none; }
+}

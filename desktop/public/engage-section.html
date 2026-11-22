@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Behavency — Engage</title>
+  <meta name="description" content="Behavency — The Game, Post-Reflection, and Insight Report interactive three-stage section.">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;650;700;750;800;900&display=swap');
+
+    /* Entire component is scoped under .behavency-engage. */
+    .behavency-engage {
+      --ink: #090e2c;
+      --copy: #2b3654;
+      --violet: #7628ee;
+      --violet-deep: #641be0;
+      --violet-light: #a742fa;
+      --purple-soft: #eee8ff;
+      --stroke: #e8e3f3;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse 35% 28% at 94% 41%, rgba(174,111,246,.17), transparent 85%),
+        radial-gradient(ellipse 70% 41% at 8% 44%, rgba(192,151,255,.16), transparent 86%),
+        linear-gradient(180deg, #faf7ff 0%, #f9f7ff 27%, #f7f2ff 54%, #f5efff 100%);
+      min-height: 1090px;
+      padding: 0 22px 53px;
+      box-sizing: border-box;
+    }
+    .behavency-engage *, .behavency-engage *::before, .behavency-engage *::after { box-sizing: border-box; }
+    .behavency-engage button { font-family: inherit; cursor:pointer; }
+    .behavency-engage button:focus-visible { outline: 3px solid #3511b9; outline-offset: 4px; }
+    .be-bg { position:absolute; pointer-events:none; z-index:-1; inset:0; width:100%; height:610px; }
+    .be-bg path { fill: url(#be-surface-wave); }
+    .be-swoosh { position:absolute; z-index:-1; border-radius:50%; pointer-events:none; }
+    .be-swoosh--left { width: 1000px; height: 345px; top: 310px; left: -320px; transform:rotate(13deg); background:rgba(255,255,255,.17);filter:blur(15px); }
+    .be-swoosh--right { width: 920px; height: 235px; top: 420px; right:-285px; transform:rotate(-13deg);background:rgba(255,255,255,.29); filter:blur(20px); }
+
+    /* TOP: hero, matching the supplied master screenshot */
+    .be-hero { max-width: 1636px; margin:0 auto; min-height:502px; display:grid;grid-template-columns:minmax(0,1fr) 624px;column-gap:62px;align-items:start;position:relative;padding-top:34px; }
+    .be-step-pill { display:inline-flex; gap:8px; align-items:center; padding:3px 11px;border-radius:20px; color:#7b1bea;background:#e6ceff; font-weight:850;font-size:18px;line-height:23px;letter-spacing:-.4px; }
+    .be-step-pill strong { font-weight:900; font-size:18px; }
+    .be-step-pill span { padding-left:7px; border-left:1px solid #cb9cff; }
+    .be-hero h1 { font-family:Georgia, 'Times New Roman', serif; font-size:72px;letter-spacing:-2.7px;line-height:1.065;margin:17px 0 13px;font-weight:750;white-space:nowrap; }
+    .be-hero h1 .be-emphasis { position:relative;display:inline-block;color:#7a23e9;font-style:italic;white-space:nowrap;font-size:1.04em; }
+    .be-hero h1 .be-emphasis::after { content:'';position:absolute;left:23%;right:0;bottom:-6px;height:5px;border-radius:95% 85% 100% 65%;transform:rotate(1deg);background:linear-gradient(90deg,#872bff,#dbadff); }
+    .be-hero-copy { font-size:24px;line-height:1.42;color:#28314c;max-width:700px;margin:0;letter-spacing:-.58px; }
+    .be-watch {display:inline-flex;align-items:center;gap:23px;border:0;padding:0;background:transparent;color:var(--ink);font-size:21px;font-weight:550;margin-top:24px; }
+    .be-watch strong {font-weight:800;}
+    .be-watch-icon {color:white;display:grid;place-items:center;flex:0 0 69px;width:69px;height:69px;border-radius:50%;background:linear-gradient(145deg,#b759fc 0%,#8c22f2 63%,#6414da 100%);box-shadow:0 9px 20px rgba(112,22,226,.24), inset 0 2px 3px #ffffff65;transition:transform .18s; }
+    .be-watch:hover .be-watch-icon {transform:scale(1.06);}
+    .be-watch-icon svg { width:34px;height:34px;fill:white;margin-left:5px; filter:drop-shadow(0 1px 2px #ac70ea);}
+    .be-video-area {position:relative;align-self:start;margin-top:55px;min-width:0;}
+    /* Custom vector ribbon follows the asymmetric, inward-curving left edge of the original reference — not an oval. */
+    .be-video-blob {position:absolute;pointer-events:none;z-index:-1;left:-210px;top:-53px;width:920px;height:495px;overflow:visible;filter:blur(1.2px);-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 51%,rgba(0,0,0,.48) 73%,transparent 96%);mask-image:linear-gradient(to bottom,#000 0%,#000 51%,rgba(0,0,0,.48) 73%,transparent 96%);}
+    .be-video { width:100%;height:310px; border:14px solid #f7f2ff; background:white; overflow:hidden;display:block;position:relative;padding:0;border-radius:40px;box-shadow:0 17px 15px rgba(94,37,168,.20), 0 2px 5px rgba(90,50,160,.12);transition:transform .18s; }
+    .be-video:hover { transform:translateY(-3px); }
+    .be-video img { width:100%;height:100%;object-fit:cover;display:block; }
+    .be-accent-lines {position:absolute;right:-50px;top:-45px;width:87px;height:78px;color:#8c20f3;}
+    .be-icon {height:1.1em;width:1.1em;display:block;flex:0 0 auto;stroke:currentColor;fill:none;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;}
+
+    /* LOWER: stage title + single interactive panel */
+    .be-lower { max-width: 1810px;margin:0 auto; }
+    .be-stages-heading { display:flex;align-items:center;justify-content:center;gap:39px;margin:0 0 19px;line-height:1.1;font-family:Georgia,'Times New Roman',serif;font-size:54px;font-weight:750;letter-spacing:-2.3px;text-align:center; }
+    .be-rule {display:flex;align-items:center;gap:8px;flex:0 0 auto; }
+    .be-rule::before,.be-rule::after {content:"";display:block;border-radius:50px;height:3px;}
+    .be-rule::before {width:17px;background:#ddaeff;}
+    .be-rule::after {width:62px;background:linear-gradient(90deg,#a348f7,#7722eb);}
+    .be-rule--right {transform:scaleX(-1);}
+    .be-stage-shell {border-radius:55px;min-height:454px;padding:34px 44px 32px;background:linear-gradient(115deg,rgba(255,255,255,.85),rgba(255,255,255,.77) 57%,rgba(255,255,255,.57));box-shadow:0 19px 26px rgba(111,54,201,.16),inset 0 2px 3px rgba(255,255,255,.9);display:grid;grid-template-columns: 372px minmax(365px, 1fr) 348px 1px 475px;gap:29px;align-items:stretch; }
+    .be-tabs {display:flex;flex-direction:column;gap:20px;justify-content:center;min-width:0;transform:translateY(-5px);}
+    .be-tab {appearance:none;display:flex;width:100%;min-height:98px;padding:19px 18px 19px 19px;border:1px solid #f0eaf7;border-radius:27px;text-align:left;align-items:center;gap:17px;background:rgba(255,255,255,.88);box-shadow:0 9px 15px rgba(50,34,97,.09);color:var(--ink);transition:box-shadow .2s, background .2s, transform .2s;}
+    .be-tab:hover {transform:translateX(3px);box-shadow:0 13px 20px rgba(102,39,195,.15);}
+    .be-tab[aria-selected="true"] { color:white;border-color:transparent;box-shadow:0 12px 20px rgba(107,29,213,.25);background:linear-gradient(120deg,#b847f5 0%,#9024f4 50%,#7511e9 100%);}
+    .be-tab-icon {flex:0 0 66px;width:66px;height:66px;border-radius:22px;display:grid;place-items:center;background:#f4efff;color:#192a75;}
+    .be-tab[aria-selected="true"] .be-tab-icon {background:rgba(255,255,255,.19);color:white;}
+    .be-tab-icon svg {width:40px;height:40px;stroke-width:2.1;}
+    .be-tab-copy {flex:1;min-width:0;display:flex;flex-direction:column;gap:4px;}
+    .be-tab-title {font-size:19px;font-weight:800;letter-spacing:-.65px;white-space:nowrap;}
+    .be-tab-subtitle {font-size:17px;font-weight:500;letter-spacing:-.62px;opacity:.89;white-space:nowrap;}
+    .be-tab-arrow {color:#8631f4;width:24px;height:24px;stroke-width:3.1;}
+    .be-tab[aria-selected="true"] .be-tab-arrow {color:white;}
+    .be-stage-text {min-width:0;padding-left:35px;border-left:2px solid #e6d5ff;align-self:center;min-height:325px;display:flex;flex-direction:column;justify-content:center;transform:translateY(-35px);}
+    .be-eyebrow {display:flex;align-items:center;gap:15px;color:var(--violet);font-size:17px;font-weight:800;margin:0 0 14px;letter-spacing:.3px;}
+    .be-eyebrow-line {width:24px;height:3px;background:linear-gradient(90deg,#c19bfc,#852cf7);border-radius:4px;}
+    .be-eyebrow-label {background:#e9d7ff;padding:5px 13px;border-radius:20px;line-height:1.12;}
+    .be-stage-title {font-size:56px;line-height:1.07;letter-spacing:-3.2px;font-weight:850;margin:0 0 16px;white-space:nowrap; }
+    .be-stage-lead {font-size:21px;line-height:1.38;letter-spacing:-.78px;font-weight:800;margin:0 0 16px;max-width:445px;}
+    .be-stage-description {font-size:20px;line-height:1.43;font-weight:460;letter-spacing:-.6px;color:#2d3853;margin:0;max-width:455px;}
+    .be-art {width:100%;min-width:0;position:relative;min-height:342px;align-self:center;}
+    .be-art-halo {position:absolute;width:265px;height:256px;top:44px;left:44px;border-radius:45% 38% 50% 44%;transform:rotate(17deg);background:radial-gradient(ellipse at 47% 48%,#e5c6ffde 0%,#dfb2ff83 55%,#f5ecff2b 72%);filter:blur(8px);}
+    .be-art-orbit {position:absolute;width:285px;height:160px;border:3px solid #ac67f8;left:36px;top:76px;border-radius:50%;transform:rotate(-23deg);opacity:.76;}
+    .be-avatar {position:absolute;display:block;object-fit:cover;background:white;width:64px;height:64px;border:4px solid #fff;border-radius:22px;box-shadow:0 8px 16px rgba(94,46,178,.18),0 0 0 2px #e1cbff;z-index:3;}
+    .be-avatar--a {top:19px;left:72px;}.be-avatar--b {top:17px;right:43px;}.be-avatar--c {top:144px;left:4px;}.be-avatar--d {bottom:5px;left:101px;}.be-avatar--e {bottom:27px;right:10px;}
+    .be-art-note { position:absolute; z-index:4; background:white; border:1px solid #eee7fc;box-shadow:0 14px 25px rgba(93,49,169,.17);border-radius:21px;}
+    .be-game-activity {left:50px;top:101px;width:231px;height:167px;transform:rotate(-5deg);padding:18px 15px;}
+    .be-note-title {font-weight:800;color:#121633;font-size:15px;letter-spacing:-.4px;white-space:nowrap;}
+    .be-activity-body {margin-top:14px;padding:8px 10px;border-radius:10px;background:#f4ecff;}
+    .be-activity-row {display:flex;align-items:center;gap:7px;min-height:20px;font-size:10px;color:#7a50cd;}
+    .be-check {width:15px;height:15px;display:grid;place-items:center;border-radius:5px;background:#e2ccff;color:#7c24ee;font-size:11px;font-weight:900;}
+    .be-faux-line {display:block;width:76px;height:5px;border-radius:6px;background:#cf9bf6;opacity:.7;}
+    .be-faux-line--short {width:51px;}.be-faux-line--medium {width:64px;}
+    .be-gauge-card { position:absolute;right:0;top:75px;width:113px;height:143px;display:flex;flex-direction:column;align-items:center;padding:16px 4px 11px;z-index:5;background:white;border-radius:22px;box-shadow:0 13px 22px rgba(108,50,177,.15); }
+    .be-gauge-label {font-size:11px;font-weight:850;letter-spacing:-.5px;white-space:nowrap; }
+    .be-gauge-ring {width:79px;height:79px;margin-top:9px;border-radius:50%;background:conic-gradient(#892cf0 0deg 274deg,#eedbff 274deg 360deg);padding:9px;display:grid;place-items:center;}
+    .be-gauge-core {width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;border-radius:50%;background:white;color:#7623e9;font-size:23px;font-weight:850;line-height:1;}
+    .be-gauge-core small {font-size:10px;letter-spacing:-.1px;margin-bottom:5px;}
+    .be-gauge-people {margin-top:5px;color:#8b38f3;}
+    .be-gauge-people svg {height:19px;width:22px;}
+    .be-art-spark {position:absolute;z-index:4;width:56px;height:50px;right:-1px;top:5px;color:#9135f3;}
+    .be-art[data-stage="0"] .be-art-orbit {opacity:0;}
+    .be-art[data-stage="0"] .be-avatar--a {left:45px;top:24px;}.be-art[data-stage="0"] .be-avatar--b {right:18px;top:22px;}.be-art[data-stage="0"] .be-avatar--c {top:170px;left:6px;}.be-art[data-stage="0"] .be-avatar--d {left:120px;bottom:4px;}.be-art[data-stage="0"] .be-avatar--e {bottom:22px;right:3px;}
+    .be-art[data-stage="0"] .be-gauge-card {width:104px;top:122px;right:10px;height:126px;transform:rotate(5deg);}
+    .be-art[data-stage="0"] .be-gauge-ring {width:70px;height:70px;padding:8px;}
+    .be-art[data-stage="0"] .be-gauge-core {font-size:20px;}
+    .be-art[data-stage="0"] .be-gauge-people {display:none;}
+    .be-art[data-stage="0"] .be-game-activity {left:48px;top:115px;width:237px;height:146px;transform:rotate(-5deg);}
+    .be-art[data-stage="0"] .be-art-spark {top:3px;right:11px;}
+    .be-stage-split {width:1px;min-height:340px;background:#e9d7fa;align-self:center;}
+    .be-facts {display:flex;flex-direction:column;justify-content:center;border-radius:37px;padding:12px 24px;background:linear-gradient(145deg,rgba(250,247,255,.88),rgba(248,245,255,.70));box-shadow:0 10px 23px rgba(118,63,175,.075);align-self:stretch;transform:translateY(-28px);}
+    .be-fact {display:flex;align-items:center;gap:19px;min-height:89px;padding:13px 0;border-bottom:1px solid #e6ddf3;}
+    .be-fact:last-child {border-bottom:0;}
+    .be-fact-icon {display:grid;place-items:center;width:77px;height:65px;flex:0 0 77px;background:#f0e6ff;border-radius:24px;color:#7d27f0;}
+    .be-fact-icon svg {height:38px;width:38px;stroke-width:2.3;}
+    .be-fact-text {min-width:0;}
+    .be-fact-title {font-weight:830;line-height:1.25;letter-spacing:-.6px;font-size:19px;margin:0 0 4px;}
+    .be-fact-description {margin:0;color:#303b56;font-size:15.5px;line-height:1.35;letter-spacing:-.2px;}
+
+    .be-modal[hidden] {display:none;}
+    .be-modal {position:fixed;inset:0;background:rgba(13,13,45,.68);z-index:999999;display:grid;place-items:center;padding:22px;backdrop-filter:blur(5px);}
+    .be-modal-content {max-width:750px;width:100%;background:white;padding:20px;border-radius:24px;box-shadow:0 20px 80px #08002980;position:relative;}
+    .be-modal-close {position:absolute;top:-17px;right:-17px;border:0;border-radius:100%;background:#7923ec;color:white;font-size:27px;width:45px;height:45px;line-height:1;}
+    .be-modal-video {width:100%;aspect-ratio:16/9;display:grid;place-items:center;background:#f2eaff;border-radius:14px;color:#251b4c;text-align:center;padding:22px;}
+    .be-modal-video iframe {height:100%;width:100%;border:0;border-radius:12px;}
+    .be-modal-video p {max-width:470px;line-height:1.5;}
+    .be-modal-video code {font-size:.92em;}
+    @keyframes be-fade {from {opacity:.3;transform:translateY(6px);}to {opacity:1;transform:translateY(0);}}
+    .be-animate {animation:be-fade .28s ease both;}
+
+    @media (max-width: 1740px) and (min-width: 1201px) {
+      .be-hero {max-width:1390px;grid-template-columns:minmax(0,1fr) 510px;gap:49px;min-height:425px;}
+      .be-hero h1 {font-size:48px;letter-spacing:-2.2px;}
+      .be-hero-copy {font-size:20px;}.be-watch {font-size:18px;}.be-watch-icon {width:57px;height:57px;flex-basis:57px;}
+      .be-video {height:263px;border-width:12px;}.be-hero .be-step-pill {font-size:15px;}
+      .be-stages-heading {font-size:43px;}
+      .be-stage-shell {max-width:1490px;margin:0 auto;grid-template-columns: 316px minmax(288px, 1fr) 286px 1px 335px;gap:22px;border-radius:42px;padding:27px;min-height:385px;}
+      .be-tab {min-height:81px;border-radius:23px;padding:14px;gap:12px;}.be-tab-icon {width:54px;height:54px;flex-basis:54px;border-radius:17px;}.be-tab-icon svg {width:32px;height:32px;}
+      .be-tab-title {font-size:16px;}.be-tab-subtitle {font-size:14px;}.be-tab-arrow {width:19px;}.be-stage-text {padding-left:25px;min-height:283px;}.be-stage-title {font-size:46px;}.be-stage-lead {font-size:17px;}.be-stage-description {font-size:16px;}.be-art {transform:scale(.84);transform-origin:center;}
+      .be-facts {padding:10px 18px;border-radius:27px;}.be-fact {min-height:75px;gap:12px;padding:8px 0;}.be-fact-icon {width:52px;flex-basis:52px;height:48px;border-radius:17px;}.be-fact-icon svg {width:29px;height:29px;}.be-fact-title {font-size:16px;}.be-fact-description {font-size:12.8px;}
+      .be-stage-split {min-height:285px;}.be-lower {max-width:1490px;}
+      .behavency-engage {min-height:899px;padding-bottom:35px;}
+    }
+    @media (max-width: 1200px) {
+      .be-hero {grid-template-columns:1fr 45%;gap:30px;min-height:400px;}
+      .be-hero h1 {font-size:clamp(32px,4.3vw,49px);letter-spacing:-1.5px;white-space:normal;}
+      .be-hero-copy {font-size:18px;}.be-watch {font-size:16px;}.be-watch-icon {width:52px;height:52px;flex-basis:52px;}.be-video {height:auto;aspect-ratio:2.03;border-width:8px;border-radius:24px;}
+      .be-stages-heading {font-size:40px;}
+      .be-stage-shell {grid-template-columns:260px 1fr 285px;gap:20px;padding:22px;border-radius:34px;}
+      .be-tabs {gap:12px;transform:none;}.be-tab {min-height:82px;gap:9px;padding:10px;}.be-tab-icon {width:45px;height:45px;flex-basis:45px;}.be-tab-icon svg {width:27px;height:27px;}.be-tab-title {font-size:14px;}.be-tab-subtitle {font-size:12px;}.be-tab-arrow {width:16px;}
+      .be-stage-text {min-height:320px;padding-left:18px;transform:none;}.be-stage-title {font-size:40px;letter-spacing:-1.8px;white-space:normal;}.be-stage-lead {font-size:16px;}.be-stage-description {font-size:14px;}
+      .be-art {grid-column:2;grid-row:2;min-height:250px;width:320px;justify-self:center;margin-top:-20px;transform:scale(.75);transform-origin:top center;}
+      .be-stage-split {display:none;}.be-facts {grid-column:3;grid-row:1 / span 2;transform:none;}.be-fact {gap:10px;}.be-fact-icon {width:48px;flex-basis:48px;height:45px;}.be-fact-icon svg {width:27px;height:27px;}.be-fact-title {font-size:15px;}.be-fact-description {font-size:12px;}
+      .be-stage-shell {grid-template-rows:auto auto;}
+      .behavency-engage {min-height:0;}
+    }
+    @media (max-width: 760px) {
+      .behavency-engage {padding:0 15px 34px;}
+      .be-hero {display:flex;flex-direction:column;min-height:0;padding:35px 10px 46px;gap:0;}
+      .be-hero h1 {font-size:clamp(35px,7vw,49px);margin:14px 0 20px;line-height:1.12;}
+      .be-hero-copy {font-size:16px;line-height:1.5;}.be-step-pill {font-size:13px;padding:1px 9px;}.be-step-pill strong {font-size:13px;}
+      .be-watch {margin-top:21px;gap:13px;}.be-watch-icon {width:46px;height:46px;flex-basis:46px;}.be-watch-icon svg {width:26px;height:26px;}
+      .be-video-area {align-self:stretch;margin:45px 0 0;}.be-video {border-width:7px;border-radius:20px;}.be-video-blob {left:-100px;top:-38px;width:calc(100% + 190px);height:calc(100% + 118px);}.be-accent-lines {right:-15px;top:-31px;width:52px;height:55px;}
+      .be-stages-heading {font-size:clamp(27px,6vw,40px);letter-spacing:-1px;gap:10px;margin-bottom:19px;}
+      .be-rule {gap:4px;}.be-rule::before {width:8px;}.be-rule::after {width:19px;}
+      .be-stage-shell {display:flex;flex-direction:column;gap:0;padding:15px 14px 20px;border-radius:29px;min-height:0;}
+      .be-tabs {transform:none;flex-direction:row;align-items:stretch;gap:7px;margin-bottom:30px;}
+      .be-tab {flex:1;min-width:0;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:11px 4px;gap:8px;border-radius:15px;}
+      .be-tab-icon {width:36px;height:36px;flex-basis:36px;border-radius:11px;}.be-tab-icon svg {width:23px;height:23px;}.be-tab-copy {gap:3px;}.be-tab-title {font-size:11px;letter-spacing:-.25px;white-space:normal;}.be-tab-subtitle,.be-tab-arrow {display:none;}
+      .be-stage-text {transform:none;min-height:0;border-left:0;padding:0 8px;align-self:stretch;}.be-stage-title {font-size:clamp(35px,8vw,46px);margin-bottom:12px;}.be-stage-lead {font-size:17px;}.be-stage-description {font-size:15px;line-height:1.52;}
+      .be-eyebrow {font-size:13px;margin-bottom:10px;}
+      .be-art {grid-column:auto;grid-row:auto;margin:4px auto -28px;transform:scale(.78);min-height:350px;width:348px;max-width:100%;transform-origin:center top;}
+      .be-facts {grid-column:auto;grid-row:auto;align-self:stretch;padding:9px 14px;border:1px solid #ebe1ff;border-radius:23px;}
+      .be-fact {min-height:75px;padding:11px 1px;}.be-fact-icon {width:48px;height:48px;flex-basis:48px;}.be-fact-title {font-size:15px;}.be-fact-description {font-size:12.5px;}
+      .be-bg {height:680px;}
+    }
+    @media (prefers-reduced-motion:reduce) {
+      .behavency-engage *, .behavency-engage *::before, .behavency-engage *::after {animation-duration:.01ms!important;transition-duration:.01ms!important;}
+    }
+  </style>
+</head>
+<body style="margin:0">
+
+<section class="behavency-engage" aria-label="Behavency — Engage: the three stages" id="behavency-engage">
+  <!-- Reusable SVG icons; all decorative shapes & symbols remain vector/editable. -->
+  <svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="be-i-play" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M6 3.5c0-.85.96-1.34 1.65-.84L21 11.16a1 1 0 0 1 0 1.68L7.65 21.34A1 1 0 0 1 6 20.5z"/></symbol>
+    <symbol id="be-i-game" viewBox="0 0 40 40"><path d="M12 12h16a8 8 0 0 1 7.7 6l2.1 9.1a4.5 4.5 0 0 1-7.2 4.6L25 27H15l-5.6 4.7A4.5 4.5 0 0 1 2.2 27.1L4.3 18A8 8 0 0 1 12 12Z"/><path d="M12 17v9M7.5 21.5h9M26 19h.01M31 23h.01"/></symbol>
+    <symbol id="be-i-people" viewBox="0 0 40 40"><circle cx="14" cy="13" r="5"/><path d="M3.5 33v-3c0-5 4.6-8.5 10.5-8.5s10.5 3.5 10.5 8.5v3"/><path d="M27 8.5a5.5 5.5 0 0 1 0 11M29.6 22c4.7.8 7 3.6 7 8v3"/></symbol>
+    <symbol id="be-i-chart" viewBox="0 0 40 40"><path d="M9 34V23M19.8 34V10M30.6 34V17" stroke-width="4.4"/></symbol>
+    <symbol id="be-i-chevron" viewBox="0 0 24 24"><path d="m8 4 8 8-8 8"/></symbol>
+    <symbol id="be-i-clock" viewBox="0 0 40 40"><circle cx="20" cy="20" r="14"/><path d="M20 11v10l7 4"/></symbol>
+    <symbol id="be-i-layers" viewBox="0 0 40 40"><path d="m20 6 15 9-15 9L5 15 20 6ZM5 21l15 9 15-9M5 27l15 9 15-9"/></symbol>
+    <symbol id="be-i-sliders" viewBox="0 0 40 40"><path d="M5 11h14M27 11h8M5 20h6M19 20h16M5 29h20M33 29h2"/><circle cx="23" cy="11" r="4"/><circle cx="15" cy="20" r="4"/><circle cx="29" cy="29" r="4"/></symbol>
+    <symbol id="be-i-people-small" viewBox="0 0 24 24"><circle cx="9" cy="7.8" r="3"/><circle cx="17" cy="8.5" r="2.5"/><path d="M2 20v-2.1c0-3.6 2.7-5.6 7-5.6 4.1 0 7 2 7 5.6V20M18 13c3 0 4.5 2 4.5 5v2"/></symbol>
+    <symbol id="be-i-spark" viewBox="0 0 74 68"><path d="M23 7 19 28M49 12 34 32M65 37 42 41" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"/></symbol>
+    <symbol id="be-i-lines" viewBox="0 0 80 80"><path d="M23 7 20 31M51 17 36 33M70 46 46 47" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round"/></symbol>
+  </svg>
+  <svg class="be-bg" viewBox="0 0 2048 610" preserveAspectRatio="none" aria-hidden="true">
+    <defs><linearGradient id="be-surface-wave" x1="0" y1="0" x2=".9" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".67"/><stop offset=".65" stop-color="#fff" stop-opacity=".30"/><stop offset="1" stop-color="#fff" stop-opacity=".65"/></linearGradient></defs>
+    <path d="M0 0H2048V444C1883 495 1758 552 1572 520C1429 495 1354 447 1199 443C1040 443 972 515 801 548C467 611 231 544 0 373Z"/>
+  </svg>
+  <div class="be-swoosh be-swoosh--left" aria-hidden="true"></div>
+  <div class="be-swoosh be-swoosh--right" aria-hidden="true"></div>
+
+  <div class="be-hero">
+    <div class="be-hero-left">
+      <div class="be-step-pill"><strong>02</strong><span>ENGAGE</span></div>
+      <h1>They’ve seen the score.<br>Now let them <span class="be-emphasis">experience it.</span></h1>
+      <p class="be-hero-copy">A 45-minute team game puts the same behavioural areas to the test — without looking or feeling like work.</p>
+      <button class="be-watch" id="be-watch-cta" type="button" aria-label="Watch how it works, 2-minute video"><span class="be-watch-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#be-i-play"></use></svg></span><span><strong>Watch how it works</strong> — 2 min</span></button>
+    </div>
+    <div class="be-video-area">
+      <svg class="be-video-blob" viewBox="0 0 920 495" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="be-curved-violet" x1=".14" y1=".12" x2=".79" y2=".92">
+            <stop offset="0" stop-color="#dbb8ff" stop-opacity=".94"/>
+            <stop offset=".34" stop-color="#ddc0ff" stop-opacity=".84"/>
+            <stop offset=".7" stop-color="#e8d4ff" stop-opacity=".61"/>
+            <stop offset="1" stop-color="#f5ecff" stop-opacity=".16"/>
+          </linearGradient>
+          <linearGradient id="be-curve-alpha" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0" stop-color="white"/>
+            <stop offset=".50" stop-color="white"/>
+            <stop offset=".73" stop-color="white" stop-opacity=".19"/>
+            <stop offset="1" stop-color="black"/>
+          </linearGradient>
+          <mask id="be-curve-fade" maskUnits="userSpaceOnUse" x="0" y="0" width="920" height="495">
+            <rect width="920" height="495" fill="url(#be-curve-alpha)"/>
+          </mask>
+        </defs>
+        <path mask="url(#be-curve-fade)" fill="url(#be-curved-violet)" d="M315 34 C410 -4 535 12 679 52 C814 87 894 116 919 182 C944 262 885 354 747 415 C601 476 417 469 223 483 C91 493 21 500 -20 520 C85 402 151 331 161 261 C173 196 108 166 123 125 C142 75 233 46 315 34 Z"/>
+      </svg>
+      <svg class="be-accent-lines" aria-hidden="true"><use href="#be-i-lines"></use></svg>
+      <button class="be-video" type="button" id="be-watch-thumbnail" aria-label="Play the Behavency game video">
+        <img src="assets/video-reference.jpg" alt="Colleagues smiling while playing the Behavency team game; play video" width="617" height="305">
+      </button>
+    </div>
+  </div>
+
+  <div class="be-lower">
+    <h2 class="be-stages-heading"><span class="be-rule" aria-hidden="true"></span>One experience, 3 stages.<span class="be-rule be-rule--right" aria-hidden="true"></span></h2>
+    <div class="be-stage-shell" id="be-stage-panel">
+      <div class="be-tabs" role="tablist" aria-label="Explore the three stages">
+        <button class="be-tab" type="button" id="be-tab-0" role="tab" aria-selected="true" tabindex="0" aria-controls="be-tab-content" data-stage-index="0"><span class="be-tab-icon"><svg class="be-icon"><use href="#be-i-game"></use></svg></span><span class="be-tab-copy"><span class="be-tab-title">01 · The Game</span><span class="be-tab-subtitle">Experience the patterns</span></span><svg class="be-icon be-tab-arrow"><use href="#be-i-chevron"></use></svg></button>
+        <button class="be-tab" type="button" id="be-tab-1" role="tab" aria-selected="false" tabindex="-1" aria-controls="be-tab-content" data-stage-index="1"><span class="be-tab-icon"><svg class="be-icon"><use href="#be-i-people"></use></svg></span><span class="be-tab-copy"><span class="be-tab-title">02 · Post-Reflection</span><span class="be-tab-subtitle">Make the connection</span></span><svg class="be-icon be-tab-arrow"><use href="#be-i-chevron"></use></svg></button>
+        <button class="be-tab" type="button" id="be-tab-2" role="tab" aria-selected="false" tabindex="-1" aria-controls="be-tab-content" data-stage-index="2"><span class="be-tab-icon"><svg class="be-icon"><use href="#be-i-chart"></use></svg></span><span class="be-tab-copy"><span class="be-tab-title">03 · Insight Report</span><span class="be-tab-subtitle">See what it reveals</span></span><svg class="be-icon be-tab-arrow"><use href="#be-i-chevron"></use></svg></button>
+      </div>
+
+      <div class="be-stage-text" id="be-tab-content" role="tabpanel" aria-labelledby="be-tab-0">
+        <div class="be-eyebrow"><span class="be-eyebrow-line"></span><span class="be-eyebrow-label" id="be-stage-count">STAGE 01</span></div>
+        <h3 class="be-stage-title" id="be-stage-title">The Game</h3>
+        <p class="be-stage-lead" id="be-stage-lead">A game that makes participants feel their own blind spots.</p>
+        <p class="be-stage-description" id="be-stage-description">Numbers on a report don’t always convince people. It’s easy to see a low score and move on. What’s harder is encountering the same behavioural gap yourself — in a real group situation, in real time.</p>
+      </div>
+
+      <div class="be-art" id="be-stage-art" data-stage="0" aria-label="Team game illustration with participant avatars and an interactive scorecard" role="img">
+        <div class="be-art-halo"></div><div class="be-art-orbit"></div>
+        <img class="be-avatar be-avatar--a" src="assets/avatar-glasses.png" alt="">
+        <img class="be-avatar be-avatar--b" src="assets/avatar-woman.png" alt="">
+        <img class="be-avatar be-avatar--c" src="assets/avatar-woman-left.png" alt="">
+        <img class="be-avatar be-avatar--d" src="assets/avatar-woman-bottom.png" alt="">
+        <img class="be-avatar be-avatar--e" src="assets/avatar-beard.png" alt="">
+        <div class="be-art-note be-game-activity" id="be-art-note">
+          <div class="be-note-title" id="be-note-title">Choose a response</div>
+          <div class="be-activity-body">
+            <div class="be-activity-row"><span class="be-check">✓</span><span class="be-faux-line"></span></div>
+            <div class="be-activity-row"><span class="be-check">✓</span><span class="be-faux-line be-faux-line--short"></span></div>
+            <div class="be-activity-row"><span class="be-check">✓</span><span class="be-faux-line be-faux-line--medium"></span></div>
+          </div>
+        </div>
+        <div class="be-gauge-card">
+          <div class="be-gauge-label" id="be-gauge-label">Team Score</div>
+          <div class="be-gauge-ring" id="be-gauge-ring"><div class="be-gauge-core"><small id="be-gauge-subtitle">Network</small><span id="be-gauge-value">76%</span></div></div>
+          <span class="be-gauge-people"><svg class="be-icon"><use href="#be-i-people-small"></use></svg></span>
+        </div>
+        <svg class="be-art-spark" aria-hidden="true"><use href="#be-i-spark"></use></svg>
+      </div>
+
+      <div class="be-stage-split" aria-hidden="true"></div>
+      <div class="be-facts" id="be-feature-list" aria-label="Stage 1 features">
+        <div class="be-fact"><span class="be-fact-icon"><svg class="be-icon"><use href="#be-i-people"></use></svg></span><div class="be-fact-text"><div class="be-fact-title">12–100 participants</div><p class="be-fact-description">Works for remote and in-person teams.</p></div></div>
+        <div class="be-fact"><span class="be-fact-icon"><svg class="be-icon"><use href="#be-i-clock"></use></svg></span><div class="be-fact-text"><div class="be-fact-title">45 minutes</div><p class="be-fact-description">Online, fully facilitated.</p></div></div>
+        <div class="be-fact"><span class="be-fact-icon"><svg class="be-icon"><use href="#be-i-layers"></use></svg></span><div class="be-fact-text"><div class="be-fact-title">Learn by doing</div><p class="be-fact-description">Participants experience how they naturally respond, decide and collaborate.</p></div></div>
+        <div class="be-fact"><span class="be-fact-icon"><svg class="be-icon"><use href="#be-i-sliders"></use></svg></span><div class="be-fact-text"><div class="be-fact-title">Customised</div><p class="be-fact-description">Can be tailored to your team’s focus areas.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- The owner can connect a real video by setting BEHAVENCY_VIDEO_URL in script below. -->
+  <div class="be-modal" id="be-modal" role="dialog" aria-modal="true" aria-label="Behavency game video" hidden>
+    <div class="be-modal-content">
+      <button type="button" class="be-modal-close" id="be-close-modal" aria-label="Close video">×</button>
+      <div class="be-modal-video" id="be-modal-video"><p>The video is not yet connected.<br>Set <code>BEHAVENCY_VIDEO_URL</code> in the script to your actual video URL.</p></div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  'use strict';
+  // EDIT THIS to embed an actual approved video URL, for example https://www.youtube.com/embed/VIDEO_ID
+  const BEHAVENCY_VIDEO_URL = '';
+  const STAGES = [
+    {
+      name: 'The Game', label: 'STAGE 01',
+      lead: 'A game that makes participants feel their own blind spots.',
+      description: 'Numbers on a report don’t always convince people. It’s easy to see a low score and move on. What’s harder is encountering the same behavioural gap yourself — in a real group situation, in real time.',
+      note: 'Choose a response', gaugeTitle: 'Team Score', gaugeSubtitle: 'Network', gaugeValue: '76%',
+      features: [
+        ['people', '12–100 participants', 'Works for remote and in-person teams.'],
+        ['clock', '45 minutes', 'Online, fully facilitated.'],
+        ['layers', 'Learn by doing', 'Participants experience how they naturally respond, decide and collaborate.'],
+        ['sliders', 'Customised', 'Can be tailored to your team’s focus areas.']
+      ]
+    },
+    {
+      name: 'The Reflection', label: 'STAGE 02',
+      lead: 'The game is only the beginning.',
+      description: 'In a facilitated conversation, the team looks back at what happened — the decisions they made, patterns that emerged, and how they collaborated. The facilitator turns those key moments into actionable self-awareness.',
+      note: 'Key observations', gaugeTitle: 'Team Alignment', gaugeSubtitle: '', gaugeValue: '88%',
+      features: [
+        ['clock', 'Typically 90 minutes', 'Flexible to your team’s needs.'],
+        ['people', 'Facilitator-led', 'Run by your facilitator or a Behavency expert.'],
+        ['layers', 'Guided reflection', 'A structured methodology using questions, discussion and facilitator input.'],
+        ['sliders', 'Works with your competencies', 'Use Behavency’s framework or focus on your own.']
+      ]
+    },
+    {
+      name: 'Insight Report', label: 'STAGE 03',
+      lead: 'Turn the experience into actionable insight.',
+      description: 'A clear, high-impact report combining game observations with key behavioral patterns, individual blind spots, and concrete recommendations for teams and leadership to sustain lasting progress.',
+      note: 'Executive Summary', gaugeTitle: 'Growth Impact', gaugeSubtitle: '', gaugeValue: '92%',
+      features: [
+        ['people', 'For leaders & HR', 'In-depth visibility into team dynamics and management effectiveness.'],
+        ['clock', 'Comprehensive analysis', 'Clear team metrics, behavioral patterns, and discussion points.'],
+        ['layers', 'For participants', 'Transparent results and personalized, actionable next steps.'],
+        ['sliders', 'Action-ready', 'Clear roadmap to translate findings into lasting everyday habits.']
+      ]
+    }
+  ];
+  const root = document.getElementById('behavency-engage');
+  const tabs = Array.from(root.querySelectorAll('.be-tab'));
+  const textPanel = root.querySelector('#be-tab-content');
+  const featurePanel = root.querySelector('#be-feature-list');
+  const art = root.querySelector('#be-stage-art');
+  let currentStage = 0;
+
+  function iconFor(name) {
+    return `<svg class="be-icon" aria-hidden="true"><use href="#be-i-${name}"></use></svg>`;
+  }
+  function changeStage(index, focusTab) {
+    if (!Number.isInteger(index) || index < 0 || index > 2) return;
+    currentStage = index;
+    const stage = STAGES[index];
+    tabs.forEach((tab, i) => {
+      const selected = i === index;
+      tab.setAttribute('aria-selected', String(selected));
+      tab.tabIndex = selected ? 0 : -1;
+    });
+    textPanel.setAttribute('aria-labelledby', `be-tab-${index}`);
+    root.querySelector('#be-stage-count').textContent = stage.label;
+    root.querySelector('#be-stage-title').textContent = stage.name;
+    root.querySelector('#be-stage-lead').textContent = stage.lead;
+    root.querySelector('#be-stage-description').textContent = stage.description;
+    art.setAttribute('data-stage', String(index));
+    art.setAttribute('aria-label', `Illustration of stage ${index + 1}: ${stage.name}, with a ${stage.gaugeValue} scorecard`);
+    root.querySelector('#be-note-title').textContent = stage.note;
+    root.querySelector('#be-gauge-label').textContent = stage.gaugeTitle;
+    root.querySelector('#be-gauge-subtitle').textContent = stage.gaugeSubtitle;
+    root.querySelector('#be-gauge-value').textContent = stage.gaugeValue;
+    const percentage = parseInt(stage.gaugeValue, 10);
+    root.querySelector('#be-gauge-ring').style.background = `conic-gradient(#892cf0 0deg ${percentage * 3.6}deg,#eedbff ${percentage * 3.6}deg 360deg)`;
+    featurePanel.setAttribute('aria-label', `Stage ${index + 1} features`);
+    featurePanel.innerHTML = stage.features.map(([icon, title, description]) => `
+       <div class="be-fact"><span class="be-fact-icon">${iconFor(icon)}</span>
+       <div class="be-fact-text"><div class="be-fact-title">${title}</div><p class="be-fact-description">${description}</p></div></div>`).join('');
+    [textPanel, featurePanel, art].forEach(node => {
+      node.classList.remove('be-animate'); void node.offsetWidth; node.classList.add('be-animate');
+    });
+    if (focusTab) tabs[index].focus();
+  }
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => changeStage(index, false));
+    tab.addEventListener('keydown', (event) => {
+      let next = index;
+      if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (index + 1) % tabs.length;
+      else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (index + tabs.length - 1) % tabs.length;
+      else if (event.key === 'Home') next = 0;
+      else if (event.key === 'End') next = tabs.length - 1;
+      else return;
+      event.preventDefault(); changeStage(next, true);
+    });
+  });
+  const modal = root.querySelector('#be-modal');
+  const modalVideo = root.querySelector('#be-modal-video');
+  const closeModal = root.querySelector('#be-close-modal');
+  let previousFocus;
+  function openVideo() {
+    previousFocus = document.activeElement;
+    if (BEHAVENCY_VIDEO_URL) {
+      const frame = document.createElement('iframe');
+      frame.setAttribute('title', 'Behavency game introduction');
+      frame.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture');
+      frame.setAttribute('allowfullscreen', '');
+      frame.src = BEHAVENCY_VIDEO_URL;
+      modalVideo.replaceChildren(frame);
+    }
+    modal.hidden = false; closeModal.focus(); document.body.style.overflow = 'hidden';
+  }
+  function shutVideo() {
+    modal.hidden = true;document.body.style.overflow = '';
+    if (BEHAVENCY_VIDEO_URL) modalVideo.replaceChildren();
+    if (previousFocus && previousFocus.focus) previousFocus.focus();
+  }
+  root.querySelector('#be-watch-cta').addEventListener('click', openVideo);
+  root.querySelector('#be-watch-thumbnail').addEventListener('click', openVideo);
+  closeModal.addEventListener('click', shutVideo);
+  modal.addEventListener('click', event => {if (event.target === modal) shutVideo();});
+  document.addEventListener('keydown', event => {if (event.key === 'Escape' && !modal.hidden) shutVideo();});
+})();
+</script>
+</body>
+</html>

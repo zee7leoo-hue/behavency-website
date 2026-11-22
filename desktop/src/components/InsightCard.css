@@ -1,0 +1,57 @@
+/* "03 · Insight Report" card */
+.ic-card {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  width: 100%; max-width: 1320px; margin: 0 auto; box-sizing: border-box;
+  height: var(--be-card-h, clamp(540px, calc(100vh - 190px), 600px));
+  padding: 42px 30px 42px 62px;
+  border-radius: 54px;
+  background: linear-gradient(135deg, #ffffff 0%, #fdfcff 55%, #faf8ff 100%);
+  border: 1.5px solid rgba(238, 232, 255, 0.95);
+  box-shadow: 0 34px 70px -34px rgba(108, 60, 240, 0.32), 0 6px 22px rgba(108, 60, 240, 0.06);
+  color: #0b0e33;
+  display: grid; grid-template-columns: minmax(0, 1fr) 48%; gap: 24px; align-items: center;
+}
+.ic-copy { min-width: 0; display: flex; flex-direction: column; justify-content: center; }
+.ic-badge { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+.ic-badge-icon {
+  width: 55px; height: 55px; border-radius: 17px;
+  background: linear-gradient(145deg, #a455fb 0%, #7a2ff0 100%);
+  display: grid; place-items: center; box-shadow: 0 10px 20px -10px rgba(124, 58, 237, 0.7);
+}
+.ic-badge-icon svg { width: 28px; height: 28px; }
+.ic-badge-pill { padding: 11px 20px; border-radius: 999px; background: #e7dcff; font-size: 15.3px; font-weight: 800; letter-spacing: -0.02em; color: #2b1a8f; }
+.ic-title { margin: 0; font-size: clamp(45px, 4.14vw, 59.4px); font-weight: 800; letter-spacing: -0.045em; line-height: 1.04; color: #0b0e33; }
+.ic-underline { display: block; width: 112px; height: 6px; border-radius: 3px; margin: 12px 0 24px; background: linear-gradient(90deg, #6a0ff0 0%, #7c28f3 100%); }
+.ic-sub { margin: 0 0 30px; font-size: clamp(19.8px, 1.8vw, 25.2px); font-weight: 800; letter-spacing: -0.035em; color: #0b0e33; }
+.ic-rows { display: flex; flex-direction: column; gap: 26px; }
+.ic-row { display: flex; align-items: flex-start; gap: 24px; }
+.ic-row-icon {
+  flex: none; width: 72px; height: 72px; border-radius: 19px; background: #ede5fc; color: #7a3df0;
+  display: grid; place-items: center; box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+.ic-row-icon svg { width: 40px; height: 40px; }
+.ic-row-title { font-size: 23.4px; font-weight: 800; letter-spacing: -0.035em; color: #0b0e33; margin-bottom: 4px; }
+.ic-row-desc { font-size: 18px; line-height: 1.4; letter-spacing: -0.015em; color: #2c3050; max-width: 410px; }
+
+.ic-art { min-width: 0; display: grid; place-items: center; }
+.ic-report {
+  width: 100%; height: auto; display: block;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 5%, #000 95%, transparent 100%), linear-gradient(180deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(90deg, transparent 0, #000 5%, #000 95%, transparent 100%), linear-gradient(180deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+  mask-composite: intersect;
+  user-select: none; pointer-events: none;
+}
+
+@media (max-height: 800px) and (min-width: 1101px) {
+  .ic-card { padding: 30px 30px 30px 56px; }
+  .ic-badge { margin-bottom: 12px; }
+  .ic-underline { margin: 8px 0 16px; }
+  .ic-sub { margin-bottom: 20px; }
+  .ic-rows { gap: 18px; }
+  .ic-row-icon { width: 62px; height: 62px; }
+  .ic-row-desc { font-size: 16.2px; }
+}
+@media (max-width: 1100px) {
+  .ic-card { height: auto; grid-template-columns: 1fr; padding: 40px 28px 28px; border-radius: 36px; gap: 28px; }
+}

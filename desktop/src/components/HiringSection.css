@@ -1,0 +1,60 @@
+/* "Also for hiring" — the three benefits as a clean list (no white boxes).
+   Sizes are in cqw of the 1255px content column. Fonts (Inter, Source Serif 4) load in index.html. */
+.hr-outer { background: #faf8f4; padding: 44px 0 44px; }
+.hr, .hr * { box-sizing: border-box; }
+.hr { color: #0f1b3d; display: grid; grid-template-columns: 56% 1fr; align-items: center; gap: 2cqw; width: min(1255px, 100% - 64px); margin: 0 auto; font-family: Inter, Arial, Helvetica, sans-serif; container-type: inline-size; }
+.hr-eyebrow { display: flex; align-items: center; gap: 1.2cqw; letter-spacing: .19em; color: #4a5163; font-size: 1cqw; font-weight: 500; line-height: 1; }
+.hr-dash { display: block; width: 2.4cqw; height: 1px; background: #4a5163; }
+.hr-title { margin: 1.6cqw 0 0; font-family: "Source Serif 4", Georgia, serif; font-size: 3.7cqw; font-weight: 600; line-height: 1.05; letter-spacing: -.01em; color: #0f1b3d; white-space: nowrap; }
+.hr-title em { color: #1a8a74; font-style: italic; font-weight: 500; }
+.hr-lead { margin: 1.3cqw 0 0; color: #4a5163; font-size: 1.3cqw; line-height: 1.55; max-width: 52cqw; }
+.hr-steps { list-style: none; margin: 1.9cqw 0 0; padding: 0; max-width: 52cqw; }
+.hr-step { display: grid; grid-template-columns: 3.2cqw 1fr; align-items: baseline; padding: 1.05cqw 0; border-top: 1px solid #e3ddd2; }
+.hr-step:last-child { border-bottom: 1px solid #e3ddd2; }
+.hr-num { font-family: "Source Serif 4", Georgia, serif; font-size: 2cqw; font-weight: 600; color: #1a8a74; line-height: 1; }
+.hr-num svg { width: 1.7cqw; height: 1.7cqw; fill: none; stroke: #1a8a74; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; display: block; transform: translateY(.25cqw); }
+.hr-step h3 { margin: 0; font-size: 1.32cqw; font-weight: 600; line-height: 1.3; color: #0e2a4a; }
+.hr-step p { margin: .35cqw 0 0; font-size: 1.18cqw; line-height: 1.45; color: #5a6272; }
+.hr-how { margin: 1.2cqw 0 0; max-width: 52cqw; font-size: 1.18cqw; line-height: 1.5; color: #0e2a4a; font-weight: 500; }
+.hr-note { display: flex; gap: .9cqw; align-items: flex-start; margin: .7cqw 0 0; max-width: 52cqw; font-size: 1.1cqw; line-height: 1.5; color: #5a6272; }
+.hr-note svg { flex: none; width: 1.4cqw; height: 1.4cqw; margin-top: .15cqw; stroke: #1a8a74; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.hr-right { display: flex; justify-content: flex-end; }
+.hr-doc { display: block; width: 38cqw; height: auto; margin-right: -4cqw; user-select: none; -webkit-user-drag: none; }
+.hr .m { display: none; }
+
+@media (max-width: 900px) {
+  .hr-outer { padding: 56px 0 64px; }
+  .hr { grid-template-columns: 1fr; gap: 36px; width: calc(100% - 32px); container-type: normal; }
+  .hr-eyebrow { font-size: 12px; gap: 12px; } .hr-dash { width: 28px; }
+  .hr-title { white-space: normal; margin-top: 18px; font-size: clamp(32px, 8.4vw, 50px); }
+  .hr-title br { display: none; }
+  .hr-lead, .hr-steps, .hr-note { max-width: none; }
+  .hr-lead { font-size: 17px; margin-top: 16px; }
+  .hr-steps { margin-top: 26px; }
+  .hr-step { grid-template-columns: 34px 1fr; padding: 16px 0; }
+  .hr-num { font-size: 22px; } .hr-step h3 { font-size: 17px; } .hr-step p { font-size: 15px; margin-top: 4px; }
+  .hr-num svg { width: 20px; height: 20px; transform: translateY(3px); }
+  .hr-how { max-width: none; font-size: 15px; margin-top: 18px; }
+  .hr-note { font-size: 14px; gap: 10px; margin-top: 18px; } .hr-note svg { width: 18px; height: 18px; }
+  .hr-right { justify-content: center; } .hr-doc { width: min(100%, 440px); margin-right: 0; }
+
+  /* Phone: short text, the report right under the intro (top part, fading out), benefits as one-line checks. */
+  .hr .d { display: none; } .hr .m { display: inline; }
+  .hr { display: flex; flex-direction: column; gap: 0; }
+  .hr-left { display: contents; }
+  .hr-eyebrow { order: 1; } .hr-title { order: 2; } .hr-lead { order: 3; } .hr-right { order: 4; } .hr-steps { order: 5; } .hr-how { order: 6; } .hr-note { order: 7; }
+  .hr-lead { font-size: 17px; margin-top: 12px; }
+  .hr-right { margin: 22px -16px 0; height: 380px; overflow: hidden; justify-content: center; -webkit-mask-image: linear-gradient(#000 70%, transparent); mask-image: linear-gradient(#000 70%, transparent); }
+  .hr-doc { flex: none; width: 132%; max-width: none; margin: -3% 0 0; }
+  .hr-steps { margin-top: 6px; }
+  .hr-step { padding: 13px 0; align-items: center; }
+  .hr-step p { display: none; }
+  .hr-step h3 { font-size: 16.5px; }
+  .hr-how { font-size: 14px; font-weight: 400; color: #5a6272; margin-top: 16px; }
+  .hr-note { font-size: 13px; margin-top: 8px; }
+}
+
+/* laptop and wider: the report a little bigger and a little lower */
+@media (min-width: 901px) {
+  .hr-doc { width: 42cqw; position: relative; top: 3cqw; }
+}

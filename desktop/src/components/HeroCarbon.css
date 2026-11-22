@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,600;0,8..60,700;0,8..60,800;1,8..60,600;1,8..60,700;1,8..60,800&display=swap');
+
+/* Hero — carbon copy of the supplied design.
+   Everything is placed in a fixed 16:9 frame (the design is 1600 × 900) and sized in container-query
+   units, so the whole composition scales together. 1cqw = 16px of the design.
+   Fonts: Source Serif 4 (roman + italic) for the headline, Inter for the rest. */
+
+.hc-outer {
+  background: linear-gradient(90deg, #fdfbfe 0%, #fdfbfe 55%, #e9eafd 100%);
+}
+.hc {
+  position: relative;
+  width: 100%;
+  max-width: 2560px;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  container-type: inline-size;
+  overflow: hidden;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  --hc-navy: #030e3d;
+  --hc-teal: #12a0bd;
+}
+
+/* text + cards are scaled together about the centre of the hero (tune --hc-scale: 1 = full size) */
+.hc { --hc-scale: 0.92; }
+.hc-content {
+  position: absolute;
+  inset: 0;
+  transform: scale(var(--hc-scale));
+  transform-origin: 50% 50%;
+}
+
+/* the left-hand text moves as one block: same size as the design, pulled in from the edge */
+.hc-text {
+  position: absolute;
+  inset: 0;
+  left: 3.75cqw;
+}
+
+/* ── eyebrow ── */
+.hc-dash {
+  position: absolute;
+  left: 6.125cqw;            /* 98px */
+  top: 10.9cqw;              /* 175px */
+  width: 2.375cqw;           /* 38px */
+  height: 0.13cqw;           /* 2px */
+  background: var(--hc-teal);
+  border-radius: 2px;
+}
+.hc-eyebrow {
+  position: absolute;
+  left: 9.5cqw;              /* 152px */
+  top: 11.03cqw;             /* centre of the caps, 176.5px */
+  transform: translateY(-50%);
+  font-family: var(--font-sans);
+  font-size: 1cqw;
+  font-weight: 700;
+  letter-spacing: 0.052em;
+  line-height: 1;
+  white-space: nowrap;
+  color: #070a3a;
+}
+
+/* ── headline ── */
+.hc-title {
+  position: absolute;
+  left: 6.125cqw;
+  top: 13.96cqw;
+  margin: 0;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.hc-title-main {
+  display: block;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 700;
+  font-size: 3.72cqw;
+  line-height: 3.625cqw;
+  letter-spacing: -0.03em;
+  font-optical-sizing: none;
+  font-variation-settings: 'opsz' 36;
+  color: var(--hc-navy);
+}
+.hc-title-em {
+  display: block;
+  margin-top: 0.3cqw;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-style: italic;
+  font-optical-sizing: none;
+  font-variation-settings: 'opsz' 36;
+  font-weight: 700;
+  font-size: 3.68cqw;
+  line-height: 3.6875cqw;
+  letter-spacing: -0.04em;
+  color: var(--hc-teal);
+}
+
+/* ── copy ── */
+.hc-sub {
+  position: absolute;
+  left: 6.125cqw;
+  top: 34.56cqw;
+  margin: 0;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 1.20cqw;
+  line-height: 1.78cqw;
+  letter-spacing: -0.005em;
+  white-space: nowrap;
+  color: #233255;
+}
+
+/* ── buttons ── */
+.hc-btn {
+  position: absolute;
+  left: 6.06cqw;
+  top: 43.3cqw;
+  width: 11cqw;
+  height: 2.95cqw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.62cqw;
+  background: #041a4c;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.94cqw;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  box-shadow: 0 0.38cqw 1cqw rgba(4, 26, 76, 0.2);
+  transition: background 0.2s, transform 0.2s;
+}
+.hc-btn:hover {
+  background: #0d276b;
+  transform: translateY(-1px);
+}
+.hc-link {
+  position: absolute;
+  left: 18.7cqw;
+  top: 44.775cqw;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5cqw;
+  font-family: var(--font-sans);
+  font-size: 1.10cqw;
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  white-space: nowrap;
+  color: #070684;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.hc-link svg {
+  width: 1.3cqw;
+  height: 1.3cqw;
+  transition: transform 0.2s;
+}
+.hc-link:hover svg {
+  transform: translateX(3px);
+}
+
+/* ── the four cards, line and dots (the design's own artwork) ── */
+.hc-cards {
+  position: absolute;
+  left: 43.0cqw;
+  top: 17.5cqw;
+  width: 48.1cqw;
+  aspect-ratio: 950 / 440;
+  user-select: none;
+}
+.hc-cards-art { position: absolute; inset: 0; width: 100%; height: 100%; display: block; -webkit-user-drag: none; }
+.hc-cards-ui { position: absolute; inset: 0; width: 100%; height: 100%; display: block; pointer-events: none; overflow: visible; }
+.hc-ct {
+  position: absolute;
+  /* 1 artwork pixel = 0.05063cqw */
+  font-size: calc(var(--s) * 0.05063cqw);
+  color: var(--c);
+  font-family: var(--font-sans);
+  white-space: nowrap;
+  line-height: 1;
+  transform: translate(0, -86.35%);
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+.hc-ct[style*="text-align: center"] { transform: translate(-50%, -86.35%); }
+.hc-ct[style*="text-align: right"] { transform: translate(-100%, -86.35%); }
+.hc-ct--rot { transform: translate(-50%, calc(-50% + var(--dy))) rotate(var(--r)) !important; text-align: center; }
+.hc-ct--title { font-weight: 800; letter-spacing: -0.025em; }
+.hc-ct--sub { font-weight: 500; letter-spacing: -0.012em; }
+.hc-ct--ui { font-weight: 700; letter-spacing: -0.02em; }
+
+/* ── phones: stack the same pieces ── */
+@media (max-width: 900px) {
+  .hc {
+    aspect-ratio: auto;
+    container-type: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 118px 20px 44px;
+    background-image: none !important;
+    background: linear-gradient(180deg, #fdfbfe 0%, #f1f1fd 100%);
+  }
+  .hc-content, .hc-text { display: contents; transform: none; }
+  .hc > *, .hc-text > *, .hc-content > * { position: static; transform: none; }
+  .hc-dash { display: none; }
+  .hc-eyebrow { font-size: 13px; }
+  .hc-title-main { font-size: clamp(34px, 9vw, 46px); line-height: 1.07; }
+  .hc-title-em { font-size: clamp(31px, 8.2vw, 42px); line-height: 1.1; margin-top: 4px; }
+  .hc-title { white-space: normal; }
+  .hc-sub { font-size: 17px; line-height: 1.5; white-space: normal; }
+  .hc-sub br { display: none; }
+  .hc-btn { width: 195px; height: 50px; font-size: 16.5px; border-radius: 10px; align-self: flex-start; }
+  .hc-link { font-size: 16.5px; align-self: flex-start; }
+  .hc-link svg { width: 19px; height: 19px; }
+  .hc-cards { position: relative; width: 100%; max-width: 576px; margin: 0 auto; container-type: inline-size; }
+  .hc-ct { font-size: calc(var(--s) * 0.1053cqw); }
+}

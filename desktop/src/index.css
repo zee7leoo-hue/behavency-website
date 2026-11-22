@@ -1,0 +1,247 @@
+/* ================================================
+   BEHAVENCY V3 — Story-Driven Editorial Design
+   For corporate HR / L&D audiences
+   ================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream:      #FAF8F4;
+  --cream-2:    #F2EFE9;
+  --ink:        #1C1917;
+  --ink-2:      #292524;
+  --ink-3:      #44403C;
+  --muted:      #78716C;
+  --subtle:     #A8A29E;
+  --border:     #E7E5E4;
+  --white:      #FFFFFF;
+
+  /* Brand */
+  --navy:       #1E3A5F;
+  --navy-2:     #152D4A;
+  --blue:       #2563EB;
+  --gold:       #B45309;
+  --gold-light: #FEF3C7;
+  --teal:       #0F766E;
+  --teal-light: #CCFBF1;
+  --rose:       #BE123C;
+
+  /* Stage palette */
+  --s1: #1E3A5F;   /* Identify — deep navy */
+  --s2: #0F766E;   /* Engage — teal */
+  --s3: #6D28D9;   /* Build — violet */
+  --s4: #B45309;   /* Measure — amber/gold */
+
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans:  'Inter', system-ui, sans-serif;
+
+  --max-w: 1120px;
+  --px: clamp(20px, 5vw, 80px);
+
+  --r-sm: 6px;
+  --r-md: 12px;
+  --r-lg: 24px;
+  --r-xl: 40px;
+
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.07);
+  --shadow-md: 0 6px 24px rgba(0,0,0,0.09);
+  --shadow-lg: 0 16px 56px rgba(0,0,0,0.12);
+
+  --t: 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans);
+  background: var(--cream);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+::selection { background: #DBEAFE; color: var(--navy); }
+
+/* ── Container ── */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--px);
+}
+
+/* ── Chapter layout ── */
+.chapter {
+  padding: 100px 0;
+}
+.chapter--cream  { background: var(--cream); }
+.chapter--white  { background: var(--white); }
+.chapter--cream2 { background: var(--cream-2); }
+.chapter--navy   { background: var(--navy); color: var(--white); }
+.chapter--ink    { background: var(--ink); color: var(--white); }
+
+/* ── Typography ── */
+.display {
+  font-family: var(--font-serif);
+  font-size: clamp(44px, 6vw, 88px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.display em { font-style: italic; color: var(--navy); }
+.display--white { color: var(--white); }
+.display--white em { color: rgba(255,255,255,0.55); }
+
+.headline {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+.headline em { font-style: italic; }
+.headline--white { color: var(--white); }
+
+.subhead {
+  font-size: clamp(20px, 2.2vw, 26px);
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--muted);
+  max-width: 640px;
+}
+.subhead--white { color: rgba(255,255,255,0.65); }
+
+.body-copy {
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--ink-3);
+  max-width: 560px;
+}
+.body-copy--white { color: rgba(255,255,255,0.7); }
+.body-copy--center { text-align: center; margin-left: auto; margin-right: auto; }
+
+.caption {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--subtle);
+}
+.caption--colored { color: inherit; }
+
+/* ── Chapter label (the "01 / IDENTIFY" style) ── */
+.chapter-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.chapter-label__num {
+  font-family: var(--font-serif);
+  font-size: 14px;
+  font-style: italic;
+  color: var(--subtle);
+}
+.chapter-label__line {
+  width: 40px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.25;
+}
+.chapter-label__text {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--subtle);
+}
+.chapter-label--light .chapter-label__num,
+.chapter-label--light .chapter-label__text { color: rgba(255,255,255,0.4); }
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 14px 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--t);
+  text-decoration: none;
+  border: none;
+  white-space: nowrap;
+}
+.btn-navy {
+  background: var(--navy);
+  color: white;
+}
+.btn-navy:hover { background: var(--navy-2); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+.btn-outline-white {
+  background: transparent;
+  color: white;
+  border: 1.5px solid rgba(255,255,255,0.35);
+}
+.btn-outline-white:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.6); }
+.btn-outline-ink {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--border);
+}
+.btn-outline-ink:hover { border-color: var(--ink-3); }
+
+/* ── Divider ── */
+.divider { height: 1px; background: var(--border); }
+.divider--dark { background: rgba(255,255,255,0.08); }
+
+/* ── Split layout ── */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.split--reverse .split__visual { order: -1; }
+@media (max-width: 900px) {
+  .split { grid-template-columns: 1fr; gap: 48px; }
+  .split--reverse .split__visual { order: unset; }
+}
+
+/* ── Stat blocks ── */
+.stat-row {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.stat__val {
+  font-family: var(--font-serif);
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--navy);
+}
+.stat__val--white { color: white; }
+.stat__label {
+  font-size: 13px;
+  color: var(--muted);
+  max-width: 120px;
+  line-height: 1.4;
+}
+.stat__label--white { color: rgba(255,255,255,0.5); }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
+
+@media (max-width: 768px) {
+  .chapter { padding: 72px 0; }
+  .stat-row { gap: 28px; }
+}

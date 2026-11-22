@@ -1,0 +1,161 @@
+/* Screen 1 of the Engage scroll-stack: "01 · The Game" */
+.gs-card {
+  --gs-ink: #0b0e33;
+  --gs-copy: #596079;
+  --gs-violet: #7c3aed;
+  --gs-tile: #eee8fc;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  width: 100%;
+  max-width: 1420px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 48px 64px 40px;
+  border-radius: 40px;
+  background: linear-gradient(135deg, #fdfcff 0%, #f8f4ff 60%, #f4eeff 100%);
+  border: 1.5px solid rgba(228, 219, 251, 0.9);
+  box-shadow: 0 24px 70px -24px rgba(112, 72, 220, 0.28), 0 4px 16px rgba(112, 72, 220, 0.06);
+  color: var(--gs-ink);
+  height: clamp(580px, calc(100vh - 110px), 640px);
+  display: flex;
+  flex-direction: column;
+}
+.gs-top {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 470px;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 38px;
+  border-bottom: 1.5px solid rgba(226, 219, 244, 0.8);
+}
+.gs-copy { min-width: 0; max-width: 780px; }
+
+.gs-badge { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+.gs-badge-icon {
+  width: 56px; height: 56px; border-radius: 18px;
+  background: var(--gs-tile); color: var(--gs-violet);
+  display: grid; place-items: center;
+  box-shadow: 0 6px 16px -8px rgba(124, 58, 237, 0.35);
+}
+.gs-badge-pill {
+  padding: 10px 18px; border-radius: 999px; background: #f0eafe;
+  font-size: 17px; font-weight: 700; color: var(--gs-ink); letter-spacing: -0.02em;
+}
+.gs-badge-pill b { color: var(--gs-violet); font-weight: 800; }
+
+.gs-title {
+  margin: 0 0 10px;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: clamp(46px, 4.7vw, 68px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.02;
+  color: var(--gs-ink);
+}
+.gs-sub {
+  margin: 0 0 16px;
+  font-size: clamp(20px, 1.9vw, 27px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--gs-ink);
+}
+.gs-text {
+  margin: 0 0 10px;
+  font-size: clamp(15px, 1.3vw, 18px);
+  font-weight: 450;
+  line-height: 1.55;
+  letter-spacing: -0.015em;
+  color: var(--gs-copy);
+  max-width: 700px;
+}
+.gs-art { width: 100%; height: auto; display: block; }
+
+.gs-features {
+  display: grid;
+  grid-template-columns: repeat(var(--gs-cols, 4), minmax(0, 1fr));
+  padding-top: 34px;
+}
+.gs-feat {
+  display: flex; align-items: center; gap: 16px;
+  padding: 0 24px;
+}
+.gs-feat:first-child { padding-left: 0; }
+.gs-feat + .gs-feat { border-left: 1.5px solid rgba(226, 219, 244, 0.85); }
+.gs-feat-icon {
+  flex: none; width: 58px; height: 58px; border-radius: 18px;
+  background: var(--gs-tile); color: #7a4df0;
+  display: grid; place-items: center;
+  box-shadow: 0 6px 16px -9px rgba(124, 58, 237, 0.4);
+}
+.gs-feat-title { font-size: 20px; font-weight: 750; letter-spacing: -0.025em; color: var(--gs-ink); margin-bottom: 4px; }
+.gs-feat-desc { font-size: 18px; line-height: 1.4; letter-spacing: -0.01em; color: var(--gs-copy); white-space: pre-line; }
+
+@media (max-width: 1100px) {
+  .gs-card { padding: 40px 36px 36px; }
+  .gs-top { grid-template-columns: minmax(0, 1fr) 340px; }
+  .gs-features { grid-template-columns: repeat(2, 1fr); row-gap: 26px; }
+  .gs-feat:nth-child(odd) { padding-left: 0; border-left: 0; }
+}
+@media (max-width: 700px) {
+  .gs-card { padding: 28px 22px; border-radius: 28px; }
+  .gs-top { grid-template-columns: 1fr; }
+  .gs-art { max-width: 380px; margin: 0 auto; }
+  .gs-features { grid-template-columns: 1fr; }
+  .gs-feat, .gs-feat + .gs-feat { padding: 0; border-left: 0; }
+}
+
+.gs-art-wrap { display: grid; place-items: center; min-width: 0; }
+.gs-text + .gs-text { margin-top: 0; }
+.gs-art-wrap .gs-photo { width: 100%; max-width: 330px; height: auto; display: block; }
+
+/* colour themes */
+.gs-card--blue {
+  --gs-violet: #2478ec; --gs-tile: #e3effd;
+  background: linear-gradient(135deg, #fcfdff 0%, #f3f8ff 60%, #ecf4ff 100%);
+  border-color: rgba(200, 220, 250, 0.95);
+  box-shadow: 0 24px 70px -24px rgba(52, 133, 243, 0.28), 0 4px 16px rgba(52, 133, 243, 0.06);
+}
+.gs-card--blue .gs-badge-pill { background: #e6f0fe; }
+.gs-card--blue .gs-badge-icon, .gs-card--blue .gs-feat-icon { color: #2478ec; }
+.gs-card--blue .gs-top, .gs-card--blue .gs-feat + .gs-feat { border-color: rgba(200, 220, 248, 0.9); }
+
+.gs-card--indigo {
+  --gs-violet: #4338ca; --gs-tile: #e8e8fb;
+  background: linear-gradient(135deg, #fcfcff 0%, #f5f5ff 60%, #eeeefc 100%);
+  border-color: rgba(208, 208, 244, 0.95);
+  box-shadow: 0 24px 70px -24px rgba(67, 56, 202, 0.26), 0 4px 16px rgba(67, 56, 202, 0.06);
+}
+.gs-card--indigo .gs-badge-pill { background: #e9e9fb; }
+.gs-card--indigo .gs-badge-icon, .gs-card--indigo .gs-feat-icon { color: #4338ca; }
+.gs-card--indigo .gs-top, .gs-card--indigo .gs-feat + .gs-feat { border-color: rgba(208, 208, 242, 0.9); }
+@media (max-width: 700px) { .gs-features { grid-template-columns: 1fr; } }
+
+/* shorter screens: tighten the card so every screen still fits inside the same height */
+@media (max-height: 800px) and (min-width: 701px) {
+  .gs-card { padding: 34px 56px 28px; }
+  .gs-title { font-size: clamp(40px, 4vw, 56px); margin-bottom: 6px; }
+  .gs-badge { margin-bottom: 12px; }
+  .gs-top { padding-bottom: 24px; }
+  .gs-features { padding-top: 22px; }
+  .gs-text { margin-bottom: 6px; line-height: 1.45; }
+  .gs-feat-desc { font-size: 16px; }
+  .gs-feat { gap: 12px; }
+  .gs-art-wrap .gs-photo { max-width: 280px; }
+}
+
+/* Insight Report: a bigger report card (wider, so everything inside scales up with it) */
+@media (min-width: 1101px) {
+  .gs-card--indigo .gs-top { grid-template-columns: minmax(0, 1fr) 680px; }
+  .gs-card--indigo .ees-report-card { max-width: 680px; }
+}
+@media (min-width: 1101px) {
+  .gs-card--indigo { padding-top: 34px; padding-bottom: 28px; }
+  .gs-card--indigo .gs-top { grid-template-columns: minmax(0, 1fr) 580px; padding-bottom: 22px; }
+  .gs-card--indigo .ees-report-card { max-width: 580px; }
+  .gs-card--indigo .gs-features { padding-top: 22px; }
+}
+
+/* roomier feature columns so the larger sub text never wraps awkwardly */
+.gs-feat { padding: 0 16px; gap: 14px; }
+.gs-feat:first-child { padding-left: 0; }
+.gs-feat-icon { width: 54px; height: 54px; }

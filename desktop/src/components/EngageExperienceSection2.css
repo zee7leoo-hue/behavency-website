@@ -1,0 +1,159 @@
+/* ══════════════════════════════════════════
+   ENGAGE (version 2) — first screen redesigned to the supplied reference.
+   Sizes are proportional to the viewport (the reference is 1600 px wide), so it keeps the same look on any desktop.
+   ══════════════════════════════════════════ */
+.behavency-engage--v2 { --be-card-h: max(480px, calc(0.9 * min(calc(min(1320px, 100vw - 48px) / 2), calc(100vh - 162px))));  /* 10% lower than before */
+  /* the cards stop centred in the space below the navigation bar */
+  --v2-pad: calc(72px + (100vh - 72px - var(--be-card-h)) / 2); }
+.behavency-engage--v2 .be-top-layer { padding-top: 72px; padding-bottom: 0; }
+
+.bx-hero {
+  width: min(87vw, 1500px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(26px, 3.1vw, 52px);
+  position: relative;
+  top: -36px;
+  /* a little smaller than the screen, so the cards that scroll over it cover it completely */
+  transform: scale(var(--bx-s, 0.8));
+  transform-origin: 50% 50%;
+}
+
+/* the first screen is shown on its own: the Game card waits just below the fold until you scroll */
+.behavency-engage--v2 .be-slot { padding-top: var(--v2-pad); }
+.behavency-engage--v2 .be-slot--game { margin-top: calc(-1 * var(--v2-pad)); }
+
+/* navy "PROPOSAL" tag */
+.bx-proposal {
+  align-self: flex-start;
+  padding: 0.55em 0.95em;
+  border-radius: 8px;
+  background: #0d1538;
+  color: #fff;
+  font-family: var(--font-sans, Inter, system-ui, sans-serif);
+  font-size: clamp(12.5px, 0.98vw, 16px);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  line-height: 1.25;
+}
+
+.bx-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1.02fr);
+  column-gap: clamp(32px, 4.1vw, 68px);
+  align-items: stretch;
+}
+
+/* left: stage pill, big serif headline, green swoosh */
+.bx-left { min-width: 0; display: flex; flex-direction: column; align-items: flex-start; }
+.bx-title {
+  margin: clamp(18px, 1.9vw, 32px) 0 0;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(44px, 5.07vw, 90px);
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  color: #0c1240;
+  white-space: nowrap;
+}
+.bx-em {
+  display: inline-block;
+  margin-top: 0.03em;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #1fae3c;
+  padding-right: 0.06em;
+}
+.bx-underline { display: block; width: min(100%, 6.5em); font-size: clamp(44px, 5.07vw, 90px); height: 0.4em; margin-top: -0.03em; overflow: visible; }
+
+.bx-divider {
+  align-self: stretch;
+  margin: clamp(8px, 0.9vw, 14px) 0 0;
+  background: linear-gradient(180deg, transparent, #d9d6e6 6%, #d9d6e6 94%, transparent);
+}
+
+/* right: serif heading, copy, two audience points, buttons */
+.bx-right { min-width: 0; padding-top: 0.2em; }
+.bx-h {
+  margin: 0;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(24px, 2.35vw, 41px);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+  color: #0c1240;
+}
+.bx-copy {
+  margin: clamp(10px, 1.1vw, 18px) 0 0;
+  max-width: 34.6em;
+  font-size: clamp(14.5px, 1.15vw, 20px);
+  line-height: 1.48;
+  letter-spacing: -0.005em;
+  color: #545a70;
+}
+.bx-points { list-style: none; margin: clamp(18px, 1.7vw, 30px) 0 0; padding: 0; display: flex; flex-direction: column; gap: clamp(12px, 1.05vw, 18px); }
+.bx-points li { display: flex; align-items: flex-start; gap: clamp(14px, 1.4vw, 24px); }
+.bx-ico {
+  flex: none;
+  width: clamp(40px, 3.3vw, 56px); height: clamp(40px, 3.3vw, 56px);
+  border-radius: 14px;
+  display: grid; place-items: center;
+}
+.bx-ico svg { width: 42%; height: 42%; }
+.bx-ico--green { background: #e1f6e5; color: #1ea446; box-shadow: 0 8px 18px -10px rgba(30, 164, 70, 0.45); }
+.bx-ico--violet { background: #eee8fd; color: #7a3fd8; box-shadow: 0 8px 18px -10px rgba(122, 63, 216, 0.4); }
+.bx-points strong {
+  display: block;
+  font-size: clamp(15px, 1.16vw, 20px);
+  font-weight: 650;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  color: #0b0e33;
+}
+.bx-points p {
+  margin: 0.12em 0 0;
+  font-size: clamp(14px, 1.06vw, 18px);
+  line-height: 1.42;
+  color: #50566c;
+}
+
+.bx-actions { display: flex; flex-wrap: wrap; align-items: center; gap: clamp(10px, 0.85vw, 14px); margin-top: clamp(20px, 2vw, 34px); }
+.bx-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 0.55em;
+  padding: 0.78em 1.5em 0.78em 0.85em;
+  min-height: clamp(52px, 4.55vw, 76px);
+  border: 1.5px solid #0d1538;
+  border-radius: 999px;
+  background: #0d1538;
+  color: #fff;
+  font-family: inherit;
+  font-size: clamp(16px, 1.3vw, 22px);
+  font-weight: 650;
+  letter-spacing: -0.015em;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 14px 30px -14px rgba(13, 21, 56, 0.55);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+.bx-btn:hover { transform: translateY(-2px); box-shadow: 0 18px 34px -14px rgba(13, 21, 56, 0.6); }
+.bx-btn-icon { width: 2.05em; height: 2.05em; border-radius: 50%; background: #fff; color: #0d1538; display: grid; place-items: center; margin-right: 0.15em; }
+.bx-btn-icon svg { width: 1.1em; height: 1.1em; }
+.bx-btn--ghost { padding: 0.78em 1.5em; background: transparent; color: #0d1538; box-shadow: none; }
+.bx-btn--ghost:hover { background: #0d1538; color: #fff; box-shadow: none; }
+
+@media (max-width: 900px) {
+  .bx-hero { width: 100%; top: 0; gap: 24px; transform: none; }
+  .bx-grid { grid-template-columns: 1fr; row-gap: 28px; }
+  .bx-divider { display: none; }
+  .bx-title { white-space: normal; font-size: clamp(40px, 11vw, 64px); }
+  .bx-underline { font-size: clamp(40px, 11vw, 64px); }
+}
+
+/* the Game / Reflection / Insight cards: just wider than the first screen's text, so they cover it exactly */
+@media (min-width: 901px) {
+  .behavency-engage--v2 .xc-ecard { width: var(--be-card-w, min(calc(100vw - 48px), 1320px)); }
+}

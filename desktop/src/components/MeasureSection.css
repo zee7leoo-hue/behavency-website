@@ -1,0 +1,74 @@
+/* "Then we run the assessment again." — exact copy of the supplied design, scaled as one piece */
+.ms {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 40% 55% at 12% 70%, rgba(214, 200, 255, .45), transparent 70%),
+    radial-gradient(ellipse 35% 50% at 92% 20%, rgba(232, 214, 255, .55), transparent 70%),
+    linear-gradient(165deg, #f3f0ff 0%, #eeeaff 50%, #f1ecff 100%);
+}
+.ms-canvas {
+  position: relative;
+  container-type: inline-size;
+  width: 78%;                       /* a little smaller than the screen, like the other sections */
+  margin: 0 auto;
+  aspect-ratio: 1600 / 820;
+  font-family: Inter, system-ui, sans-serif;
+  color: #15163a;
+}
+.ms-canvas > *, .ms-card > *, .ms-row > *, .ms-tl > * { position: absolute; margin: 0; }
+.ms-row, .ms-tl { inset: 0; }
+.ms-tl { position: absolute; }
+.ms-row { position: absolute; }
+
+/* results card */
+.ms-card {
+  background: linear-gradient(180deg, #11284c 0%, #0e2243 100%);
+  box-shadow: 0 calc(34 * var(--u)) calc(70 * var(--u)) calc(-26 * var(--u)) rgba(110, 85, 215, .55), 0 0 0 1px rgba(255, 255, 255, .04) inset;
+  color: #fff;
+  overflow: hidden;
+}
+.ms-card-title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; letter-spacing: -.01em; color: #fff; white-space: nowrap; font-optical-sizing: auto; }
+.ms-rule { background: rgba(255, 255, 255, .09); }
+.ms-legend { display: flex; align-items: center; gap: calc(9 * var(--u)); color: #d3daee; white-space: nowrap; }
+.ms-sq { display: block; border-radius: calc(3 * var(--u)); }
+.ms-sq--before { background: #6f82ae; }
+.ms-sq--after { background: #fff; }
+.ms-label { color: #e6eaf7; font-weight: 400; letter-spacing: -.005em; white-space: nowrap; }
+.ms-bar { display: block; transform-origin: left center; transform: scaleX(0); transition: transform .9s cubic-bezier(.22, 1, .36, 1); transition-delay: calc(.35s + var(--i, 0) * .12s); }
+.ms-bar--before { background: linear-gradient(90deg, #5d709c, #6a7eaa); }
+.ms-bar--after { background: #fff; transition-delay: calc(.5s + var(--i, 0) * .12s); }
+.ms-num { text-align: right; color: #fff; font-weight: 400; font-variant-numeric: tabular-nums; opacity: 0; transition: opacity .5s ease; transition-delay: calc(.8s + var(--i, 0) * .12s); }
+.ms-delta { color: #4ee08f; font-weight: 600; letter-spacing: -.01em; white-space: nowrap; opacity: 0; transition: opacity .5s ease; transition-delay: calc(.9s + var(--i, 0) * .12s); }
+.is-in .ms-bar { transform: scaleX(1); }
+.is-in .ms-num, .is-in .ms-delta { opacity: 1; }
+
+/* text */
+.ms-title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; letter-spacing: -.02em; color: #15163a; white-space: nowrap; font-optical-sizing: auto; }
+.ms-title em { font-style: italic; font-weight: 500; font-size: .965em; letter-spacing: -.02em; color: #8b4fe6; }
+.ms-copy { font-weight: 400; letter-spacing: -.004em; color: #1c2140; white-space: nowrap; }
+
+/* timeline */
+.ms-tl-ico { color: #15163a; }
+.ms-tl-label { text-align: center; font-weight: 600; letter-spacing: -.01em; color: #15163a; white-space: nowrap; }
+.ms-tl-six { text-align: center; font-weight: 500; color: #15163a; letter-spacing: -.02em; }
+.ms-tl-line { background: #c9cce0; }
+.ms-tl-cap { text-align: center; color: #6b7088; white-space: nowrap; }
+
+/* soft entrance */
+.ms-title, .ms-copy, .ms-tl, .ms-card { opacity: 0; transform: translateY(14px); transition: opacity .8s ease, transform .9s cubic-bezier(.22, 1, .36, 1); }
+.ms-card { transition-delay: .05s; }
+.ms-title { transition-delay: .1s; }
+.is-in .ms-title, .is-in .ms-copy, .is-in .ms-tl, .is-in .ms-card { opacity: 1; transform: none; }
+
+
+@media (prefers-reduced-motion: reduce) {
+  .ms-bar, .ms-num, .ms-delta, .ms-title, .ms-copy, .ms-tl, .ms-card { transition: none; opacity: 1; transform: none; }
+  .ms-bar { transform: scaleX(1); }
+}
+
+/* the pill keeps its own size; it is scaled with the canvas */
+
+
+.ms-pill { transform: scale(calc(var(--k, 1) * .94)); transform-origin: left top; }
