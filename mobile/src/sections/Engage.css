@@ -1,0 +1,43 @@
+/* "02 / Engage" (mobile). Drawn on the 400px canvas. */
+.eg {
+  position: relative; overflow: clip;
+  min-height: calc(var(--screen-h, 720px) - 40px);
+  padding: var(--sec-pad, 22px) 0;
+  display: flex; flex-direction: column; justify-content: center;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfbfe 100%);
+}
+.eg-in { width: 400px; margin: 0 auto; padding: 0 32px; box-sizing: border-box; }
+
+.eg-eyebrow { display: flex; align-items: center; gap: 12px; }
+.eg-eyebrow { gap: 8px; white-space: nowrap; line-height: 1; }
+.eg-eyebrow b { font-size: 14.5px; font-weight: 800; color: #6a2fd8; }
+.eg-eyebrow i { font-style: normal; font-size: 14.5px; font-weight: 700; color: #6a2fd8; }
+.eg-eyebrow strong { font-size: 14.5px; font-weight: 800; color: #6a2fd8; }
+.eg-eyebrow u { display: block; width: 1px; height: 14px; background: #d9d6ea; margin: 0 2px; }
+.eg-eyebrow span { font-family: 'Source Serif 4', Georgia, serif; font-size: 13.2px; font-weight: 400; letter-spacing: 0; color: #1b2250; }
+
+.eg-title { position: relative; margin: 36px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 38.6px; line-height: 38.3px; letter-spacing: -.034em; color: #0c1240; white-space: nowrap; }
+.eg-title em { font-style: italic; font-weight: 600; letter-spacing: -.03em; color: #6a2fd8; }
+.eg-swoosh { position: absolute; left: 82px; top: 112px; width: 206px; height: 10px; overflow: visible; }
+
+.eg-sub { margin: 36px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400; font-size: 23.2px; line-height: 24.5px; letter-spacing: -.012em; color: #1b2250; white-space: nowrap; }
+
+.eg-art { display: block; width: 340px; height: auto; margin: 22px 0 0 -11px; overflow: visible; }
+
+.eg-lead { margin-top: 26px; }
+.eg-lead + .eg-sub { margin-top: 18px; }
+
+/* the stage line fits one row, as in the design */
+.eg-eyebrow { gap: 6px; margin: 0 -10px 0 -8px; }
+.eg-eyebrow b, .eg-eyebrow i, .eg-eyebrow strong { font-size: 13.4px; }
+.eg-eyebrow u { margin: 0 1px; }
+.eg-eyebrow span { font-size: 12.2px; }
+
+/* the stage line sits in a pill, in the Engage violet */
+.eg-eyebrow { width: fit-content; max-width: 100%; margin: 0 0 0 -4px; padding: 8px 13px 8px 12px; gap: 6px; border-radius: 999px; background: linear-gradient(90deg, #ffffff 0%, #e9defc 100%); box-shadow: 0 8px 18px -12px rgba(20, 35, 75, .4), 0 0 0 1px rgba(20, 35, 75, .06); }
+.eg-eyebrow b, .eg-eyebrow i, .eg-eyebrow strong { font-size: 13px; }
+.eg-eyebrow span { font-size: 11.6px; }
+.eg-eyebrow { max-width: none; margin-left: -8px; padding: 8px 12px 8px 11px; gap: 5px; }
+.eg-eyebrow span { font-size: 11px; }
+.eg-eyebrow u { margin: 0 2px; }
+.eg-title { margin-top: 22px; }

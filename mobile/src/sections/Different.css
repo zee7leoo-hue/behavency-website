@@ -1,0 +1,23 @@
+/* "What makes Behavency different" (mobile). Drawn on the 400px canvas. */
+.df { position: relative; padding: 56px 0 52px; background: #f8f7f3; font-family: Inter, system-ui, sans-serif; color: #1b1f2a; overflow: clip; }
+.df-in { padding: 0 22px; }
+
+.df-eyebrow { margin: 0; font-size: 11.4px; font-weight: 600; letter-spacing: .16em; line-height: 1.3; text-transform: uppercase; color: #6b7280; }
+.df-title { margin: 14px 0 0; color: #15171c; }
+.df-title em { color: #1a8a7a; }
+
+.df-list { margin: 34px 0 0; padding: 0; list-style: none; border-top: 1px solid #e3e0d8; }
+.df-item { padding: 20px 0; border-bottom: 1px solid #e3e0d8; }
+.df-row { display: grid; grid-template-columns: minmax(0, 1fr) 44px; column-gap: 12px; align-items: center; }
+.df-row .df-n { grid-column: 1; grid-row: 1; }
+.df-row h3 { grid-column: 1; grid-row: 2; }
+.df-row button { grid-column: 2; grid-row: 2; align-self: center; }
+.df-n { display: block; font-family: 'Playfair Display', Georgia, serif; font-size: 18px; line-height: 1; color: #8fc0b7; }
+.df-row h3 { margin: 6px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 500; font-size: 20.5px; line-height: 1.25; color: #15171c; }
+.df-row button { width: 44px; height: 44px; padding: 0; border-radius: 50%; border: 1px solid #d8d3c7; background: #fff; color: #1e3a5f; display: grid; place-items: center; cursor: pointer; font: inherit; }
+.df-line { margin: 8px 0 0; font-size: 15.6px; line-height: 1.55; color: #4a5160; }
+.df-more { margin: 10px 0 0; padding: 12px 14px; border-radius: 10px; background: #fff; box-shadow: inset 0 0 0 1px #e6e2d8; font-size: 14.4px; line-height: 1.55; color: #5a6170; }
+
+.df-close { margin: 34px 0 0; display: flex; gap: 12px; font-family: 'Playfair Display', Georgia, serif; font-size: 18.5px; line-height: 1.35; color: #1e3a5f; }
+.df-close i { flex: none; width: 28px; height: 2px; margin-top: 12px; background: #1a8a7a; }
+.df-title { margin-top: 22px; }

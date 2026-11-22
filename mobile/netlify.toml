@@ -1,0 +1,17 @@
+# One Netlify site for both Behavency websites, on one address:
+#   - the desktop site (repo tennispulse90/Behavency-Desktop) is served at the root
+#   - the mobile site (this repo) is built into /m/
+#   - an edge function (netlify/edge-functions/device.js) shows the mobile site to phones on the same address
+# The build script fetches the desktop site's code itself, so its repo is not changed.
+
+[build]
+  command = "bash scripts/build-site.sh"
+  publish = "site"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # which desktop repo and branch to build (change here if they move)
+  DESKTOP_REPO = "https://github.com/tennispulse90/Behavency-Desktop.git"
+  DESKTOP_BRANCH = "main"
+
+# The device switch for the home page is the edge function in netlify/edge-functions/device.js (its route is set in that file).

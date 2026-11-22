@@ -1,0 +1,38 @@
+/* Section spacing, all in one place (loaded last).
+   Rule: every section has the same free space above its first content and below its last content.
+   Sections are only as tall as their content, so the space is the same on every phone, whatever its screen height. */
+
+.hr, .wn, .pf, .id, .eg, .bm-top, .bm-areas { min-height: 0; }
+
+/* 48px of free space at the top and bottom of every section (measured from the first and last thing you can see).
+   Each value below is the padding that gives exactly that, given how the section's content is laid out inside. */
+#hero.hr { padding-top: 13.7px; }
+section.bh-clients { padding-bottom: 28px; }   /* the logo strip: 28px under the logos, as asked */
+#why-now.wn { padding-top: 28px; padding-bottom: 21px; }
+#platform.pf { padding-top: 50px; padding-bottom: 48px; }
+#identify.id { padding-top: 55px; padding-bottom: 48px; }
+#behavioural-model.bm { padding-top: 25px; padding-bottom: 26px; }
+#engage.eg { padding-top: 55px; padding-bottom: 48px; }
+#build.bd { padding-top: 55px; padding-bottom: 48px; }
+#journey.jn { padding-top: 50px; padding-bottom: 50.1px; }
+#measure.ms { padding-top: 55px; padding-bottom: 48px; }
+#how-we-measure.hm { padding-top: 50px; padding-bottom: 49px; }
+#different.df { padding-top: 48px; padding-bottom: 47px; }
+#hiring.hi { padding-top: 8px; padding-bottom: 14px; }
+#results.rs { padding-top: 48px; padding-bottom: 48px; }
+#holds-back.hb--split { padding-top: 39px; padding-bottom: 47px; }
+#holds-back-2.hb--focus { padding-top: 39px; padding-bottom: 44.4px; }
+#how-it-runs.hw { padding-top: 48px; padding-bottom: 48px; }
+#packages.pk { padding-top: 48px; padding-bottom: 45.7px; }
+#who-its-for.wf { padding-top: 48px; padding-bottom: 48px; }
+#contact.ct { padding-top: 48px; padding-bottom: 48px; }
+footer.ft { padding-top: 49px; padding-bottom: 48px; }
+
+/* the hero and the logo strip read as one block: only the hero's top and the strip's bottom are set above,
+   the space between them stays as it was */
+
+/* "The power of play": its heading sits in a pinned stack. The heading keeps its original pinned position (94px down,
+   so the cards slide over it and cover it), and the whole stack is pulled up by the empty space above the heading,
+   so the section still has 48px above its first content. The pulled-up part is empty and clipped by the section. */
+#play.px { display: flow-root; padding-top: 0; padding-bottom: 2px; }   /* flow-root: the stack's pull-up stays inside the section */
+#play .px-stack { margin-top: -53.3px; }

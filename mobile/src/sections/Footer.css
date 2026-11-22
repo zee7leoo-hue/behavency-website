@@ -1,0 +1,19 @@
+/* Footer (mobile) */
+.ft { padding: 36px 22px 28px; background: #1c1b19; border-top: 1px solid #2c2b28; font-family: Inter, system-ui, sans-serif; color: #a9a7a1; }
+.ft *, .ft *::before, .ft *::after { box-sizing: border-box; }
+
+.ft-logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+.ft-mark { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 7px; background: #24407a; }
+.ft-mark svg { width: 14px; height: 14px; fill: #fff; }
+.ft-word { font: 400 22px/1 'Playfair Display', Georgia, serif; color: #fff; }
+.ft-line { margin: 14px 0 0; font-size: 14px; line-height: 1.6; color: #8d8b86; }
+
+.ft-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 26px 18px; margin-top: 30px; }
+.ft-group p { margin: 0 0 10px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #6d6b66; }
+.ft-group ul { list-style: none; margin: 0; padding: 0; }
+.ft-group li { padding: 5px 0; }
+.ft-group a { font-size: 14.5px; color: #c9c7c1; text-decoration: none; }
+.ft-group a:hover { color: #fff; }
+
+.ft-bottom { display: flex; flex-direction: column; gap: 6px; margin-top: 30px; padding-top: 18px; border-top: 1px solid #2c2b28; font-size: 13px; color: #7d7b76; }
+.ft-bottom em { font: italic 400 14px/1.3 'Playfair Display', Georgia, serif; color: #6d6b66; }

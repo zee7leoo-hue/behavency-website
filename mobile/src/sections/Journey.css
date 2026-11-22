@@ -1,0 +1,45 @@
+/* "The development journey" (mobile). Drawn on the 400px canvas. */
+.jn { position: relative; overflow: clip; padding: 56px 0 34px; background: radial-gradient(120% 40% at 100% 18%, rgba(204, 190, 252, .55), transparent 70%), linear-gradient(180deg, #f6f3fe 0%, #efebfc 55%, #e9e4fb 100%); font-family: 'Plus Jakarta Sans', Inter, system-ui, sans-serif; color: #150f52; }
+.jn-in { padding: 0 24px; }
+
+.jn-eyebrow { display: flex; align-items: center; gap: 12px; }
+.jn-eyebrow i { display: block; width: 28px; height: 1.5px; background: #15163f; }
+.jn-eyebrow span { font-size: 12.4px; font-weight: 700; letter-spacing: .03em; line-height: 1; color: #15163f; }
+
+.jn-title { margin: 22px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 39px; line-height: 38px; letter-spacing: -.034em; color: #050514; white-space: nowrap; }
+.jn-title em { font-style: italic; font-weight: 600; letter-spacing: -.03em; color: #ff9a2c; }
+
+.jn-sub { margin: 18px 0 0; max-width: 350px; font-size: 17.4px; line-height: 24px; font-weight: 500; letter-spacing: -.004em; word-spacing: .03em; color: #1b1650; }
+
+.jn-years { display: flex; align-items: center; gap: 14px; margin: 24px 0 0 4px; }
+.jn-laurel { flex: none; width: 50px; height: 45px; }
+.jn-vl { flex: none; align-self: stretch; width: 1.5px; margin: 4px 0; background: #6a6a8c; opacity: .8; }
+.jn-years p { margin: 0; font-size: 17.4px; line-height: 22px; font-weight: 400; letter-spacing: -.004em; color: #1b1650; }
+.jn-years b { font-weight: 800; }
+
+/* the cards: all the same size, swipe sideways, the neighbours sit a little behind */
+.jn-rail { position: relative; height: 522px; margin-top: 30px; overflow: hidden; touch-action: pan-y; user-select: none; -webkit-user-select: none; cursor: grab; }
+.jn-card { position: absolute; left: 32px; top: 28px; width: 336px; height: 446px; transform-origin: 50% 50%; will-change: transform, opacity; }
+.jn-dots { display: flex; justify-content: center; align-items: center; gap: 11px; padding-top: 2px; }
+.jn-dots button { width: 12px; height: 12px; padding: 0; border: 0; border-radius: 50%; background: #c3bdd9; cursor: pointer; transition: transform .3s, background .3s; }
+.jn-dots button.on { background: #7a20e0; transform: scale(1.35); }
+
+/* a card, laid out on its 980 x 1210 grid */
+.jc { position: absolute; left: 0; top: 0; width: 980px; height: 1300px; transform-origin: 0 0; transform: scale(var(--k)); color: #fff; }
+.jc > * { position: absolute; margin: 0; }
+.jc-bg { left: 0; top: 0; width: 980px; height: 1300px; display: block; user-select: none; -webkit-user-drag: none; }
+.jc-tile { width: 178px; height: 176px; border-radius: 40px; display: grid; place-items: center; background: linear-gradient(145deg, rgba(255, 255, 255, .26), rgba(255, 255, 255, .15)); color: #fff; }
+.jc-tile svg { width: 104px; height: 104px; }
+.jc-t { font-size: 76px; line-height: 90px; font-weight: 800; letter-spacing: -.02em; white-space: nowrap; }
+.jc-d { font-size: 41px; line-height: 50px; font-weight: 500; letter-spacing: -.004em; color: #f8efff; }
+
+.jc-f { width: 300px; text-align: center; }
+.jc-f svg { display: block; margin: 0 auto; width: 84px; height: 84px; color: #fff; }
+.jc-f p { margin: 18px 0 0; font-size: 38px; line-height: 46px; font-weight: 500; letter-spacing: -.01em; word-spacing: .04em; color: #fff; }
+.jc-line { display: block; width: 3px; background: rgba(255, 255, 255, .85); }
+
+.jc-pane { border-radius: 72px; background: linear-gradient(135deg, rgba(255, 255, 255, .97), rgba(243, 230, 252, .93)); box-shadow: 0 8px 26px rgba(70, 10, 100, .2); color: #1b1250; }
+.jc-pane > * { position: absolute; margin: 0; }
+.jc-pane b { font-size: 46px; line-height: 56px; font-weight: 800; letter-spacing: -.02em; white-space: nowrap; }
+.jc-pane span { right: 20px; font-size: 34px; line-height: 39px; font-weight: 500; color: #2a1a5e; }
+.jc-pico { color: #7b2ee0; }

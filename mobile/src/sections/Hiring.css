@@ -1,0 +1,36 @@
+/* "Hiring a manager? Lower the risk." (mobile) */
+.hi { --ink: #0f1b3d; --sub: #4a5163; --muted: #5a6272; --green: #1a8a74; --line: #e3ddd2; --cream: #faf8f4; background: var(--cream); font-family: Inter, Arial, sans-serif; color: var(--ink); }
+.hi *, .hi *::before, .hi *::after { box-sizing: border-box; }
+.hi button { font: inherit; }
+.hi-in { max-width: 480px; margin: 0 auto; background: var(--cream); padding: 40px 20px 34px; overflow: hidden; }
+.hi-eyebrow { display: flex; align-items: center; gap: 12px; font-size: 12px; font-weight: 500; letter-spacing: .19em; color: var(--sub); }
+.hi-eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--sub); }
+.hi-title { margin: 16px 0 0; font: 600 36px/1.06 "Source Serif 4", Georgia, serif; letter-spacing: -.01em; }
+.hi-title em { display: block; color: var(--green); font-style: italic; font-weight: 500; }
+.hi-lead { margin: 14px 0 0; font-size: 16px; line-height: 1.55; color: var(--sub); }
+.hi-labelled { position: relative; margin: 26px auto 6px; width: 86%; max-width: 340px; }
+.hi-doc { display: block; width: 100%; height: auto; }
+.hi-pin { position: absolute; display: flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 999px; background: var(--ink); color: #fff; font-size: 12px; font-weight: 600; white-space: nowrap; box-shadow: 0 4px 12px rgba(15,27,61,.25); }
+.hi-pin b { display: grid; place-items: center; width: 17px; height: 17px; border-radius: 50%; background: var(--green); font-size: 11px; }
+
+/* swipe cards: a pale emerald fill and an outline so they stand apart from the cream page */
+.hi-swipe { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; margin: 18px -20px 0; padding: 4px 20px 12px; scroll-padding: 0 20px; scrollbar-width: none; cursor: grab; }
+.hi-swipe::-webkit-scrollbar { display: none; }
+.hi-swipe.drag { cursor: grabbing; scroll-snap-type: none; }
+.hi-card { flex: none; width: 84%; scroll-snap-align: start; background: #eaf5f1; border: 1px solid #cfe7df; border-radius: 18px; padding: 18px 18px 20px; user-select: none; }
+.hi-num { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--green); color: #fff; font: 600 14px/1 Inter, Arial, sans-serif; }
+.hi-card h3 { margin: 12px 0 0; font-size: 16.5px; font-weight: 600; line-height: 1.3; color: #0e2a4a; }
+.hi-card p { margin: 6px 0 0; font-size: 14.5px; line-height: 1.45; color: #3f4a5c; }
+.hi-card.run { background: var(--ink); border-color: var(--ink); }
+.hi-card.run .hi-num { background: #f7d65a; color: var(--ink); }
+.hi-card.run h3 { color: #fff; }
+.hi-mini { list-style: none; margin: 10px 0 0; padding: 0; }
+.hi-mini li { display: flex; gap: 10px; align-items: flex-start; padding: 6px 0; font-size: 14.5px; line-height: 1.4; color: rgba(255,255,255,.88); }
+.hi-mini i { flex: none; display: grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; border: 1px solid rgba(255,255,255,.4); font: 600 11px/1 Inter, Arial, sans-serif; font-style: normal; margin-top: 1px; }
+.hi-dots { display: flex; justify-content: center; gap: 6px; margin-top: 4px; }
+.hi-dots button { width: 7px; height: 7px; padding: 0; border: 0; border-radius: 4px; background: #cfd2da; cursor: pointer; transition: width .25s, background .25s; }
+.hi-dots button.on { width: 20px; background: var(--green); }
+
+/* the note: a plain line under the cards, first words in emerald */
+.hi-note { margin: 18px 0 0; padding-top: 14px; border-top: 1px solid var(--line); font-size: 14px; line-height: 1.55; color: var(--muted); }
+.hi-note b { color: var(--green); font-weight: 600; }

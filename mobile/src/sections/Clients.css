@@ -1,0 +1,104 @@
+/* Client logos strip, directly under the hero.
+   A quiet line ("A product of OGI Europe | Trusted by teams at") over the logos.
+   All logos in one dark grey, real colours on hover. Slowly moving; stops on hover and keyboard focus;
+   still for people who turn off motion. */
+
+.bh-clients {
+  display: grid;
+  gap: 20px;
+  justify-items: center;
+  padding: 28px 0 8px;
+  background: #f3f4fb;                 /* same as the bottom of the hero above it */
+}
+
+.bh-clients__line {
+  margin: 0;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px 18px;
+  font: 400 15px/1.4 Inter, system-ui, sans-serif;
+  color: #6b6f86;
+}
+.bh-clients__line b { font-weight: 700; color: #6b2fd6; }
+/* short purple lines at both ends */
+.bh-clients__line::before,
+.bh-clients__line::after {
+  content: "";
+  width: 32px;
+  height: 2px;
+  border-radius: 2px;
+  background: #a98be8;
+}
+/* thin divider between the two halves */
+.bh-clients__sep { width: 1px; height: 18px; background: #d9d3ea; }
+
+.bh-clients__marquee {
+  width: 100%;
+  max-width: 1240px;
+  overflow: hidden;
+  /* soft fade at both ends */
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 18%, #000 82%, transparent 100%);
+          mask-image: linear-gradient(90deg, transparent 0, #000 18%, #000 82%, transparent 100%);
+}
+
+.bh-clients__track {
+  display: flex;
+  width: max-content;
+  animation: bh-clients-drift 60s linear infinite;
+}
+
+.bh-clients__group {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  margin: 0;
+  padding: 6px 56px 6px 0;
+  list-style: none;
+}
+.bh-clients__group li { flex: none; display: grid; place-items: center; }
+
+.bh-clients__group img {
+  display: block;
+  width: auto;
+  max-width: none;
+  /* one dark grey for every logo */
+  filter: grayscale(1) brightness(.35);
+  opacity: .7;
+  transition: filter .4s ease, opacity .4s ease;
+}
+.bh-clients__group li:hover img { filter: none; opacity: 1; }
+
+.bh-clients__marquee:hover .bh-clients__track,
+.bh-clients__marquee:focus-within .bh-clients__track { animation-play-state: paused; }
+
+@keyframes bh-clients-drift { to { transform: translateX(-50%); } }
+
+/* phone layout: this site is always drawn at phone size (even in a wide browser window), so it always applies */
+@media all {
+  /* 16px from the text to the logos, 28px below the logos (the bottom padding is set in spacing.css) */
+  .bh-clients { padding: 22px 0 28px; gap: 16px; }
+  /* on a phone: two centred lines of text, with a short purple line on each side, level with each other
+     and centred between the two text lines; no divider */
+  .bh-clients__line {
+    display: grid; grid-template-columns: 32px auto 32px; grid-template-areas: "l a r" "l b r";
+    align-items: center; justify-items: center; column-gap: 14px; row-gap: 2px; font-size: 13.5px;
+  }
+  .bh-clients__line > span:first-child { grid-area: a; }
+  .bh-clients__line > span:last-child { grid-area: b; }
+  .bh-clients__line::before { grid-area: l; }
+  .bh-clients__line::after { grid-area: r; }
+  .bh-clients__sep { display: none; }
+  .bh-clients__group { gap: 36px; padding: 0 36px 0 0; }
+  .bh-clients__track { animation-duration: 45s; }
+}
+
+/* People who turn off motion: one still, centred row that wraps. */
+@media (prefers-reduced-motion: reduce) {
+  .bh-clients__track { animation: none; width: auto; justify-content: center; }
+  .bh-clients__group { flex-wrap: wrap; justify-content: center; row-gap: 18px; padding: 0 22px; }
+  .bh-clients__group[aria-hidden="true"] { display: none; }
+  .bh-clients__marquee { -webkit-mask-image: none; mask-image: none; }
+}

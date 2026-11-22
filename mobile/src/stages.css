@@ -1,0 +1,35 @@
+/* Section backgrounds, all in one place (loaded last, so it wins over each section's own file).
+   Rule: sections that belong to the same stage share one background colour, so a stage reads as one continuous block,
+   and the colour changes only where the topic changes.
+
+     Identify  — Identify + Behavioural model ...... soft blue
+     Engage    — Engage + Play (power of play) ..... white
+     Build     — Build + Development journey ....... soft lavender
+     Measure   — Measure + How we measure .......... warm cream
+     then      — What's different (white) · Hiring (cream, its own design) · Why these areas matter (white)
+
+   Decorative glows are kept away from the top and bottom edges, so where two sections of a stage meet there is no seam. */
+
+:root {
+  --st-identify: #edf2fe;
+  --st-engage: #ffffff;
+  --st-build: #f4f0fe;
+  --st-measure: #fcf6f2;
+}
+
+/* Identify */
+.id { background: radial-gradient(240px 260px at 100% 30%, rgba(190, 208, 252, .6), rgba(190, 208, 252, 0) 70%), var(--st-identify); }
+.bm { background: var(--st-identify); }
+
+/* Engage */
+.eg, .px, .px-res { background: var(--st-engage); }
+
+/* Build */
+.bd { background: var(--st-build); }
+.jn { background: radial-gradient(120% 40% at 100% 30%, rgba(204, 190, 252, .5), rgba(204, 190, 252, 0) 70%), var(--st-build); }
+
+/* Measure */
+.ms, .hm { background: var(--st-measure); }
+
+/* the single sections after the stages: alternate so neighbouring topics never share a colour */
+.df { background: #ffffff; }

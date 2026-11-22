@@ -1,0 +1,139 @@
+/* "02 / Engage — the power of play" (mobile). Drawn on the 400px canvas; the blocks inside are on the reference design's pixel grid. */
+.px { position: relative; overflow: clip; padding: 44px 0 10px; background: linear-gradient(180deg, #f5f0fe 0%, #f3effc 60%, #f1eefb 100%); font-family: 'Plus Jakarta Sans', Inter, system-ui, sans-serif; color: #150f52; }
+
+/* ── header: 1199-wide reference, scaled to the 400 canvas ── */
+.px-head { position: relative; width: 400px; height: 354px; flex: none; }
+.px-head-in { position: absolute; left: 0; top: 0; width: 1199px; height: 1061px; transform-origin: 0 0; transform: scale(.33361); }
+.px-head-in > * { position: absolute; margin: 0; }
+
+.px-eyebrow { display: flex; align-items: center; height: 44px; gap: 20px; }
+.px-eyebrow span { font-size: 31px; font-weight: 700; line-height: 1; letter-spacing: -.01em; word-spacing: .05em; color: #1db52c; }
+.px-eyebrow i { display: block; width: 44px; height: 4px; border-radius: 3px; background: #1db52c; }
+
+.px-h { word-spacing: .06em; font-size: 81px; line-height: 90px; font-weight: 800; letter-spacing: -.02em; color: #150f52; white-space: nowrap; }
+.px-h em { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 700; font-size: 1.1em; letter-spacing: -.035em; color: #6a2ee8; }
+
+.px-sub { word-spacing: .08em; font-size: 50px; line-height: 66px; font-weight: 500; letter-spacing: .004em; color: #1d1a5e; white-space: normal; }
+
+.px-stats { left: 0; top: 0; width: 1199px; height: 0; }
+.px-stats > * { position: absolute; margin: 0; }
+.px-sico { width: 120px; height: 120px; color: #6a2ee8; }
+.px-n { font-size: 62px; line-height: 66px; font-weight: 800; letter-spacing: -.02em; color: #150f52; }
+.px-l { font-size: 40px; line-height: 50px; font-weight: 500; letter-spacing: -.01em; color: #1d1a5e; white-space: nowrap; }
+.px-div { display: block; width: 2px; height: 98px; background: #c4b6ee; }
+
+.px-how { display: flex; align-items: center; gap: 48px; left: 87px; top: 990px; width: 1027px; height: 44px; }
+.px-how i { flex: 1; height: 2px; background: #7b4ae8; }
+.px-how span { font-size: 34px; font-weight: 800; letter-spacing: .2em; color: #6a2ee8; white-space: nowrap; }
+
+/* ── stacked cards: each one rises into view as you scroll to it ── */
+.px-stack { --px-p: 86px; --px-hp: calc(var(--px-p) + 8px); --px-gap: 22px; --px-h: calc(var(--px-p) + 567px + 40px); position: relative; }
+/* every block sits in a slot of the same height; the slots overlap so each card follows the one before it,
+   and they all end up in exactly the same place once pinned */
+.px-slot { position: relative; height: var(--px-h); padding-top: var(--px-p); box-sizing: border-box; display: flex; justify-content: center; align-items: flex-start; pointer-events: none; margin-top: calc(var(--px-gap) - var(--px-p) - 40px); }
+.px-slot--head { margin-top: 0; padding-top: var(--px-hp); z-index: 1; }
+.px-slot--head + .px-slot { margin-top: calc(var(--px-hp) + 354px + 34px - var(--px-p) - var(--px-h)); }
+.px-slide { position: relative; flex: none; pointer-events: auto; backface-visibility: hidden; }
+.px-slide::after { content: ''; position: absolute; inset: 8px 6px -6px; z-index: -1; border-radius: 22px; box-shadow: 0 16px 26px rgba(120, 95, 210, .22); pointer-events: none; }
+/* the pin: slide down by exactly as much as the page scrolls, between where the slot reaches the top and where the stack ends */
+@supports (animation-timeline: scroll()) {
+  .px-slot { animation: px-pin linear both; animation-timeline: scroll(root); animation-range: var(--a, 0px) var(--b, 1px); }
+  @keyframes px-pin { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(0, var(--x, 0px), 0); } }
+}
+/* page laid out at real size: plain sticky pins the heading and each card (nothing moves them but the browser's own scrolling) */
+.zoom-mode .px-slot { position: sticky; top: 0; animation: none; transform: none; }
+@media (prefers-reduced-motion: reduce) { .px-slot { animation: none !important; transform: none !important; } }
+
+/* ── a card, laid out in the reference's pixels ── */
+.pc { position: absolute; left: 0; top: 0; transform-origin: 0 0; transform: scale(var(--k)); background: #fdf5f0; border-radius: 56px; overflow: hidden; box-shadow: 0 0 0 1px rgba(150, 120, 220, .05); font-family: 'Plus Jakarta Sans', Inter, system-ui, sans-serif; color: #150f52; }
+.pc > * { position: absolute; margin: 0; }
+.pc-back { border-radius: 42px; }
+
+.pc-pill { display: flex; align-items: center; background: #eee8fc; border-radius: 40px; overflow: hidden; }
+.pc-pill--b { background: none; overflow: visible; }
+.pc-ico { align-self: stretch; display: grid; place-items: center; border-radius: 32px; flex: none; }
+.pc-ico svg { width: 54px; height: 54px; }
+.pc-pt { margin-left: 18px; font-size: 28px; font-weight: 700; line-height: 1; letter-spacing: 0; word-spacing: .1em; color: #150f52; white-space: nowrap; }
+.pc-pill--b .pc-pt { margin-left: 23px; }
+.pc-num { font-size: 38px; line-height: 44px; font-weight: 500; letter-spacing: .01em; word-spacing: .12em; color: #1a1560; }
+
+.pc-h { font-size: 64px; line-height: 76px; font-weight: 800; letter-spacing: -.012em; word-spacing: .06em; color: #150f52; white-space: nowrap; }
+.pc-hl { display: block; border-radius: 9px; background: linear-gradient(90deg, #6fdc1e, #7be332 60%, #8be84c); box-shadow: 0 0 9px rgba(110, 220, 30, .55); }
+.pc-sw { display: block; height: 14px; border-radius: 14px; background: linear-gradient(90deg, #1b78ee, #34a6ff 55%, rgba(52, 166, 255, 0)); transform: rotate(-1.4deg); }
+.pc-p { font-size: 42px; line-height: 49px; font-weight: 500; letter-spacing: .014em; word-spacing: .08em; color: #1b1660; white-space: normal; }
+
+.pc-panel { border-radius: 56px; background-size: 100% 100%; background-repeat: no-repeat; box-shadow: 0 30px 46px rgba(56, 24, 130, .32); }
+
+.pc-tile { display: grid; place-items: center; border-radius: 20px; background: linear-gradient(145deg, #8157d4, #6a3fc4); color: #fff; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .08); }
+.pc-tile svg { width: 44px; height: 44px; }
+.pc-tile--b { border-radius: 24px; background: linear-gradient(145deg, #3f7cc0, #306aae); }
+.pc-tile--b svg { width: 62px; height: 62px; }
+.pc-st { font-size: 31px; line-height: 40px; font-weight: 700; letter-spacing: -.015em; word-spacing: .08em; color: #fff; white-space: nowrap; }
+.pc-sd { font-size: 25px; line-height: 32px; font-weight: 400; letter-spacing: -.026em; word-spacing: .05em; color: #f1ecff; white-space: nowrap; }
+.pc-st--b { font-size: 35px; line-height: 44px; }
+.pc-sd--b { letter-spacing: -.012em; font-size: 27px; line-height: 30px; font-weight: 400; color: #eaf3ff; }
+.pc-line { display: block; background: rgba(255, 255, 255, .16); }
+.pc-vline { display: block; width: 2px; background: rgba(255, 255, 255, .16); }
+.pc-hline { display: block; height: 2px; background: rgba(90, 170, 255, .55); }
+
+/* card 3 */
+.pc-dark > * { position: absolute; margin: 0; }
+.pc-dark { background: #0b254a; border-radius: 52px; box-shadow: 0 22px 40px rgba(11, 37, 74, .28); }
+.pc-doc { background: #f9f8fd; border-radius: 38px; overflow: hidden; box-shadow: 0 6px 18px rgba(0, 0, 0, .12); }
+.pc-doc > * { position: absolute; margin: 0; }
+.pc-docico { left: 34px; top: 28px; width: 83px; height: 78px; border-radius: 22px; display: grid; place-items: center; background: linear-gradient(145deg, #2b7be0, #1e63c4); }
+.pc-doct { left: 40px; top: 120px; font-size: 50px; line-height: 47.5px; font-weight: 800; letter-spacing: -.02em; color: #0e1d52; }
+.pc-docs { left: 40px; top: 276px; font-size: 18.6px; font-weight: 700; letter-spacing: -.01em; color: #1a2a63; white-space: nowrap; }
+.pc-wave { left: 0; bottom: 0; width: 100%; height: 58px; }
+.pc-vl { display: block; width: 2px; background: rgba(255, 255, 255, .28); }
+.pc-vl--d { background: #1b2349; }
+.pc-dl { display: flex; align-items: center; justify-content: center; gap: 14px; border: 2px solid #fff; border-radius: 40px; color: #fff; font-size: 24px; font-weight: 600; letter-spacing: -.01em; white-space: nowrap; }
+.pc-rl { font-size: 25px; line-height: 34px; font-weight: 700; letter-spacing: -.02em; color: #fff; white-space: nowrap; }
+.pc-bt { display: block; border-radius: 13px; background: #5f6f8a; overflow: hidden; }
+.pc-bt u { display: block; height: 100%; border-radius: 13px; text-decoration: none; }
+.pc-rp { font-size: 36px; line-height: 48px; font-weight: 800; letter-spacing: -.02em; color: #fff; }
+.pc-rs { display: block; height: 2px; background: rgba(255, 255, 255, .32); }
+.pc-spark { color: #0e1d52; }
+.pc-kt { font-size: 37px; line-height: 44px; font-weight: 800; letter-spacing: -.025em; word-spacing: .06em; color: #0e1d52; white-space: nowrap; }
+.pc-ktx { font-size: 31.5px; line-height: 41px; font-weight: 400; letter-spacing: -.005em; word-spacing: .06em; color: #1b2349; }
+
+
+.pc-hr { display: block; height: 2px; background: rgba(255, 255, 255, .22); }
+.pc-key { overflow: hidden; border-radius: 42px; background: linear-gradient(180deg, #f1f4fd, #e8edfb); box-shadow: 0 6px 18px rgba(0, 0, 0, .14); }
+.pc-key > * { position: absolute; margin: 0; }
+.pc-wave--k { left: 0; bottom: 0; width: 100%; height: 70px; }
+.pc-kline { display: block; width: 2px; background: #1b2349; }
+.pc-key .pc-ktx { font-size: 35px; line-height: 45px; letter-spacing: -.012em; word-spacing: .02em; }
+
+/* ── the results ── */
+.px-res { margin-top: 4px; padding: 38px 28px 46px; background: #eee9fd; opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .8s cubic-bezier(.22, 1, .36, 1); }
+.px-res.in { opacity: 1; transform: none; }
+.px-res-top { display: flex; align-items: center; gap: 14px; margin-bottom: 30px; }
+.px-res-top i { flex: 1; height: 1.5px; background: #2a2a6e; opacity: .85; }
+.px-res-top span { font-size: 16px; font-weight: 800; letter-spacing: .13em; color: #3a1fc2; white-space: nowrap; }
+.px-res-row { display: flex; align-items: center; gap: 14px; }
+.px-res-row + .px-res-row { margin-top: 28px; }
+.px-res-ico { flex: none; width: 46px; height: 36px; color: #5a2fd0; }
+.px-res-ico--p { height: 46px; }
+.px-res-line { flex: none; align-self: stretch; width: 1.5px; background: #3a3a7a; opacity: .75; }
+.px-res h4 { margin: 0 0 5px; font-size: 19.5px; line-height: 1.15; font-weight: 800; letter-spacing: -.02em; color: #150f52; }
+.px-res p { margin: 0; font-size: 15.6px; line-height: 21.4px; font-weight: 400; letter-spacing: -.005em; word-spacing: .04em; color: #1b1660; }
+@media (prefers-reduced-motion: reduce) { .px-res { opacity: 1; transform: none; transition: none; } }
+
+.px-swoosh { width: 580px; height: 27px; overflow: visible; }
+
+/* card 2: the panel is the supplied picture (its words are live text on top, so they stay sharp) */
+.pc-r2 { box-shadow: none; border-radius: 0; background-size: 100% 100%; }
+.pc-r2 > * { position: absolute; margin: 0; }
+.pc-r2-ic { height: auto; color: #fff; }
+.pc-r2-v { display: block; width: 2px; background: rgba(255, 255, 255, .35); }
+.pc-r2-t { color: #fff; font-size: 38px; line-height: 44px; font-weight: 700; letter-spacing: -.02em; white-space: nowrap; }
+.pc-r2-t--b { transform: translateY(-50%); font-size: 33px; line-height: 40px; }
+
+/* white background, the same as "They've seen the score" */
+.px { background: linear-gradient(180deg, #ffffff 0%, #fbfbfe 100%); }
+.px-res { background: #fbfbfe; }
+
+/* the three stage cards: no drop shadow, light grey card colour */
+.px-slide::after { content: none; }
+.px-slide .nc, .px-slide .pc { background: #f2f3f5; box-shadow: none; }

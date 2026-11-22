@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Behavency — Mobile</title>
+    <meta name="description" content="Behavency helps organizations assess manager and team effectiveness, identify real development needs, and prove that development worked." />
+    <!-- base page styles of the "Phone Site Final" design page, so the site renders exactly like it -->
+    <style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600;1,8..60,700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Netlify Forms reads this hidden copy of the contact form at deploy time; the real form is in src/ContactForm.jsx (used in the contact section and the hero popup) -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input name="name" /><input name="email" /><input name="organization" /><input name="role" /><textarea name="message"></textarea><input name="bot-field" />
+    </form>
+    <!-- From the "Phone Site Final" design (same order): type and section fixes, then the design's scripts (in public/) -->
+    <style id="type-v2">/* Subheaders: 17.4px -> 15.6px, line-height 1.45 (compared with monday.com on mobile) */:root .wn-text,:root .pf-sub,:root .id-text,:root .bm-text,:root .bm-areas-sub,:root .eg-sub,:root .eg-lead,:root .jn-sub,:root .ms-text,:root .hm-text,:root .bd-text,:root .hw-text,:root .pk-text,:root .nbm-text{font-size:15.6px!important;line-height:22.6px!important}</style>
+    <style id="fixes-v2">
+/* Plain section edges: no wave under the platform card, no curved blob in the measure cards */
+.pf-wave{display:none!important}
+.hm-card:after{display:none!important}
+/* "What makes Behavency different": list items in the site's UI type, readable when opened */
+:root .df-item{padding:18px 0}
+:root .df-n{font-family:Inter,Arial,sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.08em;color:#1a8a7a;line-height:1}
+:root .df-row h3{font-family:Inter,Arial,sans-serif;font-size:16.4px;font-weight:600;line-height:22px;letter-spacing:-.012em;color:#15171c;margin:7px 0 0}
+:root .df-row button{width:40px;height:40px}
+:root .df-line{font-size:15px;line-height:22px;color:#3d4455;margin-top:10px}
+:root .df-more{background:none;box-shadow:none;border-radius:0;border-left:2px solid #cfe7e2;padding:2px 0 2px 14px;margin-top:12px;font-size:14.6px;line-height:21.5px;color:#4a5160}
+:root .df-close{font-family:Inter,Arial,sans-serif;font-size:15px;line-height:22px;color:#1e3a5f;margin-top:28px}
+:root .df-close i{margin-top:11px}
+</style>
+    <div id="root"></div>
+    <script>window.BHV_SITE = 'mob'; window.BHV_FINAL = true; window.TM_CLEAN = true;</script>
+    <script type="module" src="/src/main.jsx"></script>
+    <script src="model-v2.js"></script>
+    <script src="polish-v2.js"></script>
+    <script src="engage-v2.js"></script>
+    <script src="programmes-mobile.js"></script>
+    <script src="engage-merge.js"></script>
+    <script src="studio-v2.js"></script>
+    <script src="model-bridge.js"></script>
+    <script src="cherry.js"></script>
+    <script src="measure-v2.js"></script>
+    <script src="mob-chapters.js"></script>
+
+  </body>
+</html>

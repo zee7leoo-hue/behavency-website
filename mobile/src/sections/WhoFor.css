@@ -1,0 +1,47 @@
+/* "Who it's for" (mobile): lavender, with purple as its accent. */
+.wf {
+  position: relative; padding: 50px 22px 40px; overflow: hidden; font-family: Inter, Arial, Helvetica, sans-serif; color: #0a1130;
+  background:
+    radial-gradient(260px 240px at 100% 18%, rgba(196, 170, 255, .55), transparent 70%),
+    radial-gradient(300px 260px at 0% 92%, rgba(214, 196, 255, .6), transparent 70%),
+    linear-gradient(175deg, #f6f2ff 0%, #f1ebff 100%);
+}
+.wf *, .wf *::before, .wf *::after { box-sizing: border-box; }
+
+.wf-eyebrow { display: inline-flex; align-items: center; gap: 8px; margin: 0 6px; padding: 7px 13px 7px 10px; border-radius: 999px; background: #fff; box-shadow: 0 2px 10px rgba(106, 46, 232, .1); font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #5a22d0; }
+.wf-eyebrow span { width: 8px; height: 8px; border-radius: 50%; background: linear-gradient(135deg, #8b5cf6, #6a2ee8); box-shadow: 0 0 0 3px rgba(139, 92, 246, .2); }
+.wf-title { margin: 18px 6px 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 40px; line-height: 41px; letter-spacing: -.03em; text-wrap: balance; font-optical-sizing: none; font-variation-settings: 'opsz' 30; color: #0a1130; }
+.wf-title em { font-style: italic; font-weight: 500; letter-spacing: -.02em; color: #6a2ee8; }
+
+/* the three people */
+.wf-people { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 30px; }
+.wf-person { display: flex; flex-direction: column; align-items: center; gap: 9px; padding: 0; border: 0; background: none; cursor: pointer; color: inherit; }
+.wf-av { position: relative; display: grid; place-items: center; width: 62px; height: 62px; border-radius: 50%; background: #fff; color: #7c4dff; box-shadow: 0 4px 12px rgba(80, 40, 160, .12), inset 0 0 0 1px #e6dcff; transition: transform .35s cubic-bezier(.22, 1, .36, 1), background .35s, color .35s; }
+.wf-av svg { width: 28px; height: 28px; }
+.wf-name { font-size: 13px; font-weight: 700; color: #7b7596; transition: color .35s; }
+.wf-person.on .wf-av { transform: scale(1.12); background: linear-gradient(140deg, #9b6dff, #6a2ee8); color: #fff; box-shadow: 0 10px 22px -6px rgba(106, 46, 232, .55); }
+.wf-person.on .wf-name { color: #4a18c4; }
+
+/* the speech bubble: all three in one cell so the height never jumps */
+.wf-stage { position: relative; display: grid; margin-top: 22px; }
+.wf-tail { position: absolute; z-index: 1; top: -9px; left: var(--x); width: 20px; height: 20px; margin-left: -10px; border-radius: 4px; background: #fff; transform: rotate(45deg); transition: left .45s cubic-bezier(.22, 1, .36, 1); }
+.wf-bubble { grid-area: 1 / 1; position: relative; display: flex; flex-direction: column; z-index: 2; padding: 22px 20px 20px; border-radius: 24px; background: #fff; box-shadow: 0 18px 40px -18px rgba(80, 40, 160, .35); opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity .35s ease, transform .45s cubic-bezier(.22, 1, .36, 1), visibility 0s .35s; }
+.wf-bubble.on { opacity: 1; visibility: visible; transform: none; transition: opacity .35s ease, transform .45s cubic-bezier(.22, 1, .36, 1), visibility 0s; }
+.wf-role { display: block; font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #7c4dff; }
+.wf-hook { position: relative; margin: 12px 0 0; padding-left: 26px; font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 600; font-size: 22px; line-height: 1.22; letter-spacing: -.015em; color: #0a1130; }
+.wf-hook::before { content: '“'; position: absolute; left: -2px; top: -12px; font-family: 'Source Serif 4', Georgia, serif; font-style: normal; font-size: 52px; line-height: 1; color: #c4b0ff; }
+.wf-p { margin: 12px 0 0; font-size: 15px; line-height: 1.55; color: #3b3f5c; }
+/* "Includes" sits at the bottom of the bubble, so a shorter text leaves its space above it, not below */
+.wf-p { margin-bottom: 16px; }
+.wf-inc { margin-top: auto; padding-top: 14px; border-top: 1px solid #efeaff; }
+.wf-inc small { display: block; font-size: 10.5px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #9a93b8; }
+.wf-inc ul { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 0; padding: 0; list-style: none; }
+.wf-inc li { padding: 5px 11px; border-radius: 999px; background: #f1ebff; color: #5a22d0; font-size: 12.6px; font-weight: 600; }
+
+/* previous / next */
+.wf-nav { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 18px; }
+.wf-nav span { min-width: 34px; text-align: center; font-size: 13px; font-weight: 700; color: #6b6488; font-variant-numeric: tabular-nums; }
+.wf-nav button { display: grid; place-items: center; width: 38px; height: 38px; padding: 0; border: 0; border-radius: 50%; background: #fff; box-shadow: 0 3px 10px rgba(80, 40, 160, .12); color: #5a22d0; cursor: pointer; }
+.wf-nav svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+@media (prefers-reduced-motion: reduce) { .wf-av, .wf-name, .wf-tail, .wf-bubble, .wf-bubble.on { transition: none; } }

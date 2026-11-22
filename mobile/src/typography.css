@@ -1,0 +1,35 @@
+/* One type system for every section after the hero: the same big header and the same sub header everywhere. Loaded last. */
+
+/* big headers */
+.wn-title, .pf-title, .id-title, .bm-title, .bm-areas-title, .eg-title, .jn-title, .ms-title, .hm-title, .bd-title, .df-title {
+  font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 40px; line-height: 41px; letter-spacing: -.03em; text-wrap: balance;
+  font-optical-sizing: none; font-variation-settings: 'opsz' 30; white-space: normal; word-spacing: 0;
+}
+.wn-title em, .pf-title em, .id-title em, .bm-title em, .eg-title em, .jn-title em, .bd-title em, .df-title em, .ms-title span, .hm-title span {
+  font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 500; font-size: 1em; line-height: 41px; letter-spacing: -.02em;
+}
+.ms-title span { margin: 0; }
+.hm-title span { display: inline; margin: 0; }
+.bm-title em { margin-top: 0; padding-bottom: 8px; }
+
+/* sub headers */
+.wn-text, .pf-sub, .id-text, .bm-text, .bm-areas-sub, .eg-sub, .eg-lead, .jn-sub, .ms-text, .hm-text, .bd-text {
+  font-family: Inter, Arial, Helvetica, sans-serif; font-style: normal; font-size: 17.4px; line-height: 23.8px; font-weight: 400;
+  letter-spacing: 0; word-spacing: 0; white-space: normal; color: #1c2540;
+}
+.wn-text { color: rgba(255, 255, 255, .9); }
+
+/* the Engage "play" header is drawn on a bigger canvas (scale .33361), so the same sizes are written in its units */
+.px-h { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 120px; line-height: 123px; letter-spacing: -.03em; word-spacing: 0; width: 1030px; white-space: normal; text-wrap: balance; font-optical-sizing: none; font-variation-settings: 'opsz' 30; }
+.px-h { font-size: 99px; line-height: 108px; }
+.px-h em { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 500; font-size: 1em; letter-spacing: -.015em; }
+.px-sub { font-family: Inter, Arial, Helvetica, sans-serif; font-size: 52.2px; line-height: 71.3px; font-weight: 400; letter-spacing: 0; word-spacing: 0; color: #1c2540; }
+
+.eg-title em { position: relative; white-space: nowrap; }
+.eg-title .eg-swoosh { left: 0; top: auto; bottom: -9px; width: 100%; height: 10px; }
+
+/* Measure sections: the italic line stays on one line */
+.ms-title span { display: block; white-space: nowrap; font-size: 25.5px; line-height: 36px; }
+.hm-title span { display: block; white-space: nowrap; font-size: 25.5px; line-height: 36px; }
+.hm-title { font-size: 33px; line-height: 38px; white-space: nowrap; }
+.hm-title { font-size: 35.5px; line-height: 40px; letter-spacing: -.036em; margin-right: -16px; }

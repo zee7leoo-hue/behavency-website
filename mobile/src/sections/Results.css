@@ -1,0 +1,29 @@
+/* "Why these areas matter" (mobile) */
+.rs { box-sizing: border-box; background: #ffffff; padding: 48px 24px 56px; font-family: Inter, system-ui, sans-serif; color: #1b1f3b; display: flex; flex-direction: column; gap: 32px; }
+.rs *, .rs *::before, .rs *::after { box-sizing: border-box; }
+.rs a { color: #5b6070; }
+.rs a:hover { color: #1b1f3b; }
+
+.rs-head { display: flex; flex-direction: column; gap: 14px; }
+.rs-eyebrow { display: flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: #5b6070; }
+.rs-dash { width: 24px; height: 1px; background: #8a8fa0; }
+.rs-title { margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: 34px; line-height: 1.12; letter-spacing: -.01em; color: #1b1f3b; }
+.rs-title em { font-style: italic; color: #7c3aed; }
+.rs-lead { margin: 0; font-size: 15px; line-height: 1.55; color: #5b6070; }
+
+.rs-list { display: flex; flex-direction: column; }
+.rs-item { display: flex; flex-direction: column; gap: 8px; padding: 24px 0; border-top: 1px solid #e7e4ee; }
+.rs-item:last-child { border-bottom: 1px solid #e7e4ee; }
+.rs-area { font-size: 13px; font-weight: 600; color: #7c3aed; }
+.rs-n { font-family: 'Source Serif 4', Georgia, serif; font-size: 44px; line-height: 1; color: #1b1f3b; }
+.rs-pair { display: flex; align-items: baseline; gap: 8px; }
+.rs-vs { font-size: 16px; font-weight: 500; color: #5b6070; }
+.rs-p { margin: 0; font-size: 15px; line-height: 1.5; color: #3f4354; }
+.rs-src { font-size: 11.5px; color: #5b6070; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #c9ccd6; }
+
+.rs-ai { display: flex; flex-direction: column; gap: 16px; padding: 28px 24px; background: #f4eefd; border: 1px solid #d8c7f5; border-radius: 20px; }
+.rs-ai-k { font-size: 14px; font-weight: 600; color: #6d28d9; }
+.rs-ai-n { font-family: 'Source Serif 4', Georgia, serif; font-size: 64px; line-height: 1; color: #5b21b6; }
+.rs-ai-p { margin: 0; font-size: 16px; line-height: 1.55; color: #2e2a45; }
+.rs-ai-rule { height: 1px; background: #d8c7f5; }
+.rs .rs-ai-src { font-size: 11.5px; line-height: 1.5; color: #4a4560; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #b9a6e0; }

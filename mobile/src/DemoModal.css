@@ -1,0 +1,20 @@
+/* "Request a Demo" popup: fills the real screen (it lives outside the scaled page), dark like the contact section,
+   with the same "Get in touch" card in it. */
+.dm { position: fixed; inset: 0; z-index: 1000; display: flex; flex-direction: column; background: #1c1b19; font-family: Inter, Arial, Helvetica, sans-serif; color: #f2f1ee; animation: dm-in .32s cubic-bezier(.22, 1, .36, 1); }
+.dm *, .dm *::before, .dm *::after { box-sizing: border-box; }
+@keyframes dm-in { from { opacity: 0; transform: translateY(16px); } }
+@media (prefers-reduced-motion: reduce) { .dm { animation: none; } }
+
+/* top bar: logo left, close right */
+.dm-top { flex: none; display: flex; align-items: center; justify-content: space-between; height: 60px; padding: 0 12px 0 18px; padding-top: env(safe-area-inset-top, 0px); border-bottom: 1px solid #2c2b28; }
+.dm-logo { display: inline-flex; align-items: center; gap: 8px; font: 700 19px/1 'Playfair Display', Georgia, serif; color: #fff; }
+.dm-mark { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 6px; background: #24407a; }
+.dm-mark svg { width: 12px; height: 12px; fill: #fff; }
+.dm-close { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%; background: #2c2b28; color: #fff; cursor: pointer; transition: background .2s; }
+.dm-close:hover { background: #3a3936; }
+.dm-close svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; }
+
+.dm-scroll { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; }
+/* the card from the contact section; .ct gives it the section's colours, the padding here replaces the section's */
+.dm-in.ct { max-width: 520px; margin: 0 auto; padding: 20px 16px calc(28px + env(safe-area-inset-bottom, 0px)); }
+.dm-in .ct-card { margin-top: 0; }

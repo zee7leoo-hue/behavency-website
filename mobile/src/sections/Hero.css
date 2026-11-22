@@ -1,0 +1,46 @@
+/* Hero (mobile) — headline, copy, demo button, then the step cards on an emerald panel with tabs. */
+.hr { --navy: #0b1440; --em: #14a38f; --sub: #4a5163; color: var(--navy); font-family: Inter, Arial, sans-serif; background: #f3f4fb; }
+.hr *, .hr *::before, .hr *::after { box-sizing: border-box; }
+.hr button { font: inherit; }
+.hr-phone { position: relative; max-width: 480px; margin: 0 auto; overflow: hidden; background: linear-gradient(180deg, #fff 0%, #f7f6fd 55%, #f3f4fb 100%); padding: 10px 0 28px; }
+.hr-hero { padding: 22px 22px 0; text-align: center; }
+.hr-pill { display: inline-flex; align-items: center; gap: 12px; font: 700 11.5px/1 Inter, Arial, sans-serif; letter-spacing: .05em; }
+.hr-pill span { background: #f7d65a; padding: 7px 12px; border-radius: 999px; }
+.hr-pill::before, .hr-pill::after { content: ""; width: 22px; height: 2px; background: var(--em); }
+.hr-h { margin: 18px 0 0; font: 700 min(33px, 8.4vw)/1.1 "Playfair Display", Georgia, serif; letter-spacing: -.02em; }
+.hr-h .hr-l { display: block; white-space: nowrap; }
+.hr-h em { color: var(--em); font-style: italic; }
+.hr-s { margin: 16px auto 0; max-width: 340px; font-size: 16.5px; line-height: 1.5; color: var(--sub); }
+.hr-btn { display: inline-block; margin-top: 20px; padding: 14px 26px; border-radius: 999px; background: var(--navy); color: #fff; font-weight: 600; font-size: 15.5px; text-decoration: none; }
+
+/* the cards and their track */
+.hr-trk { display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; cursor: grab; padding: 4px 24px 8px; scroll-padding: 0 24px; }
+.hr-trk::-webkit-scrollbar { display: none; }
+.hr-trk.drag { cursor: grabbing; scroll-snap-type: none; }
+.hr-card { flex: none; width: 100%; scroll-snap-align: start; background: #fff; border-radius: 18px; padding: 14px 14px 4px; box-shadow: 0 10px 26px rgba(10,20,60,.14); text-align: left; user-select: none; }
+.hr-ch { display: flex; align-items: center; gap: 10px; padding-bottom: 11px; border-bottom: 1px solid #eef0f4; }
+.hr-ci { flex: none; width: 38px; height: 38px; border-radius: 11px; background: var(--tint); display: grid; place-items: center; }
+.hr-ci svg { width: 20px; height: 20px; fill: none; stroke: var(--ink); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.hr-ct { flex: 1; min-width: 0; }
+.hr-ct b { display: block; font-size: 18px; line-height: 1.2; }
+.hr-ct b.lede { font-size: 15.5px; line-height: 1.3; font-weight: 700; }
+.hr-badge { flex: none; text-align: center; background: var(--tint); color: var(--ink); border-radius: 10px; padding: 4px 8px; font-size: 10.5px; font-weight: 600; line-height: 1.15; }
+.hr-badge b { display: block; font-size: 17px; }
+.hr-row { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 8px; padding: 9px 0; border-bottom: 1px solid #f1f2f6; font-size: 13px; font-weight: 600; white-space: nowrap; }
+.hr-row:last-child { border-bottom: 0; }
+.hr-row.bar { grid-template-columns: 1fr 44px 40px; }
+.hr-track { height: 6px; border-radius: 3px; background: #e7e8ee; position: relative; overflow: hidden; }
+.hr-track i { position: absolute; inset: 0 auto 0 0; border-radius: 3px; }
+.hr-pct { text-align: center; font-size: 12px; font-weight: 700; border-radius: 999px; padding: 3px 0; }
+.hr-tag { font-size: 11.5px; font-weight: 600; border-radius: 999px; padding: 4px 8px; color: var(--ink); background: var(--tint); }
+.hr-dots { display: flex; justify-content: center; gap: 6px; margin-top: 14px; }
+.hr-dots button { width: 7px; height: 7px; padding: 0; border: 0; border-radius: 4px; background: rgba(255,255,255,.4); cursor: pointer; transition: width .25s, background .25s; }
+.hr-dots button.on { width: 20px; background: #fff; }
+
+/* the emerald panel */
+.hr-panel { margin: 30px 10px 0; border-radius: 26px; padding: 14px 0 16px; overflow: hidden; background: radial-gradient(110% 70% at 0% 0%, #179a87 0%, rgba(23,154,135,0) 55%), radial-gradient(90% 90% at 100% 100%, #3b2a8f 0%, rgba(59,42,143,0) 60%), linear-gradient(140deg, #14a38f, #123a6b 70%, #1b1f5e); }
+
+/* the step tabs */
+.hr-tabs { display: flex; gap: 6px; margin: 0 12px 14px; }
+.hr-tabs button { flex: 1; padding: 7px 0; border-radius: 999px; border: 1px solid rgba(255,255,255,.28); background: transparent; color: rgba(255,255,255,.85); font-size: 12px; font-weight: 600; cursor: pointer; transition: background .25s, color .25s; }
+.hr-tabs button.on { background: #fff; color: var(--navy); border-color: #fff; }

@@ -1,0 +1,86 @@
+/* "The behavioural model" (mobile). Drawn on a 400px canvas. */
+.bm { position: relative; overflow: clip; text-align: center; background: linear-gradient(180deg, #fbfbfb 0%, #faf9fc 45%, #fdfdfe 100%); }
+
+.bm-top { position: relative; min-height: calc(var(--screen-h, 720px) - 40px); padding: var(--sec-pad) 0 64px; display: flex; flex-direction: column; justify-content: center; }
+/* soft corner shapes + scroll arrow */
+.bm-top { overflow: clip; }
+.bm-top::before, .bm-top::after { content: none; }  /* the two half-circle shapes (top right, bottom left) are removed */
+.bm-top::before { top: -220px; right: -180px; background: radial-gradient(circle at 30% 70%, rgba(176, 232, 222, .55), rgba(196, 238, 230, .35) 55%, rgba(210, 244, 238, .2)); }
+.bm-top::after { bottom: -217px; left: -160px; background: radial-gradient(circle at 70% 30%, rgba(222, 212, 250, .65), rgba(232, 224, 252, .4) 60%, rgba(238, 232, 253, .25)); }
+.bm-next { position: absolute; left: 50%; bottom: 20px; z-index: 5; width: 44px; height: 36px; margin-left: -22px; padding: 0; border: 0; background: none; display: grid; place-items: center; cursor: pointer; color: #1a2147; -webkit-tap-highlight-color: transparent; animation: bm-bob 2.4s ease-in-out infinite; }
+.bm-next svg { width: 26px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+@keyframes bm-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
+@media (prefers-reduced-motion: reduce) { .bm-next { animation: none; } }
+.bm-in { position: relative; flex: none; width: 400px; margin: 0 auto; }
+.bm-eyebrow { position: relative; height: 16px; display: flex; align-items: center; justify-content: center; gap: 14.7px; white-space: nowrap; }
+.bm-eyebrow i { display: block; width: 28px; height: 1px; background: #232a4d; }
+.bm-eyebrow span { font-size: 11.1px; font-weight: 600; letter-spacing: .2em; color: #151b3f; }
+
+.bm-title { position: relative; margin: var(--g1) 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 39.3px; line-height: 33px; letter-spacing: -.02em; color: #0b1138; white-space: nowrap; font-optical-sizing: none; font-variation-settings: 'opsz' 40; }
+.bm-title em { display: block; margin-top: 5.6px; padding-bottom: 12px; font-size: .952em; font-weight: 600; font-style: italic; letter-spacing: -.015em; background: linear-gradient(90deg, #0fb59b, #1ab9ae); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: #12b8a4; }
+
+.bm-text { position: relative; margin: calc(var(--g2) - 12px) auto 0; width: 296px; font-size: 17.4px; font-weight: 400; line-height: 23.8px; letter-spacing: .003em; color: #12182f; text-wrap: balance; }
+
+.bm-stage-slot { position: relative; height: 165px; margin-top: var(--g3); pointer-events: none; }
+.bm-stage { position: absolute; left: 0; top: -306px; width: 400px; height: 533px; pointer-events: none; }
+.bm-ring { position: absolute; left: 0; top: 357px; width: 400px; height: 130px; overflow: visible; }
+
+/* three tilted tiles */
+.bm-card { position: absolute; }
+.bm-card i { position: absolute; inset: 0; border-radius: 15px; }
+.bm-card--l { left: 53px; top: 320px; width: 100px; height: 96px; transform: perspective(280px) rotateY(24deg); transform-origin: 50% 50%; }
+.bm-card--l i { background: linear-gradient(135deg, #e2edfc 0%, #d4e4fa 100%); box-shadow: 0 10px 18px -10px rgba(90, 120, 200, .35); }
+.bm-card--r { left: 249px; top: 320px; width: 98px; height: 96px; transform: perspective(280px) rotateY(-24deg); }
+.bm-card--r i { background: linear-gradient(135deg, #efe8fd 0%, #ded3f8 100%); box-shadow: 0 10px 18px -10px rgba(130, 100, 210, .35); }
+.bm-card--c { left: 143px; top: 311px; width: 123px; height: 109px; transform: perspective(300px) rotateY(25deg); z-index: 2; }
+.bm-card--c i { background: linear-gradient(135deg, #dcf7f0 0%, #c9f1e7 100%); box-shadow: 0 14px 22px -12px rgba(40, 170, 150, .4), 0 0 0 1px rgba(255, 255, 255, .6) inset; }
+
+/* icon + label on each tile (kept flat, like the design) */
+.bm-lab { position: absolute; z-index: 3; width: 110px; margin-left: -55px; display: flex; flex-direction: column; align-items: center; }
+.bm-lab svg { display: block; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.bm-lab span { font-size: 12.6px; font-weight: 700; line-height: 14.8px; letter-spacing: -.01em; color: #0e1538; }
+.bm-lab--l { left: 102px; top: 335.5px; }
+.bm-lab--l svg { width: 30px; height: 27px; stroke: #2268d6; margin-bottom: 4px; }
+.bm-lab--c { left: 201px; top: 332.4px; }
+.bm-lab--c svg { width: 38.6px; height: 29.8px; stroke: #19b9a3; margin-bottom: 4.2px; }
+.bm-lab--r { left: 300px; top: 336.6px; }
+.bm-lab--r svg { width: 43px; height: 28px; stroke: #8a4fd6; margin-bottom: 7.2px; }
+
+.bm-pill { position: absolute; z-index: 4; left: 73px; top: 436.4px; width: 254px; height: 35px; border-radius: 99px; display: flex; align-items: center; justify-content: center; background: #fff; font-size: 13px; font-weight: 700; letter-spacing: -.02em; color: #0e1538; box-shadow: 0 10px 22px -10px rgba(110, 110, 180, .35), 0 1px 3px rgba(110, 110, 180, .1); }
+
+/* motion: the side tiles slide out from behind the middle one, the ring draws, then the pill rises */
+.bm-card, .bm-lab, .bm-pill { opacity: 0; transition: opacity .8s ease, translate 1s cubic-bezier(.22, 1, .36, 1); }
+.bm-card--c { translate: 0 18px; transition-delay: .2s; }
+.bm-card--l { translate: 34px 0; transition-delay: .5s; }
+.bm-card--r { translate: -34px 0; transition-delay: .5s; }
+.bm-lab--c { translate: 0 14px; transition-delay: .45s; }
+.bm-lab--l, .bm-lab--r { transition-delay: .8s; }
+.bm-pill { translate: 0 10px; transition-delay: 1s; }
+.bm-ring-line { stroke-dasharray: 1100; stroke-dashoffset: 1100; transition: stroke-dashoffset 1.8s cubic-bezier(.22, 1, .36, 1) .1s; }
+.is-in .bm-card, .is-in .bm-lab, .is-in .bm-pill { opacity: 1; translate: 0 0; }
+.is-in .bm-ring-line { stroke-dashoffset: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .bm-card, .bm-lab, .bm-pill { opacity: 1; translate: none; transition: none; }
+  .bm-ring-line { stroke-dasharray: none; stroke-dashoffset: 0; transition: none; }
+}
+
+/* the six areas of effectiveness */
+.bm-areas { padding: var(--sec-pad) 0; min-height: calc(var(--screen-h, 720px) - 40px); display: flex; flex-direction: column; justify-content: center; text-align: left; }
+.bm-areas-title { margin: 0 0 0 26px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 29.4px; line-height: 28.6px; letter-spacing: -.025em; color: #0a0f35; font-optical-sizing: none; font-variation-settings: 'opsz' 40; white-space: nowrap; }
+.bm-areas-sub { margin: var(--g2) 26px 0 26px; font-size: 17.4px; line-height: 23.8px; color: #4a4f63; }
+.bm-tabs { margin: var(--g3) 14px 0; display: flex; gap: 7px; }
+.bm-tab { height: 40px; padding: 0 14px; border: 0; border-radius: 13px; background: #f1f1f6; color: #0a0f35; font: 600 13.2px Inter, sans-serif; letter-spacing: -.01em; white-space: nowrap; cursor: pointer; -webkit-tap-highlight-color: transparent; transition: background-color .45s ease, color .45s ease, box-shadow .45s ease, transform .2s ease; }
+.bm-tab:first-child { flex: 1; } .bm-tab:nth-child(2) { flex: 1.1; } .bm-tab:last-child { flex: .72; }
+.bm-tab:active { transform: scale(.97); }
+.bm-tab.is-on { background: var(--tc); color: #fff; box-shadow: 0 8px 14px -8px var(--tc); }
+.bm-areas-list { margin: var(--g4) 26px 0 26px; }
+.bm-area { position: relative; height: calc(40px * var(--f, 1)); }
+.bm-area-btn { width: 100%; height: 100%; padding: 0; border: 0; background: none; display: flex; align-items: center; text-align: left; cursor: pointer; font: inherit; color: inherit; -webkit-tap-highlight-color: transparent; }
+.bm-area + .bm-area::before { content: ''; position: absolute; left: 52px; right: 0; top: 0; height: 1px; background: #dcdcf0; transform-origin: left; }
+.bm-area-ico { flex: none; width: 29px; height: 29px; margin: 0 22px 0 -1px; }
+.bm-area-ico svg { display: block; width: 100%; height: 100%; fill: none; stroke: var(--lc, #4b1d96); transition: stroke .45s ease; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.bm-area-name { flex: 1; font-size: 14px; font-weight: 600; letter-spacing: -.015em; color: #0a0f35; }
+.bm-area-go { flex: none; width: 8px; height: 14px; margin-right: 4px; fill: none; stroke: #0a0f35; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; transition: transform .3s ease; }
+.bm-area:active .bm-area-go { transform: translateX(3px); }
+.bm-title { margin-top: 22px; }

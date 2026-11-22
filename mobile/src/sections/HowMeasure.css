@@ -1,0 +1,50 @@
+/* "How we measure" (mobile). Drawn on the 400px canvas. */
+.hm { position: relative; padding: 44px 0 46px; background: #fcf7f4; font-family: 'Plus Jakarta Sans', Inter, system-ui, sans-serif; color: #12143e; overflow: clip; }
+.hm-in { padding: 0 24px; }
+
+.hm-eyebrow { display: flex; align-items: center; gap: 12px; margin-left: 1px; }
+.hm-eyebrow i { display: block; width: 24px; height: 2px; background: #5a17e6; }
+.hm-eyebrow span { font-size: 12.4px; font-weight: 700; letter-spacing: .13em; line-height: 1; color: #12143e; }
+
+.hm-title { margin: 22px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 25px; line-height: 29px; letter-spacing: -.02em; color: #0a0b30; font-optical-sizing: none; font-variation-settings: 'opsz' 28; white-space: nowrap; }
+.hm-title span { display: block; font-style: italic; font-weight: 500; font-size: 24px; letter-spacing: -.025em; color: #5a17e6; }
+
+.hm-text { margin: 20px 0 0; max-width: 348px; font-size: 17.4px; line-height: 23.8px; font-weight: 400; color: #23264d; }
+
+/* cards: all the same size, one at a time */
+.hm-rail { position: relative; height: 498px; margin-top: 14px; overflow: hidden; touch-action: pan-y; user-select: none; -webkit-user-select: none; cursor: grab; }
+.hm-card { position: absolute; left: 24px; top: 26px; width: 340px; height: 444px; padding: 22px 22px 0; display: flex; flex-direction: column; border-radius: 28px; background: #fff; box-shadow: 0 18px 36px -18px rgba(76, 46, 160, .28), 0 0 0 1px rgba(120, 100, 200, .05); overflow: hidden; will-change: transform, opacity; }
+.hm-card::after { content: ''; position: absolute; right: 0; bottom: 0; width: 230px; height: 66px; border-top-left-radius: 100% 100%; background: #f4f0fd; pointer-events: none; }
+.hm-card > * { position: relative; z-index: 1; }
+
+.hm-head { display: flex; align-items: center; gap: 16px; }
+.hm-head b { flex: none; width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; background: #ede5fb; font-size: 18px; font-weight: 700; color: #2b1672; letter-spacing: -.01em; }
+.hm-head span { font-size: 19px; font-weight: 600; letter-spacing: -.01em; color: #5a17e6; }
+.hm-head span.cap { font-size: 15.6px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+
+.hm-card h3 { margin: 20px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 24.5px; line-height: 30px; letter-spacing: -.025em; color: #0a0b30; font-optical-sizing: none; font-variation-settings: 'opsz' 28; white-space: nowrap; }
+.hm-d { margin: 8px 0 0; min-height: 62px; font-size: 14.8px; line-height: 20.6px; font-weight: 400; color: #3b3f60; }
+
+.hm-foot { margin: 16px 0 auto; display: flex; align-items: center; padding-top: 24px; border-top: 1.5px solid #e1ddf6; }
+.hm-fi { flex: none; width: 58px; height: 56px; border-radius: 17px; display: grid; place-items: center; background: #efe9fc; color: #3f2ba6; }
+.hm-fi svg { width: 29px; height: 29px; }
+.hm-foot i { flex: none; width: 1.5px; height: 32px; margin: 0 20px 0 20px; background: #ddd9ee; }
+.hm-foot p { margin: 0; font-size: 17.4px; line-height: 23px; font-weight: 700; letter-spacing: -.012em; color: #0e1038; }
+
+.hm-rows { display: flex; flex-direction: column; gap: 8px; margin: 14px -4px 0; }
+.hm-row { display: grid; grid-template-columns: 44px minmax(0, 1fr) 84px; align-items: center; column-gap: 8px; height: 62px; padding: 0 6px 0 8px; border-radius: 20px; background: #fff; box-shadow: inset 0 0 0 1px #e9e6f3; }
+.hm-ri { width: 44px; height: 44px; border-radius: 14px; display: grid; place-items: center; }
+.hm-ri svg { width: 25px; height: 25px; }
+.hm-ri--blue { background: #e4edfc; color: #2160d6; }
+.hm-ri--violet { background: #efe6fc; color: #6a30d2; }
+.hm-ri--green { background: #e1f5e1; color: #17703a; }
+.hm-row strong { display: block; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 12.9px; line-height: 17px; letter-spacing: -.025em; color: #0a0b30; white-space: nowrap; }
+.hm-row div span { display: block; margin-top: 2px; font-size: 11.4px; line-height: 13.6px; color: #40445f; }
+.hm-chip { display: grid; place-items: center; height: 40px; border-radius: 20px; font-style: normal; font-size: 10.8px; line-height: 14.5px; font-weight: 700; text-align: center; letter-spacing: -.005em; }
+.hm-chip--blue { background: #dde8fb; color: #1b4fc4; }
+.hm-chip--violet { background: #eadffb; color: #5b21b6; }
+.hm-chip--green { background: #dcf4dc; color: #17703a; }
+
+.hm-dots { display: flex; justify-content: center; align-items: center; gap: 12px; margin-top: 0; }
+.hm-dots button { width: 10px; height: 10px; padding: 0; border: 0; border-radius: 50%; background: #d9cfe9; cursor: pointer; transition: transform .3s, background .3s; }
+.hm-dots button.on { background: #5a17f0; transform: scale(1.2); }

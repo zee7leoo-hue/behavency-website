@@ -1,0 +1,76 @@
+/* "Why now" — the purple container (366 × 544 at the 400px design width). */
+.wn {
+  position: relative; padding: var(--sec-pad) 17px; overflow: hidden; min-height: calc(var(--screen-h, 720px) - 40px); display: flex; flex-direction: column; justify-content: center;
+  background:
+    radial-gradient(240px 200px at 62% 0%, #213a74 0%, transparent 70%),
+    linear-gradient(175deg, #0f1b3d 0%, #13234d 100%);
+}
+
+.wn-box {
+  position: relative; padding: 22px 0 26px; color: #fff;
+}
+.wn-art { position: absolute; top: 0; left: -17px; width: calc(100% + 34px); height: 100%; pointer-events: none; }
+
+.wn-eyebrow { position: relative; display: block; margin-left: 30px; font-size: 11.6px; font-weight: 600; letter-spacing: .03em; line-height: 1; }
+.wn-bar { position: relative; display: block; margin: 8px 0 0 30px; width: 68px; height: 2px; border-radius: 2px; background: #6fe0cf; }
+.wn-title {
+  position: relative; margin: var(--g1) 0 0 30px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700;
+  font-size: 32px; line-height: 33.2px; letter-spacing: -.022em; white-space: nowrap;
+  font-optical-sizing: none; font-variation-settings: 'opsz' 30;
+}
+.wn-title em { font-style: italic; font-weight: 400; letter-spacing: -.01em; color: #6fe0cf; }
+.wn-text { position: relative; margin: var(--g2) 0 0 30px; width: 338px; font-size: 17.4px; line-height: 23.8px; font-weight: 400; color: rgba(255, 255, 255, .9); }
+.wn-note { position: relative; margin: var(--g2) 0 0 30px; width: 338px; font-size: 15.8px; line-height: 20.4px; font-weight: 700; color: #fff; }
+
+/* white card */
+.wn-card {
+  position: relative; margin: var(--g3) 0 0 28px; width: 310px; height: 268px; border-radius: 16px; background: #fff; color: #0c1048;
+  box-shadow: 0 14px 28px -12px rgba(2, 8, 30, .6);
+}
+.wn-card-head { position: absolute; left: 22px; right: 21px; top: 23px; display: flex; justify-content: space-between; align-items: center; font-size: 10.6px; font-weight: 700; letter-spacing: .005em; line-height: 1; color: #0c1048; }
+.wn-card-head span:last-child { font-size: 11.5px; letter-spacing: .04em; font-variant-numeric: tabular-nums; }
+
+.wn-stage { position: absolute; left: 0; top: 52px; width: 100%; height: 208px; overflow: hidden; }
+.wn-slide {
+  position: absolute; inset: 0; padding: 5px 22px 0;
+  opacity: 0; visibility: hidden;
+  transition: opacity 600ms cubic-bezier(.4, 0, .2, 1), visibility 0s linear 600ms;
+}
+.wn-slide--active { opacity: 1; visibility: visible; transition-delay: 0s; }
+
+.wn-q { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 24px; line-height: 25.2px; letter-spacing: -.02em; color: #0b0f4a; font-optical-sizing: none; font-variation-settings: 'opsz' 24; }
+.wn-q span, .wn-q em { display: block; white-space: nowrap; }
+.wn-q em { font-style: italic; font-weight: 700; color: #128a7e; font-variation-settings: 'opsz' 14; }
+.wn-support { margin-top: 12px; font-size: 12.6px; line-height: 16.8px; font-weight: 400; color: #1b1f4c; }
+.wn-support span { display: block; white-space: nowrap; }
+
+/* dots + arrows */
+.wn-controls { position: relative; margin-top: var(--g4); height: 36px; }
+.wn-dots { position: absolute; left: 31.5px; top: 14.5px; display: flex; align-items: center; gap: 7.5px; }
+.wn-dot { width: 7px; height: 7px; padding: 0; border: 0; border-radius: 50%; background: rgba(255, 255, 255, .38); cursor: pointer; transition: background-color .3s ease, transform .3s ease; }
+.wn-dot.is-active { background: #fff; transform: scale(1.1); }
+.wn-arrows { position: absolute; right: 29px; top: 0; display: flex; gap: 12px; }
+.wn-arrow { width: 35px; height: 35px; padding: 0; border: 1.5px solid rgba(255, 255, 255, .92); border-radius: 50%; background: transparent; color: #fff; display: grid; place-items: center; cursor: pointer; transition: background-color .25s ease, transform .25s ease; }
+.wn-arrow svg { width: 16px; height: 16px; stroke-width: 2; }
+.wn-arrow:active { background: rgba(255, 255, 255, .18); transform: scale(.96); }
+
+.wn-pause { position: absolute; left: 30px; bottom: 6px; padding: 3px 9px; border: 1px solid #fff; border-radius: 99px; background: #13234d; color: #fff; font: 600 10px Inter, sans-serif; opacity: 0; pointer-events: none; }
+.wn-pause:focus-visible { opacity: 1; pointer-events: auto; outline: 2px solid #fff; outline-offset: 2px; }
+.wn-dot:focus-visible, .wn-arrow:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+
+/* the box rises in once */
+.wn .wn-box { opacity: 0; transform: translateY(16px); transition: opacity .9s cubic-bezier(.22, 1, .36, 1), transform 1s cubic-bezier(.22, 1, .36, 1); }
+.wn.is-in .wn-box { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .wn .wn-box { opacity: 1; transform: none; transition: none; }
+  .wn-slide, .wn-slide--out-left, .wn-slide--out-right, .wn-slide--wait-left, .wn-slide--wait-right { transform: none !important; filter: none !important; transition: opacity 250ms ease, visibility 0s linear 250ms; }
+}
+
+/* the statistic on each card, with its research link */
+.wn-stat { margin: 12px 0 0; padding-top: 10px; border-top: 1px solid #ebecf1; font: 500 12.4px/1.35 Inter, Arial, sans-serif; color: #1b1f3a; }
+.wn-stat b, .wn-txt { display: block; }
+.wn-stat b { margin-bottom: 3px; font: 700 22px/1 'Source Serif 4', Georgia, serif; letter-spacing: -.015em; color: #128a7e; }
+.wn-src { display: inline-block; margin-top: 5px; font: 400 11.4px/1.3 Inter, Arial, sans-serif; color: #7a8097; text-decoration: none; border-bottom: 1px solid #d7d9e2; }
+.wn-src:active { color: #128a7e; border-color: #128a7e; }
+.wn-title { margin-top: 12px; }

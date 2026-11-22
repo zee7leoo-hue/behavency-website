@@ -1,0 +1,76 @@
+/* Explorer — full-screen Model / Practices / Behaviours. Drawn on a 400px canvas, scaled by --s. */
+.ax { position: fixed; inset: 0; z-index: 90; background: #fff; overflow: hidden; overscroll-behavior: contain; touch-action: none; }
+.ax-fit { position: absolute; left: 50%; top: 0; width: 400px; height: calc(100% / var(--s, 1)); display: flex; flex-direction: column; transform-origin: 0 0; transform: scale(var(--s, 1)) translateX(-50%); font-family: Inter, Arial, Helvetica, sans-serif; color: #0a0a28; background: linear-gradient(180deg, #fff 0%, #fdfcff 100%); }
+
+.ax-top { flex: none; height: 49px; border-bottom: 1px solid #ededf4; display: flex; align-items: center; padding: 0 8px; box-sizing: border-box; }
+.ax-back { width: 44px; height: 44px; padding: 0; border: 0; background: none; display: grid; place-items: center; cursor: pointer; color: #0a0a28; }
+.ax-back .ax-chev { width: 11px; height: 19px; stroke-width: 2.3; }
+.ax-chev { fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; }
+.ax-caret { width: 14px; height: 9px; fill: none; stroke: #0a0a28; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform .4s cubic-bezier(.22, 1, .36, 1); }
+
+.ax-tabs { flex: none; display: flex; gap: 6px; padding: 23px 18px 0; }
+.ax-tab { flex: 1; height: 39px; padding: 0; border: 0; border-radius: 10px; background: #f3f2fa; color: #15153a; font: 500 13.3px Inter, sans-serif; letter-spacing: -.005em; cursor: pointer; white-space: nowrap; transition: background-color .35s ease, color .35s ease, box-shadow .35s ease; }
+.ax-tab b { font-weight: 700; }
+.ax-tab.is-on { background: var(--ac); color: #fff; font-weight: 600; box-shadow: 0 8px 14px -8px color-mix(in srgb, var(--ac) 60%, transparent); }
+
+.ax-scroll { flex: 1; overflow-y: auto; overflow-x: hidden; padding-bottom: 60px; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; touch-action: pan-y; }
+
+/* 01 Model */
+.ax-title { margin: 46px 0 0 24px; font-size: 27px; font-weight: 700; line-height: 34px; letter-spacing: -.025em; color: #0a0a28; }
+.ax-sub { margin: 7px 0 0 24px; font-size: 16px; line-height: 21px; color: #5a5f73; letter-spacing: -.005em; }
+.ax-areas { margin: 30px 18px 0; display: flex; flex-direction: column; gap: 8px; }
+.ax-area { width: 100%; height: 61px; padding: 0 15px 0 23px; border: 1px solid #ececf5; border-radius: 13px; background: #fff; box-shadow: 0 6px 14px -10px rgba(70, 50, 160, .28); display: flex; align-items: center; text-align: left; cursor: pointer; transition: background-color .35s ease, border-color .35s ease, transform .25s ease; }
+.ax-area:active { transform: scale(.992); }
+.ax-area.is-sel { background: linear-gradient(90deg, color-mix(in srgb, var(--ac) 11%, #fff) 0%, color-mix(in srgb, var(--ac) 6%, #fff) 100%); border-color: color-mix(in srgb, var(--ac) 16%, #fff); }
+.ax-area-ico { flex: none; width: 38px; height: 38px; color: var(--ac); }
+.ax-area-ico svg { width: 100%; height: 100%; }
+.ax-area-name { flex: 1; margin-left: 26px; font-size: 15.5px; font-weight: 600; letter-spacing: -.015em; color: #0a0a28; }
+.ax-area .ax-chev { flex: none; width: 10px; height: 17px; stroke-width: 2.2; color: #0a0a28; }
+
+/* 02 Practices / 03 Behaviours — shared header */
+.ax-head { display: flex; align-items: flex-start; margin: 40px 19px 0 20px; }
+.ax-head-ico { flex: none; width: 86px; height: 82px; border-radius: 18px; background: color-mix(in srgb, var(--ac) 9%, #fff); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ac) 12%, #fff); display: grid; place-items: center; color: var(--ac); }
+.ax-head-ico svg { width: 46px; height: 46px; }
+.ax-head-rule { flex: none; width: 1px; height: 82px; margin: 0 16px 0 12px; background: #e3e3ee; }
+.ax-head-copy { min-width: 0; }
+.ax-head-copy h2 { font-size: 19px; line-height: 24px; font-weight: 700; letter-spacing: -.02em; color: #0a0a28; }
+.ax-head-copy p { margin-top: 5px; font-size: 14.2px; line-height: 20.4px; color: #5c6177; letter-spacing: -.003em; }
+.ax-hr { margin: 36px 19px 0 20px; height: 1px; border: 0; background: #e6e6ef; }
+.ax-label { margin: 14px 0 0 20px; font-size: 12.8px; line-height: 16px; font-weight: 700; letter-spacing: .1em; color: #5b6078; }
+
+.ax-pracs { margin: 13px 19px 0 20px; }
+.ax-prac { width: 100%; min-height: 63px; padding: 15.5px 10px 15.5px 13px; border: 0; border-bottom: 1px solid #e9e9f2; background: none; display: flex; align-items: center; text-align: left; cursor: pointer; }
+.ax-prac-ico { flex: none; width: 34px; height: 34px; color: var(--ac); }
+.ax-prac-ico svg { width: 100%; height: 100%; }
+.ax-nb { white-space: nowrap; }
+.ax-prac-name { flex: 1; padding-right: 51px; margin-left: 29px; font-size: 15.4px; line-height: 21.3px; font-weight: 500; letter-spacing: -.012em; color: #0a0a28; }
+.ax-prac .ax-chev { flex: none; width: 9px; height: 16px; stroke-width: 2.2; color: #0a0a28; margin-left: 10px; }
+.ax-prac:active .ax-prac-name { color: var(--ac); }
+
+.ax-accs { margin: 16px 14px 0; display: flex; flex-direction: column; gap: 11px; }
+.ax-acc { border: 1px solid #ececf5; border-radius: 14px; background: #fff; box-shadow: 0 6px 14px -12px rgba(70, 50, 160, .3); transition: background .45s ease, border-color .45s ease; }
+.ax-acc.is-open { background: color-mix(in srgb, var(--ac) 9%, #fff); border-color: color-mix(in srgb, var(--ac) 16%, #fff); }
+.ax-acc-head { width: 100%; min-height: 62px; padding: 10px 22px 10px 13px; border: 0; background: none; display: flex; align-items: center; text-align: left; cursor: pointer; }
+.ax-acc.is-open .ax-acc-head { min-height: 48px; padding-bottom: 0; }
+.ax-badge { flex: none; width: 43px; height: 28px; border-radius: 8px; background: color-mix(in srgb, var(--ac) 10%, #fff); color: var(--ac); display: grid; place-items: center; font-size: 15px; font-weight: 700; }
+.ax-acc.is-open .ax-badge { background: color-mix(in srgb, var(--ac) 17%, #fff); }
+.ax-acc-name { flex: 1; padding-right: 25px; margin-left: 20px; font-size: 15px; line-height: 21.3px; font-weight: 600; letter-spacing: -.012em; color: #0a0a28; }
+.ax-acc.is-open .ax-acc-name { font-weight: 700; }
+.ax-acc.is-open .ax-caret { transform: rotate(180deg); }
+.ax-acc-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .5s cubic-bezier(.22, 1, .36, 1); }
+.ax-acc.is-open .ax-acc-body { grid-template-rows: 1fr; }
+.ax-acc-in { overflow: hidden; min-height: 0; }
+.ax-acc-in ul { padding: 12px 14px 14px 22px; }
+.ax-acc-in li { position: relative; padding-left: 20px; margin-top: 8px; font-size: 16.6px; line-height: 22.5px; color: #1b1e3c; opacity: 0; transform: translateY(6px); transition: opacity .5s ease, transform .5s cubic-bezier(.22, 1, .36, 1); }
+.ax-acc-in li:first-child { margin-top: 0; }
+.ax-acc-in li::before { content: ''; position: absolute; left: 0; top: 8.5px; width: 6px; height: 6px; border-radius: 50%; background: var(--ac); }
+.ax-acc.is-open .ax-acc-in li { opacity: 1; transform: none; }
+.ax-acc.is-open .ax-acc-in li:nth-child(1) { transition-delay: .18s; }
+.ax-acc.is-open .ax-acc-in li:nth-child(2) { transition-delay: .26s; }
+.ax-acc.is-open .ax-acc-in li:nth-child(3) { transition-delay: .34s; }
+.ax-acc.is-open .ax-acc-in li:nth-child(n+4) { transition-delay: .42s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ax-acc-body, .ax-caret, .ax-acc-in li, .ax-tab { transition: none; }
+  .ax-acc-in li { opacity: 1; transform: none; }
+}
