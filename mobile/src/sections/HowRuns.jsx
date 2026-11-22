@@ -53,7 +53,7 @@ export default function HowRuns() {
           ))}
         </ol>
       </div>
-      <p className="hw-note"></p>
+      <p className="hw-note">{''}</p>
     </section>
   )
 }

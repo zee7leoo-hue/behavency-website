@@ -37,6 +37,9 @@ export default function App() {
         <Platform />
         <Identify />
         <Model single />
+        <Results />
+        <HoldsBack variant="split" />
+        <HoldsBack variant="focus" />
         <Engage />
         <Play />
         <Build />
@@ -45,9 +48,6 @@ export default function App() {
         <HowMeasure />
         <Different />
         <Hiring />
-        <Results />
-        <HoldsBack variant="split" />
-        <HoldsBack variant="focus" />
         <HowRuns />
         <Packages />
         <WhoFor />

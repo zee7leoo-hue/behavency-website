@@ -15,8 +15,8 @@ function init(){
 
   const CHARS = [
     { f: 'anna', n: 'Anna', d: 'Gives clear examples', lvl: 1, l: 'Easy', c: '#0f9a6b', t: '#e7f8ef',
-      say: 'Last quarter two people on my team were overloaded, so I moved one project and we still hit the deadline.',
-      tip: 'Confirm the example and move on.' },
+      say: 'Last quarter two people on my team were overloaded, so I moved one of their projects to a colleague.',
+      tip: 'Ask how it ended.' },
     { f: 'mark', n: 'Mark', d: 'Speaks in generalities', lvl: 2, l: 'Medium', c: '#2f6fdb', t: '#e8f0fd',
       say: 'Generally, I try to keep everyone aligned and make sure people know what matters.',
       tip: 'Ask for one concrete example.' },
@@ -25,7 +25,7 @@ function init(){
       tip: 'Ask what went wrong, and what she did.' },
     { f: 'peter', n: 'Peter', d: 'Long-winded, drifts off', lvl: 4, l: 'Challenging', c: '#cf3f6b', t: '#fceaf0',
       say: 'That reminds me of a project back in 2015, which was quite different, because at the time…',
-      tip: 'Bring him back to the question.' },
+      tip: 'Politely interrupt and ask what he did himself.' },
   ];
   const tipIco = '<svg viewBox="0 0 24 24"><path d="M9 18h6M10 21.5h4M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/></svg>';
   const cast = document.getElementById('isx-cast'), dots = document.getElementById('isx-dots'), pos = document.getElementById('isx-pos');
