@@ -36,8 +36,7 @@ a { color: inherit; text-decoration: none; }
   -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
 }
 .nav-logo { display: flex; align-items: center; gap: 8px; }
-.nav-logo-mark { width: 20px; height: 20px; border-radius: 6px; background: #0e1b4a; display: grid; place-items: center; }
-.nav-logo-mark svg { width: 12px; height: 12px; fill: #fff; }
+.nav-logo-mark { display: block; height: 24px; width: auto; }
 .nav-logo-word { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 19px; letter-spacing: -.01em; color: #0b1330; line-height: 1; }
 .nav-burger { width: 28px; height: 28px; padding: 0; border: 0; background: none; display: grid; place-items: center; cursor: pointer; }
 .nav-burger span { display: block; width: 17px; height: 2px; border-radius: 2px; background: #0b1330; transition: transform .35s cubic-bezier(.22, 1, .36, 1), opacity .25s; }

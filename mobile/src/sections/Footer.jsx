@@ -1,5 +1,6 @@
 import React from 'react'
 import './Footer.css'
+import logoHead from '../assets/logo-head-white.png'
 
 /* Footer (mobile): logo and line, two short link groups, copyright. */
 
@@ -12,7 +13,7 @@ export default function Footer() {
   return (
     <footer className="ft">
       <a className="ft-logo" href="#top" aria-label="Behavency, back to top">
-        <span className="ft-mark" aria-hidden="true"><svg viewBox="0 0 12 12"><circle cx="3.2" cy="3.2" r="1.7" /><circle cx="8.8" cy="3.2" r="1.7" /><circle cx="3.2" cy="8.8" r="1.7" /><circle cx="8.8" cy="8.8" r="1.7" /></svg></span>
+        <img className="ft-mark" src={logoHead} alt="" aria-hidden="true" />
         <span className="ft-word">Behavency</span>
       </a>
       <p className="ft-line">Assess. Engage. Build. Measure.<br />The end-to-end manager development journey.</p>

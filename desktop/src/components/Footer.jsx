@@ -1,6 +1,7 @@
 import React from 'react'
 import { Globe, Mail, Link2, Share2 } from 'lucide-react'
 import './Footer.css'
+import logoHead from '../assets/logo-head-white.png'
 
 export default function Footer() {
   return (
@@ -8,13 +9,7 @@ export default function Footer() {
       <div className="container footer__inner">
         <div className="footer__brand">
           <div className="footer__logo">
-            <svg width="24" height="24" viewBox="0 0 30 30" fill="none">
-              <rect width="30" height="30" rx="6" fill="#1E3A5F"/>
-              <rect x="8" y="8" width="6" height="6" rx="2" fill="white"/>
-              <rect x="16" y="8" width="6" height="6" rx="2" fill="white" opacity=".45"/>
-              <rect x="8" y="16" width="6" height="6" rx="2" fill="white" opacity=".45"/>
-              <rect x="16" y="16" width="6" height="6" rx="2" fill="white"/>
-            </svg>
+            <img src={logoHead} alt="" aria-hidden="true" style={{ height: 28, width: 'auto', display: 'block' }} />
             Behavency
           </div>
           <p className="footer__tagline">

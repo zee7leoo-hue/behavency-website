@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import logoHead from './assets/logo-head.png'
 
 const LINKS = [
   { href: '#how', label: 'How It Works' },
@@ -12,9 +13,7 @@ export default function Nav() {
   return (
     <header className={`nav ${open ? 'is-open' : ''}`}>
       <a className="nav-logo" href="#top" aria-label="Behavency" onClick={() => setOpen(false)}>
-        <span className="nav-logo-mark" aria-hidden="true">
-          <svg viewBox="0 0 12 12"><circle cx="3.2" cy="3.2" r="1.7" /><circle cx="8.8" cy="3.2" r="1.7" /><circle cx="3.2" cy="8.8" r="1.7" /><circle cx="8.8" cy="8.8" r="1.7" /></svg>
-        </span>
+        <img className="nav-logo-mark" src={logoHead} alt="" aria-hidden="true" />
         <span className="nav-logo-word">Behavency</span>
       </a>
       <button type="button" className="nav-burger" aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} onClick={() => setOpen((o) => !o)}>
