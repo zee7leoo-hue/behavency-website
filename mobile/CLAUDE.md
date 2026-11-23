@@ -28,3 +28,5 @@ the link's files would undo them), and tell the user they were kept:
    its submit and posts it as the Netlify "contact" form (the pop-up's `org` field is sent as `organization`). Keep it,
    and keep the hidden `<form name="contact">` in `index.html`. If a new link changes the pop-up's form (class
    `cm-form`, field names, `.cm-body`/`.cm-send`), update `src/netlifyContact.js` to match.
+5. **The demo pop-up is full screen on the phone**: the `.cm-ov` / `.cm` / `.cm-x` rules at the end of
+   `src/styles.css` (white, no rounded card, close button fixed top right, slides up).
