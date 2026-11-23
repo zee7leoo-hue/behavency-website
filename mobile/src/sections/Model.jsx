@@ -26,7 +26,7 @@ export default function Model({ single = false }) {
       </div>
 
       <h2 className="bm-title rv" style={{ '--i': 1 }}>
-        One framework. <em>Different levels of the organization.</em>
+        One framework. <em>Different levels of the organisation.</em>
       </h2>
 
       <p className="bm-text rv" style={{ '--i': 2 }}>
@@ -72,8 +72,8 @@ export default function Model({ single = false }) {
 
       <div className="bm-areas">
         <h2 className="bm-areas-title rv" style={{ '--i': 0 }}>The six areas of effectiveness</h2>
-        <p className="bm-areas-sub rv" style={{ '--i': 1 }}>Explore the behavioural areas of effectiveness across three organizational levels.</p>
-        <div className="bm-tabs rv" style={{ '--i': 2, '--lc': level.color }} role="tablist" aria-label="Organizational level">
+        <p className="bm-areas-sub rv" style={{ '--i': 1 }}>Explore the behavioural areas of effectiveness across three organisational levels.</p>
+        <div className="bm-tabs rv" style={{ '--i': 2, '--lc': level.color }} role="tablist" aria-label="Organisational level">
           {LEVELS.map((l, i) => (
             <button key={l.id} type="button" role="tab" aria-selected={lv === i} className={`bm-tab ${lv === i ? 'is-on' : ''}`} style={{ '--tc': l.color }} onClick={() => setLv(i)}>{l.label}</button>
           ))}

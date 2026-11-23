@@ -17,7 +17,7 @@ export default function Results() {
     <section className="rs" id="results">
       <div className="rs-head">
         <div className="rs-eyebrow"><span className="rs-dash" aria-hidden="true" /><span>Why these areas matter</span></div>
-        <h2 className="rs-title">When these areas improve, <em>results follow.</em></h2>
+        <h2 className="rs-title">Research links these areas to <em>business results.</em></h2>
         <p className="rs-lead">Each area in our model is linked to results a business can see: performance, productivity and profit.</p>
       </div>
 

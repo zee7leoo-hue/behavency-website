@@ -21,7 +21,6 @@ const PlayBox = (p) => (<svg viewBox="0 0 24 24" {...sv} {...p}><rect x="2.5" y=
 const Globe = (p) => (<svg viewBox="0 0 24 24" {...sv} {...p}><circle cx="12" cy="12" r="9.5" /><path d="M2.5 12h19M12 2.5c2.6 2.6 3.9 5.8 3.9 9.5S14.6 18.9 12 21.5c-2.6-2.6-3.9-5.8-3.9-9.5S9.4 5.1 12 2.5z" /></svg>)
 const Calendar = (p) => (<svg viewBox="0 0 24 24" {...sv} {...p}><rect x="3" y="4.5" width="18" height="16.5" rx="2.6" /><path d="M3 9.5h18M8 2.5v4M16 2.5v4M7.5 13.5h.01M12 13.5h.01M16.5 13.5h.01M7.5 17h.01M12 17h.01M16.5 17h.01" /></svg>)
 const Pin = (p) => (<svg viewBox="0 0 24 24" {...sv} {...p}><path d="M12 21.5c-4-4.4-6.6-7.8-6.6-11.2a6.6 6.6 0 0 1 13.2 0c0 3.4-2.6 6.8-6.6 11.2z" /><circle cx="12" cy="10.2" r="2.5" /></svg>)
-const Bars = (p) => (<svg viewBox="0 0 24 24" {...sv} {...p}><rect x="2.8" y="12" width="4.4" height="8" rx="1.2" /><rect x="9.8" y="7" width="4.4" height="13" rx="1.2" /><rect x="16.8" y="2.8" width="4.4" height="17.2" rx="1.2" /></svg>)
 
 const CARDS = [
   { key: 'e', bg: elearningBg, Icon: Laptop, title: 'E-learning', desc: 'Flexible and self-paced, so teams can learn anytime, anywhere.',
@@ -31,7 +30,7 @@ const CARDS = [
   { key: 'l', bg: liveBg, Icon: Users, title: 'Live online', desc: 'Interactive, expert-led sessions with your team, anywhere.',
     feats: [{ Icon: Globe, t: ['Multiple', 'languages'] }, { Icon: Calendar, t: ['Flexible', 'scheduling'] }, { Icon: Users, t: ['Teams of', '12–25'] }] },
   { key: 'b', bg: blendedBg, Icon: Layers, title: 'Blended', desc: 'A powerful mix of digital learning and live sessions for lasting impact.', blend: true,
-    feats: [{ Icon: Laptop, t: ['Digital', 'learning'] }, { Icon: Users, t: ['Expert-led', 'sessions'] }, { Icon: Bars, t: ['Higher', 'real-world', 'impact'] }] },
+    feats: [{ Icon: Laptop, t: ['Digital', 'learning'] }, { Icon: Users, t: ['Expert-led', 'sessions'] }] },
 ]
 
 const COLS = [193, 495, 795]   // centres of the three feature columns
@@ -59,9 +58,9 @@ function Card({ c }) {
         </>
       )}
 
-      {[341, 649].map((x) => <i className="jc-line" key={x} style={{ left: x, top: 1005, height: 235 }} />)}
-      {c.feats.map((f, i) => (
-        <div className="jc-f" key={f.t.join('')} style={{ left: COLS[i] - 150, top: 1015 }}>
+      {(c.feats.length === 2 ? [495] : [341, 649]).map((x) => <i className="jc-line" key={x} style={{ left: x, top: 1005, height: 235 }} />)}
+      {c.feats.map((f, i, all) => (
+        <div className="jc-f" key={f.t.join('')} style={{ left: (all.length === 2 ? [341, 649] : COLS)[i] - 150, top: 1015 }}>
           <f.Icon className="jc-fi" />
           <p>{f.t.map((l, k) => <React.Fragment key={l}>{l}{k < f.t.length - 1 && <br />}</React.Fragment>)}</p>
         </div>
@@ -207,7 +206,7 @@ export default function Journey() {
         <div className="jn-years rv" style={{ '--i': 3 }}>
           <Laurel />
           <i className="jn-vl" aria-hidden="true" />
-          <p><b>20+ years</b> developing teams and leaders across Europe.</p>
+          <p><b>19 years</b> developing managers and teams across Europe.</p>
         </div>
       </div>
 

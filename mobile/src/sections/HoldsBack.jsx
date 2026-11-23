@@ -20,7 +20,7 @@ const I = {
 }
 
 const HANDS = [['target', 'Setting priorities'], ['check', 'Following through'], ['chat', 'A team that speaks up']]
-const BACK = [['layers', 'Too many priorities', 28], ['hourglass', 'Slow approvals', 22], ['lock', 'Decided without them', 17]]
+const BACK = [['layers', 'Too many priorities', 28], ['hourglass', 'Slow approvals', 22], ['lock', 'Decisions made without them', 17]]
 const OF = 42
 
 export default function HoldsBack({ variant = 'split' }) {
@@ -71,7 +71,7 @@ export default function HoldsBack({ variant = 'split' }) {
       <div className="hb-flow" ref={flow}>
         <div className="hb-start">
           <span className="hb-hex">{I.list}</span>
-          <span className="hb-start-t"><b>Your managers answer</b><small>with their teams and the organisation</small></span>
+          <span className="hb-start-t"><b>Your managers answer</b><small>about their team and the organisation</small></span>
           <span className="hb-faces">
             <span className="hb-face f1">AK</span><span className="hb-face f2">MP</span><span className="hb-face f3">LS</span><span className="hb-face f4">DT</span><span className="hb-face more">+38</span>
           </span>
@@ -87,13 +87,13 @@ export default function HoldsBack({ variant = 'split' }) {
               <div className="hb-chain">
                 <span className="hb-flag hb-flag--blue">In their hands</span>
                 {HANDS.map(([ic, t]) => <div key={t} className="hb-item"><span className="hb-ico hb-ico--blue">{I[ic]}</span>{t}</div>)}
-                <div className="hb-result"><div className="hb-card"><span className="hb-ico hb-ico--blue">{I.sprout}</span><span>Targeted development<small>in Build</small></span></div></div>
+                <div className="hb-result"><div className="hb-card"><span className="hb-ico hb-ico--blue">{I.sprout}</span><span>Worked on in their training<small>the next stage, Build</small></span></div></div>
               </div>
             </div>
           )}
           <div className="hb-branch">
             <div className="hb-chain">
-              <span className="hb-flag hb-flag--amber">What holds them back{focus && <em>· example</em>}</span>
+              <span className="hb-flag hb-flag--amber">{focus ? 'What holds them back ' : 'What holds them back'}{focus && <em>· example</em>}</span>
               {BACK.map(([ic, t, n]) => (
                 <div key={t} className="hb-item">
                   <span className="hb-ico hb-ico--amber">{I[ic]}</span>{t}
@@ -101,12 +101,12 @@ export default function HoldsBack({ variant = 'split' }) {
                   {focus && <span className="hb-bar" style={{ '--p': `${((n / OF) * 100).toFixed(1)}%` }} aria-hidden="true"><i /></span>}
                 </div>
               ))}
-              <div className="hb-result"><div className="hb-card"><span className="hb-ico hb-ico--amber">{I.file}</span><span>A report for leadership and HR<small>what most managers run into</small></span></div></div>
+              <div className="hb-result"><div className="hb-card"><span className="hb-ico hb-ico--amber">{I.file}</span><span>A barriers report for leadership<small>which obstacles hold back the most managers</small></span></div></div>
             </div>
           </div>
         </div>
       </div>
-      {focus && <p className="hb-note"><span className="hb-ico hb-ico--blue">{I.sprout}</span><span>What is in their hands feeds targeted development in <b>Build</b>.</span></p>}
+      {focus && <p className="hb-note"><span className="hb-ico hb-ico--blue">{I.sprout}</span><span>{'What is in their hands is worked on in their training. What holds them back goes to leadership in a report.'}</span></p>}
     </section>
   )
 }

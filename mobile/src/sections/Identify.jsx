@@ -29,10 +29,10 @@ const SOURCES = [
   {
     num: '03', name: 'Workplace Effectiveness Survey', tone: 'teal', icon: <IconBars />,
     modal: {
-      intro: 'This survey explores how the broader organization enables or hinders the manager\'s effectiveness. It captures the experiences of people who work across the organization, highlighting structural, cultural, and contextual factors that influence performance.',
-      examines: 'How the organization\'s systems, processes, culture and environment help or block the manager from being effective.',
+      intro: 'This survey explores how the broader organisation enables or hinders the manager\'s effectiveness. It captures the experiences of people who work across the organisation, highlighting structural, cultural, and contextual factors that influence performance.',
+      examines: 'How the organisation\'s systems, processes, culture and environment help or block the manager from being effective.',
       reveals: 'Patterns and barriers outside the manager\'s direct control, providing essential context for development and a more complete picture of their effectiveness.',
-      matters: 'Managerial effectiveness is shaped not only by individual behaviour, but also by the environment. Understanding organizational enablers and blockers leads to more relevant development and better, more sustainable results.',
+      matters: 'Managerial effectiveness is shaped not only by individual behaviour, but also by the environment. Understanding organisational enablers and blockers leads to more relevant development and better, more sustainable results.',
     },
   },
   {
@@ -41,14 +41,14 @@ const SOURCES = [
       intro: 'A psychometric assessment that examines how a manager responds when circumstances change, under pressure, or when facing ambiguity. The results are not scored high or low — they reveal a pattern.',
       examines: 'The individual\'s characteristic response to change: what they default to, what they resist, and how their reactions affect the people around them.',
       reveals: 'Behavioural tendencies that may be invisible in stable conditions but become significant drivers of team experience during periods of uncertainty or transformation.',
-      matters: 'Organizations are rarely stable. A manager\'s resilience profile tells you how they will show up when it matters most — and where they may need support to lead effectively through change.',
+      matters: 'Organisations are rarely stable. A manager\'s resilience profile tells you how they will show up when it matters most — and where they may need support to lead effectively through change.',
     },
   },
   {
     num: '05', name: 'Structured Interview', tone: 'lilac', icon: <IconChat />,
     modal: {
-      intro: 'A one-to-one conversation led by a Behavency assessor or a trained HR professional, using the assessment data as its foundation. It gives the manager space to contextualize what the data shows and add nuance that numbers alone cannot capture.',
-      examines: 'The manager\'s own interpretation of their assessment results, their development history, and the organizational context in which they operate.',
+      intro: 'A one-to-one conversation led by a Behavency assessor or a trained HR professional, using the assessment data as its foundation. It gives the manager space to contextualise what the data shows and add nuance that numbers alone cannot capture.',
+      examines: 'The manager\'s own interpretation of their assessment results, their development history, and the organisational context in which they operate.',
       reveals: 'Qualitative depth that enriches quantitative data — uncovering intent, circumstance, and readiness for development that would otherwise remain hidden.',
       matters: 'Data without dialogue is incomplete. The structured interview ensures that the assessment leads to a development conversation, not just a report.',
     },
@@ -75,15 +75,15 @@ export default function Identify() {
 
   return (
     <section ref={ref} className={`id ${seen ? 'is-in' : ''}`} id="identify">
-      <h2 className="id-title rv" style={{ '--i': 0 }}>We start by <em>listening</em> — to managers, their teams, and to the organization around them.</h2>
+      <h2 className="id-title rv" style={{ '--i': 0 }}>We start by <em>listening</em> — to managers, their teams, and to the organisation around them.</h2>
 
       <p className="id-stage rv" style={{ '--i': 1 }}><b>01</b><i aria-hidden="true">—</i><strong>Identify</strong><u aria-hidden="true" /><span>Reveal the strengths and gaps</span></p>
-      <p className="id-text rv" style={{ '--i': 2 }}>Most assessments rely on self-perception. We combine five sources of evidence to build a more complete picture of managerial effectiveness.</p>
+      <p className="id-text rv" style={{ '--i': 2 }}>Most assessments rely on self-perception. We combine up to five sources of evidence to build a more complete picture of managerial effectiveness.</p>
 
       <div className="id-stats rv" style={{ '--i': 3 }}>
-        <div className="id-stat"><b>{sources}</b><div><strong>Sources of evidence</strong><span>per manager</span></div></div>
+        <div className="id-stat"><b className="id-b5"><small className="id-upto">Up to</small>{sources}</b><div><strong>Sources of evidence</strong><span>per manager</span></div></div>
         <i aria-hidden="true" />
-        <div className="id-stat id-stat--b"><b>{areas}</b><div><strong>Behavioural areas</strong><span>explored through<br />MBP, 360° and interviews</span></div></div>
+        <div className="id-stat id-stat--b"><b>{areas}</b><div><strong>Behavioural areas</strong><span>explored through the Managerial Profile, 360° and interviews</span></div></div>
       </div>
 
       <h3 className="id-explore rv" style={{ '--i': 4 }}>Explore the five sources</h3>

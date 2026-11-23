@@ -32,7 +32,7 @@ export default function Engage() {
         <p className="eg-sub eg-lead rv" style={{ '--i': 2 }}>Through team challenges and decisions, participants experience the same behavioural areas they assessed, seeing how they shape the way people work together.</p>
         <p className="eg-sub rv" style={{ '--i': 2 }}>A score can be read and forgotten.<br />An experience stays.</p>
 
-        <svg className="eg-art rv" style={{ '--i': 3 }} viewBox="0 0 467 467" role="img" aria-label="An assessment result card (Communication 82%, Cross-team Collaboration 46%) leading to a Team Game card with a 45 minute timer.">
+        <svg className="eg-art rv" style={{ '--i': 3 }} viewBox="0 0 467 467" role="img" aria-label="An assessment result card (Clarity & Alignment 82%, Collaboration & Influence 46%) leading to a Team Game card with a 45 minute timer.">
           <defs>
             <filter id="eg-sh" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="11" stdDeviation="11" floodColor="#46508f" floodOpacity="0.17" /></filter>
             <linearGradient id="eg-panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#5a4fc2" /><stop offset=".6" stopColor="#6552d6" /><stop offset="1" stopColor="#7a5df0" /></linearGradient>
@@ -56,7 +56,7 @@ export default function Engage() {
 
               {/* Communication 82% */}
               <rect x="-30" y="-48" width="378" height="153" rx="28" fill="#e9f8ea" />
-              <text x="0" y="0" fontSize="28" fontWeight="700" fill={NAVY} letterSpacing="-0.4">Communication</text>
+              <text x="0" y="0" fontSize="24" fontWeight="700" fill={NAVY} letterSpacing="-0.4">Clarity &amp; Alignment</text>
               <text x="-2" y="53" fontSize="52" fontWeight="800" fill={NAVY} letterSpacing="-1.4">82%</text>
               <circle cx="301" cy="8" r="18" fill="#17b33c" />
               <path d="M292 8.5l7 7 12-13.5" fill="none" stroke="#fff" strokeWidth="4.4" strokeLinecap="round" strokeLinejoin="round" />
@@ -65,8 +65,8 @@ export default function Engage() {
 
               {/* Cross-team Collaboration 46% */}
               <rect x="-27" y="116" width="360" height="206" rx="28" fill="#fdeeed" />
-              <text x="1" y="165" fontSize="23.6" fontWeight="700" fill={NAVY} letterSpacing="-0.3">Cross-team</text>
-              <text x="1" y="199" fontSize="23.6" fontWeight="700" fill={NAVY} letterSpacing="-0.3">Collaboration</text>
+              <text x="1" y="165" fontSize="23.6" fontWeight="700" fill={NAVY} letterSpacing="-0.3">Collaboration</text>
+              <text x="1" y="199" fontSize="23.6" fontWeight="700" fill={NAVY} letterSpacing="-0.3">&amp; Influence</text>
               <text x="0" y="247" fontSize="52" fontWeight="800" fill={NAVY} letterSpacing="-1.4">46%</text>
               <circle cx="248" cy="184" r="18" fill="#ef4444" />
               <path d="M248 175v11" stroke="#fff" strokeWidth="4.4" strokeLinecap="round" /><circle cx="248" cy="193.5" r="2.6" fill="#fff" />

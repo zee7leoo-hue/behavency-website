@@ -41,7 +41,7 @@ const LOGOS = [
 export default function Clients() {
   return (
     <section className="bh-clients" aria-label="Clients">
-      <p className="bh-clients__line"><span>A product of <b>OGI Europe</b></span><span className="bh-clients__sep" aria-hidden="true" /><span>Trusted by teams at</span></p>
+      <p className="bh-clients__line"><span>Built by <b>OGI Europe</b>, trusted by teams at</span></p>
       <div className="bh-clients__marquee">
         <div className="bh-clients__track">
           <ul className="bh-clients__group">

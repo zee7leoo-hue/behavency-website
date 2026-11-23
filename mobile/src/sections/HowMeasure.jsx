@@ -14,11 +14,11 @@ const Layers = () => (<svg viewBox="0 0 32 32" {...sv}><path d="M16 4 4 10.2 16 
 const CARDS = [
   { n: '01', tag: 'During development', cap: false, q: 'Was it useful?', d: 'After each module, participants rate how relevant and practical it was for their work.', Icon: Bubble, label: ['Short participant feedback'] },
   { n: '02', tag: 'At the end of training', cap: true, q: 'Is it being used?', d: 'Participants check in on their plan: which actions they have tried at work, and what got in the way.', Icon: Clipboard, label: ['Development', 'plan check-in'] },
-  { n: '03', tag: '3 months after training', cap: true, q: 'Has behaviour changed?', d: 'The same questionnaires, the same people. Results are compared with the starting point, area by area, from three angles:',
+  { n: '03', tag: '3 months after training', cap: true, q: 'Has behaviour changed?', d: 'Results are compared with the starting point, area by area, from three angles:',
     rows: [
       { t: 'The manager’s view', s: 'How they now see their own behaviour.', chip: ['Managerial', 'Profile'], tone: 'blue', Icon: User },
       { t: 'The team’s view', s: 'Whether colleagues see a difference day to day.', chip: ['360°', 'Feedback'], tone: 'violet', Icon: Users },
-      { t: 'The working conditions', s: 'Whether the barriers that were raised have eased.', chip: ['Organisational', 'Barriers'], tone: 'green', Icon: Layers },
+      { t: 'The working conditions', s: 'Whether the barriers that were raised have eased.', chip: ['Workplace Effectiveness', 'Survey'], tone: 'green', Icon: Layers },
     ] },
 ]
 
@@ -123,7 +123,7 @@ export default function HowMeasure() {
       <div className="hm-in">
         <div className="hm-eyebrow rv" style={{ '--i': 0 }}><i aria-hidden="true" /><span>HOW WE MEASURE</span></div>
         <h2 className="hm-title rv" style={{ '--i': 1 }}>We measure whether <span>development actually happens.</span></h2>
-        <p className="hm-text rv" style={{ '--i': 2 }}>Not just whether people completed the training — but whether their behaviour changed. We check along the way, and then ask the same people the same questions again.</p>
+        <p className="hm-text rv" style={{ '--i': 2 }}>Not just whether people finished the training, but whether their behaviour changed. We check along the way, and again three months later.</p>
       </div>
 
       <div className="hm-rail rv" style={{ '--i': 3 }} ref={rail}>

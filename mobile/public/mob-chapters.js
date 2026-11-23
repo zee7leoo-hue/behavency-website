@@ -9,13 +9,13 @@
   const STAGES = [
     { sel: '#identify', name: 'Identify', promise: 'Reveal strengths and gaps', color: '#2f6fdb' },
     { sel: '#engage', name: 'Engage', promise: 'See how the team really works together', color: '#7a4bd6' },
-    { sel: '#build', name: 'Build', promise: 'Build the right capabilities', color: '#e0761c' },
+    { sel: '#build', name: 'Build', promise: 'Develop the right capabilities', color: '#e0761c' },
     { sel: '#measure', name: 'Measure', promise: 'Prove the impact', color: '#14a07c' },
   ];
   const VERS = { 1: 'Short card, plays once', 2: 'Fills as you scroll', 3: 'Still half circle', 4: 'Title slides up', 5: 'Line above, left-aligned', 6: 'Journey dots' };
   const m = location.hash.match(/p=(\d)/);
   const FINAL = !!window.BHV_FINAL; // the chosen design: option 1, one tinted background, no switch bar
-  const TINT = '#f7f5fc';
+  const TINT = '#fbfaff';
   const V = FINAL ? '1' : m && VERS[m[1]] ? m[1] : '1';
   const FILL = ['1', '2', '3'].includes(V);
 
@@ -80,7 +80,7 @@
     const n = document.createElement('section');
     n.className = 'bpc bpc' + V + (FILL ? ' fill' : ''); n.style.setProperty('--k', s.color); n.style.background = bg;
     n.setAttribute('aria-label', `Stage ${i + 1} of 4: ${s.name}`);
-    const eb = `<div class="bpc-eb bpc-fade"><span class="bpc-num">0${i + 1} · Stage ${i + 1} of 4</span><i class="bpc-dot"></i><span class="bpc-name">${s.name}</span></div>`;
+    const eb = `<div class="bpc-eb bpc-fade"><span class="bpc-num">Stage ${i + 1} of 4</span><i class="bpc-dot"></i><span class="bpc-name">${s.name}</span></div>`;
     const stmt = `<div class="bpc-stmt bpc-fade d2">${words.map((w, j) => `<span class="${j === 0 ? 'k' : ''}">${w}</span>`).join(' ')}.</div>`;
     let inner = `<div class="bpc-in">${V === '5' ? '<div class="bpc-line"></div>' : ''}${V === '6' ? DOTS(i) : ''}${eb}${stmt}${V === '1' || V === '2' ? SARC : ''}</div>`;
     if (V === '2') inner = `<div class="bpc-stick">${inner}</div>`;

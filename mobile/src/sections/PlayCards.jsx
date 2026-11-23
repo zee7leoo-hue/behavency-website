@@ -64,9 +64,9 @@ export function GameCard() {
 /* ───────── card 3: the insight report ───────── */
 export function InsightCard() {
   const rows = [
-    { l: 'Focus & prioritisation', v: 78, c: 'g', Icon: Target },
-    { l: 'Trust', v: 64, c: 'o', Icon: Users },
-    { l: 'Collaboration', v: 42, c: 'r', Icon: Net },
+    { l: 'Focus & Prioritization', v: 78, c: 'g', Icon: Target },
+    { l: 'Trust & Inclusion', v: 64, c: 'o', Icon: Users },
+    { l: 'Collaboration & Influence', v: 42, c: 'r', Icon: Net },
   ]
   return (
     <div className="nc nc--rep">
@@ -77,7 +77,7 @@ export function InsightCard() {
       <div className="nc-rep">
         <div className="nc-rep-top"><span><Bars />Behavency</span><em><Download />Download PDF</em></div>
         <div className="nc-sheet">
-          <div className="nc-sheet-h"><span className="nc-ti"><Bars /></span><div><strong>Team Report</strong><small>5 teams · 60 participants</small></div></div>
+          <div className="nc-sheet-h"><span className="nc-ti"><Bars /></span><div><strong>Team Report</strong><small>Team Alpha · 12 participants</small></div></div>
           <ul>
             {rows.map(({ l, v, c, Icon }) => (
               <li key={l}>

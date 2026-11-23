@@ -2,7 +2,7 @@
 // Remove this file and its <script> tag to take both out.
 (function () {
   const CSS = `
-  .pab { position: fixed; inset: 0; z-index: 9990; background: #f7f5fc; overflow-y: auto; -webkit-overflow-scrolling: touch;
+  .pab { position: fixed; inset: 0; z-index: 9990; background: #fbfaff; overflow-y: auto; -webkit-overflow-scrolling: touch;
     transform: translateY(16px); opacity: 0; visibility: hidden; transition: opacity .3s, transform .35s cubic-bezier(.22,1,.36,1), visibility 0s .35s; }
   .pab.open { transform: none; opacity: 1; visibility: visible; transition: opacity .3s, transform .35s cubic-bezier(.22,1,.36,1); }
   html.pab-lock, html.pab-lock body { overflow: hidden !important; }
@@ -13,25 +13,25 @@
   .pab-back { display: inline-flex; align-items: center; gap: 8px; border: 0; background: none; padding: 8px; font: 600 14px/1 Inter, Arial, sans-serif; color: #3a4364; cursor: pointer; }
   .pab-back svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
   .pab-in { max-width: 520px; margin: 0 auto; padding: 36px 22px 72px; font-family: Inter, Arial, sans-serif; color: #0f1b3d; text-align: left; }
-  .pab-pill { display: table; font: 600 12px/1 Inter, sans-serif; color: #5a17e6; background: #efe8fe; border-radius: 999px; padding: 7px 12px; }
+  .pab-pill { display: table; font: 600 12px/1 Inter, sans-serif; color: #137a6c; background: #e3f4f0; border-radius: 999px; padding: 7px 12px; }
   .pab-ttl { margin-top: 16px !important; font: 700 36px/39px "Source Serif 4", Georgia, serif; letter-spacing: -.03em; color: #0b1138; font-variation-settings: "opsz" 30; text-wrap: balance; }
-  .pab-ttl em { display: block; font-style: italic; font-weight: 500; letter-spacing: -.02em; color: #5a17e6; }
+  .pab-ttl em { display: block; font-style: italic; font-weight: 500; letter-spacing: -.02em; color: #1a8a7a; }
   .pab-lead { margin-top: 16px !important; font: 400 15.6px/22.6px Inter, sans-serif; color: #1c2540; }
   .pab-story { margin-top: 34px !important; position: relative; }
-  .pab-story::before { content: ""; position: absolute; left: 7px; top: 10px; bottom: 18px; width: 2px; border-radius: 2px; background: #e6e1f4; }
+  .pab-story::before { content: ""; position: absolute; left: 7px; top: 10px; bottom: 18px; width: 2px; border-radius: 2px; background: #e3e6ef; }
   .pab-sy { position: relative; padding: 0 0 26px 34px; }
   .pab-sy:last-child { padding-bottom: 0; }
-  .pab-sy::before { content: ""; position: absolute; left: 0; top: 5px; width: 16px; height: 16px; border-radius: 50%; background: #fff; box-shadow: inset 0 0 0 2px #5a17e6; }
-  .pab-sy:last-child::before { background: #5a17e6; box-shadow: 0 0 0 5px rgba(90,23,230,.14); }
+  .pab-sy::before { content: ""; position: absolute; left: 0; top: 5px; width: 16px; height: 16px; border-radius: 50%; background: #fff; box-shadow: inset 0 0 0 2px #1f2a5a; }
+  .pab-sy:last-child::before { background: #1f2a5a; box-shadow: 0 0 0 5px rgba(31,42,90,.14); }
   .pab-ago { display: inline-block; font: 600 11px/1 Inter, sans-serif; letter-spacing: .12em; text-transform: uppercase; color: #8a83a8; margin-bottom: 6px; }
-  .pab-sy b { display: block; font: 700 28px/1 "Source Serif 4", Georgia, serif; letter-spacing: -.02em; color: #5a17e6; }
+  .pab-sy b { display: block; font: 700 28px/1 "Source Serif 4", Georgia, serif; letter-spacing: -.02em; color: #1f2a5a; }
   .pab-sy h3 { margin-top: 6px !important; font: 600 16.4px/1.3 Inter, sans-serif; letter-spacing: -.012em; color: #0f1b3d; }
   .pab-sy p { margin-top: 4px !important; font: 400 14.6px/21px Inter, sans-serif; color: #4a5170; }
   .pab-team { margin-top: 40px; padding-top: 30px; border-top: 1px solid #eceaf3; }
   .pab-eb { display: flex; align-items: center; gap: 12px; font: 600 11.6px/1.2 Inter, sans-serif; letter-spacing: .16em; text-transform: uppercase; color: #3a4364; }
   .pab-eb::before { content: ""; width: 24px; height: 1.5px; background: currentColor; opacity: .5; }
   .pab-team h2 { margin-top: 14px !important; font: 700 30px/33px "Source Serif 4", Georgia, serif; letter-spacing: -.03em; color: #0b1138; font-variation-settings: "opsz" 30; }
-  .pab-team h2 em { font-style: italic; font-weight: 500; color: #5a17e6; }
+  .pab-team h2 em { font-style: italic; font-weight: 500; color: #1a8a7a; }
   .pab-team .pab-lead { font-size: 15px; line-height: 22px; }
   .pab-stack { display: grid; gap: 4px; margin-top: 24px; }
   .pab-pp { display: flex; align-items: center; gap: 18px; padding: 10px 0; }
@@ -39,14 +39,29 @@
   .pab-pp img { width: 132px; height: 132px; border-radius: 50%; object-fit: cover; flex: none; background: #f4f2fa; }
   .pab-pp b { display: block; font: 700 20px/1.15 "Source Serif 4", Georgia, serif; letter-spacing: -.02em; color: #0b1138; }
   .pab-pp span { display: block; margin-top: 5px; font: 500 13.8px/1.3 Inter, sans-serif; color: #5a6178; }
+  .pab-end { margin-top: 44px; padding: 28px 22px 26px; background: #fff; border-radius: 22px; box-shadow: 0 0 0 1px rgba(20,35,75,.06), 0 20px 40px -30px rgba(30,25,80,.3); text-align: center; }
+  .pab-end h2 { font: 700 26px/30px "Source Serif 4", Georgia, serif; letter-spacing: -.025em; color: #0b1138; font-variation-settings: "opsz" 30; text-wrap: balance; }
+  .pab-end h2 em { font-style: italic; font-weight: 500; color: #1a8a7a; }
+  .pab-cta { display: block; width: 100%; margin-top: 20px; border: 0; border-radius: 12px; padding: 15px; background: #0f1b3d; color: #fff; font: 600 15.5px/1 Inter, Arial, sans-serif; cursor: pointer; }
+  .pab-in { padding-bottom: 48px; }
   .pab-rise { opacity: 0; transform: translateY(12px); transition: opacity .7s, transform .8s cubic-bezier(.22,1,.36,1); }
   .pab-rise.shown { opacity: 1; transform: none; }
   @media (prefers-reduced-motion: reduce) { .pab, .pab-rise { transition: none; opacity: 1; transform: none; } .pab:not(.open) { opacity: 0; } }
   .nav-menu a.pab-login { font-weight: 600; }
+  /* the menu panel is solid, and only our items show */
+  .nav-menu { background: #fbfaff !important; box-shadow: 0 18px 30px -18px rgba(20,25,70,.25); }
+  .nav-menu > a:not(.pab-item):not(.nav-cta) { display: none !important; }
+  .nav-menu a.pab-journey { display: flex !important; align-items: center; justify-content: space-between; }
+  .nav-menu a.pab-journey::after { content: ''; width: 8px; height: 8px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translateY(-3px); transition: transform .25s; }
+  .nav-menu a.pab-journey.open::after { transform: rotate(-135deg) translateY(-3px); }
+  .pab-sub { display: none; padding: 4px 0 8px 12px; border-bottom: 1px solid #eceef5; }
+  .pab-journey.open + .pab-sub { display: block; }
+  .nav-menu .pab-sub a.pab-stage { border-bottom: 0 !important; padding: 9px 0 !important; display: flex !important; align-items: center; gap: 12px; font-size: 15px; }
+  .pab-stage i { font: 700 12px/1 Inter, sans-serif; font-style: normal; letter-spacing: .06em; }
   `;
   const STORY = [
     ['', '2007', 'OGI Europe is founded', 'We start training managers and their teams: how they lead, decide and work together.'],
-    ['10 years later', '2017', 'Across Europe', 'Our trainers work with managers in more than 30 countries, for companies such as Nestlé, Bayer and Heineken.'],
+    ['10 years later', '2017', 'Across Europe and Central Asia', 'Our trainers work with managers in more than 30 countries, for companies such as Nestlé, Bayer and Heineken.'],
     ['5 years later', '2022', 'The realisation', 'Training alone doesn’t change behaviour. People leave inspired, and by Monday the old habits are back. And nothing connects the assessment, the workshop and what happens next.'],
     ['1 year later', '2023', 'Work on Behavency begins', 'We bring it all into one journey: the assessments, the team game, our trainers and programmes.'],
     ['3 years later', '2026', 'Behavency launches', 'Identify, Engage, Build and Measure, in one place.'],
@@ -65,14 +80,17 @@
         <p class="pab-lead pab-rise">Nineteen years in training rooms, one clear method, and a platform that holds it together.</p>
         <div class="pab-stack">${TEAM.map(([f, n, r]) => `<div class="pab-pp pab-rise"><img src="team/${f}.jpg" alt="${n}" width="132" height="132" loading="lazy"><div><b>${n}</b><span>${r}</span></div></div>`).join('')}</div>
       </div>
+      <div class="pab-end pab-rise"><h2>Want to see it <em>for your managers?</em></h2><button type="button" class="pab-cta" data-cm-open>Request a demo</button></div>
     </main>
   </div>`;
   let pab = null;
   const open = () => {
+    if (window.bhvCloseRecruit) window.bhvCloseRecruit();
     pab.classList.add('open'); document.documentElement.classList.add('pab-lock'); pab.scrollTop = 0;
     if (location.hash !== '#about') history.pushState({ about: 1 }, '', '#about');
   };
   const close = () => { pab.classList.remove('open'); document.documentElement.classList.remove('pab-lock'); };
+  window.bhvCloseAbout = () => { if (pab && pab.classList.contains('open')) close(); };
   function mount() {
     const menu = document.querySelector('.nav-menu'); if (!menu || !document.body) return false;
     if (!pab) {
@@ -84,13 +102,24 @@
       pab.querySelectorAll('.pab-rise').forEach((el, i) => { el.style.transitionDelay = (i < 3 ? i * 90 : 0) + 'ms'; io.observe(el); });
       if (location.hash === '#about') open();
     }
-    // menu: About and Log in, before "Request a Demo" (React may redraw the menu, so this re-checks)
-    if (!menu.querySelector('.pab-about')) {
+    // menu: the same items as the desktop (The journey with its four stages, Programmes, Recruitment, Packages, About, Log in).
+    // The site's own old links are hidden. React may redraw the menu, so this re-checks.
+    if (!menu.querySelector('.pab-item')) {
       const cta = menu.querySelector('.nav-cta');
-      const a = document.createElement('a'); a.className = 'pab-about'; a.href = '#about'; a.textContent = 'About';
-      a.addEventListener('click', (e) => { e.preventDefault(); const bg = document.querySelector('.nav-burger[aria-expanded="true"]'); if (bg) bg.click(); open(); });
-      const l = document.createElement('a'); l.className = 'pab-login'; l.href = 'https://app.behavency.com/login'; l.textContent = 'Log in';
-      menu.insertBefore(a, cta); menu.insertBefore(l, cta);
+      const closeMenu = () => { const bg = document.querySelector('.nav-burger[aria-expanded="true"]'); if (bg) bg.click(); };
+      const goTo = (el) => { closeMenu(); if (el) setTimeout(() => scrollTo({ top: el.getBoundingClientRect().top + scrollY - 64, behavior: 'smooth' }), 120); };
+      const mk = (cls, text, onClick, href) => { const a = document.createElement('a'); a.className = 'pab-item ' + cls; a.textContent = text; a.href = href || '#'; if (onClick) a.addEventListener('click', (e) => { e.preventDefault(); onClick(); }); return a; };
+      const j = mk('pab-journey', 'The journey', null);
+      const sub = document.createElement('div'); sub.className = 'pab-sub';
+      ['Identify', 'Engage', 'Build', 'Measure'].forEach((n, i) => { const c = ['#2f6fdb', '#7a4bd6', '#e0761c', '#14a07c'][i]; const s2 = mk('pab-stage', '', () => goTo(document.querySelectorAll('.bpc')[i])); s2.innerHTML = '<i style="color:' + c + '">0' + (i + 1) + '</i>' + n; sub.appendChild(s2); });
+      j.addEventListener('click', (e) => { e.preventDefault(); j.classList.toggle('open'); });
+      const items = [j, sub,
+        mk('', 'Programmes', () => goTo(document.querySelector('.tm'))),
+        mk('', 'Recruitment', () => { closeMenu(); if (window.bhvOpenRecruit) window.bhvOpenRecruit(); }, '#recruitment'),
+        mk('', 'Packages', () => goTo(document.querySelector('#packages'))),
+        mk('pab-about', 'About', () => { closeMenu(); open(); }, '#about'),
+        mk('pab-login', 'Log in', null, 'https://app.behavency.com/login')];
+      items.forEach((it) => menu.insertBefore(it, cta));
     }
     return false;
   }

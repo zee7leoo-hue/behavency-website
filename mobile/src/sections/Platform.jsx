@@ -25,13 +25,13 @@ export default function Platform() {
         <span>THE PLATFORM</span><i aria-hidden="true" />
       </div>
       <h2 className="pf-title rv" style={{ '--i': 1 }}>From insight to action.<br /><em>All in one place.</em></h2>
-      <p className="pf-sub rv" style={{ '--i': 2 }}>See where the risk is, close the gaps that matter, and prove the change — on one connected platform.</p>
+      <p className="pf-sub rv" style={{ '--i': 2 }}>See where the risk is, close the gaps that matter, and prove the change, on one connected platform.</p>
 
       <div className="pf-card rv" style={{ '--i': 3 }}>
         <div className="pf-card-head">
           <div>
             <h3>Leadership Development Programme <IconChevronDown /></h3>
-            <p>35 managers · Jan – Dec 2026</p>
+            <p>Example · 35 managers</p>
           </div>
           <span className="pf-live"><i aria-hidden="true" />Live</span>
         </div>

@@ -44,7 +44,7 @@ export default function Build() {
     <section ref={ref} className={`bd ${seen ? 'is-in' : ''}`} id="build">
       <div className="bd-in">
         <h2 className="bd-title rv" style={{ '--i': 0 }}>Turn insights into <em>targeted development</em></h2>
-        <div className="bd-eyebrow rv" style={{ '--i': 1 }}><em>03</em><i aria-hidden="true" /><b>Build</b><u aria-hidden="true" /><span>Build the right capabilities</span></div>
+        <div className="bd-eyebrow rv" style={{ '--i': 1 }}><em>03</em><i aria-hidden="true" /><b>Build</b><u aria-hidden="true" /><span>Develop the right capabilities</span></div>
         <p className="bd-text rv" style={{ '--i': 2 }}>We match each manager’s priorities to programmes from our library, and every programme comes with a Masterplan to apply it at work.</p>
       </div>
 

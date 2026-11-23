@@ -45,6 +45,21 @@
   :root .hm-rail { transition: height .45s cubic-bezier(.22,1,.36,1); }
   
 
+  /* 23 Nov evening (R21): platform example text at least 11px; menu button and stage buttons easier to tap (same look) */
+  :root #platform .pf-card-head p, :root #platform .pf-kpi div span, :root #platform .pf-kpi div .pf-small, :root #platform .pf-kpi div .pf-kpi-dev, :root #platform .pf-who span, :root #platform .pf-chip { font-size: 11.6px !important; }
+  :root #platform .pf-who span { white-space: normal !important; }
+  :root #platform .pf-row.hn-row .pf-who span, :root #platform .pf-rows .pf-row:nth-child(3) .pf-who span { white-space: nowrap !important; letter-spacing: -.01em; }
+  :root #platform .pf-chip.pf-delta { padding: 0 8px !important; gap: 3px !important; }
+  :root .nav-burger { width: 46px !important; height: 46px !important; margin: -9px !important; }
+  :root .nav-burger span { left: 14.5px !important; }
+  :root .nav-burger span:first-child { top: 17px !important; }
+  :root .nav-burger span:nth-child(2) { top: 22px !important; }
+  :root .nav-burger span:nth-child(3) { top: 27px !important; }
+  :root .hr-tabs button { min-height: 41px; }
+  /* R20: Measure "3 months" in the Measure green; R25: "What holds them back · example" spacing */
+  :root .ms-step b { background: none !important; color: #14a07c !important; -webkit-text-fill-color: #14a07c !important; }
+  :root .hb-flag em { margin-left: 0 !important; }
+
   /* hero: emerald stage panel ~8% smaller, edges in line with the text above */
   :root .hr-panel { zoom: .92; width: 391px; margin: 32.6px auto 0 !important; }
   /* logo strip: even space above and below before the navy section */
@@ -92,7 +107,7 @@
   /* dashboard: no "Live" badge; "View all" and the dropdown arrow are part of the picture, not links */
   :root #platform .pf-live { display: none !important; }
   :root #platform .pf-list-head a { pointer-events: none !important; cursor: default !important; }
-  :root #platform .pf-kpis { grid-template-columns: 92px 106px 114px !important; }
+  :root #platform .pf-kpis { grid-template-columns: 102px 104px 106px !important; }
   :root #platform .pf-kpi div .pf-kpi-dev { white-space: nowrap; font-size: 9.4px; letter-spacing: -.01em; line-height: 1.2; margin-top: 2px; }
 
   /* 5: one navy for the dark sections */
@@ -148,13 +163,14 @@
   // platform dashboard: three rows tell one story (find the gap, close it, prove it)
   function dash() {
     const kp = [...document.querySelectorAll('#platform .pf-kpi span')].find((x) => x.textContent.trim() === 'Journeys');
-    if (kp) { kp.textContent = 'In development'; kp.classList.add('pf-kpi-dev'); }
+    if (kp) { kp.textContent = 'Developing'; kp.classList.add('pf-kpi-dev'); }
+    const sm = document.querySelector('#platform .pf-kpi .pf-small'); if (sm) sm.textContent = 'Improved';
     const lk = document.querySelector('#platform .pf-list-head a'); if (lk) { lk.removeAttribute('href'); lk.setAttribute('aria-disabled', 'true'); lk.tabIndex = -1; }
     const rows = [...document.querySelectorAll('#platform .pf-rows .pf-row')]; if (rows.length < 3 || rows[0].dataset.v2) return;
     const D = [
-      { ini: 'SL', name: 'Sofia L.', sub: 'Biggest gap: Focus & Prioritization · 35%', chip: 'Identify', cls: 'pf-chip--blue', type: 'gap', w: 35 },
-      { ini: 'FK', name: 'Frederick K.', sub: 'Trust & Inclusivity · 2 of 3 modules', chip: 'Build', cls: 'pf-chip--green', type: 'steps' },
-      { ini: 'HN', name: 'Hanna N.', sub: 'Clarity & Alignment: 41% → 72%', chip: '↑ +0%', cls: 'pf-chip--green pf-delta', type: 'up', delta: 31 },
+      { ini: 'SL', name: 'Sofia L.', sub: 'Gap: Focus & Prioritization · 35%', chip: 'Identify', cls: 'pf-chip--blue', type: 'gap', w: 35 },
+      { ini: 'FK', name: 'Frederick K.', sub: 'Trust & Inclusion · 2 of 3 modules', chip: 'Build', cls: 'pf-chip--green', type: 'steps' },
+      { ini: 'HN', name: 'Hanna N.', sub: 'Clarity & Alignment: 41% → 72%', chip: '↑ +0 pts', cls: 'pf-chip--green pf-delta', type: 'up', delta: 31 },
     ];   rows.slice(0, 3).forEach((r, i) => {
       const d = D[i]; r.dataset.v2 = '1';
       const ini = r.querySelector('.pf-ini'); if (ini) ini.textContent = d.ini;
@@ -167,7 +183,7 @@
         if (tr) tr.remove(); r.classList.remove('pf-row--bar');
         const sub = who && who.querySelector('span');
         if (sub) sub.innerHTML = 'Clarity &amp; Alignment: 41% <span class="hn-arr">→</span> <b class="hn-to">41%</b>';
-        chip.innerHTML = '<span class="hn-up">↑</span> +0%';
+        chip.innerHTML = '<span class="hn-up">↑</span> +0 pts';
         const io = new IntersectionObserver((es) => { if (!es[0].isIntersecting) return; io.disconnect();
           setTimeout(() => {
             r.classList.add('hn-run');                       // arrow slides in, new score turns green
@@ -175,7 +191,7 @@
             setTimeout(() => { const t0 = performance.now(), dur = 1100;
               const step = (now) => { const k = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - k, 3);
                 const v = Math.round(d.delta * e);
-                chip.innerHTML = '<span class="hn-up">↑</span> +' + v + '%';
+                chip.innerHTML = '<span class="hn-up">↑</span> +' + v + ' pts';
                 if (to) to.textContent = (41 + v) + '%';
                 if (k < 1) requestAnimationFrame(step); else chip.classList.add('pf-pop'); };
               requestAnimationFrame(step); }, 350);

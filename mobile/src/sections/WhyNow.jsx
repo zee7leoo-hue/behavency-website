@@ -80,7 +80,7 @@ export default function WhyNow() {
         <span className="wn-bar rv" style={{ '--i': 0 }} aria-hidden="true" />
         <h2 className="wn-title rv" style={{ '--i': 1 }}>The risk you can <em>see coming.</em></h2>
         <p className="wn-text rv" style={{ '--i': 2 }}>
-          When plans keep changing, line and mid-level managers carry the weight. If they lose their footing, teams lose direction — long before it shows in the numbers.
+          When plans keep changing, line managers and managers of managers carry the weight. If they lose their footing, teams lose direction — long before it shows in the numbers.
         </p>
         <p className="wn-note rv" style={{ '--i': 3 }}>You can’t control the uncertainty. You can control how ready your managers are.</p>
 

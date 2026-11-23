@@ -25,7 +25,7 @@ const CARDS = [
   {
     key: 'build', title: 'Build', tint: '#fff3e6', ink: '#d9821c', lede: 'Turn insights into real development.',
     icon: <svg viewBox="0 0 24 24"><circle cx="9" cy="9" r="3" /><circle cx="16.5" cy="10" r="2.4" /><path d="M3.5 19c.6-3 2.8-4.6 5.5-4.6s4.9 1.6 5.5 4.6M14.5 15.2c2.6-.3 4.6 1.1 5.2 3.8" /></svg>,
-    rows: [{ t: 'Training modules', tag: 'E-learning · Live' }, { t: 'Matched to each manager', tag: 'Their priority areas' }, { t: 'Practical action plan', tag: 'Applied at work' }],
+    rows: [{ t: 'Training modules', tag: 'E-learning · Live' }, { t: 'Matched to each manager', tag: 'Their priority areas' }, { t: 'Masterplan', tag: 'Applied at work' }],
   },
   {
     key: 'measure', title: 'Measure', tint: '#e7f6ef', ink: '#17905f', lede: 'Track programme results and team progress.',
@@ -125,8 +125,8 @@ export default function Hero() {
             <span className="hr-l">know <em>where they’re</em></span>
             <span className="hr-l"><em>falling short.</em></span>
           </h1>
-          <p className="hr-s">When things keep changing, that gap is a business risk. Behavency finds it early, helps managers close it — and proves it worked.</p>
-          <a className="hr-btn" href="#contact" onClick={(e) => { e.preventDefault(); setDemo(true) }}>Request a Demo</a>
+          <p className="hr-s">When things keep changing, that gap is a business risk. Behavency finds it early, helps managers close it — and shows you what changed.</p>
+          <a className="hr-btn" href="#contact" onClick={(e) => { e.preventDefault(); setDemo(true) }}>Request a demo</a>
         </div>
 
         <div className="hr-carousel" ref={carRef}>

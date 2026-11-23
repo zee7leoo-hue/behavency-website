@@ -15,7 +15,7 @@ export default function Contact() {
     <section className="ct" id="contact">
       <p className="ct-eyebrow">Ready to start?</p>
       <h2 className="ct-h">Let’s talk about <em>your people.</em></h2>
-      <p className="ct-sub">Tell us about your organization and where you want to start. We’ll walk you through what Behavency would look like for your specific context.</p>
+      <p className="ct-sub">Tell us about your organisation and where you want to start. We’ll walk you through what Behavency would look like for your specific context.</p>
 
       <ul className="ct-ways">
         {WAYS.map((w) => <li key={w.t}><b>{w.t}</b><span>{w.p}</span></li>)}

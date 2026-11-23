@@ -14,8 +14,8 @@ const WHO = [
   {
     key: 'hr', who: 'HR & L&D', title: 'HR & L&D Teams', Icon: IconHR,
     hook: 'You need evidence.',
-    p: 'You’ve run programmes before and had no way to prove they worked. Behavency gives you before-and-after data, participant-level reporting, and an organizational view that speaks the language of a board.',
-    inc: ['Facilitators', 'HR Directors', 'L&D Managers', 'Organizational Development'],
+    p: 'You’ve run programmes before and had no way to prove they worked. Behavency gives you before-and-after data, participant-level reporting, and an organisational view that speaks the language of a board.',
+    inc: ['Facilitators', 'HR Directors', 'L&D Managers', 'Organisational Development'],
   },
   {
     key: 'mgr', who: 'Managers', title: 'Managers & Participants', Icon: IconMgr,
@@ -25,8 +25,8 @@ const WHO = [
   },
   {
     key: 'lead', who: 'Leadership', title: 'Leadership & Boards', Icon: IconLead,
-    hook: 'You need to know whether your management layer is fit for where the organization is going.',
-    p: 'And whether the money spent on development last year made any difference. Behavency gives you an organizational view that makes both questions answerable.',
+    hook: 'You need to know whether your management layer is fit for where the organisation is going.',
+    p: 'And whether the money spent on development last year made any difference. Behavency gives you an organisational view that makes both questions answerable.',
     inc: ['CEOs', 'CHROs', 'Executive Teams', 'Investors'],
   },
 ]

@@ -85,7 +85,7 @@ export default function Explorer({ initialId, level: lvIndex = 0, onClose }) {
           <AnimatePresence mode="wait" initial={false}>
             {tab === 0 && (
               <motion.div key="model" className="ax-pane" {...slide}>
-                <h1 className="ax-title">The behavioral model</h1>
+                <h1 className="ax-title">The behavioural model</h1>
                 <p className="ax-sub">Six areas that drive team effectiveness.</p>
                 <motion.ul className="ax-areas" variants={list} initial="hidden" animate="show">
                   {AREAS.map((a) => (

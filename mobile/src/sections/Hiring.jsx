@@ -62,7 +62,7 @@ export default function Hiring() {
       <div className="hi-in">
         <div className="hi-eyebrow">ALSO FOR HIRING</div>
         <h2 className="hi-title">Hiring a manager? <em>Lower the risk.</em></h2>
-        <p className="hi-lead">An interview shows how a candidate presents themselves. The Managerial Behaviour Profile shows how they are likely to manage: one input next to interviews and references, not a verdict.</p>
+        <p className="hi-lead">An interview shows how a candidate presents themselves. The Managerial Profile shows how they are likely to manage: one input next to interviews and references, not a verdict.</p>
         <div className="hi-labelled">
           <img className="hi-doc" src={profile} alt="Candidate profile report" />
           <span className="hi-pin" style={{ top: '47%', left: '-3%' }}><b>1</b>Six areas</span>

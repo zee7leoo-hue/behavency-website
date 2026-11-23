@@ -238,6 +238,10 @@
   .tm-card .tm-t { font-size: 17px !important; display: block; }
   .tm-card .tm-d { font-size: 14px !important; display: block; margin-top: 4px; }
   .tm-card .tm-more { margin-top: 9px; }
+  .tm .tm-end { margin: -16px 20px 44px; padding: 24px 20px; background: #fff; border-radius: 20px; box-shadow: 0 0 0 1px rgba(20,35,75,.06); text-align: center; }
+  .tm .tm-end p { margin: 0; font: 700 20px/1.25 "Source Serif 4", Georgia, serif; letter-spacing: -.015em; color: #0f1b3d; }
+  .tm .tm-end p span { display: block; margin-top: 8px; font: 400 14.5px/1.5 Inter, sans-serif; letter-spacing: 0; color: #4f5770; }
+  .tm .tm-cta { display: block; width: 100%; margin-top: 18px; border: 0; border-radius: 12px; padding: 15px; background: #0f1b3d; color: #fff; font: 600 15.5px/1 Inter, Arial, sans-serif; cursor: pointer; }
   .tm .tm-note { margin: 26px 20px 48px !important; padding-top: 18px; border-top: 1px solid #e6e2ec; font: 400 14.5px/1.5 Inter, sans-serif !important; color: #4f5770 !important; }
   .tm .tm-note b { color: #0f1b3d; }
   /* B: accordion catalogue */
@@ -437,7 +441,7 @@
   }
   function openCatalogue(lv = 'all') {
     if (V === 'b' && lv === 'all') lv = ''; // B starts with the three levels closed
-    const pg = el(`<div class="tm tm-page" role="dialog" aria-modal="true" aria-label="Programmes">${catHead()}<div class="tm-res">${catBody(lv)}${NOTE}</div></div>`);
+    const pg = el(`<div class="tm tm-page" role="dialog" aria-modal="true" aria-label="Programmes">${catHead()}<div class="tm-res">${catBody(lv)}${NOTE}</div><div class="tm-end"><p>Not sure which programmes fit?<span>We’ll match them to your managers’ results.</span></p><button type="button" class="tm-cta" data-cm-open>Request a demo</button></div></div>`);
     const render = (k, keepTop) => {
       const res = pg.querySelector('.tm-res'); res.innerHTML = catBody(k) + NOTE;
       if (!keepTop) { const f = res.querySelector('.tm-filters, .tm-lvtiles'); const stuck = f && f.classList.contains('tm-sticky'); if (stuck && pg.scrollTop > res.offsetTop) pg.scrollTop = res.offsetTop; }
@@ -477,7 +481,7 @@
   }
   function block() {
     const b = el(`<section class="tm tm-band" data-tm><div class="tm-in"><div class="tm-eye">Our programmes</div><h2 class="tm-h">Training for the gaps <em>that matter.</em></h2>
-      <p class="tm-lead">Each participant gets the programmes that match their priority areas.</p>${blockBody()}</div></section>`);
+      <p class="tm-lead">A few of our programmes. Formats vary by programme.</p>${blockBody()}</div></section>`);
     b.addEventListener('click', (e) => {
       if (e.target.closest('[data-all]')) return openCatalogue('all');
       const d = e.target.closest('[data-door]'); if (d) return openCatalogue(d.dataset.door);

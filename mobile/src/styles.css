@@ -68,3 +68,7 @@ a { color: inherit; text-decoration: none; }
   html { scroll-behavior: auto; }
   .rv { opacity: 1; transform: none; transition: none; }
 }
+
+/* kept settings over the design scripts: the line under the menu bar, and the footer logo size (footer-site.js) */
+:root .nav { box-shadow: 0 1px 0 rgba(15, 27, 61, .08) !important; }
+:root .bft-logo { height: 40px !important; }

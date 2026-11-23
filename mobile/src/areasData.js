@@ -15,8 +15,8 @@ export const LEVELS = [
           {
             "name": "Translate strategy into clear guidelines for the team",
             "items": [
-              "Translates organizational goals into clear priorities and tasks for their team.",
-              "Helps employees understand how team goals connect to departmental and organizational goals."
+              "Translates organisational goals into clear priorities and tasks for their team.",
+              "Helps employees understand how team goals connect to departmental and organisational goals."
             ]
           },
           {
@@ -74,7 +74,7 @@ export const LEVELS = [
           {
             "name": "Maintain open and respectful communication",
             "items": [
-              "Communicates respectfully with employees and puts a stop to any disrespectful behavior within the team.",
+              "Communicates respectfully with employees and puts a stop to any disrespectful behaviour within the team.",
               "Openly discusses difficult issues with employees and does not avoid uncomfortable conversations."
             ]
           },
@@ -101,7 +101,7 @@ export const LEVELS = [
           {
             "name": "Make sound decisions on priorities and trade-offs",
             "items": [
-              "When resources or time are limited, determines which tasks to prioritize and decides which tasks the team can temporarily deprioritize.",
+              "When resources or time are limited, determines which tasks to prioritise and decides which tasks the team can temporarily deprioritise.",
               "Makes priority decisions independently, without escalating unnecessarily."
             ]
           },
@@ -142,7 +142,7 @@ export const LEVELS = [
             "name": "Ensure agreed goals and expected results are achieved",
             "items": [
               "Takes responsibility for the team's results and does not shift blame onto employees or external circumstances.",
-              "When the team fails to achieve agreed results, independently analyzes the root causes and takes concrete corrective action — rather than just explaining the situation or revising expectations."
+              "When the team fails to achieve agreed results, independently analyses the root causes and takes concrete corrective action — rather than just explaining the situation or revising expectations."
             ]
           },
           {
@@ -206,7 +206,7 @@ export const LEVELS = [
             "name": "Resolve disagreements and conflicts constructively",
             "items": [
               "Intervenes in workplace disagreements in a timely manner and helps participants find a resolution before they escalate.",
-              "When destructive behavior is repeated, directly names the unacceptable actions and takes steps to put a stop to them."
+              "When destructive behaviour is repeated, directly names the unacceptable actions and takes steps to put a stop to them."
             ]
           }
         ]
@@ -256,10 +256,10 @@ export const LEVELS = [
   },
   {
     "id": "mid",
-    "label": "Senior Managers",
+    "label": "Managers of Managers",
     "color": "#0f9b84",
-    "pq": "Each practice answers the question: \"What does an effective mid-level leader do?\"",
-    "bq": "Each manifestation answers the question: \"How does this leadership practice look in a mid-level manager?\"",
+    "pq": "Each practice answers the question: \"What does an effective manager of managers do?\"",
+    "bq": "Each manifestation answers the question: \"How does this leadership practice look in a manager of managers?\"",
     "areas": [
       {
         "id": "clarity",
@@ -270,11 +270,11 @@ export const LEVELS = [
             "name": "Translate strategy into clear guidelines for the team",
             "items": [
               "Translates strategic business goals into priorities for multiple teams or departments.",
-              "Ensures that first-level managers understand the business logic of the tasks facing them, not just their content."
+              "Ensures that line managers understand the business logic of the tasks facing them, not just their content."
             ]
           },
           {
-            "name": "Ensure alignment of goals with organizational priorities",
+            "name": "Ensure alignment of goals with organisational priorities",
             "items": [
               "Ensures alignment of goals across departments — prevents teams from moving in opposite directions.",
               "Makes management decisions based on business interests, not just their own department's."
@@ -283,7 +283,7 @@ export const LEVELS = [
           {
             "name": "Clearly define roles and expectations",
             "items": [
-              "Responsibility among first-level managers is distributed without duplication or ambiguity.",
+              "Responsibility among line managers is distributed without duplication or ambiguity.",
               "Formulates expectations for the quality of management work — not just for the team's business results."
             ]
           },
@@ -298,7 +298,7 @@ export const LEVELS = [
             "name": "Ensure alignment between priorities and actual actions",
             "items": [
               "Reallocates resources between teams when priorities change — promptly and justifiably.",
-              "Makes decisions on tradeoffs between competing tasks across multiple departments."
+              "Makes decisions on trade-offs between competing tasks across multiple departments."
             ]
           }
         ]
@@ -312,33 +312,33 @@ export const LEVELS = [
             "name": "Foster psychological safety",
             "items": [
               "Identifies signs of an unhealthy atmosphere in lower-level teams and intervenes before issues escalate.",
-              "Ensures first-level managers do not foster a culture of fear or silence within their teams."
+              "Ensures line managers do not foster a culture of fear or silence within their teams."
             ]
           },
           {
             "name": "Demonstrate transparency and consistency",
             "items": [
               "Explains the reasoning behind difficult and unpopular decisions — does not merely announce the outcome.",
-              "Acts consistently toward different teams — avoids any sense of favoritism."
+              "Acts consistently toward different teams — avoids any sense of favouritism."
             ]
           },
           {
             "name": "Encourage diversity of opinions and perspectives",
             "items": [
               "Draws on diverse sources of information when making decisions — does not rely solely on their inner circle.",
-              "Establishes a norm where first-level managers actively encourage diverse perspectives within their teams."
+              "Establishes a norm where line managers actively encourage diverse perspectives within their teams."
             ]
           },
           {
             "name": "Maintain open and respectful communication",
             "items": [
-              "Sets the communication standard across the entire perimeter — does not tolerate the suppression or distortion of information."
+              "Sets the communication standard across the whole part of the organisation they lead — does not tolerate the suppression or distortion of information."
             ]
           },
           {
             "name": "Build a sense of belonging and team identity",
             "items": [
-              "Recognizes the contributions of first-level managers — creating a sense of shared ownership over collective results."
+              "Recognises the contributions of line managers — creating a sense of shared ownership over collective results."
             ]
           }
         ]
@@ -371,14 +371,14 @@ export const LEVELS = [
           {
             "name": "Focus attention on the highest-impact tasks",
             "items": [
-              "Sees where energy across multiple teams is being wasted and redirects the perimeter.",
+              "Sees where energy across multiple teams is being wasted and redirects it.",
               "Connects the daily work of departments to business outcomes — helping teams see their contribution."
             ]
           },
           {
             "name": "Shield teams from unnecessary complexity and overload",
             "items": [
-              "Protects teams from excessive external pressure — engaging with senior management and cross-functional teams on behalf of their perimeter."
+              "Protects teams from excessive external pressure — engaging with senior management and cross-functional teams on behalf of the area they lead."
             ]
           }
         ]
@@ -391,14 +391,14 @@ export const LEVELS = [
           {
             "name": "Define ownership and accountability for tasks",
             "items": [
-              "Management accountability is distributed across first-level managers — not centralized.",
+              "Management accountability is distributed across line managers — not centralized.",
               "Holds managers accountable for the quality of their managerial work — not just the team's business results."
             ]
           },
           {
             "name": "Ensure agreed goals and expected results are achieved",
             "items": [
-              "Identifies systemic obstacles that prevent results from being achieved across the entire perimeter."
+              "Identifies systemic obstacles that prevent results from being achieved across the whole part of the organisation they lead."
             ]
           },
           {
@@ -412,7 +412,7 @@ export const LEVELS = [
           {
             "name": "Maintain required performance standards",
             "items": [
-              "Sets uniform performance standards across the entire perimeter — applied consistently, not selectively.",
+              "Sets uniform performance standards across the whole part of the organisation they lead — applied consistently, not selectively.",
               "When standards are systematically not met, initiates structural changes — not just targeted conversations."
             ]
           },
@@ -433,7 +433,7 @@ export const LEVELS = [
             "name": "Build productive working relationships",
             "items": [
               "Builds partnerships with leaders of adjacent functions — based on mutual trust, not just formal processes.",
-              "Develops a network of influence beyond their own perimeter."
+              "Develops a network of influence beyond the area they lead."
             ]
           },
           {
@@ -473,7 +473,7 @@ export const LEVELS = [
           {
             "name": "Encourage continuous development and learning",
             "items": [
-              "Ensures that first-level managers are actively developing their people — not just managing tasks.",
+              "Ensures that line managers are actively developing their people — not just managing tasks.",
               "Deliberately identifies employees with management potential and creates conditions for their growth."
             ]
           },
@@ -486,8 +486,8 @@ export const LEVELS = [
           {
             "name": "Adapt flexibly to changing conditions",
             "items": [
-              "Restructures the operational model of the perimeter during strategic changes — does not merely relay new directives.",
-              "Supports first-level managers during periods of change — helping them maintain stability and lead their teams."
+              "Restructures the operational model of the area they lead during strategic changes — does not merely relay new directives.",
+              "Supports line managers during periods of change — helping them maintain stability and lead their teams."
             ]
           },
           {
@@ -500,7 +500,7 @@ export const LEVELS = [
           {
             "name": "Help the team navigate change effectively",
             "items": [
-              "Supports first-level managers in their role as change champions — helping them manage team resistance."
+              "Supports line managers in their role as change champions — helping them manage team resistance."
             ]
           }
         ]
@@ -522,7 +522,7 @@ export const LEVELS = [
           {
             "name": "Shared understanding of goals and results",
             "items": [
-              "The team understands how its work is connected to the organization's goals.",
+              "The team understands how its work is connected to the organisation's goals.",
               "The team shares a common understanding of the goals and expected results of its work."
             ]
           },
@@ -538,7 +538,7 @@ export const LEVELS = [
             "items": [
               "Important information is communicated to all team members in a timely manner.",
               "After discussions and meetings, the team has a shared understanding of decisions made and next steps.",
-              "The team develops clear agreements on how collaborative work will be organized."
+              "The team develops clear agreements on how collaborative work will be organised."
             ]
           }
         ]
@@ -577,7 +577,7 @@ export const LEVELS = [
       },
       {
         "id": "capacity",
-        "name": "Focus & Priorities",
+        "name": "Focus & Prioritization",
         "icon": "org",
         "practices": [
           {
@@ -613,14 +613,14 @@ export const LEVELS = [
             "name": "Fulfilling commitments",
             "items": [
               "The team identifies and openly communicates risks of failing to meet agreements in a timely manner.",
-              "When obstacles arise, the team does not abandon agreements but finds ways to fulfill them."
+              "When obstacles arise, the team does not abandon agreements but finds ways to fulfil them."
             ]
           },
           {
             "name": "Mutual accountability for shared results",
             "items": [
               "Team members consider the shared result to be their common accountability, not just the area of responsibility of individual members.",
-              "Team members openly remind each other of agreements and do not ignore cases of their non-fulfillment.",
+              "Team members openly remind each other of agreements and do not ignore cases of their non-fulfilment.",
               "When necessary, team members take on additional tasks to achieve the shared result."
             ]
           }
@@ -668,7 +668,7 @@ export const LEVELS = [
           {
             "name": "Learning from experience",
             "items": [
-              "The team regularly analyzes the causes of its successes and failures and changes working approaches if necessary.",
+              "The team regularly analyses the causes of its successes and failures and changes working approaches if necessary.",
               "The team does not repeat the same mistakes systematically.",
               "Gained experience and knowledge are quickly spread within the team and used in future work."
             ]
@@ -678,7 +678,7 @@ export const LEVELS = [
             "items": [
               "The team proactively implements improvements in its working methods without waiting for external directives.",
               "The team evaluates the results of implemented changes and retains the most effective practices.",
-              "The team studies the working methods of other teams or organizations and, if necessary, implements best practices without waiting for problems to arise."
+              "The team studies the working methods of other teams or organisations and, if necessary, implements best practices without waiting for problems to arise."
             ]
           },
           {

@@ -15,7 +15,8 @@
     box-shadow: 0 0 0 1px rgba(122,90,216,.12), 0 8px 18px -10px rgba(90,60,180,.45); flex: none; }
   .chy-ico svg { width: 22px; height: 22px; }
   .chy-name { font: 600 15px/1.2 Inter, Arial, sans-serif; letter-spacing: -.012em; color: #2a2360; }
-  #interview-studio .isx-eb { margin-top: 22px !important; color: #5b4cd6 !important; }
+  #interview-studio .isx-eb { margin-top: 0 !important; color: #5b4cd6 !important; }
+  #interview-studio .chy-top { display: none !important; } /* the small "Structured Interview" tag repeated the row above */
   `;
   const run = () => {
     const box = document.querySelector('#interview-studio .isx-in');

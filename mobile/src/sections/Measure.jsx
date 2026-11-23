@@ -9,10 +9,12 @@ const Clip = () => (<svg viewBox="0 0 24 24" {...sv}><rect x="4.6" y="3.8" width
 const Bars = () => (<svg viewBox="0 0 24 24" {...sv}><rect x="2.6" y="11.6" width="4.6" height="9" rx="1.6" /><rect x="9.7" y="7.4" width="4.6" height="13.2" rx="1.6" /><rect x="16.8" y="2.6" width="4.6" height="18" rx="1.6" /></svg>)
 
 const ROWS = [
-  { a: 'Clarity &', b: 'Alignment', from: 42, to: 74, up: 32, f: 0.40, t: 0.77 },
-  { a: 'Execution &', b: 'Accountability', from: 51, to: 79, up: 28, f: 0.53, t: 0.83 },
-  { a: 'Collaboration &', b: 'Influence', from: 58, to: 81, up: 23, f: 0.62, t: 0.87 },
-  { a: 'Trust &', b: 'Inclusion', from: 69, to: 85, up: 16, f: 0.73, t: 0.93 },
+  { a: 'Clarity &', b: 'Alignment', from: 42, to: 74, up: 32, f: 0.399, t: 0.703 },
+  { a: 'Execution &', b: 'Accountability', from: 51, to: 79, up: 28, f: 0.484, t: 0.750 },
+  { a: 'Collaboration &', b: 'Influence', from: 58, to: 81, up: 23, f: 0.551, t: 0.769 },
+  { a: 'Trust &', b: 'Inclusion', from: 69, to: 85, up: 16, f: 0.655, t: 0.807 },
+  { a: 'Focus &', b: 'Prioritization', from: 55, to: 67, up: 12, f: 0.522, t: 0.636 },
+  { a: 'Learning &', b: 'Adaptability', from: 72, to: 76, up: 4, f: 0.684, t: 0.722 },
 ]
 
 export default function Measure() {
@@ -23,7 +25,7 @@ export default function Measure() {
         <h2 className="ms-title rv" style={{ '--i': 0 }}>Then we run the assessment again.<span>And show you what changed.</span></h2>
         <div className="ms-eyebrow rv" style={{ '--i': 1 }}><em>04</em><i aria-hidden="true" /><span>Measure</span><u aria-hidden="true" /><s>Prove the impact</s></div>
         <p className="ms-text rv" style={{ '--i': 2 }}>We use the same questions with the same people, three months after training. The results sit side by side with where they started.</p>
-        <p className="ms-text ms-text--2 rv" style={{ '--i': 3 }}>This closes the ROI loop. Not with anecdote, but with data.</p>
+        <p className="ms-text ms-text--2 rv" style={{ '--i': 3 }}>So you can show what changed, not just who attended.</p>
 
         <div className="ms-flow rv" style={{ '--i': 4 }}>
           <div className="ms-step"><span className="ms-ico"><Clip /></span><p>Assessment</p></div>
@@ -44,7 +46,7 @@ export default function Measure() {
                   <span className="tr"><i className="bf" style={{ '--w': r.f }} /></span>
                   <span className="tr"><i className="af" style={{ '--w': r.t }} /></span>
                 </div>
-                <div className="ms-vals"><span>{r.from}</span><span>{r.to}</span></div>
+                <div className="ms-vals">{r.from} → {r.to}</div>
                 <em>+{r.up}</em>
               </li>
             ))}

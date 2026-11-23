@@ -15,18 +15,18 @@ const LEVELS = ['Individual', 'Team', 'Organisation']
 const PACKS = [
   {
     key: 'proficiency', name: 'Proficiency', Icon: One, lede: 'A focused assessment and individual insight', depth: [1, 0, 0],
-    items: ['Managerial Profile (self-assessment)', '360 Feedback', 'Individual Manager Report', 'Optional: Structured Interview'],
-    best: 'Organizations starting with manager self-awareness and stakeholder feedback.',
+    items: ['Managerial Profile (self-assessment)', '360° Feedback', 'Individual Manager Report', 'Optional: Structured Interview, with Interview Studio practice for your HR team'],
+    best: 'Organisations starting with manager self-awareness and stakeholder feedback.',
   },
   {
-    key: 'complete', name: 'Complete', Icon: Stack, lede: 'The full diagnostic picture — individual, team, and organizational', depth: [1, 1, 1], badge: 'Most complete',
-    items: ['Everything in Proficiency', 'Workplace Effectiveness Survey', 'Resilience to Change Assessment', 'Team Assessment (same model)', 'Individual + Executive Reports'],
-    best: 'Organizations that want to understand people AND the conditions around them.',
+    key: 'complete', name: 'Complete', Icon: Stack, lede: 'The full diagnostic picture — individual, team, and organisational', depth: [1, 1, 1], badge: 'Most complete',
+    items: ['Everything in Proficiency', 'Workplace Effectiveness Survey', 'Resilience to Change', 'Team assessment, on the same six areas', 'Individual reports and a leadership report'],
+    best: 'Organisations that want to understand people AND the conditions around them.',
   },
   {
     key: 'flex', name: 'Flex', Icon: Mix, lede: 'Choose the combination that fits your specific situation', depth: null,
     items: ['Any combination of the above assessments', 'Configurable by cohort or programme', 'Speak with us to design the right scope'],
-    best: 'Organizations with a specific context or existing frameworks to work within.',
+    best: 'Organisations with a specific context or existing frameworks to work within.',
   },
 ]
 
@@ -36,7 +36,7 @@ export default function Packages() {
     <section className="pk" id="packages">
       <p className="pk-eyebrow"><i aria-hidden="true" />Assessment packages</p>
       <h2 className="pk-title">Start at the depth <em>your context requires.</em></h2>
-      <p className="pk-text">No invented pricing. The right package depends on what your organization needs.</p>
+      <p className="pk-text">Every organisation starts from a different place. Choose the depth that fits yours, or let us shape it with you.</p>
 
       <div className="pk-list">
         {PACKS.map((p, i) => {
@@ -67,7 +67,7 @@ export default function Packages() {
         })}
       </div>
 
-      <p className="pk-foot">Pricing is tailored to your organization’s size and programme scope. <a href="#contact">Speak with us</a> — no obligation.</p>
+      <p className="pk-foot">The team game, training and re-assessment are planned with you on top of any package. Pricing is tailored to your organisation’s size and programme scope. <a href="#contact">Speak with us</a> — no obligation.</p>
     </section>
   )
 }
