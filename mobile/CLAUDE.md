@@ -23,5 +23,8 @@ the link's files would undo them), and tell the user they were kept:
    `.tm .tm-allbtn { margin-top: 22px; }` right after the `.tm-allbtn:active` rule. Without it, `.tm button { margin: 0 }`
    removes the gap.
 
-The demo popup follows the link (since 23 Nov the user chose the link's own pop-up from `public/contact-modal.js`), so
-it is not a kept setting any more.
+4. **The demo pop-up sends to Netlify Forms.** The pop-up itself follows the link (`public/contact-modal.js`, the
+   user's choice on 23 Nov), but that script sends nothing. `src/netlifyContact.js` (imported in `src/main.jsx`) catches
+   its submit and posts it as the Netlify "contact" form (the pop-up's `org` field is sent as `organization`). Keep it,
+   and keep the hidden `<form name="contact">` in `index.html`. If a new link changes the pop-up's form (class
+   `cm-form`, field names, `.cm-body`/`.cm-send`), update `src/netlifyContact.js` to match.
