@@ -12,7 +12,7 @@ cd "$(dirname "$0")/.."
 
 # 3) the phone page is also shown at "/" (same address as desktop), so its files must not depend on the folder it sits in:
 #    - the extra scripts it loads by a relative name get the /m/ prefix
-#    - images those scripts load by a relative path ("assets/…", "team/…") are also copied to the root
+#    - images those scripts load by a relative path ("assets/…", "team/…", "logo-behavency.png") are also copied to the root
 for f in site/m/*.js; do
   name="$(basename "$f")"
   sed -i "s#src=\"$name\"#src=\"/m/$name\"#g" site/m/index.html
@@ -21,6 +21,10 @@ mkdir -p site/assets site/team
 for f in site/m/assets/*; do
   case "$f" in *.js|*.css) continue ;; esac
   [ -e "site/assets/$(basename "$f")" ] || cp "$f" site/assets/
+done
+for f in site/m/*.png site/m/*.jpg site/m/*.webp site/m/*.svg; do
+  [ -e "$f" ] || continue
+  [ -e "site/$(basename "$f")" ] || cp "$f" site/
 done
 if [ -d site/m/team ]; then
   for f in site/m/team/*; do [ -e "site/team/$(basename "$f")" ] || cp "$f" site/team/; done
