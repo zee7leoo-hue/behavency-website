@@ -17,6 +17,10 @@
     <style id="hc-nofl">/* old hero picture never shows; the four cards come from hero-cards.js */ .hc-cards .hc-cards-art, .hc-cards .hc-cards-ui, .hc-cards .hc-ct { display: none !important; }</style>
     <style id="hero-a">/* 24 Nov, option A: headline 10% smaller; paragraph and buttons move up by the space saved */ @media (min-width: 901px) { .hc-title-main { font-size: calc(3.72cqw * .9); line-height: calc(3.625cqw * .9); } .hc-title-em { font-size: calc(3.68cqw * .9); line-height: calc(3.6875cqw * .9); margin-top: calc(.3cqw * .9); } .hc-sub { top: 32.8cqw; } .hc-btn { top: 41.55cqw; } .hc-link { top: 43.025cqw; } }</style>
     <style id="nav-wide">/* 24 Nov: menu bar lines up with the page content edges; Log in + Request a demo sit at the right edge, clearly apart from the menu */ @media (min-width: 901px) { header.nav .nav__inner { max-width: none !important; padding-left: 13.05vw !important; padding-right: 12.4vw !important; } header.nav .nav__actions { margin-left: auto !important; } header.nav .sm-login { margin-right: 26px; } header.nav .nav__logo { font-size: 17px !important; gap: 8px; margin-right: 28px; } header.nav .nav__logo img { height: 25px !important; width: auto !important; } }</style>
+    <!-- Netlify Forms reads this hidden copy of the "contact" form at deploy time; the "Request a demo" pop-up (public/contact-modal.js) is sent as this form by src/netlifyContact.js -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input name="name" /><input name="email" /><input name="organization" /><input name="role" /><input name="managers" /><input name="interest" /><textarea name="message"></textarea><input name="bot-field" />
+    </form>
     <div id="root"></div>
     <!-- Settings read by the add-on scripts below: desktop site, final stage style ("r5" = light tint), site menu, clean page (no mock-up bars). -->
     <script>window.BHV_SITE = 'desk'; window.BHV_SET = 'r5'; window.BHV_NOMENU = true; window.BHV_CLEAN = true;</script>
