@@ -19,6 +19,15 @@
   .cm input, .cm select, .cm textarea { display: block; width: 100%; margin-top: 6px; padding: 11px 13px; border: 1px solid #dcd9e6; border-radius: 10px; font: 400 15px/1.4 Inter, sans-serif; color: #15171c; background: #fff; }
   .cm textarea { resize: vertical; min-height: 92px; }
   .cm input:focus, .cm select:focus, .cm textarea:focus { outline: none; border-color: #2f6fdb; box-shadow: 0 0 0 3px rgba(47,111,219,.15); }
+  .cm-opt { font-weight: 400; color: #7a8093; }
+  .cm-int { margin: 0 0 14px; padding: 0; border: 0; min-width: 0; }
+  .cm-int legend { padding: 0; margin: 0 0 8px; font: 600 13px/1.3 Inter, sans-serif; color: #3a4364; }
+  .cm-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .cm .cm-chip { display: inline-flex; align-items: center; gap: 10px; margin: 0; padding: 9px 12px; border: 1px solid #dcd9e6; border-radius: 10px; font: 400 14.5px/1.3 Inter, sans-serif; color: #15171c; background: #fff; cursor: pointer; }
+  .cm .cm-chip:hover { border-color: #c4c0d4; }
+  .cm .cm-chip input { width: 16px; height: 16px; margin: 0; padding: 0; flex: none; accent-color: #1f2f5c; cursor: pointer; }
+  .cm .cm-chip:has(input:checked) { border-color: #1f2f5c; background: #f3f5fb; }
+  .cm .cm-chip:has(input:focus-visible) { border-color: #2f6fdb; box-shadow: 0 0 0 3px rgba(47,111,219,.15); }
   .cm-send { width: 100%; margin-top: 4px; padding: 14px; border: 0; border-radius: 12px; background: #1f2f5c; color: #fff; font: 600 15.5px/1 Inter, sans-serif; cursor: pointer; }
   .cm-send:hover { background: #18254b; }
   .cm-note { margin: 12px 0 0; font: 400 12.5px/1.5 Inter, sans-serif; color: #7a8093; text-align: center; }
@@ -52,7 +61,20 @@
           <option value="">Select…</option><option>HR Director / CHRO</option><option>L&amp;D / OD Professional</option><option>Recruiter / Talent Acquisition</option><option>CEO / Leadership</option><option>Consultant / Partner</option><option>Other</option>
         </select></label>
       </div>
-      <label for="cm-msg">What are you trying to achieve?<textarea id="cm-msg" name="message" rows="4"></textarea></label>
+      <label for="cm-size">How many managers?<select id="cm-size" name="managers">
+        <option value="">Select…</option><option>Under 20</option><option>20–50</option><option>50–150</option><option>150+</option>
+      </select></label>
+      <fieldset class="cm-int">
+        <legend>What are you interested in?</legend>
+        <div class="cm-chips">
+          <label class="cm-chip"><input type="checkbox" name="interest" value="Assessment">Assessment</label>
+          <label class="cm-chip"><input type="checkbox" name="interest" value="Team game">Team game</label>
+          <label class="cm-chip"><input type="checkbox" name="interest" value="Training">Training</label>
+          <label class="cm-chip"><input type="checkbox" name="interest" value="The full journey">The full journey</label>
+          <label class="cm-chip"><input type="checkbox" name="interest" value="Recruitment">Recruitment</label>
+        </div>
+      </fieldset>
+      <label for="cm-msg">What are you trying to achieve? <span class="cm-opt">(optional)</span><textarea id="cm-msg" name="message" rows="4"></textarea></label>
       <button type="submit" class="cm-send">Send message</button>
       <p class="cm-note">We use your details only to reply to you. Or e-mail us at info@behavency.com</p>
     </form>`;

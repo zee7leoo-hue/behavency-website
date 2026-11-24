@@ -26,6 +26,8 @@ window.addEventListener('submit', async (e) => {
     email: fd.get('email') || '',
     organization: fd.get('org') || '',
     role: fd.get('role') || '',
+    managers: fd.get('managers') || '',
+    interest: fd.getAll('interest').join(', '),
     message: fd.get('message') || '',
   })
 

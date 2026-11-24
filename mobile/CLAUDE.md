@@ -25,7 +25,8 @@ the link's files would undo them), and tell the user they were kept:
 
 4. **The demo pop-up sends to Netlify Forms.** The pop-up itself follows the link (`public/contact-modal.js`, the
    user's choice on 23 Nov), but that script sends nothing. `src/netlifyContact.js` (imported in `src/main.jsx`) catches
-   its submit and posts it as the Netlify "contact" form (the pop-up's `org` field is sent as `organization`). Keep it,
+   its submit and posts it as the Netlify "contact" form (the pop-up's `org` field is sent as `organization`; `managers`,
+   and the ticked `interest` boxes joined with commas, are sent too and are listed in the hidden form). Keep it,
    and keep the hidden `<form name="contact">` in `index.html`. If a new link changes the pop-up's form (class
    `cm-form`, field names, `.cm-body`/`.cm-send`), update `src/netlifyContact.js` to match.
 5. **The demo pop-up is full screen on the phone**: the `.cm-ov` / `.cm` / `.cm-x` rules at the end of
