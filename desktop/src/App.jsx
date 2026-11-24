@@ -43,13 +43,16 @@ export default function App() {
       {/* <StageBuild /> */}
       <MeasureSection />
       <HowMeasureSection />
-      <HowItRuns />
-      <HiringSection />
+      {/* Replaced by add-on scripts in public/ (see index.html): "How it runs" -> howitruns-desktop.js,
+          Hiring -> the Recruitment page (recruitment-page.js), the dark contact block -> contact-modal.js,
+          the footer -> footer-site.js. "For who" is no longer on the page. */}
+      {/* <HowItRuns /> */}
+      {/* <HiringSection /> */}
       <WhatMakesDifferent />
       <Packages />
-      <ForWho />
-      <CtaSection />
-      <Footer />
+      {/* <ForWho /> */}
+      {/* <CtaSection /> */}
+      {/* <Footer /> */}
     </>
   )
 }

@@ -10,7 +10,7 @@ export const teamFactorsList =  [
    'Clarity of roles and accountability',
    'Shared agreements and information transparency'
    ],
- keyCompetencies: ["Strategic thinking", "Goal setting", "Planning and organization", "Communication", "Business thinking", "Systems thinking"],
+ keyCompetencies: ["Strategic thinking", "Goal setting", "Planning and organisation", "Communication", "Business thinking", "Systems thinking"],
  trainings: [
  { name: "Leadership Basics", audience: ['line'] },
  { name: "Effective Goal Setting", audience: ['line'] },
@@ -21,8 +21,8 @@ export const teamFactorsList =  [
  manifestations: [
   {
     practice: 'Shared understanding of goals and results',
-    line: ['The team understands how its work is connected to the organization\'s goals.', 'The team shares a common understanding of the goals and expected results of its work.'],
-    mid: ['The team understands how its work is connected to the organization\'s goals.', 'The team shares a common understanding of the goals and expected results of its work.']
+    line: ['The team understands how its work is connected to the organisation\'s goals.', 'The team shares a common understanding of the goals and expected results of its work.'],
+    mid: ['The team understands how its work is connected to the organisation\'s goals.', 'The team shares a common understanding of the goals and expected results of its work.']
   },
   {
     practice: 'Clarity of roles and accountability',
@@ -31,8 +31,8 @@ export const teamFactorsList =  [
   },
   {
     practice: 'Shared agreements and information transparency',
-    line: ['Important information is communicated to all team members in a timely manner.', 'After discussions and meetings, the team has a shared understanding of decisions made and next steps.', 'The team develops clear agreements on how collaborative work will be organized.'],
-    mid: ['Important information is communicated to all team members in a timely manner.', 'After discussions and meetings, the team has a shared understanding of decisions made and next steps.', 'The team develops clear agreements on how collaborative work will be organized.']
+    line: ['Important information is communicated to all team members in a timely manner.', 'After discussions and meetings, the team has a shared understanding of decisions made and next steps.', 'The team develops clear agreements on how collaborative work will be organised.'],
+    mid: ['Important information is communicated to all team members in a timely manner.', 'After discussions and meetings, the team has a shared understanding of decisions made and next steps.', 'The team develops clear agreements on how collaborative work will be organised.']
   },
   ]
  },
@@ -46,9 +46,9 @@ export const teamFactorsList =  [
    'Collaborative decision making',
    'Engagement of every member in collaborative work'
    ],
- keyCompetencies: ["Emotional intelligence", "Empathy", "Active listening", "Relationship building", "Inclusive leadership", "Ethical behavior"],
+ keyCompetencies: ["Emotional intelligence", "Empathy", "Active listening", "Relationship building", "Inclusive leadership", "Ethical behaviour"],
  trainings: [
- { name: "Assertive Behavior", audience: ['line','mid'] },
+ { name: "Assertive Behaviour", audience: ['line','mid'] },
  { name: "Emotional Leadership", audience: ['line','mid'] },
  { name: "Trust and Psychological Safety Training", audience: ['line','mid'] },
  { name: "Team Management", audience: ['line','mid'] },
@@ -73,8 +73,8 @@ export const teamFactorsList =  [
   ]
  },
  {
- id: 'capacity', title: 'Focus and Priorities',
- wheelTitle: <>Focus &<br/>Priorities</>,
+ id: 'capacity', title: 'Focus and Prioritization',
+ wheelTitle: <>Focus &<br/>Prioritization</>,
  color: '#a78bfa',
  symptoms: ["Teams become overloaded.", "Efforts are scattered across too many tasks.", "Important work loses focus."],
  competencies: [
@@ -117,7 +117,7 @@ export const teamFactorsList =  [
    'Fulfilling commitments',
    'Mutual accountability for shared results'
    ],
- keyCompetencies: ["Performance management", "Accountability", "Results orientation", "Execution organization", "Delegation", "Control and monitoring"],
+ keyCompetencies: ["Performance management", "Accountability", "Results orientation", "Execution organisation", "Delegation", "Control and monitoring"],
  trainings: [
  { name: "Leadership Basics", audience: ['line'] },
  { name: "Situational Leadership", audience: ['line'] },
@@ -128,13 +128,13 @@ export const teamFactorsList =  [
  manifestations: [
   {
     practice: 'Fulfilling commitments',
-    line: ['The team identifies and openly communicates risks of failing to meet agreements in a timely manner.', 'When obstacles arise, the team does not abandon agreements but finds ways to fulfill them.'],
-    mid: ['The team identifies and openly communicates risks of failing to meet agreements in a timely manner.', 'When obstacles arise, the team does not abandon agreements but finds ways to fulfill them.']
+    line: ['The team identifies and openly communicates risks of failing to meet agreements in a timely manner.', 'When obstacles arise, the team does not abandon agreements but finds ways to fulfil them.'],
+    mid: ['The team identifies and openly communicates risks of failing to meet agreements in a timely manner.', 'When obstacles arise, the team does not abandon agreements but finds ways to fulfil them.']
   },
   {
     practice: 'Mutual accountability for shared results',
-    line: ['Team members consider the shared result to be their common accountability, not just the area of responsibility of individual members.', 'Team members openly remind each other of agreements and do not ignore cases of their non-fulfillment.', 'When necessary, team members take on additional tasks to achieve the shared result.'],
-    mid: ['Team members consider the shared result to be their common accountability, not just the area of responsibility of individual members.', 'Team members openly remind each other of agreements and do not ignore cases of their non-fulfillment.', 'When necessary, team members take on additional tasks to achieve the shared result.']
+    line: ['Team members consider the shared result to be their common accountability, not just the area of responsibility of individual members.', 'Team members openly remind each other of agreements and do not ignore cases of their non-fulfilment.', 'When necessary, team members take on additional tasks to achieve the shared result.'],
+    mid: ['Team members consider the shared result to be their common accountability, not just the area of responsibility of individual members.', 'Team members openly remind each other of agreements and do not ignore cases of their non-fulfilment.', 'When necessary, team members take on additional tasks to achieve the shared result.']
   },
   ]
  },
@@ -150,7 +150,7 @@ export const teamFactorsList =  [
    ],
  keyCompetencies: ["Stakeholder management", "Influencing", "Partnership building", "Collaboration", "Conflict management", "Communication"],
  trainings: [
- { name: "Assertive Behavior", audience: ['line','mid'] },
+ { name: "Assertive Behaviour", audience: ['line','mid'] },
  { name: "Influencing without Authority", audience: ['line','mid'] },
  { name: "Cross-functional Communication and Productive Conflicts", audience: ['line','mid'] },
  { name: "Team Management", audience: ['line','mid'] },
@@ -175,8 +175,8 @@ export const teamFactorsList =  [
   ]
  },
  {
- id: 'learning', title: 'Learning and Adaptation',
- wheelTitle: <>Learning &<br/>Adaptation</>,
+ id: 'learning', title: 'Learning and Adaptability',
+ wheelTitle: <>Learning &<br/>Adaptability</>,
  color: '#818cf8',
  symptoms: ["Over time, gaps in competencies and capabilities emerge.", "The same mistakes are repeated.", "Teams find it difficult to adapt to changes."],
  competencies: [
@@ -195,13 +195,13 @@ export const teamFactorsList =  [
  manifestations: [
   {
     practice: 'Learning from experience',
-    line: ['The team regularly analyzes the causes of its successes and failures and changes working approaches if necessary.', 'The team does not repeat the same mistakes systematically.', 'Gained experience and knowledge are quickly spread within the team and used in future work.'],
-    mid: ['The team regularly analyzes the causes of its successes and failures and changes working approaches if necessary.', 'The team does not repeat the same mistakes systematically.', 'Gained experience and knowledge are quickly spread within the team and used in future work.']
+    line: ['The team regularly analyses the causes of its successes and failures and changes working approaches if necessary.', 'The team does not repeat the same mistakes systematically.', 'Gained experience and knowledge are quickly spread within the team and used in future work.'],
+    mid: ['The team regularly analyses the causes of its successes and failures and changes working approaches if necessary.', 'The team does not repeat the same mistakes systematically.', 'Gained experience and knowledge are quickly spread within the team and used in future work.']
   },
   {
     practice: 'Continuous improvement of working methods',
-    line: ['The team proactively implements improvements in its working methods without waiting for external directives.', 'The team evaluates the results of implemented changes and retains the most effective practices.', 'The team studies the working methods of other teams or organizations and, if necessary, implements best practices without waiting for problems to arise.'],
-    mid: ['The team proactively implements improvements in its working methods without waiting for external directives.', 'The team evaluates the results of implemented changes and retains the most effective practices.', 'The team studies the working methods of other teams or organizations and, if necessary, implements best practices without waiting for problems to arise.']
+    line: ['The team proactively implements improvements in its working methods without waiting for external directives.', 'The team evaluates the results of implemented changes and retains the most effective practices.', 'The team studies the working methods of other teams or organisations and, if necessary, implements best practices without waiting for problems to arise.'],
+    mid: ['The team proactively implements improvements in its working methods without waiting for external directives.', 'The team evaluates the results of implemented changes and retains the most effective practices.', 'The team studies the working methods of other teams or organisations and, if necessary, implements best practices without waiting for problems to arise.']
   },
   {
     practice: 'Adaptation to new conditions and changes',

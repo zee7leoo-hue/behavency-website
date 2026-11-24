@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Laptop, Users, MessageCircle, Layers, Globe, CalendarDays, MapPin, BarChart3, ChevronRight } from 'lucide-react'
+import { Laptop, Users, MessageCircle, Layers, Globe, CalendarDays, MapPin, ChevronRight } from 'lucide-react'
 import './DeliverySectionV3.css'
 import bgElearning from '../assets/delivery/elearning.webp'
 import bgLive from '../assets/delivery/live.webp'
@@ -49,11 +49,10 @@ const STAGES = {
   },
   blended: {
     bg: bgBlended, icon: Layers, iconPos: [1013, 548, 94, 84], textX: 1137, titleY: 561, descY: [593, 619],
-    tfs: 27.8, dfs: 18.5, title: 'Blended', desc: ['A powerful mix of digital learning and', 'live sessions for lasting impact.'],
+    tfs: 27.8, dfs: 18.5, title: 'Blended', desc: ['Digital learning and live sessions, combined.', ''],
     pills: [
       { x: 1010, w: 120, icon: Laptop, a: 'Digital', b: 'learning', tx: 1069 },
       { x: 1160, w: 140, icon: Users, a: 'Expert-led', b: 'sessions', tx: 1224 },
-      { x: 1335, w: 175, icon: BarChart3, a: 'Higher', b: 'real-world impact', tx: 1388 },
     ],
     pillY: 660,
   },
@@ -63,7 +62,7 @@ const STAGES = {
 const SCREEN_TEXT = {
   elearning: [
     { t: 'Behavency', x: 994, y: 219.4, w: 55, r: -3.7, k: 13, s: 15, wt: 700, c: '#0d1740' },
-    { t: 'My Program', x: 1104, y: 212.7, w: 52, r: -4.6, k: 13, s: 13.5, wt: 600, c: '#0d1740' },
+    { t: 'My Programme', x: 1104, y: 212.7, w: 52, r: -4.6, k: 13, s: 13.5, wt: 600, c: '#0d1740' },
     { t: 'Modules', x: 1180, y: 207.3, w: 37, r: -3.9, k: 13, s: 13.5, wt: 600, c: '#0d1740' },
     { t: 'Progress', x: 1243, y: 203.2, w: 38, r: -3.2, k: 13, s: 13.5, wt: 600, c: '#0d1740' },
     { t: 'Psychological Safety', x: 969, y: 293.2, w: 211, r: -2.1, k: 4, s: 30, wt: 800, c: '#0d1740', serif: true, stroke: 0.7 },
@@ -94,7 +93,7 @@ export default function DeliverySectionV3() {
   const [active, setActive] = useState('elearning')
 
   return (
-    <section className="dv3" id="delivery-v2" aria-label="You choose how your people learn">
+    <section className="dv3" id="delivery-v2" aria-label="Training goes where the results point">
       <div className="dv3-canvas" style={{ '--u': 'calc(100cqw / 1600)' }}>
         {/* artwork for each stage, cross-fading */}
         {Object.entries(STAGES).map(([id, s]) => (
@@ -124,10 +123,10 @@ export default function DeliverySectionV3() {
           <span style={fs(15, 20)}>THE DEVELOPMENT JOURNEY</span>
         </div>
         <h2 className="dv3-title" style={box(120, 111, null, null, fs(68.4, 70))}>
-          You choose how<br />your <em>people</em> learn.
+          Training goes where<br />the <em>results</em> point.
         </h2>
         <p className="dv3-copy" style={box(121, 292, 600, null, fs(23, 32))}>
-          A flexible team development experience that<br />fits your organisation. Combine expert-led<br />sessions with digital learning and integrate<br />seamlessly into your learning ecosystem.
+          Each person works on their own priorities,<br />not a course for everyone. Choose e-learning,<br />live online, in person or a mix.
         </p>
         <p className="dv3-years" style={box(207, 456, 500, null, fs(19.2, 29))}>
           <b style={fs(23.5, 29)}>20+ years</b> <span style={fs(19.3, 29)}>of experience in team and leadership</span><br />

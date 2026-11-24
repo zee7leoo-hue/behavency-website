@@ -117,8 +117,8 @@ export default function SituationSection({ id = 'situation', variant = 'wave' })
         <span className="sx-eyebar" aria-hidden="true" />
         <h2 className="sx-title">The risk you can <em>see</em>{' '}<br /><em>coming.</em></h2>
         <p className="sx-sub">
-          When plans keep changing, line and mid-level{' '}<br />
-          managers carry the weight. If they lose their{' '}<br />
+          When plans keep changing, line managers and{' '}<br />
+          managers of managers carry the weight. If they lose their{' '}<br />
           footing, teams lose direction — long before it{' '}<br />
           shows in the numbers.
         </p>

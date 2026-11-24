@@ -1,3 +1,4 @@
+import StagePill from './StagePill'
 import React, { useState } from 'react';
 import './BuildSection.css';
 
@@ -307,7 +308,7 @@ export default function BuildSection() {
   ];
 
   return (
-    <section className="bs-section" id="build" ref={sectionRef}>
+    <section className="bs-section" ref={sectionRef}>
       <div className="bs-container">
 
         <div className="bs-split">
@@ -328,8 +329,9 @@ export default function BuildSection() {
 
           {/* Header (right) */}
           <div className="bs-header">
+            <StagePill num="03" title="Build" sub="Develop the right capabilities" tone="orange" />
             <h2 className="bs-heading">Turn insights into<br /><em>targeted development</em></h2>
-            <p className="bs-subheading">We turn assessment results into relevant modules and a practical plan for putting them into practice.</p>
+            <p className="bs-subheading">Each person’s results point to the programmes that matter most for them. Every programme comes with a Masterplan: a practical plan to use it at work.</p>
           </div>
         </div>
 

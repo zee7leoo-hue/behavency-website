@@ -43,7 +43,12 @@
 /* Laptop layout: the wave is gone, so trim the empty space at the bottom.
    The site switches "Why now" to the phone layout at 860px (@media (width <= 860px)). */
 @media (min-width: 861px) {
-  .sx { aspect-ratio: 1600 / 760; }
+  .sx { aspect-ratio: 1600 / 800; }
+  .sx-eyebrow { top: 7.6cqw; }
+  .sx-eyebar { top: 10cqw; }
+  .sx-title { top: 14.4cqw; }
+  .sx-sub { top: 24.6cqw; }
+  .sx-note { top: 35.8cqw; }
 }
 /* Phone layout: the photo used to sit at the bottom, so give the card some room below. */
 @media (max-width: 860px) {
@@ -85,3 +90,6 @@ iframe.platform-frame { background: #fff; }
 @keyframes sx-dot-fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @media (max-width: 860px) { .sx-dot.is-active { width: 30px; height: 11px; } }
 @media (prefers-reduced-motion: reduce) { .sx-dot.is-active::after { animation: none; transform: none; } }
+
+/* 24 Nov: the branching line opens from the middle in its turn (it used to jump in at the start) */
+#two-gaps .hb-flow .hb-split { clip-path: inset(0 0); }

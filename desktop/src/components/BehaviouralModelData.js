@@ -5,7 +5,7 @@ export const factorsList = [
    color: '#10b981',
   symptoms: ["Priorities become unclear.", "Teams start moving in different directions.", "Expectations and requirements are understood differently."],
   competencies: ["Translate strategy into clear guidelines for the team", "Define the team's area of responsibility", "Clearly define roles and expectations", "Form a shared understanding of what success means", "Ensure alignment between priorities and actual actions"],
-  keyCompetencies: ["Strategic Thinking", "Goal Setting", "Planning and Organization", "Communication", "Business Acumen", "Systems Thinking"],
+  keyCompetencies: ["Strategic Thinking", "Goal Setting", "Planning and Organisation", "Communication", "Business Acumen", "Systems Thinking"],
   trainings: [
   { name: "Leadership Fundamentals", audience: ['line']  },
   { name: "Effective Goal Setting", audience: ['line']  },
@@ -17,17 +17,17 @@ export const factorsList = [
   {
   practice: "Translate strategy into clear guidelines for the team",
   line: [
-   "Translates organizational goals into clear priorities and tasks for their team.",
-   "Helps employees understand how team goals connect to departmental and organizational goals."
+   "Translates organisational goals into clear priorities and tasks for their team.",
+   "Helps employees understand how team goals connect to departmental and organisational goals."
 ],
   mid: [
    "Translates strategic business goals into priorities for multiple teams or departments.",
-   "Ensures that first-level managers understand the business logic of the tasks facing them, not just their content."
+   "Ensures that line managers understand the business logic of the tasks facing them, not just their content."
 ]
   },
   {
   practice: "Define the team's area of responsibility",
-    practiceMid: "Ensure alignment of goals with organizational priorities",
+    practiceMid: "Ensure alignment of goals with organisational priorities",
   line: [
    "Clearly defines what results the team is responsible for, and what tasks and decisions lie outside their area of responsibility."
 ],
@@ -42,7 +42,7 @@ export const factorsList = [
    "Clearly explains to employees their roles, areas of responsibility, and expected results."
 ],
   mid: [
-   "Responsibility among first-level managers is distributed without duplication or ambiguity.",
+   "Responsibility among line managers is distributed without duplication or ambiguity.",
    "Formulates expectations for the quality of management work — not just for the team's business results."
 ]
   },
@@ -64,20 +64,20 @@ export const factorsList = [
 ],
   mid: [
    "Reallocates resources between teams when priorities change — promptly and justifiably.",
-   "Makes decisions on tradeoffs between competing tasks across multiple departments."
+   "Makes decisions on trade-offs between competing tasks across multiple departments."
 ]
   }
   ]
   },
  {
- id: 'safety', title: 'Trust & Inclusivity',
+ id: 'safety', title: 'Trust & Inclusion',
  
   color: '#f59e0b',
  symptoms: ["People hesitate to speak up.", "Levels of trust and engagement decline.", "Valuable ideas and perspectives go unheard."],
  competencies: ["Foster psychological safety", "Demonstrate transparency and consistency", "Encourage diversity of opinions and perspectives", "Maintain open and respectful communication", "Build a sense of belonging and team identity"],
- keyCompetencies: ["Emotional Intelligence", "Empathy", "Active Listening", "Relationship Building", "Inclusive Leadership", "Ethical Behavior"],
+ keyCompetencies: ["Emotional Intelligence", "Empathy", "Active Listening", "Relationship Building", "Inclusive Leadership", "Ethical Behaviour"],
  trainings: [
- { name: "Assertive Behavior", audience: ['line','mid']  },
+ { name: "Assertive Behaviour", audience: ['line','mid']  },
  { name: "Emotional Intelligence for Leaders", audience: ['line','mid']  },
  { name: "Trust & Psychological Safety in Teams", audience: ['line','mid']  },
  { name: "Team Management", audience: ['line','mid']  },
@@ -92,7 +92,7 @@ export const factorsList = [
 ],
  mid: [
   "Identifies signs of an unhealthy atmosphere in lower-level teams and intervenes before issues escalate.",
-  "Ensures first-level managers do not foster a culture of fear or silence within their teams."
+  "Ensures line managers do not foster a culture of fear or silence within their teams."
 ]
  },
  {
@@ -103,7 +103,7 @@ export const factorsList = [
 ],
  mid: [
   "Explains the reasoning behind difficult and unpopular decisions — does not merely announce the outcome.",
-  "Acts consistently toward different teams — avoids any sense of favoritism."
+  "Acts consistently toward different teams — avoids any sense of favouritism."
 ]
  },
  {
@@ -113,17 +113,17 @@ export const factorsList = [
 ],
  mid: [
   "Draws on diverse sources of information when making decisions — does not rely solely on their inner circle.",
-  "Establishes a norm where first-level managers actively encourage diverse perspectives within their teams."
+  "Establishes a norm where line managers actively encourage diverse perspectives within their teams."
 ]
  },
  {
  practice: "Maintain open and respectful communication",
  line: [
-  "Communicates respectfully with employees and puts a stop to any disrespectful behavior within the team.",
+  "Communicates respectfully with employees and puts a stop to any disrespectful behaviour within the team.",
   "Openly discusses difficult issues with employees and does not avoid uncomfortable conversations."
 ],
  mid: [
-  "Sets the communication standard across the entire perimeter — does not tolerate the suppression or distortion of information."
+  "Sets the communication standard across the whole part of the organisation they lead — does not tolerate the suppression or distortion of information."
 ]
  },
  {
@@ -132,7 +132,7 @@ export const factorsList = [
   "Acknowledges employees' contributions and highlights their significance to the team's overall results."
 ],
  mid: [
-  "Recognizes the contributions of first-level managers — creating a sense of shared ownership over collective results."
+  "Recognises the contributions of line managers — creating a sense of shared ownership over collective results."
 ]
  }
  ]
@@ -166,7 +166,7 @@ export const factorsList = [
  {
  practice: "Make sound decisions on priorities and trade-offs",
  line: [
-  "When resources or time are limited, determines which tasks to prioritize and decides which tasks the team can temporarily deprioritize.",
+  "When resources or time are limited, determines which tasks to prioritise and decides which tasks the team can temporarily deprioritise.",
   "Makes priority decisions independently, without escalating unnecessarily."
 ],
  mid: [
@@ -190,7 +190,7 @@ export const factorsList = [
   "Helps employees understand which tasks contribute most to team goals and why."
 ],
  mid: [
-  "Sees where energy across multiple teams is being wasted and redirects the perimeter.",
+  "Sees where energy across multiple teams is being wasted and redirects it.",
   "Connects the daily work of departments to business outcomes — helping teams see their contribution."
 ]
  },
@@ -200,7 +200,7 @@ export const factorsList = [
   "Streamlines team workflows by removing unnecessary formalities and actions that do not affect results."
 ],
  mid: [
-  "Protects teams from excessive external pressure — engaging with senior management and cross-functional teams on behalf of their perimeter."
+  "Protects teams from excessive external pressure — engaging with senior management and cross-functional teams on behalf of the area they lead."
 ]
  }
  ]
@@ -227,7 +227,7 @@ export const factorsList = [
   "Transfers accountability for task completion to individual employees."
 ],
  mid: [
-  "Management accountability is distributed across first-level managers — not centralized.",
+  "Management accountability is distributed across line managers — not centralized.",
   "Holds managers accountable for the quality of their managerial work — not just the team's business results."
 ]
  },
@@ -235,10 +235,10 @@ export const factorsList = [
  practice: "Ensure agreed goals and expected results are achieved",
  line: [
   "Takes responsibility for the team's results and does not shift blame onto employees or external circumstances.",
-  "When the team fails to achieve agreed results, independently analyzes the root causes and takes concrete corrective action — rather than just explaining the situation or revising expectations."
+  "When the team fails to achieve agreed results, independently analyses the root causes and takes concrete corrective action — rather than just explaining the situation or revising expectations."
 ],
  mid: [
-  "Identifies systemic obstacles that prevent results from being achieved across the entire perimeter."
+  "Identifies systemic obstacles that prevent results from being achieved across the whole part of the organisation they lead."
 ]
  },
  {
@@ -262,7 +262,7 @@ export const factorsList = [
   "Provides employees with specific, timely feedback on their work quality — not just an overall assessment of the final result."
 ],
  mid: [
-  "Sets uniform performance standards across the entire perimeter — applied consistently, not selectively.",
+  "Sets uniform performance standards across the whole part of the organisation they lead — applied consistently, not selectively.",
   "When standards are systematically not met, initiates structural changes — not just targeted conversations."
 ]
  },
@@ -286,7 +286,7 @@ export const factorsList = [
  competencies: ["Build productive working relationships", "Align stakeholders around shared goals", "Influence beyond formal authority", "Enable effective cross-functional collaboration", "Resolve disagreements and conflicts constructively"],
  keyCompetencies: ["Stakeholder Management", "Influencing", "Partnership Building", "Collaboration", "Conflict Management", "Communication"],
  trainings: [
- { name: "Assertive Behavior", audience: ['line','mid']  },
+ { name: "Assertive Behaviour", audience: ['line','mid']  },
  { name: "Influencing Without Authority", audience: ['line','mid']  },
  { name: "Cross-Functional Collaboration", audience: ['line','mid']  },
  { name: "Team Management", audience: ['line','mid']  },
@@ -300,7 +300,7 @@ export const factorsList = [
 ],
  mid: [
   "Builds partnerships with leaders of adjacent functions — based on mutual trust, not just formal processes.",
-  "Develops a network of influence beyond their own perimeter."
+  "Develops a network of influence beyond the area they lead."
 ]
  },
  {
@@ -339,7 +339,7 @@ export const factorsList = [
  practice: "Resolve disagreements and conflicts constructively",
  line: [
   "Intervenes in workplace disagreements in a timely manner and helps participants find a resolution before they escalate.",
-  "When destructive behavior is repeated, directly names the unacceptable actions and takes steps to put a stop to them."
+  "When destructive behaviour is repeated, directly names the unacceptable actions and takes steps to put a stop to them."
 ],
  mid: [
   "Intervenes in cross-functional conflicts before they escalate — does not wait for the situation to reach senior leadership.",
@@ -349,7 +349,7 @@ export const factorsList = [
  ]
  },
  {
- id: 'learning', title: 'Learning & Adaptation',
+ id: 'learning', title: 'Learning & Adaptability',
  
   color: '#6366f1',
  symptoms: ["Competency and capability gaps emerge over time.", "The same mistakes keep repeating.", "Teams struggle to adapt to change."],
@@ -370,7 +370,7 @@ export const factorsList = [
   "Gives employees opportunities to take on new challenges and grow beyond their current role."
 ],
  mid: [
-  "Ensures that first-level managers are actively developing their people — not just managing tasks.",
+  "Ensures that line managers are actively developing their people — not just managing tasks.",
   "Deliberately identifies employees with management potential and creates conditions for their growth."
 ]
  },
@@ -390,8 +390,8 @@ export const factorsList = [
   "When conditions or priorities shift, quickly restructures the team's work and explains the reasons and logic behind the changes to employees."
 ],
  mid: [
-  "Restructures the operational model of the perimeter during strategic changes — does not merely relay new directives.",
-  "Supports first-level managers during periods of change — helping them maintain stability and lead their teams."
+  "Restructures the operational model of the area they lead during strategic changes — does not merely relay new directives.",
+  "Supports line managers during periods of change — helping them maintain stability and lead their teams."
 ]
  },
  {
@@ -412,7 +412,7 @@ export const factorsList = [
   "During periods of change, ensures the team has clarity on short-term priorities and maintains a productive working rhythm — even when the overall picture is not yet fully defined."
 ],
  mid: [
-  "Supports first-level managers in their role as change champions — helping them manage team resistance."
+  "Supports line managers in their role as change champions — helping them manage team resistance."
 ]
  }
  ]
@@ -425,7 +425,7 @@ export const allTrainings = [
   { name: 'Effective Goal Setting', audience: ['line'] },
   { name: 'Situational Leadership', audience: ['line'] },
   { name: 'Team Management', audience: ['line','mid'] },
-  { name: 'Assertive Behavior', audience: ['line','mid'] },
+  { name: 'Assertive Behaviour', audience: ['line','mid'] },
   { name: 'Emotional Intelligence for Leaders', audience: ['line','mid'] },
   { name: 'Influencing Without Authority', audience: ['line','mid'] },
   { name: 'Cross-Functional Collaboration', audience: ['line','mid'] },

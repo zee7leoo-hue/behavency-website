@@ -37,7 +37,7 @@
   // Texts for the website (from the texts page): formats, "after the programme, participants can", "helps with".
   const CONTENT = {"Performance Management":{"f":"In person","h":"nw","can":["Set clear, agreed goals and check progress against them","Give praise and corrective feedback that people act on","Run a fair, well-prepared end-of-period review"]},"Leadership Foundations":{"f":"In person","h":"n","can":["Explain what is expected of them in the manager role","Use four core communication skills in everyday conversations","Hold goal-setting, praise and correction conversations"]},"Adapting Your Leadership Style":{"f":"In person · Online","h":"bn","can":["Judge how ready each person is for a given task","Choose the right mix of direction and support for them","Agree clear expectations without micromanaging"]},"Situational Delegation":{"f":"In person","h":"bw","can":["Decide what to delegate to the managers in their team, and how","Match direction and support to each manager’s experience","Agree outcomes and check-ins instead of controlling the detail"]},"Leading a Team":{"f":"In person · Online","h":"b","can":["Recognise which stage of development their team is in","Adjust how they lead to that stage","Agree a team charter and handle early conflicts openly"]},"Assertive Behaviour":{"f":"In person · Online","h":"w","can":["Tell assertive behaviour apart from passive and aggressive","Hold their position without pressure, and say no when needed","Recognise manipulation and respond calmly"]},"Emotional Leadership":{"f":"In person · Online","h":"cw","can":["Notice how people are doing and adjust how they respond","Manage their own reactions under pressure","Use communication techniques that build trust"]},"Influence Without Authority":{"f":"In person","h":"c","can":["Map the stakeholders they need and what each one cares about","Adapt their message to different personality types","Build arguments around the other side’s interests"]},"Cross-functional Communication and Productive Conflict":{"f":"In person · Online","h":"c","can":["Clarify a request so everyone understands it the same way","Agree who is responsible for what across teams","Use win-win tools when interests clash"]},"Motivation That Lasts":{"f":"In person · Online","h":"w","can":["Recognise what is really driving each person’s motivation","Hold conversations that help people find more lasting motivation","Look after their own energy and motivation"]},"Trust and Psychological Safety":{"f":"In person · Online","h":"cb","can":["Recognise the signs of low psychological safety in their team","Use questions, active listening and feedback to build trust","Run a coaching conversation with the GROW model"]},"Leading Change":{"f":"In person · Online","h":"c","can":["Explain why change efforts fail and what helps them work","Recognise where each person is in accepting a change","Build a plan for a real change in their own area"]},"Strategic Thinking":{"f":"In person · Online","h":"c","can":["Separate urgent demands from what matters long term","Assess how trends and changes affect their area","Turn a strategic goal into clear priorities for their team"],"o":"Step back from day-to-day pressure and connect decisions to where the organisation is going.","short":"Connect daily decisions to long-term goals."},"Critical Thinking":{"f":"In person · Online","h":"c","can":["Separate facts from assumptions","Test the quality of an argument or proposal","Compare options on clear criteria"],"o":"Question assumptions, weigh the evidence and reach conclusions that hold up.","short":"Test assumptions and weigh evidence before deciding."},"Problem Analysis and Decision-Making":{"f":"In person · Online","h":"w","can":["Tell a symptom from the real problem","Find root causes with fishbone and Pareto analysis","Weigh options and plan how to win support for the decision"]},"Innovative Thinking":{"f":"In person · Online","h":"c","can":["Spot where improvement is possible in their area","Generate and select ideas with simple tools","Test an idea in a small pilot and learn from the feedback"]},"Team Effectiveness Session":{"f":"In person · Online","h":"b","can":["Name where the team gets stuck","Practise tools for trust, healthy conflict and commitment","Leave with an agreed way of working together"]},"Shared Goals, Clear Roles":{"f":"In person · Online","h":"bc","can":["Agree what the team is there to achieve","Clarify who does what, and where roles overlap","Spot mismatched expectations before they cause friction"]},"Psychological Safety in the Team":{"f":"In person · Online","h":"c","can":["Recognise what makes it hard to speak up in the team","Agree habits that make questions and disagreement normal","Learn from mistakes without blame"]},"Team Priorities and Focus":{"f":"In person · Online","h":"w","can":["Separate urgent work from important work","Agree the few priorities that matter most now","Decide together what to stop or postpone"]},"Team Agreements and Accountability":{"f":"In person · Online","h":"b","can":["Set working agreements the whole team signs up to","Follow up on commitments without blame","Raise it early when an agreement isn’t kept"]},"Resilience to Change":{"f":"In person · Online","h":"c","can":["Recognise how change affects the team’s energy and focus","Use simple routines to stay steady under pressure","Plan for different scenarios instead of waiting"]},"Managing Change Together":{"f":"In person · Online","h":"c","can":["Understand the stages people go through in a change (ADKAR)","Find where the team is stuck in a current change","Agree the next practical steps together"]}};
   const HELPS = {"w":"Heavier workloads","c":"Constant change","b":"Bigger teams","n":"New managers"};
-  const RISK_LINE = "Each programme is adapted to what your managers are facing now: heavier workloads, constant change and bigger teams.";
+  const RISK_LINE = "Delivered in person, online or as e-learning, depending on the programme. Each one comes with a Masterplan to practise it at work.";
   P.forEach((p) => { const c = CONTENT[p.t]; if (c) { if (c.f) p.f = c.f; if (!p.o && c.o) p.o = c.o; p.can = c.can; p.h = c.h; p.short = c.short; } p.pr = false; });
   const CLEAN = !!window.BHV_CLEAN; // clean page for the website: no mock-up bars or hints
   const FEATURED = ['Performance Management', 'Leading a Team', 'Influence Without Authority', 'Leading Change', 'Problem Analysis and Decision-Making', 'Team Effectiveness Session'];
@@ -87,7 +87,7 @@
   .bq-chips span { font: 500 13.5px/1.2 Inter, sans-serif; color: #2b3350; background: #fff; border: 1px solid #e4e0d6; border-radius: 999px; padding: 8px 12px; }
   .bq-chips span.more { background: #fdf0e3; border-color: #f3d3b3; color: #9a4a08; font-weight: 600; }
   /* main-page block, desktop: copied from catalogue.png */
-  .bq-c .bq-in { max-width: 1240px; }
+  .bq-c .bq-in { max-width: 1360px; }
   .bq-c { background: radial-gradient(760px 420px at 100% 0, rgba(214,198,252,.45), rgba(214,198,252,0) 60%), #fbf8f6 !important; border: 0 !important; padding: 96px 0 100px !important; }
   .bq-c .bq-eye { color: #e8701a; }
   .bq-c .bq-h { font-family: "Playfair Display", "Source Serif 4", Georgia, serif !important; font-weight: 600 !important; font-size: 48px !important; }
@@ -95,7 +95,7 @@
   .bq-c .bq-all { padding: 15px 26px; font-size: 16px; border-width: 1.5px; }
   .bq-cgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 40px; }
   .bq-ccard { background: #fff; border: 1px solid #efebf3; border-radius: 22px; padding: 24px 26px 24px; box-shadow: 0 8px 26px rgba(60,40,120,.07); display: flex; flex-direction: column; }
-  .bq .bq-cfor { margin: 0 !important; font: 700 12.5px/1.3 Inter, sans-serif !important; letter-spacing: .1em !important; text-transform: uppercase !important; color: #6a4bd2 !important; }
+  .bq .bq-cfor { margin: 0 !important; font: 700 12.5px/1.3 Inter, sans-serif !important; letter-spacing: .1em !important; text-transform: uppercase !important; color: #c2650f !important; }
   .bq .bq-ct { margin: 12px 0 0 !important; font: 700 22px/1.25 Inter, sans-serif !important; letter-spacing: -.01em; color: #0f1b3d !important; }
   .bq .bq-co2 { margin: 10px 0 0 !important; font: 400 16px/1.5 Inter, sans-serif !important; color: #4f5770 !important; }
   .bq-chips2 { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; padding-top: 20px; }
@@ -195,15 +195,15 @@
     const feat = FEATURED.map((t) => P.find((p) => p.t === t));
     if (!M) return el(`<div class="bq bq-band bq-c" data-px><div class="bq-in">
       <div class="bq-top"><div><div class="bq-eye">Our programmes</div><h2 class="bq-h">Training for the gaps <em>that matter.</em></h2>
-      <p class="bq-lead">Each participant gets the programmes that match their priority areas.<br>Formats vary by programme. A few of them:</p></div>
+      <p class="bq-lead">A few of our programmes. Formats vary by programme.</p></div>
       <button class="bq-all" type="button">See all programmes →</button></div>
       <div class="bq-cgrid">${feat.map((p) => `<div class="bq-ccard"><p class="bq-cfor">${AUD[p.a]}</p><h4 class="bq-ct">${p.t}</h4><p class="bq-co2">${p.o}</p>${p.f ? `<div class="bq-chips2">${p.f.split(' · ').map((x) => `<span>${ico(/day/.test(x) ? 'clock' : /Online/.test(x) ? 'laptop' : 'user', 17)}${x}</span>`).join('')}</div>` : ''}</div>`).join('')}</div>
     </div></div>`);
     if (M) return el(`<div class="bq bq-band" data-px><div class="bq-in"><div class="bq-eye">Our programmes</div><h2 class="bq-h">Training for the gaps <em>that matter.</em></h2>
-      <p class="bq-lead">Each participant gets the programmes that match their priority areas.</p>${mobileBody()}</div></div>`);
+      <p class="bq-lead">A few of our programmes. Formats vary by programme.</p>${mobileBody()}</div></div>`);
     return el(`<div class="bq bq-band" data-px><div class="bq-in">
       <div class="bq-top"><div><div class="bq-eye">Our programmes</div><h2 class="bq-h">Training for the gaps <em>that matter.</em></h2>
-      <p class="bq-lead">Each participant gets the programmes that match their priority areas. Formats vary by programme. A few of them:</p></div>
+      <p class="bq-lead">A few of our programmes. Formats vary by programme.</p></div>
       ${M ? '' : '<button class="bq-all" type="button">See all programmes →</button>'}</div>
       <div class="bq-tiles">${feat.map((p) => `<div class="bq-tile"><p class="bq-for">${AUD[p.a]}</p><h4 class="bq-t">${p.t}</h4>${outcome(p)}${p.f ? `<p class="bq-fmt">${p.f}</p>` : ''}</div>`).join('')}</div>
       <div class="bq-mob-all"><button class="bq-all" type="button">See all programmes →</button></div>
@@ -289,6 +289,7 @@
   .bc-logo { display: flex; align-items: center; gap: 10px; font: 600 ${M ? 21 : 26}px/1 "Playfair Display", "Source Serif 4", Georgia, serif; color: #0f1b3d; background: none; border: 0; cursor: pointer; padding: 0; }
   .bc-logo i { width: ${M ? 28 : 32}px; height: ${M ? 28 : 32}px; border-radius: 8px; background: #0f1b3d; display: grid; place-items: center; }
   .bc-logo i::before { content: ""; width: 12px; height: 12px; background: radial-gradient(circle, #fff 2.4px, transparent 2.9px) 0 0 / 6px 6px; }
+  .bc-logo img { height: ${M ? 26 : 30}px; width: auto; display: block; }
   .bc-links { display: ${M ? 'none' : 'flex'}; gap: 34px; }
   .bc-links button { border: 0; background: none; font: 500 15px/1 Inter, sans-serif; color: #2b3350; cursor: pointer; padding: 0; }
   .bc-demo { margin-left: auto; border: 0; background: #0f1b3d; color: #fff; border-radius: 999px; padding: ${M ? '10px 16px' : '13px 26px'}; font: 600 ${M ? 13.5 : 15}px/1 Inter, sans-serif; cursor: pointer; }
@@ -319,7 +320,13 @@
   .bc-area { display: inline-flex; align-items: center; gap: 10px; ${M ? '' : 'margin-left: auto;'} font: 600 13.5px/1 Inter, sans-serif; color: #5a6278; }
   .bc-area select { appearance: none; -webkit-appearance: none; border: 1.5px solid #dcd7e8; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%235b3fc4' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 14px center; border-radius: 999px; padding: ${M ? '9px 36px 9px 14px' : '10px 40px 10px 16px'}; font: 600 ${M ? 13.5 : 14}px/1 Inter, sans-serif; color: #0f1b3d; cursor: pointer; }
   .bc .bc-empty { margin: 26px 0 !important; font: 400 15px/1.5 Inter, sans-serif !important; color: #5a6278 !important; }
-  /* groups and cards */
+  /* groups and cards: each audience has its own soft colour, the same as the three levels in the model */
+  .bc .bc-navback { margin: 0 !important; padding: 9px 15px !important; }
+  .bc-grp[data-g="l"] { --g: #2268d6; --gt: #e9f0fd; } .bc-grp[data-g="m"] { --g: #0f9b84; --gt: #e2f5f0; } .bc-grp[data-g="t"] { --g: #6a3fd8; --gt: #efe9fc; }
+  .bc-grp[data-g] { margin-top: 20px; padding: ${M ? '20px 14px 16px' : '28px 26px 24px'} !important; border-radius: 22px; background: linear-gradient(180deg, var(--gt) 0, rgba(255,255,255,0) 220px); border-top: 3px solid var(--g); }
+  .bc-grp[data-g] .bc-gh::before { content: ""; width: 11px; height: 11px; border-radius: 50%; background: var(--g); flex: none; }
+  .bc-grp[data-g] .bc-count { color: var(--g); background: #fff; box-shadow: 0 0 0 1px var(--gt); }
+  .bc-grp[data-g] .bc-card .bc-tile { background: var(--gt); color: var(--g); }
   .bc-grp { padding: ${M ? '20px 0 4px' : '26px 0 4px'}; }
   .bc .bc-gh { display: flex; align-items: center; gap: 14px; font: 600 ${M ? 22 : 26}px/1.1 "Source Serif 4", Georgia, serif !important; color: #0f1b3d !important; margin-bottom: ${M ? 12 : 14}px; letter-spacing: -.01em; }
   .bc-count { font: 600 ${M ? 12.5 : 13}px/1 Inter, sans-serif; color: #5b3fc4; background: #ece6fb; border-radius: 999px; padding: 5px 10px; }
@@ -332,6 +339,10 @@
   .bc .bc-co.none { color: #9aa0b4 !important; font-style: italic; }
   .bc-more { display: inline-flex; align-items: center; gap: 5px; margin-top: 8px; font: 600 13.5px/1 Inter, sans-serif; color: #ef7a1a; }
   .bc-pr { display: inline-block; vertical-align: 3px; margin-left: 8px; font: 700 10px/1 Inter, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: #9a4a08; background: #fde9d6; padding: 4px 7px; border-radius: 4px; }
+  .bc .bc-end { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: -30px; margin-bottom: 90px; background: #fff; border-radius: 22px; padding: 30px 36px; box-shadow: 0 0 0 1px rgba(20,35,75,.06), 0 24px 50px -34px rgba(30,25,80,.3); max-width: 1144px; }
+  .bc .bc-end p { margin: 0; font: 600 24px/1.25 "Playfair Display", Georgia, serif; color: #0f1b3d; }
+  .bc .bc-end p span { display: block; margin-top: 6px; font: 400 16px/1.5 Inter, sans-serif; color: #4f5770; }
+  .bc .bc-cta { flex: none; border: 0; background: #0f1b3d; color: #fff; border-radius: 999px; padding: 15px 28px; font: 600 15px/1 Inter, sans-serif; cursor: pointer; }
   .bc .bc-note { margin: ${M ? '26px 0 40px' : '34px 0 70px'}; padding-top: 18px; border-top: 1px solid #e6e2ec; font: 400 15px/1.5 Inter, sans-serif !important; color: #4f5770 !important; }
   .bc .bc-note b { color: #0f1b3d; }
   /* details panel */
@@ -372,7 +383,7 @@
   }
   function groupsHTML(k, area = '') {
     const groups = k === 'all' ? LEVELS.slice(1) : LEVELS.filter(([x]) => x === k);
-    const html = groups.map(([g, n]) => { const items = P.filter((p) => p.a.includes(g) && (!area || p.ar.includes(area))); if (!items.length) return ''; return `<div class="bc-grp"><h2 class="bc-gh">${n}<span class="bc-count">${items.length}</span></h2><div class="bc-cards">${items.map(cardHTML).join('')}</div></div>`; }).join('');
+    const html = groups.map(([g, n]) => { const items = P.filter((p) => p.a.includes(g) && (!area || p.ar.includes(area))); if (!items.length) return ''; return `<div class="bc-grp" data-g="${g}"><h2 class="bc-gh">${n}<span class="bc-count">${items.length}</span></h2><div class="bc-cards">${items.map(cardHTML).join('')}</div></div>`; }).join('');
     return html || '<p class="bc-empty">No programmes for this combination yet. Try “All” or another area.</p>';
   }
 
@@ -381,11 +392,10 @@
     const NOTE_HTML = '<p class="bc-note"><b>Also available:</b> one-to-one coaching for managers of managers, and team coaching with the manager.</p>';
     const AREA_SELECT = `<label class="bc-area"><span>Area</span><select aria-label="Area">${['', ...Object.keys(AREAS)].map((k) => `<option value="${k}">${k ? AREAS[k][0] : 'All six areas'}</option>`).join('')}</select></label>`;
     const ov = el(`<div class="bc" role="dialog" aria-modal="true" aria-label="Programmes">${ARC}
-      <div class="bc-nav"><div class="bc-in"><button class="bc-logo" type="button" data-close><i></i>Behavency</button>
-        <div class="bc-links"><button type="button" data-close>How It Works</button><button type="button" data-close>The Journey</button><button type="button" data-close>What’s Different</button><button type="button" data-close>Packages</button></div>
-        <button class="bc-demo" type="button" data-close>Request a Demo</button></div></div>
+      <div class="bc-nav"><div class="bc-in"><button class="bc-logo" type="button" data-close><img src="logo-behavency.png" alt="">Behavency</button>
+        <button class="bc-back bc-navback" type="button" data-close>${ico('back', 16)} Back to the journey</button>
+        <button class="bc-demo" type="button" data-close>Request a demo</button></div></div>
       <div class="bc-in bc-head">
-        <button class="bc-back" type="button" data-close>${ico('back', 16)} Back to the journey</button>
         <div class="bc-eye"><span class="bc-tile">${ico('cap', M ? 22 : 26)}</span>Programmes</div>
         <h1 class="bc-h">Programmes for managers <em>and teams.</em></h1>
         <p class="bc-lead">Each participant gets the programmes that match their priority areas, with a plan to apply them at work.</p>
@@ -393,6 +403,7 @@
                 <div class="bc-frow"><div class="bc-filters" role="group" aria-label="Filter">${LEVELS.map(([k, n]) => `<button type="button" data-lv="${k}" aria-pressed="${k === lv}">${n} <b>${k === 'all' ? P.length : count(k)}</b></button>`).join('')}</div></div>
       </div>
       <div class="bc-in bc-res">${groupsHTML(lv)}<p class="bc-note"><b>Also available:</b> one-to-one coaching for managers of managers, and team coaching with the manager.</p></div>
+      <div class="bc-in bc-end"><p>Not sure which programmes fit? <span>We’ll match them to your managers’ results.</span></p><button type="button" class="bc-cta" data-cm-open>Request a demo</button></div>
     </div>`);
     const close = () => { closePanel(); ov.remove(); document.documentElement.style.overflow = ''; removeEventListener('keydown', esc); removeEventListener('popstate', pop); };
     const esc = (e) => { if (e.key !== 'Escape') return; if (document.querySelector('.bc-panel')) closePanel(); else history.back(); };

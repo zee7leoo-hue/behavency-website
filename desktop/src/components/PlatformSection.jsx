@@ -36,7 +36,7 @@ export default function PlatformSection() {
     <iframe
       ref={frame}
       className="platform-frame"
-      title="From insight to action: the Behavency platform"
+      title="Three questions leadership will ask: the Behavency platform"
       src={`${import.meta.env.BASE_URL}platform-section.html`}
       onLoad={onLoad}
       scrolling="no"

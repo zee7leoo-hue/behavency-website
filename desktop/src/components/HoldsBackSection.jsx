@@ -17,7 +17,7 @@ export default function HoldsBackSection() {
   useEffect(() => {
     const flow = flowRef.current
     if (!flow || !('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined
-    const STEP = 480 // a new row about every half second, both sides together
+    const STEP = 260 // a new row about every quarter second, both sides together
     const mark = (el, k, cls) => { if (!el) return; el.classList.add(cls); el.style.setProperty('--d', `${k * STEP}ms`) }
     let k = 0
     mark(flow.querySelector('.hb-start'), k++, 'rv')
@@ -60,7 +60,7 @@ export default function HoldsBackSection() {
           <div className="hb-flow" ref={flowRef} style={{ marginTop: 56 }}>
             <div className="hb-start">
               <span className="hb-hex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><use href="#i-list" /></svg></span>
-              <span style={{ textAlign: 'left' }}><b>Your managers answer</b><small>with their teams and the organisation</small></span>
+              <span style={{ textAlign: 'left' }}><b>Your managers answer</b><small>about their team and the organisation</small></span>
               <span className="hb-faces"><span className="hb-face f1">AK</span><span className="hb-face f2">MP</span><span className="hb-face f3">LS</span><span className="hb-face f4">DT</span><span className="hb-face more">+38</span></span>
             </div>
             <div className="hb-line-v live" style={{ height: 40 }} />
@@ -74,17 +74,17 @@ export default function HoldsBackSection() {
                   <div className="hb-item"><span className="hb-ico hb-ico--blue"><Ico id="i-target" /></span>Setting priorities</div>
                   <div className="hb-item"><span className="hb-ico hb-ico--blue"><Ico id="i-check" /></span>Following through</div>
                   <div className="hb-item"><span className="hb-ico hb-ico--blue"><Ico id="i-chat" /></span>A team that speaks up</div>
-                  <div className="hb-result"><div className="hb-card"><span className="hb-ico hb-ico--blue"><Ico id="i-sprout" /></span><span>Targeted development<small>in Build</small></span></div></div>
+                  <div className="hb-result"><div className="hb-card"><span className="hb-ico hb-ico--blue"><Ico id="i-sprout" /></span><span>Worked on in their training<small>the next stage, Build</small></span></div></div>
                 </div>
                 <div className="hb-line-v hb-m-line" style={{ height: 44, marginTop: 18 }} />
               </div>
               <div className="hb-branch">
                 <div className="hb-chain">
-                  <span className="hb-flag hb-flag--amber">What holds them back<em>· example</em></span>
+                  <span className="hb-flag hb-flag--amber">What holds them back <em>· example</em></span>
                   <div className="hb-item"><span className="hb-ico hb-ico--amber"><Ico id="i-layers" /></span>Too many priorities<span className="hb-count"><span className="hb-faces sm"><span className="hb-face f2" /><span className="hb-face f3" /><span className="hb-face f5" /></span>28 of 42</span></div>
                   <div className="hb-item"><span className="hb-ico hb-ico--amber"><Ico id="i-hourglass" /></span>Slow approvals<span className="hb-count"><span className="hb-faces sm"><span className="hb-face f1" /><span className="hb-face f4" /><span className="hb-face f2" /></span>22 of 42</span></div>
-                  <div className="hb-item"><span className="hb-ico hb-ico--amber"><Ico id="i-lock" /></span>Decided without them<span className="hb-count"><span className="hb-faces sm"><span className="hb-face f5" /><span className="hb-face f1" /></span>17 of 42</span></div>
-                  <div className="hb-result"><div className="hb-card"><span className="hb-ico hb-ico--amber"><Ico id="i-file" /></span><span>A report for leadership and HR<small>what most managers run into</small></span></div></div>
+                  <div className="hb-item"><span className="hb-ico hb-ico--amber"><Ico id="i-lock" /></span>Decisions made without them<span className="hb-count"><span className="hb-faces sm"><span className="hb-face f5" /><span className="hb-face f1" /></span>17 of 42</span></div>
+                  <div className="hb-result"><div className="hb-card"><span className="hb-ico hb-ico--amber"><Ico id="i-file" /></span><span>A barriers report for leadership<small>which obstacles hold back the most managers</small></span></div></div>
                 </div>
               </div>
             </div>

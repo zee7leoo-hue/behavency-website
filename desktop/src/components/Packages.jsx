@@ -9,23 +9,23 @@ const packages = [
     name: 'Proficiency',
     tagline: 'A focused assessment and individual insight',
     color: '#1E3A5F',
-    includes: ['Managerial Profile (self-assessment)', '360 Feedback', 'Individual Manager Report', 'Optional: Structured Interview'],
-    bestFor: 'Organizations starting with manager self-awareness and stakeholder feedback.',
+    includes: ['Managerial Profile (self-assessment)', '360° Feedback', 'Individual Manager Report', 'Optional: Structured Interview, with Interview Studio practice for your HR team'],
+    bestFor: 'Organisations starting with manager self-awareness and stakeholder feedback.',
   },
   {
     name: 'Complete',
-    tagline: 'The full diagnostic picture — individual, team, and organizational',
+    tagline: 'The full diagnostic picture — individual, team, and organisational',
     color: '#0F766E',
     featured: true,
-    includes: ['Everything in Proficiency', 'Workplace Effectiveness Survey', 'Resilience to Change Assessment', 'Team Assessment (same model)', 'Individual + Executive Reports'],
-    bestFor: 'Organizations that want to understand people AND the conditions around them.',
+    includes: ['Everything in Proficiency', 'Workplace Effectiveness Survey', 'Resilience to Change', 'Team assessment, on the same six areas', 'Individual reports and a leadership report'],
+    bestFor: 'Organisations that want to understand people AND the conditions around them.',
   },
   {
     name: 'Flex',
     tagline: 'Choose the combination that fits your specific situation',
     color: '#B45309',
     includes: ['Any combination of the above assessments', 'Configurable by cohort or programme', 'Speak with us to design the right scope'],
-    bestFor: 'Organizations with a specific context or existing frameworks to work within.',
+    bestFor: 'Organisations with a specific context or existing frameworks to work within.',
   },
 ]
 
@@ -42,7 +42,7 @@ export default function Packages() {
             Start at the depth<br/><em>your context requires.</em>
           </h2>
           <p className="subhead">
-            No invented pricing. The right package depends on what your organization needs.
+            Every organisation starts from a different place. Choose the depth that fits yours, or let us shape it with you.
           </p>
         </motion.div>
 
@@ -85,7 +85,7 @@ export default function Packages() {
         </div>
 
         <p className="packages__note">
-          Pricing is tailored to your organization's size and programme scope.{' '}
+          The team game, training and re-assessment are planned with you on top of any package. Pricing is tailored to your organisation's size and programme scope.{' '}
           <a href="#contact">Speak with us</a> — no obligation.
         </p>
       </div>

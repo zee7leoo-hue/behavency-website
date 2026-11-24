@@ -43,7 +43,7 @@ export default function Footer() {
         <div className="footer__col">
           <h4 className="footer__col-title">Company</h4>
           <a href="https://behavency.me" target="_blank" rel="noopener noreferrer" className="footer__link">behavency.me</a>
-          <a href="#contact" className="footer__link">Request a Demo</a>
+          <a href="#contact" className="footer__link">Request a demo</a>
           <a href="#" className="footer__link">Privacy Policy</a>
         </div>
       </div>

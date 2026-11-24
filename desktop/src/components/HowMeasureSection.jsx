@@ -13,12 +13,12 @@ const fs = (size, lh, extra = {}) => ({ fontSize: u(size), lineHeight: lh ? u(lh
 /* y values below are design pixels measured from the top of the section (the supplied image minus its 60px header) */
 const COLS = [
   { x: 52, label: 'DURING DEVELOPMENT', title: 'Was it useful?', body: ['After each module, participants', 'rate how relevant and practical', 'it was for their work.'], item: 'Short participant feedback' },
-  { x: 396, label: 'AFTER 3 MONTHS', title: 'Is it being used?', body: ['Participants check in on their plan:', 'which actions they have tried at', 'work, and what got in the way.'], item: 'Development plan check-in' },
+  { x: 396, label: 'AT THE END OF TRAINING', title: 'Is it being used?', body: ['Participants check in on their plan:', 'which actions they have tried at', 'work, and what got in the way.'], item: 'Development plan check-in' },
 ]
 const VIEWS = [
   { y: 530, Icon: User, tone: 'blue', title: 'The manager’s view', desc: ['How they now see their own behaviour.'], pill: 'Managerial Profile' },
   { y: 624, Icon: Users, tone: 'violet', title: 'The team’s view', desc: ['Whether colleagues see a difference', 'day to day.'], pill: '360° Feedback' },
-  { y: 718, Icon: Layers, tone: 'green', title: 'The working conditions', desc: ['Whether the barriers that were raised', 'have eased.'], pill: 'Organisational Barriers' },
+  { y: 718, Icon: Layers, tone: 'green', title: 'The working conditions', desc: ['Whether the barriers that were raised', 'have eased.'], pill: 'Workplace Effectiveness Survey' },
 ]
 
 export default function HowMeasureSection() {
@@ -37,8 +37,8 @@ export default function HowMeasureSection() {
         </h2>
 
         <p className="hm-sub" style={box(52, 128, 1100, null, { fontSize: '0.9458vw', lineHeight: 1.45 })}>
-          Not just whether people completed the training — but whether their behaviour changed. We check along<br />
-          the way, and then ask the same people the same questions again.
+          Not just whether people finished the training, but whether their behaviour changed. We check along<br />
+          the way, and again three months later.
         </p>
 
         <div className="hm-lower" style={{ top: u(-112), height: '100%' }}>
@@ -64,10 +64,10 @@ export default function HowMeasureSection() {
 
         {/* stage 3 */}
         <div className="hm-col">
-          <p className="hm-label" style={box(741, 389, 300, 20, fs(13.6, 20))}>AFTER 6 MONTHS</p>
+          <p className="hm-label" style={box(741, 389, 300, 20, fs(13.6, 20))}>3 MONTHS AFTER TRAINING</p>
           <h3 className="hm-h" style={box(740, 417, 420, 44, fs(31.5, 44))}>Has behaviour changed?</h3>
           <p className="hm-body" style={box(741, 470, 560, null, { fontSize: 'calc(0.9458vw - 2px)', lineHeight: 1.46 })}>
-            The same questionnaires, the same people. Results are<br />compared with the starting point, area by area, from three angles:
+            Results are compared with the starting point, area by area,<br />from three angles:
           </p>
           {VIEWS.map((v) => (
             <div className="hm-card" key={v.title} style={box(740, v.y, 490, 84, { borderRadius: u(10) })}>

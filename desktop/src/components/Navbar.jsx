@@ -29,7 +29,7 @@ export default function Navbar() {
         transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}>
         <div className="nav__inner container">
           <a href="#" className="nav__logo">
-            <img src={logoHead} alt="" aria-hidden="true" style={{ height: 38, width: 'auto', display: 'block' }} />
+            <img src={logoHead} alt="" aria-hidden="true" className="bhv-logo" style={{ height: 38, width: 'auto', display: 'block' }} />
             Behavency
           </a>
 
@@ -38,7 +38,7 @@ export default function Navbar() {
           </nav>
 
           <div className="nav__actions">
-            <a href="#contact" className="btn btn-navy" style={{ padding: '8px 18px', fontSize: 13 }}>Request a Demo</a>
+            <a href="#contact" className="btn btn-navy" style={{ padding: '8px 18px', fontSize: 13 }}>Request a demo</a>
             <button className="nav__burger" onClick={() => setOpen(o => !o)}>
               {open ? <X size={20}/> : <Menu size={20}/>}
             </button>
@@ -57,7 +57,7 @@ export default function Navbar() {
                 {l.label}
               </motion.a>
             ))}
-            <a href="#contact" className="btn btn-navy" style={{ marginTop: 12 }} onClick={() => setOpen(false)}>Request a Demo</a>
+            <a href="#contact" className="btn btn-navy" style={{ marginTop: 12 }} onClick={() => setOpen(false)}>Request a demo</a>
           </motion.div>
         )}
       </AnimatePresence>

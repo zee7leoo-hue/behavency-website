@@ -19,7 +19,7 @@ export default function HiringSection() {
           <div className="hr-eyebrow"><span className="hr-dash" aria-hidden="true" />ALSO FOR HIRING</div>
           <h2 className="hr-title">Hiring a manager? <br /><em>Lower the risk.</em></h2>
           <p className="hr-lead">
-            <span className="d">An interview shows how a candidate presents themselves. The Managerial Behaviour Profile shows how they are likely to manage: one input next to interviews and references, not a verdict.</span>
+            <span className="d">An interview shows how a candidate presents themselves. The Managerial Profile shows how they are likely to manage: one input next to interviews and references, not a verdict.</span>
             <span className="m">Before you decide, see how a candidate is likely to manage people.</span>
           </p>
           <ol className="hr-steps">
@@ -48,8 +48,11 @@ export default function HiringSection() {
           </p>
         </div>
 
-        <div className="hr-right">
-          <img className="hr-doc" src={profile} alt="Candidate profile: Elias T., Managerial Behaviour Profile results for six areas of everyday management practice" />
+        <div className="hr-right hr-labelled">
+          <img className="hr-doc" src={profile} alt="Candidate profile: Elias T., Managerial Profile results for six areas of everyday management practice" />
+          <span className="hr-pin" style={{ top: '46%', left: '-5%' }}><b>1</b>Six areas</span>
+          <span className="hr-pin" style={{ top: '63%', right: '-7%' }}><b>2</b>Area to probe</span>
+          <span className="hr-pin" style={{ top: '80%', left: '-6%' }}><b>3</b>Strong areas</span>
         </div>
       </div>
     </section>

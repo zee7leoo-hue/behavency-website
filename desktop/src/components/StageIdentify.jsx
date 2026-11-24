@@ -1,3 +1,4 @@
+import StagePill from './StagePill'
 import React, { useState } from 'react'
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
@@ -33,13 +34,13 @@ const sources = [
   {
     num: '03',
     name: 'Workplace Effectiveness Survey',
-    desc: 'What in the organization helps or blocks this manager from being effective? It identifies key conditions and barriers, which we then connect to the areas they may affect.',
+    desc: 'What in the organisation helps or blocks this manager from being effective? It identifies key conditions and barriers, which we then connect to the areas they may affect.',
     modal: {
       title: 'Workplace Effectiveness Survey',
-      intro: 'This survey explores how the broader organization enables or hinders the manager\'s effectiveness. It captures the experiences of people who work across the organization, highlighting structural, cultural, and contextual factors that influence performance.',
-      examines: 'How the organization\'s systems, processes, culture and environment help or block the manager from being effective.',
+      intro: 'This survey explores how the broader organisation enables or hinders the manager\'s effectiveness. It captures the experiences of people who work across the organisation, highlighting structural, cultural, and contextual factors that influence performance.',
+      examines: 'How the organisation\'s systems, processes, culture and environment help or block the manager from being effective.',
       reveals: 'Patterns and barriers outside the manager\'s direct control, providing essential context for development and a more complete picture of their effectiveness.',
-      matters: 'Managerial effectiveness is shaped not only by individual behaviour, but also by the environment. Understanding organizational enablers and blockers leads to more relevant development and better, more sustainable results.',
+      matters: 'Managerial effectiveness is shaped not only by individual behaviour, but also by the environment. Understanding organisational enablers and blockers leads to more relevant development and better, more sustainable results.',
     },
   },
   {
@@ -51,7 +52,7 @@ const sources = [
       intro: 'A psychometric assessment that examines how a manager responds when circumstances change, under pressure, or when facing ambiguity. The results are not scored high or low — they reveal a pattern.',
       examines: 'The individual\'s characteristic response to change: what they default to, what they resist, and how their reactions affect the people around them.',
       reveals: 'Behavioural tendencies that may be invisible in stable conditions but become significant drivers of team experience during periods of uncertainty or transformation.',
-      matters: 'Organizations are rarely stable. A manager\'s resilience profile tells you how they will show up when it matters most — and where they may need support to lead effectively through change.',
+      matters: 'Organisations are rarely stable. A manager\'s resilience profile tells you how they will show up when it matters most — and where they may need support to lead effectively through change.',
     },
   },
   {
@@ -60,8 +61,8 @@ const sources = [
     desc: 'A guided conversation that explores the same six areas in depth, adding context, examples and meaning to the data.',
     modal: {
       title: 'Structured Interview',
-      intro: 'A one-to-one conversation led by a Behavency assessor or a trained HR professional, using the assessment data as its foundation. It gives the manager space to contextualize what the data shows and add nuance that numbers alone cannot capture.',
-      examines: 'The manager\'s own interpretation of their assessment results, their development history, and the organizational context in which they operate.',
+      intro: 'A one-to-one conversation led by a Behavency assessor or a trained HR professional, using the assessment data as its foundation. It gives the manager space to contextualise what the data shows and add nuance that numbers alone cannot capture.',
+      examines: 'The manager\'s own interpretation of their assessment results, their development history, and the organisational context in which they operate.',
       reveals: 'Qualitative depth that enriches quantitative data — uncovering intent, circumstance, and readiness for development that would otherwise remain hidden.',
       matters: 'Data without dialogue is incomplete. The structured interview ensures that the assessment leads to a development conversation, not just a report.',
     },
@@ -109,6 +110,12 @@ export default function StageIdentify() {
       <section className="identify chapter chapter--white" id="identify" ref={ref}>
         <div className="container">
 
+          {/* Chapter label */}
+          <motion.div className="identify__chapter-label"
+            initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ duration: 0.5 }}>
+            <StagePill num="01" title="Identify" sub="Reveal strengths and gaps" tone="blue" />
+          </motion.div>
+
           {/* Two-column split */}
           <div className="identify__split">
 
@@ -121,26 +128,26 @@ export default function StageIdentify() {
                 <em>listening</em> —<br />
                 to managers, to their<br />
                 teams, and to the<br />
-                organization around them.
+                organisation around them.
               </h2>
 
               <p className="body-copy identify__intro">
                 Most assessments ask people to assess themselves.<br />{' '}
-                We go further. We collect five sources of evidence —<br />{' '}
+                We go further. We collect up to five sources of evidence —<br />{' '}
                 <strong>together, they create a more complete picture of managerial effectiveness.</strong>
               </p>
 
               {/* Only 5 + 6 metrics */}
               <div className="identify__stats">
                 <div className="stat">
-                  <div className="stat__val">5</div>
+                  <div className="stat__val"><span className="stat__upto" style={{ fontSize: '20px', fontWeight: 600, marginRight: '7px', letterSpacing: 0 }}>Up to</span>5</div>
                   <div className="stat__label">Sources of evidence</div>
                   <div className="stat__sub">per manager</div>
                 </div>
                 <div className="stat">
                   <div className="stat__val">6</div>
                   <div className="stat__label">Behavioural areas</div>
-                  <div className="stat__sub">explored through MBP, 360° and interviews</div>
+                  <div className="stat__sub">explored through the Managerial Profile, 360° and interviews</div>
                 </div>
               </div>
             </motion.div>

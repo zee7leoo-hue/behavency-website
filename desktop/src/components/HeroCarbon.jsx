@@ -23,12 +23,12 @@ const CARD_TEXT = [
   { kind: 'title', text: 'Measure', x: 809.0, y: 299, size: 25, color: NAVY, align: 'center' },
   { kind: 'sub', text: 'Reveal strengths', x: 152.0, y: 328.4, size: 17, color: SUB, align: 'center' },
   { kind: 'sub', text: 'and gaps', x: 150.5, y: 349.4, size: 17, color: SUB, align: 'center' },
-  { kind: 'sub', text: 'Build shared', x: 371.0, y: 329, size: 17, color: SUB, align: 'center' },
+  { kind: 'sub', text: 'Create shared', x: 371.0, y: 329, size: 17, color: SUB, align: 'center' },
   { kind: 'sub', text: 'commitment', x: 371.0, y: 349, size: 17, color: SUB, align: 'center' },
-  { kind: 'sub', text: 'Build the right', x: 588.0, y: 327.4, size: 17, color: SUB, align: 'center' },
+  { kind: 'sub', text: 'Develop the right', x: 588.0, y: 327.4, size: 17, color: SUB, align: 'center' },
   { kind: 'sub', text: 'capabilities', x: 588.0, y: 347.4, size: 17, color: SUB, align: 'center' },
-  { kind: 'sub', text: 'Prove the', x: 807.5, y: 323.4, size: 17, color: SUB, align: 'center' },
-  { kind: 'sub', text: 'impact', x: 807.5, y: 348.4, size: 17, color: SUB, align: 'center' },
+  { kind: 'sub', text: 'Show what', x: 807.5, y: 323.4, size: 17, color: SUB, align: 'center' },
+  { kind: 'sub', text: 'changed', x: 807.5, y: 348.4, size: 17, color: SUB, align: 'center' },
   { kind: 'ui', text: 'Managerial Profile', x: 152, y: 118.5, size: 12.6, color: NAVY, rot: -5, desc: true },
   { kind: 'ui', text: '+17 pp', x: 874.8, y: 85, size: 13.3, color: GREEN, rot: -3, desc: true },
   { kind: 'ui', text: 'Team Effectiveness', x: 781.3, y: 107.5, size: 10.0, color: NAVY, rot: -5.1, desc: false },
@@ -46,12 +46,12 @@ const GROUPS = {
 }
 const PROFILE = { x: 100.5, y: 141, a: 0.998, b: -0.061, c: -0.18, pitch: 20.5, track: 84, fill: 62, bar: 3.6, barY: 3.4 }
 const PROFILE_ROWS = [
-  { label: 'Collaboration', icon: Users, g: 'hb-blue' },
-  { label: 'Communication', icon: MessageCircle, g: 'hb-teal' },
-  { label: 'Adaptability', icon: Settings, g: 'hb-teal2' },
-  { label: 'Leadership', icon: UsersRound, g: 'hb-teal2' },
+  { label: 'Clarity & Alignment', icon: MessageCircle, g: 'hb-blue' },
+  { label: 'Collaboration & Influence', icon: Users, g: 'hb-teal' },
+  { label: 'Learning & Adaptability', icon: Settings, g: 'hb-teal2' },
+  { label: 'Trust & Inclusion', icon: UsersRound, g: 'hb-teal2' },
 ]
-const BUILD_ROWS = ['Training', 'Team activities', '30-day plan']
+const BUILD_ROWS = ['Training', 'Team activities', 'Masterplan']
 const MEASURE_ROWS = [
   { label: 'Initial', w: 83, g: 'hb-purple', pct: '64%', c: NAVY },
   { label: 'Follow-up', w: 113.5, g: 'hb-green', pct: '81%', c: GREEN },
@@ -74,18 +74,18 @@ export default function HeroCarbon() {
             <p className="hc-sub">
               When things keep changing, that gap is<br />{' '}
               a business risk. Behavency finds it early,<br />{' '}
-              helps managers close it — and proves it<br />{' '}
-              worked.
+              helps managers close it — and shows you<br />{' '}
+              what changed.
             </p>
 
-            <a className="hc-btn" href="#contact">Request a Demo</a>
+            <a className="hc-btn" href="#contact">Request a demo</a>
             <a className="hc-link" href="/Behavency-Overview.pdf" download>
               Download overview <Download strokeWidth={2.75} aria-hidden="true" />
             </a>
           </div>
 
           <div className="hc-cards" role="img"
-            aria-label="Identify: reveal strengths and gaps. Engage: build shared commitment. Build: build the right capabilities. Measure: prove the impact.">
+            aria-label="Identify: reveal strengths and gaps. Engage: create shared commitment. Build: develop the right capabilities. Measure: show what changed.">
             <img className="hc-cards-art" src={cards} alt="" draggable="false" />
             <svg className="hc-cards-ui" viewBox="0 0 950 440" preserveAspectRatio="none" aria-hidden="true">
               <defs>
@@ -107,7 +107,7 @@ export default function HeroCarbon() {
                   return (
                     <g key={r.label} transform={`translate(0 ${v})`}>
                       <Icon x={-5.5} y={-4.75} width={11} height={11} stroke="#1d3f91" strokeWidth={1.8} />
-                      <text x={10} y={-2.2} fontSize="8.6" fontWeight="700" fill={SKILL} letterSpacing="0">{r.label}</text>
+                      <text x={10} y={-2.2} fontSize="6.6" fontWeight="700" fill={SKILL} letterSpacing="0">{r.label}</text>
                       <rect x={10} y={PROFILE.barY} width={PROFILE.track} height={PROFILE.bar} rx={PROFILE.bar / 2} fill="rgba(198,205,224,0.42)" />
                       <rect x={10} y={PROFILE.barY} width={PROFILE.fill} height={PROFILE.bar} rx={PROFILE.bar / 2} fill={`url(#${r.g})`} />
                     </g>

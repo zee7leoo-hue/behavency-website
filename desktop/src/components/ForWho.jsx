@@ -6,8 +6,8 @@ import './ForWho.css'
 const roles = [
   {
     title: 'HR & L&D Teams',
-    body: "You need evidence. You've run programmes before and had no way to prove they worked. Behavency gives you before-and-after data, participant-level reporting, and an organizational view that speaks the language of a board.",
-    detail: 'Facilitators, HR Directors, L&D Managers, Organizational Development',
+    body: "You need evidence. You've run programmes before and had no way to prove they worked. Behavency gives you before-and-after data, participant-level reporting, and an organisational view that speaks the language of a board.",
+    detail: 'Facilitators, HR Directors, L&D Managers, Organisational Development',
     color: '#1E3A5F',
   },
   {
@@ -18,7 +18,7 @@ const roles = [
   },
   {
     title: 'Leadership & Boards',
-    body: 'You need to know whether your management layer is fit for where the organization is going. And whether the money spent on development last year made any difference. Behavency gives you an organizational view that makes both questions answerable.',
+    body: 'You need to know whether your management layer is fit for where the organisation is going. And whether the money spent on development last year made any difference. Behavency gives you an organisational view that makes both questions answerable.',
     detail: 'CEOs, CHROs, Executive Teams, Investors',
     color: '#6D28D9',
   },

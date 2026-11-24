@@ -245,3 +245,6 @@ body {
   .chapter { padding: 72px 0; }
   .stat-row { gap: 28px; }
 }
+
+/* full logo in the footer from public/footer-site.js: same height as the old footer logo */
+:root .bft-logo { height: 38px !important; }

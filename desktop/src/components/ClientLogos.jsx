@@ -39,9 +39,7 @@ export default function ClientLogos() {
   return (
     <section className="bh-clients" aria-label="Clients">
       <p className="bh-clients__line">
-        <span>A product of <b>OGI Europe</b></span>
-        <span className="bh-clients__sep" aria-hidden="true" />
-        <span>Trusted by teams at</span>
+        <span>Behavency is built by <b>OGI Europe</b>, which has trained managers at</span>
       </p>
       <div className="bh-clients__marquee">
         <div className="bh-clients__track">

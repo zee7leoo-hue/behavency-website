@@ -4,11 +4,41 @@ import { useInView } from 'react-intersection-observer'
 import './WhatMakesDifferent.css'
 
 const points = [
-  { title: 'We separate personal gaps from organisational barriers.', line: 'We show what the manager needs to develop, and what the organisation needs to fix around them.', more: 'Alongside the manager’s own assessment, the organisation completes a barriers survey: around 40 typical obstacles across nine management processes, such as decision-making, resources, priorities, approvals and work between departments. Each barrier is linked to the leadership areas it holds back. So when a manager scores low in an area, you can see whether it is a skill to develop, a condition to change, or both.' },
-  { title: 'The manager and the conditions around them, in one picture.', line: 'A 360 shows how others see the manager. We add the workplace, resilience to change and, if needed, a structured interview.', more: 'The self-assessment and 360 feedback show the manager’s behaviour from two sides. The barriers survey describes the conditions they work in. The resilience assessment looks at how they handle change, across six elements such as realism, flexible thinking and initiative. An optional structured interview, run by a trained expert, adds the context questionnaires cannot capture. Everything is reported against the same six leadership areas, so the parts can be compared.' },
-  { title: 'Managers and their teams, on the same model.', line: 'When a team and its manager both score low on Trust, you see the link and can talk about impact.', more: 'The team assessment uses the same six leadership areas as the manager’s profile. That makes it possible to read the two side by side: where they agree, where the team sees something the manager does not, and where a team result may reflect how the team is being led.' },
-  { title: 'Our own training, matched to the results.', line: '40+ programmes linked to the six leadership areas. They are our own, so there is no content to source or bring.', more: 'The methodology links each leadership area to specific programmes, with separate options for line and mid-level managers, delivered face to face, online or as e-learning. Because the recommendations come from the same model as the assessment, the reasoning from result to training stays visible.' },
-  { title: 'Training that turns into everyday practice.', line: 'Every training comes with a Masterplan: structure, tools, exercises and actions to use it at work.', more: 'Each training is followed by a Masterplan: a practical plan for applying what was learned. It sets out the structure of the follow-up period, the tools to use at work, exercises for specific situations, and concrete actions with dates. Managers have a way to keep working on the skill after the session ends, and HR has something to follow up on.' },
+  {
+    title: 'One journey, start to finish.',
+    line: 'Assessment, team game, training and re-assessment, built on one model and run by one team.',
+    more: 'Often each piece lives somewhere else: a survey run in-house, an assessment from one provider, a workshop from another. Different methods, different reports, and nobody can say what changed. Here every step uses the same six areas, so results lead straight to the right development, and the re-assessment shows the difference.',
+  },
+  {
+    title: 'Personal gaps and organisational barriers, kept apart.',
+    line: 'We show what people need to develop, and what the organisation needs to fix around them.',
+    more: 'Alongside the assessment, managers complete the Workplace Effectiveness Survey: around 40 typical obstacles across nine management processes. Each barrier is linked to the areas it holds back, so a low score shows whether it is a skill to develop, a condition to change, or both.',
+  },
+  {
+    title: 'Managers and teams, on the same model.',
+    line: 'Develop managers, teams or both. When a team and its manager both score low on Trust, you see the link.',
+    more: 'Team and manager assessments use the same six areas, so the results can be read side by side: where they agree, and where the team sees something the manager does not.',
+  },
+  {
+    title: 'People feel the gaps, not just read them.',
+    line: 'A team game and a facilitated reflection turn scores into something people experience and commit to.',
+    more: 'In a 2.5-hour session, the team sees the same behaviours show up live, talks through why, and then receives its Insight Report with practical tips.',
+  },
+  {
+    title: 'Our own training, matched to the results.',
+    line: 'Programmes for line managers, managers of managers and teams, each linked to the six areas.',
+    more: 'Every result points to specific programmes, so nobody has to guess what to train next. They run in person, online or as e-learning, and each one comes with a Masterplan to practise it at work.',
+  },
+  {
+    title: 'Interviewers practise before the real thing.',
+    line: 'In our Interview Studio they practise with four AI characters before the real interviews.',
+    more: 'A ready-made guide for every interview, AI suggestions on what to ask next during it, and a summary afterwards that the interviewer checks and decides on.',
+  },
+  {
+    title: 'Proof of change, not just completion.',
+    line: 'Before-and-after results you can show leadership.',
+    more: 'Results are compared with the starting point, area by area: behaviour from the self-assessment and 360, and whether the barriers have eased.',
+  },
 ]
 
 export default function WhatMakesDifferent() {
@@ -22,8 +52,8 @@ export default function WhatMakesDifferent() {
           initial={{ opacity: 0, y: 32 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
           <p className="different__caption">What makes Behavency different</p>
           <h2 className="different__headline">
-            Plenty of tools measure managers.<br />
-            <em>Here’s what we do differently.</em>
+            Most providers do one piece.<br />
+            <em>So nobody can say what changed.</em>
           </h2>
         </motion.div>
 
@@ -51,11 +81,6 @@ export default function WhatMakesDifferent() {
           })}
         </div>
 
-        <motion.p className="different__close"
-          initial={{ opacity: 0, y: 16 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.7 }}>
-          <span aria-hidden="true" />
-          Assessment, training and practice in one journey. Nothing gets lost between steps.
-        </motion.p>
       </div>
     </section>
   )

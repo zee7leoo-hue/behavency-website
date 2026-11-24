@@ -208,13 +208,13 @@ export function ReportCardC() {
                 <div className="tr-left">
                   <span className="tr-blob b1"></span><span className="tr-blob b2"></span><span className="tr-blob b3"></span>
                   <span className="tr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round"><path d="M6 18v-3M11.5 18v-6.5M17 18V7"/></svg></span>
-                  <strong>Team<br />Insight Report</strong><small>5 teams · 60 participants</small>
+                  <strong>Team<br />Insight Report</strong><small>Team Alpha · 12 participants</small>
                 </div>
                 <div className="tr-right">
                   <span className="tr-dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Download PDF</span>
-                  <div className="tr-row metric"><span>Focus &amp; prioritisation</span><i style={{ '--v': '64%', '--col': 'linear-gradient(90deg,#f4a21c,#f8c544)' }}></i><em>{vals[0]}%</em></div>
-                  <div className="tr-row metric"><span>Trust</span><i style={{ '--v': '78%', '--col': 'linear-gradient(90deg,#1ea14a,#38c46c)' }}></i><em>{vals[1]}%</em></div>
-                  <div className="tr-row metric"><span>Collaboration</span><i style={{ '--v': '41%', '--col': 'linear-gradient(90deg,#e8554f,#f2706b)' }}></i><em>{vals[2]}%</em></div>
+                  <div className="tr-row metric"><span>Focus &amp; Prioritization</span><i style={{ '--v': '64%', '--col': 'linear-gradient(90deg,#f4a21c,#f8c544)' }}></i><em>{vals[0]}%</em></div>
+                  <div className="tr-row metric"><span>Trust &amp; Inclusion</span><i style={{ '--v': '78%', '--col': 'linear-gradient(90deg,#1ea14a,#38c46c)' }}></i><em>{vals[1]}%</em></div>
+                  <div className="tr-row metric"><span>Collaboration &amp; Influence</span><i style={{ '--v': '41%', '--col': 'linear-gradient(90deg,#e8554f,#f2706b)' }}></i><em>{vals[2]}%</em></div>
                 </div>
                 <div className="tr-take">
                   <svg className="tr-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.1V16.5h5v-.6c0-.8.4-1.5 1.1-2.1A6 6 0 0 0 12 3z"/></svg>

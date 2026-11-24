@@ -1,3 +1,4 @@
+import StagePill from './StagePill'
 import React, { useState, useRef, useEffect } from 'react'
 import './EngageExperienceSection.css'
 import './EngageExperienceSection2.css'
@@ -522,6 +523,7 @@ export default function EngageExperienceSection2() {
       <div className="bx-hero" ref={heroRef}>
         <div className="bx-grid">
           <div className="bx-left">
+            <StagePill num="02" title="Engage" sub="Create shared commitment" tone="green" />
             <h1 className="bx-title">
               They’ve seen<br />the score.<br />Now let them<br />
               <span className="bx-em">experience it.</span>
@@ -534,7 +536,7 @@ export default function EngageExperienceSection2() {
           <div className="bx-divider" aria-hidden="true" />
           <div className="bx-right">
             <h2 className="bx-h">A score can be read and forgotten.<br />An experience stays.</h2>
-            <p className="bx-copy">In the game, teams see what works, what doesn’t, and how they really collaborate. No wrong moves, no judgement, just chances to learn.</p>
+            <p className="bx-copy">A 45-minute online team game, then a 90-minute facilitated reflection. Teams see what works, what doesn’t, and how they really collaborate. No wrong moves, no judgement, just chances to learn.</p>
             <ul className="bx-points">
               <li>
                 <span className="bx-ico bx-ico--green" aria-hidden="true">
@@ -554,7 +556,7 @@ export default function EngageExperienceSection2() {
                 <span className="bx-btn-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9 6.5v11l9-5.5z" /></svg></span>
                 See video <span aria-hidden="true">→</span>
               </button>
-              <a className="bx-btn bx-btn--ghost" href="#contact">Request a Demo</a>
+              <a className="bx-btn bx-btn--ghost" href="#contact">Request a demo</a>
             </div>
           </div>
         </div>

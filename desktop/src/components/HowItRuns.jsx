@@ -6,11 +6,11 @@ import './HowItRuns.css'
 /* "How it runs": a five-step timeline from kick-off to measurable change. */
 
 const STEPS = [
-  { who: 'You and Behavency', title: 'Kick-off', text: 'We agree the goals, the group of managers and the timeline. Participants get their invitations.', dur: '≈ 1 week' },
-  { who: 'Managers and their teams', title: 'Assessment', text: 'Self-assessment, 360 feedback, the barriers survey and resilience, with optional interviews.', dur: '≈ 2–3 weeks' },
-  { who: 'Participants and facilitator', title: 'Results and game', text: 'Individual and group reports. The team game and reflection turn results into commitment.', dur: '≈ 1–2 weeks' },
-  { who: 'Managers', title: 'Training and Masterplans', text: 'Programmes matched to each manager’s priorities, each with a Masterplan for practice at work.', dur: '≈ 2–3 months' },
-  { who: 'You and Behavency', title: 'Measure', text: 'A follow-up check shows what changed in behaviour and in the conditions around the managers.', dur: 'After 3–6 months' },
+  { who: 'Week 1', title: 'Kick-off', text: 'We agree the goals, the group and the timeline. Participants get their invitations.', dur: 'You and Behavency' },
+  { who: 'Weeks 2–4', title: 'Assessment', text: 'About 1.5 hours per person, done at their own pace.', dur: 'Participants' },
+  { who: 'Weeks 4–6', title: 'Team game and reflection', text: 'A 2.5-hour session, then the team’s Insight Report.', dur: 'Participants and facilitator' },
+  { who: 'From week 6', title: 'Training and Masterplans', text: 'Programmes matched to each person’s priorities. Length depends on the programmes chosen.', dur: 'Participants' },
+  { who: '3 months after training', title: 'Re-assessment', text: 'The same questionnaires, the same people, compared with the starting point.', dur: 'Participants' },
 ]
 
 export default function HowItRuns() {
@@ -23,7 +23,7 @@ export default function HowItRuns() {
           initial={{ opacity: 0, y: 28 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
           <span className="hir__label"><i>→</i><span className="hir__ln" /><b>How it runs</b><span className="hir__sep" /><span className="hir__t">From kick-off to measurable change</span></span>
           <h2 className="headline hir__headline">One programme, <em>five clear steps.</em></h2>
-          <p className="hir__lead">You always know what happens next, who is involved and roughly how long it takes.</p>
+          <p className="hir__lead">You always know what happens when, and who is involved.</p>
         </motion.div>
 
         <ol className="hir__tl">
@@ -40,7 +40,7 @@ export default function HowItRuns() {
             </motion.li>
           ))}
         </ol>
-        <p className="hir__foot">Timings are placeholders to confirm.</p>
+        <p className="hir__foot"></p>
       </div>
     </section>
   )

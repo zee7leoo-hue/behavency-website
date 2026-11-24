@@ -18,7 +18,7 @@ const pipelineSteps = [
   { phase: 'PHASE 01', short: 'DIAGNOSTICS', title: 'Diagnostics', desc: 'We identify the key development priorities for managers and teams.' },
   { phase: 'PHASE 02', short: 'ENGAGEMENT', title: 'Engagement', desc: 'We build understanding, alignment, and personal commitment through hands-on experience.' },
   { phase: 'PHASE 03', short: 'DEVELOPMENT', title: 'Competency Development', desc: 'We develop targeted management practices and competencies.' },
-  { phase: 'PHASE 04', short: 'EVALUATION', title: 'Results Evaluation', desc: 'We assess progress and behavioral change.' }
+  { phase: 'PHASE 04', short: 'EVALUATION', title: 'Results Evaluation', desc: 'We assess progress and behavioural change.' }
 ];
 
 const stageImages = [
@@ -50,7 +50,7 @@ const PRACTICE_ICONS = {
 const MODAL_TABS = [
   { num: '1', name: 'Level 1', sub: 'Model' },
   { num: '2', name: 'Level 2', sub: 'What They Do' },
-  { num: '3', name: 'Level 3', sub: 'Behavior' },
+  { num: '3', name: 'Level 3', sub: 'Behaviour' },
 ];
 
 /* Math for the indicator wheel */
@@ -137,7 +137,7 @@ function ModalContent({ area, closeModal, activeLevel, onSelectArea }) {
       {/* Dark Left Sidebar */}
       <div className="bmodel__modal-sidebar">
         <div className="bmodel__modal-logo">
-          <span className="bmodel__modal-logo-b">B</span> Behavency.
+          <img src="/logo-behavency.png" alt="" style={{ height: '26px', width: 'auto', display: 'block', filter: 'invert(1)' }} />Behavency
         </div>
         
         <IndicatorWheel activeId={area.id} onClose={closeModal} currentList={activeLevel === 2 ? teamFactorsList : factorsList} onSelect={onSelectArea} />
@@ -150,7 +150,7 @@ function ModalContent({ area, closeModal, activeLevel, onSelectArea }) {
             <div className="bmodel__modal-area-name">{area.title}</div>
             <div style={{ fontSize: '11px', color: '#94a3b8', marginTop: '3px', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 600 }}>
               {activeLevel === 0 && 'Line Management'}
-              {activeLevel === 1 && 'Leadership Level'}
+              {activeLevel === 1 && 'Managers of Managers'}
               {activeLevel === 2 && 'Team Level'}
             </div>
           </div>
@@ -235,12 +235,12 @@ function ModalContent({ area, closeModal, activeLevel, onSelectArea }) {
               <div className="bmodel__l2-pane-header">
                 <h3 className="bmodel__l2-title">
                   {activeLevel === 0 && 'Level 2 — What Effective Managers Do'}
-                  {activeLevel === 1 && 'Level 2 — What Effective Leaders Do'}
+                  {activeLevel === 1 && 'Level 2 — What Effective Managers of Managers Do'}
                   {activeLevel === 2 && 'Level 2 — What Effective Teams Do'}
                 </h3>
                 <p className="bmodel__l2-sub">
                   {activeLevel === 0 && 'Each practice answers the question: "What does an effective manager at this level do?"'}
-                  {activeLevel === 1 && 'Each practice answers the question: "What does an effective mid-level leader do?"'}
+                  {activeLevel === 1 && 'Each practice answers the question: "What does an effective manager of managers do?"'}
                   {activeLevel === 2 && 'Each practice answers the question: "What does an effective team do?"'}
                 </p>
               </div>
@@ -258,7 +258,7 @@ function ModalContent({ area, closeModal, activeLevel, onSelectArea }) {
           );
         })()}
 
-{/* TAB 2: Behavioral Manifestations (Level 3) */}
+{/* TAB 2: Behavioural Manifestations (Level 3) */}
         {tab === 2 && (() => {
           const isMid = activeLevel === 1;
           const AreaIcon = AREA_MAIN_ICONS[area.id] || Target;
@@ -281,11 +281,11 @@ function ModalContent({ area, closeModal, activeLevel, onSelectArea }) {
               {/* Title & Subtitle */}
               <div className="bmodel__l3-pane-header">
                 <h3 className="bmodel__l3-title">
-                  Level 3 — Behavioral Manifestations
+                  Level 3 — Behavioural Manifestations
                 </h3>
                 <p className="bmodel__l3-sub">
                   {activeLevel === 0 && 'Each manifestation answers the question: "How does this leadership practice look in a line manager?"'}
-                  {activeLevel === 1 && 'Each manifestation answers the question: "How does this leadership practice look in a mid-level manager?"'}
+                  {activeLevel === 1 && 'Each manifestation answers the question: "How does this leadership practice look in a manager of managers?"'}
                   {activeLevel === 2 && 'Each manifestation answers the question: "How does this practice look in an effective team?"'}
                 </p>
               </div>
@@ -294,7 +294,7 @@ function ModalContent({ area, closeModal, activeLevel, onSelectArea }) {
               <div className="bmodel__l3-toggle-wrap">
                 <div className="bmodel__l3-level-pill">
                   {activeLevel === 0 && 'Line Manager'}
-                  {activeLevel === 1 && 'Mid-level Manager'}
+                  {activeLevel === 1 && 'Manager of Managers'}
                   {activeLevel === 2 && 'Team'}
                 </div>
               </div>
@@ -369,10 +369,10 @@ const GROUPS = [
   },
   {
     num: '02',
-    name: 'Mid-level managers',
+    name: 'Managers of managers',
     sub: 'Leadership effectiveness',
     heading: ['LEADERSHIP', 'EFFECTIVENESS'],
-    subtitles: ['How mid-level leaders', 'align strategy and', 'drive performance'],
+    subtitles: ['How managers of managers', 'align strategy and', 'drive performance'],
     iconType: 'user'
   },
   {
@@ -451,7 +451,7 @@ export default function BehaviouralModel() {
     {
       id: 'focus',
       line1: 'FOCUS &',
-      line2: 'PRIORITIES',
+      line2: 'PRIORITIZATION',
       cx: 783.07,
       cy: 626.5,
       haloColor: '#7c4beb',
@@ -501,7 +501,7 @@ export default function BehaviouralModel() {
     {
       id: 'learning',
       line1: 'LEARNING &',
-      line2: 'ADAPTATION',
+      line2: 'ADAPTABILITY',
       cx: 240.93,
       cy: 313.5,
       haloColor: '#2563eb',
@@ -530,8 +530,8 @@ export default function BehaviouralModel() {
 
           <h2 className="bmodel__headline">
             One framework.<br />
-            <span className="bmodel__headline--teal">Different levels</span><br />
-            <span className="bmodel__headline--italic">of the organization.</span>
+            <span className="bmodel__headline--teal">Six areas</span><br />
+            <span className="bmodel__headline--italic">of effectiveness.</span>
           </h2>
 
           <p className="bmodel__sub">
@@ -576,7 +576,7 @@ export default function BehaviouralModel() {
               aria-labelledby="bv-wheel-title bv-wheel-description"
             >
               <title id="bv-wheel-title">Six dimensions of effectiveness</title>
-              <desc id="bv-wheel-description">Interactive wheel featuring Clarity and Alignment, Trust and Inclusion, Focus and Priorities, Execution and Accountability, Collaboration and Influence, and Learning and Adaptation.</desc>
+              <desc id="bv-wheel-description">Interactive wheel featuring Clarity and Alignment, Trust and Inclusion, Focus and Prioritization, Execution and Accountability, Collaboration and Influence, and Learning and Adaptability.</desc>
               <defs>
                 <linearGradient id="g-clarity" x1="0" y1="0" x2="0.2" y2="1">
                   <stop offset="0%" stopColor="#2cc27b" />

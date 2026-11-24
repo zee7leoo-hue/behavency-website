@@ -17,7 +17,7 @@ export default function WhyAreasMatter() {
     <section className="wm" id="why-areas-matter" aria-label="Why these areas matter">
       <div className="wm-wrap">
         <div className="wm-eye">WHY THESE AREAS MATTER</div>
-        <h2 className="wm-h2">When these areas improve, <i>results follow.</i></h2>
+        <h2 className="wm-h2">Research links these areas to <i>business results.</i></h2>
         <p className="wm-sub">Each area in our model is linked to results a business can see: performance, productivity and profit.</p>
         <div className="wm-layout">
           <div className="wm-grid">

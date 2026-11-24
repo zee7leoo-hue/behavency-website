@@ -21,7 +21,7 @@ export default function CtaSection() {
               Let's talk about<br/><em>your people.</em>
             </h2>
             <p style={{ fontSize:18, color:'rgba(255,255,255,0.6)', lineHeight:1.6, maxWidth:420, marginBottom:48 }}>
-              Tell us about your organization and where you want to start.
+              Tell us about your organisation and where you want to start.
               We'll walk you through what Behavency would look like for your specific context.
             </p>
             <div className="cta__options">
@@ -64,7 +64,7 @@ export default function CtaSection() {
                 </div>
                 <div className="cta__row">
                   <div className="cta__field">
-                    <label>Organization</label>
+                    <label>Organisation</label>
                     <input type="text" placeholder="Company name" value={form.org} onChange={set('org')} required/>
                   </div>
                   <div className="cta__field">
@@ -81,7 +81,7 @@ export default function CtaSection() {
                 </div>
                 <div className="cta__field">
                   <label>What are you trying to achieve?</label>
-                  <textarea rows={4} placeholder="Tell us what's going on in your organization and what you're hoping to solve…" value={form.message} onChange={set('message')}/>
+                  <textarea rows={4} placeholder="Tell us what's going on in your organisation and what you're hoping to solve…" value={form.message} onChange={set('message')}/>
                 </div>
                 <button type="submit" className="btn btn-outline-white" style={{ width:'100%', justifyContent:'center', padding:'16px' }}>
                   Send message <Send size={16}/>

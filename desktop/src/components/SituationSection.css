@@ -239,7 +239,7 @@
 .sx-stat em { font-style: normal; font-weight: 400; color: #8a8fa3; }
 .sx-src { display: inline-block; margin-top: .5cqw; font: 400 1cqw/1.3 Inter, Arial, sans-serif; color: #8a8fa3; text-decoration: none; border-bottom: 1px solid #d7d9e2; pointer-events: auto; }
 .sx-src:hover { color: #128a7e; border-color: #128a7e; }
-@media (min-width: 861px) { .sx-card { height: 36.6cqw; top: 5.9cqw; } .sx-stage { height: 23.6cqw; } .sx-dots { top: 31.6cqw; } .sx-buttons { top: 30.2cqw; } }
+@media (min-width: 861px) { .sx-card { height: 36.6cqw; top: 6.7cqw; } .sx-stage { height: 23.6cqw; } .sx-dots { top: 31.6cqw; } .sx-buttons { top: 30.2cqw; } }
 @media (max-width: 860px) { .sx-stat { margin-top: 14px; padding-top: 12px; font-size: 13.5px; } .sx-stat b { font-size: 24px; margin-bottom: 4px; } .sx-src { margin-top: 6px; font-size: 12px; } }
 /* the smallest phones: a little more room so the longer cards aren't cut off */
 @media (max-width: 360px) { .sx-card { height: 490px; } .sx-stage { height: 315px; } }
