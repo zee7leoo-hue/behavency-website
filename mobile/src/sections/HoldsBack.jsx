@@ -106,7 +106,7 @@ export default function HoldsBack({ variant = 'split' }) {
           </div>
         </div>
       </div>
-      {focus && <p className="hb-note"><span className="hb-ico hb-ico--blue">{I.sprout}</span><span>{'What is in their hands is worked on in their training. What holds them back goes to leadership in a report.'}</span></p>}
+      {focus && <p className="hb-note"><span className="hb-ico hb-ico--blue">{I.sprout}</span><span>{'Skill gaps go to training. Organisational barriers go to leadership. So you don’t spend training budget on problems training can’t fix.'}</span></p>}
     </section>
   )
 }

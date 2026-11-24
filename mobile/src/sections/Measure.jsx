@@ -22,10 +22,10 @@ export default function Measure() {
   return (
     <section ref={ref} className={`ms ${seen ? 'is-in' : ''}`} id="measure">
       <div className="ms-in">
-        <h2 className="ms-title rv" style={{ '--i': 0 }}>Then we run the assessment again.<span>And show you what changed.</span></h2>
-        <div className="ms-eyebrow rv" style={{ '--i': 1 }}><em>04</em><i aria-hidden="true" /><span>Measure</span><u aria-hidden="true" /><s>Prove the impact</s></div>
+        <h2 className="ms-title rv" style={{ '--i': 0 }}>{['Then we run the assessment again.']}</h2>
+        <div className="ms-eyebrow rv" style={{ '--i': 1 }}><em>04</em><i aria-hidden="true" /><span>Measure</span><u aria-hidden="true" /><s>Show what changed</s></div>
         <p className="ms-text rv" style={{ '--i': 2 }}>We use the same questions with the same people, three months after training. The results sit side by side with where they started.</p>
-        <p className="ms-text ms-text--2 rv" style={{ '--i': 3 }}>So you can show what changed, not just who attended.</p>
+        <p className="ms-text ms-text--2 rv" style={{ '--i': 3 }}>When leadership asks what the training changed, you’ll have an answer: before and after, area by area.</p>
 
         <div className="ms-flow rv" style={{ '--i': 4 }}>
           <div className="ms-step"><span className="ms-ico"><Clip /></span><p>Assessment</p></div>
@@ -36,6 +36,7 @@ export default function Measure() {
         </div>
 
         <div className="ms-card rv" style={{ '--i': 5 }}>
+          <div style={{ margin: '0 0 10px' }}><span className="bhv-badge" style={{ display: 'inline-block', font: '700 13px/1.2 Inter,system-ui,sans-serif', color: '#1c1a12', background: '#fff0a6', padding: '5px 11px', borderRadius: 999, letterSpacing: 0, textTransform: 'none', whiteSpace: 'nowrap', boxShadow: '0 0 0 1px rgba(160,130,0,.25)' }}>Example · not client data</span></div>
           <h3>Illustrative programme results</h3>
           <div className="ms-legend"><span><i className="b" />Before</span><span><i className="a" />After</span></div>
           <ul>

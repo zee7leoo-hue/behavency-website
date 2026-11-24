@@ -41,7 +41,7 @@ const LOGOS = [
 export default function Clients() {
   return (
     <section className="bh-clients" aria-label="Clients">
-      <p className="bh-clients__line"><span>Built by <b>OGI Europe</b>, trusted by teams at</span></p>
+      <p className="bh-clients__line"><span style={{ textAlign: 'center' }}>Behavency is built by <b>OGI Europe</b>, which has trained managers at</span></p>
       <div className="bh-clients__marquee">
         <div className="bh-clients__track">
           <ul className="bh-clients__group">

@@ -24,14 +24,19 @@ export default function Platform() {
       <div className="pf-eyebrow rv" style={{ '--i': 0 }}>
         <span>THE PLATFORM</span><i aria-hidden="true" />
       </div>
-      <h2 className="pf-title rv" style={{ '--i': 1 }}>From insight to action.<br /><em>All in one place.</em></h2>
-      <p className="pf-sub rv" style={{ '--i': 2 }}>See where the risk is, close the gaps that matter, and prove the change, on one connected platform.</p>
+      <h2 className="pf-title rv" style={{ '--i': 1 }}>Three questions leadership will ask.<br /><em>Now you can answer them.</em></h2>
+      <p className="pf-sub pf-qs rv" style={{ '--i': 2, maxWidth: 'none', marginRight: 14, marginBottom: 18 }}>
+        <span className="pf-qrow" style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '9px 0', borderTop: '1px solid #e3e6ef', marginTop: 4 }}><b style={{ flex: 'none', width: 26, fontSize: 12, fontWeight: 700, letterSpacing: '.14em', color: '#1fa9a6', fontFamily: 'Inter,Arial,sans-serif' }}>01</b><span style={{ fontSize: '15.5px', fontWeight: 500, color: '#0a1236', lineHeight: 1.3 }}>Where are our managers falling short?</span></span>
+        <span className="pf-qrow" style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '9px 0', borderTop: '1px solid #e3e6ef' }}><b style={{ flex: 'none', width: 26, fontSize: 12, fontWeight: 700, letterSpacing: '.14em', color: '#1fa9a6', fontFamily: 'Inter,Arial,sans-serif' }}>02</b><span style={{ fontSize: '15.5px', fontWeight: 500, color: '#0a1236', lineHeight: 1.3 }}>What in the organisation holds them back?</span></span>
+        <span className="pf-qrow" style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '9px 0', borderTop: '1px solid #e3e6ef', borderBottom: '1px solid #e3e6ef' }}><b style={{ flex: 'none', width: 26, fontSize: 12, fontWeight: 700, letterSpacing: '.14em', color: '#1fa9a6', fontFamily: 'Inter,Arial,sans-serif' }}>03</b><span style={{ fontSize: '15.5px', fontWeight: 500, color: '#0a1236', lineHeight: 1.3 }}>What did the training change?</span></span>
+      </p>
+      <p className="pf-sub pf-close rv" style={{ '--i': 2, marginTop: 12, fontWeight: 600, color: '#0a1236' }}>Behavency answers all three, in one connected journey.</p>
 
       <div className="pf-card rv" style={{ '--i': 3 }}>
         <div className="pf-card-head">
           <div>
             <h3>Leadership Development Programme <IconChevronDown /></h3>
-            <p>Example · 35 managers</p>
+            <p className="pf-example">Example data</p>
           </div>
           <span className="pf-live"><i aria-hidden="true" />Live</span>
         </div>

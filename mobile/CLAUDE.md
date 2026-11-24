@@ -19,7 +19,7 @@ the link's files would undo them), and tell the user they were kept:
 2. **Menu bar height 58px, thin grey line under it, menu text 18px (Request a Demo 17px)** (`src/styles.css`): `.nav` height 58px, `.nav-space` height 58px, `.nav-menu` top 58px,
    `html` scroll-padding-top `calc(58px * var(--s, 1))`. The line: `.nav` box-shadow `0 1px 0 rgba(15, 27, 61, .08)`,
    repeated with `!important` at the end of `src/styles.css` because `public/sections-mobile.js` sets its own line.
-3. **Gap above "See all 23 programmes"** (`public/programmes-mobile.js`): the line
+3. **Gap above "See all programmes"** (`public/programmes-mobile.js`): the line
    `.tm .tm-allbtn { margin-top: 22px; }` right after the `.tm-allbtn:active` rule. Without it, `.tm button { margin: 0 }`
    removes the gap.
 

@@ -8,6 +8,8 @@ function mount(){
   const list=document.querySelector('#identify .id-list'); if(!list)return false;
   const st=document.createElement('style');st.id='studio-v2';st.textContent=CSS;document.head.appendChild(st);
   const t=document.createElement('div');t.innerHTML=HTML;list.after(t.firstElementChild);
+  const cf=document.createElement('p');cf.className='id-conf';cf.textContent='Individual results are visible only to the facilitator.';list.after(cf);
+  const cs=document.createElement('style');cs.textContent='#identify .id-conf{margin:14px 30px 0;font:400 13.5px/1.5 Inter,sans-serif;color:#6b7286}';document.head.appendChild(cs);
   init();return true;
 }
 function init(){

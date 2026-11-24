@@ -70,6 +70,22 @@
   :root .id-name, :root .nbm-ar-name { font: 600 16px/1.2 Inter, Arial, sans-serif !important; letter-spacing: -.014em !important; }
   /* dashboard: a gap shows as a short red bar */
   .pf-track i.pf-gap { background: linear-gradient(90deg, #f0566e, #e8294a) !important; }
+  /* Organisation row: an amber warning badge, an amber tag and an amber bar that fills in (22 of 42 managers) */
+  .pf-ini.pf-ini--warn { background: #fff1e3 !important; color: #ea7a12 !important; }
+  .pf-ini.pf-ini--warn svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .pf-chip.pf-chip--amber { color: #b45309; background: #fff1e3; }
+  .pf-track.pf-dots { background: none !important; overflow: visible; height: 14px; bottom: 9px; display: flex; align-items: center; }
+  .pf-dots > i { display: none !important; }
+  .pf-dots b { flex: none; width: 14px; height: 14px; border-radius: 50%; border: 1.5px solid #fff; box-sizing: border-box; margin-left: -4px; transform: scale(0); transition: transform .45s cubic-bezier(.34,1.56,.64,1) var(--d); }
+  .pf-dots b:first-of-type { margin-left: 0; }
+  .is-in .pf-dots b { transform: scale(1); }
+  /* dashboard header: a quiet 'Example data' line and clear space between the title and the frame */
+  :root #platform .pf-card { padding-top: 12px !important; }
+  :root #platform .pf-card-head { padding: 4px 8px 2px 8px !important; }
+  :root #platform .pf-card-head p.pf-example { font-size: 12px !important; color: #7a8296 !important; margin-top: 4px !important; font-weight: 400; }
+  :root #platform .pf-row.pf-row--org .pf-who span { white-space: nowrap !important; letter-spacing: -.01em; }
+  /* the example dashboard reads as a product showcase: thin emerald frame and a soft emerald glow (ring drawn as a shadow, so the layout does not move) */
+  :root #platform .pf-card { box-shadow: 0 0 0 1.75px #1fa9a6, 0 14px 34px -14px rgba(31,169,166,.32), 0 22px 40px -22px #28326e66, 0 2px 6px #28326e0d !important; }
   /* Build row: plan shown as a 3-step stepper (2 done, 1 to go) */
   .pf-track.pf-steps { background: none !important; overflow: visible; height: 14px; bottom: 9px; }
   .pf-steps > i { display: none !important; }
@@ -160,20 +176,23 @@
     addEventListener('resize', set);
   }
 
-  // platform dashboard: three rows tell one story (find the gap, close it, prove it)
+  // platform dashboard: the three rows answer the three questions (a manager's gap, an organisational barrier, what changed);
+  // the right side of every row is its key number
   function dash() {
     const kp = [...document.querySelectorAll('#platform .pf-kpi span')].find((x) => x.textContent.trim() === 'Journeys');
-    if (kp) { kp.textContent = 'Developing'; kp.classList.add('pf-kpi-dev'); }
+    if (kp) { kp.textContent = 'In training'; kp.classList.add('pf-kpi-dev'); }
+    const lh = document.querySelector('#platform .pf-list-head h4'); if (lh) lh.textContent = 'What needs attention';
     const sm = document.querySelector('#platform .pf-kpi .pf-small'); if (sm) sm.textContent = 'Improved';
     const lk = document.querySelector('#platform .pf-list-head a'); if (lk) { lk.removeAttribute('href'); lk.setAttribute('aria-disabled', 'true'); lk.tabIndex = -1; }
     const rows = [...document.querySelectorAll('#platform .pf-rows .pf-row')]; if (rows.length < 3 || rows[0].dataset.v2) return;
     const D = [
-      { ini: 'SL', name: 'Sofia L.', sub: 'Gap: Focus & Prioritization · 35%', chip: 'Identify', cls: 'pf-chip--blue', type: 'gap', w: 35 },
-      { ini: 'FK', name: 'Frederick K.', sub: 'Trust & Inclusion · 2 of 3 modules', chip: 'Build', cls: 'pf-chip--green', type: 'steps' },
+      { ini: 'SL', name: 'Sofia L.', sub: 'Gap: Focus & Prioritization', chip: '35%', cls: 'pf-chip--red', type: 'gap', w: 35 },
+      { ini: '', name: 'Slow approvals', sub: 'Barrier', chip: '22 of 35', cls: 'pf-chip--amber', type: 'barrier' },
       { ini: 'HN', name: 'Hanna N.', sub: 'Clarity & Alignment: 41% → 72%', chip: '↑ +0 pts', cls: 'pf-chip--green pf-delta', type: 'up', delta: 31 },
     ];   rows.slice(0, 3).forEach((r, i) => {
       const d = D[i]; r.dataset.v2 = '1';
       const ini = r.querySelector('.pf-ini'); if (ini) ini.textContent = d.ini;
+      if (ini && d.type === 'barrier') { r.classList.add('pf-row--org'); ini.classList.add('pf-ini--warn'); ini.setAttribute('aria-hidden', 'true'); ini.innerHTML = '<svg viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>'; }
       const who = r.querySelector('.pf-who');
       if (who) { const st = who.querySelector('strong'), sp = who.querySelector('span'); if (st) st.textContent = d.name; if (sp) sp.textContent = d.sub; }
       const chip = r.querySelector('.pf-chip');
@@ -202,6 +221,10 @@
       if (!tr) { tr = document.createElement('span'); tr.className = 'pf-track'; tr.appendChild(document.createElement('i')); r.appendChild(tr); r.classList.add('pf-row--bar'); }
       const bar = tr.querySelector('i');
       if (d.type === 'gap') { bar.className = 'pf-gap'; bar.style.setProperty('--w', d.w + '%'); }
+      if (d.type === 'barrier') {
+        tr.classList.add('pf-dots'); tr.setAttribute('aria-hidden', 'true');
+        [['#6c8cf5', '2.5s'], ['#b07ef0', '2.65s'], ['#f08a6e', '2.8s']].forEach(([c, dl]) => { const b = document.createElement('b'); b.style.background = c; b.style.setProperty('--d', dl); tr.appendChild(b); });
+      }
       if (d.type === 'steps') {
         tr.classList.add('pf-steps');
         const line = document.createElement('span'); line.className = 'pf-line'; line.style.setProperty('--d', '2.9s'); tr.appendChild(line);

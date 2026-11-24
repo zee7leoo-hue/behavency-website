@@ -10,7 +10,7 @@
     { sel: '#identify', name: 'Identify', promise: 'Reveal strengths and gaps', color: '#2f6fdb' },
     { sel: '#engage', name: 'Engage', promise: 'See how the team really works together', color: '#7a4bd6' },
     { sel: '#build', name: 'Build', promise: 'Develop the right capabilities', color: '#e0761c' },
-    { sel: '#measure', name: 'Measure', promise: 'Prove the impact', color: '#14a07c' },
+    { sel: '#measure', name: 'Measure', promise: 'Show what changed', color: '#14a07c' },
   ];
   const VERS = { 1: 'Short card, plays once', 2: 'Fills as you scroll', 3: 'Still half circle', 4: 'Title slides up', 5: 'Line above, left-aligned', 6: 'Journey dots' };
   const m = location.hash.match(/p=(\d)/);

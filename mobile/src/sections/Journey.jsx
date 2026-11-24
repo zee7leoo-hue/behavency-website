@@ -29,7 +29,7 @@ const CARDS = [
     feats: [{ Icon: Users, t: ['On-site', 'with your team'] }, { Icon: Globe, t: ['Multiple', 'languages'] }, { Icon: Pin, t: ['Flexible', 'location'] }] },
   { key: 'l', bg: liveBg, Icon: Users, title: 'Live online', desc: 'Interactive, expert-led sessions with your team, anywhere.',
     feats: [{ Icon: Globe, t: ['Multiple', 'languages'] }, { Icon: Calendar, t: ['Flexible', 'scheduling'] }, { Icon: Users, t: ['Teams of', '12–25'] }] },
-  { key: 'b', bg: blendedBg, Icon: Layers, title: 'Blended', desc: 'A powerful mix of digital learning and live sessions for lasting impact.', blend: true,
+  { key: 'b', bg: blendedBg, Icon: Layers, title: 'Blended', desc: 'Digital learning and live sessions, combined.', blend: true,
     feats: [{ Icon: Laptop, t: ['Digital', 'learning'] }, { Icon: Users, t: ['Expert-led', 'sessions'] }] },
 ]
 
@@ -201,8 +201,8 @@ export default function Journey() {
     <section ref={ref} className={`jn ${seen ? 'is-in' : ''}`} id="journey">
       <div className="jn-in">
         <div className="jn-eyebrow rv" style={{ '--i': 0 }}><i aria-hidden="true" /><span>THE DEVELOPMENT JOURNEY</span></div>
-        <h2 className="jn-title rv" style={{ '--i': 1 }}>You choose how your <em>people</em> learn.</h2>
-        <p className="jn-sub rv" style={{ '--i': 2 }}>Flexible team development combining expert-led sessions and digital learning, tailored to your organisation.</p>
+        <h2 className="jn-title rv" style={{ '--i': 1 }}>Training goes where the <em>results</em> point.</h2>
+        <p className="jn-sub rv" style={{ '--i': 2 }}>Each person works on their own priorities, not a course for everyone. Choose e-learning, live online, in person or a mix.</p>
         <div className="jn-years rv" style={{ '--i': 3 }}>
           <Laurel />
           <i className="jn-vl" aria-hidden="true" />

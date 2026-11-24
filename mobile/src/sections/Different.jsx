@@ -22,7 +22,7 @@ export default function Different() {
     <section ref={ref} className={`df ${seen ? 'is-in' : ''}`} id="different">
       <div className="df-in">
         <p className="df-eyebrow rv" style={{ '--i': 0 }}>What makes Behavency different</p>
-        <h2 className="df-title rv" style={{ '--i': 1 }}>Most providers do one piece. <em>We connect the whole journey.</em></h2>
+        <h2 className="df-title rv" style={{ '--i': 1 }}>Most providers do one piece. <em>So nobody can say what changed.</em></h2>
 
         <ul className="df-list rv" style={{ '--i': 2 }}>
           {POINTS.map((p, i) => {

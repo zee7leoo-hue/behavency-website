@@ -93,7 +93,7 @@
   </section>`;
   const DIF = `<section class="pz" id="different" data-pz="1">
     <div class="pz-eb">What makes Behavency different</div>
-    <h2 class="pz-ttl">Most providers do one piece. <em>We connect the whole journey.</em></h2>
+    <h2 class="pz-ttl">Most providers do one piece. <em>So nobody can say what changed.</em></h2>
     <ul class="pz-dl">${DF.map(([t, l, m], i) => `<li class="pz-di"><button type="button" class="pz-dh" aria-expanded="false"><span class="pz-dn">0${i + 1}</span><span><span class="pz-dt">${t}</span><span class="pz-dline">${l}</span></span><span class="pz-dp">${plus}</span></button><div class="pz-dm"><div><p>${m}</p></div></div></li>`).join('')}</ul>
   </section>`;
   // put our sections in place, in the same order as the desktop site (23 Nov): How we measure → How it runs → Different.
