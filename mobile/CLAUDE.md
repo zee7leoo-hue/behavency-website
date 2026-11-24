@@ -42,3 +42,5 @@ to Google. If a design update brings a new `https://fonts.googleapis.com/css2?..
 `@import`, a script in `public/` or a page in `public/`), download it the same way and point it at the local copy.
 On the phone site, links inside `public/` scripts and `src/assets/*.html` use `/m/fonts/...` (the site sits in `/m/`);
 `index.html` uses `/fonts/...` and Vite adds the `/m/`.
+`index.html` also preloads the first screen's font files (`/fonts/files/...`, Vite adds the `/m/`); keep that list to
+files the page itself uses. Font files are cached for a year by the `/m/fonts/files/*` rule in the shared `netlify.toml`.

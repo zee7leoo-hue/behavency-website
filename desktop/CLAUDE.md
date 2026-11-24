@@ -33,3 +33,8 @@ Chrome, `<id>` = first 8 hex characters of the SHA-1 of the Google URL) with its
 (linked by relative paths). Pages link the copies instead of `fonts.googleapis.com`, and there are no preconnect links
 to Google. If a design update brings a new `https://fonts.googleapis.com/css2?...` link (in `index.html`, a CSS
 `@import`, a script in `public/` or a page in `public/`), download it the same way and point it at the local copy.
+The four section font sets that section styles used to `@import` (HeroCarbon, SituationSection, StageIdentify,
+EngageExperienceSection) are linked in `index.html` instead, right after the main font link and in that order, so every
+section uses the same shared font files (a bundled `@import` made Vite copy the files a second time). `index.html` also
+preloads the first screen's font files; keep that list to files the page itself uses (no warnings in the console).
+Font files are cached for a year by the `/fonts/files/*` rule in the shared `netlify.toml`.

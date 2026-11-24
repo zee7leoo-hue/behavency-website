@@ -10,3 +10,16 @@
 
 [build.environment]
   NODE_VERSION = "22"
+
+# Font files (desktop/public/fonts/files and mobile/public/fonts/files): their names include the font version and never
+# change for the same content, so browsers may keep them for a year, as they did when they came from Google Fonts.
+# Without this, every refresh re-checks them and headings briefly show a backup font.
+[[headers]]
+  for = "/fonts/files/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/m/fonts/files/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
