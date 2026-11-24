@@ -31,3 +31,14 @@ the link's files would undo them), and tell the user they were kept:
    `cm-form`, field names, `.cm-body`/`.cm-send`), update `src/netlifyContact.js` to match.
 5. **The demo pop-up is full screen on the phone**: the `.cm-ov` / `.cm` / `.cm-x` rules at the end of
    `src/styles.css` (white, no rounded card, close button fixed top right, slides up).
+
+## Fonts come from the site itself, never from Google (always keep)
+
+Some visitors' networks or browsers block Google Fonts, and then the site falls back to other fonts. So every Google
+Fonts stylesheet the site uses is copied 1:1 into `public/fonts/`: `gf-<id>.css` (the CSS Google sends to a current
+Chrome, `<id>` = first 8 hex characters of the SHA-1 of the Google URL) with its font files in `public/fonts/files/`
+(linked by relative paths). Pages link the copies instead of `fonts.googleapis.com`, and there are no preconnect links
+to Google. If a design update brings a new `https://fonts.googleapis.com/css2?...` link (in `index.html`, a CSS
+`@import`, a script in `public/` or a page in `public/`), download it the same way and point it at the local copy.
+On the phone site, links inside `public/` scripts and `src/assets/*.html` use `/m/fonts/...` (the site sits in `/m/`);
+`index.html` uses `/fonts/...` and Vite adds the `/m/`.

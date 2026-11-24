@@ -24,3 +24,12 @@ Desktop changes are saved here, in `zee7leoo-hue/behavency-website`, folder `des
 `organization`; `managers` and the ticked `interest` boxes too). Keep it and the hidden `<form name="contact">` in
 `index.html`. If a design update changes the pop-up's form (class `cm-form`, field names, `.cm-body`/`.cm-send`),
 update `src/netlifyContact.js` to match. The mobile site has its own copy of the same file.
+
+## Fonts come from the site itself, never from Google (always keep)
+
+Some visitors' networks or browsers block Google Fonts, and then the site falls back to other fonts. So every Google
+Fonts stylesheet the site uses is copied 1:1 into `public/fonts/`: `gf-<id>.css` (the CSS Google sends to a current
+Chrome, `<id>` = first 8 hex characters of the SHA-1 of the Google URL) with its font files in `public/fonts/files/`
+(linked by relative paths). Pages link the copies instead of `fonts.googleapis.com`, and there are no preconnect links
+to Google. If a design update brings a new `https://fonts.googleapis.com/css2?...` link (in `index.html`, a CSS
+`@import`, a script in `public/` or a page in `public/`), download it the same way and point it at the local copy.

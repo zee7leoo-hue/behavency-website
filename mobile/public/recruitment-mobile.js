@@ -14,7 +14,7 @@
   addEventListener('popstate', () => { if (location.hash !== '#recruitment') close(); else open(); });
   const mount = () => {
     if (!document.body) return setTimeout(mount, 100);
-    if (!document.querySelector('link[data-prc-font]')) { const l = document.createElement('link'); l.rel = 'stylesheet'; l.href = "https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500&family=Inter:wght@400;500;600;700;800&display=swap"; l.setAttribute('data-prc-font', ''); document.head.appendChild(l); }
+    if (!document.querySelector('link[data-prc-font]')) { const l = document.createElement('link'); l.rel = 'stylesheet'; l.href = "/m/fonts/gf-0b1b4d9d.css"; l.setAttribute('data-prc-font', ''); document.head.appendChild(l); }
     const st = document.createElement('style'); st.id = 'recruitment-mobile'; st.textContent = CSS; document.head.appendChild(st);
     const t = document.createElement('div'); t.innerHTML = HTML; el = t.firstElementChild; document.body.appendChild(el);
     el.addEventListener('click', (e) => { if (e.target.closest('[data-close]')) { if (location.hash === '#recruitment') history.back(); else close(); } });
