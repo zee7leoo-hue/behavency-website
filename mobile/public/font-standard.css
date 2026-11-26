@@ -1,0 +1,70 @@
+/* Heading font standard (27 Nov), see "Heading fonts" in the repo's CLAUDE.md.
+   Loaded last (at the end of <body> in index.html), so it wins over the section styles and the design scripts.
+   Every rule starts with :root:not(#fs):not(#fs) body so it also beats the scripts' own "!important" rules.
+   1 section, page and pop-up titles: Source Serif 4 600, letter-spacing -0.02em, dark navy, 40px on the phone
+     (a long title a little smaller, so it never takes more than 4 lines: see the end of this file);
+     their highlighted words: Source Serif 4 italic 400, in the section's own colour (colour left as it was)
+   3 card and step titles: Source Serif 4 600
+   4 list items, labels, buttons, text: Inter; small labels Inter 600
+   5 Playfair Display only for the logo, the top headline and the "Stage 1 of 4" stage openers (not touched here)
+   6 no other fonts: Plus Jakarta Sans is no longer loaded, so the places that named it use Inter (their next choice) */
+
+/* ---------- 1. section, page and pop-up titles ---------- */
+:root:not(#fs):not(#fs) body :is(
+  .wn-title, .pf-title, .id-title, .isx-ist h2, .nbm-title, .rs-title, .hb-title, .eg-title, .bd-title, .jn-title,
+  .tm-h, .ms-title, .hm-title, .pz-ttl, .pk-title, .cm h2, .cm-end h2, .pab-ttl, .prc h2.h:not(.sm), .pvp h1, .tm-ch
+) {
+  font-family: "Source Serif 4", serif !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  letter-spacing: -0.02em !important;
+  font-size: 40px !important;
+  line-height: 1.12 !important;
+  color: #0f1b3d !important;
+}
+/* the headings inside the About, Recruitment, Privacy and Programmes pages: same font, their own size */
+:root:not(#fs):not(#fs) body :is(.pab-in h2, .prc h2.h.sm, .pvp h2, .tm-gh) {
+  font-family: "Source Serif 4", serif !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  letter-spacing: -0.02em !important;
+  color: #0f1b3d !important;
+}
+/* "What's at stake" sits on a dark background: its title stays white */
+:root:not(#fs):not(#fs) body .wn-title.wn-title.wn-title.wn-title { color: #fff !important; }
+
+/* the highlighted words inside those titles */
+:root:not(#fs):not(#fs) body :is(
+  .wn-title em, .pf-title em, .id-title em, .isx-ist h2 em, .nbm-title em, .rs-title em, .hb-title em, .eg-title em,
+  .bd-title em, .jn-title em, .tm-h em, .ms-title em, .hm-title em, .hm-title span, .pz-ttl em, .pk-title em, .cm h2 em,
+  .cm-end h2 em, .pab-ttl em, .prc h2.h em, .prc h2.h span, .pvp h1 em, .tm-ch em, .pab-in h2 em, .pvp h2 em, .tm-gh em
+) {
+  font-family: "Source Serif 4", serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+}
+
+/* ---------- 3. card and step titles ---------- */
+:root:not(#fs):not(#fs) body :is(
+  .pz-hs h3, .mtl-ag h4, .hm h3, .jc-t, .px-res-row h4, .nc-h, .pk2-name, .pk2-aname, .ms-card h3,
+  .pab-story h3, .prc .tl-st h3, .prc .end b
+) {
+  font-family: "Source Serif 4", serif !important;
+  font-weight: 600 !important;
+}
+
+/* ---------- 4. list items and small labels: Inter ---------- */
+:root:not(#fs):not(#fs) body .prc .list b { font-family: "Inter", sans-serif !important; font-weight: 600 !important; }
+:root:not(#fs):not(#fs) body :is(.bpc-num, .prc .soon, .prc .rep-eye, .prc .tl-when, .tm-ceye) {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 600 !important;
+}
+
+/* ---------- 2. long phone titles: smaller so they never take more than 4 lines ---------- */
+/* "We start by listening — to managers, their teams, and to the organisation around them." is 5 lines at 40px, 4 at 32px */
+:root:not(#fs):not(#fs) body .id-title.id-title.id-title.id-title { font-size: 32px !important; }
+/* "One framework. Six areas of effectiveness." was set to stay on one line per part; at 40px it wraps instead (3 lines) */
+:root:not(#fs):not(#fs) body .nbm-title.nbm-title.nbm-title.nbm-title { white-space: normal !important; }
+
+/* "What's at stake" carousel cards ("Our managers are overloaded."): card titles, so weight 600 (was 700) */
+:root:not(#fs):not(#fs) body :is(.wn-q, .wn-q em) { font-family: "Source Serif 4", serif !important; font-weight: 600 !important; }

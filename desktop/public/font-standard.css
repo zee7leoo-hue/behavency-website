@@ -1,0 +1,77 @@
+/* Heading font standard (27 Nov), see "Heading fonts" in the repo's CLAUDE.md.
+   Loaded last (at the end of <body> in index.html), so it wins over the section styles and the design scripts.
+   Every rule starts with X = :root:not(#fs):not(#fs) body so it also beats the scripts' own "!important" rules.
+   1 section, page and pop-up titles: Source Serif 4 600, letter-spacing -0.02em, dark navy;
+     their highlighted words: Source Serif 4 italic 400, in the section's own colour (colour left as it was)
+   3 card and step titles: Source Serif 4 600
+   4 list items, labels, buttons, text: Inter; small labels Inter 600
+   5 Playfair Display only for the logo and the "Stage 1 of 4" stage openers (not touched here) */
+
+/* ---------- 1. section, page and pop-up titles ---------- */
+:root:not(#fs):not(#fs) body :is(
+  .hc-title-main, .hc-title, h2.sx-title, .identify__headline, .ist > div > h3, .bmodel__headline, .wm-h2, .hb-h2,
+  .bx-title, .bx-h, .bs-heading, .dv3-title, .bq-h, .ms-title, .hm-title, .hz-ttl, .different__headline,
+  .packages__header .headline, .cm h2, .cm-end h2, .rcp h1, .rcp h2, .abp h1, .abp h2, .pvp h1, .pvp h2, .bc-h, .bc-gh
+) {
+  font-family: "Source Serif 4", serif !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  letter-spacing: -0.02em !important;
+  color: #0f1b3d !important;
+}
+/* "What's at stake" sits on a dark background: its title stays white */
+:root:not(#fs):not(#fs) body h2.sx-title.sx-title.sx-title.sx-title { color: #fff !important; }
+
+/* the highlighted words inside those titles */
+:root:not(#fs):not(#fs) body :is(
+  .hc-title-em, h2.sx-title em, .identify__headline em, .ist > div > h3 em, .bmodel__headline--teal, .bmodel__headline--italic,
+  .wm-h2 i, .wm-h2 em, .hb-h2 em, .bx-em, .bx-title em, .bx-h em, .bs-heading em, .dv3-title em, .bq-h em, .ms-title em,
+  .hm-title em, .hz-ttl em, .different__headline em, .packages__header .headline em, .cm h2 em, .cm-end h2 em,
+  .rcp h1 em, .rcp h2 em, .abp h1 em, .abp h2 em, .pvp h1 em, .pvp h2 em, .bc-h em, .bc-gh em
+) {
+  font-family: "Source Serif 4", serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+}
+
+/* no decorative underline under the Engage title */
+:root:not(#fs):not(#fs) body .bx-underline { display: none !important; }
+
+/* ---------- 3. card and step titles ---------- */
+:root:not(#fs):not(#fs) body :is(
+  .xc-ecard h3, .hm-h, .hm-ct, .hz-st h3, .pk2-name, .pk2-aname, .bq-ct, .dv3-info-title, .ms-card-title,
+  .rcp .flow h3, .rcp .steps h3, .rcp .fact b, .rcp .end-row p, .abp h3
+) {
+  font-family: "Source Serif 4", serif !important;
+  font-weight: 600 !important;
+}
+:root:not(#fs):not(#fs) body .xc-ecard h3 em { font-family: "Source Serif 4", serif !important; font-weight: 400 !important; }
+
+/* ---------- 4. list items, labels, numbers: Inter ---------- */
+:root:not(#fs):not(#fs) body :is(.identify__source-name, .identify__source-desc) { font-family: "Inter", sans-serif !important; }
+:root:not(#fs):not(#fs) body .identify__source-name { font-weight: 600 !important; letter-spacing: -0.01em !important; }
+/* small labels: Inter 600, capitals, wide spacing */
+:root:not(#fs):not(#fs) body :is(
+  .eb3 .eb, .bq-cfor, .hz-eb, .hz-when, .rcp .soon, .rcp .rep-eye, .rcp .flow em, .abp .pill, .bc-eye
+) {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 600 !important;
+}
+/* small numbers that used Playfair */
+:root:not(#fs):not(#fs) body :is(.identify__source-num, .bmodel__row-num, .xc-label i) {
+  font-family: "Inter", sans-serif !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+}
+
+/* About, Recruitment and Programmes pages: names, years and closing lines in Source Serif 4; list items and step numbers in Inter */
+:root:not(#fs):not(#fs) body :is(.abp .tl-year b, .abp .pp-tx b, .bc-end p) {
+  font-family: "Source Serif 4", serif !important;
+  font-weight: 600 !important;
+}
+:root:not(#fs):not(#fs) body :is(.rcp .list b, .rcp .steps .step > span) {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 600 !important;
+}
+/* "What's at stake" carousel cards ("Our managers are overloaded."): card titles, so weight 600 (was 700) */
+:root:not(#fs):not(#fs) body :is(.sx-q, .sx-q .sx-accent) { font-family: "Source Serif 4", serif !important; font-weight: 600 !important; }

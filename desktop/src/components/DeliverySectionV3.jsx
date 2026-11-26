@@ -105,8 +105,8 @@ export default function DeliverySectionV3() {
                 <Ic key={cy} x={cx - 9.5} y={cy - 9.5} width={19} height={19} stroke="#5a3fc8" strokeWidth={1.8} />
               ))}
               {items.map((it) => (
-                <text key={it.t} x={0} y={0} fontSize={it.s} fontWeight={it.wt} fill={it.c}
-                  fontFamily={it.serif ? "'Playfair Display', Georgia, serif" : 'Inter, system-ui, sans-serif'}
+                <text key={it.t} x={0} y={0} fontSize={it.s} fontWeight={it.serif ? 600 : it.wt} fill={it.c}
+                  fontFamily={it.serif ? "'Source Serif 4', serif" : 'Inter, system-ui, sans-serif'}
                   stroke={it.stroke ? it.c : undefined} strokeWidth={it.stroke} textLength={it.w} lengthAdjust="spacingAndGlyphs"
                   transform={`translate(${it.x} ${it.y}) rotate(${it.r}) skewX(${-it.k})`}>{it.t}</text>
               ))}
