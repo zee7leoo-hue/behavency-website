@@ -6,11 +6,11 @@ import './HowItRuns.css'
 /* "How it runs": a five-step timeline from kick-off to measurable change. */
 
 const STEPS = [
-  { who: 'Week 1', title: 'Kick-off', text: 'We agree the goals, the group and the timeline. Participants get their invitations.', dur: 'You and Behavency' },
-  { who: 'Weeks 2–4', title: 'Assessment', text: 'About 1.5 hours per person, done at their own pace.', dur: 'Participants' },
-  { who: 'Weeks 4–6', title: 'Team game and reflection', text: 'A 2.5-hour session, then the team’s Insight Report.', dur: 'Participants and facilitator' },
-  { who: 'From week 6', title: 'Training and Masterplans', text: 'Programmes matched to each person’s priorities. Length depends on the programmes chosen.', dur: 'Participants' },
-  { who: '3 months after training', title: 'Re-assessment', text: 'The same questionnaires, the same people, compared with the starting point.', dur: 'Participants' },
+  { who: 'Неделя 1', title: 'Старт', text: 'Согласовываем цели, состав группы и сроки. Участники получают приглашения.', dur: 'Вы и Behavency' },
+  { who: 'Недели 2–4', title: 'Оценка', text: 'Около 1,5 часа на человека, в своём темпе.', dur: 'Участники' },
+  { who: 'Недели 4–6', title: 'Командная игра и разбор', text: 'Сессия на 2,5 часа, затем — аналитический отчёт команды.', dur: 'Участники и фасилитатор' },
+  { who: 'С 6-й недели', title: 'Обучение и мастер-планы', text: 'Программы под приоритеты каждого. Сроки зависят от выбранных программ.', dur: 'Участники' },
+  { who: 'Через 3 месяца после обучения', title: 'Повторная оценка', text: 'Те же опросники, те же люди — сравнение с исходной точкой.', dur: 'Участники' },
 ]
 
 export default function HowItRuns() {
@@ -21,7 +21,7 @@ export default function HowItRuns() {
       <div className="container">
         <motion.div className="hir__head"
           initial={{ opacity: 0, y: 28 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
-          <span className="hir__label"><i>→</i><span className="hir__ln" /><b>How it runs</b><span className="hir__sep" /><span className="hir__t">From kick-off to measurable change</span></span>
+          <span className="hir__label"><i>→</i><span className="hir__ln" /><b>Как это проходит</b><span className="hir__sep" /><span className="hir__t">From kick-off to measurable change</span></span>
           <h2 className="headline hir__headline">One programme, <em>five clear steps.</em></h2>
           <p className="hir__lead">You always know what happens when, and who is involved.</p>
         </motion.div>

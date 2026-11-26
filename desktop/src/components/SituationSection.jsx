@@ -9,14 +9,14 @@ import './SituationSection.css'
    - rotation pauses on hover / focus, with the Pause button, off screen and with reduced motion */
 
 const QUESTIONS = [
-  { topic: 'Manager burnout', lead: ['Our managers are'], accent: 'overloaded.', support: ['More on their plate than ever,', 'and their motivation is dropping.'],
-    stat: '27% → 22%', statText: 'managers who feel engaged at work, in one year', src: 'Gallup, 2026', href: 'https://www.gallup.com/file/workplace/712607/SOGW_Global-Press-Release-2026-04.pdf' },
-  { topic: 'Change fatigue', lead: ['One more restructure,'], accent: 'one more new system.', support: ['Managers are expected to lead it.', 'Most were never prepared for it.'],
-    stat: '74%', statText: 'of HR leaders say managers aren’t ready to lead change', src: 'Gartner, 2024', href: 'https://www.gartner.com/en/newsroom/press-releases/2024-10-15-gartner-survey-finds-leader-and-manager-development-tops-hrleaders-list' },
-  { topic: 'Stretched too thin', lead: ['Our managers lead'], accent: 'bigger teams.', support: ['And they still have their own work,', 'so each person gets less of their time.'],
-    stat: '10.9 → 12.1', statText: 'average team size per manager, in one year', src: 'Gallup, 2025', href: 'https://www.gallup.com/workplace/700718/managers-teams-getting-bigger.aspx' },
-  { topic: 'Unprepared managers', lead: ['We promoted our best'], accent: 'people to managers.', support: ['We checked their results,', 'not how they lead.'],
-    stat: '82%', statText: 'of new managers had no management training', src: 'CMI, 2023', href: 'https://fortune.com/2023/10/16/bosses-accidental-formal-training-workers-quit-cmi/' },
+  { topic: 'выгорание руководителей', lead: ['Наши руководители'], accent: 'перегружены.', support: ['Задач всё больше,', 'а мотивация падает.'],
+    stat: '27% → 22%', statText: 'доля вовлечённых руководителей за год', src: 'Gallup, 2026', href: 'https://www.gallup.com/file/workplace/712607/SOGW_Global-Press-Release-2026-04.pdf' },
+  { topic: 'усталость от изменений', lead: ['Ещё одна реструктуризация,'], accent: 'ещё одна новая система.', support: ['Вести перемены поручают руководителям.', 'Но их к этому почти никто не готовил.'],
+    stat: '74%', statText: 'HR-директоров говорят: руководители не готовы вести перемены', src: 'Gartner, 2024', href: 'https://www.gartner.com/en/newsroom/press-releases/2024-10-15-gartner-survey-finds-leader-and-manager-development-tops-hrleaders-list' },
+  { topic: 'на пределе возможностей', lead: ['Команды наших руководителей'], accent: 'растут.', support: ['А собственную работу никто не отменял,', 'так что на каждого в команде времени всё меньше.'],
+    stat: '10,9 → 12,1', statText: 'средний размер команды на руководителя, за год', src: 'Gallup, 2025', href: 'https://www.gallup.com/workplace/700718/managers-teams-getting-bigger.aspx' },
+  { topic: 'неподготовленные руководители', lead: ['Мы сделали лучших'], accent: 'сотрудников руководителями.', support: ['Смотрели на их результаты,', 'а не на умение руководить.'],
+    stat: '82%', statText: 'новых руководителей не учили управлять', src: 'CMI, 2023', href: 'https://fortune.com/2023/10/16/bosses-accidental-formal-training-workers-quit-cmi/' },
 ]
 
 const HOLD_MS = 7000   // each card is shown for 7 seconds
@@ -113,17 +113,17 @@ export default function SituationSection({ id = 'situation', variant = 'wave' })
     <section ref={root} className="sx-outer" id={id}>
       <div className={`sx ${plain ? 'sx--plain' : ''} ${visible ? 'is-visible' : ''}`} data-behavency>
       <div className="sx-copy">
-        <p className="sx-eyebrow">WHAT’S AT STAKE</p>
+        <p className="sx-eyebrow">ЧТО НА КОНУ</p>
         <span className="sx-eyebar" aria-hidden="true" />
-        <h2 className="sx-title">The risk you can <em>see</em>{' '}<br /><em>coming.</em></h2>
+        <h2 className="sx-title">Этот риск <em>видно</em>{' '}<br /><em>заранее.</em></h2>
         <p className="sx-sub">
-          Most management gaps stay invisible for a long time.{' '}<br />
-          Teams work around them every day, and the organisation{' '}<br />
-          only notices when the results drop.
+          Пробелы в управлении обычно долго никто не замечает.{' '}<br />
+          Команды день за днём обходят их, а компания{' '}<br />
+          спохватывается, только когда падают результаты.
         </p>
         <p className="sx-note">
-          You can’t control the uncertainty. You can{' '}<br />
-          control how ready your managers are.
+          На неопределённость вы не повлияете. А на{' '}<br />
+          готовность своих руководителей — вполне.
         </p>
       </div>
 
@@ -132,7 +132,7 @@ export default function SituationSection({ id = 'situation', variant = 'wave' })
         style={{ '--sx-interval': `${HOLD_MS}ms` }}
         role="group"
         aria-roledescription="carousel"
-        aria-label="A reality for many HR teams"
+        aria-label="Так живут многие HR-команды"
         onMouseEnter={() => setHovering(true)}
         onMouseLeave={() => setHovering(false)}
         onFocus={() => setFocused(true)}
@@ -140,7 +140,7 @@ export default function SituationSection({ id = 'situation', variant = 'wave' })
         onKeyDown={onKeyDown}
       >
         <div className="sx-card-head">
-          <span className="sx-card-label">SOUND FAMILIAR?</span>
+          <span className="sx-card-label">ЗНАКОМО?</span>
           <span className="sx-card-count" aria-hidden="true">{index + 1} / {QUESTIONS.length}</span>
         </div>
 
@@ -152,7 +152,7 @@ export default function SituationSection({ id = 'situation', variant = 'wave' })
               aria-hidden={i !== index}
               role="group"
               aria-roledescription="slide"
-              aria-label={`${i + 1} of ${QUESTIONS.length}: ${q.topic}`}
+              aria-label={`${i + 1} из ${QUESTIONS.length}: ${q.topic}`}
             >
               <p className="sx-q">
                 {q.lead.map((line) => <span className="sx-lead" key={line}>{line}</span>)}
@@ -168,14 +168,14 @@ export default function SituationSection({ id = 'situation', variant = 'wave' })
           ))}
         </div>
 
-        <div className="sx-dots" role="tablist" aria-label="Choose a question">
+        <div className="sx-dots" role="tablist" aria-label="Выберите вопрос">
           {QUESTIONS.map((q, i) => (
             <button
               key={q.accent}
               type="button"
               role="tab"
               aria-selected={i === index}
-              aria-label={`Question ${i + 1} of ${QUESTIONS.length}`}
+              aria-label={`Вопрос ${i + 1} из ${QUESTIONS.length}`}
               className={`sx-dot ${i === index ? 'is-active' : ''}`}
               onClick={() => userNav(() => goTo(i, i > index ? 1 : -1))}
             />
@@ -183,10 +183,10 @@ export default function SituationSection({ id = 'situation', variant = 'wave' })
         </div>
 
         <div className="sx-buttons">
-          <button type="button" className="sx-btn" aria-label="Previous question" onClick={() => userNav(goPrev)}>
+          <button type="button" className="sx-btn" aria-label="Предыдущий вопрос" onClick={() => userNav(goPrev)}>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5L8 12l6.5 6.5" /></svg>
           </button>
-          <button type="button" className="sx-btn sx-btn--next" aria-label="Next question" onClick={() => userNav(goNext)}>
+          <button type="button" className="sx-btn sx-btn--next" aria-label="Следующий вопрос" onClick={() => userNav(goNext)}>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5L16 12l-6.5 6.5" /></svg>
           </button>
         </div>
@@ -194,7 +194,7 @@ export default function SituationSection({ id = 'situation', variant = 'wave' })
         {/* Pause control for keyboard / screen-reader users: invisible until it receives focus */}
         {!reduced && (
           <button type="button" className="sx-pause" aria-pressed={userPaused} onClick={() => setUserPaused((p) => !p)}>
-            {userPaused ? 'Resume rotation' : 'Pause rotation'}
+            {userPaused ? 'Продолжить' : 'Пауза'}
           </button>
         )}
       </div>

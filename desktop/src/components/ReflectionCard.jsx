@@ -8,7 +8,7 @@ export default function ReflectionCard() {
     { Icon: Clock, title: 'Typically 90 minutes', desc: 'Flexible to your needs.' },
     { Icon: Users, title: 'Facilitator-led', desc: 'Run by your facilitator or a\nBehavency expert.' },
     { Icon: Chat, title: 'Guided reflection', desc: 'A structured methodology\nusing questions, discussion\nand facilitator input.' },
-    { Icon: Layers, title: 'Linked to your results', desc: 'Brings to life the key areas\nfrom the assessment in\nreal team situations.' },
+    { Icon: Layers, title: 'Опирается на ваши результаты', desc: 'Brings to life the key areas\nfrom the assessment in\nreal team situations.' },
   ]
   return (
     <div className="rc-card">
@@ -17,7 +17,7 @@ export default function ReflectionCard() {
           <span className="rc-badge-icon"><Users /></span>
           <span className="rc-badge-pill">02 – Post-Reflection</span>
         </div>
-        <h3 className="rc-title">The Reflection</h3>
+        <h3 className="rc-title">Разбор</h3>
         <svg className="rc-underline" viewBox="0 0 180 14" aria-hidden="true" preserveAspectRatio="none">
           <defs>
             <linearGradient id="rc-ul" x1="0" x2="1">
@@ -28,7 +28,7 @@ export default function ReflectionCard() {
           <path d="M3 10.5 C45 4 110 3 177 5.2 C120 6.6 70 9 8 12.2 C4 12.4 1.5 11.6 3 10.5Z" fill="url(#rc-ul)" />
         </svg>
         <p className="rc-sub">The game is only the beginning.</p>
-        <p className="rc-text">In a facilitated conversation, the team looks back at what happened — the decisions they made, the patterns that emerged, and how they worked together.</p>
+        <p className="rc-text">Команда вместе с фасилитатором вспоминает, the team looks back at what happened — the decisions they made, the patterns that emerged, and how they worked together.</p>
         <p className="rc-text">The facilitator helps turn those moments into insights they can recognise in themselves and in the way their team works.</p>
       </div>
 

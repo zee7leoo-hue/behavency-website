@@ -1,4 +1,4 @@
-// Desktop: "Request a demo" opens a short pop-up form instead of scrolling to the dark contact block at the end.
+// Desktop: "Запросить демо" opens a short pop-up form instead of scrolling to the dark contact block at the end.
 // The dark block is replaced by a light closing line with one button. Remove this file and its <script> tag to go back.
 (function () {
   const CSS = `
@@ -52,43 +52,43 @@
   `;
   const X = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
   const FORM = `<form class="cm-form">
-      <h2 id="cm-title">Let’s talk about <em>your people.</em></h2>
+      <h2 id="cm-title">Поговорим <em>о ваших людях.</em></h2>
             <div class="cm-row">
-        <label for="cm-name">Name<input id="cm-name" name="name" type="text" autocomplete="name" required></label>
-        <label for="cm-email">Work email<input id="cm-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required></label>
+        <label for="cm-name">Имя<input id="cm-name" name="name" type="text" autocomplete="name" required></label>
+        <label for="cm-email">Рабочая почта<input id="cm-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required></label>
       </div>
       <div class="cm-row">
-        <label for="cm-org">Organisation<input id="cm-org" name="org" type="text" autocomplete="organization" required></label>
-        <label for="cm-role">Your role<select id="cm-role" name="role" required>
-          <option value="">Select…</option><option>HR Director / CHRO</option><option>L&amp;D / OD Professional</option><option>Recruiter / Talent Acquisition</option><option>CEO / Leadership</option><option>Consultant / Partner</option><option>Other</option>
+        <label for="cm-org">Организация<input id="cm-org" name="org" type="text" autocomplete="organization" required></label>
+        <label for="cm-role">Ваша должность<select id="cm-role" name="role" required>
+          <option value="">Выберите…</option><option>HR-директор / CHRO</option><option>Специалист по L&amp;D / OD</option><option>Рекрутер / подбор персонала</option><option>Генеральный директор / руководство</option><option>Консультант / партнёр</option><option>Другое</option>
         </select></label>
       </div>
       <div class="cm-row">
-        <label for="cm-phone">Phone <span class="cm-opt">(optional)</span><input id="cm-phone" name="phone" type="tel" autocomplete="tel"></label>
-        <label for="cm-size">How many managers?<select id="cm-size" name="managers">
-        <option value="">Select…</option><option>Under 20</option><option>20–50</option><option>50–150</option><option>150+</option>
+        <label for="cm-phone">Телефон <span class="cm-opt">(необязательно)</span><input id="cm-phone" name="phone" type="tel" autocomplete="tel"></label>
+        <label for="cm-size">Сколько у вас руководителей?<select id="cm-size" name="managers">
+        <option value="">Выберите…</option><option>Менее 20</option><option>20–50</option><option>50–150</option><option>150+</option>
       </select></label>
       </div>
       <fieldset class="cm-int">
-        <legend>What are you interested in?</legend>
+        <legend>Что вас интересует?</legend>
         <div class="cm-chips">
-          <label class="cm-chip"><input type="checkbox" name="interest" value="Assessment">Assessment</label>
-          <label class="cm-chip"><input type="checkbox" name="interest" value="Team game">Team game</label>
-          <label class="cm-chip"><input type="checkbox" name="interest" value="Training">Training</label>
-          <label class="cm-chip"><input type="checkbox" name="interest" value="Full journey">Full journey</label>
-          <label class="cm-chip"><input type="checkbox" name="interest" value="Recruitment">Recruitment</label>
+          <label class="cm-chip"><input type="checkbox" name="interest" value="Оценка">Оценка</label>
+          <label class="cm-chip"><input type="checkbox" name="interest" value="Командная игра">Командная игра</label>
+          <label class="cm-chip"><input type="checkbox" name="interest" value="Обучение">Обучение</label>
+          <label class="cm-chip"><input type="checkbox" name="interest" value="Полный цикл">Полный цикл</label>
+          <label class="cm-chip"><input type="checkbox" name="interest" value="Подбор">Подбор</label>
         </div>
       </fieldset>
-      <label for="cm-msg">What are you trying to achieve? <span class="cm-opt">(optional)</span><textarea id="cm-msg" name="message" rows="4"></textarea></label>
-      <button type="submit" class="cm-send">Send message</button>
-      <p class="cm-note">We use your details only to reply to you (<a href="#privacy" class="cm-priv">Privacy Policy</a>). Or e-mail us at <a href="mailto:info@behavency.com">info@behavency.com</a></p>
+      <label for="cm-msg">Какую задачу вы решаете? <span class="cm-opt">(необязательно)</span><textarea id="cm-msg" name="message" rows="4"></textarea></label>
+      <button type="submit" class="cm-send">Отправить</button>
+      <p class="cm-note">Ваши данные нужны нам только для ответа (<a href="#privacy" class="cm-priv">Политика конфиденциальности</a>). Или напишите нам на <a href="mailto:info@behavency.com">info@behavency.com</a></p>
     </form>`;
-  const HTML = `<div class="cm-ov" role="dialog" aria-modal="true" aria-labelledby="cm-title"><div class="cm"><button type="button" class="cm-x" aria-label="Close">${X}</button><div class="cm-body">${FORM}</div></div></div>`;
+  const HTML = `<div class="cm-ov" role="dialog" aria-modal="true" aria-labelledby="cm-title"><div class="cm"><button type="button" class="cm-x" aria-label="Закрыть">${X}</button><div class="cm-body">${FORM}</div></div></div>`;
   const END = `<section class="cm-end" id="contact" data-cm="1">
-    <div class="eb">Ready to start?</div>
-    <h2>Let’s talk about <em>your people.</em></h2>
-    <p>Tell us about your organisation and where you want to start. We’ll walk you through what Behavency would look like for you.</p>
-    <button type="button" data-cm-open>Request a demo</button>
+    <div class="eb">Готовы начать?</div>
+    <h2>Поговорим <em>о ваших людях.</em></h2>
+    <p>Расскажите о своей компании и о том, с чего хотите начать, — а мы покажем, как Behavency может работать именно у вас.</p>
+    <button type="button" data-cm-open>Запросить демо</button>
   </section>`;
   let ov = null, last = null;
   const open = () => {
@@ -116,13 +116,13 @@
       });
       ov.addEventListener('submit', (e) => {
         e.preventDefault();
-        ov.querySelector('.cm-body').innerHTML = '<div class="cm-done"><b>Thank you.</b><p>We’ll be in touch soon.</p></div>';
+        ov.querySelector('.cm-body').innerHTML = '<div class="cm-done"><b>Спасибо.</b><p>Мы скоро с вами свяжемся.</p></div>';
       });
       document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && ov.classList.contains('open')) close(); });
-      // every "Request a demo" button and every link to #contact opens the pop-up
+      // every "Запросить демо" button and every link to #contact opens the pop-up
       document.addEventListener('click', (e) => {
         const el = e.target.closest('a, button'); if (!el || ov.contains(el)) return;
-        const isDemo = el.hasAttribute('data-cm-open') || el.getAttribute('href') === '#contact' || /^request a demo$/i.test(el.textContent.trim());
+        const isDemo = el.hasAttribute('data-cm-open') || el.getAttribute('href') === '#contact' || /^(request a demo|запросить демо)$/i.test(el.textContent.trim());
         if (!isDemo) return;
         e.preventDefault(); e.stopPropagation();
         const bg = document.querySelector('.nav-burger[aria-expanded="true"]'); if (bg) bg.click(); // phone: close the menu first

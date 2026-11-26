@@ -1,0 +1,126 @@
+/* Russian-only layout fixes (desktop). Copied to desk-ru/ru-fixes.css and linked last from index.html by build-ru.cjs.
+   Russian text is about 15-30% longer than the English, and Cyrillic letters are wider. Rules here only let text wrap
+   or make one label a little smaller where it would otherwise run into something. The design stays the same. */
+
+/* Russian hyphenation where text is allowed to wrap */
+/* (26 Nov: hyphenation switched off, see round 2 at the end) */
+
+/* Hero: the headline lines and the paragraph are fixed lines (no wrapping) placed beside the four cards.
+   The Russian lines are wider, so they get smaller type to keep clear of the cards (Nov 25: the new five-line
+   headline needed a little more: .8 -> .66). */
+@media (min-width: 901px) {
+  /* 26 Nov: size and line spacing shrink together (before, only the size shrank and the lines floated apart) */
+  html[lang="ru"] .hc-title-main { font-size: calc(3.72cqw * .9 * .78) !important; line-height: calc(3.625cqw * .9 * .8) !important; letter-spacing: -.01em; }
+  html[lang="ru"] .hc-title-em { font-size: calc(3.68cqw * .9 * .78) !important; line-height: calc(3.6875cqw * .9 * .8) !important; margin-top: calc(.6cqw * .9) !important; letter-spacing: -.01em; }
+  /* the paragraph wraps inside the left column instead of running into the cards */
+  html[lang="ru"] .hc-sub { white-space: normal !important; width: 29.5cqw !important; font-size: 1.13cqw !important; line-height: 1.68cqw !important; }
+  html[lang="ru"] .hc-sub br { display: none; }
+}
+
+/* "Most providers do one piece. / So nobody can say what changed." : the two lines may wrap in Russian */
+html[lang="ru"] .different__headline, html[lang="ru"] .different__headline * { white-space: normal !important; }
+html[lang="ru"] .different__headline { text-wrap: balance; }
+
+/* "What's at stake": heading, paragraph and note are fixed lines beside the "Sound familiar?" card. In Russian they
+   wrap inside the left column instead (same position and size). */
+@media (min-width: 901px) {
+  html[lang="ru"] .sx-title, html[lang="ru"] .sx-sub, html[lang="ru"] .sx-note { white-space: normal !important; width: 37cqw; }
+  html[lang="ru"] .sx-title { width: 39.3cqw; }
+  html[lang="ru"] .sx-note { top: 36.8cqw; }
+  html[lang="ru"] .sx-title br, html[lang="ru"] .sx-sub br, html[lang="ru"] .sx-note br { display: none; }
+}
+
+/* Hero cards: the caption under each stage name is a little smaller so three Russian lines fit in the card */
+html[lang="ru"] .hcx-t span { font-size: 6.8cqw; line-height: 1.22; }
+
+/* Engage, game card picture: «Командное испытание» is wider than "Team Challenge" */
+html[lang="ru"] .tc-title { font-size: calc(var(--u) * 33); white-space: nowrap; }
+
+/* Development journey: the heading sits beside the laptop; Russian line 2 is longer */
+html[lang="ru"] .dv3-title { transform: scale(.74); transform-origin: 0 0; }
+/* format buttons: «Онлайн с тренером», «Смешанный формат» wrap onto two short lines inside the button */
+html[lang="ru"] .dv3-card-label { white-space: normal; line-height: 1; padding: 0 3px; }
+html[lang="ru"] .dv3-canvas > .dv3-card:nth-child(11) .dv3-card-label, html[lang="ru"] .dv3-canvas > .dv3-card:nth-child(13) .dv3-card-label { font-size: .92em; transform: translateY(-7px); }
+
+/* Measure: row labels in the example card are a little tighter so the longest one clears the bar */
+html[lang="ru"] .ms-label { letter-spacing: -.03em; }
+
+/* "How we measure", three-sided cards: the long questionnaire name in the pill and the short line beside it both
+   wrap onto two lines instead of running into each other */
+html[lang="ru"] .hm-card .hm-pill { white-space: normal; text-align: center; line-height: 1.15 !important; max-width: 11em; height: auto !important; min-height: 2.4em; padding-top: .3em; padding-bottom: .3em; display: inline-flex; align-items: center; justify-content: center; }
+html[lang="ru"] .hm-card .hm-cd { white-space: normal; max-width: 16em; }
+
+/* "How we measure": the one-line heading is longer in Russian; slightly smaller so it ends at the content edge */
+html[lang="ru"] .hm-title { transform: scale(.9); transform-origin: 0 0; }
+
+
+/* ---- Overflow pass (Nov 25): places where Russian text ran out of its box at 1440 / 1920 ---- */
+
+/* Platform section (its own frame, platform-section.html, which now loads this file too; rules scoped to .split-wrap):
+   in the people table «АКТИВНОСТЬ» ran into the "Next steps" panel and the «Требует внимания» chip ran into the
+   activity column. The chip column is wider, the chip and the column headings a little smaller. */
+@media (min-width: 861px) {
+  html[lang="ru"] .split-wrap .row { grid-template-columns: minmax(96px, 1.3fr) 72px minmax(66px, .9fr) 120px 78px; gap: 8px; }
+  html[lang="ru"] .split-wrap .row.head { letter-spacing: .02em; font-size: 11px; }
+}
+html[lang="ru"] .split-wrap .status { font-size: 11.6px; padding: 4px 8px; letter-spacing: -.01em; }
+
+/* Engage, team report card: «Аналитический» ran past the edge of the green panel */
+html[lang="ru"] .tr-left strong { font-size: max(8px, calc(var(--u) * 17.6)); }
+
+/* "How we measure": the three column headings touched the dividing lines; a little smaller */
+html[lang="ru"] .hm-h { font-size: calc(29 * var(--u)) !important; }
+/* the questionnaire name in the blue pill took three lines; the pill is a little wider so it takes two */
+html[lang="ru"] .hm-card .hm-pill { max-width: 16.5em; padding-left: .8em !important; padding-right: .8em !important; }
+html[lang="ru"] .hm-card:has(.hm-pill--blue) .hm-cd { max-width: 13.5em; }
+/* on very wide screens the pill text grows faster than the card; capped so the pill stays clear of the card title */
+html[lang="ru"] .hm-card .hm-pill { font-size: min(calc(-5px + 0.9458vw), calc(9.3 * var(--u))) !important; }
+
+/* Build, the app picture (showcase frame, showcase-desktop/index.html, which now loads this file too; scoped to .sc-band):
+   the two area tags dropped into the search box are a little smaller so the second one stays inside the box */
+html[lang="ru"] .sc-band .tagp { font-size: 10px; letter-spacing: -.02em; padding: 4px 8px 4px 4px; gap: 4px; }
+html[lang="ru"] .sc-band .tagp i { width: 18px; height: 18px; }
+html[lang="ru"] .sc-band #search .pre { font-size: 10.6px !important; letter-spacing: -.02em; }
+/* the training library list (two columns): each column keeps its half and a long name wraps onto a second line */
+html[lang="ru"] .sc-band .cloud { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+html[lang="ru"] .sc-band .chip { white-space: normal; line-height: 1.25; }
+/* master-plan sheet: the third programme tab («Влияние без формальной власти») ran out of the sheet; the tabs may take two
+   short lines and are a little smaller */
+html[lang="ru"] .sc-band .mtab { white-space: normal; flex: 0 1 auto; min-width: 0; line-height: 1.2; padding: 8px 8px; font-size: 12.5px; }
+html[lang="ru"] .sc-band .mtab i, html[lang="ru"] .sc-band .mtab .tk { flex: none; }
+
+/* Six-areas wheel: the long area names («СОГЛАСОВАННОСТЬ», «ОТВЕТСТВЕННОСТЬ») and «ЭФФЕКТИВНОСТЬ» in the middle touched the
+   edge of their circles; a little smaller with less letter-spacing */
+html[lang="ru"] .bv-sat-text { font-size: 16px; letter-spacing: .01em; }
+html[lang="ru"] .bv-center-title { font-size: 23px; letter-spacing: .02em; }
+
+/* Engage: «прочувствуют.» reached the dividing line beside the heading; a little smaller */
+@media (min-width: 901px) { html[lang="ru"] .bx-title { font-size: clamp(40px, 4.5vw, 80px); } }
+
+/* Recruitment page, example report: «Стоит изучить» broke onto two lines in its small chip; the chip column is wider */
+html[lang="ru"] .rcp .bar { grid-template-columns: minmax(0, 1fr) 40px 88px; }
+html[lang="ru"] .rcp .zone { white-space: nowrap; }
+
+/* Development journey, format buttons: the two-line names «Онлайн с тренером» / «Смешанный формат» touched the icon above;
+   a little smaller and moved up less */
+html[lang="ru"] .dv3-canvas > .dv3-card:nth-child(11) .dv3-card-label, html[lang="ru"] .dv3-canvas > .dv3-card:nth-child(13) .dv3-card-label { font-size: calc(var(--u) * 15.5) !important; line-height: calc(var(--u) * 18) !important; transform: translateY(calc(var(--u) * 1)); }
+
+
+/* 26 Nov, owner chose option 1: Russian italic letters switch to handwriting shapes (т like m, д like g), so no italic
+   in Russian; the accent words keep their colour. Bold serif headings are made one step lighter in ru-headings.js. */
+:lang(ru) * { font-style: normal !important; }
+
+
+/* ---- 26 Nov, round 2 (owner) ---- */
+/* Russian never splits a word across two lines in headings or text (no "эффективно-сти") */
+:lang(ru) * { hyphens: manual !important; -webkit-hyphens: manual !important; }
+/* "Assessment data is stored in the EU…" is not shown in Russian (data will be stored in Russia) */
+html[lang="ru"] .id-conf { display: none !important; }
+/* Identify: the paragraph flows without the English line breaks; the headline lines sit a little closer */
+html[lang="ru"] .identify__intro br { display: none; }
+html[lang="ru"] .identify__headline { line-height: 1.04 !important; }
+/* the five source titles: plain text font (Inter), like the phone, instead of the heavy serif */
+html[lang="ru"] .identify__source-name { font-family: Inter, system-ui, sans-serif !important; font-weight: 600 !important; font-size: 19px !important; line-height: 1.3 !important; letter-spacing: -.01em; }
+
+/* 26 Nov: style C (type-c.css) sets italic with strong selectors; :not(#_) makes this rule stronger so Russian stays upright */
+:lang(ru) *:not(#_):not(#_), :lang(ru) *:not(#_):not(#_)::before, :lang(ru) *:not(#_):not(#_)::after { font-style: normal !important; }

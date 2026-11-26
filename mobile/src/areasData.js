@@ -4,44 +4,44 @@ export const LEVELS = [
     "id": "line",
     "label": "Line Managers",
     "color": "#2268d6",
-    "pq": "Each practice answers the question: \"What does an effective manager at this level do?\"",
-    "bq": "Each manifestation answers the question: \"How does this leadership practice look in a line manager?\"",
+    "pq": "Каждая практика отвечает на вопрос: «Что делает эффективный руководитель этого уровня?»",
+    "bq": "Каждое проявление отвечает на вопрос: «Как эта управленческая практика выглядит у линейного руководителя?»",
     "areas": [
       {
         "id": "clarity",
-        "name": "Clarity & Alignment",
+        "name": "Ясность и согласованность",
         "icon": "target",
         "practices": [
           {
-            "name": "Translate strategy into clear guidelines for the team",
+            "name": "Переводить стратегию в ясные ориентиры для команды",
             "items": [
-              "Translates organisational goals into clear priorities and tasks for their team.",
-              "Helps employees understand how team goals connect to departmental and organisational goals."
+              "Переводит цели организации в ясные приоритеты и задачи для своей команды.",
+              "Помогает сотрудникам понять, как цели команды связаны с целями подразделения и организации."
             ]
           },
           {
-            "name": "Define the team's area of responsibility",
+            "name": "Определять зону ответственности команды",
             "items": [
-              "Clearly defines what results the team is responsible for, and what tasks and decisions lie outside their area of responsibility."
+              "Чётко определяет, за какие результаты отвечает команда, а какие задачи и решения лежат за пределами её зоны ответственности."
             ]
           },
           {
-            "name": "Clearly define roles and expectations",
+            "name": "Чётко определять роли и ожидания",
             "items": [
-              "Clearly explains to employees their roles, areas of responsibility, and expected results."
+              "Понятно объясняет сотрудникам их роли, зоны ответственности и ожидаемые результаты."
             ]
           },
           {
-            "name": "Form a shared understanding of what success means",
+            "name": "Формировать общее понимание того, что считается успехом",
             "items": [
-              "Creates a shared understanding of what is considered a successful outcome for the team's work.",
-              "Notices when employees have different understandings of goals or success criteria, and achieves a shared understanding before it leads to misalignment in work."
+              "Формирует общее понимание того, что считается успешным результатом работы команды.",
+              "Замечает, когда сотрудники по-разному понимают цели или критерии успеха, и добивается общего понимания, пока это не разладило работу."
             ]
           },
           {
-            "name": "Ensure alignment between priorities and actual actions",
+            "name": "Следить, чтобы реальные действия соответствовали приоритетам",
             "items": [
-              "Monitors the alignment of the team's actual work with agreed goals and direction, and promptly points out deviations when they occur."
+              "Следит, чтобы работа команды шла в русле согласованных целей и направления, и сразу указывает на отклонения."
             ]
           }
         ]
@@ -52,161 +52,161 @@ export const LEVELS = [
         "icon": "heart",
         "practices": [
           {
-            "name": "Foster psychological safety",
+            "name": "Создавать психологическую безопасность",
             "items": [
-              "Encourages employees to openly discuss problems and mistakes without fear of blame.",
-              "Ensures employees know their input has genuinely been considered: explains how it influenced the decision, or why a different approach was taken — not just going through the motions of listening."
+              "Поощряет сотрудников открыто обсуждать проблемы и ошибки, не опасаясь обвинений.",
+              "Даёт сотрудникам понять, что их мнение действительно учтено: объясняет, как оно повлияло на решение или почему выбран другой подход, — а не просто делает вид, что слушает."
             ]
           },
           {
-            "name": "Demonstrate transparency and consistency",
+            "name": "Проявлять открытость и последовательность",
             "items": [
-              "Proactively shares the reasoning behind difficult or unpopular management decisions without waiting for questions or discontent.",
-              "Applies the same rules and approaches consistently to employees in comparable situations."
+              "Сам, не дожидаясь вопросов или недовольства, объясняет, почему принято сложное или непопулярное управленческое решение.",
+              "Применяет одни и те же правила и подходы ко всем сотрудникам в похожих ситуациях."
             ]
           },
           {
-            "name": "Encourage diversity of opinions and perspectives",
+            "name": "Поощрять разнообразие мнений и точек зрения",
             "items": [
-              "Encourages employees to openly express different opinions and ideas, even when they differ from the manager's position or the majority view."
+              "Поощряет сотрудников открыто высказывать разные мнения и идеи, даже если они расходятся с позицией руководителя или мнением большинства."
             ]
           },
           {
-            "name": "Maintain open and respectful communication",
+            "name": "Поддерживать открытое и уважительное общение",
             "items": [
-              "Communicates respectfully with employees and puts a stop to any disrespectful behaviour within the team.",
-              "Openly discusses difficult issues with employees and does not avoid uncomfortable conversations."
+              "Общается с сотрудниками уважительно и пресекает любое неуважительное поведение в команде.",
+              "Открыто обсуждает с сотрудниками сложные вопросы и не избегает неудобных разговоров."
             ]
           },
           {
-            "name": "Build a sense of belonging and team identity",
+            "name": "Формировать чувство принадлежности и командную идентичность",
             "items": [
-              "Acknowledges employees' contributions and highlights their significance to the team's overall results."
+              "Признаёт вклад сотрудников и показывает, как он важен для общего результата команды."
             ]
           }
         ]
       },
       {
         "id": "capacity",
-        "name": "Focus & Prioritisation",
+        "name": "Фокус и приоритеты",
         "icon": "org",
         "practices": [
           {
-            "name": "Separate the truly important from the secondary",
+            "name": "Отделять действительно важное от второстепенного",
             "items": [
-              "Identifies which tasks matter most for achieving team goals and structures the team's work accordingly.",
-              "Filters out operational noise and does not burden the team with every incoming request or initiative."
+              "Определяет, какие задачи важнее всего для целей команды, и под них выстраивает её работу.",
+              "Отсеивает операционный шум и не спускает команде каждый новый запрос или инициативу."
             ]
           },
           {
-            "name": "Make sound decisions on priorities and trade-offs",
+            "name": "Принимать взвешенные решения о приоритетах и компромиссах",
             "items": [
-              "When resources or time are limited, determines which tasks to prioritise and decides which tasks the team can temporarily deprioritise.",
-              "Makes priority decisions independently, without escalating unnecessarily."
+              "При ограниченных ресурсах или времени определяет, какие задачи в приоритете, а какие команда может временно отложить.",
+              "Принимает решения о приоритетах сам и не передаёт их наверх без нужды."
             ]
           },
           {
-            "name": "Allocate resources effectively",
+            "name": "Эффективно распределять ресурсы",
             "items": [
-              "Assigns tasks by taking into account employee workload and capabilities."
+              "Распределяет задачи с учётом загрузки и возможностей сотрудников."
             ]
           },
           {
-            "name": "Focus attention on the highest-impact tasks",
+            "name": "Направлять внимание на задачи, которые дают наибольший эффект",
             "items": [
-              "Notices when the team's efforts are disproportionately concentrated on low-return tasks and initiates reallocation.",
-              "Helps employees understand which tasks contribute most to team goals and why."
+              "Замечает, когда команда тратит непропорционально много сил на задачи с малой отдачей, и перераспределяет усилия.",
+              "Помогает сотрудникам понять, какие задачи больше всего дают для целей команды и почему."
             ]
           },
           {
-            "name": "Shield teams from unnecessary complexity and overload",
+            "name": "Защищать команды от лишней сложности и перегрузки",
             "items": [
-              "Streamlines team workflows by removing unnecessary formalities and actions that do not affect results."
+              "Упрощает рабочие процессы команды, убирая лишние формальности и действия, не влияющие на результат."
             ]
           }
         ]
       },
       {
         "id": "execution",
-        "name": "Execution & Accountability",
+        "name": "Исполнение и ответственность",
         "icon": "gear",
         "practices": [
           {
-            "name": "Define ownership and accountability for tasks",
+            "name": "Закреплять за каждой задачей ответственного",
             "items": [
-              "Clearly distributes responsibility for tasks among team members.",
-              "Transfers accountability for task completion to individual employees."
+              "Чётко распределяет ответственность за задачи между членами команды.",
+              "Передаёт ответственность за выполнение задач конкретным сотрудникам."
             ]
           },
           {
-            "name": "Ensure agreed goals and expected results are achieved",
+            "name": "Добиваться согласованных целей и ожидаемых результатов",
             "items": [
-              "Takes responsibility for the team's results and does not shift blame onto employees or external circumstances.",
-              "When the team fails to achieve agreed results, independently analyses the root causes and takes concrete corrective action — rather than just explaining the situation or revising expectations."
+              "Берёт на себя ответственность за результаты команды и не перекладывает вину на сотрудников или внешние обстоятельства.",
+              "Если команда не достигла согласованных результатов, сам разбирается в первопричинах и конкретно исправляет ситуацию — а не просто объясняет её или пересматривает ожидания."
             ]
           },
           {
-            "name": "Track progress and help remove obstacles",
+            "name": "Отслеживать прогресс и помогать устранять препятствия",
             "items": [
-              "Regularly monitors team progress and promptly identifies deviations from the plan.",
-              "Pays attention to early warning signs of problems in team performance and responds before they derail results.",
-              "When employees encounter obstacles, actively helps remove them rather than simply acknowledging the issue."
+              "Регулярно отслеживает прогресс команды и своевременно выявляет отклонения от плана.",
+              "Замечает ранние признаки проблем в работе команды и реагирует, пока они не сорвали результат.",
+              "Когда сотрудники сталкиваются с препятствиями, активно помогает их устранить, а не просто признаёт проблему."
             ]
           },
           {
-            "name": "Maintain required performance standards",
+            "name": "Поддерживать необходимые стандарты работы",
             "items": [
-              "Sets clear performance standards and applies them consistently to all team members.",
-              "When standards are systematically not met, investigates root causes and changes the approach — rather than relying on individual reprimands.",
-              "Provides employees with specific, timely feedback on their work quality — not just an overall assessment of the final result."
+              "Устанавливает чёткие стандарты работы и последовательно применяет их ко всем членам команды.",
+              "Когда стандарты систематически не выполняются, выясняет первопричины и меняет подход, а не ограничивается выговорами.",
+              "Даёт сотрудникам конкретную и своевременную обратную связь о качестве их работы, а не только общую оценку конечного результата."
             ]
           },
           {
-            "name": "Follow through on commitments",
+            "name": "Выполнять взятые обязательства",
             "items": [
-              "Returns to previously agreed commitments and verifies they have been fulfilled.",
-              "When a commitment is not met, investigates the reasons and ensures it is either fulfilled or formally revised."
+              "Возвращается к ранее согласованным обязательствам и проверяет их выполнение.",
+              "Если обязательство не выполнено, выясняет причины и добивается, чтобы его либо выполнили, либо официально пересмотрели."
             ]
           }
         ]
       },
       {
         "id": "drag",
-        "name": "Collaboration & Influence",
+        "name": "Сотрудничество и влияние",
         "icon": "people",
         "practices": [
           {
-            "name": "Build productive working relationships",
+            "name": "Выстраивать продуктивные рабочие отношения",
             "items": [
-              "Proactively builds working relationships with colleagues from other teams — not only reaching out when collaboration is needed."
+              "По собственной инициативе выстраивает рабочие отношения с коллегами из других команд, а не вспоминает о них, лишь когда нужна совместная работа."
             ]
           },
           {
-            "name": "Align stakeholders around shared goals",
+            "name": "Объединять стейкхолдеров вокруг общих целей",
             "items": [
-              "Helps stakeholders align their interests and positions around a shared goal when achieving it requires their joint participation.",
-              "Identifies misalignments in expectations or priorities among stakeholders early and addresses them before they escalate into disagreements."
+              "Помогает стейкхолдерам согласовать интересы и позиции вокруг общей цели, когда для её достижения нужно их совместное участие.",
+              "Заранее замечает расхождения в ожиданиях или приоритетах стейкхолдеров и снимает их, пока они не переросли в разногласия."
             ]
           },
           {
-            "name": "Influence beyond formal authority",
+            "name": "Влиять за пределами формальных полномочий",
             "items": [
-              "Uses facts and well-reasoned arguments to influence the decisions of peers and leadership.",
-              "Takes into account the positions and interests of different stakeholders to secure their support on work matters."
+              "Использует факты и обоснованные аргументы, чтобы влиять на решения коллег и руководства.",
+              "Учитывает позиции и интересы разных стейкхолдеров, чтобы заручиться их поддержкой в рабочих вопросах."
             ]
           },
           {
-            "name": "Enable effective cross-functional collaboration",
+            "name": "Налаживать эффективное взаимодействие между функциями",
             "items": [
-              "Aligns with other teams on who is responsible for what and by when during collaborative work.",
-              "When collaboration with another team breaks down, identifies the cause and helps establish a new working arrangement."
+              "При совместной работе договаривается с другими командами, кто за что отвечает и в какие сроки.",
+              "Когда работа с другой командой разлаживается, находит причину и помогает договориться о новом порядке работы."
             ]
           },
           {
-            "name": "Resolve disagreements and conflicts constructively",
+            "name": "Конструктивно разрешать разногласия и конфликты",
             "items": [
-              "Intervenes in workplace disagreements in a timely manner and helps participants find a resolution before they escalate.",
-              "When destructive behaviour is repeated, directly names the unacceptable actions and takes steps to put a stop to them."
+              "Своевременно вмешивается в рабочие разногласия и помогает участникам найти решение до того, как конфликт обострится.",
+              "Когда деструктивное поведение повторяется, прямо называет недопустимые действия и принимает меры, чтобы их пресечь."
             ]
           }
         ]
@@ -217,37 +217,37 @@ export const LEVELS = [
         "icon": "chart",
         "practices": [
           {
-            "name": "Encourage continuous development and learning",
+            "name": "Поощрять постоянное развитие и обучение",
             "items": [
-              "Regularly discusses development with employees and helps them build the skills required for their role.",
-              "Gives employees opportunities to take on new challenges and grow beyond their current role."
+              "Регулярно обсуждает с сотрудниками их развитие и помогает развивать навыки, необходимые для их роли.",
+              "Даёт сотрудникам возможность браться за новые задачи и вырастать из текущей роли."
             ]
           },
           {
-            "name": "Support experimentation and adoption of new approaches",
+            "name": "Поддерживать эксперименты и внедрение новых подходов",
             "items": [
-              "Allows employees to try new ways of working and discusses the outcomes of such experiments.",
-              "When an experiment does not produce the expected result, treats it as a learning opportunity rather than a reason for criticism."
+              "Позволяет сотрудникам пробовать новые способы работы и обсуждает результаты таких экспериментов.",
+              "Если эксперимент не дал ожидаемого результата, видит в этом повод чему-то научиться, а не повод для критики."
             ]
           },
           {
-            "name": "Adapt flexibly to changing conditions",
+            "name": "Гибко адаптироваться к меняющимся условиям",
             "items": [
-              "When conditions or priorities shift, quickly restructures the team's work and explains the reasons and logic behind the changes to employees."
+              "Когда условия или приоритеты меняются, быстро перестраивает работу команды и объясняет сотрудникам причины и логику изменений."
             ]
           },
           {
-            "name": "Build a culture of continuous improvement",
+            "name": "Формировать культуру постоянного совершенствования",
             "items": [
-              "Regularly discusses with the team what can be improved in workflows and approaches, and initiates the necessary changes.",
-              "Encourages employees to share effective ways of working and apply them across the team."
+              "Регулярно обсуждает с командой, что можно улучшить в процессах и подходах, и запускает нужные изменения.",
+              "Поощряет сотрудников делиться эффективными способами работы и применять их во всей команде."
             ]
           },
           {
-            "name": "Help the team navigate change effectively",
+            "name": "Помогать команде эффективно проходить изменения",
             "items": [
-              "Does not dismiss resistance to change: discusses its root causes and works through employees' concerns and objections.",
-              "During periods of change, ensures the team has clarity on short-term priorities and maintains a productive working rhythm — even when the overall picture is not yet fully defined."
+              "Не отмахивается от сопротивления изменениям: обсуждает его первопричины и прорабатывает опасения и возражения сотрудников.",
+              "В периоды изменений даёт команде ясные ближайшие приоритеты и держит продуктивный рабочий ритм — даже когда общая картина ещё не сложилась."
             ]
           }
         ]
@@ -256,49 +256,49 @@ export const LEVELS = [
   },
   {
     "id": "mid",
-    "label": "Managers of Managers",
+    "label": "Руководители руководителей",
     "color": "#0f9b84",
-    "pq": "Each practice answers the question: \"What does an effective manager of managers do?\"",
-    "bq": "Each manifestation answers the question: \"How does this leadership practice look in a manager of managers?\"",
+    "pq": "Каждая практика отвечает на вопрос: «Что делает эффективный руководитель руководителей?»",
+    "bq": "Каждое проявление отвечает на вопрос: «Как эта управленческая практика выглядит у руководителя руководителей?»",
     "areas": [
       {
         "id": "clarity",
-        "name": "Clarity & Alignment",
+        "name": "Ясность и согласованность",
         "icon": "target",
         "practices": [
           {
-            "name": "Translate strategy into clear guidelines for the team",
+            "name": "Переводить стратегию в ясные ориентиры для команды",
             "items": [
-              "Translates strategic business goals into priorities for multiple teams or departments.",
-              "Ensures that line managers understand the business logic of the tasks facing them, not just their content."
+              "Переводит стратегические бизнес-цели в приоритеты для нескольких команд или подразделений.",
+              "Добивается, чтобы линейные руководители понимали не только суть своих задач, но и их бизнес-логику."
             ]
           },
           {
-            "name": "Ensure alignment of goals with organisational priorities",
+            "name": "Согласовывать цели с приоритетами организации",
             "items": [
-              "Ensures alignment of goals across departments — prevents teams from moving in opposite directions.",
-              "Makes management decisions based on business interests, not just their own department's."
+              "Согласует цели подразделений — не даёт командам тянуть в разные стороны.",
+              "Принимает управленческие решения исходя из интересов бизнеса, а не только своего подразделения."
             ]
           },
           {
-            "name": "Clearly define roles and expectations",
+            "name": "Чётко определять роли и ожидания",
             "items": [
-              "Responsibility among line managers is distributed without duplication or ambiguity.",
-              "Formulates expectations for the quality of management work — not just for the team's business results."
+              "Ответственность между линейными руководителями распределена без дублирования и неясностей.",
+              "Формулирует ожидания к качеству управленческой работы, а не только к бизнес-результатам команды."
             ]
           },
           {
-            "name": "Form a shared understanding of what success means",
+            "name": "Формировать общее понимание того, что считается успехом",
             "items": [
-              "Creates a shared understanding of success for multiple teams — teams use aligned criteria for evaluating results.",
-              "Resolves contradictions in expectations between departments before they manifest in conflicts."
+              "Формирует общее понимание успеха для нескольких команд — команды оценивают результаты по согласованным критериям.",
+              "Устраняет противоречия в ожиданиях подразделений, пока они не вылились в конфликты."
             ]
           },
           {
-            "name": "Ensure alignment between priorities and actual actions",
+            "name": "Следить, чтобы реальные действия соответствовали приоритетам",
             "items": [
-              "Reallocates resources between teams when priorities change — promptly and justifiably.",
-              "Makes decisions on trade-offs between competing tasks across multiple departments."
+              "Перераспределяет ресурсы между командами при смене приоритетов — своевременно и обоснованно.",
+              "Находит компромиссы между конкурирующими задачами нескольких подразделений."
             ]
           }
         ]
@@ -309,158 +309,158 @@ export const LEVELS = [
         "icon": "heart",
         "practices": [
           {
-            "name": "Foster psychological safety",
+            "name": "Создавать психологическую безопасность",
             "items": [
-              "Identifies signs of an unhealthy atmosphere in lower-level teams and intervenes before issues escalate.",
-              "Ensures line managers do not foster a culture of fear or silence within their teams."
+              "Замечает признаки нездоровой атмосферы в командах уровнем ниже и вмешивается, пока проблемы не обострились.",
+              "Следит, чтобы линейные руководители не создавали в своих командах культуру страха или молчания."
             ]
           },
           {
-            "name": "Demonstrate transparency and consistency",
+            "name": "Проявлять открытость и последовательность",
             "items": [
-              "Explains the reasoning behind difficult and unpopular decisions — does not merely announce the outcome.",
-              "Acts consistently toward different teams — avoids any sense of favouritism."
+              "Объясняет логику сложных и непопулярных решений, а не просто объявляет итог.",
+              "Последователен со всеми командами — не даёт повода говорить о любимчиках."
             ]
           },
           {
-            "name": "Encourage diversity of opinions and perspectives",
+            "name": "Поощрять разнообразие мнений и точек зрения",
             "items": [
-              "Draws on diverse sources of information when making decisions — does not rely solely on their inner circle.",
-              "Establishes a norm where line managers actively encourage diverse perspectives within their teams."
+              "Принимая решения, опирается на разные источники информации, а не только на ближний круг.",
+              "Делает нормой, чтобы линейные руководители активно поощряли в своих командах разные точки зрения."
             ]
           },
           {
-            "name": "Maintain open and respectful communication",
+            "name": "Поддерживать открытое и уважительное общение",
             "items": [
-              "Sets the communication standard across the whole part of the organisation they lead — does not tolerate the suppression or distortion of information."
+              "Задаёт стандарт коммуникации во всей части организации, которой руководит, — не допускает замалчивания или искажения информации."
             ]
           },
           {
-            "name": "Build a sense of belonging and team identity",
+            "name": "Формировать чувство принадлежности и командную идентичность",
             "items": [
-              "Recognises the contributions of line managers — creating a sense of shared ownership over collective results."
+              "Признаёт вклад линейных руководителей, формируя чувство общей ответственности за коллективные результаты."
             ]
           }
         ]
       },
       {
         "id": "capacity",
-        "name": "Focus & Prioritisation",
+        "name": "Фокус и приоритеты",
         "icon": "org",
         "practices": [
           {
-            "name": "Separate the truly important from the secondary",
+            "name": "Отделять действительно важное от второстепенного",
             "items": [
-              "Identifies what truly matters to the business and aligns the priorities of multiple teams accordingly.",
-              "Filters out operational noise — does not pass every incoming request or initiative down to teams."
+              "Определяет, что действительно важно для бизнеса, и под это выстраивает приоритеты нескольких команд.",
+              "Отсеивает операционный шум — не спускает командам каждый входящий запрос или инициативу."
             ]
           },
           {
-            "name": "Make sound decisions on priorities and trade-offs",
+            "name": "Принимать взвешенные решения о приоритетах и компромиссах",
             "items": [
-              "Makes trade-off decisions between competing tasks and resources across multiple teams.",
-              "Takes ownership of priority decisions — does not push them upward without good reason."
+              "Находит компромиссы между конкурирующими задачами и ресурсами нескольких команд.",
+              "Берёт на себя решения о приоритетах — не передаёт их наверх без веской причины."
             ]
           },
           {
-            "name": "Allocate resources effectively",
+            "name": "Эффективно распределять ресурсы",
             "items": [
-              "Knows how to decline resource requests with clear, substantiated reasoning."
+              "Умеет отказывать в запросах на ресурсы, ясно и обоснованно объясняя причину."
             ]
           },
           {
-            "name": "Focus attention on the highest-impact tasks",
+            "name": "Направлять внимание на задачи, которые дают наибольший эффект",
             "items": [
-              "Sees where energy across multiple teams is being wasted and redirects it.",
-              "Connects the daily work of departments to business outcomes — helping teams see their contribution."
+              "Видит, где энергия нескольких команд расходуется впустую, и перенаправляет её.",
+              "Связывает повседневную работу подразделений с бизнес-результатами, помогая командам видеть свой вклад."
             ]
           },
           {
-            "name": "Shield teams from unnecessary complexity and overload",
+            "name": "Защищать команды от лишней сложности и перегрузки",
             "items": [
-              "Protects teams from excessive external pressure — engaging with senior management and cross-functional teams on behalf of the area they lead."
+              "Защищает команды от чрезмерного внешнего давления, взаимодействуя с высшим руководством и кросс-функциональными командами от имени своего направления."
             ]
           }
         ]
       },
       {
         "id": "execution",
-        "name": "Execution & Accountability",
+        "name": "Исполнение и ответственность",
         "icon": "gear",
         "practices": [
           {
-            "name": "Define ownership and accountability for tasks",
+            "name": "Закреплять за каждой задачей ответственного",
             "items": [
-              "Management accountability is distributed across line managers — not centralized.",
-              "Holds managers accountable for the quality of their managerial work — not just the team's business results."
+              "Управленческая ответственность распределена между линейными руководителями, а не централизована.",
+              "Спрашивает с руководителей за качество их управленческой работы, а не только за бизнес-результаты команды."
             ]
           },
           {
-            "name": "Ensure agreed goals and expected results are achieved",
+            "name": "Добиваться согласованных целей и ожидаемых результатов",
             "items": [
-              "Identifies systemic obstacles that prevent results from being achieved across the whole part of the organisation they lead."
+              "Выявляет системные препятствия, которые мешают достигать результатов во всей части организации, которой руководит."
             ]
           },
           {
-            "name": "Track progress and help remove obstacles",
+            "name": "Отслеживать прогресс и помогать устранять препятствия",
             "items": [
-              "Tracks progress across multiple teams — identifies systemic delays and recurring patterns.",
-              "Resolves cross-functional dependencies that block execution.",
-              "Uses engagement, turnover, and other leading indicators to inform management decisions across multiple teams."
+              "Отслеживает прогресс нескольких команд — выявляет системные задержки и повторяющиеся закономерности.",
+              "Распутывает зависимости между функциями, которые тормозят работу.",
+              "Использует вовлечённость, текучесть и другие опережающие показатели для управленческих решений по нескольким командам."
             ]
           },
           {
-            "name": "Maintain required performance standards",
+            "name": "Поддерживать необходимые стандарты работы",
             "items": [
-              "Sets uniform performance standards across the whole part of the organisation they lead — applied consistently, not selectively.",
-              "When standards are systematically not met, initiates structural changes — not just targeted conversations."
+              "Устанавливает единые стандарты работы во всей части организации, которой руководит, и применяет их последовательно, а не выборочно.",
+              "Когда стандарты систематически не выполняются, инициирует структурные изменения, а не только точечные беседы."
             ]
           },
           {
-            "name": "Follow through on commitments",
+            "name": "Выполнять взятые обязательства",
             "items": [
-              "Ensures that agreements between departments are upheld — not just commitments within teams."
+              "Следит за соблюдением договорённостей между подразделениями, а не только обязательств внутри команд."
             ]
           }
         ]
       },
       {
         "id": "drag",
-        "name": "Collaboration & Influence",
+        "name": "Сотрудничество и влияние",
         "icon": "people",
         "practices": [
           {
-            "name": "Build productive working relationships",
+            "name": "Выстраивать продуктивные рабочие отношения",
             "items": [
-              "Builds partnerships with leaders of adjacent functions — based on mutual trust, not just formal processes.",
-              "Develops a network of influence beyond the area they lead."
+              "Выстраивает партнёрские отношения с руководителями смежных функций — на основе взаимного доверия, а не только формальных процессов.",
+              "Развивает сеть влияния за пределами своего направления."
             ]
           },
           {
-            "name": "Align stakeholders around shared goals",
+            "name": "Объединять стейкхолдеров вокруг общих целей",
             "items": [
-              "Manages competing priorities between functions — finding solutions rather than simply documenting conflicts."
+              "Сводит конкурирующие приоритеты разных функций — ищет решения, а не просто фиксирует конфликты."
             ]
           },
           {
-            "name": "Influence beyond formal authority",
+            "name": "Влиять за пределами формальных полномочий",
             "items": [
-              "Influences decisions of senior management and adjacent functions through reasoned arguments and data.",
-              "Builds coalitions around important decisions — identifying allies in advance and managing resistance."
+              "Влияет на решения высшего руководства и смежных функций с помощью обоснованных аргументов и данных.",
+              "Формирует коалиции вокруг важных решений — заранее находит союзников и работает с сопротивлением."
             ]
           },
           {
-            "name": "Enable effective cross-functional collaboration",
+            "name": "Налаживать эффективное взаимодействие между функциями",
             "items": [
-              "Establishes operational rhythms between departments — synchronization formats that function without requiring their direct involvement.",
-              "Removes structural barriers that impede cross-functional collaboration."
+              "Налаживает регулярную синхронизацию между подразделениями — форматы, которые работают и без его участия.",
+              "Устраняет структурные барьеры, которые мешают кросс-функциональному взаимодействию."
             ]
           },
           {
-            "name": "Resolve disagreements and conflicts constructively",
+            "name": "Конструктивно разрешать разногласия и конфликты",
             "items": [
-              "Intervenes in cross-functional conflicts before they escalate — does not wait for the situation to reach senior leadership.",
-              "Distinguishes between constructive work disagreements and toxic patterns — responds appropriately to each."
+              "Вмешивается в кросс-функциональные конфликты до их обострения — не ждёт, пока ситуация дойдёт до высшего руководства.",
+              "Отличает конструктивные рабочие разногласия от токсичных моделей поведения и на каждое реагирует по-своему."
             ]
           }
         ]
@@ -471,36 +471,36 @@ export const LEVELS = [
         "icon": "chart",
         "practices": [
           {
-            "name": "Encourage continuous development and learning",
+            "name": "Поощрять постоянное развитие и обучение",
             "items": [
-              "Ensures that line managers are actively developing their people — not just managing tasks.",
-              "Deliberately identifies employees with management potential and creates conditions for their growth."
+              "Следит, чтобы линейные руководители активно развивали своих сотрудников, а не только управляли задачами.",
+              "Целенаправленно выявляет сотрудников с управленческим потенциалом и создаёт условия для их роста."
             ]
           },
           {
-            "name": "Support experimentation and adoption of new approaches",
+            "name": "Поддерживать эксперименты и внедрение новых подходов",
             "items": [
-              "Protects teams that are experimenting from excessive oversight and criticism from above."
+              "Защищает экспериментирующие команды от чрезмерного контроля и критики сверху."
             ]
           },
           {
-            "name": "Adapt flexibly to changing conditions",
+            "name": "Гибко адаптироваться к меняющимся условиям",
             "items": [
-              "Restructures the operational model of the area they lead during strategic changes — does not merely relay new directives.",
-              "Supports line managers during periods of change — helping them maintain stability and lead their teams."
+              "При стратегических изменениях перестраивает операционную модель своего направления, а не просто транслирует новые указания.",
+              "Поддерживает линейных руководителей в периоды изменений, помогая им сохранять устойчивость и вести за собой команды."
             ]
           },
           {
-            "name": "Build a culture of continuous improvement",
+            "name": "Формировать культуру постоянного совершенствования",
             "items": [
-              "Identifies systemic inefficiencies and initiates their resolution.",
-              "Creates formats for sharing best practices between teams."
+              "Выявляет системную неэффективность и инициирует её устранение.",
+              "Создаёт форматы обмена удачными практиками между командами."
             ]
           },
           {
-            "name": "Help the team navigate change effectively",
+            "name": "Помогать команде эффективно проходить изменения",
             "items": [
-              "Supports line managers in their role as change champions — helping them manage team resistance."
+              "Поддерживает линейных руководителей в роли проводников изменений, помогая им работать с сопротивлением в команде."
             ]
           }
         ]
@@ -509,153 +509,153 @@ export const LEVELS = [
   },
   {
     "id": "team",
-    "label": "Teams",
+    "label": "Команды",
     "color": "#6a3fd8",
-    "pq": "Each practice answers the question: \"What does an effective team do?\"",
-    "bq": "Each manifestation answers the question: \"How does this practice look in an effective team?\"",
+    "pq": "Каждая практика отвечает на вопрос: «Что делает эффективная команда?»",
+    "bq": "Каждое проявление отвечает на вопрос: «Как эта практика выглядит в эффективной команде?»",
     "areas": [
       {
         "id": "clarity",
-        "name": "Clarity & Alignment",
+        "name": "Ясность и согласованность",
         "icon": "target",
         "practices": [
           {
-            "name": "Shared understanding of goals and results",
+            "name": "Общее понимание целей и результатов",
             "items": [
-              "The team understands how its work is connected to the organisation's goals.",
-              "The team shares a common understanding of the goals and expected results of its work."
+              "Команда понимает, как её работа связана с целями организации.",
+              "У команды есть общее понимание целей и ожидаемых результатов её работы."
             ]
           },
           {
-            "name": "Clarity of roles and accountability",
+            "name": "Ясность ролей и ответственности",
             "items": [
-              "Team members understand each other's roles, areas of accountability, and expertise.",
-              "When tasks or team composition change, roles and accountability are reviewed in a timely manner."
+              "Члены команды понимают роли, зоны ответственности и экспертизу друг друга.",
+              "Когда меняются задачи или состав команды, роли и ответственность своевременно пересматриваются."
             ]
           },
           {
-            "name": "Shared agreements and information transparency",
+            "name": "Общие договорённости и прозрачность информации",
             "items": [
-              "Important information is communicated to all team members in a timely manner.",
-              "After discussions and meetings, the team has a shared understanding of decisions made and next steps.",
-              "The team develops clear agreements on how collaborative work will be organised."
+              "Важная информация своевременно доводится до всех членов команды.",
+              "После обсуждений и встреч у команды есть общее понимание принятых решений и следующих шагов.",
+              "Команда чётко договаривается, как будет устроена совместная работа."
             ]
           }
         ]
       },
       {
         "id": "safety",
-        "name": "Trust & Inclusion",
+        "name": "Доверие и инклюзивность",
         "icon": "heart",
         "practices": [
           {
-            "name": "Trust and psychological safety",
+            "name": "Доверие и психологическая безопасность",
             "items": [
-              "Team members can openly express their opinions without fear of negative consequences.",
-              "The team openly discusses mistakes, problems, and difficult issues rather than suppressing them.",
-              "When mistakes occur, the team focuses on finding a solution rather than finding someone to blame."
+              "Члены команды могут открыто высказывать своё мнение, не опасаясь негативных последствий.",
+              "Команда открыто обсуждает ошибки, проблемы и сложные вопросы, а не замалчивает их.",
+              "Когда случаются ошибки, команда сосредоточена на поиске решения, а не виноватого."
             ]
           },
           {
-            "name": "Collaborative decision making",
+            "name": "Совместное принятие решений",
             "items": [
-              "When making decisions, the team considers several possible options rather than stopping at the first proposed solution.",
-              "When making decisions, the team takes into account different points of view and members' experience.",
-              "When discussing decisions, the team relies on facts and arguments rather than the status or influence of individual members.",
-              "After making a decision, the team acts in alignment, even if opinions differed during the discussion."
+              "Принимая решения, команда рассматривает несколько вариантов, а не останавливается на первом предложенном.",
+              "Принимая решения, команда учитывает разные точки зрения и опыт участников.",
+              "Обсуждая решения, команда опирается на факты и аргументы, а не на статус или влияние отдельных участников.",
+              "Приняв решение, команда действует согласованно, даже если в ходе обсуждения мнения расходились."
             ]
           },
           {
-            "name": "Team engagement: Engagement of every member in collaborative work",
+            "name": "Вовлечённость команды: вовлечённость каждого участника в совместную работу",
             "items": [
-              "The team actively involves members who usually speak less frequently in discussions.",
-              "New members quickly become full participants in collaborative work.",
-              "When one member is overloaded, other team members take on some of their work without being asked."
+              "Команда активно вовлекает в обсуждение тех, кто обычно высказывается реже.",
+              "Новички быстро становятся полноправными участниками совместной работы.",
+              "Когда кто-то перегружен, другие члены команды берут на себя часть его работы, не дожидаясь просьбы."
             ]
           }
         ]
       },
       {
         "id": "capacity",
-        "name": "Focus & Prioritisation",
+        "name": "Фокус и приоритеты",
         "icon": "org",
         "practices": [
           {
-            "name": "Focus on priority work",
+            "name": "Фокус на приоритетных задачах",
             "items": [
-              "The team has a shared understanding of which tasks are the most important at the moment.",
-              "The team maintains focus on priority work despite the appearance of new tasks."
+              "У команды есть общее понимание того, какие задачи сейчас важнее всего.",
+              "Команда сохраняет фокус на приоритетных задачах, несмотря на появление новых."
             ]
           },
           {
-            "name": "Setting priorities",
+            "name": "Расстановка приоритетов",
             "items": [
-              "When several important tasks arise, the team quickly reaches a common understanding of what should be done first.",
-              "The team maintains focus on priority work even when urgent tasks appear.",
-              "When circumstances change, the team reviews the order of work in a timely manner and aligns its actions accordingly."
+              "Когда возникает несколько важных задач, команда быстро договаривается, что делать в первую очередь.",
+              "Команда сохраняет фокус на приоритетных задачах, даже когда появляются срочные.",
+              "Когда обстоятельства меняются, команда своевременно пересматривает порядок работы и согласует свои действия."
             ]
           },
           {
-            "name": "Effective effort distribution",
+            "name": "Эффективное распределение усилий",
             "items": [
-              "The team notices signs of overload in individual members in a timely manner and discusses ways to reduce it.",
-              "When distributing work, the team explicitly considers who is best suited for a specific task, not just who is currently available."
+              "Команда своевременно замечает признаки перегрузки у отдельных участников и обсуждает, как её снизить.",
+              "Распределяя работу, команда сознательно учитывает, кто лучше всего подходит для конкретной задачи, а не только кто сейчас свободен."
             ]
           }
         ]
       },
       {
         "id": "execution",
-        "name": "Execution & Accountability",
+        "name": "Исполнение и ответственность",
         "icon": "gear",
         "practices": [
           {
-            "name": "Fulfilling commitments",
+            "name": "Выполнение обязательств",
             "items": [
-              "The team identifies and openly communicates risks of failing to meet agreements in a timely manner.",
-              "When obstacles arise, the team does not abandon agreements but finds ways to fulfil them."
+              "Команда своевременно выявляет и открыто называет риски невыполнения договорённостей.",
+              "Сталкиваясь с препятствиями, команда не отказывается от договорённостей, а находит способы их выполнить."
             ]
           },
           {
-            "name": "Mutual accountability for shared results",
+            "name": "Взаимная ответственность за общий результат",
             "items": [
-              "Team members consider the shared result to be their common accountability, not just the area of responsibility of individual members.",
-              "Team members openly remind each other of agreements and do not ignore cases of their non-fulfilment.",
-              "When necessary, team members take on additional tasks to achieve the shared result."
+              "Члены команды считают общий результат делом всех, а не только зоной ответственности отдельных участников.",
+              "Члены команды открыто напоминают друг другу о договорённостях и не закрывают глаза, если их не выполняют.",
+              "При необходимости члены команды берут на себя дополнительные задачи ради общего результата."
             ]
           }
         ]
       },
       {
         "id": "drag",
-        "name": "Collaboration & Influence",
+        "name": "Сотрудничество и влияние",
         "icon": "people",
         "practices": [
           {
-            "name": "Partnership collaboration",
+            "name": "Партнёрское сотрудничество",
             "items": [
-              "The team maintains stable working relationships with other teams rather than interacting only when necessary.",
-              "The team proactively initiates interaction when tasks require the involvement of multiple teams.",
-              "The team responds to requests from other teams related to collaborative work in a timely manner.",
-              "The team shares experience and best practices with other teams even when it is not directly required for current tasks."
+              "Команда поддерживает постоянные рабочие отношения с другими командами, а не взаимодействует только по необходимости.",
+              "Команда сама инициирует взаимодействие, когда задачи требуют участия нескольких команд.",
+              "Команда своевременно отвечает на запросы других команд, связанные с совместной работой.",
+              "Команда делится опытом и удачными практиками с другими командами, даже когда текущие задачи этого прямо не требуют."
             ]
           },
           {
-            "name": "Alignment of mutual expectations and agreements",
+            "name": "Согласование взаимных ожиданий и договорённостей",
             "items": [
-              "The team aligns priorities and expected results of collaborative work with other teams in advance.",
-              "The team aligns roles and areas of accountability during collaborative work.",
-              "When making decisions, the team considers their impact on the work of other teams.",
-              "When conditions change, the team reviews established agreements with other teams in a timely manner."
+              "Команда заранее согласует с другими командами приоритеты и ожидаемые результаты совместной работы.",
+              "При совместной работе команда согласует роли и зоны ответственности.",
+              "Принимая решения, команда учитывает их влияние на работу других команд.",
+              "Когда условия меняются, команда своевременно пересматривает договорённости с другими командами."
             ]
           },
           {
-            "name": "Constructive resolution of cross-team disagreements",
+            "name": "Конструктивное разрешение разногласий между командами",
             "items": [
-              "The team discusses disagreements with other teams openly and in a timely manner, rather than delaying until escalation.",
-              "When disagreements arise, the team seeks to understand the interests of the other party, rather than solely defending its own position.",
-              "The team uses escalation only when direct negotiations have failed to yield a solution.",
-              "The team is open to revising its own position if doing so helps achieve the shared result."
+              "Команда обсуждает разногласия с другими командами открыто и своевременно, не дожидаясь эскалации.",
+              "При разногласиях команда стремится понять интересы другой стороны, а не только отстаивает свою позицию.",
+              "Команда прибегает к эскалации, только если прямые переговоры не привели к решению.",
+              "Команда готова пересмотреть свою позицию, если это помогает достичь общего результата."
             ]
           }
         ]
@@ -666,27 +666,27 @@ export const LEVELS = [
         "icon": "chart",
         "practices": [
           {
-            "name": "Learning from experience",
+            "name": "Обучение на опыте",
             "items": [
-              "The team regularly analyses the causes of its successes and failures and changes working approaches if necessary.",
-              "The team does not repeat the same mistakes systematically.",
-              "Gained experience and knowledge are quickly spread within the team and used in future work."
+              "Команда регулярно анализирует причины своих успехов и неудач и при необходимости меняет подходы к работе.",
+              "Команда не повторяет раз за разом одни и те же ошибки.",
+              "Полученный опыт и знания быстро распространяются в команде и используются в дальнейшей работе."
             ]
           },
           {
-            "name": "Continuous improvement of working methods",
+            "name": "Постоянное совершенствование методов работы",
             "items": [
-              "The team proactively implements improvements in its working methods without waiting for external directives.",
-              "The team evaluates the results of implemented changes and retains the most effective practices.",
-              "The team studies the working methods of other teams or organisations and, if necessary, implements best practices without waiting for problems to arise."
+              "Команда сама внедряет улучшения в методы работы, не дожидаясь указаний извне.",
+              "Команда оценивает результаты внедрённых изменений и сохраняет самые эффективные практики.",
+              "Команда изучает методы работы других команд или организаций и при необходимости перенимает удачные практики, не дожидаясь проблем."
             ]
           },
           {
-            "name": "Adaptation to new conditions and changes",
+            "name": "Адаптация к новым условиям и изменениям",
             "items": [
-              "The team quickly rearranges its work when conditions change.",
-              "The team masters new working methods required to achieve results in a timely manner.",
-              "The team reviews processes and agreements when the previous approach no longer works."
+              "Команда быстро перестраивает работу при изменении условий.",
+              "Команда своевременно осваивает новые методы работы, необходимые для достижения результатов.",
+              "Команда пересматривает процессы и договорённости, когда прежний подход перестаёт работать."
             ]
           }
         ]

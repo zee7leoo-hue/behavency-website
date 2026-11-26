@@ -8,20 +8,20 @@ import './WhyNow.css'
 
 const QUESTIONS = [
   {
-    lead: 'Our managers are', accent: 'overloaded.', support: ['More on their plate than ever,', 'and their motivation is dropping.'],
-    stat: { n: '27% → 22%', t: 'managers who feel engaged at work, in one year', src: 'Gallup, 2026', href: 'https://www.gallup.com/file/workplace/712607/SOGW_Global-Press-Release-2026-04.pdf' },
+    lead: 'Наши руководители', accent: 'перегружены.', support: ['Задач всё больше,', 'а мотивация падает.'],
+    stat: { n: '27% → 22%', t: 'доля вовлечённых руководителей за год', src: 'Gallup, 2026', href: 'https://www.gallup.com/file/workplace/712607/SOGW_Global-Press-Release-2026-04.pdf' },
   },
   {
-    lead: 'One more restructure,', accent: 'one more new system.', support: ['Managers are expected to lead it.', 'Most were never prepared for it.'],
-    stat: { n: '74%', t: 'of HR leaders say managers aren’t ready to lead change', src: 'Gartner, 2024', href: 'https://www.gartner.com/en/newsroom/press-releases/2024-10-15-gartner-survey-finds-leader-and-manager-development-tops-hrleaders-list' },
+    lead: 'Ещё одна реструктуризация,', accent: 'ещё одна новая система.', support: ['Вести перемены поручают руководителям.', 'Но их к этому почти никто не готовил.'],
+    stat: { n: '74%', t: 'HR-директоров говорят: руководители не готовы вести перемены', src: 'Gartner, 2024', href: 'https://www.gartner.com/en/newsroom/press-releases/2024-10-15-gartner-survey-finds-leader-and-manager-development-tops-hrleaders-list' },
   },
   {
-    lead: 'Our managers lead', accent: 'bigger teams.', support: ['And they still have their own work,', 'so each person gets less of their time.'],
-    stat: { n: '10.9 → 12.1', t: 'average team size per manager, in one year', src: 'Gallup, 2025', href: 'https://www.gallup.com/workplace/700718/managers-teams-getting-bigger.aspx' },
+    lead: 'Команды наших руководителей', accent: 'растут.', support: ['А собственную работу никто не отменял,', 'так что на каждого в команде времени всё меньше.'],
+    stat: { n: '10,9 → 12,1', t: 'средний размер команды на руководителя, за год', src: 'Gallup, 2025', href: 'https://www.gallup.com/workplace/700718/managers-teams-getting-bigger.aspx' },
   },
   {
-    lead: 'We promoted our best', accent: 'people to managers.', support: ['We checked their results,', 'not how they lead.'],
-    stat: { n: '82%', t: 'of new managers had no management training', src: 'CMI, 2023', href: 'https://fortune.com/2023/10/16/bosses-accidental-formal-training-workers-quit-cmi/' },
+    lead: 'Мы сделали лучших', accent: 'сотрудников руководителями.', support: ['Смотрели на их результаты,', 'а не на умение руководить.'],
+    stat: { n: '82%', t: 'новых руководителей не учили управлять', src: 'CMI, 2023', href: 'https://fortune.com/2023/10/16/bosses-accidental-formal-training-workers-quit-cmi/' },
   },
 ]
 const HOLD_MS = 4900
@@ -76,25 +76,25 @@ export default function WhyNow() {
   return (
     <section ref={rootRef} className={`wn ${seen ? 'is-in' : ''}`} id="why-now">
       <div className="wn-box" ref={onRef}>
-        <p className="wn-eyebrow rv" style={{ '--i': 0 }}>WHAT’S AT STAKE</p>
+        <p className="wn-eyebrow rv" style={{ '--i': 0 }}>ЧТО НА КОНУ</p>
         <span className="wn-bar rv" style={{ '--i': 0 }} aria-hidden="true" />
-        <h2 className="wn-title rv" style={{ '--i': 1 }}>The risk you can <em>see coming.</em></h2>
+        <h2 className="wn-title rv" style={{ '--i': 1 }}>Этот риск <em>видно заранее.</em></h2>
         <p className="wn-text rv" style={{ '--i': 2 }}>
-          Most management gaps stay invisible for a long time. Teams work around them every day, and the organisation only notices when the results drop.
+          Пробелы в управлении обычно долго никто не замечает. Команды день за днём обходят их, а компания спохватывается, только когда падают результаты.
         </p>
-        <p className="wn-note rv" style={{ '--i': 3 }}>You can’t control the uncertainty. You can control how ready your managers are.</p>
+        <p className="wn-note rv" style={{ '--i': 3 }}>На неопределённость вы не повлияете. А на готовность своих руководителей — вполне.</p>
 
-        <div className="wn-card rv" style={{ '--i': 4 }} role="group" aria-roledescription="carousel" aria-label="A reality for many HR teams"
+        <div className="wn-card rv" style={{ '--i': 4 }} role="group" aria-roledescription="carousel" aria-label="Так живут многие HR-команды"
           onMouseEnter={() => setHovering(true)} onMouseLeave={() => setHovering(false)}
           onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
           <div className="wn-card-head">
-            <span>SOUND FAMILIAR?</span>
+            <span>ЗНАКОМО?</span>
             <span aria-hidden="true">{index + 1} / {QUESTIONS.length}</span>
           </div>
           <div className="wn-stage" aria-live={autoPlaying ? 'off' : 'polite'}>
             {QUESTIONS.map((q, i) => (
               <div key={q.accent} className={`wn-slide wn-slide--${slidePos(i)}`} aria-hidden={i !== index} role="group"
-                aria-roledescription="slide" aria-label={`${i + 1} of ${QUESTIONS.length}`}>
+                aria-roledescription="slide" aria-label={`${i + 1} из ${QUESTIONS.length}`}>
                 <p className="wn-q"><span>{q.lead}</span><em>{q.accent}</em></p>
                 <p className="wn-support">{q.support.map((l) => <span key={l}>{l}</span>)}</p>
                 <p className="wn-stat">
@@ -108,20 +108,20 @@ export default function WhyNow() {
         </div>
 
         <div className="wn-controls rv" style={{ '--i': 5 }}>
-          <div className="wn-dots" role="tablist" aria-label="Choose a question">
+          <div className="wn-dots" role="tablist" aria-label="Выберите вопрос">
             {QUESTIONS.map((q, i) => (
-              <button key={q.accent} type="button" role="tab" aria-selected={i === index} aria-label={`Question ${i + 1} of ${QUESTIONS.length}`}
+              <button key={q.accent} type="button" role="tab" aria-selected={i === index} aria-label={`Вопрос ${i + 1} из ${QUESTIONS.length}`}
                 className={`wn-dot ${i === index ? 'is-active' : ''}`} onClick={() => goTo(i, i > index ? 1 : -1)} />
             ))}
           </div>
           <div className="wn-arrows">
-            <button type="button" className="wn-arrow" aria-label="Previous question" onClick={goPrev}><IconArrowLeft /></button>
-            <button type="button" className="wn-arrow" aria-label="Next question" onClick={goNext}><IconArrowRight /></button>
+            <button type="button" className="wn-arrow" aria-label="Предыдущий вопрос" onClick={goPrev}><IconArrowLeft /></button>
+            <button type="button" className="wn-arrow" aria-label="Следующий вопрос" onClick={goNext}><IconArrowRight /></button>
           </div>
         </div>
         {!reduced && (
           <button type="button" className="wn-pause" aria-pressed={userPaused} onClick={() => setUserPaused((p) => !p)}>
-            {userPaused ? 'Resume rotation' : 'Pause rotation'}
+            {userPaused ? 'Продолжить' : 'Пауза'}
           </button>
         )}
       </div>

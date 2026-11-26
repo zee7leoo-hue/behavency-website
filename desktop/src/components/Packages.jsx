@@ -7,25 +7,25 @@ import './Packages.css'
 const packages = [
   {
     name: 'Proficiency',
-    tagline: 'A focused assessment and individual insight',
+    tagline: 'Точечная оценка и личные выводы',
     color: '#1E3A5F',
-    includes: ['Managerial Profile (self-assessment)', '360° Feedback', 'Individual Manager Report', 'Optional: Structured Interview, with Interview Studio practice for your HR team'],
-    bestFor: 'Organisations starting with manager self-awareness and stakeholder feedback.',
+    includes: ['Профиль управленческого поведения (самооценка)', 'Обратная связь 360°', 'Индивидуальный отчёт руководителя', 'Optional: Structured Interview, with Interview Studio practice for your HR team'],
+    bestFor: 'Тем, кто начинает с самооценки руководителей и обратной связи стейкхолдеров.',
   },
   {
     name: 'Complete',
-    tagline: 'The full diagnostic picture — individual, team, and organisational',
+    tagline: 'Полная диагностика: люди, команды и организация',
     color: '#0F766E',
     featured: true,
-    includes: ['Everything in Proficiency', 'Workplace Effectiveness Survey', 'Resilience to Change', 'Team assessment, on the same six areas', 'Individual reports and a leadership report'],
-    bestFor: 'Organisations that want to understand people AND the conditions around them.',
+    includes: ['Everything in Proficiency', 'Организационные барьеры', 'Устойчивость к изменениям', 'Оценка команды по тем же шести областям', 'Индивидуальные отчёты и отчёт для руководства'],
+    bestFor: 'Тем, кто хочет понять не только людей, но и условия вокруг них.',
   },
   {
     name: 'Flex',
     tagline: 'Choose the combination that fits your specific situation',
     color: '#B45309',
-    includes: ['Any combination of the above assessments', 'Configurable by cohort or programme', 'Speak with us to design the right scope'],
-    bestFor: 'Organisations with a specific context or existing frameworks to work within.',
+    includes: ['Any combination of the above assessments', 'Настраивается под группу или программу', 'Обсудим с вами подходящий объём'],
+    bestFor: 'Тем, у кого особый контекст или уже есть своя модель, с которой нужно работать.',
   },
 ]
 

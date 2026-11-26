@@ -45,12 +45,12 @@
   const HTML = `<div class="hrx" data-hrx="1" role="img" aria-label="Example candidate report: Elias T., Managerial Profile results for six areas"><div class="hrx-page">
     <div class="hrx-top"><span class="hrx-logo"><img src="logo-behavency.png" alt="" style="height:${U(18)};width:auto;display:block;filter:invert(1)">BEHAVENCY</span><span class="hrx-conf">CONFIDENTIAL · FOR HR</span></div>
     <div class="hrx-body">
-      <div class="hrx-eye">Candidate profile · example</div>
+      <div class="hrx-eye">Профиль кандидата · пример</div>
       <div class="hrx-head"><div><div class="hrx-name">Elias T.</div><div class="hrx-for">Candidate for Team Lead · <b>Example Ltd</b></div></div><div class="hrx-prep">Prepared by <b>HR</b><br>10 Nov 2026</div></div>
-      <div class="hrx-box"><i></i><div><b>Assessed against: line manager practices</b><span>Based on the candidate’s self-assessment. It adds to the recruiter’s view and is not a hiring criterion on its own.</span></div></div>
+      <div class="hrx-box"><i></i><div><b>Оценка по практикам линейного руководителя</b><span>Основан на самооценке кандидата. Дополняет мнение рекрутера, но сам по себе не критерий для найма.</span></div></div>
       <div class="hrx-rows">${ROWS.map(([n, p, z, t, c]) => { const [zl, zcol, zc, zb] = ZONE[z]; return `<div class="hrx-row" style="--t:${t};--c:${c};--z:${zcol};--zc:${zc};--zb:${zb}"><span class="hrx-ico"></span><div><div class="hrx-nm">${n}</div><div class="hrx-bar"><span style="width:${p}%"></span></div></div><span class="hrx-pc">${p}%</span><span class="hrx-zone">${zl}</span></div>`; }).join('')}</div>
       <div class="hrx-legend"><span><b style="color:#14a07c">Strong</b> 67–100%</span><span><b style="color:#d58a12">Medium</b> 34–66%</span><span><b style="color:#d6333a">Development</b> 0–33%</span></div>
-      <div class="hrx-foot"><span>Managerial Profile · confidential · example report</span><span>1 / 4</span></div>
+      <div class="hrx-foot"><span>Профиль управленческого поведения · конфиденциально · пример отчёта</span><span>1 / 4</span></div>
     </div>
   </div></div>`;
   function mount() {

@@ -179,8 +179,8 @@ export default function Hero({ id, visual, wide = false, bleed = false }) {
           </motion.div>
 
           <motion.h1 className="hero__title" {...fade(0.2)}>
-            <span className="hero__title-main">Your managers<br />want to lead well.</span>
-            <em className="hero__title-em">Most don’t know<br />where they’re<br />falling short.</em>
+            <span className="hero__title-main">Ваши руководители<br />хотят управлять хорошо.</span>
+            <em className="hero__title-em">Но мало кто понимает,<br />чего именно<br />им не хватает.</em>
           </motion.h1>
 
           <motion.p className="hero__subhead" {...fade(0.3)}>

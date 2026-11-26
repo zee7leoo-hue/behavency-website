@@ -10,38 +10,38 @@
   const li = (t) => `<li>${CK}<span>${t}</span></li>`;
   const btn = (t, solid) => `<button type="button" class="pk2-btn${solid ? ' pk2-btn--solid' : ''}" data-cm-open>${t}</button>`;
 
-  const FULL = `<div class="pk2-card pk2-full"><span class="pk2-pill">Recommended</span>
-      <div class="pk2-top"><span class="pk2-dots"><i class="d1"></i><i class="d2"></i><i class="d3"></i><i class="d4"></i></span><h3 class="pk2-name">Full journey</h3></div>
-      <p class="pk2-tl">All four stages, connected</p><hr>
-      <ul class="pk2-list"><li class="pk2-plus">${MOB ? 'All three below, connected, plus:' : 'All three, connected, plus:'}</li>${li('Re-assessment at 3 months')}${li('Before / after results')}</ul>
-      ${btn('Get a proposal', true)}</div>`;
+  const FULL = `<div class="pk2-card pk2-full"><span class="pk2-pill">Рекомендуем</span>
+      <div class="pk2-top"><span class="pk2-dots"><i class="d1"></i><i class="d2"></i><i class="d3"></i><i class="d4"></i></span><h3 class="pk2-name">Полный цикл</h3></div>
+      <p class="pk2-tl">Все четыре этапа — единым циклом</p><hr>
+      <ul class="pk2-list"><li class="pk2-plus">${MOB ? 'Три пакета ниже — в одной связке, плюс:' : 'Все три в одной связке, плюс:'}</li>${li('Повторная оценка через 3 месяца')}${li('Результаты «до» и «после»')}</ul>
+      ${btn('Получить предложение', true)}</div>`;
   const dot = (c) => `<div class="pk2-top"><i class="pk2-dot" style="background:${c}"></i>`;
-  const one = (cls, c, name, tl, items) => `<div class="pk2-card ${cls}">${dot(c)}<h3 class="pk2-name">${name}</h3></div><p class="pk2-tl">${tl}</p><hr><ul class="pk2-list">${items}</ul>${btn('Talk to us')}</div>`;
+  const one = (cls, c, name, tl, items) => `<div class="pk2-card ${cls}">${dot(c)}<h3 class="pk2-name">${name}</h3></div><p class="pk2-tl">${tl}</p><hr><ul class="pk2-list">${items}</ul>${btn('Написать нам')}</div>`;
   const STAGES =
-    one('pk2-as', '#018ffd', 'Assessment', 'See where people stand', ['Managerial Profile', '360° feedback', 'Workplace survey', 'Resilience to change', 'Structured interview', 'Individual reports', 'Leadership report', 'Team assessment'].map(li).join('')) +
-    one('pk2-tg', '#9c23fe', 'Team game', 'See the team in action', ['45-min online game', 'Facilitated reflection', 'Team Insight Report'].map(li).join('')) +
-    one('pk2-tr', '#fe8a03', 'Training', 'For managers and teams', ['E-learning', 'Live online', 'In person or blended', 'Masterplan per programme'].map(li).join(''));
+    one('pk2-as', '#018ffd', 'Оценка', 'Увидеть, кто где сейчас', ['Профиль управленческого поведения', 'Обратная связь 360°', 'Организационные барьеры', 'Устойчивость к изменениям', 'Структурированное интервью', 'Индивидуальные отчёты', 'Отчёт для руководства', 'Оценка команды'].map(li).join('')) +
+    one('pk2-tg', '#9c23fe', 'Командная игра', 'Увидеть команду в деле', ['Онлайн-игра, 45 минут', 'Разбор с фасилитатором', 'Аналитический отчёт команды'].map(li).join('')) +
+    one('pk2-tr', '#fe8a03', 'Обучение', 'Для руководителей и команд', ['E-learning', 'Онлайн с тренером', 'Очно или в смешанном формате', 'Мастер-план к каждой программе'].map(li).join(''));
   const HIRE = `<div class="pk2-hire">
       <div class="pk2-hl">
-        <span class="pk2-soon">Coming soon</span>
-        <h3 class="pk2-name">Core Skills Profile</h3>
-        <p class="pk2-tl">Recruitment questionnaire</p>
-        <ul class="pk2-meta"><li>${CLOCK}15–20 min online</li><li>${DOC}Report with interview questions</li></ul>
-        ${MOB ? '' : btn('Talk to us')}
+        <span class="pk2-soon">Скоро</span>
+        <h3 class="pk2-name">Профиль ключевых навыков</h3>
+        <p class="pk2-tl">Опросник для подбора</p>
+        <ul class="pk2-meta"><li>${CLOCK}15–20 минут, онлайн</li><li>${DOC}Отчёт с вопросами для интервью</li></ul>
+        ${MOB ? '' : btn('Написать нам')}
       </div>
       <div class="pk2-hr">
-        <p class="pk2-k">Five core competencies</p>
-        <ul class="pk2-list">${['Critical thinking', 'Learning agility', 'Proactivity &amp; ownership', 'Self-organisation', 'Social intelligence'].map(li).join('')}</ul>
-        ${MOB ? btn('Talk to us') : ''}
+        <p class="pk2-k">Пять ключевых компетенций</p>
+        <ul class="pk2-list">${['Критическое мышление', 'Обучаемость', 'Инициативность и ответственность', 'Самоорганизация', 'Социальный интеллект'].map(li).join('')}</ul>
+        ${MOB ? btn('Написать нам') : ''}
       </div>
     </div>`;
-  const ADD = `<div class="pk2-add">${MOB ? '<span class="pk2-tag">Add-on</span>' : ''}<h3 class="pk2-aname">Structured interview</h3><p class="pk2-tl">HR practises with AI characters</p>${btn('Talk to us')}</div>`;
+  const ADD = `<div class="pk2-add">${MOB ? '<span class="pk2-tag">Дополнительно</span>' : ''}<h3 class="pk2-aname">Структурированное интервью</h3><p class="pk2-tl">HR тренируется с AI-персонажами</p>${btn('Написать нам')}</div>`;
 
   const BODY = MOB
     ? `<div class="pk2-grid">${FULL}${STAGES}</div>
-       <p class="pk2-label">For hiring</p>${HIRE}${ADD}`
+       <p class="pk2-label">Для подбора</p>${HIRE}${ADD}`
     : `<div class="pk2-grid">${FULL}${STAGES}</div>
-       <div class="pk2-row2"><p class="pk2-label pk2-label--h">For hiring</p><p class="pk2-label pk2-label--a">Add-on</p>${HIRE}${ADD}</div>`;
+       <div class="pk2-row2"><p class="pk2-label pk2-label--h">Для подбора</p><p class="pk2-label pk2-label--a">Дополнительно</p>${HIRE}${ADD}</div>`;
 
   const S = '#packages.pk2-on';
   const CSS = `
@@ -149,15 +149,15 @@
     if (MOB) {
       const eb = sec.querySelector('.pk-eyebrow'), ti = sec.querySelector('.pk-title');
       const e = eb ? eb.cloneNode(true) : document.createElement('p'); if (!eb) e.className = 'pk-eyebrow ueb';
-      const i = e.querySelector('i'); e.textContent = ''; if (i) e.appendChild(i); e.appendChild(document.createTextNode('Packages'));
+      const i = e.querySelector('i'); e.textContent = ''; if (i) e.appendChild(i); e.appendChild(document.createTextNode('Пакеты'));
       const t = ti ? ti.cloneNode(false) : document.createElement('h2'); if (!ti) t.className = 'pk-title';
-      t.innerHTML = 'Start where you are.<br><em>Grow into the full journey.</em>';
+      t.innerHTML = 'Начните с того, что есть.<br><em>Дорастите до полного цикла.</em>';
       head.append(e, t);
     } else {
       const ph = sec.querySelector('.packages__header');
       const h = document.createElement('div'); h.className = 'packages__header'; h.style.cssText = 'opacity:1;transform:none;margin:0';
-      const cap = document.createElement('p'); cap.className = 'caption'; cap.style.marginBottom = '16px'; cap.textContent = 'Packages';
-      const hl = document.createElement('h2'); hl.className = 'headline'; hl.innerHTML = 'Start where you are.<br><em>Grow into the full journey.</em>';
+      const cap = document.createElement('p'); cap.className = 'caption'; cap.style.marginBottom = '16px'; cap.textContent = 'Пакеты';
+      const hl = document.createElement('h2'); hl.className = 'headline'; hl.innerHTML = 'Начните с того, что есть.<br><em>Дорастите до полного цикла.</em>';
       h.append(cap, hl); head.appendChild(h);
       if (!ph) head.classList.add('pk2-nohdr');
     }

@@ -1,4 +1,4 @@
-// Mock-up (23 Nov): on the phone, "Why these areas matter" becomes one row of cards you swipe sideways, with the AI card last.
+// Mock-up (23 Nov): on the phone, "Почему эти области важны" becomes one row of cards you swipe sideways, with the AI card last.
 // Cuts several screens of scrolling; nothing is hidden. Dots under the row show where you are.
 (function () {
   const CSS = `
@@ -26,7 +26,7 @@
     list.appendChild(ai); list.classList.add('rsw');
     const cards = [...list.children];
     const foot = document.createElement('div'); foot.className = 'rsw-foot';
-    foot.innerHTML = '<div class="rsw-dots">' + cards.map(() => '<i></i>').join('') + '</div><span class="rsw-hint">Swipe for all ' + cards.length + ' →</span>';
+    foot.innerHTML = '<div class="rsw-dots">' + cards.map(() => '<i></i>').join('') + '</div><span class="rsw-hint">Листайте, чтобы увидеть все ' + cards.length + ' →</span>';
     list.after(foot);
     const dots = [...foot.querySelectorAll('i')];
     const mark = () => {

@@ -7,10 +7,10 @@
 // 6 Journey dots: four dots show where you are in the journey, then the sentence (Arc timeline)
 (function () {
   const STAGES = [
-    { sel: '#identify', name: 'Identify', promise: 'Reveal strengths and gaps', color: '#2f6fdb' },
-    { sel: '#engage', name: 'Engage', promise: 'See how the team really works together', color: '#7a4bd6' },
-    { sel: '#build', name: 'Build', promise: 'Develop the right capabilities', color: '#e0761c' },
-    { sel: '#measure', name: 'Measure', promise: 'Show what changed', color: '#14a07c' },
+    { sel: '#identify', name: 'Identify', promise: 'Найти сильные стороны и зоны роста', color: '#2f6fdb' },
+    { sel: '#engage', name: 'Engage', promise: 'Увидеть, как команда работает на самом деле', color: '#7a4bd6' },
+    { sel: '#build', name: 'Build', promise: 'Развить нужные навыки', color: '#e0761c' },
+    { sel: '#measure', name: 'Measure', promise: 'Показать, что изменилось', color: '#14a07c' },
   ];
   const VERS = { 1: 'Short card, plays once', 2: 'Fills as you scroll', 3: 'Still half circle', 4: 'Title slides up', 5: 'Line above, left-aligned', 6: 'Journey dots' };
   const m = location.hash.match(/p=(\d)/);
@@ -79,8 +79,8 @@
     const words = s.promise.split(' ');
     const n = document.createElement('section');
     n.className = 'bpc bpc' + V + (FILL ? ' fill' : ''); n.style.setProperty('--k', s.color); n.style.background = bg;
-    n.setAttribute('aria-label', `Stage ${i + 1} of 4: ${s.name}`);
-    const eb = `<div class="bpc-eb bpc-fade"><span class="bpc-num">Stage ${i + 1} of 4</span><i class="bpc-dot"></i><span class="bpc-name">${s.name}</span></div>`;
+    n.setAttribute('aria-label', `Этап ${i + 1} из 4: ${s.name}`);
+    const eb = `<div class="bpc-eb bpc-fade"><span class="bpc-num">Этап ${i + 1} из 4</span><i class="bpc-dot"></i><span class="bpc-name">${s.name}</span></div>`;
     const stmt = `<div class="bpc-stmt bpc-fade d2">${words.map((w, j) => `<span class="${j === 0 ? 'k' : ''}">${w}</span>`).join(' ')}.</div>`;
     let inner = `<div class="bpc-in">${V === '5' ? '<div class="bpc-line"></div>' : ''}${V === '6' ? DOTS(i) : ''}${eb}${stmt}${V === '1' || V === '2' ? SARC : ''}</div>`;
     if (V === '2') inner = `<div class="bpc-stick">${inner}</div>`;
@@ -143,9 +143,9 @@
   function names() {   // the app's names for the two manager groups
     const w = document.createTreeWalker(document.getElementById('root'), NodeFilter.SHOW_TEXT);
     let n; while ((n = w.nextNode())) { let v = n.nodeValue;
-      v = v.replace(/line and mid-level managers/gi, (m) => (m[0] === 'L' ? 'Line managers and managers of managers' : 'line managers and managers of managers'));
-      v = v.replace(/mid-level managers/gi, (m) => (m[0] === 'M' ? 'Managers of managers' : 'managers of managers'));
-      v = v.replace(/senior managers/gi, (m) => (m[0] === 'S' ? 'Managers of managers' : 'managers of managers'));
+      v = v.replace(/line and mid-level managers/gi, (m) => (m[0] === 'L' ? 'Линейные руководители и руководители руководителей' : 'линейные руководители и руководители руководителей'));
+      v = v.replace(/mid-level managers/gi, (m) => (m[0] === 'M' ? 'Руководители руководителей' : 'руководители руководителей'));
+      v = v.replace(/senior managers/gi, (m) => (m[0] === 'S' ? 'Руководители руководителей' : 'руководители руководителей'));
       if (v !== n.nodeValue) n.nodeValue = v; }
   }
   function init() {

@@ -34,7 +34,7 @@ export default function TrainingLibraryDrawer({ isOpen, onClose }) {
   const modules = [
     {
       id: 'leadership',
-      title: 'Leadership Fundamentals',
+      title: 'Основы лидерства',
       desc: 'Build core leadership skills for everyday management.',
       iconBg: '#ffe5ee',
       iconColor: '#e11d48',
@@ -49,7 +49,7 @@ export default function TrainingLibraryDrawer({ isOpen, onClose }) {
     },
     {
       id: 'goals',
-      title: 'Effective Goal Setting',
+      title: 'Эффективная постановка целей',
       desc: 'Set clear goals, drive focus and accountability.',
       iconBg: '#e0f2fe',
       iconColor: '#0284c7',
@@ -77,7 +77,7 @@ export default function TrainingLibraryDrawer({ isOpen, onClose }) {
     },
     {
       id: 'team',
-      title: 'Team Management',
+      title: 'Управление командой',
       desc: 'Build high-performing and engaged teams.',
       iconBg: '#e6fcf5',
       iconColor: '#059669',
@@ -105,7 +105,7 @@ export default function TrainingLibraryDrawer({ isOpen, onClose }) {
     },
     {
       id: 'influencing',
-      title: 'Influencing Without Authority',
+      title: 'Влияние без формальной власти',
       desc: 'Create impact across functions and stakeholders.',
       iconBg: '#e0f2fe',
       iconColor: '#0284c7',

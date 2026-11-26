@@ -153,7 +153,7 @@ export default function ThePlatform() {
                   <tbody>
                     {[
                       { initials:'FK', name:'Fredrick K.', role:'Operations Manager',    stage:'Development', pct:75, bar:'#3b82f6', status:'On track',       statusCls:'on-track',  ago:'2d ago' },
-                      { initials:'SL', name:'Sofia L.',    role:'Marketing Manager',      stage:'Assessment',  pct:50, bar:'#3b82f6', status:'In progress',   statusCls:'in-prog',   ago:'1d ago' },
+                      { initials:'SL', name:'Sofia L.',    role:'Marketing Manager',      stage:'Оценка',  pct:50, bar:'#3b82f6', status:'In progress',   statusCls:'in-prog',   ago:'1d ago' },
                       { initials:'HN', name:'Hanna N.',    role:'Product Development Lead',stage:'Engagement',  pct:20, bar:'#f59e0b', status:'Needs attention',statusCls:'needs-att', ago:'3d ago' },
                       { initials:'JG', name:'Jonas G.',    role:'Finance Manager',         stage:'Measurement', pct:90, bar:'#3b82f6', status:'On track',       statusCls:'on-track',  ago:'1d ago' },
                     ].map(row => (

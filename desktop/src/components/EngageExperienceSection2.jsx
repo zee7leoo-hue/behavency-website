@@ -108,7 +108,7 @@ const STAGES_DATA = [
     tabTitle: '01 · The Game',
     tabSub: 'Experience the patterns',
     icon: IconGamepad,
-    heading: 'The Game',
+    heading: 'Игра',
     game: true,
     subheading: 'A game that makes participants feel their own blind spots.',
     description: "Numbers on a report don't always convince people. It's easy to see a low score and move on. What's harder is encountering the same behavioural gap yourself — in a real group situation, in real time.",
@@ -147,10 +147,10 @@ const STAGES_DATA = [
     tabTitle: '02 · Post-Reflection',
     tabSub: 'Make the connection',
     icon: IconUsersGroup,
-    heading: 'The Reflection',
+    heading: 'Разбор',
     subheading: 'The game is only the beginning.',
     paragraphs: [
-      'In a facilitated conversation, the team looks back at what happened — the decisions they made, the patterns that emerged, and how they worked together.',
+      'Команда вместе с фасилитатором вспоминает, the team looks back at what happened — the decisions they made, the patterns that emerged, and how they worked together.',
       'The facilitator helps turn those moments into insights they can recognise in themselves and in the way their team works.',
     ],
     theme: 'blue',
@@ -177,7 +177,7 @@ const STAGES_DATA = [
       },
       {
         icon: IconFeatLayers,
-        title: 'Linked to your results',
+        title: 'Опирается на ваши результаты',
         desc: 'Brings to life the key areas from the assessment in real team situations.'
       }
     ]
@@ -200,18 +200,18 @@ const STAGES_DATA = [
         desc: 'Greater participant self-awareness, engagement and stronger buy-in for subsequent development.'
       },
       {
-        title: 'For participants',
+        title: 'Для участников',
         desc: 'An engaging experience that makes their assessment tangible and helps them understand their own behaviour.'
       }
     ],
     report: {
       title: ['Team', 'Insight Report'],
       meta: '5 teams · 60 participants',
-      download: 'Download PDF',
+      download: 'Скачать PDF',
       metrics: [
         { label: 'Trust', value: 78, tone: 'green' },
-        { label: 'Prioritisation', value: 64, tone: 'yellow' },
-        { label: 'Collaboration', value: 68, tone: 'purple', sub: 'Internal & Cross-Functional' }
+        { label: 'Расстановка приоритетов', value: 64, tone: 'yellow' },
+        { label: 'Сотрудничество', value: 68, tone: 'purple', sub: 'Internal & Cross-Functional' }
       ],
       takeawayTitle: 'Key takeaway',
       takeaway: 'Team collaboration showed strong engagement and involvement, while cross-functional collaboration can be further strengthened.'
@@ -501,7 +501,7 @@ export default function EngageExperienceSection2() {
 
 
   return (
-    <section className="behavency-engage behavency-engage--v2 xc-anim" id="engage" aria-label="Behavency Engage Experience">
+    <section className="behavency-engage behavency-engage--v2 xc-anim" id="engage" aria-label="Behavency Engage в деле">
      <div className="be-stack" ref={stackRef}>
       {/* LAYER 1 — stays pinned while the next screen slides up over it */}
       <div className="be-top-layer" ref={topRef}>
@@ -523,10 +523,10 @@ export default function EngageExperienceSection2() {
       <div className="bx-hero" ref={heroRef}>
         <div className="bx-grid">
           <div className="bx-left">
-            <StagePill num="02" title="Engage" sub="Create shared commitment" tone="green" />
+            <StagePill num="02" title="Engage" sub="Сделать развитие общим делом" tone="green" />
             <h2 className="bx-title">
-              They’ve seen<br />the score.<br />Now let them<br />
-              <span className="bx-em">experience it.</span>
+              Цифры они<br />уже видели.<br />Теперь пусть<br />
+              <span className="bx-em">прочувствуют.</span>
             </h2>
             <svg className="bx-underline" viewBox="0 0 540 40" preserveAspectRatio="none" aria-hidden="true">
               <path d="M2 36 C140 14 330 2 536 12" fill="none" stroke="url(#bx-ul)" strokeWidth="3.4" strokeLinecap="round" />
@@ -535,28 +535,28 @@ export default function EngageExperienceSection2() {
           </div>
           <div className="bx-divider" aria-hidden="true" />
           <div className="bx-right">
-            <h2 className="bx-h">A score can be read and forgotten.<br />An experience stays.</h2>
-            <p className="bx-copy">A 45-minute online team game, then a 90-minute facilitated reflection. Teams see what works, what doesn’t, and how they really collaborate. No wrong moves, no judgement, just chances to learn.</p>
+            <h2 className="bx-h">Цифры легко прочитать и забыть.<br />Опыт остаётся.</h2>
+            <p className="bx-copy">45 минут онлайн-игры для команды, затем 90 минут разбора с фасилитатором. Команда видит, что работает, что нет и как люди на самом деле взаимодействуют. Здесь нет неверных ходов и оценок — только возможность учиться.</p>
             <ul className="bx-points">
               <li>
                 <span className="bx-ico bx-ico--green" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="3.6" /><path d="M5 20c0-4 3.1-6.4 7-6.4s7 2.4 7 6.4" /></svg>
                 </span>
-                <div><strong>For participants</strong><p>Their results stop being just numbers. They recognise their own strengths and gaps in action, so they want to work on them.</p></div>
+                <div><strong>Для участников</strong><p>Результаты перестают быть просто цифрами. Участники видят свои сильные стороны и зоны роста в деле — и сами хотят над ними работать.</p></div>
               </li>
               <li>
                 <span className="bx-ico bx-ico--violet" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 11.2 12 4l8 7.2V20H4z" /><path d="M10 20v-5h4v5" /></svg>
                 </span>
-                <div><strong>For the organisation</strong><p>The development programme starts with people who want to take part, not people who were told to.</p></div>
+                <div><strong>Для организации</strong><p>В программу развития приходят те, кто сам хочет участвовать, а не те, кого отправили.</p></div>
               </li>
             </ul>
             <div className="bx-actions">
-              <button className="bx-btn" id="be-watch-cta-2" type="button" aria-label="See the video" onClick={() => setIsVideoOpen(true)}>
+              <button className="bx-btn" id="be-watch-cta-2" type="button" aria-label="Смотреть видео" onClick={() => setIsVideoOpen(true)}>
                 <span className="bx-btn-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9 6.5v11l9-5.5z" /></svg></span>
-                See video <span aria-hidden="true">→</span>
+                Смотреть видео <span aria-hidden="true">→</span>
               </button>
-              <a className="bx-btn bx-btn--ghost" href="#contact">Request a demo</a>
+              <a className="bx-btn bx-btn--ghost" href="#contact">Запросить демо</a>
             </div>
           </div>
         </div>
@@ -587,7 +587,7 @@ export default function EngageExperienceSection2() {
           id="be-modal-2"
           role="dialog"
           aria-modal="true"
-          aria-label="Behavency game video"
+          aria-label="Видео об игре Behavency"
           onClick={() => setIsVideoOpen(false)}
         >
           <div className="be-modal-content" onClick={(e) => e.stopPropagation()}>
@@ -595,7 +595,7 @@ export default function EngageExperienceSection2() {
               type="button"
               className="be-modal-close"
               id="be-close-modal-2"
-              aria-label="Close video"
+              aria-label="Закрыть видео"
               onClick={() => setIsVideoOpen(false)}
             >
               ×

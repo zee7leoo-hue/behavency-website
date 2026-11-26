@@ -22,14 +22,14 @@ const Calendar = (p) => (<svg viewBox="0 0 24 24" {...sv} {...p}><rect x="3" y="
 const Pin = (p) => (<svg viewBox="0 0 24 24" {...sv} {...p}><path d="M12 21.5c-4-4.4-6.6-7.8-6.6-11.2a6.6 6.6 0 0 1 13.2 0c0 3.4-2.6 6.8-6.6 11.2z" /><circle cx="12" cy="10.2" r="2.5" /></svg>)
 
 const CARDS = [
-  { key: 'e', bg: elearningBg, Icon: Laptop, title: 'E-learning', desc: 'Flexible and self-paced, so teams can learn anytime, anywhere.',
-    feats: [{ Icon: PlayBox, t: ['Practical,', 'real-world', 'learning'] }, { Icon: Layers, t: ['Flexible', 'and', 'self-paced'] }, { Icon: Group, t: ['For individuals', 'and teams'] }] },
-  { key: 'i', bg: inpersonBg, Icon: Chat, title: 'In-person', desc: 'Hands-on, expert-led sessions that build stronger team dynamics.',
-    feats: [{ Icon: Users, t: ['On-site', 'with your team'] }, { Icon: Pin, t: ['Flexible', 'location'] }] },
-  { key: 'l', bg: liveBg, Icon: Users, title: 'Live online', desc: 'Interactive, expert-led sessions with your team, anywhere.',
-    feats: [{ Icon: Calendar, t: ['Flexible', 'scheduling'] }, { Icon: Users, t: ['Teams of', '12–25'] }] },
-  { key: 'b', bg: blendedBg, Icon: Layers, title: 'Blended', desc: 'Digital learning and live sessions, combined.', blend: true,
-    feats: [{ Icon: Laptop, t: ['Digital', 'learning'] }, { Icon: Users, t: ['Expert-led', 'sessions'] }] },
+  { key: 'e', bg: elearningBg, Icon: Laptop, title: 'E-learning', desc: 'В своём темпе: команды учатся когда и где им удобно.',
+    feats: [{ Icon: PlayBox, t: ['Практичное,', 'прикладное', 'обучение'] }, { Icon: Layers, t: ['Гибкое', 'обучение', 'в своём темпе'] }, { Icon: Group, t: ['Индивидуально', 'и команд'] }] },
+  { key: 'i', bg: inpersonBg, Icon: Chat, title: 'Очно', desc: 'Практика с экспертом, которая сплачивает команду.',
+    feats: [{ Icon: Users, t: ['В офисе', 'всей командой'] }, { Icon: Pin, t: ['Гибкое', 'место проведения'] }] },
+  { key: 'l', bg: liveBg, Icon: Users, title: 'Онлайн с тренером', desc: 'Интерактивные сессии с экспертом — всей командой, откуда угодно.',
+    feats: [{ Icon: Calendar, t: ['Гибкое', 'расписание'] }, { Icon: Users, t: ['Команды по', '12–25 человек'] }] },
+  { key: 'b', bg: blendedBg, Icon: Layers, title: 'Смешанный формат', desc: 'Цифровое обучение плюс живые сессии.', blend: true,
+    feats: [{ Icon: Laptop, t: ['Цифровое', 'обучение'] }, { Icon: Users, t: ['Сессии', 'с экспертом'] }] },
 ]
 
 const COLS = [193, 495, 795]   // centres of the three feature columns
@@ -46,13 +46,13 @@ function Card({ c }) {
         <>
           <div className="jc-pane" style={{ left: 40, top: 356, width: 514, height: 232 }}>
             <LaptopPlay className="jc-pico" style={{ left: 46, top: 74, width: 112, height: 92 }} />
-            <b style={{ left: 178, top: 32 }}>Digital learning</b>
-            <span style={{ left: 194, top: 84 }}>Build knowledge and skills at your own pace.</span>
+            <b style={{ left: 178, top: 32 }}>Цифровое обучение</b>
+            <span style={{ left: 194, top: 84 }}>Знания и навыки — в своём темпе.</span>
           </div>
           <div className="jc-pane" style={{ left: 40, top: 628, width: 496, height: 232 }}>
             <Group className="jc-pico" style={{ left: 46, top: 76, width: 112, height: 88 }} />
-            <b style={{ left: 178, top: 32 }}>Live sessions</b>
-            <span style={{ left: 190, top: 84 }}>Apply, discuss, and solve real team challenges.</span>
+            <b style={{ left: 178, top: 32 }}>Живые сессии</b>
+            <span style={{ left: 190, top: 84 }}>Применяйте, обсуждайте и решайте реальные задачи команды.</span>
           </div>
         </>
       )}
@@ -199,13 +199,13 @@ export default function Journey() {
   return (
     <section ref={ref} className={`jn ${seen ? 'is-in' : ''}`} id="journey">
       <div className="jn-in">
-        <div className="jn-eyebrow rv" style={{ '--i': 0 }}><i aria-hidden="true" /><span>THE DEVELOPMENT JOURNEY</span></div>
-        <h2 className="jn-title rv" style={{ '--i': 1 }}>Training goes where the <em>results</em> point.</h2>
-        <p className="jn-sub rv" style={{ '--i': 2 }}>Each person works on their own priorities, not a course for everyone. Choose e-learning, live online, in person or a mix.</p>
+        <div className="jn-eyebrow rv" style={{ '--i': 0 }}><i aria-hidden="true" /><span>ПУТЬ РАЗВИТИЯ</span></div>
+        <h2 className="jn-title rv" style={{ '--i': 1 }}>Обучение идёт туда, куда указывают <em>результаты</em>.</h2>
+        <p className="jn-sub rv" style={{ '--i': 2 }}>Каждый работает над своими приоритетами — никаких курсов «для всех». Формат на выбор: e-learning, онлайн с тренером, очно или смешанный.</p>
         <div className="jn-years rv" style={{ '--i': 3 }}>
           <Laurel />
           <i className="jn-vl" aria-hidden="true" />
-          <p><b>19 years</b> developing managers and teams across Europe.</p>
+          <p><b>19 лет</b> развиваем руководителей и команды по всей Европе.</p>
         </div>
       </div>
 
@@ -214,7 +214,7 @@ export default function Journey() {
           <article className="jn-card" key={c.key} aria-label={c.title}><Card c={c} /></article>
         ))}
       </div>
-      <div className="jn-dots" role="tablist" aria-label="Learning formats">
+      <div className="jn-dots" role="tablist" aria-label="Форматы обучения">
         {CARDS.map((c, i) => <button type="button" key={c.key} role="tab" aria-selected={i === at} aria-label={c.title} className={i === at ? 'on' : ''} onClick={() => go(i)} />)}
       </div>
     </section>

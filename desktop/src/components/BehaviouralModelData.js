@@ -1,418 +1,418 @@
 export const factorsList = [
   {
-  id: 'clarity', title: 'Clarity & Alignment',
+  id: 'clarity', title: 'Ясность и согласованность',
   
    color: '#10b981',
-  symptoms: ["Priorities become unclear.", "Teams start moving in different directions.", "Expectations and requirements are understood differently."],
-  competencies: ["Translate strategy into clear guidelines for the team", "Define the team's area of responsibility", "Clearly define roles and expectations", "Form a shared understanding of what success means", "Ensure alignment between priorities and actual actions"],
-  keyCompetencies: ["Strategic Thinking", "Goal Setting", "Planning and Organisation", "Communication", "Business Acumen", "Systems Thinking"],
+  symptoms: ["Приоритеты размываются.", "Команды тянут в разные стороны.", "Ожидания и требования понимают по-разному."],
+  competencies: ["Переводить стратегию в ясные ориентиры для команды", "Определять зону ответственности команды", "Чётко определять роли и ожидания", "Формировать общее понимание того, что считается успехом", "Следить, чтобы реальные действия соответствовали приоритетам"],
+  keyCompetencies: ["Стратегическое мышление", "Постановка целей", "Планирование и организация", "Коммуникация", "Деловое чутьё", "Системное мышление"],
   trainings: [
-  { name: "Leadership Fundamentals", audience: ['line']  },
-  { name: "Effective Goal Setting", audience: ['line']  },
-  { name: "Effective Delegation", audience: ['mid']  },
-  { name: "Strategic Thinking", audience: ['mid']  },
-  { name: "Problem Analysis & Decision Making", audience: ['mid']  },
+  { name: "Основы лидерства", audience: ['line']  },
+  { name: "Эффективная постановка целей", audience: ['line']  },
+  { name: "Эффективное делегирование", audience: ['mid']  },
+  { name: "Стратегическое мышление", audience: ['mid']  },
+  { name: "Анализ проблем и принятие решений", audience: ['mid']  },
   ],
   manifestations: [
   {
-  practice: "Translate strategy into clear guidelines for the team",
+  practice: "Переводить стратегию в ясные ориентиры для команды",
   line: [
-   "Translates organisational goals into clear priorities and tasks for their team.",
-   "Helps employees understand how team goals connect to departmental and organisational goals."
+   "Переводит цели организации в ясные приоритеты и задачи для своей команды.",
+   "Помогает сотрудникам понять, как цели команды связаны с целями подразделения и организации."
 ],
   mid: [
-   "Translates strategic business goals into priorities for multiple teams or departments.",
-   "Ensures that line managers understand the business logic of the tasks facing them, not just their content."
+   "Переводит стратегические бизнес-цели в приоритеты для нескольких команд или подразделений.",
+   "Добивается, чтобы линейные руководители понимали не только суть своих задач, но и их бизнес-логику."
 ]
   },
   {
-  practice: "Define the team's area of responsibility",
-    practiceMid: "Ensure alignment of goals with organisational priorities",
+  practice: "Определять зону ответственности команды",
+    practiceMid: "Согласовывать цели с приоритетами организации",
   line: [
-   "Clearly defines what results the team is responsible for, and what tasks and decisions lie outside their area of responsibility."
+   "Чётко определяет, за какие результаты отвечает команда, а какие задачи и решения лежат за пределами её зоны ответственности."
 ],
   mid: [
-   "Ensures alignment of goals across departments — prevents teams from moving in opposite directions.",
-   "Makes management decisions based on business interests, not just their own department's."
+   "Согласует цели подразделений — не даёт командам тянуть в разные стороны.",
+   "Принимает управленческие решения исходя из интересов бизнеса, а не только своего подразделения."
 ]
   },
   {
-  practice: "Clearly define roles and expectations",
+  practice: "Чётко определять роли и ожидания",
   line: [
-   "Clearly explains to employees their roles, areas of responsibility, and expected results."
+   "Понятно объясняет сотрудникам их роли, зоны ответственности и ожидаемые результаты."
 ],
   mid: [
-   "Responsibility among line managers is distributed without duplication or ambiguity.",
-   "Formulates expectations for the quality of management work — not just for the team's business results."
+   "Ответственность между линейными руководителями распределена без дублирования и неясностей.",
+   "Формулирует ожидания к качеству управленческой работы, а не только к бизнес-результатам команды."
 ]
   },
   {
-  practice: "Form a shared understanding of what success means",
+  practice: "Формировать общее понимание того, что считается успехом",
   line: [
-   "Creates a shared understanding of what is considered a successful outcome for the team's work.",
-   "Notices when employees have different understandings of goals or success criteria, and achieves a shared understanding before it leads to misalignment in work."
+   "Формирует общее понимание того, что считается успешным результатом работы команды.",
+   "Замечает, когда сотрудники по-разному понимают цели или критерии успеха, и добивается общего понимания, пока это не разладило работу."
 ],
   mid: [
-   "Creates a shared understanding of success for multiple teams — teams use aligned criteria for evaluating results.",
-   "Resolves contradictions in expectations between departments before they manifest in conflicts."
+   "Формирует общее понимание успеха для нескольких команд — команды оценивают результаты по согласованным критериям.",
+   "Устраняет противоречия в ожиданиях подразделений, пока они не вылились в конфликты."
 ]
   },
   {
-  practice: "Ensure alignment between priorities and actual actions",
+  practice: "Следить, чтобы реальные действия соответствовали приоритетам",
   line: [
-   "Monitors the alignment of the team's actual work with agreed goals and direction, and promptly points out deviations when they occur."
+   "Следит, чтобы работа команды шла в русле согласованных целей и направления, и сразу указывает на отклонения."
 ],
   mid: [
-   "Reallocates resources between teams when priorities change — promptly and justifiably.",
-   "Makes decisions on trade-offs between competing tasks across multiple departments."
+   "Перераспределяет ресурсы между командами при смене приоритетов — своевременно и обоснованно.",
+   "Находит компромиссы между конкурирующими задачами нескольких подразделений."
 ]
   }
   ]
   },
  {
- id: 'safety', title: 'Trust & Inclusion',
+ id: 'safety', title: 'Доверие и инклюзивность',
  
   color: '#f59e0b',
- symptoms: ["People hesitate to speak up.", "Levels of trust and engagement decline.", "Valuable ideas and perspectives go unheard."],
- competencies: ["Foster psychological safety", "Demonstrate transparency and consistency", "Encourage diversity of opinions and perspectives", "Maintain open and respectful communication", "Build a sense of belonging and team identity"],
- keyCompetencies: ["Emotional Intelligence", "Empathy", "Active Listening", "Relationship Building", "Inclusive Leadership", "Ethical Behaviour"],
+ symptoms: ["Люди не решаются высказываться.", "Доверие и вовлечённость падают.", "Ценные идеи и мнения никто не слышит."],
+ competencies: ["Создавать психологическую безопасность", "Проявлять открытость и последовательность", "Поощрять разнообразие мнений и точек зрения", "Поддерживать открытое и уважительное общение", "Формировать чувство принадлежности и командную идентичность"],
+ keyCompetencies: ["Эмоциональный интеллект", "Эмпатия", "Активное слушание", "Построение отношений", "Инклюзивное лидерство", "Этичное поведение"],
  trainings: [
- { name: "Assertive Behaviour", audience: ['line','mid']  },
+ { name: "Ассертивное поведение", audience: ['line','mid']  },
  { name: "Emotional Intelligence for Leaders", audience: ['line','mid']  },
  { name: "Trust & Psychological Safety in Teams", audience: ['line','mid']  },
- { name: "Team Management", audience: ['line','mid']  },
- { name: "Individual Coaching Sessions", audience: ['mid']  },
+ { name: "Управление командой", audience: ['line','mid']  },
+ { name: "Индивидуальные коучинговые сессии", audience: ['mid']  },
  ],
  manifestations: [
  {
- practice: "Foster psychological safety",
+ practice: "Создавать психологическую безопасность",
  line: [
-  "Encourages employees to openly discuss problems and mistakes without fear of blame.",
-  "Ensures employees know their input has genuinely been considered: explains how it influenced the decision, or why a different approach was taken — not just going through the motions of listening."
+  "Поощряет сотрудников открыто обсуждать проблемы и ошибки, не опасаясь обвинений.",
+  "Даёт сотрудникам понять, что их мнение действительно учтено: объясняет, как оно повлияло на решение или почему выбран другой подход, — а не просто делает вид, что слушает."
 ],
  mid: [
-  "Identifies signs of an unhealthy atmosphere in lower-level teams and intervenes before issues escalate.",
-  "Ensures line managers do not foster a culture of fear or silence within their teams."
+  "Замечает признаки нездоровой атмосферы в командах уровнем ниже и вмешивается, пока проблемы не обострились.",
+  "Следит, чтобы линейные руководители не создавали в своих командах культуру страха или молчания."
 ]
  },
  {
- practice: "Demonstrate transparency and consistency",
+ practice: "Проявлять открытость и последовательность",
  line: [
-  "Proactively shares the reasoning behind difficult or unpopular management decisions without waiting for questions or discontent.",
-  "Applies the same rules and approaches consistently to employees in comparable situations."
+  "Сам, не дожидаясь вопросов или недовольства, объясняет, почему принято сложное или непопулярное управленческое решение.",
+  "Применяет одни и те же правила и подходы ко всем сотрудникам в похожих ситуациях."
 ],
  mid: [
-  "Explains the reasoning behind difficult and unpopular decisions — does not merely announce the outcome.",
-  "Acts consistently toward different teams — avoids any sense of favouritism."
+  "Объясняет логику сложных и непопулярных решений, а не просто объявляет итог.",
+  "Последователен со всеми командами — не даёт повода говорить о любимчиках."
 ]
  },
  {
- practice: "Encourage diversity of opinions and perspectives",
+ practice: "Поощрять разнообразие мнений и точек зрения",
  line: [
-  "Encourages employees to openly express different opinions and ideas, even when they differ from the manager's position or the majority view."
+  "Поощряет сотрудников открыто высказывать разные мнения и идеи, даже если они расходятся с позицией руководителя или мнением большинства."
 ],
  mid: [
-  "Draws on diverse sources of information when making decisions — does not rely solely on their inner circle.",
-  "Establishes a norm where line managers actively encourage diverse perspectives within their teams."
+  "Принимая решения, опирается на разные источники информации, а не только на ближний круг.",
+  "Делает нормой, чтобы линейные руководители активно поощряли в своих командах разные точки зрения."
 ]
  },
  {
- practice: "Maintain open and respectful communication",
+ practice: "Поддерживать открытое и уважительное общение",
  line: [
-  "Communicates respectfully with employees and puts a stop to any disrespectful behaviour within the team.",
-  "Openly discusses difficult issues with employees and does not avoid uncomfortable conversations."
+  "Общается с сотрудниками уважительно и пресекает любое неуважительное поведение в команде.",
+  "Открыто обсуждает с сотрудниками сложные вопросы и не избегает неудобных разговоров."
 ],
  mid: [
-  "Sets the communication standard across the whole part of the organisation they lead — does not tolerate the suppression or distortion of information."
+  "Задаёт стандарт коммуникации во всей части организации, которой руководит, — не допускает замалчивания или искажения информации."
 ]
  },
  {
- practice: "Build a sense of belonging and team identity",
+ practice: "Формировать чувство принадлежности и командную идентичность",
  line: [
-  "Acknowledges employees' contributions and highlights their significance to the team's overall results."
+  "Признаёт вклад сотрудников и показывает, как он важен для общего результата команды."
 ],
  mid: [
-  "Recognises the contributions of line managers — creating a sense of shared ownership over collective results."
+  "Признаёт вклад линейных руководителей, формируя чувство общей ответственности за коллективные результаты."
 ]
  }
  ]
  },
  {
- id: 'capacity', title: 'Focus & Prioritisation',
+ id: 'capacity', title: 'Фокус и приоритеты',
  
   color: '#8b5cf6',
- symptoms: ["Teams become overwhelmed.", "Efforts are spread too thin across too many tasks.", "High-impact work loses focus."],
- competencies: ["Separate the truly important from the secondary", "Make sound decisions on priorities and trade-offs", "Allocate resources effectively", "Focus attention on the highest-impact tasks", "Shield teams from unnecessary complexity and overload"],
- keyCompetencies: ["Decision Making", "Critical Thinking", "Prioritisation", "Resource Management", "Problem Solving", "Managerial Judgment"],
+ symptoms: ["Команды перегружены.", "Силы распыляются на слишком многое.", "Работа с наибольшим эффектом уходит на второй план."],
+ competencies: ["Отделять действительно важное от второстепенного", "Принимать взвешенные решения о приоритетах и компромиссах", "Эффективно распределять ресурсы", "Направлять внимание на задачи, которые дают наибольший эффект", "Защищать команды от лишней сложности и перегрузки"],
+ keyCompetencies: ["Принятие решений", "Критическое мышление", "Расстановка приоритетов", "Управление ресурсами", "Решение проблем", "Управленческое суждение"],
  trainings: [
- { name: "Effective Goal Setting", audience: ['line']  },
- { name: "Critical Thinking", audience: ['mid']  },
- { name: "Problem Analysis & Decision Making", audience: ['mid']  },
- { name: "Team Motivation Management", audience: ['line','mid']  },
- { name: "Strategic Thinking", audience: ['mid']  },
+ { name: "Эффективная постановка целей", audience: ['line']  },
+ { name: "Критическое мышление", audience: ['mid']  },
+ { name: "Анализ проблем и принятие решений", audience: ['mid']  },
+ { name: "Управление мотивацией команды", audience: ['line','mid']  },
+ { name: "Стратегическое мышление", audience: ['mid']  },
  ],
  manifestations: [
  {
- practice: "Separate the truly important from the secondary",
+ practice: "Отделять действительно важное от второстепенного",
  line: [
-  "Identifies which tasks matter most for achieving team goals and structures the team's work accordingly.",
-  "Filters out operational noise and does not burden the team with every incoming request or initiative."
+  "Определяет, какие задачи важнее всего для целей команды, и под них выстраивает её работу.",
+  "Отсеивает операционный шум и не спускает команде каждый новый запрос или инициативу."
 ],
  mid: [
-  "Identifies what truly matters to the business and aligns the priorities of multiple teams accordingly.",
-  "Filters out operational noise — does not pass every incoming request or initiative down to teams."
+  "Определяет, что действительно важно для бизнеса, и под это выстраивает приоритеты нескольких команд.",
+  "Отсеивает операционный шум — не спускает командам каждый входящий запрос или инициативу."
 ]
  },
  {
- practice: "Make sound decisions on priorities and trade-offs",
+ practice: "Принимать взвешенные решения о приоритетах и компромиссах",
  line: [
-  "When resources or time are limited, determines which tasks to prioritise and decides which tasks the team can temporarily deprioritise.",
-  "Makes priority decisions independently, without escalating unnecessarily."
+  "При ограниченных ресурсах или времени определяет, какие задачи в приоритете, а какие команда может временно отложить.",
+  "Принимает решения о приоритетах сам и не передаёт их наверх без нужды."
 ],
  mid: [
-  "Makes trade-off decisions between competing tasks and resources across multiple teams.",
-  "Takes ownership of priority decisions — does not push them upward without good reason."
+  "Находит компромиссы между конкурирующими задачами и ресурсами нескольких команд.",
+  "Берёт на себя решения о приоритетах — не передаёт их наверх без веской причины."
 ]
  },
  {
- practice: "Allocate resources effectively",
+ practice: "Эффективно распределять ресурсы",
  line: [
-  "Assigns tasks by taking into account employee workload and capabilities."
+  "Распределяет задачи с учётом загрузки и возможностей сотрудников."
 ],
  mid: [
-  "Knows how to decline resource requests with clear, substantiated reasoning."
+  "Умеет отказывать в запросах на ресурсы, ясно и обоснованно объясняя причину."
 ]
  },
  {
- practice: "Focus attention on the highest-impact tasks",
+ practice: "Направлять внимание на задачи, которые дают наибольший эффект",
  line: [
-  "Notices when the team's efforts are disproportionately concentrated on low-return tasks and initiates reallocation.",
-  "Helps employees understand which tasks contribute most to team goals and why."
+  "Замечает, когда команда тратит непропорционально много сил на задачи с малой отдачей, и перераспределяет усилия.",
+  "Помогает сотрудникам понять, какие задачи больше всего дают для целей команды и почему."
 ],
  mid: [
-  "Sees where energy across multiple teams is being wasted and redirects it.",
-  "Connects the daily work of departments to business outcomes — helping teams see their contribution."
+  "Видит, где энергия нескольких команд расходуется впустую, и перенаправляет её.",
+  "Связывает повседневную работу подразделений с бизнес-результатами, помогая командам видеть свой вклад."
 ]
  },
  {
- practice: "Shield teams from unnecessary complexity and overload",
+ practice: "Защищать команды от лишней сложности и перегрузки",
  line: [
-  "Streamlines team workflows by removing unnecessary formalities and actions that do not affect results."
+  "Упрощает рабочие процессы команды, убирая лишние формальности и действия, не влияющие на результат."
 ],
  mid: [
-  "Protects teams from excessive external pressure — engaging with senior management and cross-functional teams on behalf of the area they lead."
+  "Защищает команды от чрезмерного внешнего давления, взаимодействуя с высшим руководством и кросс-функциональными командами от имени своего направления."
 ]
  }
  ]
  },
  {
- id: 'execution', title: 'Execution & Accountability',
+ id: 'execution', title: 'Исполнение и ответственность',
  
   color: '#0ea5e9',
- symptoms: ["Progress slows down or stalls.", "Accountability becomes blurred.", "Commitments go unfulfilled."],
- competencies: ["Define ownership and accountability for tasks", "Ensure agreed goals and expected results are achieved", "Track progress and help remove obstacles", "Maintain required performance standards", "Follow through on commitments"],
- keyCompetencies: ["Performance Management", "Accountability", "Results Orientation", "Execution Management", "Delegation", "Monitoring & Control"],
+ symptoms: ["Дело движется медленно или стоит на месте.", "Ответственность размывается.", "Договорённости не выполняются."],
+ competencies: ["Закреплять за каждой задачей ответственного", "Добиваться согласованных целей и ожидаемых результатов", "Отслеживать прогресс и помогать устранять препятствия", "Поддерживать необходимые стандарты работы", "Выполнять взятые обязательства"],
+ keyCompetencies: ["Управление эффективностью", "Ответственность", "Ориентация на результат", "Организация исполнения", "Делегирование", "Контроль и мониторинг"],
  trainings: [
- { name: "Leadership Fundamentals", audience: ['line']  },
- { name: "Situational Leadership", audience: ['line']  },
- { name: "Effective Delegation", audience: ['mid']  },
- { name: "Team Management", audience: ['line','mid']  },
- { name: "Team Motivation Management", audience: ['line','mid']  },
+ { name: "Основы лидерства", audience: ['line']  },
+ { name: "Ситуационное лидерство", audience: ['line']  },
+ { name: "Эффективное делегирование", audience: ['mid']  },
+ { name: "Управление командой", audience: ['line','mid']  },
+ { name: "Управление мотивацией команды", audience: ['line','mid']  },
  ],
  manifestations: [
  {
- practice: "Define ownership and accountability for tasks",
+ practice: "Закреплять за каждой задачей ответственного",
  line: [
-  "Clearly distributes responsibility for tasks among team members.",
-  "Transfers accountability for task completion to individual employees."
+  "Чётко распределяет ответственность за задачи между членами команды.",
+  "Передаёт ответственность за выполнение задач конкретным сотрудникам."
 ],
  mid: [
-  "Management accountability is distributed across line managers — not centralized.",
-  "Holds managers accountable for the quality of their managerial work — not just the team's business results."
+  "Управленческая ответственность распределена между линейными руководителями, а не централизована.",
+  "Спрашивает с руководителей за качество их управленческой работы, а не только за бизнес-результаты команды."
 ]
  },
  {
- practice: "Ensure agreed goals and expected results are achieved",
+ practice: "Добиваться согласованных целей и ожидаемых результатов",
  line: [
-  "Takes responsibility for the team's results and does not shift blame onto employees or external circumstances.",
-  "When the team fails to achieve agreed results, independently analyses the root causes and takes concrete corrective action — rather than just explaining the situation or revising expectations."
+  "Берёт на себя ответственность за результаты команды и не перекладывает вину на сотрудников или внешние обстоятельства.",
+  "Если команда не достигла согласованных результатов, сам разбирается в первопричинах и конкретно исправляет ситуацию — а не просто объясняет её или пересматривает ожидания."
 ],
  mid: [
-  "Identifies systemic obstacles that prevent results from being achieved across the whole part of the organisation they lead."
+  "Выявляет системные препятствия, которые мешают достигать результатов во всей части организации, которой руководит."
 ]
  },
  {
- practice: "Track progress and help remove obstacles",
+ practice: "Отслеживать прогресс и помогать устранять препятствия",
  line: [
-  "Regularly monitors team progress and promptly identifies deviations from the plan.",
-  "Pays attention to early warning signs of problems in team performance and responds before they derail results.",
-  "When employees encounter obstacles, actively helps remove them rather than simply acknowledging the issue."
+  "Регулярно отслеживает прогресс команды и своевременно выявляет отклонения от плана.",
+  "Замечает ранние признаки проблем в работе команды и реагирует, пока они не сорвали результат.",
+  "Когда сотрудники сталкиваются с препятствиями, активно помогает их устранить, а не просто признаёт проблему."
 ],
  mid: [
-  "Tracks progress across multiple teams — identifies systemic delays and recurring patterns.",
-  "Resolves cross-functional dependencies that block execution.",
-  "Uses engagement, turnover, and other leading indicators to inform management decisions across multiple teams."
+  "Отслеживает прогресс нескольких команд — выявляет системные задержки и повторяющиеся закономерности.",
+  "Распутывает зависимости между функциями, которые тормозят работу.",
+  "Использует вовлечённость, текучесть и другие опережающие показатели для управленческих решений по нескольким командам."
 ]
  },
  {
- practice: "Maintain required performance standards",
+ practice: "Поддерживать необходимые стандарты работы",
  line: [
-  "Sets clear performance standards and applies them consistently to all team members.",
-  "When standards are systematically not met, investigates root causes and changes the approach — rather than relying on individual reprimands.",
-  "Provides employees with specific, timely feedback on their work quality — not just an overall assessment of the final result."
+  "Устанавливает чёткие стандарты работы и последовательно применяет их ко всем членам команды.",
+  "Когда стандарты систематически не выполняются, выясняет первопричины и меняет подход, а не ограничивается выговорами.",
+  "Даёт сотрудникам конкретную и своевременную обратную связь о качестве их работы, а не только общую оценку конечного результата."
 ],
  mid: [
-  "Sets uniform performance standards across the whole part of the organisation they lead — applied consistently, not selectively.",
-  "When standards are systematically not met, initiates structural changes — not just targeted conversations."
+  "Устанавливает единые стандарты работы во всей части организации, которой руководит, и применяет их последовательно, а не выборочно.",
+  "Когда стандарты систематически не выполняются, инициирует структурные изменения, а не только точечные беседы."
 ]
  },
  {
- practice: "Follow through on commitments",
+ practice: "Выполнять взятые обязательства",
  line: [
-  "Returns to previously agreed commitments and verifies they have been fulfilled.",
-  "When a commitment is not met, investigates the reasons and ensures it is either fulfilled or formally revised."
+  "Возвращается к ранее согласованным обязательствам и проверяет их выполнение.",
+  "Если обязательство не выполнено, выясняет причины и добивается, чтобы его либо выполнили, либо официально пересмотрели."
 ],
  mid: [
-  "Ensures that agreements between departments are upheld — not just commitments within teams."
+  "Следит за соблюдением договорённостей между подразделениями, а не только обязательств внутри команд."
 ]
  }
  ]
  },
  {
- id: 'drag', title: 'Collaboration & Influence',
+ id: 'drag', title: 'Сотрудничество и влияние',
  
   color: '#f43f5e',
- symptoms: ["Barriers arise between teams and departments.", "Stakeholder resistance intensifies.", "Conflicts remain unresolved."],
- competencies: ["Build productive working relationships", "Align stakeholders around shared goals", "Influence beyond formal authority", "Enable effective cross-functional collaboration", "Resolve disagreements and conflicts constructively"],
- keyCompetencies: ["Stakeholder Management", "Influencing", "Partnership Building", "Collaboration", "Conflict Management", "Communication"],
+ symptoms: ["Между командами и отделами растут барьеры.", "Стейкхолдеры сопротивляются всё сильнее.", "Конфликты так и остаются нерешёнными."],
+ competencies: ["Выстраивать продуктивные рабочие отношения", "Объединять стейкхолдеров вокруг общих целей", "Влиять за пределами формальных полномочий", "Налаживать эффективное взаимодействие между функциями", "Конструктивно разрешать разногласия и конфликты"],
+ keyCompetencies: ["Работа со стейкхолдерами", "Влияние", "Построение партнёрств", "Сотрудничество", "Управление конфликтами", "Коммуникация"],
  trainings: [
- { name: "Assertive Behaviour", audience: ['line','mid']  },
- { name: "Influencing Without Authority", audience: ['line','mid']  },
- { name: "Cross-Functional Collaboration", audience: ['line','mid']  },
- { name: "Team Management", audience: ['line','mid']  },
+ { name: "Ассертивное поведение", audience: ['line','mid']  },
+ { name: "Влияние без формальной власти", audience: ['line','mid']  },
+ { name: "Сотрудничество на стыке команд", audience: ['line','mid']  },
+ { name: "Управление командой", audience: ['line','mid']  },
  { name: "Emotional Intelligence for Leaders", audience: ['line','mid']  },
  ],
  manifestations: [
  {
- practice: "Build productive working relationships",
+ practice: "Выстраивать продуктивные рабочие отношения",
  line: [
-  "Proactively builds working relationships with colleagues from other teams — not only reaching out when collaboration is needed."
+  "По собственной инициативе выстраивает рабочие отношения с коллегами из других команд, а не вспоминает о них, лишь когда нужна совместная работа."
 ],
  mid: [
-  "Builds partnerships with leaders of adjacent functions — based on mutual trust, not just formal processes.",
-  "Develops a network of influence beyond the area they lead."
+  "Выстраивает партнёрские отношения с руководителями смежных функций — на основе взаимного доверия, а не только формальных процессов.",
+  "Развивает сеть влияния за пределами своего направления."
 ]
  },
  {
- practice: "Align stakeholders around shared goals",
+ practice: "Объединять стейкхолдеров вокруг общих целей",
  line: [
-  "Helps stakeholders align their interests and positions around a shared goal when achieving it requires their joint participation.",
-  "Identifies misalignments in expectations or priorities among stakeholders early and addresses them before they escalate into disagreements."
+  "Помогает стейкхолдерам согласовать интересы и позиции вокруг общей цели, когда для её достижения нужно их совместное участие.",
+  "Заранее замечает расхождения в ожиданиях или приоритетах стейкхолдеров и снимает их, пока они не переросли в разногласия."
 ],
  mid: [
-  "Manages competing priorities between functions — finding solutions rather than simply documenting conflicts."
+  "Сводит конкурирующие приоритеты разных функций — ищет решения, а не просто фиксирует конфликты."
 ]
  },
  {
- practice: "Influence beyond formal authority",
+ practice: "Влиять за пределами формальных полномочий",
  line: [
-  "Uses facts and well-reasoned arguments to influence the decisions of peers and leadership.",
-  "Takes into account the positions and interests of different stakeholders to secure their support on work matters."
+  "Использует факты и обоснованные аргументы, чтобы влиять на решения коллег и руководства.",
+  "Учитывает позиции и интересы разных стейкхолдеров, чтобы заручиться их поддержкой в рабочих вопросах."
 ],
  mid: [
-  "Influences decisions of senior management and adjacent functions through reasoned arguments and data.",
-  "Builds coalitions around important decisions — identifying allies in advance and managing resistance."
+  "Влияет на решения высшего руководства и смежных функций с помощью обоснованных аргументов и данных.",
+  "Формирует коалиции вокруг важных решений — заранее находит союзников и работает с сопротивлением."
 ]
  },
  {
- practice: "Enable effective cross-functional collaboration",
+ practice: "Налаживать эффективное взаимодействие между функциями",
  line: [
-  "Aligns with other teams on who is responsible for what and by when during collaborative work.",
-  "When collaboration with another team breaks down, identifies the cause and helps establish a new working arrangement."
+  "При совместной работе договаривается с другими командами, кто за что отвечает и в какие сроки.",
+  "Когда работа с другой командой разлаживается, находит причину и помогает договориться о новом порядке работы."
 ],
  mid: [
-  "Establishes operational rhythms between departments — synchronization formats that function without requiring their direct involvement.",
-  "Removes structural barriers that impede cross-functional collaboration."
+  "Налаживает регулярную синхронизацию между подразделениями — форматы, которые работают и без его участия.",
+  "Устраняет структурные барьеры, которые мешают кросс-функциональному взаимодействию."
 ]
  },
  {
- practice: "Resolve disagreements and conflicts constructively",
+ practice: "Конструктивно разрешать разногласия и конфликты",
  line: [
-  "Intervenes in workplace disagreements in a timely manner and helps participants find a resolution before they escalate.",
-  "When destructive behaviour is repeated, directly names the unacceptable actions and takes steps to put a stop to them."
+  "Своевременно вмешивается в рабочие разногласия и помогает участникам найти решение до того, как конфликт обострится.",
+  "Когда деструктивное поведение повторяется, прямо называет недопустимые действия и принимает меры, чтобы их пресечь."
 ],
  mid: [
-  "Intervenes in cross-functional conflicts before they escalate — does not wait for the situation to reach senior leadership.",
-  "Distinguishes between constructive work disagreements and toxic patterns — responds appropriately to each."
+  "Вмешивается в кросс-функциональные конфликты до их обострения — не ждёт, пока ситуация дойдёт до высшего руководства.",
+  "Отличает конструктивные рабочие разногласия от токсичных моделей поведения и на каждое реагирует по-своему."
 ]
  }
  ]
  },
  {
- id: 'learning', title: 'Learning & Adaptability',
+ id: 'learning', title: 'Обучение и адаптивность',
  
   color: '#6366f1',
- symptoms: ["Competency and capability gaps emerge over time.", "The same mistakes keep repeating.", "Teams struggle to adapt to change."],
- competencies: ["Encourage continuous development and learning", "Support experimentation and adoption of new approaches", "Adapt flexibly to changing conditions", "Build a culture of continuous improvement", "Help the team navigate change effectively"],
- keyCompetencies: ["Learnability", "Adaptability", "Change Leadership", "Creativity & Innovation", "Curiosity", "Growth Orientation"],
+ symptoms: ["Со временем копятся пробелы в навыках и компетенциях.", "Одни и те же ошибки повторяются раз за разом.", "Команды с трудом приспосабливаются к переменам."],
+ competencies: ["Поощрять постоянное развитие и обучение", "Поддерживать эксперименты и внедрение новых подходов", "Гибко адаптироваться к меняющимся условиям", "Формировать культуру постоянного совершенствования", "Помогать команде эффективно проходить изменения"],
+ keyCompetencies: ["Обучаемость", "Адаптивность", "Лидерство в изменениях", "Креативность и инновации", "Любознательность", "Ориентация на развитие"],
  trainings: [
- { name: "Leading Change", audience: ['line','mid']  },
- { name: "Creativity & Innovation", audience: ['line','mid']  },
- { name: "Strategic Thinking", audience: ['mid']  },
+ { name: "Управление изменениями", audience: ['line','mid']  },
+ { name: "Креативность и инновации", audience: ['line','mid']  },
+ { name: "Стратегическое мышление", audience: ['mid']  },
  { name: "Trust & Psychological Safety in Teams", audience: ['line','mid']  },
- { name: "Individual Coaching Sessions", audience: ['mid']  },
+ { name: "Индивидуальные коучинговые сессии", audience: ['mid']  },
  ],
  manifestations: [
  {
- practice: "Encourage continuous development and learning",
+ practice: "Поощрять постоянное развитие и обучение",
  line: [
-  "Regularly discusses development with employees and helps them build the skills required for their role.",
-  "Gives employees opportunities to take on new challenges and grow beyond their current role."
+  "Регулярно обсуждает с сотрудниками их развитие и помогает развивать навыки, необходимые для их роли.",
+  "Даёт сотрудникам возможность браться за новые задачи и вырастать из текущей роли."
 ],
  mid: [
-  "Ensures that line managers are actively developing their people — not just managing tasks.",
-  "Deliberately identifies employees with management potential and creates conditions for their growth."
+  "Следит, чтобы линейные руководители активно развивали своих сотрудников, а не только управляли задачами.",
+  "Целенаправленно выявляет сотрудников с управленческим потенциалом и создаёт условия для их роста."
 ]
  },
  {
- practice: "Support experimentation and adoption of new approaches",
+ practice: "Поддерживать эксперименты и внедрение новых подходов",
  line: [
-  "Allows employees to try new ways of working and discusses the outcomes of such experiments.",
-  "When an experiment does not produce the expected result, treats it as a learning opportunity rather than a reason for criticism."
+  "Позволяет сотрудникам пробовать новые способы работы и обсуждает результаты таких экспериментов.",
+  "Если эксперимент не дал ожидаемого результата, видит в этом повод чему-то научиться, а не повод для критики."
 ],
  mid: [
-  "Protects teams that are experimenting from excessive oversight and criticism from above."
+  "Защищает экспериментирующие команды от чрезмерного контроля и критики сверху."
 ]
  },
  {
- practice: "Adapt flexibly to changing conditions",
+ practice: "Гибко адаптироваться к меняющимся условиям",
  line: [
-  "When conditions or priorities shift, quickly restructures the team's work and explains the reasons and logic behind the changes to employees."
+  "Когда условия или приоритеты меняются, быстро перестраивает работу команды и объясняет сотрудникам причины и логику изменений."
 ],
  mid: [
-  "Restructures the operational model of the area they lead during strategic changes — does not merely relay new directives.",
-  "Supports line managers during periods of change — helping them maintain stability and lead their teams."
+  "При стратегических изменениях перестраивает операционную модель своего направления, а не просто транслирует новые указания.",
+  "Поддерживает линейных руководителей в периоды изменений, помогая им сохранять устойчивость и вести за собой команды."
 ]
  },
  {
- practice: "Build a culture of continuous improvement",
+ practice: "Формировать культуру постоянного совершенствования",
  line: [
-  "Regularly discusses with the team what can be improved in workflows and approaches, and initiates the necessary changes.",
-  "Encourages employees to share effective ways of working and apply them across the team."
+  "Регулярно обсуждает с командой, что можно улучшить в процессах и подходах, и запускает нужные изменения.",
+  "Поощряет сотрудников делиться эффективными способами работы и применять их во всей команде."
 ],
  mid: [
-  "Identifies systemic inefficiencies and initiates their resolution.",
-  "Creates formats for sharing best practices between teams."
+  "Выявляет системную неэффективность и инициирует её устранение.",
+  "Создаёт форматы обмена удачными практиками между командами."
 ]
  },
  {
- practice: "Help the team navigate change effectively",
+ practice: "Помогать команде эффективно проходить изменения",
  line: [
-  "Does not dismiss resistance to change: discusses its root causes and works through employees' concerns and objections.",
-  "During periods of change, ensures the team has clarity on short-term priorities and maintains a productive working rhythm — even when the overall picture is not yet fully defined."
+  "Не отмахивается от сопротивления изменениям: обсуждает его первопричины и прорабатывает опасения и возражения сотрудников.",
+  "В периоды изменений даёт команде ясные ближайшие приоритеты и держит продуктивный рабочий ритм — даже когда общая картина ещё не сложилась."
 ],
  mid: [
-  "Supports line managers in their role as change champions — helping them manage team resistance."
+  "Поддерживает линейных руководителей в роли проводников изменений, помогая им работать с сопротивлением в команде."
 ]
  }
  ]
@@ -421,22 +421,22 @@ export const factorsList = [
 
 
 export const allTrainings = [
-  { name: 'Leadership Fundamentals', audience: ['line'] },
-  { name: 'Effective Goal Setting', audience: ['line'] },
-  { name: 'Situational Leadership', audience: ['line'] },
-  { name: 'Team Management', audience: ['line','mid'] },
-  { name: 'Assertive Behaviour', audience: ['line','mid'] },
+  { name: 'Основы лидерства', audience: ['line'] },
+  { name: 'Эффективная постановка целей', audience: ['line'] },
+  { name: 'Ситуационное лидерство', audience: ['line'] },
+  { name: 'Управление командой', audience: ['line','mid'] },
+  { name: 'Ассертивное поведение', audience: ['line','mid'] },
   { name: 'Emotional Intelligence for Leaders', audience: ['line','mid'] },
-  { name: 'Influencing Without Authority', audience: ['line','mid'] },
-  { name: 'Cross-Functional Collaboration', audience: ['line','mid'] },
-  { name: 'Team Motivation Management', audience: ['line','mid'] },
+  { name: 'Влияние без формальной власти', audience: ['line','mid'] },
+  { name: 'Сотрудничество на стыке команд', audience: ['line','mid'] },
+  { name: 'Управление мотивацией команды', audience: ['line','mid'] },
   { name: 'Trust & Psychological Safety in Teams', audience: ['line','mid'] },
-  { name: 'Leading Change', audience: ['line','mid'] },
-  { name: 'Creativity & Innovation', audience: ['line','mid'] },
+  { name: 'Управление изменениями', audience: ['line','mid'] },
+  { name: 'Креативность и инновации', audience: ['line','mid'] },
   { name: 'Talent Acquisition & Assessment', audience: ['line','mid'] },
-  { name: 'Effective Delegation', audience: ['mid'] },
-  { name: 'Strategic Thinking', audience: ['mid'] },
-  { name: 'Critical Thinking', audience: ['mid'] },
-  { name: 'Problem Analysis & Decision Making', audience: ['mid'] },
-  { name: 'Individual Coaching Sessions', audience: ['mid'] },
+  { name: 'Эффективное делегирование', audience: ['mid'] },
+  { name: 'Стратегическое мышление', audience: ['mid'] },
+  { name: 'Критическое мышление', audience: ['mid'] },
+  { name: 'Анализ проблем и принятие решений', audience: ['mid'] },
+  { name: 'Индивидуальные коучинговые сессии', audience: ['mid'] },
 ];

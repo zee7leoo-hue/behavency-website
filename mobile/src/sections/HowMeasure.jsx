@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useInView } from '../hooks'
 import './HowMeasure.css'
 
-/* "How we measure" (mobile): three cards you swipe through, one at a time. Drawn on the 400px canvas. */
+/* "Как мы измеряем" (mobile): three cards you swipe through, one at a time. Drawn on the 400px canvas. */
 
 const sv = { fill: 'none', stroke: 'currentColor', strokeWidth: 1.9, strokeLinecap: 'round', strokeLinejoin: 'round' }
 const Bubble = () => (<svg viewBox="0 0 32 32" {...sv}><path d="M7 5.5h18a3.5 3.5 0 0 1 3.5 3.5v10a3.5 3.5 0 0 1-3.5 3.5H15l-6.5 5v-5H7A3.5 3.5 0 0 1 3.5 19V9A3.5 3.5 0 0 1 7 5.5z" /><path d="M10.5 14h.01M16 14h.01M21.5 14h.01" strokeWidth="3" /></svg>)
@@ -12,13 +12,13 @@ const Users = () => (<svg viewBox="0 0 32 32" {...sv}><circle cx="12" cy="10.5" 
 const Layers = () => (<svg viewBox="0 0 32 32" {...sv}><path d="M16 4 4 10.2 16 16.4l12-6.2z" /><path d="m4 15.8 12 6.2 12-6.2M4 21.4l12 6.2 12-6.2" /></svg>)
 
 const CARDS = [
-  { n: '01', tag: 'During development', cap: false, q: 'Was it useful?', d: 'After each module, participants rate how relevant and practical it was for their work.', Icon: Bubble, label: ['Short participant feedback'] },
-  { n: '02', tag: 'At the end of training', cap: true, q: 'Is it being used?', d: 'Participants check in on their plan: which actions they have tried at work, and what got in the way.', Icon: Clipboard, label: ['Development', 'plan check-in'] },
-  { n: '03', tag: '3 months after training', cap: true, q: 'Has behaviour changed?', d: 'Results are compared with the starting point, area by area, from three angles:',
+  { n: '01', tag: 'Во время обучения', cap: false, q: 'Было ли полезно?', d: 'После каждого модуля участники оценивают, насколько он актуален и применим в их работе.', Icon: Bubble, label: ['Короткая обратная связь участников'] },
+  { n: '02', tag: 'В конце обучения', cap: true, q: 'Пошло ли в дело?', d: 'Участники сверяются с планом: что уже попробовали в работе и что помешало.', Icon: Clipboard, label: ['Развитие', 'плана развития'] },
+  { n: '03', tag: 'Через 3 месяца после обучения', cap: true, q: 'Поведение изменилось?', d: 'Результаты сравниваются с исходной точкой по каждой области с трёх сторон:',
     rows: [
-      { t: 'The manager’s view', s: 'How they now see their own behaviour.', chip: ['Managerial', 'Profile'], tone: 'blue', Icon: User },
-      { t: 'The team’s view', s: 'Whether colleagues see a difference day to day.', chip: ['360°', 'Feedback'], tone: 'violet', Icon: Users },
-      { t: 'The working conditions', s: 'Whether the barriers that were raised have eased.', chip: ['Workplace Effectiveness', 'Survey'], tone: 'green', Icon: Layers },
+      { t: 'Взгляд руководителя', s: 'Как он теперь видит своё поведение.', chip: ['Профиль', 'управленческого поведения'], tone: 'blue', Icon: User },
+      { t: 'Взгляд команды', s: 'Замечают ли коллеги разницу в повседневной работе.', chip: ['360°', 'Обратная связь'], tone: 'violet', Icon: Users },
+      { t: 'Условия работы', s: 'Ослабли ли барьеры, о которых говорили.', chip: ['Организационные барьеры', 'Барьеры'], tone: 'green', Icon: Layers },
     ] },
 ]
 
@@ -121,9 +121,9 @@ export default function HowMeasure() {
   return (
     <section ref={ref} className={`hm ${seen ? 'is-in' : ''}`} id="how-we-measure">
       <div className="hm-in">
-        <div className="hm-eyebrow rv" style={{ '--i': 0 }}><i aria-hidden="true" /><span>HOW WE MEASURE</span></div>
-        <h2 className="hm-title rv" style={{ '--i': 1 }}>We measure whether <span>development actually happens.</span></h2>
-        <p className="hm-text rv" style={{ '--i': 2 }}>Not just whether people finished the training, but whether their behaviour changed. We check along the way, and again three months later.</p>
+        <div className="hm-eyebrow rv" style={{ '--i': 0 }}><i aria-hidden="true" /><span>КАК МЫ ИЗМЕРЯЕМ</span></div>
+        <h2 className="hm-title rv" style={{ '--i': 1 }}>Мы проверяем, <span>идёт ли развитие на самом деле.</span></h2>
+        <p className="hm-text rv" style={{ '--i': 2 }}>Нам важно не «курс пройден», а «поведение изменилось». Проверяем по ходу обучения и ещё раз — через три месяца.</p>
       </div>
 
       <div className="hm-rail rv" style={{ '--i': 3 }} ref={rail}>
@@ -153,7 +153,7 @@ export default function HowMeasure() {
         ))}
       </div>
 
-      <div className="hm-dots" role="tablist" aria-label="How we measure">
+      <div className="hm-dots" role="tablist" aria-label="Как мы измеряем">
         {CARDS.map((c, i) => <button type="button" key={c.n} role="tab" aria-selected={i === at} aria-label={c.q} className={i === at ? 'on' : ''} onClick={() => glide(i)} />)}
       </div>
     </section>

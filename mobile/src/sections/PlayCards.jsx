@@ -23,9 +23,9 @@ export function GameCard() {
   const faces = [avA, avB, avC, avB, avA, avC]
   return (
     <div className="nc nc--game">
-      <span className="nc-tag"><b><Gamepad /></b><i>01 – The Game</i></span>
-      <h3 className="nc-h">A game that makes<br />participants feel their<br />own <u>blind spots.</u></h3>
-      <p className="nc-p">Participants try different approaches, see what works and what doesn’t, and discover new things about how they collaborate. Every outcome is an opportunity to learn.</p>
+      <span className="nc-tag"><b><Gamepad /></b><i>01 — Игра</i></span>
+      <h3 className="nc-h">Игра, в которой<br />участники натыкаются на<br />own <u>слепые зоны.</u></h3>
+      <p className="nc-p">Участники пробуют разные подходы, видят, что работает, а что нет, и узнают много нового о том, как взаимодействуют. Любой исход — повод чему-то научиться.</p>
 
       <div className="nc-art">
         <svg className="nc-wave" viewBox="0 0 312 254" preserveAspectRatio="none" aria-hidden="true">
@@ -40,11 +40,11 @@ export function GameCard() {
           <ellipse cx="156" cy="130" rx="146" ry="52" fill="none" stroke="#e8d8ff" strokeWidth="1.6" opacity=".85" transform="rotate(-6 156 130)" />
           <ellipse cx="156" cy="130" rx="146" ry="52" fill="none" stroke="#c9a5ff" strokeWidth="5" opacity=".18" transform="rotate(-6 156 130)" />
         </svg>
-        <span className="nc-chip nc-chip--tl"><Clock />45 min</span>
+        <span className="nc-chip nc-chip--tl"><Clock />45 мин</span>
         <div className="nc-back nc-back--1" /><div className="nc-back nc-back--2" />
         <div className="nc-chal">
-          <div className="nc-chal-top"><span><i />Behavency</span><em>Various tasks</em></div>
-          <strong>Team Challenge</strong>
+          <div className="nc-chal-top"><span><i />Behavency</span><em>Разные задания</em></div>
+          <strong>Командное испытание</strong>
           <div className="nc-tiles">
             <span><Users /></span><span className="on"><Target /><s>✓</s></span><span><Bulb /></span>
           </div>
@@ -54,8 +54,8 @@ export function GameCard() {
           <strong>Team Alpha</strong>
           <div className="nc-faces">{faces.map((f, i) => <img key={i} src={f} alt="" />)}</div>
         </div>
-        <span className="nc-chip nc-chip--bl"><Users />12–100 people</span>
-        <span className="nc-chip nc-chip--br"><Monitor />Online</span>
+        <span className="nc-chip nc-chip--bl"><Users />12–100 человек</span>
+        <span className="nc-chip nc-chip--br"><Monitor />Онлайн</span>
       </div>
     </div>
   )
@@ -64,20 +64,20 @@ export function GameCard() {
 /* ───────── card 3: the insight report ───────── */
 export function InsightCard() {
   const rows = [
-    { l: 'Focus & Prioritisation', v: 78, c: 'g', Icon: Target },
-    { l: 'Trust & Inclusion', v: 64, c: 'o', Icon: Users },
-    { l: 'Collaboration & Influence', v: 42, c: 'r', Icon: Net },
+    { l: 'Фокус и приоритеты', v: 78, c: 'g', Icon: Target },
+    { l: 'Доверие и инклюзивность', v: 64, c: 'o', Icon: Users },
+    { l: 'Сотрудничество и влияние', v: 42, c: 'r', Icon: Net },
   ]
   return (
     <div className="nc nc--rep">
-      <span className="nc-tag nc-tag--g"><b><Bars /></b><i>03 – Insight Report</i></span>
-      <h3 className="nc-h nc-h--s">Turn the team experience<br />into a <u>clear takeaway.</u></h3>
-      <p className="nc-p">After the game, the team receives a concise report showing how they performed, along with practical tips for strengthening the behaviours explored during the game.</p>
+      <span className="nc-tag nc-tag--g"><b><Bars /></b><i>03 — Аналитический отчёт</i></span>
+      <h3 className="nc-h nc-h--s">Превратите опыт команды<br />в <u>понятные выводы.</u></h3>
+      <p className="nc-p">После игры команда получает короткий отчёт о своих результатах и практические советы: как закрепить поведение, которое проявилось в игре.</p>
 
       <div className="nc-rep">
-        <div className="nc-rep-top"><span><Bars />Behavency</span><em><Download />Download PDF</em></div>
+        <div className="nc-rep-top"><span><Bars />Behavency</span><em><Download />Скачать PDF</em></div>
         <div className="nc-sheet">
-          <div className="nc-sheet-h"><span className="nc-ti"><Bars /></span><div><strong>Team Report</strong><small>Team Alpha · 12 participants</small></div></div>
+          <div className="nc-sheet-h"><span className="nc-ti"><Bars /></span><div><strong>Отчёт команды</strong><small>Team Alpha · 12 участников</small></div></div>
           <ul>
             {rows.map(({ l, v, c, Icon }) => (
               <li key={l}>
@@ -91,7 +91,7 @@ export function InsightCard() {
           <div className="nc-best">
             <Bulb />
             <i />
-            <div><strong>Best practices</strong><p>Practical tips to strengthen collaboration and the other key behaviours from the game.</p></div>
+            <div><strong>Что работает</strong><p>Практические советы, как укрепить сотрудничество и другие ключевые навыки из игры.</p></div>
           </div>
         </div>
       </div>

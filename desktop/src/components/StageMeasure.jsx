@@ -5,10 +5,10 @@ import { useInView } from 'react-intersection-observer'
 import './StageMeasure.css'
 
 const comparisons = [
-  { area: 'Clarity & Alignment', before: 42, after: 74, color: '#1E3A5F' },
-  { area: 'Execution & Accountability', before: 51, after: 79, color: '#B45309' },
-  { area: 'Collaboration & Influence', before: 58, after: 81, color: '#0F766E' },
-  { area: 'Trust & Inclusion', before: 69, after: 85, color: '#7C3AED' },
+  { area: 'Ясность и согласованность', before: 42, after: 74, color: '#1E3A5F' },
+  { area: 'Исполнение и ответственность', before: 51, after: 79, color: '#B45309' },
+  { area: 'Сотрудничество и влияние', before: 58, after: 81, color: '#0F766E' },
+  { area: 'Доверие и инклюзивность', before: 69, after: 85, color: '#7C3AED' },
 ]
 
 export default function StageMeasure() {
@@ -26,8 +26,8 @@ export default function StageMeasure() {
                 <div className="measure__report-title">Programme Results · Example</div>
               </div>
               <div className="measure__legend">
-                <span><span className="measure__legend-dot" style={{ background: 'rgba(255,255,255,0.2)' }}/>Before</span>
-                <span><span className="measure__legend-dot" style={{ background: 'white' }}/>After</span>
+                <span><span className="measure__legend-dot" style={{ background: 'rgba(255,255,255,0.2)' }}/>До</span>
+                <span><span className="measure__legend-dot" style={{ background: 'white' }}/>После</span>
               </div>
               <div className="measure__bars">
                 {comparisons.map((c, i) => (
@@ -65,12 +65,12 @@ export default function StageMeasure() {
             <StagePill num="04" title="Measure" sub="Prove the impact" tone="purple" style={{ marginBottom: 20 }} />
 
             <h2 className="headline headline--white" style={{ marginBottom: 24 }}>
-              Then we run the<br/>
-              assessment again.<br/>
+              А потом —<br/>
+              повторная оценка.<br/>
               <em>And show you what changed.</em>
             </h2>
             <p className="body-copy body-copy--white" style={{ marginBottom: 20 }}>
-              We use the same questions with the same people, six months later. The results sit side by side with where they started.
+              Те же вопросы, six months later. The results sit side by side with where they started.
             </p>
             <p className="body-copy body-copy--white" style={{ marginBottom: 36 }}>
               This closes the ROI loop. Not with anecdote, but with data. Development that can be pointed to, measured, and reported to a board.
@@ -85,14 +85,14 @@ export default function StageMeasure() {
                     <line x1="16" y1="17" x2="8" y2="17"/>
                     <polyline points="10 9 9 9 8 9"/>
                   </svg>
-                  <span className="measure__timeline-label">Assessment</span>
+                  <span className="measure__timeline-label">Оценка</span>
                 </div>
                 <div className="measure__timeline-connector">
                   <div className="measure__timeline-line" />
                   <div className="measure__timeline-center">
                     <span className="measure__timeline-num">6</span>
                     <span className="measure__timeline-subnum">months later</span>
-                    <p className="measure__timeline-caption">We measure what changed.</p>
+                    <p className="measure__timeline-caption">Измеряем, что изменилось.</p>
                   </div>
                   <div className="measure__timeline-line" />
                 </div>
@@ -102,7 +102,7 @@ export default function StageMeasure() {
                     <rect x="10" y="8" width="4" height="13" rx="1"/>
                     <rect x="2" y="13" width="4" height="8" rx="1"/>
                   </svg>
-                  <span className="measure__timeline-label">Results</span>
+                  <span className="measure__timeline-label">Результаты</span>
                 </div>
               </div>
             </div>

@@ -86,7 +86,7 @@ export default function HowWeMeasure() {
           transition={{ duration: 0.5 }}
         >
           <div className="hwm-eyebrow-line" />
-          <span className="hwm-eyebrow-text">HOW WE MEASURE</span>
+          <span className="hwm-eyebrow-text">КАК МЫ ИЗМЕРЯЕМ</span>
         </motion.div>
 
         {/* Header Content */}
@@ -97,8 +97,8 @@ export default function HowWeMeasure() {
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           <h2 className="hwm-headline">
-            We measure whether<br />
-            <em>development actually happens.</em>
+            Мы проверяем,<br />
+            <em>идёт ли развитие на самом деле.</em>
           </h2>
           <p className="hwm-subtitle">
             Not just whether people completed the training — but whether it changed<br />

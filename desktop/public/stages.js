@@ -8,10 +8,10 @@
   const END = '#how-we-measure';
   const C = ['#2f6fdb', '#7a4bd6', '#e0761c', '#14a07c'];
   const S = [
-    { n: 'Identify', p: 'Reveal strengths and gaps' },
-    { n: 'Engage', p: 'See how the team really works together' },
-    { n: 'Build', p: 'Develop the right capabilities' },
-    { n: 'Measure', p: 'Show what changed' },
+    { n: 'Identify', p: 'Найти сильные стороны и зоны роста' },
+    { n: 'Engage', p: 'Увидеть, как команда работает на самом деле' },
+    { n: 'Build', p: 'Развить нужные навыки' },
+    { n: 'Measure', p: 'Показать, что изменилось' },
   ];
   const LINK = [
     'It starts with a clear picture of every manager: what they do well, and where they fall short.',
@@ -280,9 +280,9 @@
   const el = (h) => { const d = document.createElement('div'); d.innerHTML = h.trim(); return d.firstElementChild; };
   const bgOf = (node) => { let n = node; while (n && n !== document.documentElement) { const c = getComputedStyle(n).backgroundColor; if (c && c !== 'rgba(0, 0, 0, 0)' && c !== 'transparent') return c; n = n.parentElement; } return '#fff'; };
 
-  const chap = (k, withMini, withLink) => el(`<div class="bx-o bx-chap" data-bx style="--k:${C[k]}"><div class="bx-in"><div class="bx-num">0${k + 1}</div><div class="bx-nm">Stage ${k + 1} of 4 · ${S[k].n}</div><div class="bx-pr">${S[k].p}</div>${withLink ? `<div class="bx-lnk">${LINK[k]}</div>` : ''}${withMini ? `<div class="bx-mini">${S.map((_, i) => `<i class="${i <= k ? 'on' : ''}"></i>`).join('')}</div>` : ''}<div class="bx-rule"></div></div></div>`);
+  const chap = (k, withMini, withLink) => el(`<div class="bx-o bx-chap" data-bx style="--k:${C[k]}"><div class="bx-in"><div class="bx-num">0${k + 1}</div><div class="bx-nm">Этап ${k + 1} из 4 · ${S[k].n}</div><div class="bx-pr">${S[k].p}</div>${withLink ? `<div class="bx-lnk">${LINK[k]}</div>` : ''}${withMini ? `<div class="bx-mini">${S.map((_, i) => `<i class="${i <= k ? 'on' : ''}"></i>`).join('')}</div>` : ''}<div class="bx-rule"></div></div></div>`);
   const steps = (k) => el(`<div class="bx-o bx-steps" data-bx style="--k:${C[k]}"><div class="bx-in"><ol>${S.map((s, i) => `<li class="${i < k ? 'done' : i === k ? 'cur' : ''}"><b>${i < k ? '✓' : i + 1}</b>${s.n}<small>${s.p}</small></li>`).join('')}</ol></div></div>`);
-  const hand = (k) => el(`<div class="bx-o bx-hand" data-bx><div class="bx-in"><div class="bx-hc"><div class="bx-from"><small style="color:${C[k - 1]}">${HAND[k - 1][0]}</small>${HAND[k - 1][1]}</div><div class="bx-arw" style="background:linear-gradient(135deg,${C[k - 1]},${C[k]})">→</div><div class="bx-to"><small style="color:${C[k]}">Stage ${k + 1} · ${S[k].n}</small>${HAND[k - 1][2]}</div></div><div class="bx-line" style="background:linear-gradient(${C[k]},transparent)"></div></div></div>`);
+  const hand = (k) => el(`<div class="bx-o bx-hand" data-bx><div class="bx-in"><div class="bx-hc"><div class="bx-from"><small style="color:${C[k - 1]}">${HAND[k - 1][0]}</small>${HAND[k - 1][1]}</div><div class="bx-arw" style="background:linear-gradient(135deg,${C[k - 1]},${C[k]})">→</div><div class="bx-to"><small style="color:${C[k]}">Этап ${k + 1} · ${S[k].n}</small>${HAND[k - 1][2]}</div></div><div class="bx-line" style="background:linear-gradient(${C[k]},transparent)"></div></div></div>`);
 
   function place(node, section) {
     // Put the new block at the very top inside the stage section, so it sits on the stage's own background
@@ -299,7 +299,7 @@
 
   function heading(sec) { return sec.querySelector('h1, h2'); }
   function label(sec, k, pill) {
-    const lab = el(`<div class="bx-o bx-lab" data-bx style="--k:${C[k]}"><b>0${k + 1}</b><i></i>${S[k].n}<em>· Stage ${k + 1} of 4</em></div>`);
+    const lab = el(`<div class="bx-o bx-lab" data-bx style="--k:${C[k]}"><b>0${k + 1}</b><i></i>${S[k].n}<em>· Этап ${k + 1} из 4</em></div>`);
     const h = heading(sec);
     // put the label where the pill was; where the pill sits under the heading (phone Identify), go above the heading
     if (pill && h && (pill.compareDocumentPosition(h) & Node.DOCUMENT_POSITION_FOLLOWING)) pill.parentNode.insertBefore(lab, pill);
@@ -334,7 +334,7 @@
   function menuSteps() {
     if (window.BHV_NOMENU) return; // a page with its own menu (site-menu.js)
     if (menu) return;
-    links = [...document.querySelectorAll('nav, header, div, ul')].filter((e) => /How It Works/i.test(e.textContent) && /Packages/i.test(e.textContent) && e.textContent.length < 120 && e.getBoundingClientRect().top < 80).sort((a, b) => a.textContent.length - b.textContent.length)[0] || null;
+    links = [...document.querySelectorAll('nav, header, div, ul')].filter((e) => /How It Works/i.test(e.textContent) && /Packages|Пакеты/i.test(e.textContent) && e.textContent.length < 120 && e.getBoundingClientRect().top < 80).sort((a, b) => a.textContent.length - b.textContent.length)[0] || null;
     menu = el(`<nav class="bx-o bx-menu" data-bx aria-label="Journey">${S.map((x, i) => `<a data-i="${i}" style="--k:${C[i]}"><i>0${i + 1}</i>${x.n}</a>`).join('')}</nav>`);
     menu.addEventListener('click', (e) => { const a = e.target.closest('a'); if (!a) return; const sec = document.querySelector(SEL[+a.dataset.i]); scrollTo({ top: sec.getBoundingClientRect().top + scrollY - 70, behavior: 'smooth' }); });
     document.body.appendChild(menu);
@@ -372,11 +372,11 @@
       });
     }));
   }
-  const strip = (k) => el(`<div class="bx-o bx-strip" data-bx style="--k:${C[k]}"><div class="bx-in"><div><span class="sn">0${k + 1}</span><span class="sl">${S[k].n}</span><span class="sb"></span><span class="sp">${S[k].p}</span><span class="ss">Stage ${k + 1} of 4</span></div></div></div>`);
+  const strip = (k) => el(`<div class="bx-o bx-strip" data-bx style="--k:${C[k]}"><div class="bx-in"><div><span class="sn">0${k + 1}</span><span class="sl">${S[k].n}</span><span class="sb"></span><span class="sp">${S[k].p}</span><span class="ss">Этап ${k + 1} из 4</span></div></div></div>`);
   function numSide(sec, k, pill) {
     const h = heading(sec); if (!h) return;
     if (pill) pill.classList.add('bx-hide');
-    const lab = el(`<div class="bx-o bx-nlab" data-bx style="--k:${C[k]}"><b>${S[k].n}</b> · Stage ${k + 1} of 4</div>`);
+    const lab = el(`<div class="bx-o bx-nlab" data-bx style="--k:${C[k]}"><b>${S[k].n}</b> · Этап ${k + 1} из 4</div>`);
     if (pill && (pill.compareDocumentPosition(h) & Node.DOCUMENT_POSITION_FOLLOWING)) pill.parentNode.insertBefore(lab, pill); else h.parentNode.insertBefore(lab, h);
     const n = document.createElement('span'); n.className = 'bx-numin'; n.setAttribute('data-bx', ''); n.style.setProperty('--k', C[k]); n.textContent = '0' + (k + 1);
     h.insertBefore(n, h.firstChild);
@@ -403,7 +403,7 @@
       });
     }));
   }
-  const p2 = (k) => el(`<div class="bx-o bx-hd bx-p2" data-bx style="--k:${C[k]}"><div class="bx-in"><div class="num">0${k + 1}</div><span class="of">Stage ${k + 1} of 4</span><div class="nm">${S[k].n}</div><div class="pr">${S[k].p}</div><div class="bar">${S.map((_, i) => `<i class="${i <= k ? 'on' : ''}"></i>`).join('')}</div></div></div>`);
+  const p2 = (k) => el(`<div class="bx-o bx-hd bx-p2" data-bx style="--k:${C[k]}"><div class="bx-in"><div class="num">0${k + 1}</div><span class="of">Этап ${k + 1} из 4</span><div class="nm">${S[k].n}</div><div class="pr">${S[k].p}</div><div class="bar">${S.map((_, i) => `<i class="${i <= k ? 'on' : ''}"></i>`).join('')}</div></div></div>`);
   const p6 = (k) => el(`<div class="bx-o bx-hd bx-p6" data-bx style="--k:${C[k]}"><div class="bx-in"><div class="seq">${S.map((_, i) => `<span class="${i < k ? 'done' : i === k ? 'on' : ''}">${i + 1}</span>`).join('')}</div><div class="dv"></div><div><div class="nm">${S[k].n}</div><div class="pr">${S[k].p}</div></div></div></div>`);
   // Inside each stage, the small labels of the other sections turn neutral grey, so only the stage start carries colour.
   function calmInside() {
@@ -424,18 +424,18 @@
   ];
   const r6 = (k, v) => {
     const head = v === 'v2b'
-      ? `<div class="num">0${k + 1}</div><div><div class="row"><span class="of">Stage ${k + 1} of 4</span><span class="mini">${S.map((_, i) => `<i class="${i <= k ? 'on' : ''}"></i>`).join('')}</span></div><div class="nm">${S[k].n}</div><div class="pr">${S[k].p}</div></div>`
+      ? `<div class="num">0${k + 1}</div><div><div class="row"><span class="of">Этап ${k + 1} из 4</span><span class="mini">${S.map((_, i) => `<i class="${i <= k ? 'on' : ''}"></i>`).join('')}</span></div><div class="nm">${S[k].n}</div><div class="pr">${S[k].p}</div></div>`
       : v === 'v5'
-        ? `<span class="of">Stage ${k + 1} of 4</span><span class="gn">${S[k].n}</span><div class="pr">${S[k].p}</div><div class="ln"></div>`
-        : `<div class="tile">${SICON[k]}</div><div><span class="of">Stage ${k + 1} of 4</span><div class="nm">${S[k].n}</div><div class="pr">${S[k].p}</div></div>`;
+        ? `<span class="of">Этап ${k + 1} из 4</span><span class="gn">${S[k].n}</span><div class="pr">${S[k].p}</div><div class="ln"></div>`
+        : `<div class="tile">${SICON[k]}</div><div><span class="of">Этап ${k + 1} из 4</span><div class="nm">${S[k].n}</div><div class="pr">${S[k].p}</div></div>`;
     return el(`<div class="bx-o bx-hd bx-r6 bx-${v}" data-bx style="--k:${C[k]}"><div class="bx-in">${head}</div></div>`);
   };
   const at = (k, v) => {
     const inner = v === 'aw'
-      ? `<div class="wm">0${k + 1}</div><span class="of">Stage ${k + 1} of 4</span><div class="nm">${S[k].n}</div><div class="pr">${S[k].p}</div>`
+      ? `<div class="wm">0${k + 1}</div><span class="of">Этап ${k + 1} из 4</span><div class="nm">${S[k].n}</div><div class="pr">${S[k].p}</div>`
       : v === 'a2'
-        ? `<div class="num">0${k + 1}</div><div><div class="row"><span class="of">Stage ${k + 1} of 4</span><span class="mini">${S.map((_, i) => `<i class="${i <= k ? 'on' : ''}"></i>`).join('')}</span></div><div class="nm">${S[k].n}</div><div class="pr">${S[k].p}</div></div>`
-        : `<span class="of">Stage ${k + 1} of 4</span><span class="gn">${S[k].n}</span><div class="pr">${S[k].p}</div><div class="ln"></div>`;
+        ? `<div class="num">0${k + 1}</div><div><div class="row"><span class="of">Этап ${k + 1} из 4</span><span class="mini">${S.map((_, i) => `<i class="${i <= k ? 'on' : ''}"></i>`).join('')}</span></div><div class="nm">${S[k].n}</div><div class="pr">${S[k].p}</div></div>`
+        : `<span class="of">Этап ${k + 1} из 4</span><span class="gn">${S[k].n}</span><div class="pr">${S[k].p}</div><div class="ln"></div>`;
     return el(`<div class="bx-o bx-at bx-${v}" data-bx style="--k:${C[k]}">${inner}</div>`);
   };
   // Put the stage start exactly where the stage's pill is, i.e. right above its heading, whatever the layout.
@@ -468,13 +468,13 @@
   }
   const ARC = (k, delay) => `<div class="glow"></div><svg class="arc" viewBox="0 0 2000 900" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="bxg${k}" x1="0" x2="1"><stop offset="0" stop-color="${C[k]}" stop-opacity="0"/><stop offset=".22" stop-color="${C[k]}" stop-opacity=".55"/><stop offset=".5" stop-color="${C[k]}"/><stop offset=".78" stop-color="${C[k]}" stop-opacity=".55"/><stop offset="1" stop-color="${C[k]}" stop-opacity="0"/></linearGradient></defs><path style="${delay ? 'transition-delay:' + delay + 's' : ''}" d="M0 900 Q1000 -120 2000 900" stroke="url(#bxg${k})"/></svg>`;
   const chapter = (k, v) => {
-    const eb = `<div class="eb anim">Stage ${k + 1} of 4</div>`;
+    const eb = `<div class="eb anim">Этап ${k + 1} из 4</div>`;
     let inner;
     if (v === 'c3' || v === 'c6') {
       const words = S[k].p.split(' ');
       // each grey word starts filling a little after the one before it, once the sentence has appeared
       const st = `<div class="stmt anim d2">${words.map((w, i) => `<span class="${i === 0 ? 'k' : ''}" style="transition-delay:${(0.9 + i * 0.2).toFixed(2)}s">${w}</span>`).join(' ')}.</div>`;
-      inner = `<div class="wrap"><div class="eb3 anim"><span class="eb">Stage ${k + 1} of 4</span><i class="sep"></i><span class="nm">${S[k].n}</span></div>${st}</div>`;
+      inner = `<div class="wrap"><div class="eb3 anim"><span class="eb">Этап ${k + 1} из 4</span><i class="sep"></i><span class="nm">${S[k].n}</span></div>${st}</div>`;
     } else if (v === 'c5') {
       inner = `<div class="wrap">${eb}<div class="big anim d2"><em class="hl">${S[k].n}</em></div><div class="pr anim d3">${S[k].p}.</div></div>`;
     } else {
@@ -482,7 +482,7 @@
       if (v === 'c2') inner += ARC(k);
     }
     if (v === 'c6') inner += ARC(k, '0.5');
-    return el(`<section class="bx-o bx-ch bx-${v}${v === 'c6' ? ' bx-c3 bx-c2' : ''}" data-bx style="--k:${C[k]}" aria-label="Stage ${k + 1}: ${S[k].n}">${inner}</section>`);
+    return el(`<section class="bx-o bx-ch bx-${v}${v === 'c6' ? ' bx-c3 bx-c2' : ''}" data-bx style="--k:${C[k]}" aria-label="Этап ${k + 1}: ${S[k].n}">${inner}</section>`);
   };
   function chapters(secs, v) {
     secs.forEach((x, k) => { const n = chapter(k, v); x.parentNode.insertBefore(n, x); });

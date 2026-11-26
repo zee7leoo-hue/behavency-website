@@ -3,7 +3,7 @@
    "contact" form (registered by the hidden form in index.html), and then shows the same "Thank you" message.
    If sending fails, the form stays filled in and an error line appears under the button. */
 
-const DONE = '<div class="cm-done"><b>Thank you.</b><p>We’ll be in touch soon.</p></div>'
+const DONE = '<div class="cm-done"><b>Спасибо.</b><p>Мы скоро с вами свяжемся.</p></div>' // ru branch: the Russian pop-up's own message
 
 window.addEventListener('submit', async (e) => {
   const form = e.target

@@ -13,7 +13,7 @@ export default function DeliverySectionPhoto() {
       desc: (
         <>
           Flexible and self-paced, so teams can<br className="dsp-card-desc-br" />
-          learn anytime, anywhere.
+          learn anytime, откуда угодно.
         </>
       ),
       iconModifier: 'elearning',
@@ -27,7 +27,7 @@ export default function DeliverySectionPhoto() {
     },
     {
       id: 'live',
-      title: 'Live online',
+      title: 'Онлайн с тренером',
       desc: (
         <>
           Interactive and engaging sessions<br className="dsp-card-desc-br" />
@@ -39,7 +39,7 @@ export default function DeliverySectionPhoto() {
     },
     {
       id: 'inperson',
-      title: 'In-person',
+      title: 'Очно',
       desc: (
         <>
           Maximum impact through face-to-face<br className="dsp-card-desc-br" />
@@ -57,7 +57,7 @@ export default function DeliverySectionPhoto() {
     },
     {
       id: 'blended',
-      title: 'Blended',
+      title: 'Смешанный формат',
       desc: (
         <>
           A combination that works for your team —<br className="dsp-card-desc-br" />
@@ -83,7 +83,7 @@ export default function DeliverySectionPhoto() {
           <div className="dsp-hero-text">
             <div className="dsp-eyebrow">
               <span className="dsp-eyebrow-line"></span>
-              <span className="dsp-eyebrow-text">THE DEVELOPMENT JOURNEY</span>
+              <span className="dsp-eyebrow-text">ПУТЬ РАЗВИТИЯ</span>
             </div>
             <h2 className="dsp-headline">
               You choose how your<br className="dsp-headline-br" />

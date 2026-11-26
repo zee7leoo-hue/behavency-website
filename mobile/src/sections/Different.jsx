@@ -2,16 +2,16 @@ import React, { useState } from 'react'
 import { useInView } from '../hooks'
 import './Different.css'
 
-/* "What makes Behavency different" (mobile): seven points, each opens to show more. Drawn on the 400px canvas. */
+/* "Чем отличается Behavency" (mobile): seven points, each opens to show more. Drawn on the 400px canvas. */
 
 const POINTS = [
-  { title: 'One journey, start to finish.', line: 'Assessment, team game, training and re-assessment, built on one model and run by one team.', more: 'Often each piece lives somewhere else: a survey run in-house, an assessment from one provider, a workshop from another. Different methods, different reports, and nobody can say what changed. Here every step uses the same six areas, so results lead straight to the right development, and the re-assessment shows the difference.' },
-  { title: 'Personal gaps and organisational barriers, kept apart.', line: 'We show what people need to develop, and what the organisation needs to fix around them.', more: 'Alongside the assessment, managers complete the Workplace Effectiveness Survey: around 40 typical obstacles across nine management processes. Each barrier is linked to the areas it holds back, so a low score shows whether it is a skill to develop, a condition to change, or both.' },
-  { title: 'Managers and teams, on the same model.', line: 'Develop managers, teams or both. When a team and its manager both score low on Trust, you see the link.', more: 'Team and manager assessments use the same six areas, so the results can be read side by side: where they agree, and where the team sees something the manager does not.' },
-  { title: 'People feel the gaps, not just read them.', line: 'A team game and a facilitated reflection turn scores into something people experience and commit to.', more: 'In a 2.5-hour session, the team sees the same behaviours show up live, talks through why, and then receives its Insight Report with practical tips.' },
-  { title: 'Our own training, matched to the results.', line: 'Programmes for line managers, managers of managers and teams, each linked to the six areas.', more: 'Every result points to specific programmes, so nobody has to guess what to train next. They run in person, online or as e-learning, and each one comes with a Masterplan to practise it at work.' },
-  { title: 'Your HR team trains to run the interview.', line: 'In our Interview Studio they practise with four AI characters before the real interviews.', more: 'A ready-made guide for every interview, AI suggestions on what to ask next during it, and a summary afterwards that the interviewer checks and decides on.' },
-  { title: 'Proof of change, not just completion.', line: 'The same people answer the same questions again, 3 months after the training.', more: 'Results are compared with the starting point, area by area: behaviour from the self-assessment and 360, and whether the barriers have eased.' },
+  { title: 'Весь путь — от старта до финиша.', line: 'Оценка, командная игра, обучение и повторная оценка — на одной модели, силами одной команды.', more: 'Обычно всё разбросано: опрос проводят своими силами, оценку делает один подрядчик, семинар — другой. Разные методики, разные отчёты — и никто не может сказать, что изменилось. У нас каждый шаг опирается на те же шесть областей: результаты сразу ведут к нужному развитию, а повторная оценка показывает разницу.' },
+  { title: 'Личные пробелы и организационные барьеры — отдельно.', line: 'Показываем, что нужно развивать людям, а что — исправить организации вокруг них.', more: 'Вместе с оценкой руководители заполняют опросник «Организационные барьеры»: около 40 типичных препятствий в девяти управленческих процессах. Каждый барьер связан с областями, которые он тормозит. Поэтому по низкому баллу видно, в чём дело: в навыке, который надо развивать, в условиях, которые надо менять, или и в том, и в другом.' },
+  { title: 'Руководители и команды — на одной модели.', line: 'Развивайте руководителей, команды или всех сразу. Если у команды и её руководителя низкие баллы по доверию, вы видите связь.', more: 'Команда и руководитель оцениваются по одним и тем же шести областям, поэтому результаты легко положить рядом: где мнения совпадают, а где команда видит то, чего не замечает руководитель.' },
+  { title: 'Люди не просто читают о пробелах — они их чувствуют.', line: 'Командная игра и разбор с фасилитатором превращают баллы в личный опыт — и в готовность взяться за дело.', more: 'За 2,5 часа команда видит, как то же поведение проявляется вживую, обсуждает, почему так, и получает аналитический отчёт с практическими советами.' },
+  { title: 'Своё обучение — точно по результатам.', line: 'Программы для линейных руководителей, руководителей руководителей и команд — каждая связана с шестью областями.', more: 'Каждый результат ведёт к конкретным программам — гадать, чему учить дальше, не придётся. Программы идут очно, онлайн или в формате e-learning, и к каждой есть мастер-план, чтобы отработать навык в работе.' },
+  { title: 'Ваши HR-специалисты учатся вести интервью.', line: 'До настоящих интервью они тренируются в нашей Интервью-студии с четырьмя AI-персонажами.', more: 'Готовый гайд для каждого интервью, подсказки AI по ходу беседы — что спросить дальше, и резюме после неё. Проверяет его и принимает решение сам интервьюер.' },
+  { title: 'Не «курс пройден», а «изменения видны».', line: 'Через 3 месяца после обучения те же люди снова отвечают на те же вопросы.', more: 'Результаты сравниваются с исходной точкой по каждой области: поведение по самооценке и 360°, а также ослабли ли барьеры.' },
 ]
 
 export default function Different() {
@@ -21,8 +21,8 @@ export default function Different() {
   return (
     <section ref={ref} className={`df ${seen ? 'is-in' : ''}`} id="different">
       <div className="df-in">
-        <p className="df-eyebrow rv" style={{ '--i': 0 }}>What makes Behavency different</p>
-        <h2 className="df-title rv" style={{ '--i': 1 }}>Most providers do one piece. <em>So nobody can say what changed.</em></h2>
+        <p className="df-eyebrow rv" style={{ '--i': 0 }}>Чем отличается Behavency</p>
+        <h2 className="df-title rv" style={{ '--i': 1 }}>Каждый подрядчик делает свой кусок. <em>А что изменилось в целом — не знает никто.</em></h2>
 
         <ul className="df-list rv" style={{ '--i': 2 }}>
           {POINTS.map((p, i) => {
@@ -33,7 +33,7 @@ export default function Different() {
                   <span className="df-n">{String(i + 1).padStart(2, '0')}</span>
                   <h3>{p.title}</h3>
                   <button type="button" onClick={() => setOpen(on ? -1 : i)} aria-expanded={on}
-                    aria-label={`${on ? 'Show less about' : 'Show more about'}: ${p.title}`}>
+                    aria-label={`${on ? 'Свернуть' : 'Подробнее'}: ${p.title}`}>
                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
                       {on ? <path d="M5 12h14" /> : <path d="M12 5v14M5 12h14" />}
                     </svg>
@@ -50,7 +50,7 @@ export default function Different() {
           })}
         </ul>
 
-        <p className="df-close rv" style={{ '--i': 3 }}><i aria-hidden="true" /><span>Assessment, training and practice in one journey. Nothing gets lost between steps.</span></p>
+        <p className="df-close rv" style={{ '--i': 3 }}><i aria-hidden="true" /><span>Оценка, training and practice in one journey. Nothing gets lost between steps.</span></p>
       </div>
     </section>
   )

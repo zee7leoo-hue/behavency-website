@@ -39,25 +39,25 @@
       <div class="bft-top">
         <div>
           <div class="bft-brand"><img class="bft-logo" src="logo-behavency.png" alt="">Behavency</div>
-          <p class="bft-line">Behavency is a product of OGI Europe.<span class="bft-tag">Identify. Engage. Build. Measure.</span></p>
+          <p class="bft-line">Behavency создана компанией OGI Europe.<span class="bft-tag">Identify. Engage. Build. Measure.</span></p>
           <div class="bft-social"><a href="https://www.linkedin.com/company/behavency/" target="_blank" rel="noopener" aria-label="Behavency on LinkedIn"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.6 4.8 6V21h-4v-5.1c0-1.22-.02-2.8-1.7-2.8-1.71 0-1.97 1.33-1.97 2.7V21h-4z"/></svg></a><a href="https://www.facebook.com/behavency" target="_blank" rel="noopener" aria-label="Behavency on Facebook"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M14 8.5V6.8c0-.8.5-1 1-1h1.9V2.6L14.3 2.6c-2.9 0-3.6 2.2-3.6 3.6v2.3H8.6V12h2.1v9.4H14V12h2.6l.4-3.5z"/></svg></a></div>
         </div>
-        <div><h4>How it works</h4><ul>
+        <div><h4>Как это работает</h4><ul>
           <li><a href="#identify" data-bf-stage="0">Identify</a></li><li><a href="#engage" data-bf-stage="1">Engage</a></li><li><a href="#build" data-bf-stage="2">Build</a></li><li><a href="#measure" data-bf-stage="3">Measure</a></li>
         </ul></div>
-        <div><h4>What we offer</h4><ul>
-          <li><a href="#programmes" data-bf="programmes">Training programmes</a></li><li><a href="#recruitment" data-bf="hiring">Recruitment</a></li><li><a href="#packages" data-bf="packages">Packages</a></li>
+        <div><h4>Что мы предлагаем</h4><ul>
+          <li><a href="#programmes" data-bf="programmes">Программы обучения</a></li><li><a href="#recruitment" data-bf="hiring">Подбор</a></li><li><a href="#packages" data-bf="packages">Пакеты</a></li>
         </ul></div>
-        <div><h4>Company</h4><ul>
-          <li><a href="#about" data-bf="about">About us</a></li><li><a href="#contact" data-bf="contact">Contact</a></li>
+        <div><h4>Компания</h4><ul>
+          <li><a href="#about" data-bf="about">О нас</a></li><li><a href="#contact" data-bf="contact">Контакты</a></li>
         </ul></div>
-        <div><h4>For clients</h4><ul>
-          <li><a href="https://app.behavency.com/login">Log in</a></li>
+        <div><h4>Клиентам</h4><ul>
+          <li><a href="https://app.behavency.com/login">Войти</a></li>
         </ul></div>
       </div>
       <div class="bft-bottom">
         <span class="bft-copy"><span>© 2026 OGI Europe Kft.</span><i style="font-style:normal"> · </i><span>Üllői út 101/4, 1091 Budapest, Hungary</span><i style="font-style:normal"> · </i><span><a href="mailto:info@behavency.com">info@behavency.com</a></span></span>
-        <span class="bft-legal"><a href="#privacy" data-bf="privacy">Privacy Policy</a><a href="#" data-ck-settings>Cookie settings</a></span>
+        <span class="bft-legal"><a href="#privacy" data-bf="privacy">Политика конфиденциальности</a><a href="#" data-ck-settings>Настройки cookie</a></span>
       </div>
     </div>
   </footer>`;
@@ -71,8 +71,8 @@
     if (window.bhvCloseRecruit) window.bhvCloseRecruit();
     document.querySelectorAll('.bc, .bc-dim, .bc-panel, .tm.tm-page, .tm-dim, .tm-sheet').forEach((n) => n.remove());
     document.documentElement.classList.remove('tm-lock'); document.documentElement.style.overflow = '';
-    const h = (window.bhvH ? bhvH() : location.hash).replace(/(about|recruitment)&?/g, '');
-    if (h !== (window.bhvH ? bhvH() : location.hash)) history.replaceState(null, '', location.pathname + location.search + (h === '#' ? '' : h));
+    const h = location.hash.replace(/(about|recruitment)&?/g, '');
+    if (h !== location.hash) history.replaceState(null, '', location.pathname + location.search + (h === '#' ? '' : h));
   };
   // closes the open page(s) the same way the Back button does, then runs `then`
   const leave = (then, depth = 0) => {
@@ -120,7 +120,7 @@
   }
   window.bhvLeave = (then) => leave(then); // 25 Nov: the menu uses it to close open pages first
   window.bhvFooterCopy = () => { const f = makeFooter(); f.dataset.bf = 'copy'; return f; };
-  // The site's old footer is no longer in the page (23 Nov): ours goes after the closing "Ready to start?" line,
+  // The site's old footer is no longer in the page (23 Nov): ours goes after the closing "Готовы начать?" line,
   // in navy on both sites (the copies inside the pages that open over the site follow).
   function mount() {
     const old = document.querySelector('footer:not([data-bf])'); if (old) old.style.setProperty('display', 'none', 'important');

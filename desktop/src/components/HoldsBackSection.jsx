@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from 'react'
 import './HoldsBackSection.css'
 
-/* "What holds managers back" — replaces the old "Not every problem is the manager's" section.
+/* "Что мешает руководителям" — replaces the old "Not every problem is the manager's" section.
    Keeps id="two-gaps" so the menu link still works.
    A flow chart: managers answer → split into what is in their hands (left) and what holds them back (right).
    When it scrolls into view it builds row by row, top to bottom, both sides together;
    without JavaScript, or with reduced motion, it is simply shown complete.
-   The counts on the right ("28 of 42" etc.) are an example and stay labelled "example". */
+   The counts on the right ("28 из 42" etc.) are an example and stay labelled "example". */
 
 const Ico = ({ id }) => <svg aria-hidden="true"><use href={`#${id}`} /></svg>
 
@@ -51,16 +51,16 @@ export default function HoldsBackSection() {
         <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /><path d="M14 2v4a2 2 0 0 0 2 2h4M8 13h8M8 17h5" /></symbol>
       </svg>
 
-      <section className="hb" id="two-gaps" aria-label="What holds managers back">
+      <section className="hb" id="two-gaps" aria-label="Что мешает руководителям">
         <div className="hb-wrap">
-          <p className="hb-eyebrow">What holds managers back</p>
-          <h2 className="hb-h2">Your managers know what slows them down. <em>Now you will too.</em></h2>
-          <p className="hb-sub">Not everything is in a manager’s hands. Managers tell us what gets in the way of doing their job well. Seen across all of them, it gives you a picture your organisation doesn’t have today.</p>
+          <p className="hb-eyebrow">Что мешает руководителям</p>
+          <h2 className="hb-h2">Ваши руководители знают, что их тормозит. <em>Теперь узнаете и вы.</em></h2>
+          <p className="hb-sub">Не всё в руках руководителя. Руководители сами рассказывают нам, что мешает им хорошо работать. Сложите все ответы — и увидите картину, которой у вашей организации сегодня нет.</p>
 
           <div className="hb-flow" ref={flowRef} style={{ marginTop: 56 }}>
             <div className="hb-start">
               <span className="hb-hex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><use href="#i-list" /></svg></span>
-              <span style={{ textAlign: 'left' }}><b>Your managers answer</b><small>about their team and the organisation</small></span>
+              <span style={{ textAlign: 'left' }}><b>Ваши руководители отвечают</b><small>о своей команде и организации</small></span>
               <span className="hb-faces"><span className="hb-face f1">AK</span><span className="hb-face f2">MP</span><span className="hb-face f3">LS</span><span className="hb-face f4">DT</span><span className="hb-face more">+38</span></span>
             </div>
             <div className="hb-line-v live" style={{ height: 40 }} />
@@ -70,21 +70,21 @@ export default function HoldsBackSection() {
             <div className="hb-branches">
               <div className="hb-branch">
                 <div className="hb-chain">
-                  <span className="hb-flag hb-flag--blue">In their hands</span>
-                  <div className="hb-item"><span className="hb-ico hb-ico--blue"><Ico id="i-target" /></span>Setting priorities</div>
-                  <div className="hb-item"><span className="hb-ico hb-ico--blue"><Ico id="i-check" /></span>Following through</div>
-                  <div className="hb-item"><span className="hb-ico hb-ico--blue"><Ico id="i-chat" /></span>A team that speaks up</div>
-                  <div className="hb-result"><div className="hb-card"><span className="hb-ico hb-ico--blue"><Ico id="i-sprout" /></span><span>Worked on in their training<small>the next stage, Build</small></span></div></div>
+                  <span className="hb-flag hb-flag--blue">В их руках</span>
+                  <div className="hb-item"><span className="hb-ico hb-ico--blue"><Ico id="i-target" /></span>Расстановка приоритетов</div>
+                  <div className="hb-item"><span className="hb-ico hb-ico--blue"><Ico id="i-check" /></span>Доведение дел до конца</div>
+                  <div className="hb-item"><span className="hb-ico hb-ico--blue"><Ico id="i-chat" /></span>Открытость в команде</div>
+                  <div className="hb-result"><div className="hb-card"><span className="hb-ico hb-ico--blue"><Ico id="i-sprout" /></span><span>Отрабатывают на тренингах<small>на следующем этапе — Build</small></span></div></div>
                 </div>
                 <div className="hb-line-v hb-m-line" style={{ height: 44, marginTop: 18 }} />
               </div>
               <div className="hb-branch">
                 <div className="hb-chain">
-                  <span className="hb-flag hb-flag--amber">What holds them back <em>· example</em></span>
-                  <div className="hb-item"><span className="hb-ico hb-ico--amber"><Ico id="i-layers" /></span>Too many priorities<span className="hb-count"><span className="hb-faces sm"><span className="hb-face f2" /><span className="hb-face f3" /><span className="hb-face f5" /></span>28 of 42</span></div>
-                  <div className="hb-item"><span className="hb-ico hb-ico--amber"><Ico id="i-hourglass" /></span>Slow approvals<span className="hb-count"><span className="hb-faces sm"><span className="hb-face f1" /><span className="hb-face f4" /><span className="hb-face f2" /></span>22 of 42</span></div>
-                  <div className="hb-item"><span className="hb-ico hb-ico--amber"><Ico id="i-lock" /></span>Decisions made without them<span className="hb-count"><span className="hb-faces sm"><span className="hb-face f5" /><span className="hb-face f1" /></span>17 of 42</span></div>
-                  <div className="hb-result"><div className="hb-card"><span className="hb-ico hb-ico--amber"><Ico id="i-file" /></span><span>A barriers report for leadership<small>which obstacles hold back the most managers</small></span></div></div>
+                  <span className="hb-flag hb-flag--amber">Что им мешает <em>· пример</em></span>
+                  <div className="hb-item"><span className="hb-ico hb-ico--amber"><Ico id="i-layers" /></span>Слишком много приоритетов<span className="hb-count"><span className="hb-faces sm"><span className="hb-face f2" /><span className="hb-face f3" /><span className="hb-face f5" /></span>28 из 42</span></div>
+                  <div className="hb-item"><span className="hb-ico hb-ico--amber"><Ico id="i-hourglass" /></span>Долгие согласования<span className="hb-count"><span className="hb-faces sm"><span className="hb-face f1" /><span className="hb-face f4" /><span className="hb-face f2" /></span>22 из 42</span></div>
+                  <div className="hb-item"><span className="hb-ico hb-ico--amber"><Ico id="i-lock" /></span>Решения принимают без них<span className="hb-count"><span className="hb-faces sm"><span className="hb-face f5" /><span className="hb-face f1" /></span>17 из 42</span></div>
+                  <div className="hb-result"><div className="hb-card"><span className="hb-ico hb-ico--amber"><Ico id="i-file" /></span><span>Отчёт о барьерах для руководства<small>какие препятствия встречаются у руководителей чаще всего</small></span></div></div>
                 </div>
               </div>
             </div>

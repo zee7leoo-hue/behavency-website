@@ -71,7 +71,7 @@ export default function Explorer({ initialId, level: lvIndex = 0, onClose }) {
       transition={{ duration: reduced ? 0.15 : 0.55, ease: SOFT }}>
       <div className="ax-fit" style={{ '--ac': LV.color }}>
         <div className="ax-top">
-          <button type="button" className="ax-back" aria-label="Back" onClick={back}><Chevron dir="left" /></button>
+          <button type="button" className="ax-back" aria-label="Назад" onClick={back}><Chevron dir="left" /></button>
         </div>
         <div className="ax-tabs" role="tablist">
           {TABS.map((t, i) => (

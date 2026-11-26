@@ -39,9 +39,9 @@ function Group({ copy = false }) {
 
 export default function ClientLogos() {
   return (
-    <section className="bh-clients" aria-label="Clients">
+    <section className="bh-clients" aria-label="Клиенты">
       <p className="bh-clients__line">
-        <span>Behavency is built by <b>OGI Europe</b>, which has trained managers at</span>
+        <span>Behavency создана компанией <b>OGI Europe</b>, которая обучала руководителей в компаниях</span>
       </p>
       <div className="bh-clients__marquee">
         <div className="bh-clients__track">

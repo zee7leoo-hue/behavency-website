@@ -42,25 +42,25 @@ function Header() {
     <div className="px-head">
       <div className="px-head-in">
         <h2 className="px-h rv" style={{ '--i': 1, left: 86, top: 36, whiteSpace: 'nowrap', width: 'auto' }}>
-          Real team dynamics.<br /><em>Brought to life<br />through play.</em>
+          Команда как она есть.<br /><em>Вживую<br />в игре.</em>
         </h2>
         <svg className="px-swoosh rv" style={{ '--i': 1, left: 92, top: 388 }} viewBox="0 0 560 26" preserveAspectRatio="none" aria-hidden="true">
           <defs><linearGradient id="px-sw" x1="0" x2="1"><stop offset="0" stopColor="#6a2ee8" stopOpacity=".25" /><stop offset=".25" stopColor="#6a2ee8" /><stop offset="1" stopColor="#6a2ee8" stopOpacity=".4" /></linearGradient></defs>
           <path d="M4 21 Q280 -4 556 12" fill="none" stroke="url(#px-sw)" strokeWidth="5" strokeLinecap="round" />
         </svg>
         <p className="px-sub rv" style={{ '--i': 2, left: 90, top: 450, width: 1030 }}>
-          An interactive online team game followed by a structured post-reflection, where participants explore their decisions, behaviours and how they work together.
+          Интерактивная онлайн-игра для команды, а затем структурированный разбор: участники обсуждают свои решения, поведение и то, как они работают вместе.
         </p>
         <div className="px-stats rv" style={{ '--i': 3, top: 150 }}>
           <Gamepad className="px-sico" style={{ left: 100, top: 660 }} strokeWidth={1.8} />
-          <b className="px-n" style={{ left: 265, top: 657 }}>45 min</b>
-          <span className="px-l" style={{ left: 265, top: 727 }}>Team Game</span>
+          <b className="px-n" style={{ left: 265, top: 657 }}>45 мин</b>
+          <span className="px-l" style={{ left: 265, top: 727 }}>Командная игра</span>
           <i className="px-div" style={{ left: 577, top: 668 }} />
           <People className="px-sico" style={{ left: 654, top: 660 }} strokeWidth={1.8} />
-          <b className="px-n" style={{ left: 824, top: 657 }}>90 min</b>
-          <span className="px-l" style={{ left: 824, top: 727, letterSpacing: '-.03em' }}>Post-Reflection</span>
+          <b className="px-n" style={{ left: 824, top: 657 }}>90 мин</b>
+          <span className="px-l" style={{ left: 824, top: 727, letterSpacing: '-.03em' }}>Разбор после игры</span>
         </div>
-        <div className="px-how rv" style={{ '--i': 4 }}><i /><span>HOW IT WORKS</span><i /></div>
+        <div className="px-how rv" style={{ '--i': 4 }}><i /><span>КАК ЭТО РАБОТАЕТ</span><i /></div>
       </div>
     </div>
   )
@@ -94,13 +94,13 @@ function GameCard() {
   return (
     <div className="pc" style={{ width: 991, height: 1595, '--k': 352 / 991 }}>
       <div className="pc-back" style={{ left: X(75), top: Y(675), width: 915, height: 568, background: 'linear-gradient(180deg,#d6caf8,#cfc3f7)' }} />
-      <Tag f={1} n="01" label="01 – The Game" Icon={Gamepad} grad="linear-gradient(135deg,#8a52f2,#6a2fe0)" />
-      <h3 className="pc-h" style={{ left: X(101), top: Y(142) }}>A game that makes<br />participants feel their<br />own blind spots.</h3>
+      <Tag f={1} n="01" label="01 — Игра" Icon={Gamepad} grad="linear-gradient(135deg,#8a52f2,#6a2fe0)" />
+      <h3 className="pc-h" style={{ left: X(101), top: Y(142) }}>Игра, в которой<br />участники натыкаются на<br />own blind spots.</h3>
       <i className="pc-hl" style={{ left: X(252), top: Y(361), width: 372, height: 15 }} />
       <p className="pc-p" style={{ left: X(103), top: Y(418), width: 880, fontSize: 47, lineHeight: '56px' }}>It brings some of the same behavioural areas from the assessment to life — in a safe environment where mistakes are part of the play and nobody is judged.</p>
 
       <div className="pc-panel" style={{ left: X(160), top: Y(591), width: 745, height: 738, backgroundImage: `url(${gamePanel})` }} />
-      {stat(202, 971, PeopleFill, '12–100 people', ['Remote & in-person'], 302, -1, 3)}
+      {stat(202, 971, PeopleFill, '12–100 человек', ['Remote & in-person'], 302, -1, 3)}
       {stat(577, 969, Clock, '45 minutes', ['Online & facilitated'], 676, 0, 3)}
       <i className="pc-line" style={{ left: X(555), top: Y(968), width: 2, height: 278 }} />
       <i className="pc-line" style={{ left: X(203), top: Y(1093), width: 659, height: 2 }} />
@@ -124,20 +124,20 @@ function ReflectCard() {
   )
   return (
     <div className="pc" style={{ width: 967, height: 1492, '--k': 352 / 925 }}>
-      <Tag f={925 / 991} n="02" label="02 – The Reflection" Icon={Chat} grad="linear-gradient(145deg,#27b0ff,#1580f0)" />
-      <h3 className="pc-h" style={{ left: X(118), top: Y(149), lineHeight: '84px', fontSize: 69.4 }}>The game is only<br />the beginning.</h3>
+      <Tag f={925 / 991} n="02" label="02 — Разбор" Icon={Chat} grad="linear-gradient(145deg,#27b0ff,#1580f0)" />
+      <h3 className="pc-h" style={{ left: X(118), top: Y(149), lineHeight: '84px', fontSize: 69.4 }}>Игра — это только<br />начало.</h3>
       <i className="pc-sw" style={{ left: X(118), top: Y(322), width: 262, height: 20 }} />
-      <p className="pc-p" style={{ left: X(118), top: Y(383), width: 790, fontSize: 44, lineHeight: '52px' }}>A guided conversation where participants discuss what happened, why they acted as they did, and how similar behaviours appear in everyday work.</p>
+      <p className="pc-p" style={{ left: X(118), top: Y(383), width: 790, fontSize: 44, lineHeight: '52px' }}>Разговор с фасилитатором: что произошло, почему участники действовали именно так и где похожее поведение встречается в обычной работе.</p>
 
       <div className="pc-panel pc-r2" style={{ left: X(137) + 21, top: Y(569), width: 790, height: 761, backgroundImage: `url(${reflectPanel})` }}>
         <Clock className="pc-r2-ic" style={{ left: '8.4%', top: '5.6%', width: '6.6%' }} strokeWidth={1.9} />
         <i className="pc-r2-v" style={{ left: '17.2%', top: '5.2%', height: '10%' }} />
-        <b className="pc-r2-t" style={{ left: '19.4%', top: '4.9%' }}>90-minute<br />session</b>
+        <b className="pc-r2-t" style={{ left: '19.4%', top: '4.9%' }}>90-минутная<br />сессия</b>
         <PeopleFill className="pc-r2-ic" style={{ left: '8%', top: '84.2%', width: '8.8%' }} />
-        <b className="pc-r2-t pc-r2-t--b" style={{ left: '19.8%', top: '88.4%' }}>Facilitator-led</b>
+        <b className="pc-r2-t pc-r2-t--b" style={{ left: '19.8%', top: '88.4%' }}>С фасилитатором</b>
         <i className="pc-r2-v" style={{ left: '51%', top: '83.6%', height: '10.4%' }} />
         <Layers className="pc-r2-ic" style={{ left: '57.6%', top: '84.4%', width: '7.6%' }} strokeWidth={1.9} />
-        <b className="pc-r2-t pc-r2-t--b" style={{ left: '68.6%', top: '88.4%' }}>Connected to<br />assessment</b>
+        <b className="pc-r2-t pc-r2-t--b" style={{ left: '68.6%', top: '88.4%' }}>Связан с<br />оценкой</b>
       </div>
     </div>
   )
@@ -153,13 +153,13 @@ function InsightCard() {
   const Y = (v) => v - 67 + 31 + (v >= 660 ? 70 : 0)
   const rows = [
     { y: 190, label: 'Trust', pct: '78%', w: 166, c: 'linear-gradient(90deg,#74dc1c,#62d41e)' },
-    { y: 280, label: 'Prioritisation', pct: '64%', w: 124, c: 'linear-gradient(90deg,#ff9a22,#fd8419)' },
-    { y: 370, label: 'Collaboration', pct: '42%', w: 87, c: 'linear-gradient(90deg,#f9574f,#f2484a)' },
+    { y: 280, label: 'Приоритеты', pct: '64%', w: 124, c: 'linear-gradient(90deg,#ff9a22,#fd8419)' },
+    { y: 370, label: 'Сотрудничество', pct: '42%', w: 87, c: 'linear-gradient(90deg,#f9574f,#f2484a)' },
   ]
   return (
     <div className="pc" style={{ width: 952, height: 1534, '--k': 352 / 952 }}>
-      <Tag f={952 / 991} n="03" label="03 – Insight Report" Icon={Bars} grad="linear-gradient(145deg,#1d56b8,#163f93)" iconSize={46} />
-      <h3 className="pc-h" style={{ left: X(104), top: Y(178), color: '#0e1d52', lineHeight: '82px' }}>Turn the team experience<br />into a clear takeaway.</h3>
+      <Tag f={952 / 991} n="03" label="03 — Аналитический отчёт" Icon={Bars} grad="linear-gradient(145deg,#1d56b8,#163f93)" iconSize={46} />
+      <h3 className="pc-h" style={{ left: X(104), top: Y(178), color: '#0e1d52', lineHeight: '82px' }}>Превратите опыт команды<br />into a clear takeaway.</h3>
       <i className="pc-hl" style={{ left: X(298), top: Y(350), width: 468, height: 13 }} />
       <p className="pc-p" style={{ left: X(106), top: Y(402), width: 800, fontSize: 45, lineHeight: '54px', color: '#202a52' }}>A concise report that captures how the team played, highlights key patterns and explains what was behind some of the lower scores.</p>
 
@@ -171,7 +171,7 @@ function InsightCard() {
           <svg className="pc-wave" viewBox="0 0 283 60" preserveAspectRatio="none"><path d="M0 22C60 4 110 40 170 24 220 10 255 14 283 22V60H0z" fill="#dfe5f8" /></svg>
         </div>
         <i className="pc-vl" style={{ left: 343, top: 50, height: 372 }} />
-        <span className="pc-dl" style={{ left: 571, top: 40, width: 283, height: 64 }}><Download style={{ width: 34, height: 34 }} />Download PDF</span>
+        <span className="pc-dl" style={{ left: 571, top: 40, width: 283, height: 64 }}><Download style={{ width: 34, height: 34 }} />Скачать PDF</span>
         {rows.map((r, i) => (
           <React.Fragment key={r.label}>
             <b className="pc-rl" style={{ left: 371, top: r.y - 17 }}>{r.label}</b>
@@ -212,16 +212,16 @@ function Results() {
   const [ref, seen] = useInView(0.2)
   return (
     <div ref={ref} className={`px-res ${seen ? 'in' : ''}`}>
-      <div className="px-res-top"><i /><span>THE RESULTS</span><i /></div>
+      <div className="px-res-top"><i /><span>РЕЗУЛЬТАТЫ</span><i /></div>
       <div className="px-res-row">
         <Group className="px-res-ico" />
         <i className="px-res-line" />
-        <div><h4>For HR &amp; organisations</h4><p>Greater participant self-awareness, engagement and stronger buy-in for subsequent development.</p></div>
+        <div><h4>Для HR и организаций</h4><p>Участники лучше понимают себя, больше вовлечены и охотнее идут в дальнейшее развитие.</p></div>
       </div>
       <div className="px-res-row">
         <Person className="px-res-ico px-res-ico--p" />
         <i className="px-res-line" />
-        <div><h4>For participants</h4><p>They see for themselves what works and what is missing, making behavioural patterns more tangible.</p></div>
+        <div><h4>Для участников</h4><p>Участники сами видят, что работает и чего не хватает, — и поведенческие привычки становятся наглядными.</p></div>
       </div>
     </div>
   )

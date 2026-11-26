@@ -12,9 +12,9 @@ import './SingleExplorer.css'
 const SOFT = [0.22, 1, 0.36, 1]
 const pad = (n) => String(n + 1).padStart(2, '0')
 const SUB = {
-  mid: 'What effective managers do and how it shows up in practice.',
-  line: 'What effective managers do and how it shows up in practice.',
-  team: 'What effective teams do and how it shows up in practice.',
+  mid: 'Что делают эффективные руководители и как это проявляется на практике.',
+  line: 'Что делают эффективные руководители и как это проявляется на практике.',
+  team: 'Что делают эффективные команды и как это проявляется на практике.',
 }
 
 const list = { hidden: {}, show: { transition: { staggerChildren: 0.07, delayChildren: 0.18 } } }
@@ -40,7 +40,7 @@ export default function SingleExplorer({ areaId, level: lvIndex = 0, onClose }) 
       transition={{ duration: reduced ? 0.15 : 0.55, ease: SOFT }}>
       <div className="ax-fit sx" style={{ '--ac': LV.color }}>
         <div className="ax-top">
-          <button type="button" className="ax-back" aria-label="Back" onClick={onClose}>
+          <button type="button" className="ax-back" aria-label="Назад" onClick={onClose}>
             <svg className="ax-chev" viewBox="0 0 12 20" aria-hidden="true"><path d="M9.5 2.5l-7 7.5 7 7.5" /></svg>
           </button>
         </div>

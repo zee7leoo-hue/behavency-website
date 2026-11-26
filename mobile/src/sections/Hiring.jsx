@@ -6,11 +6,11 @@ import './Hiring.css'
    first three swipe cards, a navy 4th card "Simple to run", and a plain "Not a pass/fail test" line underneath. */
 
 const CARDS = [
-  { h: 'See how they manage, not how they interview', p: 'How the candidate typically handles goals, feedback, priorities and people, across six areas of everyday management.' },
-  { h: 'Know what to check in the interview', p: 'The report shows their strong areas and the ones to probe, so your questions go where the doubts are.' },
-  { h: 'Compare them with the managers you have', p: 'Candidates answer the same profile as your current managers, so you can see how they would fit in.' },
+  { h: 'See how they manage, not how they interview', p: 'Как кандидат обычно работает с целями, обратной связью, приоритетами и людьми — в шести областях повседневного управления.' },
+  { h: 'Что проверить на интервью', p: 'Отчёт показывает сильные области и те, что стоит проверить, — так вы спрашиваете именно там, где есть сомнения.' },
+  { h: 'Сравнить с вашими руководителями', p: 'Кандидаты проходят тот же профиль, что и ваши руководители, — сразу видно, как они впишутся.' },
 ]
-const STEPS = ['Add a name and e-mail', 'The candidate gives consent and answers online', 'You get a 4-page report']
+const STEPS = ['Укажите имя и почту', 'Кандидат даёт согласие и отвечает онлайн', 'Вы получаете отчёт на 4 страницы']
 
 export default function Hiring() {
   const trkRef = useRef(null)
@@ -65,8 +65,8 @@ export default function Hiring() {
         <p className="hi-lead">An interview shows how a candidate presents themselves. The Managerial Profile shows how they are likely to manage: one input next to interviews and references, not a verdict.</p>
         <div className="hi-labelled">
           <img className="hi-doc" src={profile} alt="Candidate profile report" />
-          <span className="hi-pin" style={{ top: '47%', left: '-3%' }}><b>1</b>Six areas</span>
-          <span className="hi-pin" style={{ top: '62%', right: '-3%' }}><b>2</b>Area to probe</span>
+          <span className="hi-pin" style={{ top: '47%', left: '-3%' }}><b>1</b>Шесть областей</span>
+          <span className="hi-pin" style={{ top: '62%', right: '-3%' }}><b>2</b>Стоит проверить</span>
           <span className="hi-pin" style={{ top: '80%', left: '7%' }}><b>3</b>Strong areas</span>
         </div>
 
@@ -93,7 +93,7 @@ export default function Hiring() {
           ))}
         </div>
 
-        <p className="hi-note"><b>Not a pass/fail test.</b> Use it to ask better questions, not to rank, reject or promote on its own.</p>
+        <p className="hi-note"><b>Not a pass/fail test.</b> Используйте его, чтобы точнее задавать вопросы, а не как единственное основание для ранжирования, отказа или повышения.</p>
       </div>
     </section>
   )

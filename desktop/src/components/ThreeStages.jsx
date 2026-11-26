@@ -54,8 +54,8 @@ const IconChat = () => (
 );
 
 const tabs = [
-  { id: 1, num: '01', label: 'The Game', sub: 'Experience the patterns', Icon: IconGamepad },
-  { id: 2, num: '02', label: 'The Reflection', sub: 'Make the connection', Icon: IconPerson },
+  { id: 1, num: '01', label: 'Игра', sub: 'Experience the patterns', Icon: IconGamepad },
+  { id: 2, num: '02', label: 'Разбор', sub: 'Make the connection', Icon: IconPerson },
   { id: 3, num: '03', label: 'Insight Report', sub: 'See what it reveals', Icon: IconBarChart },
 ];
 
@@ -104,7 +104,7 @@ export default function ThreeStages() {
                 {/* LEFT */}
                 <div className="ts-col-left">
                   <p className="ts-stage-eyebrow">STAGE 01</p>
-                  <h3 className="ts-stage-title">The Game</h3>
+                  <h3 className="ts-stage-title">Игра</h3>
                   <p className="ts-stage-sub">A game that makes participants feel their own blind spots.</p>
                   <p className="ts-stage-body">Numbers on a report don't always convince people. It's easy to see a low score and move on. What's harder to ignore is encountering the same behavioural gap yourself — in a real group situation, in real time.</p>
                 </div>
@@ -147,9 +147,9 @@ export default function ThreeStages() {
                 {/* LEFT */}
                 <div className="ts-col-left ts-col-left--has-graphic">
                   <p className="ts-stage-eyebrow">STAGE 02</p>
-                  <h3 className="ts-stage-title">The Reflection</h3>
+                  <h3 className="ts-stage-title">Разбор</h3>
                   <p className="ts-stage-sub">The game is only the beginning.</p>
-                  <p className="ts-stage-body">In a facilitated conversation, the team looks back at what happened — the decisions they made, the patterns that emerged, and how they worked together.</p>
+                  <p className="ts-stage-body">Команда вместе с фасилитатором вспоминает, the team looks back at what happened — the decisions they made, the patterns that emerged, and how they worked together.</p>
                   <p className="ts-stage-body">The facilitator helps turn those moments into insights they can recognise in themselves and in the way their team works.</p>
                 </div>
 
@@ -210,7 +210,7 @@ export default function ThreeStages() {
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="7" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg>
                       </div>
                       <div>
-                        <strong>For participants</strong>
+                        <strong>Для участников</strong>
                         <span>See the team's results and recommended next steps.</span>
                       </div>
                     </div>

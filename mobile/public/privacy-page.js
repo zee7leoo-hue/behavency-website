@@ -1,4 +1,4 @@
-// Privacy Policy page for both sites (23 Nov). Opens over the site from "Privacy Policy" in the footer and in the cookie banner.
+// Privacy Policy page for both sites (23 Nov). Opens over the site from "Политика конфиденциальности" in the footer and in the cookie banner.
 // Text = the Claude Docs draft (https://claude.ai/artifact/JFYcw28zwutwKHZGD3fzdS) without the draft note. Still to be checked by a lawyer.
 (function () {
   const CSS = `
@@ -37,99 +37,99 @@
   }
   .pvp-x { margin-top: 48px; padding-top: 18px; border-top: 1px solid #e8e5f0; font-size: 14px !important; color: #6b7088 !important; }
   `;
-  const back = '<button type="button" class="pvp-back" data-close><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Back</button>';
-  const HTML = `<div class="pvp" role="dialog" aria-label="Privacy Policy"><div class="pvp-bar">${back}</div><div class="pvp-in">
-    <div class="pvp-eb">Legal</div>
-    <h1>Privacy Policy</h1>
-    <p class="pvp-date">Last updated: 23 November 2026</p>
+  const back = '<button type="button" class="pvp-back" data-close><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Назад</button>';
+  const HTML = `<div class="pvp" role="dialog" aria-label="Политика конфиденциальности"><div class="pvp-bar">${back}</div><div class="pvp-in">
+    <div class="pvp-eb">Правовая информация</div>
+    <h1>Политика конфиденциальности</h1>
+    <p class="pvp-date">Последнее обновление: 23 ноября 2026 г.</p>
 
-    <h2>Who we are</h2>
-    <p>Behavency is a product of OGI Europe Kft. OGI Europe Kft. decides how and why your personal data on this website is used, so it is the <b>data controller</b> under the EU General Data Protection Regulation (GDPR).</p>
-    <ul><li><b>Company:</b> OGI Europe Kft.</li><li><b>Address:</b> Üllői út 101/4, 1091 Budapest, Hungary</li><li><b>E-mail for privacy questions:</b> <a href="mailto:info@behavency.com">info@behavency.com</a></li></ul>
-    <p>This policy explains what we collect when you visit behavency.com or contact us, why, and what rights you have.</p>
+    <h2>Кто мы</h2>
+    <p>Behavency создана компанией компании OGI Europe Kft. OGI Europe Kft. определяет, как и зачем используются ваши персональные данные на этом сайте, и поэтому является <b>контролёром данных</b> в соответствии с Общим регламентом ЕС по защите данных (GDPR).</p>
+    <ul><li><b>Компания:</b> OGI Europe Kft.</li><li><b>Адрес:</b> Üllői út 101/4, 1091 Budapest, Hungary</li><li><b>Эл. почта по вопросам конфиденциальности:</b> <a href="mailto:info@behavency.com">info@behavency.com</a></li></ul>
+    <p>В этой политике объясняется, какие данные мы собираем, когда вы посещаете behavency.com или связываетесь с нами, зачем мы это делаем и какие у вас есть права.</p>
 
-    <h2>What we collect</h2>
+    <h2>Какие данные мы собираем</h2>
     <div class="pvp-tw"><table>
-      <tr><th>Where</th><th>What</th><th>Required?</th></tr>
-      <tr><td>Request a demo / contact form</td><td>Name, work e-mail, organisation, your role, phone number, number of managers, what you are interested in, your message</td><td>Name, e-mail, organisation and role: yes. Phone, number of managers, interests and message: no</td></tr>
-      <tr><td>E-mail to <a href="mailto:info@behavency.com">info@behavency.com</a></td><td>Whatever you write to us, and your e-mail address</td><td>–</td></tr>
-      <tr><td>Log in</td><td>The link takes you to our platform at app.behavency.com; the website itself collects nothing when you click it</td><td>–</td></tr>
-      <tr><td>Every visit</td><td>Technical data your browser sends: IP address, browser and device type, pages visited, time of visit</td><td>Collected automatically by our hosting provider</td></tr>
+      <tr><th>Где</th><th>Что</th><th>Обязательно?</th></tr>
+      <tr><td>Запрос демо / контактная форма</td><td>Имя, рабочая почта, организация, ваша должность, номер телефона, количество руководителей, что вас интересует, ваше сообщение</td><td>Имя, почта, организация и должность — да. Телефон, количество руководителей, интересы и сообщение — нет</td></tr>
+      <tr><td>Письмо на <a href="mailto:info@behavency.com">info@behavency.com</a></td><td>Всё, что вы нам пишете, и ваш адрес эл. почты</td><td>–</td></tr>
+      <tr><td>Войти</td><td>Ссылка ведёт на нашу платформу app.behavency.com; сам сайт при переходе по ней ничего не собирает</td><td>–</td></tr>
+      <tr><td>При каждом посещении</td><td>Технические данные, которые передаёт ваш браузер: IP-адрес, тип браузера и устройства, посещённые страницы, время посещения</td><td>Собираются автоматически нашим хостинг-провайдером</td></tr>
     </table></div>
-    <p>We do not ask for sensitive data (such as health or political views) on the website. Please do not include it in your message.</p>
+    <p>Мы не запрашиваем на сайте чувствительные данные (например, о здоровье или политических взглядах). Пожалуйста, не указывайте их в сообщении.</p>
 
-    <h2>Why we use it, and on what legal basis</h2>
+    <h2>Зачем мы используем данные и на каком правовом основании</h2>
     <div class="pvp-tw"><table>
-      <tr><th>Purpose</th><th>Data</th><th>Legal basis (GDPR Art. 6)</th></tr>
-      <tr><td>Answer your enquiry, arrange a demo, prepare an offer</td><td>Contact-form data, e-mails</td><td>Steps you ask for before a possible contract (6(1)(b)) and our legitimate interest in replying to business enquiries (6(1)(f))</td></tr>
-      <tr><td>Keep the website running and secure</td><td>Technical data</td><td>Our legitimate interest in a working, safe website (6(1)(f))</td></tr>
-      <tr><td>Understand how the website is used</td><td>Usage statistics from Google Analytics</td><td>Your consent, given in the cookie banner (6(1)(a))</td></tr>
+      <tr><th>Цель</th><th>Данные</th><th>Правовое основание (ст. 6 GDPR)</th></tr>
+      <tr><td>Ответить на ваш запрос, организовать демо, подготовить предложение</td><td>Данные контактной формы, письма</td><td>Действия по вашему запросу до возможного заключения договора (ст. 6(1)(b)) и наш законный интерес в ответах на деловые запросы (ст. 6(1)(f))</td></tr>
+      <tr><td>Обеспечивать работу и безопасность сайта</td><td>Технические данные</td><td>Наш законный интерес в работающем и безопасном сайте (ст. 6(1)(f))</td></tr>
+      <tr><td>Понимать, как используется сайт</td><td>Статистика использования из Google Analytics</td><td>Ваше согласие, данное в баннере cookie (ст. 6(1)(a))</td></tr>
     </table></div>
-    <p>We do not sell your data, and we do not use it for automated decisions about you.</p>
+    <p>Мы не продаём ваши данные и не используем их для автоматизированного принятия решений в отношении вас.</p>
 
-    <h2>Who we share it with</h2>
-    <p>We share your data only with service providers that help us run the website and answer you, and only as much as they need. They work on our instructions under a data processing agreement.</p>
+    <h2>Кому мы передаём данные</h2>
+    <p>Мы передаём ваши данные только поставщикам услуг, которые помогают нам поддерживать сайт и отвечать вам, и только в том объёме, который им необходим. Они действуют по нашим указаниям на основании договора об обработке данных.</p>
     <ul>
-      <li><b>E-mail:</b> messages from the contact form and e-mails to <a href="mailto:info@behavency.com">info@behavency.com</a> arrive in our company e-mail inbox, provided by Google Workspace (Google).</li>
-      <li><b>Website hosting:</b> DigitalOcean.</li>
-      <li><b>Analytics:</b> Google Analytics (Google), only after you agree in the cookie banner.</li>
+      <li><b>Эл. почта:</b> сообщения из контактной формы и письма на <a href="mailto:info@behavency.com">info@behavency.com</a> поступают в почтовый ящик нашей компании, который предоставляет Google Workspace (Google).</li>
+      <li><b>Хостинг сайта:</b> DigitalOcean.</li>
+      <li><b>Аналитика:</b> Google Analytics (Google) — только после вашего согласия в баннере cookie.</li>
     </ul>
-    <p>We may also disclose data when the law requires it, for example to a court or authority.</p>
+    <p>Мы также можем раскрыть данные, если этого требует закон, например суду или государственному органу.</p>
 
-    <h2>Transfers outside the EU</h2>
-    <p>The website is hosted by DigitalOcean in its Frankfurt data centre, in the European Union. Google and DigitalOcean are companies based in the United States, so some data (for example Google Analytics data, or support access by the provider) may be processed outside the European Economic Area. These transfers are protected by the EU–US Data Privacy Framework and, where it does not apply, by the European Commission’s standard contractual clauses.</p>
+    <h2>Передача данных за пределы ЕС</h2>
+    <p>Сайт размещён у DigitalOcean в дата-центре во Франкфурте, в Европейском союзе. Google и DigitalOcean — компании из США, поэтому часть данных (например, данные Google Analytics или доступ поставщика в рамках поддержки) может обрабатываться за пределами Европейской экономической зоны. Такая передача защищена Рамочной программой ЕС–США по защите данных (EU–US Data Privacy Framework), а там, где она не применяется, — стандартными договорными условиями Европейской комиссии.</p>
 
-    <h2>How long we keep it</h2>
+    <h2>Сколько мы храним данные</h2>
     <div class="pvp-tw"><table>
-      <tr><th>Data</th><th>Kept for</th></tr>
-      <tr><td>Enquiries (contact-form messages and e-mails) that do not lead to a contract</td><td>12 months after our last contact</td></tr>
-      <tr><td>Enquiries that lead to a contract</td><td>As long as the contract runs, then as long as Hungarian law requires for business records</td></tr>
-      <tr><td>Technical data in server logs</td><td>30 days</td></tr>
+      <tr><th>Данные</th><th>Срок хранения</th></tr>
+      <tr><td>Запросы (сообщения из контактной формы и письма), которые не привели к договору</td><td>12 месяцев после последнего контакта</td></tr>
+      <tr><td>Запросы, которые привели к договору</td><td>Весь срок действия договора, а затем столько, сколько венгерское законодательство требует хранить деловую документацию</td></tr>
+      <tr><td>Технические данные в журналах сервера</td><td>30 дней</td></tr>
     </table></div>
-    <p>After that we delete the data or make it anonymous.</p>
+    <p>После этого мы удаляем данные или обезличиваем их.</p>
 
-    <h2>Cookies and analytics</h2>
-    <p>We use two kinds of cookies and similar storage:</p>
+    <h2>Файлы cookie и аналитика</h2>
+    <p>Мы используем два вида файлов cookie и похожих технологий хранения:</p>
     <ul>
-      <li><b>Necessary:</b> what the website needs to work, for example remembering your cookie choice. These do not need your consent.</li>
-      <li><b>Analytics (Google Analytics):</b> counts visits and shows which pages are read, so we can improve the site. We set these only after you click “Accept all” in the cookie banner. If you choose “Only necessary”, they are not used. You can change your choice at any time through the “Cookie settings” link at the bottom of every page. Google Analytics keeps this data for 14 months.</li>
+      <li><b>Необходимые:</b> то, что нужно для работы сайта, например чтобы запомнить ваш выбор cookie. Для них ваше согласие не требуется.</li>
+      <li><b>Аналитические (Google Analytics):</b> считают посещения и показывают, какие страницы читают, чтобы мы могли улучшать сайт. Мы устанавливаем их только после того, как вы нажмёте «Принять все» в баннере cookie. Если вы выберете «Только необходимые», они не используются. Изменить выбор можно в любое время по ссылке «Настройки cookie» внизу каждой страницы. Google Analytics хранит эти данные 14 месяцев.</li>
     </ul>
 
-    <h2>Your rights</h2>
-    <p>Under the GDPR you can ask us to:</p>
+    <h2>Ваши права</h2>
+    <p>Согласно GDPR вы можете попросить нас:</p>
     <ul>
-      <li>show you the data we hold about you, and give you a copy</li><li>correct data that is wrong</li><li>delete your data</li><li>limit how we use it</li>
-      <li>send it to you or another company in a usable format</li><li>stop using it, where we rely on our legitimate interest</li><li>withdraw a consent you gave, at any time</li>
+      <li>показать данные, которые мы о вас храним, и предоставить их копию</li><li>исправить неверные данные</li><li>удалить ваши данные</li><li>ограничить их использование</li>
+      <li>передать их вам или другой компании в удобном для использования формате</li><li>прекратить их использование, если оно основано на нашем законном интересе</li><li>в любое время отозвать данное вами согласие</li>
     </ul>
-    <p>Write to <a href="mailto:info@behavency.com">info@behavency.com</a>. We answer within one month.</p>
-    <p>If you think we handle your data wrongly, you can complain to the Hungarian data protection authority, the <b>Nemzeti Adatvédelmi és Információszabadság Hatóság (NAIH)</b>, or to the authority in the EU country where you live.</p>
+    <p>Напишите на <a href="mailto:info@behavency.com">info@behavency.com</a>. Мы ответим в течение месяца.</p>
+    <p>Если вы считаете, что мы обрабатываем ваши данные неправомерно, вы можете подать жалобу в венгерский орган по защите данных — <b>Nemzeti Adatvédelmi és Információszabadság Hatóság (NAIH)</b> — или в надзорный орган страны ЕС, в которой вы проживаете.</p>
 
-    <h2>Security, children and changes</h2>
+    <h2>Безопасность, дети и изменения</h2>
     <ul>
-      <li><b>Security:</b> We protect your data with technical and organisational measures, such as encrypted connections and limited access for staff who need it.</li>
-      <li><b>Children:</b> The website is meant for businesses. We do not knowingly collect data from children.</li>
-      <li><b>Changes:</b> We may update this policy. The date at the top shows the latest version.</li>
-      <li><b>Questions:</b> <a href="mailto:info@behavency.com">info@behavency.com</a>, or OGI Europe Kft., Üllői út 101/4, 1091 Budapest, Hungary.</li>
+      <li><b>Безопасность:</b> мы защищаем ваши данные техническими и организационными мерами, например шифруем соединения и даём доступ только тем сотрудникам, которым он нужен.</li>
+      <li><b>Дети:</b> сайт предназначен для компаний. Мы сознательно не собираем данные детей.</li>
+      <li><b>Изменения:</b> мы можем обновлять эту политику. Дата вверху страницы указывает на последнюю версию.</li>
+      <li><b>Вопросы:</b> <a href="mailto:info@behavency.com">info@behavency.com</a>, or OGI Europe Kft., Üllői út 101/4, 1091 Budapest, Hungary.</li>
     </ul>
-    <p class="pvp-x">This policy covers the Behavency website. Data on the Behavency platform (app.behavency.com) is described in the platform’s own privacy notice.</p>
+    <p class="pvp-x">Эта политика относится к сайту Behavency. Обработка данных на платформе Behavency (app.behavency.com) описана в собственном уведомлении о конфиденциальности платформы.</p>
   </div></div>`;
   let el = null;
   const open = () => {
     if (!el) return;
     el.classList.add('open'); el.scrollTop = 0; document.documentElement.classList.add('pvp-lock');
-    if ((window.bhvH ? bhvH() : location.hash) !== '#privacy') history.pushState({ pvp: 1 }, '', location.pathname + location.search + '#privacy');
+    if (location.hash !== '#privacy') history.pushState({ pvp: 1 }, '', location.pathname + location.search + '#privacy');
   };
   const close = () => { if (!el) return; el.classList.remove('open'); document.documentElement.classList.remove('pvp-lock'); };
   window.bhvOpenPrivacy = open;
-  addEventListener('popstate', () => { if ((window.bhvH ? bhvH() : location.hash) !== '#privacy') close(); else open(); });
+  addEventListener('popstate', () => { if (location.hash !== '#privacy') close(); else open(); });
   const mount = () => {
     if (!document.body) return setTimeout(mount, 100);
     const st = document.createElement('style'); st.id = 'privacy-page'; st.textContent = CSS; document.head.appendChild(st);
     const t = document.createElement('div'); t.innerHTML = HTML; el = t.firstElementChild; document.body.appendChild(el);
     // column names on each cell, used by the phone card layout
     el.querySelectorAll('table').forEach((tb) => { const heads = [...tb.querySelectorAll('tr:first-child th')].map((h) => h.textContent.trim()); tb.querySelectorAll('tr').forEach((tr) => [...tr.children].forEach((c, i) => { if (c.tagName === 'TD' && heads[i]) c.setAttribute('data-label', heads[i]); })); });
-    el.addEventListener('click', (e) => { if (e.target.closest('[data-close]')) { if ((window.bhvH ? bhvH() : location.hash) === '#privacy') history.back(); else close(); } });
-    if ((window.bhvH ? bhvH() : location.hash) === '#privacy') setTimeout(open, 600);
+    el.addEventListener('click', (e) => { if (e.target.closest('[data-close]')) { if (location.hash === '#privacy') history.back(); else close(); } });
+    if (location.hash === '#privacy') setTimeout(open, 600);
   };
   mount();
 })();

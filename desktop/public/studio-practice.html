@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Interview Studio practice</title>
+<title>Интервью-студия: тренировка</title>
 <!-- the website's own self-hosted copies of Inter, Playfair Display and Source Serif 4 -->
 <link href="/fonts/gf-ee431875.css" rel="stylesheet">
 <link href="/fonts/gf-623a47d5.css" rel="stylesheet">
@@ -461,6 +461,11 @@
   /* ---------- on the website: only the pop-up, over the site ---------- */
   html, body { background: transparent !important; }
   .ist { display: none !important; }
+  /* Russian (26 Nov) */
+  .wel .w-when { width: auto !important; min-width: 64px; padding-right: 8px; }
+  .chk-h { flex-wrap: wrap; row-gap: 6px; }
+  .chk-h b { flex: 1 1 60%; }
+  .chk-c { margin-left: 32px; }
 </style>
 </head>
 <body>
@@ -491,7 +496,7 @@
 
 <!-- the whole practice, in one pop-up -->
 <div class="ovl" id="ovl">
-  <div class="dlg" id="dlg" role="dialog" aria-modal="true" aria-label="Practice interview">
+  <div class="dlg" id="dlg" role="dialog" aria-modal="true" aria-label="Тренировочное интервью">
     <button class="x-close" id="xclose" aria-label="Close">✕</button>
 
     <div class="mv" id="v-wel">
@@ -510,16 +515,16 @@
         <div class="bar">
           <img id="hdrimg" alt="" width="36" height="36">
           <div class="who">
-            <p><span id="h-name"></span><span class="chip">Practice</span></p>
-            <small>1:1 interview · Line manager guide</small>
+            <p><span id="h-name"></span><span class="chip">Тренировка</span></p>
+            <small>Интервью 1:1 · гид для линейного руководителя</small>
           </div>
         </div>
         <div class="body">
           <div class="card">
             <div class="area-h">
               <span class="dot" aria-hidden="true"></span>
-              <h4>Focus &amp; Prioritisation</h4>
-              <span class="n"><span>3 of 6</span><span class="prog" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></span>
+              <h4>Фокус и приоритеты</h4>
+              <span class="n"><span>3 / 6</span><span class="prog" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></span>
             </div>
           </div>
           <div class="conv" id="conv"><div class="lines" id="lines" aria-live="polite"></div></div>
@@ -565,156 +570,156 @@
   // ---- all the words, in one place ----
   // The same guide question for everyone (line manager guide, Focus & Prioritization). Each character answers as their
   // instructions in practice.ts say; the follow-ups are the guide's own and the handbook's.
-  const QUESTION = 'Can you think of a recent time when your team had more work than it could handle? How did you decide what came first?';
+  const QUESTION = 'Вспомните недавний случай, когда у вашей команды было больше работы, чем она успевала сделать. Как вы решали, за что браться в первую очередь?';
   const P = {
     anna: {
-      name: 'Anna', role: 'Team lead, claims', who: 'Team lead · gives clear examples',
-      answer1: 'Yes, this March. We had a big storm, and the number of claims roughly doubled overnight. There are eight of us, and suddenly we had around four hundred open cases instead of two hundred. On the Monday I sat down with my two most experienced colleagues and we agreed: storm damage first, because those people had water in their homes. Routine policy changes could wait a week. I told the whole team that same morning, so nobody had to guess what to work on.',
-      turn: 'Anna has told you what happened and what she did. What do you ask next?',
+      name: 'Anna', role: 'Руководитель группы, урегулирование убытков', who: 'Руководитель группы · отвечает чёткими примерами',
+      answer1: 'Да, в марте. Прошёл сильный ураган, и заявлений за одну ночь стало примерно вдвое больше. Нас восемь человек — и вдруг вместо двухсот открытых дел около четырёхсот. В понедельник я села с двумя самыми опытными коллегами, и мы решили: сначала дела по урагану, потому что у людей вода в домах. Плановые изменения полисов подождут неделю. В то же утро я сказала это всей команде, чтобы никто не гадал, за что хвататься.',
+      turn: 'Anna рассказала, что случилось и что она сделала. Что спросите дальше?',
       options: [
-        { id: 'good', text: 'And how did it work out in the end?' },
-        { id: 'w1', text: 'How did the team take it?', reply: 'Fine, really. They were glad someone made the call, so they didn’t have to decide case by case.',
-          fb: 'A fair question, but the most important part is still missing: whether her plan actually worked.',
-          find: { check: 'result', why: 'You asked how the team felt about the plan. Whether the plan worked was still open.', better: 'And how did it work out in the end?' } },
-        { id: 'move', text: 'Clear, thanks. Let’s move on to the next point.',
-          fb: 'Too early. You know what happened and what Anna did, but not whether it worked.',
-          find: { check: 'result', why: 'You moved on before hearing whether her plan worked.', better: 'And how did it work out in the end?' } },
+        { id: 'good', text: 'И чем всё в итоге закончилось?' },
+        { id: 'w1', text: 'А как это восприняла команда?', reply: 'Нормально, правда. Все были рады, что кто-то принял решение и не нужно ломать голову над каждым делом.',
+          fb: 'Вопрос уместный, но главное пока неизвестно: сработал ли её план.',
+          find: { check: 'result', why: 'Вы спросили, как команда приняла план. А сработал ли он, так и осталось неясно.', better: 'И чем всё в итоге закончилось?' } },
+        { id: 'move', text: 'Понятно, спасибо. Перейдём к следующему вопросу.',
+          fb: 'Слишком рано. Вы знаете, что случилось и что сделала Anna, но не знаете, сработало ли это.',
+          find: { check: 'result', why: 'Вы пошли дальше, не узнав, сработал ли её план.', better: 'И чем всё в итоге закончилось?' } },
       ],
-      answer2: 'It took us about two weeks to clear the backlog. The first week was rough: some customers complained because their policy changes were late. But every storm case was picked up within a few days, and by the end of the month we were back to our normal response times.',
-      goodFb: 'Now you have the whole example: what happened, what Anna did, and how it turned out.',
+      answer2: 'Завал мы разгребли примерно за две недели. Первая неделя далась тяжело: некоторые клиенты жаловались, что изменения в полисах задерживаются. Но каждое дело по урагану мы брали в работу за несколько дней, а к концу месяца вернулись к обычным срокам ответа.',
+      goodFb: 'Теперь пример полный: что случилось, что сделала Anna и чем всё закончилось.',
       rows: [
-        ['Situation', 'In March a storm roughly doubled the claims: about 400 open cases for a team of eight, instead of 200.'],
-        ['Action', 'Agreed with two experienced colleagues to handle storm damage first and pause routine policy changes for a week; told the whole team the same morning.'],
-        ['Result', 'Backlog cleared in about two weeks; every storm case picked up within a few days. Some complaints about late policy changes in the first week; normal response times by the end of the month.'],
-        ['Quote', '“Storm damage first, because those people had water in their homes.”', 'q'],
+        ['Ситуация', 'В марте из-за урагана заявлений стало примерно вдвое больше: около 400 открытых дел на восемь человек вместо 200.'],
+        ['Действия', 'С двумя опытными коллегами решила сначала заняться делами по урагану, а плановые изменения полисов отложить на неделю; в то же утро сказала об этом всей команде.'],
+        ['Результат', 'Завал разобрали примерно за две недели; каждое дело по урагану брали в работу за несколько дней. В первую неделю были жалобы на задержку изменений в полисах; к концу месяца — обычные сроки ответа.'],
+        ['Цитата', '«Сначала дела по урагану, потому что у людей вода в домах»', 'q'],
       ],
       missing: null,
       checks: { concrete: 'done', action: 'done', result: 'done', leading: 'done' },
       ends: {},
-      well: ['You have a complete example for this area. Anna explained what she decided and why, and your last question added the outcome, including the cost: late policy changes and some complaints.'],
+      well: ['Пример по этой области полный. Anna объяснила, что решила и почему, а ваш последний вопрос добавил результат — и его цену: задержки с изменениями полисов и несколько жалоб.'],
     },
     mark: {
-      name: 'Mark', role: 'Shift lead, production', who: 'Shift lead · speaks in generalities',
-      answer1: 'That happens all the time in production, to be honest. For me it’s simple: safety comes first, then customer orders, and everything else waits. We go through the list at the start of every shift, and I tell people straight away what can wait. That way nobody wastes time on the wrong things.',
-      turn: 'Mark has told you his rule, but not one real situation. What do you ask next?',
+      name: 'Mark', role: 'Начальник смены, производство', who: 'Начальник смены · говорит общими словами',
+      answer1: 'Да у нас на производстве так постоянно, если честно. Для меня всё просто: сначала безопасность, потом заказы клиентов, остальное ждёт. В начале каждой смены проходимся по списку, и я сразу говорю людям, что может подождать. Так ни у кого время не уходит впустую.',
+      turn: 'Mark назвал своё правило, но ни одного реального случая. Что спросите дальше?',
       options: [
-        { id: 'good', text: 'Can you give me an example? When did that last happen?' },
-        { id: 'w1', text: 'How do you decide what counts as urgent?', reply: 'Like I said: safety, then customers. That’s how it works on every shift.',
-          fb: 'He repeats his rule. You still don’t have one real situation to talk about.',
-          find: { check: 'concrete', why: 'You asked about his rule again, so he repeated it. There was still no real situation.', better: 'Can you give me an example? When did that last happen?' } },
-        { id: 'move', text: 'Clear, thanks. Let’s move on to the next point.',
-          fb: 'Too early. You know what Mark says he usually does, not what he actually did.',
-          find: { check: 'concrete', why: 'You moved on with only his general rule.', better: 'Can you give me an example? When did that last happen?' } },
+        { id: 'good', text: 'Можете привести пример? Когда такое было в последний раз?' },
+        { id: 'w1', text: 'А как вы решаете, что срочно, а что нет?', reply: 'Я же говорю: сначала безопасность, потом клиенты. И так каждую смену.',
+          fb: 'Он повторяет своё правило. Реального случая для разговора у вас всё ещё нет.',
+          find: { check: 'concrete', why: 'Вы снова спросили про правило — он его и повторил. Реального случая так и нет.', better: 'Можете привести пример? Когда такое было в последний раз?' } },
+        { id: 'move', text: 'Понятно, спасибо. Перейдём к следующему вопросу.',
+          fb: 'Слишком рано. Вы знаете, что Mark, по его словам, делает обычно, но не знаете, что он сделал на самом деле.',
+          find: { check: 'concrete', why: 'Вы пошли дальше с одним лишь общим правилом.', better: 'Можете привести пример? Когда такое было в последний раз?' } },
       ],
-      answer2: 'Last month, actually. Two people called in sick on the same day, and we had a big order that had to go out on Friday. So I moved everyone onto that order and pushed the machine cleaning to the next week.',
-      goodFb: 'Now you have one real situation instead of his general rule.',
+      answer2: 'Да вот в прошлом месяце. Двое заболели в один день, а у нас большой заказ, который в пятницу надо было отгрузить. Ну я и перевёл всех на этот заказ, а чистку оборудования сдвинул на следующую неделю.',
+      goodFb: 'Теперь у вас реальный случай, а не только общее правило.',
       rows: [
-        ['Situation', 'Last month: two people off sick on the same day, and a big order due on Friday.'],
-        ['Action', 'Moved everyone onto the order and pushed the machine cleaning to the next week.'],
-        ['Result', 'Not mentioned in the conversation.', true],
-        ['Quote', '“Safety comes first, then customer orders, and everything else waits.”', 'q'],
+        ['Ситуация', 'В прошлом месяце: двое заболели в один день, а в пятницу нужно было отгрузить большой заказ.'],
+        ['Действия', 'Перевёл всех на этот заказ, а чистку оборудования сдвинул на следующую неделю.'],
+        ['Результат', 'В разговоре не прозвучал.', true],
+        ['Цитата', '«Сначала безопасность, потом заказы клиентов, остальное ждёт»', 'q'],
       ],
-      missing: 'Missing: how it turned out',
+      missing: 'Не хватает: чем всё закончилось',
       checks: { concrete: 'done', action: 'done', result: 'missing', leading: 'done' },
-      ends: { result: { frag: [['Mark', 'So I moved everyone onto that order and pushed the machine cleaning to the next week.']], why: 'You know what Mark decided, but not whether it worked. Did the order go out on time? What did the delayed cleaning cost? Without that, you can’t tell whether it was a good decision.', better: 'Did the order go out on Friday?' } },
-      well: ['Mark started with a general rule. You asked for an example, and now you have a real one: two people off sick and a big order due on Friday.'],
+      ends: { result: { frag: [['Mark', 'Ну я и перевёл всех на этот заказ, а чистку оборудования сдвинул на следующую неделю.']], why: 'Вы знаете, что решил Mark, но не знаете, сработало ли это. Заказ ушёл вовремя? Во что обошлась отложенная чистка? Без этого не понять, удачным ли было решение.', better: 'Заказ удалось отгрузить в пятницу?' } },
+      well: ['Mark начал с общего правила. Вы попросили пример — и получили реальный случай: двое на больничном, а в пятницу отгрузка большого заказа.'],
     },
     sofia: {
-      name: 'Sofia', role: 'Sales team lead', who: 'Sales team lead · only success stories',
-      answer1: 'The end of last quarter is a good example. We had three big deals about to close and two demos with new clients in the same week. I looked at where the money was, put the whole team on the three deals and moved the demos to the week after. All three deals closed, and we finished the quarter at 112% of target. The team was really proud of that week.',
-      turn: 'Sofia tells a story where everything went well. What do you ask next?',
+      name: 'Sofia', role: 'Руководитель отдела продаж', who: 'Руководитель отдела продаж · только истории успеха',
+      answer1: 'Хороший пример — конец прошлого квартала. В одну неделю у нас сошлись три крупные сделки на закрытии и две демонстрации для новых клиентов. Я посмотрела, где деньги, бросила всю команду на сделки, а демонстрации перенесла на следующую неделю. Все три сделки закрылись, квартал мы завершили на 112% от плана. Команда той неделей очень гордилась.',
+      turn: 'Sofia рассказывает историю, где всё прошло отлично. Что спросите дальше?',
       options: [
-        { id: 'good', text: 'And the two demos you moved: how did those clients take it?' },
-        { id: 'w1', text: 'So everything went to plan?', reply: 'Pretty much, yes. The numbers speak for themselves.',
-          fb: 'A yes/no question makes it easy for her to just confirm the success. Ask openly about the part her decision affected: the demos she moved.',
-          find: { check: 'leading', why: 'A yes/no question let Sofia simply confirm the success, so nothing new came out.', better: 'And the two demos you moved: how did those clients take it?' } },
-        { id: 'move', text: 'Clear, thanks. Let’s move on to the next point.',
-          fb: 'Too early. You only have the success. You don’t know what her decision cost.',
-          find: { check: 'concrete', why: 'You moved on with only the success. What her decision cost was still unknown.', better: 'And the two demos you moved: how did those clients take it?' } },
+        { id: 'good', text: 'А две демонстрации, которые вы перенесли, — как к этому отнеслись клиенты?' },
+        { id: 'w1', text: 'То есть всё пошло по плану?', reply: 'Ну да, в общем-то. Цифры говорят сами за себя.',
+          fb: 'На вопрос «да или нет» проще всего просто подтвердить успех. Спросите открыто о том, на что повлияло её решение: о перенесённых демонстрациях.',
+          find: { check: 'leading', why: 'На вопрос «да или нет» Sofia просто подтвердила успех — ничего нового не прозвучало.', better: 'А две демонстрации, которые вы перенесли, — как к этому отнеслись клиенты?' } },
+        { id: 'move', text: 'Понятно, спасибо. Перейдём к следующему вопросу.',
+          fb: 'Слишком рано. Вы знаете только про успех, но не знаете, чего стоило её решение.',
+          find: { check: 'concrete', why: 'Вы пошли дальше, зная только про успех. Цена её решения осталась за кадром.', better: 'А две демонстрации, которые вы перенесли, — как к этому отнеслись клиенты?' } },
       ],
-      answer2: 'Hm. One of them wasn’t happy, to be honest. Their head of purchasing had cleared his diary for us, and he told me so. We did sign them in the end, but it took two more months. Looking back, I should have called him myself instead of letting my assistant move the meeting.',
-      goodFb: 'Asking about the clients she moved brought out the part that didn’t go so well.',
+      answer2: 'Хм. Честно говоря, один клиент остался недоволен. Их директор по закупкам специально освободил под нас время и прямо мне это сказал. В итоге мы их всё-таки подписали, но ушло на это ещё два месяца. Сейчас понимаю: надо было позвонить ему самой, а не просить ассистента перенести встречу.',
+      goodFb: 'Вопрос о перенесённых демонстрациях вывел на то, что прошло не так гладко.',
       rows: [
-        ['Situation', 'End of last quarter: three big deals closing and two demos with new clients in the same week.'],
-        ['Action', 'Put the whole team on the three deals and moved the demos to the following week.'],
-        ['Result', 'All three deals closed; 112% of the quarter target. One moved client was unhappy and signed two months later.'],
-        ['Quote', '“Looking back, I should have called him myself instead of letting my assistant move the meeting.”', 'q'],
+        ['Ситуация', 'Конец прошлого квартала: в одну неделю — закрытие трёх крупных сделок и две демонстрации для новых клиентов.'],
+        ['Действия', 'Бросила всю команду на три сделки, а демонстрации перенесла на следующую неделю.'],
+        ['Результат', 'Все три сделки закрыты; 112% квартального плана. Один из перенесённых клиентов остался недоволен и подписал договор на два месяца позже.'],
+        ['Цитата', '«Сейчас понимаю: надо было позвонить ему самой, а не просить ассистента перенести встречу»', 'q'],
       ],
       missing: null,
       checks: { concrete: 'done', action: 'done', result: 'done', leading: 'done' },
       ends: {},
-      well: ['Sofia’s first story was all success. Your question about the moved demos showed what it cost, and she said herself what she would do differently next time.'],
+      well: ['Первая история Sofia — сплошной успех. Ваш вопрос о перенесённых демонстрациях показал его цену, и она сама сказала, что в следующий раз поступила бы иначе.'],
     },
     peter: {
-      name: 'Peter', role: 'Head of IT support', who: 'Head of IT support · long-winded, drifts off',
-      answer1: 'Oh, where do I start. You have to understand how things work here. Since the reorganisation, the network team sits in another building, which honestly causes half our problems. Last autumn the project office planned the Windows upgrade for the same month as the new phone system. Nobody asked us, of course. Tickets went through the roof, finance were on the phone every hour, and the project office kept sending emails about deadlines. And the phone supplier, that’s a story of its own…',
-      turn: 'Peter talks about other people and the background. What do you ask next?',
+      name: 'Peter', role: 'Руководитель ИТ-поддержки', who: 'Руководитель ИТ-поддержки · многословен, уходит от темы',
+      answer1: 'Ох, даже не знаю, с чего начать. Тут надо понимать, как у нас всё устроено. После реорганизации сетевики сидят в другом здании, и, честно говоря, от этого половина наших проблем. Прошлой осенью проектный офис поставил обновление Windows на тот же месяц, что и переход на новую телефонию. Нас, конечно, никто не спросил. Заявки посыпались лавиной, финансисты звонили каждый час, а проектный офис слал письма про сроки. А поставщик телефонии — это вообще отдельная песня…',
+      turn: 'Peter рассказывает о других людях и об обстоятельствах. Что спросите дальше?',
       options: [
-        { id: 'good', text: 'Sorry to jump in. With all those tickets coming in, what did you do?' },
-        { id: 'w1', text: 'How did finance react?', reply: 'Oh, finance. Their director called me twice himself. It was their month-end, so every hour counted for them. And the project office, of course, was nowhere to be seen…',
-          fb: 'You followed him into a side story. You still don’t know what Peter did himself.',
-          find: { check: 'action', why: 'You asked about finance, so Peter kept talking about other people. His own part was still missing.', better: 'Sorry to jump in. With all those tickets coming in, what did you do?' } },
-        { id: 'move', text: 'Clear, thanks. Let’s move on to the next point.',
-          fb: 'Too early. You heard a lot about other people, but nothing about what Peter did.',
-          find: { check: 'action', why: 'You moved on before Peter said what he did himself.', better: 'Sorry to jump in. With all those tickets coming in, what did you do?' } },
+        { id: 'good', text: 'Простите, что перебиваю. Когда посыпались все эти заявки, что сделали вы сами?' },
+        { id: 'w1', text: 'А как отреагировали финансисты?', reply: 'Ох, финансисты. Их директор дважды звонил мне сам. У них было закрытие месяца, каждый час на счету. А проектного офиса, конечно, было не видно и не слышно…',
+          fb: 'Вы ушли за ним в боковую историю. Что сделал сам Peter, по-прежнему неизвестно.',
+          find: { check: 'action', why: 'Вы спросили о финансистах — и Peter продолжил говорить о других. Его собственная роль так и осталась неясной.', better: 'Простите, что перебиваю. Когда посыпались все эти заявки, что сделали вы сами?' } },
+        { id: 'move', text: 'Понятно, спасибо. Перейдём к следующему вопросу.',
+          fb: 'Слишком рано. Вы много услышали о других, но ничего о том, что сделал сам Peter.',
+          find: { check: 'action', why: 'Вы пошли дальше, прежде чем Peter сказал, что сделал он сам.', better: 'Простите, что перебиваю. Когда посыпались все эти заявки, что сделали вы сами?' } },
       ],
-      answer2: 'What did I do? Right. I split the team. Four people did nothing but upgrade tickets, and the other five took everything else. And our own planned server work went on hold for three weeks.',
-      goodFb: 'Now you know what Peter did himself, not just what happened around him.',
+      answer2: 'Что сделал я? А, ну да. Я разделил команду. Четверо занимались только заявками по обновлению, а остальные пятеро — всем прочим. А свои плановые работы на серверах мы отложили на три недели.',
+      goodFb: 'Теперь вы знаете, что сделал сам Peter, а не только что творилось вокруг.',
       rows: [
-        ['Situation', 'Last autumn: the Windows upgrade and a new phone system in the same month; tickets rose sharply.'],
-        ['Action', 'Split the team: four people only on upgrade tickets, five on everything else; put the team’s own server work on hold for three weeks.'],
-        ['Result', 'Not mentioned in the conversation.', true],
-        ['Quote', '“I split the team. Four people did nothing but upgrade tickets, and the other five took everything else.”', 'q'],
+        ['Ситуация', 'Прошлой осенью: обновление Windows и переход на новую телефонию в один месяц; заявок резко стало больше.'],
+        ['Действия', 'Разделил команду: четверо — только заявки по обновлению, пятеро — всё остальное; собственные работы команды на серверах отложил на три недели.'],
+        ['Результат', 'В разговоре не прозвучал.', true],
+        ['Цитата', '«Я разделил команду. Четверо занимались только заявками по обновлению, а остальные пятеро — всем прочим»', 'q'],
       ],
-      missing: 'Missing: how it turned out',
+      missing: 'Не хватает: чем всё закончилось',
       checks: { concrete: 'done', action: 'done', result: 'missing', leading: 'done' },
-      ends: { result: { frag: [['Peter', 'And our own planned server work went on hold for three weeks.']], why: 'You know what Peter decided, but not whether it helped. Did the tickets come down? What happened to the server work he put on hold?', better: 'Did splitting the team help? How long until things were back to normal?' } },
-      well: ['Peter’s first answer was all about other people. Your question brought him back to his own part: he split the team and put his own server work on hold.'],
+      ends: { result: { frag: [['Peter', 'А свои плановые работы на серверах мы отложили на три недели.']], why: 'Вы знаете, что решил Peter, но не знаете, помогло ли это. Заявок стало меньше? Что стало с отложенными работами на серверах?', better: 'Разделение команды помогло? Через сколько всё вернулось в норму?' } },
+      well: ['Первый ответ Peter был целиком о других. Ваш вопрос вернул его к собственной роли: он разделил команду и отложил свои работы на серверах.'],
     },
   };
 
   const T = {
-    cue: 'Click on any character to see how it works',
-    cueM: 'Tap any character to see how it works',
+    cue: 'Выберите любого персонажа и посмотрите, как это работает',
+    cueM: 'Коснитесь любого персонажа и посмотрите, как это работает',
     // the welcome
-    tag: 'Practice',
-    welcome: 'Welcome to the <em>Interview Studio</em>',
-    lead: 'A short practice interview, the way your HR team trains before meeting real managers.',
+    tag: 'Тренировка',
+    welcome: 'Добро пожаловать в <em>Интервью-студию</em>',
+    lead: 'Короткое тренировочное интервью. Так ваша HR-команда готовится к встречам с настоящими руководителями.',
     points: [
-      ['Goal', 'One real example per area: the situation, what the person did themselves, and the result.'],
-      ['Guide', 'A ready-made interview guide for the role, built on the six areas. Today: the line manager guide.'],
-      ['AI', 'During the interview, it keeps track of what you have heard and suggests what to ask next. Afterwards, it sorts your notes into a summary. You decide.'],
+      ['Цель', 'По одному реальному примеру на каждую область: ситуация, что человек сделал сам и чем всё закончилось.'],
+      ['Гайд', 'Готовый гайд интервью для этой роли на основе шести областей. Сегодня — гайд для линейного руководителя.'],
+      ['AI', 'По ходу интервью AI отмечает, что вы уже услышали, и подсказывает, о чём спросить дальше. Потом сводит ваши заметки в резюме. Решение за вами.'],
     ],
-    begin: 'Start the interview',
+    begin: 'Начать интервью',
     // the interview
-    askNow: 'Ask now', askThis: 'Ask this', listening: 'I’m listening…', thinking: 'Thinking…', yourTurn: 'Your turn.',
+    askNow: 'Спросить сейчас', askThis: 'Спросить это', listening: 'Слушаю…', thinking: 'Думаю…', yourTurn: 'Ваш ход.',
     // the end of the interview (PracticeResultView's words)
-    complete: ['Interview complete', '1 of 6 areas covered in this short practice.'],
-    area: 'Focus & Prioritisation', completeEx: 'Complete example',
-    making: 'Making the summary…',
+    complete: ['Интервью завершено', 'В этой короткой тренировке — 1 область из 6.'],
+    area: 'Фокус и приоритеты', completeEx: 'Полный пример',
+    making: 'Готовим резюме…',
     // the summary (InterviewSummaryView, SummaryMarks, summaryParts)
-    sumTitle: 'Interview summary', draft: 'Draft · not approved yet', approvedChip: 'Approved {date}',
-    areaNo: '3 · Focus & Prioritisation',
-    tip: 'Worth asking: how it turned out',
-    privateL: 'Only you see this summary. {name} never sees your notes or this summary.',
-    approve: 'Approve summary', approved: 'Approved', undo: 'Undo approval',
+    sumTitle: 'Резюме интервью', draft: 'Черновик · ещё не утверждено', approvedChip: 'Утверждено {date}',
+    areaNo: '3 · Фокус и приоритеты',
+    tip: 'Стоит спросить: чем всё закончилось',
+    privateL: 'Это резюме видите только вы. {name} не увидит ни ваших заметок, ни резюме.',
+    approve: 'Утвердить резюме', approved: 'Утверждено', undo: 'Отменить утверждение',
     // the training debrief (TechniqueFeedbackView, trainingDebrief)
-    debriefMaking: 'Making your feedback…',
-    debrief: 'Feedback on your interview',
-    tabSum: 'Summary', tabFb: 'Feedback',
-    seeFb: 'See feedback on your interview',
-    seeFbSub: 'What your questions brought out, and what was still missing.',
-    debriefSub: 'Your questions, checked against the conversation.',
-    wellTitle: 'What you got from the conversation',
-    checkTitle: { concrete: 'A real example', action: 'What they did themselves', result: 'The outcome', leading: 'Open questions' },
-    checkSub: { concrete: 'One specific situation, not what usually happens', action: 'Their own part, not the team’s or other people’s', result: 'Whether it worked, and what it cost', leading: 'Questions that don’t suggest the answer' },
-    status: { done: 'Achieved', partly: 'Partly achieved', missing: 'Not achieved' },
-    better: 'Next time, ask:',
-    areaDone: 'Ready to finish?', areaDoneSub: 'In a full interview you would carry on with this area, then go on to the next one (4 of 6). This short practice ends here.', finish: 'Finish practice', seeSum: 'See the summary',
-    made: 'Made {date} · The AI feedback is a starting point: check it against the conversation.',
-    end: 'In the Interview Studio, your HR team practises whole interviews like this, with all four characters.',
-    demo: 'Request a demo', demoNote: 'On the website, this opens the demo request form.', again: 'Start again',
-    resultBar: 'Interview with {name} · Result', interviewWith: 'Interview with {name}',
+    debriefMaking: 'Готовим обратную связь…',
+    debrief: 'Обратная связь по вашему интервью',
+    tabSum: 'Резюме', tabFb: 'Обратная связь',
+    seeFb: 'Посмотреть обратную связь по интервью',
+    seeFbSub: 'Что вы выяснили своими вопросами и чего ещё не хватает.',
+    debriefSub: 'Ваши вопросы, сверенные с ходом разговора.',
+    wellTitle: 'Что дал вам разговор',
+    checkTitle: { concrete: 'Реальный пример', action: 'Что человек сделал сам', result: 'Результат', leading: 'Открытые вопросы' },
+    checkSub: { concrete: 'Одна конкретная ситуация, а не «как обычно бывает»', action: 'Его собственная роль, а не команды или других людей', result: 'Сработало ли это и чего стоило', leading: 'Вопросы, которые не подсказывают ответ' },
+    status: { done: 'Выполнено', partly: 'Выполнено частично', missing: 'Не выполнено' },
+    better: 'В следующий раз спросите:',
+    areaDone: 'Готовы завершить?', areaDoneSub: 'В полном интервью вы продолжили бы эту область, а потом перешли к следующей (4 из 6). Короткая тренировка на этом заканчивается.', finish: 'Завершить тренировку', seeSum: 'Посмотреть резюме',
+    made: 'Создано {date} · Обратная связь AI — отправная точка: сверьте её с разговором.',
+    end: 'В Интервью-студии ваша HR-команда так же отрабатывает интервью целиком — со всеми четырьмя персонажами.',
+    demo: 'Запросить демо', demoNote: 'На сайте здесь откроется форма заявки на демо.', again: 'Начать заново',
+    resultBar: 'Интервью: {name} · Результат', interviewWith: 'Интервью: {name}',
   };
 
   const $ = (id) => document.getElementById(id);
@@ -745,7 +750,7 @@
 
   const scrollDown = () => { lines.scrollTop = lines.scrollHeight; };
   const add = (html) => { lines.insertAdjacentHTML('beforeend', html); scrollDown(); };
-  const say = (who, text) => (who === 'you' && lines.querySelectorAll('.ln, .note').forEach((x) => x.classList.add('old')), add('<p class="ln ' + (who === 'you' ? 'you' : '') + '"><b>' + (who === 'you' ? 'You:' : C.name + ':') + '</b>' + text + '</p>'));
+  const say = (who, text) => (who === 'you' && lines.querySelectorAll('.ln, .note').forEach((x) => x.classList.add('old')), add('<p class="ln ' + (who === 'you' ? 'you' : '') + '"><b>' + (who === 'you' ? 'Вы:' : C.name + ':') + '</b>' + text + '</p>'));
   const note = (kind, text) => add('<p class="note ' + kind + '">' + (kind === 'good' ? ICON.check : ICON.info) + '<span>' + text + '</span></p>');
 
   const BARS = [6, 12, 18, 10, 16, 8, 14, 20, 9, 15, 7, 13].map((h, i) => '<i style="height:' + h + 'px;animation-delay:' + (i % 6) * 120 + 'ms"></i>').join('');
@@ -760,7 +765,7 @@
   const think = () => aiBox('<p class="ai-st">' + SPIN + T.thinking + '</p>');
 
   async function answer(text, me, ms) {
-    add('<p class="busy" id="busy">' + ICON.load + ' ' + C.name + ' is answering…</p>');
+    add('<p class="busy" id="busy">' + ICON.load + ' ' + C.name + ' отвечает…</p>');
     await wait(ms);
     if (me !== run) return false;
     $('busy')?.remove();
@@ -832,8 +837,9 @@
     $('seesum').focus({ preventScroll: true });
   }
 
-  const dateLong = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
-  const stamp = () => new Intl.DateTimeFormat('en-GB', { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }).format(new Date());
+  const RU_M = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+  const dateLong = ((d) => d.getDate() + ' ' + RU_M[d.getMonth()] + ' ' + d.getFullYear())(new Date());
+  const stamp = () => { const d = new Date(); return d.getDate() + ' ' + RU_M[d.getMonth()] + ', ' + String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0'); };
   const logo = document.querySelector('.brand img').src;
   let approvedAt = null;
   function wireApprove() {
@@ -851,7 +857,7 @@
     const checks = JSON.parse(JSON.stringify(C.checks));
     const finds = { concrete: [], action: [], result: [], leading: [] };
     C.options.filter((o) => o.id !== 'good' && used.includes(o.id)).forEach((o) => {
-      finds[o.find.check].push({ frag: o.reply ? [['Interviewer', o.text], [C.name, o.reply]] : [['Interviewer', o.text]], why: o.find.why, better: o.find.better });
+      finds[o.find.check].push({ frag: o.reply ? [['Интервьюер', o.text], [C.name, o.reply]] : [['Интервьюер', o.text]], why: o.find.why, better: o.find.better });
       if (checks[o.find.check] === 'done') checks[o.find.check] = 'partly';
     });
     Object.entries(C.ends).forEach(([k, f]) => finds[k].push(f));
@@ -868,7 +874,7 @@
   async function report(me) {
     approvedAt = null; fbMade = false;
     const repv = $('repv');
-    const meta = [['Manager', C.name + ', ' + C.role], ['Guide', 'Line manager guide'], ['Date', dateLong], ['Made from', 'The conversation text']];
+    const meta = [['Руководитель', C.name + ', ' + C.role], ['Гид', 'Гид для линейного руководителя'], ['Дата', dateLong], ['Источник', 'Текст беседы']];
     repv.innerHTML = '<div class="rep-bar"><img src="' + IMG[key] + '" alt=""><span>' + T.resultBar.replace('{name}', C.name) + '</span></div>' +
       '<div class="tabs" role="tablist"><button class="tab on" role="tab" id="tab-sum" aria-selected="true"><i>1</i>' + T.tabSum + '</button><button class="tab" role="tab" id="tab-fb" aria-selected="false"><i>2</i>' + T.tabFb + '</button></div>' +
       '<div id="pane-sum"><div class="rep"><div class="rep-in"><div class="rep-top"><span class="brand"><img src="' + logo + '" alt="">Behavency</span></div>' +

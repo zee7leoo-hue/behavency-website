@@ -1,4 +1,4 @@
-// Desktop "How it runs" in the agreed timeline design (Experimental/Timeline.png, 23 Nov).
+// Desktop "Как это проходит" in the agreed timeline design (Experimental/Timeline.png, 23 Nov).
 // The site's own section is hidden and this one is placed where it was. Remove this file and its <script> tag to go back.
 (function () {
   const CSS = `
@@ -30,19 +30,19 @@
   `;
   const WHO = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="7.2" r="3.3"/><path d="M5.6 19.5c0-3.4 2.9-5.9 6.4-5.9s6.4 2.5 6.4 5.9v.5H5.6z"/><circle cx="5.2" cy="9" r="2.4" opacity=".75"/><path d="M.8 18.6c0-2.6 1.9-4.4 4.4-4.4.7 0 1.4.2 2 .5-1.4 1.1-2.3 2.8-2.4 4.7H.8z" opacity=".75"/><circle cx="18.8" cy="9" r="2.4" opacity=".75"/><path d="M23.2 18.6c0-2.6-1.9-4.4-4.4-4.4-.7 0-1.4.2-2 .5 1.4 1.1 2.3 2.8 2.4 4.7h4z" opacity=".75"/></svg>';
   const STEPS = [
-    ['Week 1', 'Kick-off', 'We agree the goals, the group and the timeline. Participants get their invitations.', 'You and Behavency'],
-    ['Weeks 2–4', 'Assessment', 'About <b>1.5 hours per</b> person, done at their own pace.', 'Participants'],
-    ['Weeks 4–6', 'Team game and reflection', 'A <b>15-minute intro</b>, a <b>45-minute game</b> and a <b>90-minute reflection</b>, then the team’s Insight Report.', 'Participants and facilitator'],
-    ['From week 6', 'Training and Masterplans', '<b>Programmes</b> matched to each person’s priorities. Length depends on the programmes chosen.', 'Participants'],
-    ['3 months after training', 'Re&#8209;assessment', 'The same questionnaires, the same people, compared with the starting point.', 'Participants'],
+    ['Неделя 1', 'Старт', 'Согласовываем цели, состав группы и сроки. Участники получают приглашения.', 'Вы и Behavency'],
+    ['Недели 2–4', 'Оценка', 'Около <b>1,5 часа на</b> человека, в своём темпе.', 'Участники'],
+    ['Недели 4–6', 'Командная игра и разбор', '<b>15 минут вводной части</b>, <b>45 минут игры</b> и <b>90 минут разбора</b>, затем — аналитический отчёт команды.', 'Участники и фасилитатор'],
+    ['С 6-й недели', 'Обучение и мастер-планы', '<b>Программы</b> под приоритеты каждого. Сроки зависят от выбранных программ.', 'Участники'],
+    ['Через 3 месяца после обучения', 'Повторная оценка', 'Те же опросники, те же люди — сравнение с исходной точкой.', 'Участники'],
   ];
   const HTML = `<section class="hz" id="how-it-runs" data-hz="1"><div class="hz-card">
-    <div class="hz-eb">How it runs</div>
-    <h2 class="hz-ttl">How long it takes, <em>step by step.</em></h2>
-    <p class="hz-lead">From kick-off to re-assessment: what happens when, and who is involved.</p>
+    <div class="hz-eb">Как это проходит</div>
+    <h2 class="hz-ttl">Сроки — <em>шаг за шагом.</em></h2>
+    <p class="hz-lead">От старта до повторной оценки: что, когда и с чьим участием.</p>
     <ol class="hz-tl">${STEPS.map(([when, t, p, w], i) => `<li class="hz-st"><span class="hz-dot">${i + 1}</span><span class="hz-when">${when}</span><h3>${t}</h3><p>${p}</p><div class="hz-who">${WHO}<span>${w}</span></div></li>`).join('')}</ol>
   </div></section>`;
-  // placed right after "How we measure" (the site's old How it runs section is no longer in the page, 23 Nov)
+  // placed right after "Как мы измеряем" (the site's old Как это проходит section is no longer in the page, 23 Nov)
   const swap = () => {
     const old = document.querySelector('section#how-it-runs:not([data-hz])');
     if (old) { old.id = 'how-it-runs-old'; old.style.setProperty('display', 'none', 'important'); }

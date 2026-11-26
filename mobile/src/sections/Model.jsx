@@ -26,7 +26,7 @@ export default function Model({ single = false }) {
       </div>
 
       <h2 className="bm-title rv" style={{ '--i': 1 }}>
-        One framework. <em>Different levels of the organisation.</em>
+        Одна модель. <em>Different levels of the organisation.</em>
       </h2>
 
       <p className="bm-text rv" style={{ '--i': 2 }}>
@@ -50,7 +50,7 @@ export default function Model({ single = false }) {
 
         <div className="bm-lab bm-lab--l">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.4" r="3.6" /><path d="M4.6 20.2c0-4 3.3-6.4 7.4-6.4s7.4 2.4 7.4 6.4" /></svg>
-          <span>Line<br />managers</span>
+          <span>Линейные<br />managers</span>
         </div>
         <div className="bm-lab bm-lab--c">
           <svg viewBox="0 0 34 26" aria-hidden="true"><circle cx="11" cy="7.5" r="4.4" /><circle cx="22.4" cy="6.6" r="3.9" /><path d="M2.4 23.6c0-4.8 3.7-7.6 8.6-7.6s8.6 2.8 8.6 7.6" /><path d="M20.2 15.4c.8-.3 1.7-.4 2.5-.4 4.4 0 8.4 2.4 8.4 7" /></svg>
@@ -58,7 +58,7 @@ export default function Model({ single = false }) {
         </div>
         <div className="bm-lab bm-lab--r">
           <svg viewBox="0 0 38 26" aria-hidden="true"><circle cx="19" cy="6" r="4.4" /><circle cx="7.4" cy="10.4" r="3.4" /><circle cx="30.6" cy="10.4" r="3.4" /><path d="M10.6 23.6c0-4.6 3.5-7.4 8.4-7.4s8.4 2.8 8.4 7.4" /><path d="M2 22.4c0-3.2 2.2-5.2 5.4-5.2M36 22.4c0-3.2-2.2-5.2-5.4-5.2" /></svg>
-          <span>Teams</span>
+          <span>Команды</span>
         </div>
 
         <div className="bm-pill">Same areas. Different expectations.</div>
@@ -73,7 +73,7 @@ export default function Model({ single = false }) {
       <div className="bm-areas">
         <h2 className="bm-areas-title rv" style={{ '--i': 0 }}>The six areas of effectiveness</h2>
         <p className="bm-areas-sub rv" style={{ '--i': 1 }}>Explore the behavioural areas of effectiveness across three organisational levels.</p>
-        <div className="bm-tabs rv" style={{ '--i': 2, '--lc': level.color }} role="tablist" aria-label="Organisational level">
+        <div className="bm-tabs rv" style={{ '--i': 2, '--lc': level.color }} role="tablist" aria-label="Уровень организации">
           {LEVELS.map((l, i) => (
             <button key={l.id} type="button" role="tab" aria-selected={lv === i} className={`bm-tab ${lv === i ? 'is-on' : ''}`} style={{ '--tc': l.color }} onClick={() => setLv(i)}>{l.label}</button>
           ))}

@@ -5,10 +5,10 @@ import { ArrowRight } from 'lucide-react'
 import './StageBuild.css'
 
 const modules = [
-  { area: 'Clarity & Alignment', module: 'Effective Goal Setting', format: 'E-learning · 4h', color: '#1E3A5F' },
-  { area: 'Clarity & Alignment', module: 'Situational Leadership', format: 'In-Person · 1 day', color: '#1E3A5F' },
-  { area: 'Execution & Accountability', module: 'Effective Delegation', format: 'Blended · 3h', color: '#B45309' },
-  { area: 'Collaboration & Influence', module: 'Influencing Without Authority', format: 'Live Online · 6h', color: '#0F766E' },
+  { area: 'Ясность и согласованность', module: 'Эффективная постановка целей', format: 'E-learning · 4h', color: '#1E3A5F' },
+  { area: 'Ясность и согласованность', module: 'Ситуационное лидерство', format: 'In-Person · 1 day', color: '#1E3A5F' },
+  { area: 'Исполнение и ответственность', module: 'Эффективное делегирование', format: 'Blended · 3h', color: '#B45309' },
+  { area: 'Сотрудничество и влияние', module: 'Влияние без формальной власти', format: 'Live Online · 6h', color: '#0F766E' },
 ]
 
 export default function StageBuild() {

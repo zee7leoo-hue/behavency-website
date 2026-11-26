@@ -1,24 +1,24 @@
 import React from 'react'
 import './WhyAreasMatter.css'
 
-/* "Why these areas matter" — six research figures in a 3 × 2 grid, with the AI callout as a column on the right. */
+/* "Почему эти области важны" — six research figures in a 3 × 2 grid, with the AI callout as a column on the right. */
 
 const CARDS = [
-  { label: 'Clarity & Alignment', stat: '4.9×', body: 'Teams that line their work up with clear, visible goals are 4.9 times more likely to meet deadlines.', src: 'Atlassian, State of Teams 2025', href: 'https://www.atlassian.com/blog/state-of-teams-2025' },
-  { label: 'Trust & Inclusion', stat: '3%', post: 'vs 12%', body: 'Where people feel safe to speak up, 3% are likely to quit within a year. Where they feel least safe, 12% are.', src: 'BCG, 2024', href: 'https://www.bcg.com/publications/2024/psychological-safety-levels-playing-field-for-employees' },
-  { label: 'Focus & Prioritisation', stat: '4.6×', body: 'Teams that have a way to identify their top-priority work are 4.6 times more likely to be productive.', src: 'Atlassian, State of Teams 2024', href: 'https://www.atlassian.com/blog/state-of-teams-2024' },
-  { label: 'Execution & Accountability', stat: '3×', body: 'Managers whose leaders hold everyone responsible for great performance are three times as likely to be engaged (51% vs 17%).', src: 'Gallup, 2026', href: 'https://www.gallup.com/workplace/703379/accountability-leadership-greatest-weakness.aspx' },
-  { label: 'Collaboration & Influence', stat: '39%', body: 'Teams could raise their productivity by 39% on average if they improved how they collaborate.', src: 'i4cp, 2024', href: 'https://www.i4cp.com/press-releases/rethinking-teams-can-lead-to-a-39-productivity-improvement-according-to-new-i4cp-research' },
-  { label: 'Learning & Adaptability', stat: '2×', body: 'Organisations that prioritise developing people’s capabilities are twice as likely to have better financial and business results.', src: 'Deloitte, Global Human Capital Trends 2025', href: 'https://www.deloitte.com/content/dam/insights/articles/2025/glob187692_global-human-capital-trends/DI_2025-Global-Human-Capital-Trends.pdf' },
+  { label: 'Ясность и согласованность', stat: '4,9×', body: 'Команды, у которых работа выстроена вокруг чётких и видимых всем целей, в 4,9 раза чаще укладываются в сроки.', src: 'Atlassian, State of Teams 2025', href: 'https://www.atlassian.com/blog/state-of-teams-2025' },
+  { label: 'Доверие и инклюзивность', stat: '3%', post: 'против 12%', body: 'Там, где люди не боятся говорить открыто, за год, скорее всего, уйдут 3%. Там, где боятся больше всего, — 12%.', src: 'BCG, 2024', href: 'https://www.bcg.com/publications/2024/psychological-safety-levels-playing-field-for-employees' },
+  { label: 'Фокус и приоритеты', stat: '4,6×', body: 'Команды, у которых есть способ выделять главные задачи, в 4,6 раза чаще работают продуктивно.', src: 'Atlassian, State of Teams 2024', href: 'https://www.atlassian.com/blog/state-of-teams-2024' },
+  { label: 'Исполнение и ответственность', stat: '3×', body: 'Руководители, чьи начальники спрашивают со всех за высокие результаты, втрое чаще вовлечены в работу (51% против 17%).', src: 'Gallup, 2026', href: 'https://www.gallup.com/workplace/703379/accountability-leadership-greatest-weakness.aspx' },
+  { label: 'Сотрудничество и влияние', stat: '39%', body: 'Если команды наладят совместную работу, их продуктивность может вырасти в среднем на 39%.', src: 'i4cp, 2024', href: 'https://www.i4cp.com/press-releases/rethinking-teams-can-lead-to-a-39-productivity-improvement-according-to-new-i4cp-research' },
+  { label: 'Обучение и адаптивность', stat: '2×', body: 'Организации, где развивать навыки людей — приоритет, вдвое чаще показывают лучшие финансовые и бизнес-результаты.', src: 'Deloitte, Global Human Capital Trends 2025', href: 'https://www.deloitte.com/content/dam/insights/articles/2025/glob187692_global-human-capital-trends/DI_2025-Global-Human-Capital-Trends.pdf' },
 ]
 
 export default function WhyAreasMatter() {
   return (
-    <section className="wm" id="why-areas-matter" aria-label="Why these areas matter">
+    <section className="wm" id="why-areas-matter" aria-label="Почему эти области важны">
       <div className="wm-wrap">
-        <div className="wm-eye">WHY THESE AREAS MATTER</div>
-        <h2 className="wm-h2">Research links these areas to <i>business results.</i></h2>
-        <p className="wm-sub">Research links behaviours like these to results a business can see: performance, productivity and profit.</p>
+        <div className="wm-eye">ПОЧЕМУ ЭТИ ОБЛАСТИ ВАЖНЫ</div>
+        <h2 className="wm-h2">Исследования связывают эти области <i>с результатами бизнеса.</i></h2>
+        <p className="wm-sub">Исследования связывают такое поведение с тем, что бизнес видит в цифрах: результативностью, производительностью и прибылью.</p>
         <div className="wm-layout">
           <div className="wm-grid">
             {CARDS.map((k) => (
@@ -31,11 +31,11 @@ export default function WhyAreasMatter() {
             ))}
           </div>
           <aside className="wm-ai">
-            <div className="wm-ai-lead">And AI won’t build them for you</div>
+            <div className="wm-ai-lead">И AI не разовьёт их за вас</div>
             <div className="wm-ai-row">
               <div className="wm-n">42%</div>
               <div>
-                <p>of people who received low-effort, AI-generated work from a colleague said they trust that colleague less.</p>
+                <p>тех, кому коллега присылал небрежную работу, сделанную AI, говорят, что стали меньше ему доверять.</p>
                 <a href="https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity" target="_blank" rel="noopener">BetterUp Labs &amp; Stanford Social Media Lab, Harvard Business Review, 2025</a>
               </div>
             </div>

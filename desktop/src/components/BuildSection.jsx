@@ -60,11 +60,11 @@ const IconCalendar = () => (
 /* ── Card 01: Team Insights mockup ── */
 const TeamInsightsMockup = () => {
   const bars = [
-    { label: 'Collaboration', color: '#ef4444', width: '82%' },
-    { label: 'Communication', color: '#f59e0b', width: '68%' },
-    { label: 'Accountability', color: '#f59e0b', width: '54%' },
-    { label: 'Adaptability', color: '#22c55e', width: '78%' },
-    { label: 'Psychological Safety', color: '#22c55e', width: '62%' },
+    { label: 'Сотрудничество', color: '#ef4444', width: '82%' },
+    { label: 'Коммуникация', color: '#f59e0b', width: '68%' },
+    { label: 'Ответственность', color: '#f59e0b', width: '54%' },
+    { label: 'Адаптивность', color: '#22c55e', width: '78%' },
+    { label: 'Психологическая безопасность', color: '#22c55e', width: '62%' },
   ];
   const navItems = ['Overview', 'Team Dynamics', 'Strengths', 'Development Areas', 'Role Balance'];
 
@@ -121,7 +121,7 @@ const TeamInsightsMockup = () => {
 const RecommendedMockup = () => {
   const recs = [
     {
-      title: 'Psychological Safety',
+      title: 'Психологическая безопасность',
       sub: 'Building openness, trust & speaking up',
       color: '#f87171',
       icon: (
@@ -201,7 +201,7 @@ const MasterplanMockup = () => {
               <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
             </svg>
           </div>
-          <span className="bs-mock-title">Masterplan</span>
+          <span className="bs-mock-title">Мастер-план</span>
         </div>
       </div>
       <div className="bs-mock-mp-section">
@@ -217,7 +217,7 @@ const MasterplanMockup = () => {
       </div>
       <div className="bs-mock-mp-tabs">
         <span className="bs-mock-mp-tab bs-mock-mp-tab--active">Your tools</span>
-        <span className="bs-mock-mp-tab">Progress</span>
+        <span className="bs-mock-mp-tab">Прогресс</span>
         <span className="bs-mock-mp-tab">Resources</span>
       </div>
       <div className="bs-mock-mp-tools">
@@ -302,9 +302,9 @@ export default function BuildSection() {
 
   const formats = [
     { icon: <IconMonitor />, label: 'E-learning' },
-    { icon: <IconUsers2 />, label: 'Live online' },
-    { icon: <IconPerson />, label: 'In-person' },
-    { icon: <IconBlend />, label: 'Blended' },
+    { icon: <IconUsers2 />, label: 'Онлайн с тренером' },
+    { icon: <IconPerson />, label: 'Очно' },
+    { icon: <IconBlend />, label: 'Смешанный формат' },
   ];
 
   return (
@@ -318,7 +318,7 @@ export default function BuildSection() {
               ref={iframeRef}
               src="/showcase-desktop/index.html"
               className="bs-animation-frame"
-              title="How a priority becomes a programme and a Masterplan"
+              title="Как приоритет становится программой и мастер-планом"
               scrolling="no"
               frameBorder="0"
               loading="lazy"
@@ -329,9 +329,9 @@ export default function BuildSection() {
 
           {/* Header (right) */}
           <div className="bs-header">
-            <StagePill num="03" title="Build" sub="Develop the right capabilities" tone="orange" />
-            <h2 className="bs-heading">Turn insights into<br /><em>targeted development</em></h2>
-            <p className="bs-subheading">Each person’s results point to the programmes that matter most for them. Every programme comes with a Masterplan: a practical plan to use it at work.</p>
+            <StagePill num="03" title="Build" sub="Развить нужные навыки" tone="orange" />
+            <h2 className="bs-heading">От выводов —<br /><em>к точечному развитию</em></h2>
+            <p className="bs-subheading">Результаты каждого подсказывают, какие программы ему важнее всего. К каждой программе есть мастер-план — практический план, как применить её в работе.</p>
           </div>
         </div>
 

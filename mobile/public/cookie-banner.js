@@ -1,6 +1,6 @@
 // Cookie banner for both sites (23 Nov). Google Analytics may only run after the visitor accepts.
 // For the developer: load the Google Analytics tag as usual. This file sets Google's consent mode to "denied" first
-// and switches analytics_storage to "granted" only after "Accept all". The choice is kept in localStorage ("bhv-consent").
+// and switches analytics_storage to "granted" only after "Принять все". The choice is kept in localStorage ("bhv-consent").
 // "Cookie settings" in the footer reopens the banner (window.bhvCookieSettings).
 (function () {
   window.dataLayer = window.dataLayer || [];
@@ -11,7 +11,7 @@
   const choice0 = read();
   window.gtag('consent', 'default', { analytics_storage: choice0 === 'all' ? 'granted' : 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
 
-  // Google Analytics 4 (25 Nov): loaded only after "Accept all", and only on behavency.com (not on preview links).
+  // Google Analytics 4 (25 Nov): loaded only after "Принять все", and only on behavency.com (not on preview links).
   const GA_ID = 'G-TR5G2JJ0YP';
   let gaOn = false;
   const loadGA = () => {
@@ -36,10 +36,10 @@
   .ck-btns button:focus-visible { outline: 3px solid #5a50c8; outline-offset: 2px; }
   @media (max-width: 560px) { .ck { left: 16px; right: 16px; bottom: 16px; width: auto; padding: 18px 18px 16px; } }
   @media (prefers-reduced-motion: reduce) { .ck { transition: none; } }`;
-  const HTML = `<div class="ck" role="dialog" aria-live="polite" aria-label="Cookie choice">
-    <b>Cookies on this site</b>
-    <p>We use necessary cookies to make the site work. With your permission we also use Google Analytics to see how the site is used and improve it. <a data-ck-privacy>Privacy Policy</a></p>
-    <div class="ck-btns"><button type="button" class="ck-all">Accept all</button><button type="button" class="ck-nec">Only necessary</button></div>
+  const HTML = `<div class="ck" role="dialog" aria-live="polite" aria-label="Выбор cookie">
+    <b>Файлы cookie на этом сайте</b>
+    <p>Необходимые файлы cookie нужны, чтобы сайт работал. С вашего согласия мы также подключаем Google Analytics: так мы видим, как пользуются сайтом, и делаем его лучше. <a data-ck-privacy>Политика конфиденциальности</a></p>
+    <div class="ck-btns"><button type="button" class="ck-all">Принять все</button><button type="button" class="ck-nec">Только необходимые</button></div>
   </div>`;
   let el = null;
   const show = () => { if (el) { el.classList.add('on'); } };

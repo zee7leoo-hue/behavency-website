@@ -7,7 +7,7 @@ export default function DeliverySectionV2() {
     {
       id: 'elearning',
       title: 'E-learning',
-      desc: 'Flexible and self-paced, so teams can learn anytime, anywhere.',
+      desc: 'Flexible and self-paced, so teams can learn anytime, откуда угодно.',
       iconModifier: 'elearning',
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -19,14 +19,14 @@ export default function DeliverySectionV2() {
     },
     {
       id: 'live',
-      title: 'Live online',
+      title: 'Онлайн с тренером',
       desc: 'Interactive and engaging sessions with our expert facilitators.',
       iconModifier: 'live',
       icon: <Users size={24} strokeWidth={2} />,
     },
     {
       id: 'inperson',
-      title: 'In-person',
+      title: 'Очно',
       desc: 'Maximum impact through face-to-face collaboration and hands-on learning.',
       iconModifier: 'inperson',
       icon: (
@@ -39,7 +39,7 @@ export default function DeliverySectionV2() {
     },
     {
       id: 'blended',
-      title: 'Blended',
+      title: 'Смешанный формат',
       desc: 'A tailored combination that fits your team, your goals and your schedule.',
       iconModifier: 'blended',
       icon: (
@@ -59,7 +59,7 @@ export default function DeliverySectionV2() {
         <div className="ds2-left-col">
           <div className="ds2-eyebrow">
             <span className="ds2-eyebrow-line"></span>
-            <span className="ds2-eyebrow-text">THE DEVELOPMENT JOURNEY</span>
+            <span className="ds2-eyebrow-text">ПУТЬ РАЗВИТИЯ</span>
           </div>
           <h2 className="ds2-headline">
             You choose how<br />

@@ -2,7 +2,7 @@ import React from 'react'
 import { useInView } from '../hooks'
 import './HowRuns.css'
 
-/* "How it runs" (mobile): a navy section with an app-style "Programme plan" panel. Inside, the five steps sit on a glowing
+/* "Как это проходит" (mobile): a navy section with an app-style "Programme plan" panel. Inside, the five steps sit on a glowing
    timeline (teal to amber); each step says who is involved, what happens and roughly how long it takes. */
 
 const sv = { fill: 'none', stroke: 'currentColor', strokeWidth: 1.8, strokeLinecap: 'round', strokeLinejoin: 'round' }
@@ -15,18 +15,18 @@ const Clock = (p) => (<svg viewBox="0 0 24 24" {...sv} {...p}><circle cx="12" cy
 const Users = (p) => (<svg viewBox="0 0 24 24" {...sv} {...p}><circle cx="9" cy="8" r="3.2" /><path d="M3 19.5v-.6A4.9 4.9 0 0 1 7.9 14h2.2a4.9 4.9 0 0 1 4.9 4.9v.6M15.6 5a3.2 3.2 0 0 1 0 6.1M18 14.2a4.9 4.9 0 0 1 3 4.6v.7" /></svg>)
 
 const STEPS = [
-  { Icon: Flag, who: 'You and Behavency', t: 'Kick-off', p: 'We agree the goals, the group and the timeline. Participants get their invitations.', d: 'Week 1' },
-  { Icon: Clip, who: 'Participants', t: 'Assessment', p: 'About 1.5 hours per person, done at their own pace.', d: 'Weeks 2–4' },
-  { Icon: Pad, who: 'Participants and facilitator', t: 'Team game and reflection', p: 'A 2.5-hour session, then the team’s Insight Report.', d: 'Weeks 4–6' },
-  { Icon: Cap, who: 'Participants', t: 'Training and Masterplans', p: 'Programmes matched to each person’s priorities. Length depends on the programmes chosen.', d: 'From week 6' },
-  { Icon: Chart, who: 'Participants', t: 'Re-assessment', p: 'The same questionnaires, the same people, compared with the starting point.', d: '3 months after training' },
+  { Icon: Flag, who: 'Вы и Behavency', t: 'Старт', p: 'Согласовываем цели, состав группы и сроки. Участники получают приглашения.', d: 'Неделя 1' },
+  { Icon: Clip, who: 'Участники', t: 'Оценка', p: 'Около 1,5 часа на человека, в своём темпе.', d: 'Недели 2–4' },
+  { Icon: Pad, who: 'Участники и фасилитатор', t: 'Командная игра и разбор', p: 'Сессия на 2,5 часа, затем — аналитический отчёт команды.', d: 'Недели 4–6' },
+  { Icon: Cap, who: 'Участники', t: 'Обучение и мастер-планы', p: 'Программы под приоритеты каждого. Сроки зависят от выбранных программ.', d: 'С 6-й недели' },
+  { Icon: Chart, who: 'Участники', t: 'Повторная оценка', p: 'Те же опросники, те же люди — сравнение с исходной точкой.', d: 'Через 3 месяца после обучения' },
 ]
 
 export default function HowRuns() {
   const [ref, seen] = useInView(0.12)
   return (
     <section ref={ref} className={`hw ${seen ? 'is-in' : ''}`} id="how-it-runs">
-      <div className="hw-pill"><b>How it runs</b><u aria-hidden="true" /><span>From kick-off to measurable change</span></div>
+      <div className="hw-pill"><b>Как это проходит</b><u aria-hidden="true" /><span>From kick-off to measurable change</span></div>
       <h2 className="hw-title">One programme, <em>five clear steps.</em></h2>
       <p className="hw-text">You always know what happens when, and who is involved.</p>
 

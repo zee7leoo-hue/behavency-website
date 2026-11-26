@@ -1,4 +1,4 @@
-// Phone site: About page (opens from the menu as its own full-screen page) and "Log in" in the menu.
+// Phone site: About page (opens from the menu as its own full-screen page) and "Войти" in the menu.
 // Remove this file and its <script> tag to take both out.
 (function () {
   const CSS = `
@@ -28,7 +28,7 @@
   .pab-sy h3 { margin-top: 6px !important; font: 600 16.4px/1.3 Inter, sans-serif; letter-spacing: -.012em; color: #0f1b3d; }
   .pab-sy p { margin-top: 4px !important; font: 400 14.6px/21px Inter, sans-serif; color: #4a5170; }
   .pab-team { margin-top: 40px; padding-top: 30px; border-top: 1px solid #eceaf3; }
-  /* 25 Nov: "Our vision" and "Who we are", between the story and the team */
+  /* 25 Nov: "Наше видение" and "Кто мы", between the story and the team */
   .pab-who { margin-top: 40px; padding-top: 30px; border-top: 1px solid #eceaf3; }
   .pab-who + .pab-who { margin-top: 34px; padding-top: 0; border-top: 0; }
   .pab-in > .pab-who:first-child { margin-top: 4px; padding-top: 0; border-top: 0; }
@@ -72,39 +72,39 @@
   .pab-stage i { font: 700 12px/1 Inter, sans-serif; font-style: normal; letter-spacing: .06em; }
   `;
   const STORY = [
-    ['', '2007', 'OGI Europe is founded', 'We start training managers and their teams: how they lead, decide and work together.'],
-    ['10 years later', '2017', 'Across Europe and Central Asia', 'Our trainers work with managers in more than 30 countries, for companies such as Nestlé, Bayer and Heineken.'],
-    ['5 years later', '2022', 'The realisation', 'Training alone doesn’t change behaviour. People leave inspired, and by Monday the old habits are back. And nothing connects the assessment, the workshop and what happens next.'],
-    ['1 year later', '2023', 'Work on Behavency begins', 'We bring it all into one journey: the assessments, the team game, our trainers and programmes.'],
-    ['3 years later', '2026', 'Behavency launches', 'Identify, Engage, Build and Measure, in one place.'],
+    ['', '2007', 'Основана OGI Europe', 'Начинаем обучать руководителей и их команды: как управлять, принимать решения и работать вместе.'],
+    ['10 лет спустя', '2017', 'В Европе и Центральной Азии', 'Наши тренеры работают с руководителями более чем в 30 странах — в том числе для Nestlé, Bayer и Heineken.'],
+    ['5 лет спустя', '2022', 'Прозрение', 'Сам по себе тренинг поведение не меняет. Люди уходят вдохновлёнными, а к понедельнику возвращаются старые привычки. И оценка, семинар и всё, что после, никак не связаны.'],
+    ['Год спустя', '2023', 'Начинаем работу над Behavency', 'Собираем всё в один путь: оценки, командную игру, наших тренеров и программы.'],
+    ['3 года спустя', '2026', 'Запуск Behavency', 'Identify, Engage, Build и Measure — в одном месте.'],
   ];
-  const TEAM = [['vlad', 'Vlad Plaskov', 'Co-Founder & CEO'], ['slava', 'Slava Turiashvili', 'Co-Founder & CTO'], ['eric', 'Eric Renard', 'Development Director'], ['vadim', 'Vadim Neander', 'Chief Methodologist'], ['keith', 'Keith Parker', 'Lead Facilitator'], ['ashraf', 'Ashraf Hussain', 'Experience Designer']];
+  const TEAM = [['vlad', 'Vlad Plaskov', 'Сооснователь и CEO'], ['slava', 'Slava Turiashvili', 'Сооснователь и CTO'], ['eric', 'Eric Renard', 'Директор по развитию'], ['vadim', 'Vadim Neander', 'Главный методолог'], ['keith', 'Keith Parker', 'Ведущий фасилитатор'], ['ashraf', 'Ashraf Hussain', 'Дизайнер опыта обучения']];
   // 25 Nov: one line per person, under the job title
-  const LINE = {"vlad":"Leads the company and the idea behind the journey.","slava":"Built the platform that connects every step.","vadim":"Keeps the method grounded in research: the six areas, the questionnaires and how results are read.","eric":"Turns the method into programmes managers can use at work.","keith":"Brings the sessions to life, from the team game to the reflection.","ashraf":"Designs how every step looks and feels, for managers, teams and HR."};
-  const HTML = `<div class="pab" role="dialog" aria-modal="true" aria-label="About Behavency">
-    <div class="pab-bar"><button type="button" class="pab-back" data-close><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Back to the site</button></div>
+  const LINE = {"vlad":"Руководит компанией и отвечает за идею, на которой построен путь.","slava":"Создал платформу, которая связывает все шаги.","vadim":"Следит, чтобы методика стояла на исследованиях: шесть областей, опросники и то, как читать результаты.","eric":"Превращает методику в программы, которые руководители могут применять в работе.","keith":"Оживляет сессии — от командной игры до разбора.","ashraf":"Продумывает, как выглядит и ощущается каждый шаг — для руководителей, команд и HR."};
+  const HTML = `<div class="pab" role="dialog" aria-modal="true" aria-label="О Behavency">
+    <div class="pab-bar"><button type="button" class="pab-back" data-close><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Назад на сайт</button></div>
     <main class="pab-in">
-      <div class="pab-who"><div class="pab-eb pab-rise">Our vision</div><h2 class="pab-rise">Managers and teams, <em>pulling the same way</em></h2><p class="pab-rise">We’d like every manager to know how they really come across, every team to know what is expected of it, and every organisation to see what gets in the way. When those three line up, people stop working around each other and start working together. That is what we built Behavency for: helping managers and their teams find common ground, and making it last.</p></div>
-      <div class="pab-who"><div class="pab-eb pab-rise">Who we are</div><h2 class="pab-rise">Built by people who <em>do this work</em></h2><p class="pab-rise">Behavency is made by OGI Europe. Since 2007 we have trained managers and their teams in more than 30 countries, and along the way we have learned what helps people change and what doesn’t. Behavency puts that experience into one journey.</p><p class="pab-rise">It is built by methodologists, assessors, HR specialists, trainers and technology experts working side by side. The six-area model and the questionnaires come from our methodologists, the programmes and workshops from our trainers and facilitators, and the platform that connects every step from our technology team. For HR, that means one partner and one method, from the first assessment to showing what has changed.</p></div>
+      <div class="pab-who"><div class="pab-eb pab-rise">Наше видение</div><h2 class="pab-rise">Руководители и команды <em>заодно</em></h2><p class="pab-rise">Мы хотим, чтобы каждый руководитель знал, каким его видят на самом деле, каждая команда понимала, чего от неё ждут, а каждая организация видела, что мешает. Когда всё это сходится, люди перестают работать в обход друг друга и начинают работать вместе. Ради этого мы и создали Behavency: чтобы руководители и команды нашли общий язык — и не теряли его.</p></div>
+      <div class="pab-who"><div class="pab-eb pab-rise">Кто мы</div><h2 class="pab-rise">Создано людьми, которые <em>сами делают эту работу</em></h2><p class="pab-rise">Behavency создаёт OGI Europe. С 2007 года мы обучаем руководителей и их команды более чем в 30 странах и за эти годы поняли, что помогает людям меняться, а что нет. В Behavency этот опыт собран в один путь.</p><p class="pab-rise">Над ним бок о бок работают методологи, асессоры, HR-специалисты, тренеры и технологи. Модель шести областей и опросники — от наших методологов, программы и семинары — от тренеров и фасилитаторов, а платформа, которая связывает все шаги, — от технологической команды. Для HR это один партнёр и одна методика — от первой оценки до момента, когда видно, что изменилось.</p></div>
       <div class="pab-sep"></div>
-      <span class="pab-pill pab-rise">Our story</span>
-      <h1 class="pab-ttl pab-rise">Why does training fail <em>on Monday morning?</em></h1>
-      <p class="pab-lead pab-rise">For years we watched good training fade by Monday. So we built a way to make the change stick, and to show it.</p>
+      <span class="pab-pill pab-rise">Наша история</span>
+      <h1 class="pab-ttl pab-rise">Почему тренинг <em>не доживает до понедельника?</em></h1>
+      <p class="pab-lead pab-rise">Годами мы видели, как хороший тренинг выветривается к понедельнику. И создали способ закрепить перемены — и показать их.</p>
       <ol class="pab-story">${STORY.map(([g, y, h, p]) => `<li class="pab-sy pab-rise">${g ? `<span class="pab-ago">${g}</span>` : ''}<b>${y}</b><h3>${h}</h3><p>${p}</p></li>`).join('')}</ol>
       <div class="pab-team">
-        <div class="pab-eb pab-rise">The team</div>
-        <h2 class="pab-rise">The minds <em>behind Behavency</em></h2>
-        <p class="pab-lead pab-rise">Nineteen years in training rooms, one clear method, and a platform that holds it together.</p>
+        <div class="pab-eb pab-rise">Команда</div>
+        <h2 class="pab-rise">Кто стоит <em>за Behavency</em></h2>
+        <p class="pab-lead pab-rise">Девятнадцать лет в тренинговых залах, один понятный метод и платформа, на которой всё держится.</p>
         <div class="pab-stack">${TEAM.map(([f, n, r]) => `<div class="pab-pp pab-rise"><img src="team/${f}.jpg" alt="${n}" width="132" height="132" loading="lazy"><div><b>${n}</b><span>${r}</span><em></em><i>${LINE[f]}</i></div></div>`).join('')}</div>
       </div>
-      <div class="pab-end pab-rise"><h2>Want to see it <em>for your managers?</em></h2><button type="button" class="pab-cta" data-cm-open>Request a demo</button></div>
+      <div class="pab-end pab-rise"><h2>Хотите посмотреть, как это будет <em>у ваших руководителей?</em></h2><button type="button" class="pab-cta" data-cm-open>Запросить демо</button></div>
     </main>
   </div>`;
   let pab = null;
   const open = () => {
     if (window.bhvCloseRecruit) window.bhvCloseRecruit();
     pab.classList.add('open'); document.documentElement.classList.add('pab-lock'); pab.scrollTop = 0;
-    if ((window.bhvH ? bhvH() : location.hash) !== '#about') history.pushState({ about: 1 }, '', '#about');
+    if (location.hash !== '#about') history.pushState({ about: 1 }, '', '#about');
   };
   const close = () => { pab.classList.remove('open'); document.documentElement.classList.remove('pab-lock'); };
   window.bhvCloseAbout = () => { if (pab && pab.classList.contains('open')) close(); };
@@ -113,11 +113,11 @@
     if (!pab) {
       const st = document.createElement('style'); st.id = 'about-mobile'; st.textContent = CSS; document.head.appendChild(st);
       const t = document.createElement('div'); t.innerHTML = HTML; pab = t.firstElementChild; document.body.appendChild(pab);
-      pab.addEventListener('click', (e) => { if (e.target.closest('[data-close]')) { if ((window.bhvH ? bhvH() : location.hash) === '#about') history.back(); else close(); } });
-      addEventListener('popstate', () => { if ((window.bhvH ? bhvH() : location.hash) !== '#about') close(); else open(); });
+      pab.addEventListener('click', (e) => { if (e.target.closest('[data-close]')) { if (location.hash === '#about') history.back(); else close(); } });
+      addEventListener('popstate', () => { if (location.hash !== '#about') close(); else open(); });
       const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('shown'); io.unobserve(e.target); } }), { root: pab, rootMargin: '0px 0px -6% 0px' });
       pab.querySelectorAll('.pab-rise').forEach((el, i) => { el.style.transitionDelay = (i < 3 ? i * 90 : 0) + 'ms'; io.observe(el); });
-      if ((window.bhvH ? bhvH() : location.hash) === '#about') open();
+      if (location.hash === '#about') open();
     }
     // menu: the same items as the desktop (The journey with its four stages, Programmes, Recruitment, Packages, About, Log in).
     // The site's own old links are hidden. React may redraw the menu, so this re-checks.
@@ -126,16 +126,16 @@
       const closeMenu = () => { const bg = document.querySelector('.nav-burger[aria-expanded="true"]'); if (bg) bg.click(); };
       const goTo = (el) => { closeMenu(); if (el) setTimeout(() => scrollTo({ top: el.getBoundingClientRect().top + scrollY - 64, behavior: 'smooth' }), 120); };
       const mk = (cls, text, onClick, href) => { const a = document.createElement('a'); a.className = 'pab-item ' + cls; a.textContent = text; a.href = href || '#'; if (onClick) a.addEventListener('click', (e) => { e.preventDefault(); onClick(); }); return a; };
-      const j = mk('pab-journey', 'How it works', null);
+      const j = mk('pab-journey', 'Как это работает', null);
       const sub = document.createElement('div'); sub.className = 'pab-sub';
       ['Identify', 'Engage', 'Build', 'Measure'].forEach((n, i) => { const c = ['#2f6fdb', '#7a4bd6', '#e0761c', '#14a07c'][i]; const s2 = mk('pab-stage', '', () => goTo(document.querySelectorAll('.bpc')[i]), '#' + n.toLowerCase()); s2.innerHTML = '<i style="color:' + c + '">0' + (i + 1) + '</i>' + n; sub.appendChild(s2); });
       j.addEventListener('click', (e) => { e.preventDefault(); j.classList.toggle('open'); });
       const items = [j, sub,
-        mk('', 'Programmes', () => { closeMenu(); if (window.bhvOpenProgrammes) { if (window.bhvLeave) window.bhvLeave(window.bhvOpenProgrammes); else window.bhvOpenProgrammes(); } else goTo(document.querySelector('.tm')); }, '#programmes'),
-        mk('', 'Recruitment', () => { closeMenu(); if (window.bhvOpenRecruit) window.bhvOpenRecruit(); }, '#recruitment'),
-        mk('', 'Packages', () => goTo(document.querySelector('#packages')), '#packages'),
-        mk('pab-about', 'About', () => { closeMenu(); open(); }, '#about'),
-        mk('pab-login', 'Log in', null, 'https://app.behavency.com/login')];
+        mk('', 'Программы', () => { closeMenu(); if (window.bhvOpenProgrammes) { if (window.bhvLeave) window.bhvLeave(window.bhvOpenProgrammes); else window.bhvOpenProgrammes(); } else goTo(document.querySelector('.tm')); }, '#programmes'),
+        mk('', 'Подбор', () => { closeMenu(); if (window.bhvOpenRecruit) window.bhvOpenRecruit(); }, '#recruitment'),
+        mk('', 'Пакеты', () => goTo(document.querySelector('#packages')), '#packages'),
+        mk('pab-about', 'О нас', () => { closeMenu(); open(); }, '#about'),
+        mk('pab-login', 'Войти', null, 'https://app.behavency.com/login')];
       items.forEach((it) => menu.insertBefore(it, cta));
     }
     return false;

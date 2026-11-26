@@ -1,4 +1,4 @@
-// Mock-up: the Interview Studio as a spotlight panel ("The cherry on top"), opened by the same icon as the Structured Interview row.
+// Mock-up: the Interview Studio as a spotlight panel ("Вишенка на торте"), opened by the same icon as the Structured Interview row.
 (function () {
   const css = `
   #interview-studio { margin: 56px 12px 8px !important; padding: 30px 0 30px !important; border-radius: 28px;
@@ -16,7 +16,7 @@
   .chy-ico svg { width: 22px; height: 22px; }
   .chy-name { font: 600 15px/1.2 Inter, Arial, sans-serif; letter-spacing: -.012em; color: #2a2360; }
   #interview-studio .isx-eb { margin-top: 0 !important; color: #5b4cd6 !important; }
-  #interview-studio .chy-top { display: none !important; } /* the small "Structured Interview" tag repeated the row above */
+  #interview-studio .chy-top { display: none !important; } /* the small "Структурированное интервью" tag repeated the row above */
   `;
   const run = () => {
     const box = document.querySelector('#interview-studio .isx-in');
@@ -25,11 +25,11 @@
     if (box.querySelector('.chy-top')) return true;
     const st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
     const top = document.createElement('div'); top.className = 'chy-top';
-    top.innerHTML = '<span class="chy-ico">' + row.outerHTML + '</span><span class="chy-name">Structured Interview</span>';
+    top.innerHTML = '<span class="chy-ico">' + row.outerHTML + '</span><span class="chy-name">Структурированное интервью</span>';
     box.prepend(top);
-    const eb = box.querySelector('.isx-eb'); if (eb) eb.textContent = 'The cherry on top';
+    const eb = box.querySelector('.isx-eb'); if (eb) eb.textContent = 'Вишенка на торте';
     const ld = box.querySelector('.isx-lead');
-    if (ld && !/Interview Studio/.test(ld.textContent)) ld.textContent = ld.textContent.replace('they practise with four AI characters, from easy to challenging.', 'they practise with four AI characters in our Interview Studio, from easy to challenging.');
+    if (ld && !/Interview Studio|Интервью-студи/.test(ld.textContent)) ld.textContent = ld.textContent.replace('they practise with four AI characters, from easy to challenging.', 'они тренируются с четырьмя AI-персонажами в нашей Интервью-студии — от простого к сложному.');
     return true;
   };
   const w = setInterval(() => { if (run()) clearInterval(w); }, 150);

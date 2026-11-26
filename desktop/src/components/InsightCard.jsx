@@ -6,7 +6,7 @@ import './InsightCard.css'
 export default function InsightCard() {
   const AUDIENCES = [
     { Icon: Users, title: 'For HR & facilitators', desc: 'Greater participant self-awareness, engagement and stronger buy-in for subsequent development.' },
-    { Icon: Person, title: 'For participants', desc: 'An engaging experience that makes their assessment tangible and helps them understand their own behaviour.' },
+    { Icon: Person, title: 'Для участников', desc: 'An engaging experience that makes their assessment tangible and helps them understand their own behaviour.' },
   ]
   return (
     <div className="ic-card">

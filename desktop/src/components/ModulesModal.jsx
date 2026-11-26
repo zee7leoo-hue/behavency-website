@@ -36,7 +36,7 @@ export default function ModulesModal({ isOpen, onClose }) {
   const allModules = [
     {
       id: 'leadership',
-      title: 'Leadership Fundamentals',
+      title: 'Основы лидерства',
       desc: 'Build core leadership skills for everyday management.',
       iconBg: '#ffe4ec',
       iconColor: '#e11d48',
@@ -51,7 +51,7 @@ export default function ModulesModal({ isOpen, onClose }) {
     },
     {
       id: 'goals',
-      title: 'Effective Goal Setting',
+      title: 'Эффективная постановка целей',
       desc: 'Set clear goals, drive focus and accountability.',
       iconBg: '#e0f2fe',
       iconColor: '#0284c7',
@@ -79,7 +79,7 @@ export default function ModulesModal({ isOpen, onClose }) {
     },
     {
       id: 'team',
-      title: 'Team Management',
+      title: 'Управление командой',
       desc: 'Build high-performing and engaged teams.',
       iconBg: '#e6fcf5',
       iconColor: '#059669',
@@ -107,7 +107,7 @@ export default function ModulesModal({ isOpen, onClose }) {
     },
     {
       id: 'influencing',
-      title: 'Influencing Without Authority',
+      title: 'Влияние без формальной власти',
       desc: 'Create impact across functions and stakeholders.',
       iconBg: '#e0f2fe',
       iconColor: '#0284c7',
@@ -121,7 +121,7 @@ export default function ModulesModal({ isOpen, onClose }) {
     },
     {
       id: 'conflict',
-      title: 'Conflict Management',
+      title: 'Управление конфликтами',
       desc: 'Turn conflict into constructive conversations.',
       iconBg: '#f3e8ff',
       iconColor: '#9333ea',
@@ -172,7 +172,7 @@ export default function ModulesModal({ isOpen, onClose }) {
     },
     {
       id: 'safety',
-      title: 'Psychological Safety',
+      title: 'Психологическая безопасность',
       desc: 'Build trust, openness and a culture where people can speak up.',
       iconBg: '#e0f8f3',
       iconColor: '#0d9488',
@@ -186,7 +186,7 @@ export default function ModulesModal({ isOpen, onClose }) {
     },
     {
       id: 'cross-functional',
-      title: 'Cross-Functional Collaboration',
+      title: 'Сотрудничество на стыке команд',
       desc: 'Work more effectively across teams and break down silos.',
       iconBg: '#e0f2fe',
       iconColor: '#0284c7',
@@ -266,7 +266,7 @@ export default function ModulesModal({ isOpen, onClose }) {
     },
     {
       id: 'strategic',
-      title: 'Strategic Thinking',
+      title: 'Стратегическое мышление',
       desc: 'See the bigger picture and make better long-term decisions.',
       iconBg: '#ffe4ec',
       iconColor: '#e11d48',
@@ -359,7 +359,7 @@ export default function ModulesModal({ isOpen, onClose }) {
             className={`mm-tab ${activeTab === 'teams' ? 'mm-tab--active' : ''}`}
             onClick={() => setActiveTab('teams')}
           >
-            Teams
+            Команды
           </button>
         </div>
 

@@ -50,6 +50,21 @@ these rules to it; say so in the summary if the link uses fonts these rules don'
 - **`main`**: the live branch. Netlify deploys `main` automatically on every push.
   **Only update `main` when the user explicitly asks to deploy.**
 
+## Russian test site: branch `ru` (from 27 Nov)
+
+- **`ru`**: the Russian desktop + mobile site, for testing only. Netlify builds it as a branch deploy at
+  `https://ru--behavency-website.netlify.app` (branch deploys for `ru` are switched on in Netlify). It never touches
+  behavency.com. "Deploy" still means `main` (English); Russian work is committed and pushed to `ru` only
+  (`git push origin ru`), never merged into `dev` or `main` until the user asks to bring Russian to the main site
+  (then it gets a language switcher).
+- It was made from the user's Russian design links (desktop `TmkqwPqscv2F3QUm6rVoAU`, mobile `7AwiuFdUycRwQpoJrudsrA`): the
+  texts were carried into our own source (`desktop/src`, `mobile/src`) and the Russian design scripts copied into
+  `public/`, so every kept setting (logo, menu bar, demo form to Netlify, fonts, addresses, phone/desktop switch, style C)
+  still applies. Russian-only files: `public/ru-fixes.css` (linked last) and `public/ru-headings.js` on both sites.
+- On `ru` only: `<html lang="ru">`, the Russian page title (also in each `vite.config.js` `addressPages`), a
+  `noindex` robots tag (take it out when Russian goes to the main site), and the Russian "Спасибо" message in
+  `src/netlifyContact.js`. The interest options of the demo form arrive in Netlify in Russian.
+
 ## Sync rule (always follow)
 
 **At the start of every session, before reading or editing anything:**

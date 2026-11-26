@@ -16,11 +16,11 @@ export default function GameCard() {
       <div className="gc-copy">
         <div className="gc-badge">
           <span className="gc-badge-icon"><Gamepad size={28} /></span>
-          <span className="gc-badge-pill">01 – The Game</span>
+          <span className="gc-badge-pill">01 — Игра</span>
         </div>
-        <h3 className="gc-title">The Game</h3>
+        <h3 className="gc-title">Игра</h3>
         <span className="gc-underline" aria-hidden="true" />
-        <p className="gc-sub">A game that makes participants<br />feel their own blind spots.</p>
+        <p className="gc-sub">Игра, в которой участники<br />натыкаются на слепые зоны.</p>
         <p className="gc-text">Numbers on a report don’t always convince people. It’s easy to see a low score and move on. What’s harder is encountering the same behavioural gap yourself — in a real group situation, in real time.</p>
       </div>
 

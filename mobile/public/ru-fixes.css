@@ -1,0 +1,115 @@
+/* Russian-only layout fixes (phone). Copied to mob-ru/ru-fixes.css and linked last from index.html by build-ru.cjs.
+   Russian text is about 15-30% longer and Cyrillic letters are wider. Headings that were single fixed lines may wrap;
+   a few small labels get slightly tighter type. The design stays the same. */
+
+html[lang="ru"] p, html[lang="ru"] li, html[lang="ru"] small { hyphens: auto; -webkit-hyphens: auto; }
+
+/* Hero: "Most managers don't / know where they're / falling short." — Russian line 1 is twice as long */
+html[lang="ru"] .hr-h .hr-l { white-space: normal; }
+
+/* "One model. / Six areas of effectiveness." and "We check / whether development really happens." */
+html[lang="ru"] .nbm-title, html[lang="ru"] .nbm-title em,
+html[lang="ru"] .hm-title, html[lang="ru"] .hm-title span { white-space: normal; }
+
+/* Platform card: the three number tiles (35 Руководители / 24 На обучении / 63% С улучшением) */
+html[lang="ru"] .pf-kpis .pf-kpi span { letter-spacing: -.025em; font-size: 10.8px; }
+
+/* Measure: example card title wraps; area names a little tighter so the longest word clears the bars */
+html[lang="ru"] .ms-card h3 { white-space: normal; }
+html[lang="ru"] .ms-card li p { letter-spacing: -.02em; font-size: 11.6px; }
+
+
+/* ---- Overflow pass (Nov 25): places where Russian text ran out of its box at 360-390 px ---- */
+
+/* Platform card, three number tiles: smaller icon and tighter label so «С улучшением» stays inside its tile */
+html[lang="ru"] #platform .pf-kpi { gap: 4px; padding: 0 5px; }
+html[lang="ru"] #platform .pf-kpi .pf-kpi-ico { transform: scale(.82); margin: 0 -2px; }
+html[lang="ru"] #platform .pf-kpi div { min-width: 0; }
+html[lang="ru"] #platform .pf-kpi div span, html[lang="ru"] #platform .pf-kpi div .pf-small, html[lang="ru"] #platform .pf-kpi div .pf-kpi-dev { font-size: 10px !important; letter-spacing: -.025em !important; white-space: nowrap; }
+/* Platform card, people rows: the line under the name wraps so the score chip stays inside the card */
+html[lang="ru"] #platform .pf-who { min-width: 0; }
+html[lang="ru"] #platform .pf-rows .pf-row:nth-child(n) .pf-who span { white-space: normal !important; }
+html[lang="ru"] #platform .pf-chip { flex: none; white-space: nowrap; }
+
+/* Identify, the two number notes: the first column gets a fixed width so the second sentence takes 3-4 lines, not 5 */
+html[lang="ru"] .id-stat span, html[lang="ru"] .id-stat strong { white-space: normal; }
+html[lang="ru"] .id-stat:first-child { width: 132px; flex: none; }
+
+/* Identify, "Explore five sources": «Профиль управленческого поведения» wraps instead of pushing the arrow out */
+html[lang="ru"] .id-name { white-space: normal; min-width: 0; line-height: 1.25; }
+
+/* Engage picture (score card -> game card): «Ясность и согласованность» ran under the green tick */
+html[lang="ru"] .eg-art text[font-size="24"] { font-size: 20.5px; letter-spacing: -0.4px; }
+
+/* Engage, reflection picture: «С фасилитатором» ran into the second icon; both captions wrap in their half */
+html[lang="ru"] .mk-r2-t.mk-r2-t--b { white-space: normal; font-size: 12.4px; line-height: 1.15; letter-spacing: -.01em; }
+html[lang="ru"] .mk-r2 .mk-r2-t.mk-r2-t--b[style*="19.8%"] { left: 17.4% !important; width: 33%; }
+html[lang="ru"] .mk-r2 .mk-r2-t.mk-r2-t--b[style*="68.6%"] { left: 66% !important; width: 32.4%; }
+html[lang="ru"] .mk-r2 .mk-r2-ic[style*="left: 8%"] { left: 5.4% !important; }
+html[lang="ru"] .mk-r2 .mk-r2-ic[style*="57.6%"] { left: 55% !important; }
+
+/* Learning formats (journey cards, drawn at 4x and scaled down): «Индивидуально» ran past its column */
+html[lang="ru"] .jc-f p { font-size: 31px; line-height: 38px; letter-spacing: -.02em; }
+
+/* Measure example card: wider name column so «Сотрудничество и» fits on one line (2 lines, not 3) */
+html[lang="ru"] .ms-card li { grid-template-columns: 112px minmax(0, 1fr) 58px 36px !important; }
+
+/* Build, the app picture (a frame with its own page; it loads this file too, so rules are scoped to .sc-band):
+   - the four menu tabs did not fit («Мастер-планы» was cut off): long names take two short lines
+   - the area names ran under the bars: they wrap in their column
+   - the red "Priority" tag is a little smaller */
+html[lang="ru"] .sc-band .sc-item { white-space: normal; font-size: 10.8px; line-height: 1.1; letter-spacing: -.01em; padding: 0 5px; text-align: center; justify-content: center; }
+html[lang="ru"] .sc-band .row { white-space: normal; grid-template-columns: 24px minmax(0, 1fr) 46px 32px; font-size: 11px; line-height: 1.12; letter-spacing: -.01em; }
+html[lang="ru"] .sc-band .row .tag { font-size: 8px; letter-spacing: .02em; padding: 1px 5px; margin-left: 3px; }
+/* the training library list: «Доверие и психологическая безопасность» was wider than the list; it may take two lines */
+html[lang="ru"] .sc-band .chip { max-width: 100%; white-space: normal; }
+/* the red area tag dropped into the search box ran past the box; it is a little smaller */
+html[lang="ru"] .sc-band #search .pre { font-size: 10.4px; letter-spacing: -.02em; }
+html[lang="ru"] .sc-band .tagp { font-size: 9.6px; letter-spacing: -.02em; padding: 4px 8px 4px 4px; gap: 4px; }
+html[lang="ru"] .sc-band .tagp i { width: 18px; height: 18px; }
+
+/* Hero cards (Identify / Engage / Build / Measure): the time/result tags are a little smaller and the row label may wrap,
+   so «Его приоритетные области» and «Новые приоритеты» stay inside the card */
+html[lang="ru"] .hr-rl { white-space: normal; min-width: 0; line-height: 1.2; }
+html[lang="ru"] .hr-tag { flex: none; font-size: 10.6px; padding: 4px 7px; letter-spacing: -.01em; }
+
+/* Learning formats, card titles: «Онлайн с тренером» and «Смешанный формат» ran past the right edge of the card */
+html[lang="ru"] .jc-t { font-size: 64px !important; }
+/* Blended card: the two white panes are wider and their text smaller so the text stays inside */
+html[lang="ru"] .jc-pane { width: 566px !important; }
+html[lang="ru"] .jc-pane b { font-size: 36px; line-height: 44px; left: 168px !important; top: 28px !important; }
+html[lang="ru"] .jc-pane span { font-size: 25px; line-height: 30px; left: 170px !important; top: 78px !important; right: 18px; width: auto !important; }
+
+/* Recruitment page, example report: «Стоит изучить» broke onto two lines in its small chip; the chip column is wider */
+html[lang="ru"] .prc .bar { grid-template-columns: minmax(0, 1fr) 34px 78px; }
+html[lang="ru"] .prc .zone { white-space: nowrap; }
+
+/* Cookie notice: «Только необходимые» broke onto two lines in its button; each button keeps its text on one line and
+   the two buttons sit one above the other when they do not fit side by side */
+html[lang="ru"] .ck-btns button { white-space: nowrap; flex: 1 1 auto; }
+
+/* What's at stake, quote cards 2-4: each heading line was a fixed single line and ran out of the card; it wraps */
+html[lang="ru"] .wn-q span, html[lang="ru"] .wn-q em { white-space: normal; }
+/* the two short lines under the heading may wrap too, the heading is a little smaller, and the card is taller so the
+   number and source at the bottom are not cut off */
+html[lang="ru"] .wn-support span { white-space: normal; }
+html[lang="ru"] .wn-q { font-size: 22px; line-height: 23.6px; }
+html[lang="ru"] .wn-card { height: 316px; }
+html[lang="ru"] .wn-stage { height: 256px; }
+
+
+/* 26 Nov, owner chose option 1: Russian italic letters switch to handwriting shapes (т like m, д like g), so no italic
+   in Russian; the accent words keep their colour. Bold serif headings are made one step lighter in ru-headings.js. */
+:lang(ru) * { font-style: normal !important; }
+
+
+/* ---- 26 Nov, round 2 (owner) ---- */
+/* Russian never splits a word across two lines in headings or text (no "эффективно-сти") */
+:lang(ru) * { hyphens: manual !important; -webkit-hyphens: manual !important; }
+/* "Assessment data is stored in the EU…" is not shown in Russian (data will be stored in Russia) */
+html[lang="ru"] .id-conf { display: none !important; }
+/* top headline: Source Serif (as on the desktop top headline) instead of Playfair, which looks old-fashioned in Russian */
+html[lang="ru"] .hr-h, html[lang="ru"] .hr-h * { font-family: "Source Serif 4", Georgia, serif !important; font-weight: 600 !important; letter-spacing: -.015em !important; }
+
+/* 26 Nov: style C (type-c.css) sets italic with strong selectors; :not(#_) makes this rule stronger so Russian stays upright */
+:lang(ru) *:not(#_):not(#_), :lang(ru) *:not(#_):not(#_)::before, :lang(ru) *:not(#_):not(#_)::after { font-style: normal !important; }

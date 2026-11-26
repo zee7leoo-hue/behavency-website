@@ -13,7 +13,7 @@ export default function DeliverySection() {
       desc: (
         <>
           Flexible and self-paced, so teams can<br className="ds-card-desc-br" />
-          learn anytime, anywhere.
+          learn anytime, откуда угодно.
         </>
       ),
       iconModifier: 'elearning',
@@ -27,7 +27,7 @@ export default function DeliverySection() {
     },
     {
       id: 'live',
-      title: 'Live online',
+      title: 'Онлайн с тренером',
       desc: (
         <>
           Interactive and engaging sessions<br className="ds-card-desc-br" />
@@ -39,7 +39,7 @@ export default function DeliverySection() {
     },
     {
       id: 'inperson',
-      title: 'In-person',
+      title: 'Очно',
       desc: (
         <>
           Maximum impact through face-to-face<br className="ds-card-desc-br" />
@@ -57,7 +57,7 @@ export default function DeliverySection() {
     },
     {
       id: 'blended',
-      title: 'Blended',
+      title: 'Смешанный формат',
       desc: (
         <>
           A combination that works for your team —<br className="ds-card-desc-br" />
@@ -83,7 +83,7 @@ export default function DeliverySection() {
           <div className="ds-hero-text">
             <div className="ds-eyebrow">
               <span className="ds-eyebrow-line"></span>
-              <span className="ds-eyebrow-text">THE DEVELOPMENT JOURNEY</span>
+              <span className="ds-eyebrow-text">ПУТЬ РАЗВИТИЯ</span>
             </div>
             <h2 className="ds-headline">
               You choose how your<br className="ds-headline-br" />

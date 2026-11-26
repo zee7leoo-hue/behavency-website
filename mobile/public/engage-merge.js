@@ -1,5 +1,5 @@
 // Engage: one opening instead of two. Keeps "They've seen the score…", its two pictures and the punchline,
-// folds the facts from "Real team dynamics…" into one paragraph plus a 45 / 90 min row, then "How it works" and the cards.
+// folds the facts from "Real team dynamics…" into one paragraph plus a 45 / 90 min row, then "Как это работает" and the cards.
 (function () {
   const CSS = `
   .egm-stats { display: flex; justify-content: center; align-items: center; gap: 22px; margin: 34px 0 0; }
@@ -25,14 +25,14 @@
   @media (prefers-reduced-motion: reduce) { .egm-punch .w { transition: none; } .egm-punch .sw path { transition: none; } }
   `;
   const STATS = `<div class="egm-stats">
-    <div class="egm-stat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12h4M8 10v4M15 13h.01M18 11h.01"/><path d="M17.3 5H6.7a4 4 0 0 0-3.97 3.6C2.6 9.4 2 14.5 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.4-1.4a2 2 0 0 1 1.4-.6h4.4a2 2 0 0 1 1.4.6L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.5-.6-6.6-.7-7.3A4 4 0 0 0 17.3 5z"/></svg><div><b>45 min</b><span>Team Game</span></div></div>
+    <div class="egm-stat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12h4M8 10v4M15 13h.01M18 11h.01"/><path d="M17.3 5H6.7a4 4 0 0 0-3.97 3.6C2.6 9.4 2 14.5 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.4-1.4a2 2 0 0 1 1.4-.6h4.4a2 2 0 0 1 1.4.6L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.5-.6-6.6-.7-7.3A4 4 0 0 0 17.3 5z"/></svg><div><b>45 мин</b><span>Командная игра</span></div></div>
     <i class="egm-div" aria-hidden="true"></i>
-    <div class="egm-stat"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M5.5 20.5v-1.2a4.6 4.6 0 0 1 4.6-4.6h3.8a4.6 4.6 0 0 1 4.6 4.6v1.2"/><path d="M4.4 11.2a2.6 2.6 0 1 1 2.2-4.1M19.6 11.2a2.6 2.6 0 1 0-2.2-4.1M1.5 18.5v-.6a3.4 3.4 0 0 1 3.4-3.4M22.5 18.5v-.6a3.4 3.4 0 0 0-3.4-3.4"/></svg><div><b>90 min</b><span>Post-Reflection</span></div></div>
-  </div><div class="egm-how ueb ueb--c">How it works</div>`;
+    <div class="egm-stat"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M5.5 20.5v-1.2a4.6 4.6 0 0 1 4.6-4.6h3.8a4.6 4.6 0 0 1 4.6 4.6v1.2"/><path d="M4.4 11.2a2.6 2.6 0 1 1 2.2-4.1M19.6 11.2a2.6 2.6 0 1 0-2.2-4.1M1.5 18.5v-.6a3.4 3.4 0 0 1 3.4-3.4M22.5 18.5v-.6a3.4 3.4 0 0 0-3.4-3.4"/></svg><div><b>90 мин</b><span>Разбор после игры</span></div></div>
+  </div><div class="egm-how ueb ueb--c">Как это работает</div>`;
   function apply() {
     const eg = document.querySelector('#engage .eg-in'); if (!eg || eg.dataset.egm) return !!eg;
     const lead = eg.querySelector('.eg-lead');
-    if (lead) lead.textContent = 'An interactive online team game, followed by a structured reflection. Participants work through the same behavioural areas they assessed, and see how they shape the way people work together.';
+    if (lead) lead.textContent = 'Интерактивная онлайн-игра для команды, а затем структурированный разбор. Участники встречаются с теми же поведенческими областями, по которым проходили оценку, и видят, как они влияют на совместную работу.';
     const art = eg.querySelector('.eg-art');
     const t = document.createElement('div'); t.innerHTML = STATS;
     const after = art || eg.lastElementChild;
@@ -42,7 +42,7 @@
     if (pun) {
       const wrap = (t) => t.split(' ').map((x) => '<span class="w">' + x + '</span>').join(' ');
       pun.classList.add('egm-punch');
-      pun.innerHTML = '<span class="l1">' + wrap('A score can be read and forgotten.') + '</span><br><span class="l2">' + wrap('An experience stays.') + '</span>';
+      pun.innerHTML = '<span class="l1">' + wrap('Оценку можно прочитать и забыть.') + '</span><br><span class="l2">' + wrap('Опыт остаётся.') + '</span>';
       const ws = [...pun.querySelectorAll('.w')];
       ws.forEach((w, i) => { w.style.transitionDelay = (i * 190 + (i > 6 ? 400 : 0)) + 'ms'; });
       const io = new IntersectionObserver((es) => { if (!es[0].isIntersecting) return; io.disconnect();

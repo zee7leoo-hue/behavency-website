@@ -12,33 +12,33 @@ const fs = (size, lh, extra = {}) => ({ fontSize: u(size), lineHeight: lh ? u(lh
 
 /* y values below are design pixels measured from the top of the section (the supplied image minus its 60px header) */
 const COLS = [
-  { x: 52, label: 'DURING DEVELOPMENT', title: 'Was it useful?', body: ['After each module, participants', 'rate how relevant and practical', 'it was for their work.'], item: 'Short participant feedback' },
-  { x: 396, label: 'AT THE END OF TRAINING', title: 'Is it being used?', body: ['Participants check in on their plan:', 'which actions they have tried at', 'work, and what got in the way.'], item: 'Development plan check-in' },
+  { x: 52, label: 'ВО ВРЕМЯ ОБУЧЕНИЯ', title: 'Было ли полезно?', body: ['После каждого модуля участники', 'оценивают, насколько он актуален', 'и применим в их работе.'], item: 'Короткая обратная связь участников' },
+  { x: 396, label: 'В КОНЦЕ ОБУЧЕНИЯ', title: 'Пошло ли в дело?', body: ['Участники сверяются с планом:', 'что уже попробовали', 'в работе и что помешало.'], item: 'Проверка плана развития' },
 ]
 const VIEWS = [
-  { y: 530, Icon: User, tone: 'blue', title: 'The manager’s view', desc: ['How they now see their own behaviour.'], pill: 'Managerial Profile' },
-  { y: 624, Icon: Users, tone: 'violet', title: 'The team’s view', desc: ['Whether colleagues see a difference', 'day to day.'], pill: '360° Feedback' },
-  { y: 718, Icon: Layers, tone: 'green', title: 'The working conditions', desc: ['Whether the barriers that were raised', 'have eased.'], pill: 'Workplace Effectiveness Survey' },
+  { y: 530, Icon: User, tone: 'blue', title: 'Взгляд руководителя', desc: ['Как он теперь видит своё поведение.'], pill: 'Профиль управленческого поведения' },
+  { y: 624, Icon: Users, tone: 'violet', title: 'Взгляд команды', desc: ['Замечают ли коллеги разницу', 'в повседневной работе.'], pill: 'Обратная связь 360°' },
+  { y: 718, Icon: Layers, tone: 'green', title: 'Условия работы', desc: ['Ослабли ли барьеры,', 'о которых говорили.'], pill: 'Организационные барьеры' },
 ]
 
 export default function HowMeasureSection() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 })
 
   return (
-    <section className={`hm${inView ? ' is-in' : ''}`} id="how-we-measure" ref={ref} aria-label="How we measure">
+    <section className={`hm${inView ? ' is-in' : ''}`} id="how-we-measure" ref={ref} aria-label="Как мы измеряем">
       <div className="hm-canvas" style={{ '--u': 'calc(100cqw / 1200)' }}>
         <div className="hm-eyebrow" style={box(52, 29, 400, 20)}>
           <i style={{ width: u(28) }} />
-          <span style={fs(14.6, 20)}>HOW WE MEASURE</span>
+          <span style={fs(14.6, 20)}>КАК МЫ ИЗМЕРЯЕМ</span>
         </div>
 
         <h2 className="hm-title" style={box(52, 62, null, null, fs(49, 56))}>
-          We measure whether <em>development actually happens.</em>
+          Мы проверяем, <em>идёт ли развитие на самом деле.</em>
         </h2>
 
         <p className="hm-sub" style={box(52, 128, 1100, null, { fontSize: '0.9458vw', lineHeight: 1.45 })}>
-          Not just whether people finished the training, but whether their behaviour changed. We check along<br />
-          the way, and again three months later.
+          Нам важно не «курс пройден», а «поведение изменилось». Проверяем по ходу<br />
+          обучения и ещё раз — через три месяца.
         </p>
 
         <div className="hm-lower" style={{ top: u(-112), height: '100%' }}>
@@ -64,10 +64,10 @@ export default function HowMeasureSection() {
 
         {/* stage 3 */}
         <div className="hm-col">
-          <p className="hm-label" style={box(741, 389, 300, 20, fs(13.6, 20))}>3 MONTHS AFTER TRAINING</p>
-          <h3 className="hm-h" style={box(740, 417, 420, 44, fs(31.5, 44))}>Has behaviour changed?</h3>
+          <p className="hm-label" style={box(741, 389, 300, 20, fs(13.6, 20))}>ЧЕРЕЗ 3 МЕСЯЦА ПОСЛЕ ОБУЧЕНИЯ</p>
+          <h3 className="hm-h" style={box(740, 417, 420, 44, fs(31.5, 44))}>Поведение изменилось?</h3>
           <p className="hm-body" style={box(741, 470, 560, null, { fontSize: 'calc(0.9458vw - 2px)', lineHeight: 1.46 })}>
-            Results are compared with the starting point, area by area,<br />from three angles:
+            Результаты сравниваются с исходной точкой по каждой области<br />с трёх сторон:
           </p>
           {VIEWS.map((v) => (
             <div className="hm-card" key={v.title} style={box(740, v.y, 490, 84, { borderRadius: u(10) })}>

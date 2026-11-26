@@ -5,7 +5,7 @@ import './sections/Contact.css'
    so both always show exactly the same form. It is sent with Netlify Forms as "contact"
    (a matching hidden form sits in index.html so Netlify can find it). */
 
-const ROLES = ['HR / People', 'Learning & Development', 'Leadership / Executive', 'Manager', 'Other']
+const ROLES = ['HR / People', 'Learning & Development', 'Leadership / Executive', 'Manager', 'Другое']
 
 const Send = () => (<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.5 2.5 10.6 13.4M21.5 2.5l-6.8 19-4.1-8.1-8.1-4.1z" /></svg>)
 
@@ -39,17 +39,17 @@ export default function ContactForm({ firstRef }) {
         <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={onSubmit}>
           <input type="hidden" name="form-name" value="contact" />
           <p className="ct-hp" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabIndex={-1} autoComplete="off" /></label></p>
-          <label className="ct-f"><span>Name</span><input ref={firstRef} name="name" placeholder="Your name" autoComplete="name" required /></label>
-          <label className="ct-f"><span>Work email</span><input type="email" name="email" placeholder="you@company.com" autoComplete="email" required /></label>
+          <label className="ct-f"><span>Имя</span><input ref={firstRef} name="name" placeholder="Your name" autoComplete="name" required /></label>
+          <label className="ct-f"><span>Рабочая почта</span><input type="email" name="email" placeholder="you@company.com" autoComplete="email" required /></label>
           <label className="ct-f"><span>Organisation</span><input name="organization" placeholder="Company name" autoComplete="organization" /></label>
-          <label className="ct-f"><span>Your role</span>
+          <label className="ct-f"><span>Ваша должность</span>
             <select name="role" defaultValue="">
-              <option value="" disabled>Select…</option>
+              <option value="" disabled>Выберите…</option>
               {ROLES.map((r) => <option key={r}>{r}</option>)}
             </select>
           </label>
-          <label className="ct-f"><span>What are you trying to achieve?</span><textarea name="message" rows={4} placeholder="Tell us what’s going on in your organisation and what you’re hoping to solve…" /></label>
-          <button className="ct-btn" type="submit" disabled={state === 'sending'}>{state === 'sending' ? 'Sending…' : 'Send message'}<Send /></button>
+          <label className="ct-f"><span>Какую задачу вы решаете?</span><textarea name="message" rows={4} placeholder="Расскажите, что происходит в вашей организации и какую задачу хотите решить…" /></label>
+          <button className="ct-btn" type="submit" disabled={state === 'sending'}>{state === 'sending' ? 'Sending…' : 'Отправить'}<Send /></button>
           {state === 'error' && <p className="ct-err" role="alert">Something went wrong. Please try again.</p>}
         </form>
       )}

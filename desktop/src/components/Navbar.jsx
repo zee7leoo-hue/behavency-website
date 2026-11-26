@@ -18,7 +18,7 @@ export default function Navbar() {
     { label: 'How It Works', href: '#identify' },
     { label: 'The Journey', href: '#engage' },
     { label: 'What\'s Different', href: '#different' },
-    { label: 'Packages', href: '#packages' },
+    { label: 'Пакеты', href: '#packages' },
   ]
 
   return (
@@ -38,7 +38,7 @@ export default function Navbar() {
           </nav>
 
           <div className="nav__actions">
-            <a href="#contact" className="btn btn-navy" style={{ padding: '8px 18px', fontSize: 13 }}>Request a demo</a>
+            <a href="#contact" className="btn btn-navy" style={{ padding: '8px 18px', fontSize: 13 }}>Запросить демо</a>
             <button className="nav__burger" onClick={() => setOpen(o => !o)}>
               {open ? <X size={20}/> : <Menu size={20}/>}
             </button>
@@ -57,7 +57,7 @@ export default function Navbar() {
                 {l.label}
               </motion.a>
             ))}
-            <a href="#contact" className="btn btn-navy" style={{ marginTop: 12 }} onClick={() => setOpen(false)}>Request a demo</a>
+            <a href="#contact" className="btn btn-navy" style={{ marginTop: 12 }} onClick={() => setOpen(false)}>Запросить демо</a>
           </motion.div>
         )}
       </AnimatePresence>

@@ -28,7 +28,7 @@ export default function StageEngage() {
 
             <h2 className="headline engage-new__headline">
               They've seen the score.<br />
-              Now let them<br />
+              Теперь пусть<br />
               <em>experience</em> it.
             </h2>
 

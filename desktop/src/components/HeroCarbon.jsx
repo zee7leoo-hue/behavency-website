@@ -21,15 +21,15 @@ const CARD_TEXT = [
   { kind: 'title', text: 'Engage', x: 373.5, y: 298.8, size: 25, color: NAVY, align: 'center' },
   { kind: 'title', text: 'Build', x: 589.5, y: 298.8, size: 25, color: NAVY, align: 'center' },
   { kind: 'title', text: 'Measure', x: 809.0, y: 299, size: 25, color: NAVY, align: 'center' },
-  { kind: 'sub', text: 'Reveal strengths', x: 152.0, y: 328.4, size: 17, color: SUB, align: 'center' },
+  { kind: 'sub', text: 'Найти сильные стороны', x: 152.0, y: 328.4, size: 17, color: SUB, align: 'center' },
   { kind: 'sub', text: 'and gaps', x: 150.5, y: 349.4, size: 17, color: SUB, align: 'center' },
-  { kind: 'sub', text: 'Create shared', x: 371.0, y: 329, size: 17, color: SUB, align: 'center' },
+  { kind: 'sub', text: 'Сделать развитие', x: 371.0, y: 329, size: 17, color: SUB, align: 'center' },
   { kind: 'sub', text: 'commitment', x: 371.0, y: 349, size: 17, color: SUB, align: 'center' },
-  { kind: 'sub', text: 'Develop the right', x: 588.0, y: 327.4, size: 17, color: SUB, align: 'center' },
+  { kind: 'sub', text: 'Развить нужные', x: 588.0, y: 327.4, size: 17, color: SUB, align: 'center' },
   { kind: 'sub', text: 'capabilities', x: 588.0, y: 347.4, size: 17, color: SUB, align: 'center' },
-  { kind: 'sub', text: 'Show what', x: 807.5, y: 323.4, size: 17, color: SUB, align: 'center' },
+  { kind: 'sub', text: 'Показать, что', x: 807.5, y: 323.4, size: 17, color: SUB, align: 'center' },
   { kind: 'sub', text: 'changed', x: 807.5, y: 348.4, size: 17, color: SUB, align: 'center' },
-  { kind: 'ui', text: 'Managerial Profile', x: 152, y: 118.5, size: 12.6, color: NAVY, rot: -5, desc: true },
+  { kind: 'ui', text: 'Профиль управленческого поведения', x: 152, y: 118.5, size: 12.6, color: NAVY, rot: -5, desc: true },
   { kind: 'ui', text: '+17 pp', x: 874.8, y: 85, size: 13.3, color: GREEN, rot: -3, desc: true },
   { kind: 'ui', text: 'Team Effectiveness', x: 781.3, y: 107.5, size: 10.0, color: NAVY, rot: -5.1, desc: false },
 ]
@@ -46,12 +46,12 @@ const GROUPS = {
 }
 const PROFILE = { x: 100.5, y: 141, a: 0.998, b: -0.061, c: -0.18, pitch: 20.5, track: 84, fill: 62, bar: 3.6, barY: 3.4 }
 const PROFILE_ROWS = [
-  { label: 'Clarity & Alignment', icon: MessageCircle, g: 'hb-blue' },
-  { label: 'Collaboration & Influence', icon: Users, g: 'hb-teal' },
-  { label: 'Learning & Adaptability', icon: Settings, g: 'hb-teal2' },
-  { label: 'Trust & Inclusion', icon: UsersRound, g: 'hb-teal2' },
+  { label: 'Ясность и согласованность', icon: MessageCircle, g: 'hb-blue' },
+  { label: 'Сотрудничество и влияние', icon: Users, g: 'hb-teal' },
+  { label: 'Обучение и адаптивность', icon: Settings, g: 'hb-teal2' },
+  { label: 'Доверие и инклюзивность', icon: UsersRound, g: 'hb-teal2' },
 ]
-const BUILD_ROWS = ['Training', 'Team activities', 'Masterplan']
+const BUILD_ROWS = ['Обучение', 'Team activities', 'Мастер-план']
 const MEASURE_ROWS = [
   { label: 'Initial', w: 83, g: 'hb-purple', pct: '64%', c: NAVY },
   { label: 'Follow-up', w: 113.5, g: 'hb-green', pct: '81%', c: GREEN },
@@ -64,28 +64,28 @@ export default function HeroCarbon() {
         <div className="hc-content">
           <div className="hc-text">
             <span className="hc-dash" aria-hidden="true" />
-            <div className="hc-eyebrow">LOWER YOUR MANAGEMENT RISK</div>
+            <div className="hc-eyebrow">МЕНЬШЕ РИСКОВ В УПРАВЛЕНИИ</div>
 
             <h1 className="hc-title">
-              <span className="hc-title-main">Your managers<br />want to lead well.</span>
-              <em className="hc-title-em">Most don’t know<br />where they’re<br />falling short.</em>
+              <span className="hc-title-main">Ваши руководители<br />хотят управлять хорошо.</span>
+              <em className="hc-title-em">Но мало кто понимает,<br />чего именно<br />им не хватает.</em>
             </h1>
 
             <p className="hc-sub">
-              When things keep changing, that gap is<br />{' '}
-              a business risk. Behavency finds it early,<br />{' '}
-              helps managers close it — and shows you<br />{' '}
-              what changed.
+              Когда всё меняется, такой пробел —<br />{' '}
+              риск для бизнеса. Behavency замечает его вовремя,<br />{' '}
+              помогает руководителям его закрыть — и показывает вам,<br />{' '}
+              что изменилось.
             </p>
 
-            <a className="hc-btn" href="#contact">Request a demo</a>
+            <a className="hc-btn" href="#contact">Запросить демо</a>
             <a className="hc-link" href="/Behavency-Overview.pdf" download>
-              Download overview <Download strokeWidth={2.75} aria-hidden="true" />
+              Скачать обзор <Download strokeWidth={2.75} aria-hidden="true" />
             </a>
           </div>
 
           <div className="hc-cards" role="img"
-            aria-label="Identify: reveal strengths and gaps. Engage: create shared commitment. Build: develop the right capabilities. Measure: show what changed.">
+            aria-label="Identify: найти сильные стороны и зоны роста. Engage: сделать развитие общим делом. Build: развить нужные навыки. Measure: показать, что изменилось.">
             <img className="hc-cards-art" src={cards} alt="" draggable="false" />
             <svg className="hc-cards-ui" viewBox="0 0 950 440" preserveAspectRatio="none" aria-hidden="true">
               <defs>

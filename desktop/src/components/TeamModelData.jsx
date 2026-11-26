@@ -1,212 +1,212 @@
 import React from 'react';
 export const teamFactorsList =  [
  {
- id: 'clarity', title: 'Clarity and Alignment',
- wheelTitle: <>Clarity &<br/>Alignment</>,
+ id: 'clarity', title: 'Ясность и согласованность',
+ wheelTitle: <>Ясность и<br/>Alignment</>,
  color: '#00d68f',
- symptoms: ["Priorities become unclear.", "Teams start moving in different directions.", "Expectations and requirements are understood differently."],
+ symptoms: ["Приоритеты размываются.", "Команды тянут в разные стороны.", "Ожидания и требования понимают по-разному."],
  competencies: [
-   'Shared understanding of goals and results',
-   'Clarity of roles and accountability',
-   'Shared agreements and information transparency'
+   'Общее понимание целей и результатов',
+   'Ясность ролей и ответственности',
+   'Общие договорённости и прозрачность информации'
    ],
- keyCompetencies: ["Strategic thinking", "Goal setting", "Planning and organisation", "Communication", "Business thinking", "Systems thinking"],
+ keyCompetencies: ["Стратегическое мышление", "Постановка целей", "Планирование и организация", "Коммуникация", "Бизнес-мышление", "Системное мышление"],
  trainings: [
- { name: "Leadership Basics", audience: ['line'] },
- { name: "Effective Goal Setting", audience: ['line'] },
- { name: "Situational Delegation", audience: ['mid'] },
+ { name: "Основы лидерства", audience: ['line'] },
+ { name: "Эффективная постановка целей", audience: ['line'] },
+ { name: "Ситуационное делегирование", audience: ['mid'] },
  { name: "Developing Strategic Thinking Skills", audience: ['mid'] },
  { name: "Problem Analysis and Decision Making", audience: ['line','mid'] },
  ],
  manifestations: [
   {
-    practice: 'Shared understanding of goals and results',
-    line: ['The team understands how its work is connected to the organisation\'s goals.', 'The team shares a common understanding of the goals and expected results of its work.'],
-    mid: ['The team understands how its work is connected to the organisation\'s goals.', 'The team shares a common understanding of the goals and expected results of its work.']
+    practice: 'Общее понимание целей и результатов',
+    line: ['Команда понимает, как её работа связана с целями организации.', 'У команды есть общее понимание целей и ожидаемых результатов её работы.'],
+    mid: ['Команда понимает, как её работа связана с целями организации.', 'У команды есть общее понимание целей и ожидаемых результатов её работы.']
   },
   {
-    practice: 'Clarity of roles and accountability',
-    line: ['Team members understand each other\'s roles, areas of accountability, and expertise.', 'When tasks or team composition change, roles and accountability are reviewed in a timely manner.'],
-    mid: ['Team members understand each other\'s roles, areas of accountability, and expertise.', 'When tasks or team composition change, roles and accountability are reviewed in a timely manner.']
+    practice: 'Ясность ролей и ответственности',
+    line: ['Члены команды понимают роли, зоны ответственности и экспертизу друг друга.', 'Когда меняются задачи или состав команды, роли и ответственность своевременно пересматриваются.'],
+    mid: ['Члены команды понимают роли, зоны ответственности и экспертизу друг друга.', 'Когда меняются задачи или состав команды, роли и ответственность своевременно пересматриваются.']
   },
   {
-    practice: 'Shared agreements and information transparency',
-    line: ['Important information is communicated to all team members in a timely manner.', 'After discussions and meetings, the team has a shared understanding of decisions made and next steps.', 'The team develops clear agreements on how collaborative work will be organised.'],
-    mid: ['Important information is communicated to all team members in a timely manner.', 'After discussions and meetings, the team has a shared understanding of decisions made and next steps.', 'The team develops clear agreements on how collaborative work will be organised.']
+    practice: 'Общие договорённости и прозрачность информации',
+    line: ['Важная информация своевременно доводится до всех членов команды.', 'После обсуждений и встреч у команды есть общее понимание принятых решений и следующих шагов.', 'Команда чётко договаривается, как будет устроена совместная работа.'],
+    mid: ['Важная информация своевременно доводится до всех членов команды.', 'После обсуждений и встреч у команды есть общее понимание принятых решений и следующих шагов.', 'Команда чётко договаривается, как будет устроена совместная работа.']
   },
   ]
  },
  {
- id: 'safety', title: 'Trust and Inclusion',
- wheelTitle: <>Trust &<br/>Inclusion</>,
+ id: 'safety', title: 'Доверие и инклюзивность',
+ wheelTitle: <>Доверие и<br/>Inclusion</>,
  color: '#ffb830',
- symptoms: ["People hesitate to express their opinions.", "The level of trust and engagement decreases.", "Valuable ideas and perspectives go unheard."],
+ symptoms: ["Люди не решаются высказывать своё мнение.", "Доверие и вовлечённость снижаются.", "Ценные идеи и мнения никто не слышит."],
  competencies: [
-   'Trust and psychological safety',
-   'Collaborative decision making',
-   'Engagement of every member in collaborative work'
+   'Доверие и психологическая безопасность',
+   'Совместное принятие решений',
+   'Вовлечённость каждого участника в совместную работу'
    ],
- keyCompetencies: ["Emotional intelligence", "Empathy", "Active listening", "Relationship building", "Inclusive leadership", "Ethical behaviour"],
+ keyCompetencies: ["Эмоциональный интеллект", "Эмпатия", "Активное слушание", "Построение отношений", "Инклюзивное лидерство", "Этичное поведение"],
  trainings: [
- { name: "Assertive Behaviour", audience: ['line','mid'] },
- { name: "Emotional Leadership", audience: ['line','mid'] },
+ { name: "Ассертивное поведение", audience: ['line','mid'] },
+ { name: "Эмоциональное лидерство", audience: ['line','mid'] },
  { name: "Trust and Psychological Safety Training", audience: ['line','mid'] },
- { name: "Team Management", audience: ['line','mid'] },
- { name: "Individual Coaching Sessions", audience: ['mid'] },
+ { name: "Управление командой", audience: ['line','mid'] },
+ { name: "Индивидуальные коучинговые сессии", audience: ['mid'] },
  ],
  manifestations: [
   {
-    practice: 'Trust and psychological safety',
-    line: ['Team members can openly express their opinions without fear of negative consequences.', 'The team openly discusses mistakes, problems, and difficult issues rather than suppressing them.', 'When mistakes occur, the team focuses on finding a solution rather than finding someone to blame.'],
-    mid: ['Team members can openly express their opinions without fear of negative consequences.', 'The team openly discusses mistakes, problems, and difficult issues rather than suppressing them.', 'When mistakes occur, the team focuses on finding a solution rather than finding someone to blame.']
+    practice: 'Доверие и психологическая безопасность',
+    line: ['Члены команды могут открыто высказывать своё мнение, не опасаясь негативных последствий.', 'Команда открыто обсуждает ошибки, проблемы и сложные вопросы, а не замалчивает их.', 'Когда случаются ошибки, команда сосредоточена на поиске решения, а не виноватого.'],
+    mid: ['Члены команды могут открыто высказывать своё мнение, не опасаясь негативных последствий.', 'Команда открыто обсуждает ошибки, проблемы и сложные вопросы, а не замалчивает их.', 'Когда случаются ошибки, команда сосредоточена на поиске решения, а не виноватого.']
   },
   {
-    practice: 'Collaborative decision making',
-    line: ['When making decisions, the team considers several possible options rather than stopping at the first proposed solution.', 'When making decisions, the team takes into account different points of view and members\' experience.', 'When discussing decisions, the team relies on facts and arguments rather than the status or influence of individual members.', 'After making a decision, the team acts in alignment, even if opinions differed during the discussion.'],
-    mid: ['When making decisions, the team considers several possible options rather than stopping at the first proposed solution.', 'When making decisions, the team takes into account different points of view and members\' experience.', 'When discussing decisions, the team relies on facts and arguments rather than the status or influence of individual members.', 'After making a decision, the team acts in alignment, even if opinions differed during the discussion.']
+    practice: 'Совместное принятие решений',
+    line: ['Принимая решения, команда рассматривает несколько вариантов, а не останавливается на первом предложенном.', 'Принимая решения, команда учитывает разные точки зрения и опыт участников.', 'Обсуждая решения, команда опирается на факты и аргументы, а не на статус или влияние отдельных участников.', 'Приняв решение, команда действует согласованно, даже если в ходе обсуждения мнения расходились.'],
+    mid: ['Принимая решения, команда рассматривает несколько вариантов, а не останавливается на первом предложенном.', 'Принимая решения, команда учитывает разные точки зрения и опыт участников.', 'Обсуждая решения, команда опирается на факты и аргументы, а не на статус или влияние отдельных участников.', 'Приняв решение, команда действует согласованно, даже если в ходе обсуждения мнения расходились.']
   },
   {
-    practice: 'Team engagement: Engagement of every member in collaborative work',
-    line: ['The team actively involves members who usually speak less frequently in discussions.', 'New members quickly become full participants in collaborative work.', 'When one member is overloaded, other team members take on some of their work without being asked.'],
-    mid: ['The team actively involves members who usually speak less frequently in discussions.', 'New members quickly become full participants in collaborative work.', 'When one member is overloaded, other team members take on some of their work without being asked.']
+    practice: 'Вовлечённость команды: вовлечённость каждого участника в совместную работу',
+    line: ['Команда активно вовлекает в обсуждение тех, кто обычно высказывается реже.', 'Новички быстро становятся полноправными участниками совместной работы.', 'Когда кто-то перегружен, другие члены команды берут на себя часть его работы, не дожидаясь просьбы.'],
+    mid: ['Команда активно вовлекает в обсуждение тех, кто обычно высказывается реже.', 'Новички быстро становятся полноправными участниками совместной работы.', 'Когда кто-то перегружен, другие члены команды берут на себя часть его работы, не дожидаясь просьбы.']
   },
   ]
  },
  {
- id: 'capacity', title: 'Focus and Prioritisation',
- wheelTitle: <>Focus &<br/>Prioritisation</>,
+ id: 'capacity', title: 'Фокус и приоритеты',
+ wheelTitle: <>Фокус и<br/>Расстановка приоритетов</>,
  color: '#a78bfa',
- symptoms: ["Teams become overloaded.", "Efforts are scattered across too many tasks.", "Important work loses focus."],
+ symptoms: ["Команды перегружены.", "Силы распыляются на слишком многое.", "Важная работа теряет фокус."],
  competencies: [
-   'Focus on priority work',
-   'Setting priorities',
-   'Effective effort distribution'
+   'Фокус на приоритетных задачах',
+   'Расстановка приоритетов',
+   'Эффективное распределение усилий'
    ],
- keyCompetencies: ["Decision making", "Critical thinking", "Prioritisation", "Resource management", "Problem solving", "Management judgment"],
+ keyCompetencies: ["Принятие решений", "Критическое мышление", "Расстановка приоритетов", "Управление ресурсами", "Решение проблем", "Управленческое суждение"],
  trainings: [
- { name: "Effective Goal Setting", audience: ['line'] },
+ { name: "Эффективная постановка целей", audience: ['line'] },
  { name: "Developing Critical Thinking Skills", audience: ['mid'] },
  { name: "Problem Analysis and Decision Making", audience: ['line','mid'] },
- { name: "Optimal Motivation", audience: ['line','mid'] },
+ { name: "Оптимальная мотивация", audience: ['line','mid'] },
  { name: "Developing Strategic Thinking Skills", audience: ['mid'] },
  ],
  manifestations: [
   {
-    practice: 'Focus on priority work',
-    line: ['The team has a shared understanding of which tasks are the most important at the moment.', 'The team maintains focus on priority work despite the appearance of new tasks.'],
-    mid: ['The team has a shared understanding of which tasks are the most important at the moment.', 'The team maintains focus on priority work despite the appearance of new tasks.']
+    practice: 'Фокус на приоритетных задачах',
+    line: ['У команды есть общее понимание того, какие задачи сейчас важнее всего.', 'Команда сохраняет фокус на приоритетных задачах, несмотря на появление новых.'],
+    mid: ['У команды есть общее понимание того, какие задачи сейчас важнее всего.', 'Команда сохраняет фокус на приоритетных задачах, несмотря на появление новых.']
   },
   {
-    practice: 'Setting priorities',
-    line: ['When several important tasks arise, the team quickly reaches a common understanding of what should be done first.', 'The team maintains focus on priority work even when urgent tasks appear.', 'When circumstances change, the team reviews the order of work in a timely manner and aligns its actions accordingly.'],
-    mid: ['When several important tasks arise, the team quickly reaches a common understanding of what should be done first.', 'The team maintains focus on priority work even when urgent tasks appear.', 'When circumstances change, the team reviews the order of work in a timely manner and aligns its actions accordingly.']
+    practice: 'Расстановка приоритетов',
+    line: ['Когда возникает несколько важных задач, команда быстро договаривается, что делать в первую очередь.', 'Команда сохраняет фокус на приоритетных задачах, даже когда появляются срочные.', 'Когда обстоятельства меняются, команда своевременно пересматривает порядок работы и согласует свои действия.'],
+    mid: ['Когда возникает несколько важных задач, команда быстро договаривается, что делать в первую очередь.', 'Команда сохраняет фокус на приоритетных задачах, даже когда появляются срочные.', 'Когда обстоятельства меняются, команда своевременно пересматривает порядок работы и согласует свои действия.']
   },
   {
-    practice: 'Effective effort distribution',
-    line: ['The team notices signs of overload in individual members in a timely manner and discusses ways to reduce it.', 'When distributing work, the team explicitly considers who is best suited for a specific task, not just who is currently available.'],
-    mid: ['The team notices signs of overload in individual members in a timely manner and discusses ways to reduce it.', 'When distributing work, the team explicitly considers who is best suited for a specific task, not just who is currently available.']
+    practice: 'Эффективное распределение усилий',
+    line: ['Команда своевременно замечает признаки перегрузки у отдельных участников и обсуждает, как её снизить.', 'Распределяя работу, команда сознательно учитывает, кто лучше всего подходит для конкретной задачи, а не только кто сейчас свободен.'],
+    mid: ['Команда своевременно замечает признаки перегрузки у отдельных участников и обсуждает, как её снизить.', 'Распределяя работу, команда сознательно учитывает, кто лучше всего подходит для конкретной задачи, а не только кто сейчас свободен.']
   },
   ]
  },
  {
- id: 'execution', title: 'Execution and Accountability',
- wheelTitle: <>Execution &<br/>Accountability</>,
+ id: 'execution', title: 'Исполнение и ответственность',
+ wheelTitle: <>Исполнение и<br/>Ответственность</>,
  color: '#22d3ee',
- symptoms: ["Progress slows down or stops.", "Accountability becomes blurred.", "Commitments remain unfulfilled."],
+ symptoms: ["Дело движется медленно или стоит на месте.", "Ответственность размывается.", "Договорённости остаются невыполненными."],
  competencies: [
-   'Fulfilling commitments',
-   'Mutual accountability for shared results'
+   'Выполнение обязательств',
+   'Взаимная ответственность за общий результат'
    ],
- keyCompetencies: ["Performance management", "Accountability", "Results orientation", "Execution organisation", "Delegation", "Control and monitoring"],
+ keyCompetencies: ["Управление результативностью", "Ответственность", "Ориентация на результат", "Организация исполнения", "Делегирование", "Контроль и мониторинг"],
  trainings: [
- { name: "Leadership Basics", audience: ['line'] },
- { name: "Situational Leadership", audience: ['line'] },
- { name: "Situational Delegation", audience: ['mid'] },
- { name: "Team Management", audience: ['line','mid'] },
- { name: "Optimal Motivation", audience: ['line','mid'] },
+ { name: "Основы лидерства", audience: ['line'] },
+ { name: "Ситуационное лидерство", audience: ['line'] },
+ { name: "Ситуационное делегирование", audience: ['mid'] },
+ { name: "Управление командой", audience: ['line','mid'] },
+ { name: "Оптимальная мотивация", audience: ['line','mid'] },
  ],
  manifestations: [
   {
-    practice: 'Fulfilling commitments',
-    line: ['The team identifies and openly communicates risks of failing to meet agreements in a timely manner.', 'When obstacles arise, the team does not abandon agreements but finds ways to fulfil them.'],
-    mid: ['The team identifies and openly communicates risks of failing to meet agreements in a timely manner.', 'When obstacles arise, the team does not abandon agreements but finds ways to fulfil them.']
+    practice: 'Выполнение обязательств',
+    line: ['Команда своевременно выявляет и открыто называет риски невыполнения договорённостей.', 'Сталкиваясь с препятствиями, команда не отказывается от договорённостей, а находит способы их выполнить.'],
+    mid: ['Команда своевременно выявляет и открыто называет риски невыполнения договорённостей.', 'Сталкиваясь с препятствиями, команда не отказывается от договорённостей, а находит способы их выполнить.']
   },
   {
-    practice: 'Mutual accountability for shared results',
-    line: ['Team members consider the shared result to be their common accountability, not just the area of responsibility of individual members.', 'Team members openly remind each other of agreements and do not ignore cases of their non-fulfilment.', 'When necessary, team members take on additional tasks to achieve the shared result.'],
-    mid: ['Team members consider the shared result to be their common accountability, not just the area of responsibility of individual members.', 'Team members openly remind each other of agreements and do not ignore cases of their non-fulfilment.', 'When necessary, team members take on additional tasks to achieve the shared result.']
+    practice: 'Взаимная ответственность за общий результат',
+    line: ['Члены команды считают общий результат делом всех, а не только зоной ответственности отдельных участников.', 'Члены команды открыто напоминают друг другу о договорённостях и не закрывают глаза, если их не выполняют.', 'При необходимости члены команды берут на себя дополнительные задачи ради общего результата.'],
+    mid: ['Члены команды считают общий результат делом всех, а не только зоной ответственности отдельных участников.', 'Члены команды открыто напоминают друг другу о договорённостях и не закрывают глаза, если их не выполняют.', 'При необходимости члены команды берут на себя дополнительные задачи ради общего результата.']
   },
   ]
  },
  {
- id: 'drag', title: 'Collaboration and Influence',
- wheelTitle: <>Collaboration &<br/>Influence</>,
+ id: 'drag', title: 'Сотрудничество и влияние',
+ wheelTitle: <>Сотрудничество и<br/>Влияние</>,
  color: '#ff6b8a',
- symptoms: ["Barriers arise between teams and departments.", "Resistance from stakeholders increases.", "Conflicts remain unresolved."],
+ symptoms: ["Между командами и отделами растут барьеры.", "Стейкхолдеры сопротивляются всё сильнее.", "Конфликты так и остаются нерешёнными."],
  competencies: [
-   'Partnership collaboration',
-   'Alignment of mutual expectations and agreements',
-   'Constructive resolution of cross-team disagreements'
+   'Партнёрское сотрудничество',
+   'Согласование взаимных ожиданий и договорённостей',
+   'Конструктивное разрешение разногласий между командами'
    ],
- keyCompetencies: ["Stakeholder management", "Influencing", "Partnership building", "Collaboration", "Conflict management", "Communication"],
+ keyCompetencies: ["Работа со стейкхолдерами", "Влияние", "Построение партнёрств", "Сотрудничество", "Управление конфликтами", "Коммуникация"],
  trainings: [
- { name: "Assertive Behaviour", audience: ['line','mid'] },
+ { name: "Ассертивное поведение", audience: ['line','mid'] },
  { name: "Influencing without Authority", audience: ['line','mid'] },
  { name: "Cross-functional Communication and Productive Conflicts", audience: ['line','mid'] },
- { name: "Team Management", audience: ['line','mid'] },
- { name: "Emotional Leadership", audience: ['line','mid'] },
+ { name: "Управление командой", audience: ['line','mid'] },
+ { name: "Эмоциональное лидерство", audience: ['line','mid'] },
  ],
  manifestations: [
   {
-    practice: 'Partnership collaboration',
-    line: ['The team maintains stable working relationships with other teams rather than interacting only when necessary.', 'The team proactively initiates interaction when tasks require the involvement of multiple teams.', 'The team responds to requests from other teams related to collaborative work in a timely manner.', 'The team shares experience and best practices with other teams even when it is not directly required for current tasks.'],
-    mid: ['The team maintains stable working relationships with other teams rather than interacting only when necessary.', 'The team proactively initiates interaction when tasks require the involvement of multiple teams.', 'The team responds to requests from other teams related to collaborative work in a timely manner.', 'The team shares experience and best practices with other teams even when it is not directly required for current tasks.']
+    practice: 'Партнёрское сотрудничество',
+    line: ['Команда поддерживает постоянные рабочие отношения с другими командами, а не взаимодействует только по необходимости.', 'Команда сама инициирует взаимодействие, когда задачи требуют участия нескольких команд.', 'Команда своевременно отвечает на запросы других команд, связанные с совместной работой.', 'Команда делится опытом и удачными практиками с другими командами, даже когда текущие задачи этого прямо не требуют.'],
+    mid: ['Команда поддерживает постоянные рабочие отношения с другими командами, а не взаимодействует только по необходимости.', 'Команда сама инициирует взаимодействие, когда задачи требуют участия нескольких команд.', 'Команда своевременно отвечает на запросы других команд, связанные с совместной работой.', 'Команда делится опытом и удачными практиками с другими командами, даже когда текущие задачи этого прямо не требуют.']
   },
   {
-    practice: 'Alignment of mutual expectations and agreements',
-    line: ['The team aligns priorities and expected results of collaborative work with other teams in advance.', 'The team aligns roles and areas of accountability during collaborative work.', 'When making decisions, the team considers their impact on the work of other teams.', 'When conditions change, the team reviews established agreements with other teams in a timely manner.'],
-    mid: ['The team aligns priorities and expected results of collaborative work with other teams in advance.', 'The team aligns roles and areas of accountability during collaborative work.', 'When making decisions, the team considers their impact on the work of other teams.', 'When conditions change, the team reviews established agreements with other teams in a timely manner.']
+    practice: 'Согласование взаимных ожиданий и договорённостей',
+    line: ['Команда заранее согласует с другими командами приоритеты и ожидаемые результаты совместной работы.', 'При совместной работе команда согласует роли и зоны ответственности.', 'Принимая решения, команда учитывает их влияние на работу других команд.', 'Когда условия меняются, команда своевременно пересматривает договорённости с другими командами.'],
+    mid: ['Команда заранее согласует с другими командами приоритеты и ожидаемые результаты совместной работы.', 'При совместной работе команда согласует роли и зоны ответственности.', 'Принимая решения, команда учитывает их влияние на работу других команд.', 'Когда условия меняются, команда своевременно пересматривает договорённости с другими командами.']
   },
   {
-    practice: 'Constructive resolution of cross-team disagreements',
-    line: ['The team discusses disagreements with other teams openly and in a timely manner, rather than delaying until escalation.', 'When disagreements arise, the team seeks to understand the interests of the other party, rather than solely defending its own position.', 'The team uses escalation only when direct negotiations have failed to yield a solution.', 'The team is open to revising its own position if doing so helps achieve the shared result.'],
-    mid: ['The team discusses disagreements with other teams openly and in a timely manner, rather than delaying until escalation.', 'When disagreements arise, the team seeks to understand the interests of the other party, rather than solely defending its own position.', 'The team uses escalation only when direct negotiations have failed to yield a solution.', 'The team is open to revising its own position if doing so helps achieve the shared result.']
+    practice: 'Конструктивное разрешение разногласий между командами',
+    line: ['Команда обсуждает разногласия с другими командами открыто и своевременно, не дожидаясь эскалации.', 'При разногласиях команда стремится понять интересы другой стороны, а не только отстаивает свою позицию.', 'Команда прибегает к эскалации, только если прямые переговоры не привели к решению.', 'Команда готова пересмотреть свою позицию, если это помогает достичь общего результата.'],
+    mid: ['Команда обсуждает разногласия с другими командами открыто и своевременно, не дожидаясь эскалации.', 'При разногласиях команда стремится понять интересы другой стороны, а не только отстаивает свою позицию.', 'Команда прибегает к эскалации, только если прямые переговоры не привели к решению.', 'Команда готова пересмотреть свою позицию, если это помогает достичь общего результата.']
   },
   ]
  },
  {
- id: 'learning', title: 'Learning and Adaptability',
- wheelTitle: <>Learning &<br/>Adaptability</>,
+ id: 'learning', title: 'Обучение и адаптивность',
+ wheelTitle: <>Обучение и<br/>Адаптивность</>,
  color: '#818cf8',
- symptoms: ["Over time, gaps in competencies and capabilities emerge.", "The same mistakes are repeated.", "Teams find it difficult to adapt to changes."],
+ symptoms: ["Со временем копятся пробелы в навыках и компетенциях.", "Одни и те же ошибки повторяются.", "Командам трудно приспосабливаться к переменам."],
  competencies: [
-   'Learning from experience',
-   'Continuous improvement of working methods',
-   'Adaptation to new conditions and changes'
+   'Обучение на опыте',
+   'Постоянное совершенствование методов работы',
+   'Адаптация к новым условиям и изменениям'
    ],
- keyCompetencies: ["Learnability", "Adaptability", "Change leadership", "Innovative thinking", "Curiosity", "Development orientation"],
+ keyCompetencies: ["Обучаемость", "Адаптивность", "Лидерство в изменениях", "Инновационное мышление", "Любознательность", "Ориентация на развитие"],
  trainings: [
- { name: "Change Leadership", audience: ['line','mid'] },
- { name: "Innovative Thinking", audience: ['line','mid'] },
+ { name: "Лидерство в изменениях", audience: ['line','mid'] },
+ { name: "Инновационное мышление", audience: ['line','mid'] },
  { name: "Developing Strategic Thinking Skills", audience: ['mid'] },
  { name: "Trust and Psychological Safety Training", audience: ['line','mid'] },
- { name: "Individual Coaching Sessions", audience: ['mid'] },
+ { name: "Индивидуальные коучинговые сессии", audience: ['mid'] },
  ],
  manifestations: [
   {
-    practice: 'Learning from experience',
-    line: ['The team regularly analyses the causes of its successes and failures and changes working approaches if necessary.', 'The team does not repeat the same mistakes systematically.', 'Gained experience and knowledge are quickly spread within the team and used in future work.'],
-    mid: ['The team regularly analyses the causes of its successes and failures and changes working approaches if necessary.', 'The team does not repeat the same mistakes systematically.', 'Gained experience and knowledge are quickly spread within the team and used in future work.']
+    practice: 'Обучение на опыте',
+    line: ['Команда регулярно анализирует причины своих успехов и неудач и при необходимости меняет подходы к работе.', 'Команда не повторяет раз за разом одни и те же ошибки.', 'Полученный опыт и знания быстро распространяются в команде и используются в дальнейшей работе.'],
+    mid: ['Команда регулярно анализирует причины своих успехов и неудач и при необходимости меняет подходы к работе.', 'Команда не повторяет раз за разом одни и те же ошибки.', 'Полученный опыт и знания быстро распространяются в команде и используются в дальнейшей работе.']
   },
   {
-    practice: 'Continuous improvement of working methods',
-    line: ['The team proactively implements improvements in its working methods without waiting for external directives.', 'The team evaluates the results of implemented changes and retains the most effective practices.', 'The team studies the working methods of other teams or organisations and, if necessary, implements best practices without waiting for problems to arise.'],
-    mid: ['The team proactively implements improvements in its working methods without waiting for external directives.', 'The team evaluates the results of implemented changes and retains the most effective practices.', 'The team studies the working methods of other teams or organisations and, if necessary, implements best practices without waiting for problems to arise.']
+    practice: 'Постоянное совершенствование методов работы',
+    line: ['Команда сама внедряет улучшения в методы работы, не дожидаясь указаний извне.', 'Команда оценивает результаты внедрённых изменений и сохраняет самые эффективные практики.', 'Команда изучает методы работы других команд или организаций и при необходимости перенимает удачные практики, не дожидаясь проблем.'],
+    mid: ['Команда сама внедряет улучшения в методы работы, не дожидаясь указаний извне.', 'Команда оценивает результаты внедрённых изменений и сохраняет самые эффективные практики.', 'Команда изучает методы работы других команд или организаций и при необходимости перенимает удачные практики, не дожидаясь проблем.']
   },
   {
-    practice: 'Adaptation to new conditions and changes',
-    line: ['The team quickly rearranges its work when conditions change.', 'The team masters new working methods required to achieve results in a timely manner.', 'The team reviews processes and agreements when the previous approach no longer works.'],
-    mid: ['The team quickly rearranges its work when conditions change.', 'The team masters new working methods required to achieve results in a timely manner.', 'The team reviews processes and agreements when the previous approach no longer works.']
+    practice: 'Адаптация к новым условиям и изменениям',
+    line: ['Команда быстро перестраивает работу при изменении условий.', 'Команда своевременно осваивает новые методы работы, необходимые для достижения результатов.', 'Команда пересматривает процессы и договорённости, когда прежний подход перестаёт работать.'],
+    mid: ['Команда быстро перестраивает работу при изменении условий.', 'Команда своевременно осваивает новые методы работы, необходимые для достижения результатов.', 'Команда пересматривает процессы и договорённости, когда прежний подход перестаёт работать.']
   },
   ]
  }

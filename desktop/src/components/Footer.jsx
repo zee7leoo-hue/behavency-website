@@ -14,7 +14,7 @@ export default function Footer() {
           </div>
           <p className="footer__tagline">
             Assess. Engage. Build. Measure.<br/>
-            The end-to-end manager development journey.
+            Путь развития руководителей — от начала до конца.
           </p>
           <div className="footer__socials">
             <a href="https://behavency.me" target="_blank" rel="noopener noreferrer" className="footer__social"><Globe size={15}/></a>
@@ -35,16 +35,16 @@ export default function Footer() {
         <div className="footer__col">
           <h4 className="footer__col-title">Platform</h4>
           <a href="#different" className="footer__link">What's Different</a>
-          <a href="#packages" className="footer__link">Packages</a>
+          <a href="#packages" className="footer__link">Пакеты</a>
           <a href="#who" className="footer__link">Who It's For</a>
           <a href="https://behavency.me/model" target="_blank" rel="noopener noreferrer" className="footer__link">Behavioural Model</a>
         </div>
 
         <div className="footer__col">
-          <h4 className="footer__col-title">Company</h4>
+          <h4 className="footer__col-title">Компания</h4>
           <a href="https://behavency.me" target="_blank" rel="noopener noreferrer" className="footer__link">behavency.me</a>
-          <a href="#contact" className="footer__link">Request a demo</a>
-          <a href="#" className="footer__link">Privacy Policy</a>
+          <a href="#contact" className="footer__link">Запросить демо</a>
+          <a href="#" className="footer__link">Политика конфиденциальности</a>
         </div>
       </div>
 

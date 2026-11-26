@@ -4,9 +4,9 @@ import './TwoGapsSection.css'
 /* "Two kinds of gaps" — Not every problem is the manager's. */
 
 const MANAGER_ROWS = [
-  { label: 'Focus & Prioritisation', zone: 'Development zone', tone: 'dev' },
-  { label: 'Execution & Accountability', zone: 'Medium zone', tone: 'med' },
-  { label: 'Trust & Inclusion', zone: 'Medium zone', tone: 'med' },
+  { label: 'Фокус и приоритеты', zone: 'Development zone', tone: 'dev' },
+  { label: 'Исполнение и ответственность', zone: 'Medium zone', tone: 'med' },
+  { label: 'Доверие и инклюзивность', zone: 'Medium zone', tone: 'med' },
 ]
 const ORG_ROWS = [
   'Too many tasks running at the same time',

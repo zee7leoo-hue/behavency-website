@@ -9,62 +9,62 @@ import './StageIdentify.css'
 const sources = [
   {
     num: '01',
-    name: 'Managerial Profile',
-    desc: 'Shows how the manager actually tends to act across the six areas.',
+    name: 'Профиль управленческого поведения',
+    desc: 'Показывает, как руководитель обычно действует в шести областях.',
     modal: {
-      title: 'Managerial Profile',
-      intro: 'The starting point of every Behavency programme. Through everyday management situations, it shows how the manager actually tends to act across the six areas of the Behavency model.',
-      examines: 'The choices the manager makes when there are two ways to handle a work situation, in setting direction, building trust, prioritising, delivering, working with others and developing people.',
-      reveals: 'Which of the six areas are clear strengths, which are still developing, and which should come first in the manager’s development.',
-      matters: 'Development works best when it is aimed at the right things. The profile gives a clear first picture of how the manager works, before the views of colleagues are added.',
+      title: 'Профиль управленческого поведения',
+      intro: 'С него начинается каждая программа Behavency. На повседневных управленческих ситуациях профиль показывает, как руководитель на самом деле действует в шести областях модели Behavency.',
+      examines: 'Как руководитель выбирает между двумя способами решить рабочую ситуацию — когда задаёт направление, выстраивает доверие, расставляет приоритеты, добивается результата, работает с другими и развивает людей.',
+      reveals: 'Какие из шести областей — явные сильные стороны, какие пока в развитии и с чего руководителю стоит начать.',
+      matters: 'Развитие работает, когда бьёт точно в цель. Профиль даёт первую ясную картину того, как работает руководитель, — ещё до мнений коллег.',
     },
   },
   {
     num: '02',
-    name: '360° Feedback',
-    desc: 'The people around the manager share how they experience the same six areas. Self-view meets the view of others.',
+    name: 'Обратная связь 360°',
+    desc: 'Окружение руководителя рассказывает, каким видит его в тех же шести областях. Самооценка встречается со взглядом со стороны.',
     modal: {
-      title: '360° Feedback',
-      intro: 'Those who work closest to the manager — direct reports, peers, and their own manager — rate the same six behavioural areas independently. Each group\'s view sits alongside the manager\'s own.',
-      examines: 'How the manager\'s behaviour is experienced by the people around them, using the same 30 behaviours the manager rates for themselves.',
-      reveals: 'The gap between how a manager sees themselves and how others experience them. This gap — large or small — is where the most important development conversations begin.',
-      matters: 'Blind spots are invisible by definition. 360° data makes them visible, giving the manager something concrete to work with rather than vague impressions.',
+      title: 'Обратная связь 360°',
+      intro: 'Те, кто работает с руководителем ближе всего, — подчинённые, коллеги и его собственный руководитель — независимо друг от друга оценивают те же шесть областей поведения. Мнение каждой группы видно рядом с самооценкой.',
+      examines: 'Как поведение руководителя видят окружающие — по тем же 30 проявлениям, по которым он оценивает себя сам.',
+      reveals: 'Разница между тем, каким руководитель видит себя и каким его видят другие. Большая она или маленькая, именно с неё начинаются самые важные разговоры о развитии.',
+      matters: 'Слепые зоны по определению не видны. Данные 360° их высвечивают — и у руководителя появляется конкретный материал для работы вместо смутных ощущений.',
     },
   },
   {
     num: '03',
-    name: 'Workplace Effectiveness Survey',
-    desc: 'What in the organisation helps or blocks this manager from being effective? It identifies key conditions and barriers, which we then connect to the areas they may affect.',
+    name: 'Организационные барьеры',
+    desc: 'Что в организации помогает руководителю работать, а что мешает? Опросник находит ключевые условия и барьеры, а мы связываем их с областями, на которые они могут влиять.',
     modal: {
-      title: 'Workplace Effectiveness Survey',
-      intro: 'This survey explores how the broader organisation enables or hinders the manager\'s effectiveness. The manager describes what in their environment helps or blocks their work: authority, resources, priorities, information, procedures and work with other units.',
-      examines: 'How the organisation\'s systems, processes, resources and working conditions help or block the manager from being effective.',
-      reveals: 'Patterns and barriers outside the manager\'s direct control, providing essential context for development and a more complete picture of their effectiveness.',
-      matters: 'Managerial effectiveness is shaped not only by individual behaviour, but also by the environment. Understanding organisational barriers leads to more relevant development and better, more sustainable results.',
+      title: 'Организационные барьеры',
+      intro: 'Опросник показывает, как организация в целом помогает или мешает руководителю работать эффективно. Руководитель описывает, что в его среде помогает работе, а что её тормозит: полномочия, ресурсы, приоритеты, информация, процедуры и взаимодействие с другими подразделениями.',
+      examines: 'Как системы, процессы, ресурсы и условия работы в организации помогают руководителю работать эффективно — или мешают ему.',
+      reveals: 'Закономерности и барьеры вне прямого влияния руководителя — важный контекст для развития и более полная картина его эффективности.',
+      matters: 'Эффективность руководителя зависит не только от его поведения, но и от среды. Когда понятны организационные барьеры, развитие точнее, а результаты лучше и устойчивее.',
     },
   },
   {
     num: '04',
-    name: 'Resilience to Change',
-    desc: "How does this person respond when circumstances shift? It shows which resilience qualities they draw on most and which they use less.",
+    name: 'Устойчивость к изменениям',
+    desc: "Как человек реагирует, когда всё меняется? Методика показывает, на какие качества устойчивости он опирается чаще, а какие использует реже.",
     modal: {
-      title: 'Resilience to Change',
-      intro: 'A psychometric assessment that examines how a manager responds when circumstances change, under pressure, or when facing ambiguity. There is no single high or low score: the result is a profile across six elements.',
-      examines: 'The individual\'s characteristic response to change across six elements: realism, positive self-view, flexible thinking, flexible communication, organisation and initiative.',
-      reveals: 'Which of these qualities the manager draws on most and which they use less: tendencies that may stay invisible in stable conditions but matter during periods of uncertainty or transformation.',
-      matters: 'Organisations are rarely stable. A manager\'s resilience profile shows how they tend to respond when it matters most — and where they may need support to lead effectively through change.',
+      title: 'Устойчивость к изменениям',
+      intro: 'Психометрическая методика: как руководитель реагирует на перемены, давление и неопределённость. Единого высокого или низкого балла нет — результат складывается в профиль по шести элементам.',
+      examines: 'Как человек обычно реагирует на изменения — по шести элементам: реализм, позитивный взгляд на себя, гибкость мышления, гибкость в общении, организованность и инициативность.',
+      reveals: 'На какие качества руководитель опирается чаще, а какие использует реже. В спокойные времена такие склонности могут быть незаметны, но в периоды неопределённости и трансформации выходят на первый план.',
+      matters: 'Стабильность в организациях — редкость. Профиль устойчивости показывает, как руководитель обычно реагирует, когда на кону больше всего, и где ему может понадобиться поддержка, чтобы эффективно вести людей через изменения.',
     },
   },
   {
     num: '05',
-    name: 'Structured Interview',
-    desc: 'A real conversation about the same six areas. The manager talks through situations from their own work, which brings out the detail and reasoning a questionnaire can’t show.',
+    name: 'Структурированное интервью',
+    desc: 'Живой разговор о тех же шести областях. Руководитель разбирает ситуации из своей работы — и всплывают детали и логика решений, которых опросник не покажет.',
     modal: {
-      title: 'Structured Interview',
-      intro: 'A one-to-one conversation, led by a Behavency assessor or a trained HR professional, that explores the same six areas through real examples from the manager\'s work. It is held without looking at the questionnaire results, so it adds an independent view.',
-      examines: 'Concrete situations from the manager\'s day-to-day work: what they did, why, and what happened next.',
-      reveals: 'The context and intent behind the behaviour, in the manager\'s own examples. It is compared with the questionnaires only afterwards.',
-      matters: 'Numbers show what happens; a conversation shows why. Because the interview is held independently, comparing the two afterwards gives a far more reliable picture.',
+      title: 'Структурированное интервью',
+      intro: 'Разговор один на один с асессором Behavency или обученным HR-специалистом. Те же шесть областей — на реальных примерах из работы руководителя. На результаты опросников интервьюер не смотрит, поэтому интервью даёт независимый взгляд.',
+      examines: 'Конкретные ситуации из повседневной работы руководителя: что он сделал, почему и что было дальше.',
+      reveals: 'Контекст и намерения за поведением — на собственных примерах руководителя. С опросниками это сравнивают только потом.',
+      matters: 'Цифры показывают, что происходит, а разговор — почему. Интервью проводится независимо, поэтому, сравнив потом одно с другим, вы получаете куда более надёжную картину.',
     },
   },
 ]
@@ -113,7 +113,7 @@ export default function StageIdentify() {
           {/* Chapter label */}
           <motion.div className="identify__chapter-label"
             initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ duration: 0.5 }}>
-            <StagePill num="01" title="Identify" sub="Reveal strengths and gaps" tone="blue" />
+            <StagePill num="01" title="Identify" sub="Найти сильные стороны и зоны роста" tone="blue" />
           </motion.div>
 
           {/* Two-column split */}
@@ -124,30 +124,30 @@ export default function StageIdentify() {
               initial={{ opacity: 0, x: -28 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.7 }}>
 
               <h2 className="identify__headline">
-                We start by<br />
-                <em>listening</em> —<br />
-                to managers, to their<br />
-                teams, and to the<br />
-                organisation around them.
+                Сначала мы<br />
+                <em>слушаем</em> —<br />
+                руководителей, их<br />
+                команды и<br />
+                организацию вокруг них.
               </h2>
 
               <p className="body-copy identify__intro">
-                Most assessments ask people to assess themselves.<br />{' '}
-                We go further. We collect up to five sources of evidence —<br />{' '}
-                <strong>together, they create a more complete picture of managerial effectiveness.</strong>
+                Обычно оценка сводится к самооценке.<br />{' '}
+                Мы идём дальше и сводим вместе до пяти источников —<br />{' '}
+                <strong>так картина эффективности руководителя становится полнее.</strong>
               </p>
 
               {/* Only 5 + 6 metrics */}
               <div className="identify__stats">
                 <div className="stat">
-                  <div className="stat__val"><span className="stat__upto" style={{ fontSize: '20px', fontWeight: 600, marginRight: '7px', letterSpacing: 0 }}>Up to</span>5</div>
-                  <div className="stat__label">Sources of evidence</div>
-                  <div className="stat__sub">per manager</div>
+                  <div className="stat__val"><span className="stat__upto" style={{ fontSize: '20px', fontWeight: 600, marginRight: '7px', letterSpacing: 0 }}>До</span>5</div>
+                  <div className="stat__label">источников данных</div>
+                  <div className="stat__sub">на руководителя</div>
                 </div>
                 <div className="stat">
                   <div className="stat__val">6</div>
-                  <div className="stat__label">Behavioural areas</div>
-                  <div className="stat__sub">explored through the Managerial Profile, 360° and interviews</div>
+                  <div className="stat__label">поведенческих областей</div>
+                  <div className="stat__sub">в «Профиле управленческого поведения», 360° и интервью</div>
                 </div>
               </div>
             </motion.div>
@@ -200,7 +200,7 @@ export default function StageIdentify() {
               variants={card} initial="hidden" animate="show" exit="exit"
               onClick={e => e.stopPropagation()}>
 
-              <button className="id-modal__close" onClick={closeModal} aria-label="Close">
+              <button className="id-modal__close" onClick={closeModal} aria-label="Закрыть">
                 <X size={20} />
               </button>
 
@@ -210,15 +210,15 @@ export default function StageIdentify() {
 
               <div className="id-modal__rows">
                 <motion.div className="id-modal__row" variants={part}>
-                  <dt className="id-modal__row-label">What it examines</dt>
+                  <dt className="id-modal__row-label">Что изучает</dt>
                   <dd className="id-modal__row-val">{activeModal.modal.examines}</dd>
                 </motion.div>
                 <motion.div className="id-modal__row" variants={part}>
-                  <dt className="id-modal__row-label">What it reveals</dt>
+                  <dt className="id-modal__row-label">Что показывает</dt>
                   <dd className="id-modal__row-val">{activeModal.modal.reveals}</dd>
                 </motion.div>
                 <motion.div className="id-modal__row" variants={part}>
-                  <dt className="id-modal__row-label">Why it matters</dt>
+                  <dt className="id-modal__row-label">Почему это важно</dt>
                   <dd className="id-modal__row-val">{activeModal.modal.matters}</dd>
                 </motion.div>
               </div>

@@ -1,7 +1,7 @@
 // Behavency desktop mock-up, round 2:
-//  - menu: The journey (drop-down: Identify, Engage, Build, Measure, The six areas) · Programmes · Recruitment · Packages · About · [Request a demo]
+//  - menu: The journey (drop-down: Identify, Engage, Build, Measure, The six areas) · Programmes · Recruitment · Packages · About · [Запросить демо]
 //  - About opens as its own page (story as a timeline, like behavency.me, + the team)
-//  - Interview Studio: a block in Identify (with the app's four practice characters) and point 06 in "What makes Behavency different"
+//  - Interview Studio: a block in Identify (with the app's four practice characters) and point 06 in "Чем отличается Behavency"
 //  - "20+ years" -> "19 years"
 (function () {
   const C = ['#2f6fdb', '#7a4bd6', '#e0761c', '#14a07c'];
@@ -85,7 +85,7 @@
   .abp .tl-step h3 { font: 600 23px/1.25 "Source Serif 4", Georgia, serif; margin: 10px 0 0; }
   .abp .tl-step p { font: 400 16px/1.65 Inter, sans-serif; color: #4f5770; margin: 12px 0 0; }
   .abp .team { background: #fbfaff; padding: 100px 0 40px; }
-  /* 25 Nov: "Our vision" and "Who we are", between the story and the team */
+  /* 25 Nov: "Наше видение" and "Кто мы", between the story and the team */
   /* 25 Nov (user's "1 vision" design): vision + who we are open the page, thin line between them; the story follows */
   .abp .who { position: relative; overflow: hidden; padding: 70px 0 0; }
   .abp .who-grid { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding-bottom: 64px; border-bottom: 1px solid #e6e9ef; }
@@ -152,7 +152,7 @@
   .hir__dur { display: inline-flex !important; align-items: center; gap: 7px; background: none !important; padding: 12px 0 0 !important; border-top: 1px solid #ece8f3; align-self: stretch !important; border-radius: 0 !important; font: 500 12.5px/1.3 Inter, sans-serif !important; color: #6b7183 !important; }
   .hir__dur::before { content: ""; flex: none; width: 15px; height: 15px; background: currentColor; -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='9' cy='7' r='4'/%3E%3Cpath d='M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75'/%3E%3C/svg%3E") center / contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='9' cy='7' r='4'/%3E%3Cpath d='M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75'/%3E%3C/svg%3E") center / contain no-repeat; }
   .hir__foot { display: none !important; }
-  /* What makes Behavency different: calmer list, like the phone version */
+  /* Чем отличается Behavency: calmer list, like the phone version */
   #different .different__point { grid-template-columns: 56px minmax(0, 1fr) 40px !important; gap: 20px !important; padding: 22px 0 !important; cursor: pointer; }
   #different .different__num { font: 700 13px/26px Inter, sans-serif !important; letter-spacing: .08em; color: #1a8a7a !important; padding-top: 0 !important; }
   #different .different__body { gap: 6px !important; max-width: 720px !important; }
@@ -168,8 +168,8 @@
   .hm-dot { border-color: #14a07c !important; color: #0e8a69 !important; }
   .hm-dot--on { background: #14a07c !important; border-color: #14a07c !important; color: #fff !important; box-shadow: 0 6px 14px -6px rgba(20,160,124,.55) !important; }
   .hm-label { color: #0e8a69 !important; }
-  /* "Who it’s for" removed (23 Nov): the page already says who it is for */
-  /* 23 Nov evening: package cards white, not cream (R20); "What holds them back · example" spacing (R25);
+  /* "Для кого" removed (23 Nov): the page already says who it is for */
+  /* 23 Nov evening: package cards white, not cream (R20); "Что им мешает · пример" spacing (R25);
      the Build dashboard keeps the normal page width instead of touching the screen edge (R17) */
   .packages__card { background: #fff !important; }
   .hb-flag em { margin-left: 0 !important; }
@@ -195,7 +195,7 @@
   .ist { margin: 90px auto 0; max-width: 1120px; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr) 560px; gap: 64px; align-items: center; font-family: Inter, Arial, sans-serif; color: #0f1b3d; text-align: left; }
   #interview-studio.ist { max-width: 1120px; margin-top: 96px; padding: 64px; border-radius: 32px; background: linear-gradient(165deg, #e2eafd 0%, #e7e7fc 60%, #ece9fd 100%); box-shadow: 0 0 0 1px rgba(91,76,214,.08), 0 40px 80px -50px rgba(60,40,160,.35); box-sizing: border-box; grid-template-columns: minmax(0, 1fr) 500px; gap: 56px; }
   #interview-studio ul, #interview-studio li { border-color: rgba(91,76,214,.14) !important; }
-  .st-top { display: none; } /* the small "Structured Interview" tag repeated the list row above */
+  .st-top { display: none; } /* the small "Структурированное интервью" tag repeated the list row above */
   .st-ico { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; background: #fff; color: #2f6fdb; box-shadow: 0 0 0 1px rgba(47,111,219,.12), 0 8px 18px -10px rgba(40,60,160,.45); }
   .st-ico svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
   .st-name { font: 600 16px/1.2 Inter, sans-serif; color: #1f2a5a; }
@@ -225,61 +225,61 @@
 
   const chev = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>';
   const STEPS_OLD = [
-    ['2007', 'Where it began', 'OGI Europe is founded. From the start, the work is training managers and their teams: how they lead, decide and work together.'],
-    ['2012', 'Across Europe', 'Five years on, our trainers work with managers across Europe, for companies such as Nestlé, Bayer and Heineken. The sessions go well. People leave inspired. Then Monday comes, old habits come back, and little changes.'],
-    ['2022', 'What we kept seeing', 'A survey run in-house. An assessment from one provider, a workshop from another, an e-learning platform on the side. Different methods, different teams, different reports. Each piece made sense on its own, but nothing connected them, and nobody could say what had actually changed.'],
-    ['2023', 'Work on Behavency begins', 'One journey, start to finish, for managers, their teams or both. First it shows where effectiveness really drops, and what is holding people back. Then people see it for themselves, in a game where the same habits show up live. They get development that fits, and six months later we show what has changed.'],
-    ['2026', 'Behavency launches', 'The platform goes live: Identify, Engage, Build and Measure, in one place, run by the people who have trained managers for 19 years.'],
+    ['2007', 'С чего всё началось', 'Основана OGI Europe. С самого начала мы обучаем руководителей и их команды: как руководить, принимать решения и работать вместе.'],
+    ['2012', 'По всей Европе', 'Через пять лет наши тренеры работают с руководителями по всей Европе — в том числе для Nestlé, Bayer и Heineken. Тренинги проходят отлично, люди уходят вдохновлёнными. А в понедельник возвращаются старые привычки, и почти ничего не меняется.'],
+    ['2022', 'Что мы видели раз за разом', 'Опрос — своими силами. Оценка — у одного подрядчика, семинар — у другого, а сбоку ещё платформа e-learning. Разные методики, разные команды, разные отчёты. По отдельности всё имело смысл, но ничто не связывало части между собой, и никто не мог сказать, что на самом деле изменилось.'],
+    ['2023', 'Начинаем работу над Behavency', 'Один путь от начала до конца — для руководителей, их команд или для всех сразу. Сначала он показывает, где эффективность на самом деле проседает и что мешает людям. Потом люди убеждаются в этом сами — в игре, где те же привычки проявляются вживую. Они получают развитие, которое им подходит, а через шесть месяцев мы показываем, что изменилось.'],
+    ['2026', 'Запуск Behavency', 'Запускаем платформу: Identify, Engage, Build и Measure в одном месте. За ней — люди, которые обучают руководителей уже 19 лет.'],
   ];
   const STEPS = [
-    ['2007', 'OGI Europe is founded', 'We start training managers and their teams: how they lead, decide and work together.', ''],
-    ['2017', 'Across Europe and Central Asia', 'Our trainers work with managers in more than 30 countries, for companies such as Nestlé, Bayer and Heineken.', '10 years later'],
-    ['2022', 'The realisation', 'Training alone doesn’t change behaviour. People leave inspired, and by Monday the old habits are back. And nothing connects the assessment, the workshop and what happens next.', '5 years later'],
-    ['2023', 'Work on Behavency begins', 'We bring it all into one journey: the assessments, the team game, our trainers and programmes.', '1 year later'],
-    ['2026', 'Behavency launches', 'Identify, Engage, Build and Measure, in one place.', '3 years later'],
+    ['2007', 'Основана OGI Europe', 'Начинаем обучать руководителей и их команды: как управлять, принимать решения и работать вместе.', ''],
+    ['2017', 'В Европе и Центральной Азии', 'Наши тренеры работают с руководителями более чем в 30 странах — в том числе для Nestlé, Bayer и Heineken.', '10 лет спустя'],
+    ['2022', 'Прозрение', 'Сам по себе тренинг поведение не меняет. Люди уходят вдохновлёнными, а к понедельнику возвращаются старые привычки. И оценка, семинар и всё, что после, никак не связаны.', '5 лет спустя'],
+    ['2023', 'Начинаем работу над Behavency', 'Собираем всё в один путь: оценки, командную игру, наших тренеров и программы.', 'Год спустя'],
+    ['2026', 'Запуск Behavency', 'Identify, Engage, Build и Measure — в одном месте.', '3 года спустя'],
   ];
-  const TEAM = [['vlad', 'Vlad Plaskov', 'Co-Founder & CEO'], ['slava', 'Slava Turiashvili', 'Co-Founder & CTO'], ['eric', 'Eric Renard', 'Development Director'], ['vadim', 'Vadim Neander', 'Chief Methodologist'], ['keith', 'Keith Parker', 'Lead Facilitator'], ['ashraf', 'Ashraf Hussain', 'Experience Designer']];
+  const TEAM = [['vlad', 'Vlad Plaskov', 'Сооснователь и CEO'], ['slava', 'Slava Turiashvili', 'Сооснователь и CTO'], ['eric', 'Eric Renard', 'Директор по развитию'], ['vadim', 'Vadim Neander', 'Главный методолог'], ['keith', 'Keith Parker', 'Ведущий фасилитатор'], ['ashraf', 'Ashraf Hussain', 'Дизайнер опыта обучения']];
   // 25 Nov: one line per person, under the job title
-  const LINE = {"vlad":"Leads the company and the idea behind the journey.","slava":"Built the platform that connects every step.","vadim":"Keeps the method grounded in research: the six areas, the questionnaires and how results are read.","eric":"Turns the method into programmes managers can use at work.","keith":"Brings the sessions to life, from the team game to the reflection.","ashraf":"Designs how every step looks and feels, for managers, teams and HR."};
+  const LINE = {"vlad":"Руководит компанией и отвечает за идею, на которой построен путь.","slava":"Создал платформу, которая связывает все шаги.","vadim":"Следит, чтобы методика стояла на исследованиях: шесть областей, опросники и то, как читать результаты.","eric":"Превращает методику в программы, которые руководители могут применять в работе.","keith":"Оживляет сессии — от командной игры до разбора.","ashraf":"Продумывает, как выглядит и ощущается каждый шаг — для руководителей, команд и HR."};
   const aboutPage = `
-  <div class="abp" role="dialog" aria-label="About Behavency">
+  <div class="abp" role="dialog" aria-label="О Behavency">
     <div class="who"><i class="abp-blob abp-blob--tr"></i><div class="w who-grid">
-      <div><div class="eye">Our vision</div><h2>Managers and teams, <em>pulling the same way</em></h2><p>We’d like every manager to know how they really come across, every team to know what is expected of it, and every organisation to see what gets in the way. When those three line up, people stop working around each other and start working together. That is what we built Behavency for: helping managers and their teams find common ground, and making it last.</p></div>
-      <div><div class="eye">Who we are</div><h2>Built by people who <em>do this work</em></h2><p>Behavency is made by OGI Europe. Since 2007 we have trained managers and their teams in more than 30 countries, and along the way we have learned what helps people change and what doesn’t. Behavency puts that experience into one journey.</p><p>It is built by methodologists, assessors, HR specialists, trainers and technology experts working side by side. The six-area model and the questionnaires come from our methodologists, the programmes and workshops from our trainers and facilitators, and the platform that connects every step from our technology team. For HR, that means one partner and one method, from the first assessment to showing what has changed.</p></div>
+      <div><div class="eye">Наше видение</div><h2>Руководители и команды <em>заодно</em></h2><p>Мы хотим, чтобы каждый руководитель знал, каким его видят на самом деле, каждая команда понимала, чего от неё ждут, а каждая организация видела, что мешает. Когда всё это сходится, люди перестают работать в обход друг друга и начинают работать вместе. Ради этого мы и создали Behavency: чтобы руководители и команды нашли общий язык — и не теряли его.</p></div>
+      <div><div class="eye">Кто мы</div><h2>Создано людьми, которые <em>сами делают эту работу</em></h2><p>Behavency создаёт OGI Europe. С 2007 года мы обучаем руководителей и их команды более чем в 30 странах и за эти годы поняли, что помогает людям меняться, а что нет. В Behavency этот опыт собран в один путь.</p><p>Над ним бок о бок работают методологи, асессоры, HR-специалисты, тренеры и технологи. Модель шести областей и опросники — от наших методологов, программы и семинары — от тренеров и фасилитаторов, а платформа, которая связывает все шаги, — от технологической команды. Для HR это один партнёр и одна методика — от первой оценки до момента, когда видно, что изменилось.</p></div>
     </div></div>
     <div class="story"><i class="abp-blob abp-blob--bl"></i>
-    <div class="w hero"><span class="pill">Our story</span>
-      <h1>Why does training fail<br><em>on Monday morning?</em></h1>
-      <p>For years we watched good training fade by Monday. So we built a way to make the change stick, and to show it.</p></div>
+    <div class="w hero"><span class="pill">Наша история</span>
+      <h1>Почему тренинг<br><em>не доживает до понедельника?</em></h1>
+      <p>Годами мы видели, как хороший тренинг выветривается к понедельнику. И создали способ закрепить перемены — и показать их.</p></div>
     <div class="w tl">
-      <div class="tl-year"><small>Founded</small><b>2007</b><span></span></div>
-      <div class="tl-steps">${STEPS.map(([y, h, p, l], i) => `<div class="tl-step" data-y="${y}" data-l="${l || 'Founded'}"><div class="dot">${i + 1}</div>${l ? `<div class="later">${l}</div>` : ''}<div class="yr">${y}</div><h3>${h}</h3><p>${p}</p></div>`).join('')}</div>
+      <div class="tl-year"><small>Основана</small><b>2007</b><span></span></div>
+      <div class="tl-steps">${STEPS.map(([y, h, p, l], i) => `<div class="tl-step" data-y="${y}" data-l="${l || 'Основана'}"><div class="dot">${i + 1}</div>${l ? `<div class="later">${l}</div>` : ''}<div class="yr">${y}</div><h3>${h}</h3><p>${p}</p></div>`).join('')}</div>
     </div>
     </div>
     <div class="team"><div class="w">
-      <div class="eye">The team</div>
-      <h2>The minds <em>behind Behavency</em></h2>
-      <p class="tl2">Nineteen years in training rooms, one clear method, and a platform that holds it together.</p>
+      <div class="eye">Команда</div>
+      <h2>Кто стоит <em>за Behavency</em></h2>
+      <p class="tl2">Девятнадцать лет в тренинговых залах, один понятный метод и платформа, на которой всё держится.</p>
       <div class="people">${TEAM.map(([f, n, r]) => `<div class="pp"><div class="ph"><img src="team/${f}.jpg" alt="${n}"></div><div class="pp-tx"><b>${n}</b><span>${r}</span><em></em><i>${LINE[f]}</i></div></div>`).join('')}</div>
     </div></div>
     <div class="abp-end"><div class="w">
-      <h2>Want to see it <em>for your managers?</em></h2>
-      <button class="abp-cta" type="button" data-cm-open>Request a demo</button>
-      <button class="back" type="button" data-close>← Back to the site</button>
+      <h2>Хотите посмотреть, как это будет <em>у ваших руководителей?</em></h2>
+      <button class="abp-cta" type="button" data-cm-open>Запросить демо</button>
+      <button class="back" type="button" data-close>← Назад на сайт</button>
     </div></div>
   </div>`;
 
-  const CHARS = [['anna', 'Anna', 'Gives clear examples', 'Easy', '#ecfdf5', '#d1fae5', '#047857'], ['mark', 'Mark', 'Speaks in generalities', 'Medium', '#eff6ff', '#dbeafe', '#1d4ed8'], ['sofia', 'Sofia', 'Only success stories', 'Hard', '#fff7ed', '#ffedd5', '#c2410c'], ['peter', 'Peter', 'Long-winded, drifts off', 'Challenging', '#fdf2f8', '#ffe4e6', '#be123c']];
+  const CHARS = [['anna', 'Anna', 'Приводит понятные примеры', 'Лёгкий', '#ecfdf5', '#d1fae5', '#047857'], ['mark', 'Mark', 'Говорит общими словами', 'Средний', '#eff6ff', '#dbeafe', '#1d4ed8'], ['sofia', 'Sofia', 'Только истории успеха', 'Сложный', '#fff7ed', '#ffedd5', '#c2410c'], ['peter', 'Peter', 'Многословен, уходит от темы', 'Очень сложный', '#fdf2f8', '#ffe4e6', '#be123c']];
   const studio = `
   <div class="ist" id="interview-studio">
     <div>
-      <div class="st-top"><span class="st-ico"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.6A8 8 0 1 1 21 12z"/></svg></span><span class="st-name">Structured Interview</span></div><div class="eye">The cherry on top</div>
-      <h3>Your HR team trains to <em>run the interview.</em></h3>
-      <p>A structured interview only works if the interviewer knows how to listen and dig deeper. So we don't just train your HR team, we give them everything they need. Before meeting real managers, they practise with four AI characters in our Interview Studio, from easy to challenging.</p>
+      <div class="st-top"><span class="st-ico"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.6A8 8 0 1 1 21 12z"/></svg></span><span class="st-name">Структурированное интервью</span></div><div class="eye">Вишенка на торте</div>
+      <h3>Ваши HR-специалисты учатся <em>вести интервью.</em></h3>
+      <p>Структурированное интервью работает, только если интервьюер умеет слушать и копать глубже. Поэтому мы не только обучаем вашу HR-команду, но и даём ей все инструменты. До встречи с настоящими руководителями они тренируются с четырьмя AI-персонажами в нашей Интервью-студии — от простого к сложному.</p>
       <ul>
-        <li><span class="ist-when">Before</span><i>✓</i><span>A ready-made guide for every interview, built on the six areas</span></li>
-        <li><span class="ist-when">During</span><i>✓</i><span>The AI suggests what to ask next</span></li>
-        <li><span class="ist-when">After</span><i>✓</i><span>The AI sorts the notes into a summary; the interviewer decides</span></li>
+        <li><span class="ist-when">До</span><i>✓</i><span>Готовый гайд для каждого интервью по шести областям</span></li>
+        <li><span class="ist-when">Во время</span><i>✓</i><span>AI подсказывает, что спросить дальше</span></li>
+        <li><span class="ist-when">После</span><i>✓</i><span>AI сводит заметки в резюме, решает интервьюер</span></li>
       </ul>
     </div>
     <div class="chars">${CHARS.map(([f, n, d, l, t, cb, cf]) => `<div class="ch" style="--t:${t};--cb:${cb};--cf:${cf}"><em>${l}</em><img src="team/${f}.png" alt="${n}"><b>${n}</b><span>${d}</span></div>`).join('')}</div>
@@ -291,11 +291,11 @@
   function openAbout() {
     if (window.bhvCloseRecruit) window.bhvCloseRecruit();
     abp.classList.add('open'); document.documentElement.classList.add('abp-lock'); abp.scrollTop = 0;
-    if ((window.bhvH ? bhvH() : location.hash).indexOf('about') < 0) history.pushState({ about: 1 }, '', location.pathname + location.search + '#about' + ((window.bhvH ? bhvH() : location.hash).match(/v=\w+/) ? '&' + (window.bhvH ? bhvH() : location.hash).match(/v=\w+/)[0] : ''));
+    if (location.hash.indexOf('about') < 0) history.pushState({ about: 1 }, '', location.pathname + location.search + '#about' + (location.hash.match(/v=\w+/) ? '&' + location.hash.match(/v=\w+/)[0] : ''));
     mark();
   }
   function closeAbout() { if (!abp || !abp.classList.contains('open')) return; abp.classList.remove('open'); document.documentElement.classList.remove('abp-lock'); mark(); }
-  addEventListener('popstate', () => { if (!/about/.test((window.bhvH ? bhvH() : location.hash))) closeAbout(); });
+  addEventListener('popstate', () => { if (!/about/.test(location.hash)) closeAbout(); });
   window.bhvCloseAbout = () => closeAbout(); window.bhvMarkNav = () => mark();
 
   function nineteen() {
@@ -304,29 +304,29 @@
   }
   function linkInterviewRow() {
     if (document.querySelector('.ist-link')) return;
-    const row = [...document.querySelectorAll('#identify *')].filter((e) => /structured interview/i.test(e.textContent) && e.textContent.length < 400 && !e.closest('#interview-studio')).sort((a, b) => a.textContent.length - b.textContent.length).find((e) => e.querySelector('p') || e.tagName === 'P' || e.children.length >= 2);
+    const row = [...document.querySelectorAll('#identify *')].filter((e) => /structured interview|структурированное интервью/i.test(e.textContent) && e.textContent.length < 400 && !e.closest('#interview-studio')).sort((a, b) => a.textContent.length - b.textContent.length).find((e) => e.querySelector('p') || e.tagName === 'P' || e.children.length >= 2);
     if (!row) return;
     const host = row.tagName === 'P' ? row.parentElement : row;
-    const a = document.createElement('a'); a.className = 'ist-link'; a.textContent = 'Practise it in the Interview Studio ↓';
+    const a = document.createElement('a'); a.className = 'ist-link'; a.textContent = 'Попробовать в Интервью-студии ↓';
     a.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); const t = document.getElementById('interview-studio'); if (t) scrollTo({ top: t.getBoundingClientRect().top + scrollY - 90, behavior: 'smooth' }); });
     host.appendChild(a);
   }
   function confLine() {   // 23 Nov (R8): one quiet line under the five sources
     const list = document.querySelector('#identify .identify__sources');
     if (!list || document.querySelector('.id-conf')) return;
-    const p = document.createElement('p'); p.className = 'id-conf'; p.innerHTML = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Assessment data is stored in the EU and handled under GDPR.';
+    const p = document.createElement('p'); p.className = 'id-conf'; p.innerHTML = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Данные оценки хранятся в ЕС и обрабатываются в соответствии с GDPR.';
     list.after(p);
   }
   function no40() {   // "40+ programmes linked to..." -> "Programmes linked to..."
     const w = document.createTreeWalker(document.getElementById('root'), NodeFilter.SHOW_TEXT);
-    let n; while ((n = w.nextNode())) if (/40[+] *programmes/i.test(n.nodeValue)) n.nodeValue = n.nodeValue.replace(/40[+] *programmes/gi, 'Programmes');
+    let n; while ((n = w.nextNode())) if (/40[+] *programmes/i.test(n.nodeValue)) n.nodeValue = n.nodeValue.replace(/40[+] *programmes/gi, 'Программы');
   }
   function midLevel() {   // the app's names for the two manager groups
     const w = document.createTreeWalker(document.getElementById('root'), NodeFilter.SHOW_TEXT);
     let n; while ((n = w.nextNode())) { let v = n.nodeValue;
-      if (/line and mid-level managers/i.test(v)) { v = v.replace(/line and mid-level managers/gi, (m) => (m[0] === 'L' ? 'Line managers and managers of managers' : 'line managers and managers of managers')); n.nodeValue = v; }
-      if (/mid-level managers/i.test(v)) n.nodeValue = v.replace(/mid-level managers/gi, (m) => (m[0] === 'M' ? 'Managers of managers' : 'managers of managers'));
-      else if (/^ *Mid-level *$/.test(v)) n.nodeValue = v.replace('Mid-level', 'Managers of managers'); }
+      if (/line and mid-level managers/i.test(v)) { v = v.replace(/line and mid-level managers/gi, (m) => (m[0] === 'L' ? 'Линейные руководители и руководители руководителей' : 'линейные руководители и руководители руководителей')); n.nodeValue = v; }
+      if (/mid-level managers/i.test(v)) n.nodeValue = v.replace(/mid-level managers/gi, (m) => (m[0] === 'M' ? 'Руководители руководителей' : 'руководители руководителей'));
+      else if (/^ *Mid-level *$/.test(v)) n.nodeValue = v.replace('Mid-level', 'Руководители руководителей'); }
   }
   function replayInView() {   // the Build animation starts when it comes into view, not when the page loads it
     const f = document.querySelector('.bs-animation-frame'); if (!f || f.dataset.replay) return;
@@ -338,14 +338,14 @@
     // if the animation finishes loading after it came into view, it says so and gets its start signal then
     addEventListener('message', (e) => { if (e.data === 'bhv-ready' && e.source === f.contentWindow && seen) send(); });
   }
-  // model levels in the right order: Managers of managers first, then Line managers (numbers follow the new order)
+  // model levels in the right order: Руководители руководителей first, then Line managers (numbers follow the new order)
   let mmPicked = false;
   function modelWords() {
-    const hs = document.querySelector('.bmodel__hint span'); if (hs && hs.textContent !== 'Click any area to explore the behaviours behind it') hs.textContent = 'Click any area to explore the behaviours behind it';
-    if (!mmPicked) { const row = [...document.querySelectorAll('.bmodel__row')].find((r) => /Managers of managers/.test(r.textContent)); if (row) { mmPicked = true; if (!row.classList.contains('bmodel__row--active')) row.click(); } }
-    const ey = document.querySelector('.bmodel__ey-text'); if (ey && ey.textContent !== 'WHAT WE MEASURE') ey.textContent = 'WHAT WE MEASURE';
+    const hs = document.querySelector('.bmodel__hint span'); if (hs && hs.textContent !== 'Нажмите на область, чтобы увидеть поведение за ней') hs.textContent = 'Нажмите на область, чтобы увидеть поведение за ней';
+    if (!mmPicked) { const row = [...document.querySelectorAll('.bmodel__row')].find((r) => /Руководители руководителей/.test(r.textContent)); if (row) { mmPicked = true; if (!row.classList.contains('bmodel__row--active')) row.click(); } }
+    const ey = document.querySelector('.bmodel__ey-text'); if (ey && ey.textContent !== 'ЧТО МЫ ИЗМЕРЯЕМ') ey.textContent = 'ЧТО МЫ ИЗМЕРЯЕМ';
     const sub = document.querySelector('.bmodel__sub');
-    if (sub && !(sub.nextElementSibling && sub.nextElementSibling.classList.contains('bmodel__sub2'))) { const p = document.createElement('p'); p.className = 'bmodel__sub2'; p.textContent = 'We look at managers and teams from several sides: how they work across the six areas, and what around them makes that easier or harder. Managers and teams share the same six areas, so their results connect into one picture you can act on.'; sub.after(p); }
+    if (sub && !(sub.nextElementSibling && sub.nextElementSibling.classList.contains('bmodel__sub2'))) { const p = document.createElement('p'); p.className = 'bmodel__sub2'; p.textContent = 'Мы смотрим на руководителей и команды с разных сторон: как они действуют в шести областях и что вокруг помогает им или мешает. Области у руководителей и команд общие, поэтому результаты складываются в одну картину, по которой можно действовать.'; sub.after(p); }
   }
   setInterval(modelWords, 400);
   setInterval(() => { const im = document.querySelector('.hc-cards .hc-cards-art'); if (im && !/cards-4-new/.test(im.getAttribute('src') || '')) im.setAttribute('src', 'assets/cards-4-new.webp'); }, 400);
@@ -356,7 +356,7 @@
   }
   setInterval(modelOrder, 400);
   if (window.BHV_MODELTRY) {
-    const m = (window.bhvH ? bhvH() : location.hash).match(/mv=([a-d])/); const mv = m ? m[1] : 'a';
+    const m = location.hash.match(/mv=([a-d])/); const mv = m ? m[1] : 'a';
     document.documentElement.classList.add('mv-' + mv);
     const names = { a: 'A · Wider box', b: 'B · Wider + bigger circles', c: 'C · Nearly full width', d: 'D · Wider, white box' };
     const bar = document.createElement('div'); bar.className = 'mv-bar';
@@ -385,7 +385,7 @@
   }
 
   function build() {
-    const links = [...document.querySelectorAll('nav, header div, header ul, div, ul')].filter((e) => /How It Works/i.test(e.textContent) && /Packages/i.test(e.textContent) && e.textContent.length < 120 && e.getBoundingClientRect().top < 80).sort((a, b) => a.textContent.length - b.textContent.length)[0];
+    const links = [...document.querySelectorAll('nav, header div, header ul, div, ul')].filter((e) => /How It Works/i.test(e.textContent) && /Packages|Пакеты/i.test(e.textContent) && e.textContent.length < 120 && e.getBoundingClientRect().top < 80).sort((a, b) => a.textContent.length - b.textContent.length)[0];
     if (!links || !document.querySelector('#contact')) return false;
     const st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
     const t = document.createElement('div'); t.innerHTML = aboutPage; abp = t.firstElementChild; document.body.appendChild(abp);
@@ -395,18 +395,18 @@
     const follow = () => { const mid = innerHeight * 0.45; let cur = steps[0]; steps.forEach((s) => { if (s.getBoundingClientRect().top < mid) cur = s; }); steps.forEach((s) => s.classList.toggle('cur', s === cur)); if (yb.textContent !== cur.dataset.y) { yb.style.opacity = '0'; setTimeout(() => { yb.textContent = cur.dataset.y; yb.style.opacity = '1'; const sm = abp.querySelector('.tl-year small'); if (sm) sm.textContent = cur.dataset.l; }, 180); } };
     abp.addEventListener('scroll', follow, { passive: true }); follow();
 
-    nav = document.createElement('nav'); nav.className = 'sm-nav'; nav.setAttribute('aria-label', 'Main');
+    nav = document.createElement('nav'); nav.className = 'sm-nav'; nav.setAttribute('aria-label', 'Главная');
     nav.innerHTML = `
-      <div class="sm-dd"><button type="button" data-k="journey" aria-expanded="false" aria-haspopup="true">How it works ${chev}</button>
+      <div class="sm-dd"><button type="button" data-k="journey" aria-expanded="false" aria-haspopup="true">Как это работает ${chev}</button>
         <div class="sm-panel"><div class="sm-box">
           ${['Identify', 'Engage', 'Build', 'Measure'].map((n, i) => `<a href="#${n.toLowerCase()}" data-stage="${i}" style="--k:${C[i]}"><i>0${i + 1}</i>${n}</a>`).join('')}
         </div></div></div>
-      <a href="#programmes" data-k="programmes">Programmes</a><a href="#recruitment" data-k="recruitment">Recruitment</a><a href="#packages" data-k="packages">Packages</a><a href="#about" data-k="about">About</a>`;
+      <a href="#programmes" data-k="programmes">Программы</a><a href="#recruitment" data-k="recruitment">Подбор</a><a href="#packages" data-k="packages">Пакеты</a><a href="#about" data-k="about">О нас</a>`;
     links.classList.add('sm-hidden');
     links.parentNode.insertBefore(nav, links.nextSibling);
     // Log in: opens the app's own login page (user name and password are asked there)
-    const demo = [...document.querySelectorAll('a, button')].find((x) => /^Request a Demo$/i.test(x.textContent.trim()) && x.getBoundingClientRect().top < 120);
-    if (demo && !document.querySelector('.sm-login')) { const li = document.createElement('a'); li.className = 'sm-login'; li.href = 'https://app.behavency.com/login'; li.textContent = 'Log in'; demo.parentNode.insertBefore(li, demo); }
+    const demo = [...document.querySelectorAll('a, button')].find((x) => /^(Request a Demo|Запросить демо)$/i.test(x.textContent.trim()) && x.getBoundingClientRect().top < 120);
+    if (demo && !document.querySelector('.sm-login')) { const li = document.createElement('a'); li.className = 'sm-login'; li.href = 'https://app.behavency.com/login'; li.textContent = 'Войти'; demo.parentNode.insertBefore(li, demo); }
     const dd = nav.querySelector('.sm-dd'); let hideT = 0;
     const setOpen = (v) => { clearTimeout(hideT); dd.classList.toggle('open', v); dd.querySelector('button').setAttribute('aria-expanded', v); };
     dd.addEventListener('mouseenter', () => setOpen(true));
@@ -419,7 +419,7 @@
       setOpen(false);
       if (b.dataset.k === 'about') return openAbout();
       if (b.dataset.k === 'recruitment') { closeAbout(); return window.bhvOpenRecruit && window.bhvOpenRecruit(); }
-      // 25 Nov: Programmes opens the full list of programmes (same as "See all programmes")
+      // 25 Nov: Programmes opens the full list of programmes (same as "Все программы")
       if (b.dataset.k === 'programmes' && window.bhvOpenProgrammes) return window.bhvLeave ? window.bhvLeave(window.bhvOpenProgrammes) : (closeAbout(), window.bhvCloseRecruit && window.bhvCloseRecruit(), window.bhvOpenProgrammes());
       if (b.dataset.stage) return go(stageEl(+b.dataset.stage));
       if (b.dataset.go) return go(document.querySelector(b.dataset.go));
@@ -429,7 +429,7 @@
     addEventListener('scroll', mark, { passive: true }); mark();
     nineteen(); setTimeout(nineteen, 2000);
     addStudio(); setTimeout(addStudio, 1500); setTimeout(addStudio, 4000);
-    if (/about/.test((window.bhvH ? bhvH() : location.hash))) openAbout();
+    if (/about/.test(location.hash)) openAbout();
     return true;
   }
   const t = setInterval(() => { if (document.querySelector('#contact') && build()) clearInterval(t); }, 400);

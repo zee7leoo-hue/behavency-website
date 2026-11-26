@@ -48,9 +48,9 @@ const PRACTICE_ICONS = {
 
 
 const MODAL_TABS = [
-  { num: '1', name: 'Level 1', sub: 'Model' },
-  { num: '2', name: 'Level 2', sub: 'What They Do' },
-  { num: '3', name: 'Level 3', sub: 'Behaviour' },
+  { num: '1', name: 'Уровень 1', sub: 'Модель' },
+  { num: '2', name: 'Уровень 2', sub: 'Что они делают' },
+  { num: '3', name: 'Уровень 3', sub: 'Поведение' },
 ];
 
 /* Math for the indicator wheel */
@@ -95,7 +95,7 @@ function IndicatorWheel({ activeId, onClose, currentList, onSelect }) {
       </svg>
       <button className="bmodel__indicator-center" onClick={onClose}>
         <ArrowLeft size={16} />
-        <span style={{ fontSize: '9px', fontWeight: 800, marginTop: '4px', letterSpacing: '0.05em', textAlign: 'center' }}>BACK<br/>TO MODEL</span>
+        <span style={{ fontSize: '9px', fontWeight: 800, marginTop: '4px', letterSpacing: '0.05em', textAlign: 'center' }}>НАЗАД<br/>К МОДЕЛИ</span>
       </button>
     </div>
   );
@@ -130,7 +130,7 @@ function ModalContent({ area, closeModal, activeLevel, onSelectArea }) {
       role="dialog"
       aria-modal="true"
     >
-      <button className="bmodel__modal-close" onClick={closeModal} aria-label="Close">
+      <button className="bmodel__modal-close" onClick={closeModal} aria-label="Закрыть">
         <X size={20} />
       </button>
 
@@ -149,14 +149,14 @@ function ModalContent({ area, closeModal, activeLevel, onSelectArea }) {
           <div>
             <div className="bmodel__modal-area-name">{area.title}</div>
             <div style={{ fontSize: '11px', color: '#94a3b8', marginTop: '3px', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 600 }}>
-              {activeLevel === 0 && 'Line Management'}
-              {activeLevel === 1 && 'Managers of Managers'}
-              {activeLevel === 2 && 'Team Level'}
+              {activeLevel === 0 && 'Линейное управление'}
+              {activeLevel === 1 && 'Руководители руководителей'}
+              {activeLevel === 2 && 'Уровень команды'}
             </div>
           </div>
         </div>
 
-        <div className="bmodel__modal-nav-header">LEVELS</div>
+        <div className="bmodel__modal-nav-header">УРОВНИ</div>
         <div className="bmodel__modal-nav">
           {MODAL_TABS.map((t, i) => {
             const isActive = tab === i;
@@ -234,14 +234,14 @@ function ModalContent({ area, closeModal, activeLevel, onSelectArea }) {
               {/* Title & Subtitle */}
               <div className="bmodel__l2-pane-header">
                 <h3 className="bmodel__l2-title">
-                  {activeLevel === 0 && 'Level 2 — What Effective Managers Do'}
-                  {activeLevel === 1 && 'Level 2 — What Effective Managers of Managers Do'}
-                  {activeLevel === 2 && 'Level 2 — What Effective Teams Do'}
+                  {activeLevel === 0 && 'Уровень 2 — что делают эффективные руководители'}
+                  {activeLevel === 1 && 'Уровень 2 — что делают эффективные руководители руководителей'}
+                  {activeLevel === 2 && 'Уровень 2 — что делают эффективные команды'}
                 </h3>
                 <p className="bmodel__l2-sub">
-                  {activeLevel === 0 && 'Each practice answers the question: "What does an effective manager at this level do?"'}
-                  {activeLevel === 1 && 'Each practice answers the question: "What does an effective manager of managers do?"'}
-                  {activeLevel === 2 && 'Each practice answers the question: "What does an effective team do?"'}
+                  {activeLevel === 0 && 'Каждая практика отвечает на вопрос: «Что делает эффективный руководитель этого уровня?»'}
+                  {activeLevel === 1 && 'Каждая практика отвечает на вопрос: «Что делает эффективный руководитель руководителей?»'}
+                  {activeLevel === 2 && 'Каждая практика отвечает на вопрос: «Что делает эффективная команда?»'}
                 </p>
               </div>
 
@@ -281,20 +281,20 @@ function ModalContent({ area, closeModal, activeLevel, onSelectArea }) {
               {/* Title & Subtitle */}
               <div className="bmodel__l3-pane-header">
                 <h3 className="bmodel__l3-title">
-                  Level 3 — Behavioural Manifestations
+                  Уровень 3 — поведенческие проявления
                 </h3>
                 <p className="bmodel__l3-sub">
-                  {activeLevel === 0 && 'Each manifestation answers the question: "How does this leadership practice look in a line manager?"'}
-                  {activeLevel === 1 && 'Each manifestation answers the question: "How does this leadership practice look in a manager of managers?"'}
-                  {activeLevel === 2 && 'Each manifestation answers the question: "How does this practice look in an effective team?"'}
+                  {activeLevel === 0 && 'Каждое проявление отвечает на вопрос: «Как эта управленческая практика выглядит у линейного руководителя?»'}
+                  {activeLevel === 1 && 'Каждое проявление отвечает на вопрос: «Как эта управленческая практика выглядит у руководителя руководителей?»'}
+                  {activeLevel === 2 && 'Каждое проявление отвечает на вопрос: «Как эта практика выглядит в эффективной команде?»'}
                 </p>
               </div>
 
               {/* Level Badge Pill */}
               <div className="bmodel__l3-toggle-wrap">
                 <div className="bmodel__l3-level-pill">
-                  {activeLevel === 0 && 'Line Manager'}
-                  {activeLevel === 1 && 'Manager of Managers'}
+                  {activeLevel === 0 && 'Линейный руководитель'}
+                  {activeLevel === 1 && 'Руководитель руководителей'}
                   {activeLevel === 2 && 'Team'}
                 </div>
               </div>
@@ -361,26 +361,26 @@ function ModalContent({ area, closeModal, activeLevel, onSelectArea }) {
 const GROUPS = [
   {
     num: '01',
-    name: 'Line managers',
-    sub: 'Management effectiveness',
-    heading: ['MANAGEMENT', 'EFFECTIVENESS'],
-    subtitles: ['How line managers', 'lead and deliver', 'daily results'],
+    name: 'Линейные руководители',
+    sub: 'Эффективность управления',
+    heading: ['УПРАВЛЕНЧЕСКАЯ', 'ЭФФЕКТИВНОСТЬ'],
+    subtitles: ['как линейные руководители', 'ведут команду и обеспечивают', 'ежедневные результаты'],
     iconType: 'user'
   },
   {
     num: '02',
-    name: 'Managers of managers',
-    sub: 'Leadership effectiveness',
-    heading: ['LEADERSHIP', 'EFFECTIVENESS'],
-    subtitles: ['How managers of managers', 'align strategy and', 'drive performance'],
+    name: 'Руководители руководителей',
+    sub: 'Эффективность лидерства',
+    heading: ['ЛИДЕРСКАЯ', 'ЭФФЕКТИВНОСТЬ'],
+    subtitles: ['как руководители руководителей', 'согласуют стратегию', 'и обеспечивают результат'],
     iconType: 'user'
   },
   {
     num: '03',
-    name: 'Teams + their manager',
-    sub: 'Team effectiveness',
-    heading: ['TEAM', 'EFFECTIVENESS'],
-    subtitles: ['How our team', 'works together and', 'achieves results'],
+    name: 'Команды и их руководитель',
+    sub: 'Эффективность команды',
+    heading: ['КОМАНДНАЯ', 'ЭФФЕКТИВНОСТЬ'],
+    subtitles: ['как наша команда', 'работает вместе и', 'добивается результатов'],
     iconType: 'team'
   },
 ];
@@ -420,8 +420,8 @@ export default function BehaviouralModel() {
   const satellites = [
     {
       id: 'clarity',
-      line1: 'CLARITY &',
-      line2: 'ALIGNMENT',
+      line1: 'ЯСНОСТЬ И',
+      line2: 'СОГЛАСОВАННОСТЬ',
       cx: 512,
       cy: 157.0,
       haloColor: '#26a66a',
@@ -437,8 +437,8 @@ export default function BehaviouralModel() {
     },
     {
       id: 'trust',
-      line1: 'TRUST &',
-      line2: 'INCLUSION',
+      line1: 'ДОВЕРИЕ И',
+      line2: 'ИНКЛЮЗИВНОСТЬ',
       cx: 783.07,
       cy: 313.5,
       haloColor: '#f58220',
@@ -450,8 +450,8 @@ export default function BehaviouralModel() {
     },
     {
       id: 'focus',
-      line1: 'FOCUS &',
-      line2: 'PRIORITIZATION',
+      line1: 'ФОКУС И',
+      line2: 'ПРИОРИТЕТЫ',
       cx: 783.07,
       cy: 626.5,
       haloColor: '#7c4beb',
@@ -468,8 +468,8 @@ export default function BehaviouralModel() {
     },
     {
       id: 'execution',
-      line1: 'EXECUTION &',
-      line2: 'ACCOUNTABILITY',
+      line1: 'ИСПОЛНЕНИЕ И',
+      line2: 'ОТВЕТСТВЕННОСТЬ',
       cx: 512,
       cy: 783.0,
       haloColor: '#0ea5e9',
@@ -482,8 +482,8 @@ export default function BehaviouralModel() {
     },
     {
       id: 'collaboration',
-      line1: 'COLLABORATION &',
-      line2: 'INFLUENCE',
+      line1: 'СОТРУДНИЧЕСТВО И',
+      line2: 'ВЛИЯНИЕ',
       cx: 240.93,
       cy: 626.5,
       haloColor: '#ee3257',
@@ -500,8 +500,8 @@ export default function BehaviouralModel() {
     },
     {
       id: 'learning',
-      line1: 'LEARNING &',
-      line2: 'ADAPTABILITY',
+      line1: 'ОБУЧЕНИЕ И',
+      line2: 'АДАПТИВНОСТЬ',
       cx: 240.93,
       cy: 313.5,
       haloColor: '#2563eb',
@@ -529,14 +529,14 @@ export default function BehaviouralModel() {
           </div>
 
           <h2 className="bmodel__headline">
-            One framework.<br />
-            <span className="bmodel__headline--teal">Six areas</span><br />
-            <span className="bmodel__headline--italic">of effectiveness.</span>
+            Одна модель.<br />
+            <span className="bmodel__headline--teal">Шесть областей</span><br />
+            <span className="bmodel__headline--italic">эффективности.</span>
           </h2>
 
           <p className="bmodel__sub">
-            We use one behavioural framework to assess<br />
-            and develop managers and teams.
+            Одна поведенческая модель — и для оценки,<br />
+            и для развития руководителей и команд.
           </p>
 
           <div className="bmodel__hint">
@@ -567,7 +567,7 @@ export default function BehaviouralModel() {
 
         {/* ── Right column — wheel ── */}
         <div className="bmodel__wheel">
-                    <div className="bv-wheel" aria-label="Management and team effectiveness wheel">
+                    <div className="bv-wheel" aria-label="Колесо эффективности руководителей и команд">
             <svg
               className="bv-wheel-svg"
               xmlns="http://www.w3.org/2000/svg"
@@ -575,8 +575,8 @@ export default function BehaviouralModel() {
               fill="none"
               aria-labelledby="bv-wheel-title bv-wheel-description"
             >
-              <title id="bv-wheel-title">Six dimensions of effectiveness</title>
-              <desc id="bv-wheel-description">Interactive wheel featuring Clarity and Alignment, Trust and Inclusion, Focus and Prioritisation, Execution and Accountability, Collaboration and Influence, and Learning and Adaptability.</desc>
+              <title id="bv-wheel-title">Шесть областей эффективности</title>
+              <desc id="bv-wheel-description">Интерактивное колесо с областями: ясность и согласованность, доверие и инклюзивность, фокус и приоритеты, исполнение и ответственность, сотрудничество и влияние, обучение и адаптивность.</desc>
               <defs>
                 <linearGradient id="g-clarity" x1="0" y1="0" x2="0.2" y2="1">
                   <stop offset="0%" stopColor="#2cc27b" />
@@ -702,13 +702,13 @@ export default function BehaviouralModel() {
                 data-wheel-node="center"
                 role="button"
                 tabIndex={0}
-                aria-label={`${GROUPS[active].heading.join(' ')} - ${GROUPS[active].subtitles.join(' ')}`}
+                aria-label={`${GROUPS[active].heading.join(' ')} — ${GROUPS[active].subtitles.join(' ')}`}
                 focusable="true"
                 style={{ cursor: "pointer" }}
                 onClick={() => setActive((prev) => (prev + 1) % 3)}
                 onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && setActive((prev) => (prev + 1) % 3)}
               >
-                <title>{`${GROUPS[active].heading.join(' ')} — click to cycle level`}</title>
+                <title>{`${GROUPS[active].heading.join(' ')} — нажмите, чтобы сменить уровень`}</title>
                 <circle
                   cx="512"
                   cy="470"

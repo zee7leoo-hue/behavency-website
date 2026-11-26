@@ -43,7 +43,7 @@ export default function App() {
       {/* <StageBuild /> */}
       <MeasureSection />
       <HowMeasureSection />
-      {/* Replaced by add-on scripts in public/ (see index.html): "How it runs" -> howitruns-desktop.js,
+      {/* Replaced by add-on scripts in public/ (see index.html): "Как это проходит" -> howitruns-desktop.js,
           Hiring -> the Recruitment page (recruitment-page.js), the dark contact block -> contact-modal.js,
           the footer -> footer-site.js. "For who" is no longer on the page. */}
       {/* <HowItRuns /> */}

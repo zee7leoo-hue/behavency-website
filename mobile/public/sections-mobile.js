@@ -1,4 +1,4 @@
-// Phone site: "How it runs" and "What makes Behavency different" in the agreed phone design (22 Nov).
+// Phone site: "Как это проходит" and "Чем отличается Behavency" in the agreed phone design (22 Nov).
 // The site's own two sections are hidden and these are placed where they were. Remove this file and its <script> tag to go back.
 (function () {
   const CSS = `
@@ -12,7 +12,7 @@
   .pz-ttl em { font-style: italic; font-weight: 500; letter-spacing: -.02em; }
   .pz-lead { margin-top: 16px !important; font: 400 15.6px/22.6px Inter, sans-serif; color: #1c2540; }
 
-  /* How it runs */
+  /* Как это проходит */
   #how-it-runs.pz { padding-top: 30px; }
   #how-it-runs .pz-ttl em { color: #c2650f; }
   .pz-htl { position: relative; margin-top: 30px !important; }
@@ -29,7 +29,7 @@
     -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='9' cy='8' r='3.4'/%3E%3Cpath d='M2.6 20v-.8a5.6 5.6 0 0 1 5.6-5.6h1.6a5.6 5.6 0 0 1 5.6 5.6v.8M16 4.8a3.4 3.4 0 0 1 0 6.4M18.4 14.2a5.6 5.6 0 0 1 3 5v.8'/%3E%3C/svg%3E") center/contain no-repeat;
     mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='9' cy='8' r='3.4'/%3E%3Cpath d='M2.6 20v-.8a5.6 5.6 0 0 1 5.6-5.6h1.6a5.6 5.6 0 0 1 5.6 5.6v.8M16 4.8a3.4 3.4 0 0 1 0 6.4M18.4 14.2a5.6 5.6 0 0 1 3 5v.8'/%3E%3C/svg%3E") center/contain no-repeat; }
 
-  /* What makes Behavency different */
+  /* Чем отличается Behavency */
   #different.pz { padding-top: 48px; }
   #different .pz-ttl em { color: #1a8a7a; }
   .pz-dl { margin-top: 28px !important; border-top: 1px solid #e3e0ea; }
@@ -60,7 +60,7 @@
   :root .rs-ai-n { color: #1f56c9 !important; }
   :root .rs-ai { background: #eef4fe !important; border-color: #cddff9 !important; }
   :root .rs-ai-rule { background: #cddff9 !important; }
-  /* "Who it’s for" removed (23 Nov) */
+  /* "Для кого" removed (23 Nov) */
   #who-its-for { display: none !important; }
   /* Header always on top, solid (23 Nov evening, R2): the Build cards (.jn-card, z-index up to 100) are kept inside
      their own section layer so they can no longer slide over the header. Pop-ups and menus (z-index 90+) stay above it. */
@@ -69,34 +69,34 @@
   :root .nav { background: #fbfaff !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; box-shadow: inset 0 -1px 0 #e8e5f0; }
   `;
   const STEPS = [
-    ['Week 1', 'You and Behavency', 'Kick-off', 'We agree the goals, the group and the timeline. Participants get their invitations.', '#6b7290'],
-    ['Weeks 2–4', 'Participants', 'Assessment', 'About 1.5 hours per person, done at their own pace.', '#2f6fdb'],
-    ['Weeks 4–6', 'Participants and facilitator', 'Team game and reflection', 'A 15-minute intro, a 45-minute game and a 90-minute reflection, then the team’s Insight Report.', '#7a4bd6'],
-    ['From week 6', 'Participants', 'Training and Masterplans', 'Programmes matched to each person’s priorities. Length depends on the programmes chosen.', '#e0761c'],
-    ['3 months after training', 'Participants', 'Re-assessment', 'The same questionnaires, the same people, compared with the starting point.', '#14a07c'],
+    ['Неделя 1', 'Вы и Behavency', 'Старт', 'Согласовываем цели, состав группы и сроки. Участники получают приглашения.', '#6b7290'],
+    ['Недели 2–4', 'Участники', 'Оценка', 'Около 1,5 часа на человека, в своём темпе.', '#2f6fdb'],
+    ['Недели 4–6', 'Участники и фасилитатор', 'Командная игра и разбор', '15 минут вводной части, 45 минут игры и 90 минут разбора, затем — аналитический отчёт команды.', '#7a4bd6'],
+    ['С 6-й недели', 'Участники', 'Обучение и мастер-планы', 'Программы под приоритеты каждого. Сроки зависят от выбранных программ.', '#e0761c'],
+    ['Через 3 месяца после обучения', 'Участники', 'Повторная оценка', 'Те же опросники, те же люди — сравнение с исходной точкой.', '#14a07c'],
   ];
   const DF = [
-    ['One journey, start to finish.', 'Assessment, team game, training and re-assessment, built on one model and run by one team.', 'Often each piece lives somewhere else: a survey run in-house, an assessment from one provider, a workshop from another. Different methods, different reports, and nobody can say what changed. Here every step uses the same six areas, so results lead straight to the right development, and the re-assessment shows the difference.'],
-    ['Personal gaps and organisational barriers, kept apart.', 'We show what people need to develop, and what the organisation needs to fix around them.', 'Alongside the assessment, managers complete the Workplace Effectiveness Survey: around 40 typical obstacles across nine management processes. Each barrier is linked to the areas it holds back, so a low score shows whether it is a skill to develop, a condition to change, or both.'],
-    ['Managers and teams, on the same model.', 'Develop managers, teams or both. When a team and its manager both score low on Trust, you see the link.', 'Team and manager assessments use the same six areas, so the results can be read side by side: where they agree, and where the team sees something the manager does not.'],
-    ['People feel the gaps, not just read them.', 'A team game and a facilitated reflection turn scores into something people experience and commit to.', 'In a 2.5-hour session, the team sees the same behaviours show up live, talks through why, and then receives its Insight Report with practical tips.'],
-    ['Our own training, matched to the results.', 'Programmes for line managers, managers of managers and teams, each linked to the six areas.', 'Every result points to specific programmes, so nobody has to guess what to train next. They run in person, online or as e-learning, and each one comes with a Masterplan to practise it at work.'],
-    ['Interviewers practise before the real thing.', 'In our Interview Studio they practise with four AI characters before the real interviews.', 'A ready-made guide for every interview, AI suggestions on what to ask next during it, and a summary afterwards that the interviewer checks and decides on.'],
-    ['Proof of change, not just completion.', 'Before-and-after results you can show leadership.', 'Results are compared with the starting point, area by area: behaviour from the self-assessment and 360, and whether the barriers have eased.'],
+    ['Весь путь — от старта до финиша.', 'Оценка, командная игра, обучение и повторная оценка — на одной модели, силами одной команды.', 'Обычно всё разбросано: опрос проводят своими силами, оценку делает один подрядчик, семинар — другой. Разные методики, разные отчёты — и никто не может сказать, что изменилось. У нас каждый шаг опирается на те же шесть областей: результаты сразу ведут к нужному развитию, а повторная оценка показывает разницу.'],
+    ['Личные пробелы и организационные барьеры — отдельно.', 'Показываем, что нужно развивать людям, а что — исправить организации вокруг них.', 'Вместе с оценкой руководители заполняют опросник «Организационные барьеры»: около 40 типичных препятствий в девяти управленческих процессах. Каждый барьер связан с областями, которые он тормозит. Поэтому по низкому баллу видно, в чём дело: в навыке, который надо развивать, в условиях, которые надо менять, или и в том, и в другом.'],
+    ['Руководители и команды — на одной модели.', 'Развивайте руководителей, команды или всех сразу. Если у команды и её руководителя низкие баллы по доверию, вы видите связь.', 'Команда и руководитель оцениваются по одним и тем же шести областям, поэтому результаты легко положить рядом: где мнения совпадают, а где команда видит то, чего не замечает руководитель.'],
+    ['Люди не просто читают о пробелах — они их чувствуют.', 'Командная игра и разбор с фасилитатором превращают баллы в личный опыт — и в готовность взяться за дело.', 'За 2,5 часа команда видит, как то же поведение проявляется вживую, обсуждает, почему так, и получает аналитический отчёт с практическими советами.'],
+    ['Своё обучение — точно по результатам.', 'Программы для линейных руководителей, руководителей руководителей и команд — каждая связана с шестью областями.', 'Каждый результат ведёт к конкретным программам — гадать, чему учить дальше, не придётся. Программы идут очно, онлайн или в формате e-learning, и к каждой есть мастер-план, чтобы отработать навык в работе.'],
+    ['Интервьюеры тренируются заранее.', 'До настоящих интервью они тренируются в нашей Интервью-студии с четырьмя AI-персонажами.', 'Готовый гайд для каждого интервью, подсказки AI по ходу беседы — что спросить дальше, и резюме после неё. Проверяет его и принимает решение сам интервьюер.'],
+    ['Не «курс пройден», а «изменения видны».', 'Результаты «до» и «после», которые можно показать руководству.', 'Результаты сравниваются с исходной точкой по каждой области: поведение по самооценке и 360°, а также ослабли ли барьеры.'],
   ];
   const plus = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>';
   const HOW = `<section class="pz" id="how-it-runs" data-pz="1">
-    <div class="pz-eb">How it runs</div>
-    <h2 class="pz-ttl">How long it takes, <em>step by step.</em></h2>
-    <p class="pz-lead">From kick-off to re-assessment: what happens when, and who is involved.</p>
+    <div class="pz-eb">Как это проходит</div>
+    <h2 class="pz-ttl">Сроки — <em>шаг за шагом.</em></h2>
+    <p class="pz-lead">От старта до повторной оценки: что, когда и с чьим участием.</p>
     <ol class="pz-htl">${STEPS.map(([when, w, t, p, c], i) => `<li class="pz-hs" style="--c:${c}"><span class="pz-hn">${i + 1}</span><div class="pz-hb"><span class="pz-hwhen">${when}</span><h3>${t}</h3><p>${p}</p><span class="pz-who">${w}</span></div></li>`).join('')}</ol>
   </section>`;
   const DIF = `<section class="pz" id="different" data-pz="1">
-    <div class="pz-eb">What makes Behavency different</div>
-    <h2 class="pz-ttl">Most providers do one piece. <em>So nobody can say what changed.</em></h2>
+    <div class="pz-eb">Чем отличается Behavency</div>
+    <h2 class="pz-ttl">Каждый подрядчик делает свой кусок. <em>А что изменилось в целом — не знает никто.</em></h2>
     <ul class="pz-dl">${DF.map(([t, l, m], i) => `<li class="pz-di"><button type="button" class="pz-dh" aria-expanded="false"><span class="pz-dn">0${i + 1}</span><span><span class="pz-dt">${t}</span><span class="pz-dline">${l}</span></span><span class="pz-dp">${plus}</span></button><div class="pz-dm"><div><p>${m}</p></div></div></li>`).join('')}</ul>
   </section>`;
-  // put our sections in place, in the same order as the desktop site (23 Nov): How we measure → How it runs → Different.
+  // put our sections in place, in the same order as the desktop site (23 Nov): How we measure → Как это проходит → Different.
   // (The site's own old versions are no longer in the page; if one is still there it is hidden.)
   const place = (id, html, after) => {
     const old = document.querySelector('section#' + id + ':not([data-pz])');

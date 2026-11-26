@@ -33,7 +33,7 @@ export default function DemoModal({ open, onClose }) {
           <img className="dm-mark" src={logoFull} alt="" />
           Behavency
         </span>
-        <button ref={closeBtn} type="button" className="dm-close" aria-label="Close" onClick={onClose}>
+        <button ref={closeBtn} type="button" className="dm-close" aria-label="Закрыть" onClick={onClose}>
           <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" /></svg>
         </button>
       </div>

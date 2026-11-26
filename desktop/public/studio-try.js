@@ -3,10 +3,10 @@
 (function () {
   const SITE = 'desk', EXT = 'png';
   const CH = [
-    ['anna', 'Anna', 'Gives clear examples', 'Easy', '#ecfdf5', '#d1fae5', '#047857', '#6ee7b7'],
-    ['mark', 'Mark', 'Speaks in generalities', 'Medium', '#eff6ff', '#dbeafe', '#1d4ed8', '#93c5fd'],
-    ['sofia', 'Sofia', 'Only success stories', 'Hard', '#fff7ed', '#ffedd5', '#c2410c', '#fdba74'],
-    ['peter', 'Peter', 'Long-winded, drifts off', 'Challenging', '#fdf2f8', '#ffe4e6', '#be123c', '#fda4af'],
+    ['anna', 'Anna', 'Приводит понятные примеры', 'Лёгкий', '#ecfdf5', '#d1fae5', '#047857', '#6ee7b7'],
+    ['mark', 'Mark', 'Говорит общими словами', 'Средний', '#eff6ff', '#dbeafe', '#1d4ed8', '#93c5fd'],
+    ['sofia', 'Sofia', 'Только истории успеха', 'Сложный', '#fff7ed', '#ffedd5', '#c2410c', '#fdba74'],
+    ['peter', 'Peter', 'Многословен, уходит от темы', 'Очень сложный', '#fdf2f8', '#ffe4e6', '#be123c', '#fda4af'],
   ];
   const ARR_R = '<svg class="sxt-i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
   const ARR_D = '<svg class="sxt-i" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg>';
@@ -48,16 +48,16 @@
   @media (prefers-reduced-motion: reduce) { .sxt-cue .sxt-arr, .sxt-ch.sxt-wave { animation: none; } .sxt-ch { transition: none; } }`;
 
   const cardsHTML = () => CH.map(([f, n, d, l, t, cb, cf, bd]) =>
-    '<div class="sxt-ch" data-k="' + f + '" role="button" tabindex="0" aria-label="Practise with ' + n + ', ' + l + '" style="--t:' + t + ';--cb:' + cb + ';--cf:' + cf + ';--bd:' + bd + '">' +
+    '<div class="sxt-ch" data-k="' + f + '" role="button" tabindex="0" aria-label="Тренировка: ' + n + ', ' + l + '" style="--t:' + t + ';--cb:' + cb + ';--cf:' + cf + ';--bd:' + bd + '">' +
     '<em>' + l + '</em><img src="team/' + f + '.' + EXT + '" alt="" width="124" height="124" loading="lazy"><b>' + n + '</b><span class="sxt-tr">' + d + '</span><span class="sxt-sp"></span>' +
-    '<span class="sxt-go">Start practice ' + ARR_R + '</span></div>').join('');
-  const cueHTML = (m) => '<button type="button" class="sxt-cue' + (m ? ' sxt-m' : '') + '"><span class="sxt-hand">' + HAND + '</span><span>' + (m ? 'Tap any character to see how it works' : 'Click on any character to see how it works') + '</span><span class="sxt-arr">' + (m ? ARR_D : ARR_R) + '</span></button>';
+    '<span class="sxt-go">Начать тренировку ' + ARR_R + '</span></div>').join('');
+  const cueHTML = (m) => '<button type="button" class="sxt-cue' + (m ? ' sxt-m' : '') + '"><span class="sxt-hand">' + HAND + '</span><span>' + (m ? 'Выберите персонажа и посмотрите, как это работает' : 'Выберите персонажа и посмотрите, как это работает') + '</span><span class="sxt-arr">' + (m ? ARR_D : ARR_R) + '</span></button>';
 
   let frame = null, opener = null, pushed = false;
   const open = (k, from) => {
     if (frame) return;
     opener = from;
-    frame = document.createElement('iframe'); frame.className = 'sxt-frame'; frame.title = 'Interview Studio practice';
+    frame = document.createElement('iframe'); frame.className = 'sxt-frame'; frame.title = 'Интервью-студия: тренировка';
     frame.src = 'studio-practice.html?c=' + k;
     frame.addEventListener('load', () => { try { frame.contentWindow.focus(); } catch (e) {} });
     document.body.appendChild(frame); document.documentElement.classList.add('sxt-lock');

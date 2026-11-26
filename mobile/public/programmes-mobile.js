@@ -3,43 +3,43 @@
 (function () {
   const M = (window.BHV_SITE || 'desk') === 'mob';
   const AREAS = {
-    C: ['Clarity & Alignment', '#2f6fdb'], T: ['Trust & Inclusion', '#0f9a83'], F: ['Focus & Prioritisation', '#d9731a'],
-    E: ['Execution & Accountability', '#7a4bd6'], Co: ['Collaboration & Influence', '#cf3f74'], L: ['Learning & Adaptability', '#3c8f2f'],
+    C: ['Ясность и согласованность', '#2f6fdb'], T: ['Доверие и инклюзивность', '#0f9a83'], F: ['Фокус и приоритеты', '#d9731a'],
+    E: ['Исполнение и ответственность', '#7a4bd6'], Co: ['Сотрудничество и влияние', '#cf3f74'], L: ['Обучение и адаптивность', '#3c8f2f'],
   };
-  const AUD = { l: 'Line managers', m: 'Managers of managers', lm: 'Line managers & managers of managers', lmt: 'Managers & teams', t: 'Teams' };
+  const AUD = { l: 'Линейные руководители', m: 'Руководители руководителей', lm: 'Линейные руководители и руководители руководителей', lmt: 'Руководители и команды', t: 'Команды' };
   // title, for, areas, formats, outcome, focus, proposed
   const P = [
-    ['Performance Management', 'l', ['C', 'F', 'E'], 'In person', 'Run the full management cycle, and hold the goal-setting, praise, correction and review conversations that go with it.', ['The modern manager’s role', 'Planning, organising, checking, motivating and delegating', 'Goal-setting, praise and corrective conversations', 'The end-of-period review conversation']],
-    ['Leadership Foundations', 'l', [], 'In person', 'The manager’s role and four core communication skills, from setting goals to giving feedback.', ['The modern manager’s role', 'Four core communication skills', 'Goal-setting, praise and corrective conversations', 'The review conversation']],
-    ['Adapting Your Leadership Style', 'l', ['L'], 'In person · Online', 'Match your style to each person: set clear expectations and give the right mix of direction and support, without micromanaging.', ['Reading each person’s development level', 'Setting clear expectations', 'The right balance of direction and support', 'Keeping accountability without micromanaging']],
-    ['Situational Delegation', 'm', ['L', 'F'], 'In person', 'Delegate well when the people you lead are managers themselves.', ['Delegating to managers', 'Three core skills and six types of conversation']],
-    ['Leading a Team', 'lm', ['C', 'F'], 'In person · Online', 'Guide a team through its stages, from first steps to steady high performance, including remote teams.', ['What high-performing teams have in common', 'Leading remote teams', 'The four stages every team goes through', 'The right leadership style for each stage']],
-    ['Assertive Behaviour', 'lm', ['T', 'E'], '', 'Communicate honestly, directly and respectfully: hold your position without pressure, ask, say no and handle manipulation.', ['Types of behaviour', 'Holding your position without pressure', 'Non-violent communication', 'Asking, saying no and handling manipulation']],
-    ['Emotional Leadership', 'lm', ['T', 'Co'], '', 'Read how people are doing, manage your own reactions and build influence through connection, not status.', ['What emotional intelligence is', 'Communication techniques', 'Self-control techniques']],
-    ['Influence Without Authority', 'lm', ['Co'], 'In person', 'Persuade people you don’t manage, by understanding their interests and adapting your arguments to them.', ['Influence, pressure and manipulation: the difference', 'Why people resist influence', 'Reading different personality types', 'Mapping stakeholders across functions']],
-    ['Cross-functional Communication and Productive Conflict', 'lmt', ['Co'], 'In person · Online', 'Work well across teams: clarify requests and responsibilities, manage stakeholders and turn conflict into win-win outcomes.', ['What helps and blocks work across teams', 'Stakeholder management', 'Clarifying requests so everyone understands them the same way', 'Tools for win-win conflict']],
-    ['Motivation That Lasts', 'lm', ['T', 'L'], 'In person · Online', 'Understand what really drives each person, and help them move to a more lasting, self-driven motivation.', ['How managers’ beliefs shape motivation', 'Six types of motivation', 'Three skills to build lasting motivation']],
-    ['Trust and Psychological Safety', 'lm', ['T'], '', 'Build trust and a team where people speak up, using trust-based conversations, active listening and feedback.', ['Psychological safety at work', 'The basics of trust', 'Goals, questions, active listening and feedback', 'The GROW model']],
-    ['Leading Change', 'lm', ['L'], 'In person · Online', 'Understand why change fails, how people take it in, and lead change with high involvement.', ['Why change fails', 'How people take in change, stage by stage', 'Four strategies for leading change', 'A plan for a real change in your organisation']],
-    ['Strategic Thinking', 'm', ['C'], '', '', []],
-    ['Critical Thinking', 'm', ['C'], '', '', []],
-    ['Problem Analysis and Decision-Making', 'm', ['C', 'F'], 'In person · Online', 'Get to the root of a problem, weigh the options and make decisions that the people involved support.', ['Framing the problem', 'Root-cause analysis', 'Cost–benefit analysis', 'Group and individual decisions, risks and stakeholders']],
-    ['Innovative Thinking', 'lm', ['L'], 'In person · Online', 'Build an innovation mindset and take an idea from first scan to a tested pilot.', ['Openness, curiosity and initiative', 'Scan: where to innovate', 'Ideas: tools for new approaches', 'Pilot: testing and feedback']],
-    ['Team Effectiveness Session', 't', ['T', 'E'], 'In person · Online', 'The team works through the most common team pitfalls and leaves with its own agreed way of working.', ['The most common team pitfalls', 'Practical tools for each one', 'The team’s own working agreement']],
-    ['Shared Goals, Clear Roles', 't', ['C'], '', 'The team agrees what it is there to achieve and who does what.', [], 1],
-    ['Psychological Safety in the Team', 't', ['T'], '', 'The team builds the habits that make it safe to speak up, disagree and admit mistakes.', [], 1],
-    ['Team Priorities and Focus', 't', ['F'], '', 'The team decides together what matters most now, and what to stop.', [], 1],
-    ['Team Agreements and Accountability', 't', ['E'], '', 'The team sets its own working agreements and holds each other to them.', [], 1],
-    ['Resilience to Change', 't', ['L'], '', 'The team learns to stay steady and keep delivering when plans change.', [], 1],
-    ['Managing Change Together', 't', ['L'], '', 'The team works through a change step by step, using the ADKAR model.', [], 1],
+    ['Управление эффективностью', 'l', ['C', 'F', 'E'], 'Очно', 'Проводите полный управленческий цикл и все разговоры в нём: о целях, похвале, корректировке и итогах.', ['Роль современного руководителя', 'Планирование, организация, контроль, мотивация и делегирование', 'Беседы о целях, похвале и корректировке', 'Итоговая беседа по результатам периода']],
+    ['Основы лидерства', 'l', [], 'Очно', 'Роль руководителя и четыре базовых навыка коммуникации — от постановки целей до обратной связи.', ['Роль современного руководителя', 'Четыре базовых навыка коммуникации', 'Беседы о целях, похвале и корректировке', 'Итоговая беседа']],
+    ['Гибкий стиль руководства', 'l', ['L'], 'Очно · Онлайн', 'Подбирайте стиль под каждого: ясные ожидания, нужная доля указаний и поддержки — и никакого микроменеджмента.', ['Как понять уровень развития каждого', 'Как задать ясные ожидания', 'Верный баланс указаний и поддержки', 'Спрос за результат без микроменеджмента']],
+    ['Ситуационное делегирование', 'm', ['L', 'F'], 'Очно', 'Делегируйте эффективно, когда ваши подчинённые — сами руководители.', ['Делегирование руководителям', 'Три базовых навыка и шесть видов бесед']],
+    ['Руководство командой', 'lm', ['C', 'F'], 'Очно · Онлайн', 'Ведите команду через все этапы — от первых шагов до стабильно высоких результатов. В том числе удалённую команду.', ['Что общего у сильных команд', 'Руководство удалёнными командами', 'Четыре этапа, которые проходит любая команда', 'Стиль руководства для каждого этапа']],
+    ['Ассертивное поведение', 'lm', ['T', 'E'], '', 'Общайтесь честно, прямо и уважительно: отстаивайте позицию без давления, просите, отказывайте и противостойте манипуляциям.', ['Типы поведения', 'Как отстоять позицию без давления', 'Non-violent communication', 'Как просить, отказывать и не поддаваться манипуляциям']],
+    ['Эмоциональное лидерство', 'lm', ['T', 'Co'], '', 'Чувствуйте настроение людей, управляйте своими реакциями и влияйте через отношения, а не статус.', ['Что такое эмоциональный интеллект', 'Communication techniques', 'Self-control techniques']],
+    ['Влияние без формальной власти', 'lm', ['Co'], 'Очно', 'Убеждайте тех, кем не руководите: поймите их интересы и подберите аргументы под них.', ['Влияние, давление и манипуляция: в чём разница', 'Почему люди сопротивляются влиянию', 'Как понимать разные типы личности', 'Mapping stakeholders across functions']],
+    ['Коммуникация на стыке команд и продуктивный конфликт', 'lmt', ['Co'], 'Очно · Онлайн', 'Работайте слаженно с другими командами: уточняйте запросы и зоны ответственности, управляйте стейкхолдерами и превращайте конфликт в выигрыш для обеих сторон.', ['Что помогает и что мешает командам работать вместе', 'Stakeholder management', 'Как уточнять запросы, чтобы все понимали их одинаково', 'Инструменты, чтобы решать конфликты с выгодой для всех']],
+    ['Устойчивая мотивация', 'lm', ['T', 'L'], 'Очно · Онлайн', 'Поймите, что на самом деле движет каждым человеком, и помогите ему прийти к более устойчивой внутренней мотивации.', ['Как убеждения руководителя влияют на мотивацию', 'Шесть видов мотивации', 'Три навыка, чтобы мотивация не угасала']],
+    ['Доверие и психологическая безопасность', 'lm', ['T'], '', 'Создайте команду, где доверяют и не боятся высказываться. Инструменты — доверительные разговоры, активное слушание и обратная связь.', ['Психологическая безопасность на работе', 'Основы доверия', 'Цели, вопросы, активное слушание и обратная связь', 'Модель GROW']],
+    ['Управление изменениями', 'lm', ['L'], 'Очно · Онлайн', 'Поймите, почему изменения буксуют и как люди их принимают, — и ведите перемены, вовлекая людей.', ['Почему изменения буксуют', 'Как люди принимают изменения — шаг за шагом', 'Четыре стратегии управления изменениями', 'План настоящих изменений в вашей организации']],
+    ['Стратегическое мышление', 'm', ['C'], '', '', []],
+    ['Критическое мышление', 'm', ['C'], '', '', []],
+    ['Анализ проблем и принятие решений', 'm', ['C', 'F'], 'Очно · Онлайн', 'Докапывайтесь до сути проблемы, взвешивайте варианты и принимайте решения, которые поддержат все участники.', ['Формулируем проблему', 'Root-cause analysis', 'Анализ затрат и выгод', 'Групповые и индивидуальные решения, риски и стейкхолдеры']],
+    ['Инновационное мышление', 'lm', ['L'], 'Очно · Онлайн', 'Развивайте инновационное мышление и проводите идею от первого анализа до проверенного пилота.', ['Открытость, любознательность и инициативность', 'Scan: where to innovate', 'Ideas: tools for new approaches', 'Pilot: testing and feedback']],
+    ['Сессия по эффективности команды', 't', ['T', 'E'], 'Очно · Онлайн', 'Команда разбирает типичные ловушки командной работы и уходит с собственными правилами, о которых договорилась сама.', ['Частые ловушки в командах', 'Практические инструменты против каждой', 'Свои правила работы команды']],
+    ['Общие цели, ясные роли', 't', ['C'], '', 'Команда договаривается, ради чего она работает и кто за что отвечает.', [], 1],
+    ['Психологическая безопасность в команде', 't', ['T'], '', 'Команда вырабатывает привычки, с которыми не страшно высказываться, возражать и признавать ошибки.', [], 1],
+    ['Приоритеты и фокус команды', 't', ['F'], '', 'Команда вместе решает, что сейчас важнее всего и от чего отказаться.', [], 1],
+    ['Командные договорённости и ответственность', 't', ['E'], '', 'Команда сама задаёт правила работы и следит, чтобы их соблюдали все.', [], 1],
+    ['Устойчивость к изменениям', 't', ['L'], '', 'Команда учится держать удар и выдавать результат, даже когда планы меняются.', [], 1],
+    ['Управляем изменениями вместе', 't', ['L'], '', 'Команда проходит изменения шаг за шагом по модели ADKAR.', [], 1],
   ].map(([t, a, ar, f, o, fo, pr], i) => ({ i, t, a, ar, f, o, fo, pr: !!pr }));
-  // Texts for the website (from the texts page): formats, "after the programme, participants can", "helps with".
-  const CONTENT = {"Performance Management":{"f":"In person","h":"nw","can":["Set clear, agreed goals and check progress against them","Give praise and corrective feedback that people act on","Run a fair, well-prepared end-of-period review"]},"Leadership Foundations":{"f":"In person","h":"n","can":["Explain what is expected of them in the manager role","Use four core communication skills in everyday conversations","Hold goal-setting, praise and correction conversations"]},"Adapting Your Leadership Style":{"f":"In person · Online","h":"bn","can":["Judge how ready each person is for a given task","Choose the right mix of direction and support for them","Agree clear expectations without micromanaging"]},"Situational Delegation":{"f":"In person","h":"bw","can":["Decide what to delegate to the managers in their team, and how","Match direction and support to each manager’s experience","Agree outcomes and check-ins instead of controlling the detail"]},"Leading a Team":{"f":"In person · Online","h":"b","can":["Recognise which stage of development their team is in","Adjust how they lead to that stage","Agree a team charter and handle early conflicts openly"]},"Assertive Behaviour":{"f":"In person · Online","h":"w","can":["Tell assertive behaviour apart from passive and aggressive","Hold their position without pressure, and say no when needed","Recognise manipulation and respond calmly"]},"Emotional Leadership":{"f":"In person · Online","h":"cw","can":["Notice how people are doing and adjust how they respond","Manage their own reactions under pressure","Use communication techniques that build trust"]},"Influence Without Authority":{"f":"In person","h":"c","can":["Map the stakeholders they need and what each one cares about","Adapt their message to different personality types","Build arguments around the other side’s interests"]},"Cross-functional Communication and Productive Conflict":{"f":"In person · Online","h":"c","can":["Clarify a request so everyone understands it the same way","Agree who is responsible for what across teams","Use win-win tools when interests clash"]},"Motivation That Lasts":{"f":"In person · Online","h":"w","can":["Recognise what is really driving each person’s motivation","Hold conversations that help people find more lasting motivation","Look after their own energy and motivation"]},"Trust and Psychological Safety":{"f":"In person · Online","h":"cb","can":["Recognise the signs of low psychological safety in their team","Use questions, active listening and feedback to build trust","Run a coaching conversation with the GROW model"]},"Leading Change":{"f":"In person · Online","h":"c","can":["Explain why change efforts fail and what helps them work","Recognise where each person is in accepting a change","Build a plan for a real change in their own area"]},"Strategic Thinking":{"f":"In person · Online","h":"c","can":["Separate urgent demands from what matters long term","Assess how trends and changes affect their area","Turn a strategic goal into clear priorities for their team"],"o":"Step back from day-to-day pressure and connect decisions to where the organisation is going.","short":"Connect daily decisions to long-term goals."},"Critical Thinking":{"f":"In person · Online","h":"c","can":["Separate facts from assumptions","Test the quality of an argument or proposal","Compare options on clear criteria"],"o":"Question assumptions, weigh the evidence and reach conclusions that hold up.","short":"Test assumptions and weigh evidence before deciding."},"Problem Analysis and Decision-Making":{"f":"In person · Online","h":"w","can":["Tell a symptom from the real problem","Find root causes with fishbone and Pareto analysis","Weigh options and plan how to win support for the decision"]},"Innovative Thinking":{"f":"In person · Online","h":"c","can":["Spot where improvement is possible in their area","Generate and select ideas with simple tools","Test an idea in a small pilot and learn from the feedback"]},"Team Effectiveness Session":{"f":"In person · Online","h":"b","can":["Name where the team gets stuck","Practise tools for trust, healthy conflict and commitment","Leave with an agreed way of working together"]},"Shared Goals, Clear Roles":{"f":"In person · Online","h":"bc","can":["Agree what the team is there to achieve","Clarify who does what, and where roles overlap","Spot mismatched expectations before they cause friction"]},"Psychological Safety in the Team":{"f":"In person · Online","h":"c","can":["Recognise what makes it hard to speak up in the team","Agree habits that make questions and disagreement normal","Learn from mistakes without blame"]},"Team Priorities and Focus":{"f":"In person · Online","h":"w","can":["Separate urgent work from important work","Agree the few priorities that matter most now","Decide together what to stop or postpone"]},"Team Agreements and Accountability":{"f":"In person · Online","h":"b","can":["Set working agreements the whole team signs up to","Follow up on commitments without blame","Raise it early when an agreement isn’t kept"]},"Resilience to Change":{"f":"In person · Online","h":"c","can":["Recognise how change affects the team’s energy and focus","Use simple routines to stay steady under pressure","Plan for different scenarios instead of waiting"]},"Managing Change Together":{"f":"In person · Online","h":"c","can":["Understand the stages people go through in a change (ADKAR)","Find where the team is stuck in a current change","Agree the next practical steps together"]}};
+  // Texts for the website (from the texts page): formats, "после программы участники смогут", "helps with".
+  const CONTENT = {"Управление эффективностью":{"f":"Очно","h":"nw","can":["Ставить ясные согласованные цели и отслеживать прогресс","Хвалить и указывать на ошибки так, чтобы люди к этому прислушивались","Хорошо готовиться к подведению итогов и проводить его справедливо"]},"Основы лидерства":{"f":"Очно","h":"n","can":["Объяснять, чего от них ждут в роли руководителя","Применять четыре базовых навыка коммуникации в повседневных разговорах","Говорить о целях, хвалить и поправлять"]},"Гибкий стиль руководства":{"f":"Очно · Онлайн","h":"bn","can":["Оценивать готовность каждого к конкретной задаче","Подбирать нужное сочетание указаний и поддержки","Согласовывать ясные ожидания без микроменеджмента"]},"Ситуационное делегирование":{"f":"Очно","h":"bw","can":["Решать, что и как делегировать руководителям в своей команде","Подбирать уровень указаний и поддержки под опыт каждого руководителя","Договариваться о результатах и контрольных точках, а не контролировать мелочи"]},"Руководство командой":{"f":"Очно · Онлайн","h":"b","can":["Определять, на каком этапе развития находится их команда","Подстраивать стиль руководства под этот этап","Согласовывать устав команды и открыто разбирать первые конфликты"]},"Ассертивное поведение":{"f":"Очно · Онлайн","h":"w","can":["Отличать ассертивное поведение от пассивного и агрессивного","Отстаивать свою позицию без давления и говорить «нет», когда нужно","Распознавать манипуляции и спокойно на них реагировать"]},"Эмоциональное лидерство":{"f":"Очно · Онлайн","h":"cw","can":["Замечать состояние людей и подстраивать свою реакцию","Управлять своими реакциями под давлением","Использовать техники коммуникации, которые укрепляют доверие"]},"Влияние без формальной власти":{"f":"Очно","h":"c","can":["Составлять карту нужных стейкхолдеров и понимать, что важно каждому","Адаптировать сообщение под разные типы личности","Строить аргументы вокруг интересов другой стороны"]},"Коммуникация на стыке команд и продуктивный конфликт":{"f":"Очно · Онлайн","h":"c","can":["Уточнять запрос, чтобы все понимали его одинаково","Договариваться, кто за что отвечает на стыке команд","Искать взаимовыгодные решения при столкновении интересов"]},"Устойчивая мотивация":{"f":"Очно · Онлайн","h":"w","can":["Распознавать, что на самом деле движет мотивацией каждого","Проводить беседы, которые помогают людям найти более устойчивую мотивацию","Беречь собственную энергию и мотивацию"]},"Доверие и психологическая безопасность":{"f":"Очно · Онлайн","h":"cb","can":["Распознавать признаки низкой психологической безопасности в команде","Укреплять доверие с помощью вопросов, активного слушания и обратной связи","Проводить коучинговую беседу по модели GROW"]},"Управление изменениями":{"f":"Очно · Онлайн","h":"c","can":["Объяснять, почему изменения не удаются и что помогает их провести","Понимать, на каком этапе принятия изменений находится каждый","Составлять план реальных изменений в своей зоне ответственности"]},"Стратегическое мышление":{"f":"Очно · Онлайн","h":"c","can":["Отделять срочные задачи от того, что важно в долгосрочной перспективе","Оценивать, как тренды и изменения влияют на их зону ответственности","Превращать стратегическую цель в ясные приоритеты для своей команды"],"o":"Отвлекитесь от ежедневной текучки и свяжите решения с тем, куда движется организация.","short":"Связывайте ежедневные решения с долгосрочными целями."},"Критическое мышление":{"f":"Очно · Онлайн","h":"c","can":["Отделять факты от допущений","Проверять качество аргумента или предложения","Сравнивать варианты по ясным критериям"],"o":"Проверяйте допущения, взвешивайте факты и делайте выводы, которые выдерживают критику.","short":"Проверяйте допущения и взвешивайте факты, прежде чем решать."},"Анализ проблем и принятие решений":{"f":"Очно · Онлайн","h":"w","can":["Отличать симптом от настоящей проблемы","Находить первопричины с помощью диаграммы Исикавы и анализа Парето","Взвешивать варианты и планировать, как заручиться поддержкой решения"]},"Инновационное мышление":{"f":"Очно · Онлайн","h":"c","can":["Видеть, где в своей зоне ответственности возможны улучшения","Генерировать и отбирать идеи с помощью простых инструментов","Проверять идею в небольшом пилоте и учиться на обратной связи"]},"Сессия по эффективности команды":{"f":"Очно · Онлайн","h":"b","can":["Назвать, где команда буксует","Отработать инструменты для доверия, здорового спора и готовности выполнять решения","Уйти с согласованными правилами совместной работы"]},"Общие цели, ясные роли":{"f":"Очно · Онлайн","h":"bc","can":["Договориться, чего команда должна добиться","Прояснить, кто что делает и где роли пересекаются","Замечать расхождения в ожиданиях до того, как они вызовут трения"]},"Психологическая безопасность в команде":{"f":"Очно · Онлайн","h":"c","can":["Понимать, что мешает высказываться в команде","Договориться о привычках, при которых вопросы и возражения — норма","Учиться на ошибках без поиска виноватых"]},"Приоритеты и фокус команды":{"f":"Очно · Онлайн","h":"w","can":["Отделять срочное от важного","Договориться о немногих, но главных приоритетах","Вместе решить, что прекратить или отложить"]},"Командные договорённости и ответственность":{"f":"Очно · Онлайн","h":"b","can":["Договориться о правилах, под которыми подпишется вся команда","Следить за выполнением договорённостей без поиска виноватых","Сразу поднимать вопрос, если договорённость не соблюдается"]},"Устойчивость к изменениям":{"f":"Очно · Онлайн","h":"c","can":["Понимать, как изменения влияют на энергию и фокус команды","Сохранять спокойствие под давлением с помощью простых привычек","Планировать разные сценарии, а не ждать"]},"Управляем изменениями вместе":{"f":"Очно · Онлайн","h":"c","can":["Понимать этапы, которые люди проходят при изменениях (ADKAR)","Находить, где команда застряла в текущем изменении","Вместе договориться о следующих практических шагах"]}};
   const HELPS = {"w":"Heavier workloads","c":"Constant change","b":"Bigger teams","n":"New managers"};
-  const RISK_LINE = "Each programme is adapted to what your managers are facing now: heavier workloads, constant change and bigger teams.";
+  const RISK_LINE = "Каждая программа подстраивается под то, с чем ваши руководители сталкиваются сейчас: больше нагрузки, постоянные перемены, команды крупнее.";
   P.forEach((p) => { const c = CONTENT[p.t]; if (c) { if (c.f) p.f = c.f; if (!p.o && c.o) p.o = c.o; p.can = c.can; p.h = c.h; p.short = c.short; } p.pr = false; });
   const CLEAN = !!window.BHV_CLEAN; // clean page for the website: no mock-up bars or hints
-  const FEATURED = ['Performance Management', 'Leading a Team', 'Influence Without Authority', 'Leading Change', 'Problem Analysis and Decision-Making', 'Team Effectiveness Session'];
+  const FEATURED = ['Управление эффективностью', 'Руководство командой', 'Влияние без формальной власти', 'Управление изменениями', 'Анализ проблем и принятие решений', 'Сессия по эффективности команды'];
 
   // Round 2: tiles stay after the formats (P2). Two ways to open the full list:
   // "cat" = catalogue with filters and a detail panel; "ld" = list on the left, details on the right, fitting one screen.
@@ -76,36 +76,36 @@
     back: '<path d="M19 12H5M11 6l-6 6 6 6"/>',
   };
   const PICON = {
-    'Performance Management': 'chart', 'Leadership Foundations': 'flag', 'Adapting Your Leadership Style': 'sliders', 'Situational Delegation': 'branch',
-    'Leading a Team': 'users', 'Assertive Behaviour': 'chat', 'Emotional Leadership': 'heart', 'Influence Without Authority': 'cap',
-    'Cross-functional Communication and Productive Conflict': 'nodes', 'Motivation That Lasts': 'zap', 'Trust and Psychological Safety': 'shield', 'Leading Change': 'refresh',
-    'Strategic Thinking': 'compass', 'Critical Thinking': 'search', 'Problem Analysis and Decision-Making': 'branch', 'Innovative Thinking': 'bulb',
-    'Team Effectiveness Session': 'target', 'Shared Goals, Clear Roles': 'target', 'Psychological Safety in the Team': 'shield', 'Team Priorities and Focus': 'list',
-    'Team Agreements and Accountability': 'file', 'Resilience to Change': 'anchor', 'Managing Change Together': 'route',
+    'Управление эффективностью': 'chart', 'Основы лидерства': 'flag', 'Гибкий стиль руководства': 'sliders', 'Ситуационное делегирование': 'branch',
+    'Руководство командой': 'users', 'Ассертивное поведение': 'chat', 'Эмоциональное лидерство': 'heart', 'Влияние без формальной власти': 'cap',
+    'Коммуникация на стыке команд и продуктивный конфликт': 'nodes', 'Устойчивая мотивация': 'zap', 'Доверие и психологическая безопасность': 'shield', 'Управление изменениями': 'refresh',
+    'Стратегическое мышление': 'compass', 'Критическое мышление': 'search', 'Анализ проблем и принятие решений': 'branch', 'Инновационное мышление': 'bulb',
+    'Сессия по эффективности команды': 'target', 'Общие цели, ясные роли': 'target', 'Психологическая безопасность в команде': 'shield', 'Приоритеты и фокус команды': 'list',
+    'Командные договорённости и ответственность': 'file', 'Устойчивость к изменениям': 'anchor', 'Управляем изменениями вместе': 'route',
   };
   const ico = (n, size = 22) => `<svg viewBox="0 0 24 24" width="${size}" height="${size}" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICO[n] || ICO.cap}</svg>`;
   const SHORT = {
-    'Performance Management': 'The full management cycle, from goals to reviews.',
-    'Leadership Foundations': 'The manager’s role and core communication skills.',
-    'Adapting Your Leadership Style': 'Match your style to what each person needs.',
-    'Situational Delegation': 'Delegating when the people you lead are managers.',
-    'Leading a Team': 'Guide a team through its stages to high performance.',
-    'Assertive Behaviour': 'Honest, direct and respectful communication.',
-    'Emotional Leadership': 'Influence through connection, not status.',
-    'Influence Without Authority': 'Persuade people you don’t manage.',
-    'Cross-functional Communication and Productive Conflict': 'Work well across teams and turn conflict into results.',
-    'Motivation That Lasts': 'Help each person find lasting, self-driven motivation.',
-    'Trust and Psychological Safety': 'Build trust and a team where people speak up.',
-    'Leading Change': 'Lead change with high involvement.',
-    'Problem Analysis and Decision-Making': 'Find the root cause and decide well.',
-    'Innovative Thinking': 'Take an idea from first scan to tested pilot.',
-    'Team Effectiveness Session': 'The team agrees its own way of working.',
-    'Shared Goals, Clear Roles': 'Agree what the team is for and who does what.',
-    'Psychological Safety in the Team': 'Make it safe to speak up and disagree.',
-    'Team Priorities and Focus': 'Decide together what matters most now.',
-    'Team Agreements and Accountability': 'Set working agreements and keep them.',
-    'Resilience to Change': 'Stay steady when plans change.',
-    'Managing Change Together': 'Work through a change step by step.',
+    'Управление эффективностью': 'Полный цикл управления — от целей до подведения итогов.',
+    'Основы лидерства': 'Роль руководителя и базовые навыки коммуникации.',
+    'Гибкий стиль руководства': 'Подбирайте стиль под каждого человека.',
+    'Ситуационное делегирование': 'Делегирование, когда ваши подчинённые — сами руководители.',
+    'Руководство командой': 'Проведите команду через этапы развития к высоким результатам.',
+    'Ассертивное поведение': 'Честная, прямая и уважительная коммуникация.',
+    'Эмоциональное лидерство': 'Влияние через отношения, а не статус.',
+    'Влияние без формальной власти': 'Убеждайте тех, кем вы не руководите.',
+    'Коммуникация на стыке команд и продуктивный конфликт': 'Эффективно работайте с другими командами и превращайте конфликт в результат.',
+    'Устойчивая мотивация': 'Помогите каждому найти устойчивую внутреннюю мотивацию.',
+    'Доверие и психологическая безопасность': 'Создайте команду, где доверяют и не боятся высказываться.',
+    'Управление изменениями': 'Ведите изменения, вовлекая людей.',
+    'Анализ проблем и принятие решений': 'Находите первопричину и принимайте взвешенные решения.',
+    'Инновационное мышление': 'Проведите идею от первого анализа до проверенного пилота.',
+    'Сессия по эффективности команды': 'Команда сама договаривается, как ей работать.',
+    'Общие цели, ясные роли': 'Договоритесь, зачем нужна команда и кто за что отвечает.',
+    'Психологическая безопасность в команде': 'Пусть высказываться и возражать будет безопасно.',
+    'Приоритеты и фокус команды': 'Вместе решите, что сейчас важнее всего.',
+    'Командные договорённости и ответственность': 'Договоритесь о правилах работы и соблюдайте их.',
+    'Устойчивость к изменениям': 'Не теряйте почву под ногами, когда планы меняются.',
+    'Управляем изменениями вместе': 'Проходите изменения шаг за шагом.',
   };
   const el = (h) => { const d = document.createElement("div"); d.innerHTML = h.trim(); return d.firstElementChild; };
   // ===================== Phone versions (A–D) =====================
@@ -123,19 +123,19 @@
   const em1 = (t) => t.replace(/^(\S+)/, '<em>$1</em>');
   const short = (p) => SHORT[p.t] || p.short || '';
   const levelOf = (p) => p.a === 't' ? 't' : p.a === 'm' ? 'm' : 'l';
-  const LV = [['all', 'All'], ['l', 'Line managers'], ['m', 'Managers of managers'], ['t', 'Teams']];
+  const LV = [['all', 'Все'], ['l', 'Линейные руководители'], ['m', 'Руководители руководителей'], ['t', 'Команды']];
   const inLv = (p, k) => k === 'all' || p.a.includes(k);
   const cnt = (k) => P.filter((p) => inLv(p, k)).length;
   const LV_ICO = { l: 'user', m: 'users', t: 'target', all: 'cap' };
-  const fmtChips = (p) => (p.f || '').split(' · ').filter(Boolean).map((x) => `<span class="tm-chip">${ico(/Online/.test(x) ? 'laptop' : 'user', 15)}${x}</span>`).join('');
+  const fmtChips = (p) => (p.f || '').split(' · ').filter(Boolean).map((x) => `<span class="tm-chip">${ico(/Online|Онлайн/.test(x) ? 'laptop' : 'user', 15)}${x}</span>`).join('');
   const recRow = (p) => {
-    if (!p.ar.length) return ['Recommended for', 'Managers new in the role'];
+    if (!p.ar.length) return ['Для кого', 'Начинающие руководители'];
     const names = p.ar.map((k) => AREAS[k][0]);
-    const list = names.length > 1 ? names.slice(0, -1).join(', ') + ' or ' + names[names.length - 1] : names[0];
-    const who = p.a === 't' ? 'a team’s' : p.a === 'lmt' ? 'a manager’s or team’s' : 'a manager’s';
-    return ['Recommended when', `${who.charAt(0).toUpperCase() + who.slice(1)} results are low in ${list}`];
+    const list = names.length > 1 ? names.slice(0, -1).join(', ') + ' или ' + names[names.length - 1] : names[0];
+    const who = p.a === 't' ? 'команды' : p.a === 'lmt' ? 'руководителя или команды' : 'руководителя';
+    return ['Подойдёт, если', `У ${who} низкие результаты: ${list}`];
   };
-  const NOTE = '<p class="tm-note"><b>Also available:</b> one-to-one coaching for managers of managers, and team coaching with the manager.</p>';
+  const NOTE = '<p class="tm-note"><b>А ещё:</b> индивидуальный коучинг для руководителей руководителей и командный коучинг вместе с руководителем.</p>';
   const MORE = `<span class="tm-more">More ${ico('arrow', 15)}</span>`;
 
   const css3 = `
@@ -382,7 +382,7 @@
     return `${head}
       <p class="tm-po">${p.o}</p>
       <div class="tm-sep"></div>
-      <p class="tm-wh">After the programme, participants can</p>
+      <p class="tm-wh">После программы участники смогут</p>
       <ul class="tm-checks">${p.can.slice(0, 3).map((x) => `<li><i>${ico('check', 14)}</i><span>${x}</span></li>`).join('')}</ul>
       <div class="tm-sep"></div>
       <div class="tm-meta">
@@ -394,14 +394,14 @@
   function openSheet(p) {
     const dim = el('<div class="tm-dim"></div>');
     const sh = el(`<div class="tm tm-sheet" role="dialog" aria-modal="true" aria-label="${p.t}"><div class="tm-handle"></div>
-      <button class="tm-sx" type="button" aria-label="Close">${ico('x', 20)}</button>${detailsBody(p)}</div>`);
+      <button class="tm-sx" type="button" aria-label="Закрыть">${ico('x', 20)}</button>${detailsBody(p)}</div>`);
     dim.addEventListener('click', goBack);
     sh.querySelector('.tm-sx').addEventListener('click', goBack);
     pushLayer([dim, sh]);
     sh.querySelector('.tm-sx').focus({ preventScroll: true });
   }
   function openDetailPage(p, style) {
-    const back = layers.length ? 'All programmes' : 'Back';
+    const back = layers.length ? 'Все программы' : 'Назад';
     const body = style === 'hero'
       ? `<div class="tm-dhero"><span class="tm-tile">${ico(PICON[p.t], 26)}</span><span class="tm-audl">${AUD[p.a]}</span><h2 class="tm-pt">${em1(p.t)}</h2></div><div class="tm-dbody">${detailsBody(p, { hero: true })}</div>`
       : `<div class="tm-dbody">${detailsBody(p)}</div>`;
@@ -414,17 +414,17 @@
   const openDetails = (p) => V === 'a' ? openSheet(p) : openDetailPage(p, V === 'c' ? 'hero' : 'plain');
 
   // ---------- catalogue ----------
-  const catHead = () => `<div class="tm-top"><button class="tm-back" type="button" data-back>${ico('back', 18)} Back</button><span class="tm-toptitle">${P.length} programmes</span></div>
-    <div class="tm-chead"><div class="tm-ceye"><span class="tm-tile">${ico('cap', 21)}</span>Programmes</div>
-      <h1 class="tm-ch">Programmes for managers<br><em>and teams.</em></h1>
-      <p class="tm-clead">Each participant gets the programmes that match their priority areas.</p></div>`;
-  const chips = (lv, sticky) => `<div class="tm-filters${sticky ? ' tm-sticky' : ''}" role="group" aria-label="Level">${LV.map(([k, n]) => `<button type="button" data-lv="${k}" aria-pressed="${k === lv}">${n} <b>${cnt(k)}</b></button>`).join('')}</div>`;
+  const catHead = () => `<div class="tm-top"><button class="tm-back" type="button" data-back>${ico('back', 18)} Назад</button><span class="tm-toptitle">Программ: ${P.length}</span></div>
+    <div class="tm-chead"><div class="tm-ceye"><span class="tm-tile">${ico('cap', 21)}</span>Программы</div>
+      <h1 class="tm-ch">Программы для руководителей<br><em>и команд.</em></h1>
+      <p class="tm-clead">Каждому участнику — программы по его приоритетным областям.</p></div>`;
+  const chips = (lv, sticky) => `<div class="tm-filters${sticky ? ' tm-sticky' : ''}" role="group" aria-label="Уровень">${LV.map(([k, n]) => `<button type="button" data-lv="${k}" aria-pressed="${k === lv}">${n} <b>${cnt(k)}</b></button>`).join('')}</div>`;
   const groupsOf = (lv) => (lv === 'all' ? LV.slice(1) : LV.filter(([k]) => k === lv)).map(([k, n]) => [k, n, P.filter((p) => p.a.includes(k))]);
   const cardA = (p) => `<button class="tm-card" type="button" data-i="${p.i}"><span class="tm-tile">${ico(PICON[p.t], 20)}</span><span><span class="tm-t">${p.t}</span><span class="tm-d">${short(p)}</span>${MORE}</span></button>`;
   const rowB = (p, n) => `<button class="tm-brow" type="button" data-i="${p.i}"><span class="tm-num">${String(n).padStart(2, '0')}</span><span><span class="tm-t" style="display:block">${p.t}</span><span class="tm-d" style="display:block">${short(p)}</span></span><span class="tm-chev">${ico('arrow', 16)}</span></button>`;
   const rowC = (p, sub) => `<button class="tm-crow" type="button" data-i="${p.i}"><span class="tm-tile">${ico(PICON[p.t], 19)}</span><span><span class="tm-t">${p.t}</span><span class="tm-sub">${sub}</span></span><span class="tm-chev">${ico('arrow', 16)}</span></button>`;
   const rowD = (p, open) => `<div class="tm-x" data-open="${!!open}"><button class="tm-xh" type="button" data-x="${p.i}" aria-expanded="${!!open}"><span class="tm-tile">${ico(PICON[p.t], 20)}</span><span><span class="tm-xfor">${AUD[p.a]}</span><span class="tm-t">${p.t}</span><span class="tm-d">${short(p)}</span></span><span class="tm-pm">${ico('plus', 15)}</span></button>
-      <div class="tm-xb"><p class="tm-po">${p.o}</p><div class="tm-canbox"><p class="tm-wh">After the programme, participants can</p><ul class="tm-checks">${p.can.slice(0, 3).map((x) => `<li><i>${ico('check', 14)}</i><span>${x}</span></li>`).join('')}</ul></div><div class="tm-sep"></div><div class="tm-meta">
+      <div class="tm-xb"><p class="tm-po">${p.o}</p><div class="tm-canbox"><p class="tm-wh">После программы участники смогут</p><ul class="tm-checks">${p.can.slice(0, 3).map((x) => `<li><i>${ico('check', 14)}</i><span>${x}</span></li>`).join('')}</ul></div><div class="tm-sep"></div><div class="tm-meta">
         <div><span class="tm-tile">${ico('calendar', 21)}</span><small>Format</small><b>${p.f || 'To be confirmed'}</b></div>
         <div><span class="tm-tile">${ico('target', 21)}</span><small>${recRow(p)[0]}</small><b>${recRow(p)[1]}</b></div>
         <div><span class="tm-tile">${ico('users', 21)}</span><small>For</small><b>${AUD[p.a]}</b></div></div></div></div>`;
@@ -433,16 +433,16 @@
     if (V === 'a') return chips(lv, true) + groupsOf(lv).map(([k, n, items]) => `<div class="tm-grp"><h2 class="tm-gh">${n}<span class="tm-count">${items.length}</span></h2><div class="tm-cards">${items.map(cardA).join('')}</div></div>`).join('');
     if (V === 'b') {
       const open = lv === 'all' ? ['l', 'm', 't'] : lv ? [lv] : [];
-      return `<div class="tm-jump"><span>${P.length} programmes in 3 levels</span><button type="button" data-openall>${open.length === 3 ? 'Close all' : 'Open all'}</button></div>` + LV.slice(1).map(([k, n]) => { const items = P.filter((p) => p.a.includes(k)); return `<div class="tm-acc" data-k="${k}" data-open="${open.includes(k)}"><button class="tm-acch" type="button" data-acc="${k}"><span class="tm-tile">${ico(LV_ICO[k], 21)}</span><span><b>${n}</b><small>${items.length} programmes</small></span><span class="tm-pm">${ico('plus', 15)}</span></button><div class="tm-accb">${items.map((p, j) => rowB(p, j + 1)).join('')}</div></div>`; }).join('');
+      return `<div class="tm-jump"><span>Программ: ${P.length} · 3 уровня</span><button type="button" data-openall>${open.length === 3 ? 'Свернуть все' : 'Развернуть все'}</button></div>` + LV.slice(1).map(([k, n]) => { const items = P.filter((p) => p.a.includes(k)); return `<div class="tm-acc" data-k="${k}" data-open="${open.includes(k)}"><button class="tm-acch" type="button" data-acc="${k}"><span class="tm-tile">${ico(LV_ICO[k], 21)}</span><span><b>${n}</b><small>Программ: ${items.length}</small></span><span class="tm-pm">${ico('plus', 15)}</span></button><div class="tm-accb">${items.map((p, j) => rowB(p, j + 1)).join('')}</div></div>`; }).join('');
     }
-    if (V === 'c') return `<div class="tm-lvtiles" role="group" aria-label="Level">${LV.map(([k, n]) => `<button class="tm-lvtile" type="button" data-lv="${k}" aria-pressed="${k === lv}"><b>${cnt(k)}</b><span>${k === 'all' ? 'All programmes' : n}</span></button>`).join('')}</div>` +
+    if (V === 'c') return `<div class="tm-lvtiles" role="group" aria-label="Уровень">${LV.map(([k, n]) => `<button class="tm-lvtile" type="button" data-lv="${k}" aria-pressed="${k === lv}"><b>${cnt(k)}</b><span>${k === 'all' ? 'Все программы' : n}</span></button>`).join('')}</div>` +
       groupsOf(lv).map(([k, n, items]) => `<div class="tm-cgrp"><h2 class="tm-cgh">${n}<span class="tm-count">${items.length}</span></h2><div class="tm-rows">${items.map((p) => rowC(p, short(p))).join('')}</div></div>`).join('');
     return chips(lv, false) + groupsOf(lv).map(([k, n, items]) => `<div class="tm-grp"><h2 class="tm-gh">${n}<span class="tm-count">${items.length}</span></h2><div class="tm-xlist">${items.map((p) => rowD(p)).join('')}</div></div>`).join('');
   }
   window.bhvOpenProgrammes = () => openCatalogue('all'); // 25 Nov: the menu and footer open the full list too
   function openCatalogue(lv = 'all') {
     if (V === 'b' && lv === 'all') lv = ''; // B starts with the three levels closed
-    const pg = el(`<div class="tm tm-page" role="dialog" aria-modal="true" aria-label="Programmes">${catHead()}<div class="tm-res">${catBody(lv)}${NOTE}</div><div class="tm-end"><p>Not sure which programmes fit?<span>We’ll match them to your managers’ results.</span></p><button type="button" class="tm-cta" data-cm-open>Request a demo</button></div></div>`);
+    const pg = el(`<div class="tm tm-page" role="dialog" aria-modal="true" aria-label="Программы">${catHead()}<div class="tm-res">${catBody(lv)}${NOTE}</div><div class="tm-end"><p>Не знаете, какие программы выбрать?<span>Подберём их по результатам ваших руководителей.</span></p><button type="button" class="tm-cta" data-cm-open>Запросить демо</button></div></div>`);
     const render = (k, keepTop) => {
       const res = pg.querySelector('.tm-res'); res.innerHTML = catBody(k) + NOTE;
       if (!keepTop) { const f = res.querySelector('.tm-filters, .tm-lvtiles'); const stuck = f && f.classList.contains('tm-sticky'); if (stuck && pg.scrollTop > res.offsetTop) pg.scrollTop = res.offsetTop; }
@@ -459,9 +459,9 @@
         }
         return render(f.dataset.lv);
       }
-      if (e.target.closest('[data-openall]')) { const boxes = [...pg.querySelectorAll('.tm-acc')]; const all = boxes.every((x) => x.dataset.open === 'true'); boxes.forEach((x) => x.dataset.open = String(!all)); e.target.closest('[data-openall]').textContent = all ? 'Open all' : 'Close all'; return; }
+      if (e.target.closest('[data-openall]')) { const boxes = [...pg.querySelectorAll('.tm-acc')]; const all = boxes.every((x) => x.dataset.open === 'true'); boxes.forEach((x) => x.dataset.open = String(!all)); e.target.closest('[data-openall]').textContent = all ? 'Развернуть все' : 'Свернуть все'; return; }
       const a = e.target.closest('[data-acc]');
-      if (a) { const box = a.parentElement; box.dataset.open = String(box.dataset.open !== 'true'); const all = [...pg.querySelectorAll('.tm-acc')].every((x) => x.dataset.open === 'true'); pg.querySelector('[data-openall]').textContent = all ? 'Close all' : 'Open all'; return; }
+      if (a) { const box = a.parentElement; box.dataset.open = String(box.dataset.open !== 'true'); const all = [...pg.querySelectorAll('.tm-acc')].every((x) => x.dataset.open === 'true'); pg.querySelector('[data-openall]').textContent = all ? 'Свернуть все' : 'Развернуть все'; return; }
       const x = e.target.closest('[data-x]');
       if (x) { const box = x.parentElement; const o = box.dataset.open !== 'true'; box.dataset.open = String(o); x.setAttribute('aria-expanded', o); if (o) setTimeout(() => { const r = box.getBoundingClientRect(); if (r.top < 120) pg.scrollBy({ top: r.top - 130, behavior: 'smooth' }); }, 30); return; }
       const c = e.target.closest('[data-i]'); if (c) openDetails(P[+c.dataset.i]);
@@ -472,17 +472,17 @@
 
   // ---------- block on the page ----------
   function blockBody() {
-    const BTN = `<button class="tm-allbtn" type="button" data-all>See all programmes ${ico('arrow', 18)}</button>`;
-    if (V === 'a') return `<div class="tm-acards">${pick(['Performance Management', 'Leading a Team', 'Team Effectiveness Session']).map((p) => `<button class="tm-acard" type="button" data-i="${p.i}"><span class="tm-row1"><span class="tm-tile">${ico(PICON[p.t], 20)}</span><span class="tm-for">${AUD[p.a]}</span></span><span class="tm-t" style="display:block">${p.t}</span><span class="tm-d" style="display:block">${p.o}</span><span class="tm-foot"><span>${fmtChips(p)}</span>${MORE}</span></button>`).join('')}</div>${BTN}`;
-    if (V === 'b') return `<div class="tm-blist">${pick(['Performance Management', 'Leading a Team', 'Influence Without Authority', 'Leading Change', 'Team Effectiveness Session']).map((p, j) => `<button class="tm-brow" type="button" data-i="${p.i}"><span class="tm-num">${String(j + 1).padStart(2, '0')}</span><span><span class="tm-t" style="display:block">${p.t}</span><span class="tm-d" style="display:block">${short(p)}</span><span class="tm-for" style="display:block">${AUD[p.a]}</span></span><span class="tm-chev">${ico('arrow', 16)}</span></button>`).join('')}</div>${BTN}`;
-    if (V === 'c') { const f = byT('Performance Management'); return `<button class="tm-feat" type="button" data-i="${f.i}"><span class="tm-tile">${ico(PICON[f.t], 24)}</span><span class="tm-for" style="display:block">${AUD[f.a]}</span><span class="tm-t" style="display:block">${em1(f.t)}</span><span class="tm-d" style="display:block">${f.o}</span><span class="tm-foot"><span style="display:flex;gap:6px">${fmtChips(f)}</span>${MORE}</span></button>
-      <p class="tm-also">More programmes</p><div class="tm-rows">${pick(['Leading a Team', 'Influence Without Authority', 'Leading Change', 'Team Effectiveness Session']).map((p) => rowC(p, AUD[p.a])).join('')}</div>${BTN}`; }
+    const BTN = `<button class="tm-allbtn" type="button" data-all>Все программы ${ico('arrow', 18)}</button>`;
+    if (V === 'a') return `<div class="tm-acards">${pick(['Управление эффективностью', 'Руководство командой', 'Сессия по эффективности команды']).map((p) => `<button class="tm-acard" type="button" data-i="${p.i}"><span class="tm-row1"><span class="tm-tile">${ico(PICON[p.t], 20)}</span><span class="tm-for">${AUD[p.a]}</span></span><span class="tm-t" style="display:block">${p.t}</span><span class="tm-d" style="display:block">${p.o}</span><span class="tm-foot"><span>${fmtChips(p)}</span>${MORE}</span></button>`).join('')}</div>${BTN}`;
+    if (V === 'b') return `<div class="tm-blist">${pick(['Управление эффективностью', 'Руководство командой', 'Влияние без формальной власти', 'Управление изменениями', 'Сессия по эффективности команды']).map((p, j) => `<button class="tm-brow" type="button" data-i="${p.i}"><span class="tm-num">${String(j + 1).padStart(2, '0')}</span><span><span class="tm-t" style="display:block">${p.t}</span><span class="tm-d" style="display:block">${short(p)}</span><span class="tm-for" style="display:block">${AUD[p.a]}</span></span><span class="tm-chev">${ico('arrow', 16)}</span></button>`).join('')}</div>${BTN}`;
+    if (V === 'c') { const f = byT('Управление эффективностью'); return `<button class="tm-feat" type="button" data-i="${f.i}"><span class="tm-tile">${ico(PICON[f.t], 24)}</span><span class="tm-for" style="display:block">${AUD[f.a]}</span><span class="tm-t" style="display:block">${em1(f.t)}</span><span class="tm-d" style="display:block">${f.o}</span><span class="tm-foot"><span style="display:flex;gap:6px">${fmtChips(f)}</span>${MORE}</span></button>
+      <p class="tm-also">Другие программы</p><div class="tm-rows">${pick(['Руководство командой', 'Влияние без формальной власти', 'Управление изменениями', 'Сессия по эффективности команды']).map((p) => rowC(p, AUD[p.a])).join('')}</div>${BTN}`; }
     const EX = (k) => { const all = P.filter((p) => p.a.includes(k)); return [...all.filter((p) => p.a === k), ...all.filter((p) => p.a !== k)].slice(0, 4).map((p) => p.t); };
-    return `<div class="tm-doors">${LV.slice(1).map(([k, n]) => `<button class="tm-door" type="button" data-door="${k}"><span class="tm-row1"><span class="tm-tile">${ico(LV_ICO[k], 21)}</span><span><span class="tm-lvname">${n}</span></span></span><span class="tm-ex">${EX(k).map((t) => `<span>${t}</span>`).join('')}</span><span class="tm-more"><span>+ ${cnt(k) - 4} more programmes</span><span class="tm-arrow">${ico('arrow', 16)}</span></span></button>`).join('')}</div>${BTN}`;
+    return `<div class="tm-doors">${LV.slice(1).map(([k, n]) => `<button class="tm-door" type="button" data-door="${k}"><span class="tm-row1"><span class="tm-tile">${ico(LV_ICO[k], 21)}</span><span><span class="tm-lvname">${n}</span></span></span><span class="tm-ex">${EX(k).map((t) => `<span>${t}</span>`).join('')}</span><span class="tm-more"><span>Ещё программ: ${cnt(k) - 4}</span><span class="tm-arrow">${ico('arrow', 16)}</span></span></button>`).join('')}</div>${BTN}`;
   }
   function block() {
-    const b = el(`<section class="tm tm-band" data-tm><div class="tm-in"><div class="tm-eye">Our programmes</div><h2 class="tm-h">Training for the gaps <em>that matter.</em></h2>
-      <p class="tm-lead">A few of our programmes. Formats vary by programme.</p>${blockBody()}</div></section>`);
+    const b = el(`<section class="tm tm-band" data-tm><div class="tm-in"><div class="tm-eye">Наши программы</div><h2 class="tm-h">Закрываем пробелы, <em>которые важны.</em></h2>
+      <p class="tm-lead">Вот несколько наших программ. Формат у каждой свой.</p>${blockBody()}</div></section>`);
     b.addEventListener('click', (e) => {
       if (e.target.closest('[data-all]')) return openCatalogue('all');
       const d = e.target.closest('[data-door]'); if (d) return openCatalogue(d.dataset.door);

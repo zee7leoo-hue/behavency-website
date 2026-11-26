@@ -8,29 +8,29 @@ import './Hero.css'
 
 const CARDS = [
   {
-    key: 'identify', title: 'Identify', tint: '#eaf1ff', ink: '#2f5bd3', lede: 'Reveal strengths and gaps.',
+    key: 'identify', title: 'Identify', tint: '#eaf1ff', ink: '#2f5bd3', lede: 'Найти сильные стороны и зоны роста.',
     icon: <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" /><path d="M16 16l4.5 4.5" /></svg>,
-    badge: { n: '6', l: 'areas' },
+    badge: { n: '6', l: 'областей' },
     rows: [
-      { t: 'Trust & Inclusion', v: 32, fill: '#e86a7d', bg: '#fde4e7', fg: '#c0283f' },
-      { t: 'Clarity & Alignment', v: 62, fill: '#f5b84a', bg: '#fdf0d6', fg: '#c97c0a' },
-      { t: 'Execution & Accountability', v: 78, fill: '#7fbf5c', bg: '#e4f4dc', fg: '#3f8a1f' },
+      { t: 'Доверие и инклюзивность', v: 32, fill: '#e86a7d', bg: '#fde4e7', fg: '#c0283f' },
+      { t: 'Ясность и согласованность', v: 62, fill: '#f5b84a', bg: '#fdf0d6', fg: '#c97c0a' },
+      { t: 'Исполнение и ответственность', v: 78, fill: '#7fbf5c', bg: '#e4f4dc', fg: '#3f8a1f' },
     ],
   },
   {
-    key: 'engage', title: 'Engage', tint: '#f1ebff', ink: '#7a3ff0', lede: 'Explore team behaviours through play.',
+    key: 'engage', title: 'Engage', tint: '#f1ebff', ink: '#7a3ff0', lede: 'Изучайте поведение команды в игре.',
     icon: <svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="11" rx="5" /><path d="M8 11v3M6.5 12.5h3M15.5 12h.01M17.5 13.5h.01" /></svg>,
-    rows: [{ t: 'Interactive team game', tag: '45 min' }, { t: 'Guided post-game reflection', tag: '90 min' }, { t: 'Team insight report', tag: 'Action plan' }],
+    rows: [{ t: 'Интерактивная командная игра', tag: '45 мин' }, { t: 'Разбор после игры с фасилитатором', tag: '90 мин' }, { t: 'Аналитический отчёт команды', tag: 'План действий' }],
   },
   {
-    key: 'build', title: 'Build', tint: '#fff3e6', ink: '#d9821c', lede: 'Turn insights into real development.',
+    key: 'build', title: 'Build', tint: '#fff3e6', ink: '#d9821c', lede: 'От выводов — к реальному развитию.',
     icon: <svg viewBox="0 0 24 24"><circle cx="9" cy="9" r="3" /><circle cx="16.5" cy="10" r="2.4" /><path d="M3.5 19c.6-3 2.8-4.6 5.5-4.6s4.9 1.6 5.5 4.6M14.5 15.2c2.6-.3 4.6 1.1 5.2 3.8" /></svg>,
-    rows: [{ t: 'Training modules', tag: 'E-learning · Live' }, { t: 'Matched to each manager', tag: 'Their priority areas' }, { t: 'Masterplan', tag: 'Applied at work' }],
+    rows: [{ t: 'Учебные модули', tag: 'E-learning · с тренером' }, { t: 'Под каждого руководителя', tag: 'Его приоритеты' }, { t: 'Мастер-план', tag: 'Применение в работе' }],
   },
   {
-    key: 'measure', title: 'Measure', tint: '#e7f6ef', ink: '#17905f', lede: 'Track programme results and team progress.',
+    key: 'measure', title: 'Measure', tint: '#e7f6ef', ink: '#17905f', lede: 'Результаты программы и прогресс команды — на виду.',
     icon: <svg viewBox="0 0 24 24"><path d="M5 19V13M10 19V9M15 19v-6M20 19V5" /></svg>,
-    rows: [{ t: 'See what changed', tag: 'Team behaviours' }, { t: 'Track development', tag: 'Key areas' }, { t: 'Identify what’s next', tag: 'New priorities' }],
+    rows: [{ t: 'Увидеть, что изменилось', tag: 'Поведение команды' }, { t: 'Отслеживать развитие', tag: 'Ключевые области' }, { t: 'Понять, что дальше', tag: 'Новые приоритеты' }],
   },
 ]
 
@@ -119,14 +119,14 @@ export default function Hero() {
     <section className="hr" id="hero">
       <div className="hr-phone">
         <div className="hr-hero">
-          <div className="hr-pill"><span>LOWER YOUR MANAGEMENT RISK</span></div>
+          <div className="hr-pill"><span>МЕНЬШЕ РИСКОВ В УПРАВЛЕНИИ</span></div>
           <h1 className="hr-h">
-            <span className="hr-l">Most managers don’t</span>
-            <span className="hr-l">know <em>where they’re</em></span>
-            <span className="hr-l"><em>falling short.</em></span>
+            <span className="hr-l">Мало кто из руководителей понимает,</span>
+            <span className="hr-l"><em>чего именно</em></span>
+            <span className="hr-l"><em>им не хватает.</em></span>
           </h1>
-          <p className="hr-s">When things keep changing, that gap is a business risk. Behavency finds it early, helps managers close it — and shows you what changed.</p>
-          <a className="hr-btn" href="#contact" onClick={(e) => { e.preventDefault(); setDemo(true) }}>Request a demo</a>
+          <p className="hr-s">Когда всё меняется, такой пробел — риск для бизнеса. Behavency замечает его вовремя, помогает руководителям его закрыть — и показывает вам, что изменилось.</p>
+          <a className="hr-btn" href="#contact" onClick={(e) => { e.preventDefault(); setDemo(true) }}>Запросить демо</a>
         </div>
 
         <div className="hr-carousel" ref={carRef}>

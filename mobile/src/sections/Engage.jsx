@@ -18,7 +18,7 @@ export default function Engage() {
     <section ref={ref} className={`eg ${seen ? 'is-in' : ''}`} id="engage">
       <div className="eg-in">
         <h2 className="eg-title rv" style={{ '--i': 0 }}>
-          They’ve seen the score. Now let them <em>experience it.
+          Цифры они уже видели. Теперь пусть <em>прочувствуют.
           <svg className="eg-swoosh" viewBox="0 0 470 22" preserveAspectRatio="none" aria-hidden="true">
             <defs><linearGradient id="eg-sw" x1="0" x2="1"><stop offset="0" stopColor={GREEN} stopOpacity=".2" /><stop offset=".25" stopColor={GREEN} /><stop offset=".85" stopColor={GREEN} /><stop offset="1" stopColor={GREEN} stopOpacity=".35" /></linearGradient></defs>
             <path d="M4 17 Q230 -2 466 11" fill="none" stroke="url(#eg-sw)" strokeWidth="3.4" strokeLinecap="round" />
@@ -26,13 +26,13 @@ export default function Engage() {
         </h2>
 
         <div className="eg-eyebrow rv" style={{ '--i': 1 }}>
-          <b>02</b><i aria-hidden="true">—</i><strong>Engage</strong><u aria-hidden="true" /><span>Experience how your team works together</span>
+          <b>02</b><i aria-hidden="true">—</i><strong>Engage</strong><u aria-hidden="true" /><span>Увидеть изнутри, как работает ваша команда</span>
         </div>
 
         <p className="eg-sub eg-lead rv" style={{ '--i': 2 }}>Through team challenges and decisions, participants experience the same behavioural areas they assessed, seeing how they shape the way people work together.</p>
-        <p className="eg-sub rv" style={{ '--i': 2 }}>A score can be read and forgotten.<br />An experience stays.</p>
+        <p className="eg-sub rv" style={{ '--i': 2 }}>Оценку можно прочитать и забыть.<br />Опыт остаётся.</p>
 
-        <svg className="eg-art rv" style={{ '--i': 3 }} viewBox="0 0 467 467" role="img" aria-label="An assessment result card (Clarity & Alignment 82%, Collaboration & Influence 46%) leading to a Team Game card with a 45 minute timer.">
+        <svg className="eg-art rv" style={{ '--i': 3 }} viewBox="0 0 467 467" role="img" aria-label="Карточка результата оценки («Ясность и согласованность» 82%, «Сотрудничество и влияние» 46%) , за которой следует карточка командной игры с таймером на 45 минут.">
           <defs>
             <filter id="eg-sh" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="11" stdDeviation="11" floodColor="#46508f" floodOpacity="0.17" /></filter>
             <linearGradient id="eg-panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#5a4fc2" /><stop offset=".6" stopColor="#6552d6" /><stop offset="1" stopColor="#7a5df0" /></linearGradient>
@@ -52,11 +52,11 @@ export default function Engage() {
               <g fill="none" stroke="#6a3de8" strokeWidth="3.8" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M-4 -78V-94H4V-78M9 -78V-108H18V-78M23 -78V-98H31V-78M-12 -75H36" />
               </g>
-              <text x="50" y="-82" fontSize="22.6" fontWeight="700" fill={NAVY} letterSpacing="-0.4">Assessment result</text>
+              <text x="50" y="-82" fontSize="22.6" fontWeight="700" fill={NAVY} letterSpacing="-0.4">Результат оценки</text>
 
               {/* Communication 82% */}
               <rect x="-30" y="-48" width="378" height="153" rx="28" fill="#e9f8ea" />
-              <text x="0" y="0" fontSize="24" fontWeight="700" fill={NAVY} letterSpacing="-0.4">Clarity &amp; Alignment</text>
+              <text x="0" y="0" fontSize="24" fontWeight="700" fill={NAVY} letterSpacing="-0.4">Ясность и согласованность</text>
               <text x="-2" y="53" fontSize="52" fontWeight="800" fill={NAVY} letterSpacing="-1.4">82%</text>
               <circle cx="301" cy="8" r="18" fill="#17b33c" />
               <path d="M292 8.5l7 7 12-13.5" fill="none" stroke="#fff" strokeWidth="4.4" strokeLinecap="round" strokeLinejoin="round" />
@@ -65,8 +65,8 @@ export default function Engage() {
 
               {/* Cross-team Collaboration 46% */}
               <rect x="-27" y="116" width="360" height="206" rx="28" fill="#fdeeed" />
-              <text x="1" y="165" fontSize="23.6" fontWeight="700" fill={NAVY} letterSpacing="-0.3">Collaboration</text>
-              <text x="1" y="199" fontSize="23.6" fontWeight="700" fill={NAVY} letterSpacing="-0.3">&amp; Influence</text>
+              <text x="1" y="165" fontSize="23.6" fontWeight="700" fill={NAVY} letterSpacing="-0.3">Сотрудничество</text>
+              <text x="1" y="199" fontSize="23.6" fontWeight="700" fill={NAVY} letterSpacing="-0.3">и влияние</text>
               <text x="0" y="247" fontSize="52" fontWeight="800" fill={NAVY} letterSpacing="-1.4">46%</text>
               <circle cx="248" cy="184" r="18" fill="#ef4444" />
               <path d="M248 175v11" stroke="#fff" strokeWidth="4.4" strokeLinecap="round" /><circle cx="248" cy="193.5" r="2.6" fill="#fff" />
@@ -86,7 +86,7 @@ export default function Engage() {
               <path d="M12 6h30c12 0 20 9 24 22l5 20c2 9-5 12-12 8l-10-6c-3-2-6-3-9-3H22c-3 0-6 1-9 3l-10 6c-7 4-14 1-12-8l5-20C0 15 6 6 12 6z" fill={NAVY} />
               <path d="M16 20h12M22 14v12" stroke="#fff" strokeWidth="3.6" strokeLinecap="round" /><circle cx="42" cy="17" r="3.2" fill="#fff" /><circle cx="50" cy="23" r="3.2" fill="#fff" />
             </g>
-            <text x="310" y="191" fontSize="15.4" fontWeight="700" fill={NAVY} letterSpacing="-0.25">Team Game</text>
+            <text x="310" y="191" fontSize="15.4" fontWeight="700" fill={NAVY} letterSpacing="-0.25">Командная игра</text>
 
             {/* purple panel */}
             <g clipPath="url(#eg-panel-clip)">

@@ -14,19 +14,19 @@ const Plus = () => (<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10
 const LEVELS = ['Individual', 'Team', 'Organisation']
 const PACKS = [
   {
-    key: 'proficiency', name: 'Proficiency', Icon: One, lede: 'A focused assessment and individual insight', depth: [1, 0, 0],
-    items: ['Managerial Profile (self-assessment)', '360° Feedback', 'Individual Manager Report', 'Optional: Structured Interview, with Interview Studio practice for your HR team'],
-    best: 'Organisations starting with manager self-awareness and stakeholder feedback.',
+    key: 'proficiency', name: 'Proficiency', Icon: One, lede: 'Точечная оценка и личные выводы', depth: [1, 0, 0],
+    items: ['Профиль управленческого поведения (самооценка)', 'Обратная связь 360°', 'Индивидуальный отчёт руководителя', 'Optional: Structured Interview, with Interview Studio practice for your HR team'],
+    best: 'Тем, кто начинает с самооценки руководителей и обратной связи стейкхолдеров.',
   },
   {
-    key: 'complete', name: 'Complete', Icon: Stack, lede: 'The full diagnostic picture — individual, team, and organisational', depth: [1, 1, 1], badge: 'Most complete',
-    items: ['Everything in Proficiency', 'Workplace Effectiveness Survey', 'Resilience to Change', 'Team assessment, on the same six areas', 'Individual reports and a leadership report'],
-    best: 'Organisations that want to understand people AND the conditions around them.',
+    key: 'complete', name: 'Complete', Icon: Stack, lede: 'Полная диагностика: люди, команды и организация', depth: [1, 1, 1], badge: 'Most complete',
+    items: ['Всё из Proficiency', 'Организационные барьеры', 'Устойчивость к изменениям', 'Оценка команды по тем же шести областям', 'Индивидуальные отчёты и отчёт для руководства'],
+    best: 'Тем, кто хочет понять не только людей, но и условия вокруг них.',
   },
   {
     key: 'flex', name: 'Flex', Icon: Mix, lede: 'Choose the combination that fits your specific situation', depth: null,
-    items: ['Any combination of the above assessments', 'Configurable by cohort or programme', 'Speak with us to design the right scope'],
-    best: 'Organisations with a specific context or existing frameworks to work within.',
+    items: ['Any combination of the above assessments', 'Настраивается под группу или программу', 'Обсудим с вами подходящий объём'],
+    best: 'Тем, у кого особый контекст или уже есть своя модель, с которой нужно работать.',
   },
 ]
 
@@ -52,7 +52,7 @@ export default function Packages() {
                 </span>
                 <span className="pk-tog"><Plus /></span>
               </button>
-              <div className="pk-depth" aria-label={p.depth ? `Covers: ${LEVELS.filter((_, k) => p.depth[k]).join(', ')}` : 'Your own mix'}>
+              <div className="pk-depth" aria-label={p.depth ? `Covers: ${LEVELS.filter((_, k) => p.depth[k]).join(', ')}` : 'Своя комбинация'}>
                 {p.depth
                   ? LEVELS.map((l, k) => <span key={l} className={p.depth[k] ? 'y' : ''}>{l}</span>)
                   : <span className="mix">Your own mix of levels</span>}
@@ -67,7 +67,7 @@ export default function Packages() {
         })}
       </div>
 
-      <p className="pk-foot">The team game, training and re-assessment are planned with you on top of any package. Pricing is tailored to your organisation’s size and programme scope. <a href="#contact">Speak with us</a> — no obligation.</p>
+      <p className="pk-foot">The team game, training and re-assessment are planned with you on top of any package. Pricing is tailored to your organisation’s size and programme scope. <a href="#contact">Написать нам</a> — no obligation.</p>
     </section>
   )
 }

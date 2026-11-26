@@ -1,6 +1,6 @@
 // Behavency video (25 Nov, not the final cut): a simple player that opens over the page.
-// Desktop: the existing "See video" button in Engage. Phone: an outlined "Watch the video" button under
-// "An experience stays." (option 2 chosen 24 Nov). Esc, the close button, a click outside or the phone's Back close it.
+// Desktop: the existing "See video" button in Engage. Phone: an outlined "Смотреть видео" button under
+// "Опыт остаётся." (option 2 chosen 24 Nov). Esc, the close button, a click outside or the phone's Back close it.
 // To swap the video later: replace behavency-video.mp4 (and poster) with the final files, same names.
 (function () {
   const SRC = 'behavency-video.mp4', POSTER = 'behavency-video-poster.jpg';
@@ -14,7 +14,7 @@
   .vm-x svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; }
   .vm-wrap { position: relative; width: min(1100px, 100%); }
   @media (max-width: 760px) { .vm-ov { padding: 16px; } .vm-box { border-radius: 12px; } }
-  /* phone: outlined button under "An experience stays." */
+  /* phone: outlined button under "Опыт остаётся." */
   .vm-btn { display: inline-flex; align-items: center; gap: 10px; margin: 18px 0 4px; padding: 12px 18px; border: 1.5px solid #1f2f5c; border-radius: 12px; background: #fff; color: #1f2f5c; font: 600 15px/1 Inter, Arial, sans-serif; cursor: pointer; }
   .vm-btn i { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: #1f2f5c; color: #fff; font-style: normal; font-size: 10px; padding-left: 2px; box-sizing: border-box; }`;
   let ov = null, step = false;
@@ -49,14 +49,14 @@
     e.preventDefault(); e.stopPropagation(); open();
   }, true);
 
-  // phone: add the button under "An experience stays."
+  // phone: add the button under "Опыт остаётся."
   if (window.BHV_SITE === 'mob') {
     const add = () => {
       if (document.querySelector('.vm-btn')) return true;
-      const p = [...document.querySelectorAll('#engage p, section p')].find((x) => /An experience stays\./.test(x.textContent));
+      const p = [...document.querySelectorAll('#engage p, section p')].find((x) => /Опыт остаётся\./.test(x.textContent));
       if (!p) return false;
       const b = document.createElement('button'); b.type = 'button'; b.className = 'vm-btn'; b.setAttribute('data-video-open', '');
-      b.innerHTML = '<i aria-hidden="true">&#9654;</i>Watch the video';
+      b.innerHTML = '<i aria-hidden="true">&#9654;</i>Смотреть видео';
       if (!document.getElementById('video-modal')) build();
       p.after(b); return true;
     };

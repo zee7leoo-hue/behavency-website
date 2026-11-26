@@ -6,8 +6,8 @@ import logoHead from '../assets/logo-full-white.png'
 /* Footer (mobile): logo and line, two short link groups, copyright. */
 
 const GROUPS = [
-  { t: 'Platform', links: [['What’s Different', '#different'], ['Packages', '#packages'], ['Who It’s For', '#who-its-for'], ['Behavioural Model', '#behavioural-model']] },
-  { t: 'Company', links: [['behavency.me', 'https://behavency.me'], ['Request a Demo', '#contact'], ['Privacy Policy', '#']] },
+  { t: 'Platform', links: [['What’s Different', '#different'], ['Пакеты', '#packages'], ['Для кого', '#who-its-for'], ['Behavioural Model', '#behavioural-model']] },
+  { t: 'Компания', links: [['behavency.me', 'https://behavency.me'], ['Request a Demo', '#contact'], ['Политика конфиденциальности', '#']] },
 ]
 
 export default function Footer() {
@@ -19,7 +19,7 @@ export default function Footer() {
         <img className="ft-mark" src={logoHead} alt="" aria-hidden="true" />
         <span className="ft-word">Behavency</span>
       </a>
-      <p className="ft-line">Assess. Engage. Build. Measure.<br />The end-to-end manager development journey.</p>
+      <p className="ft-line">Assess. Engage. Build. Measure.<br />Путь развития руководителей — от начала до конца.</p>
 
       <nav className="ft-groups" aria-label="Footer">
         {GROUPS.map((g) => (

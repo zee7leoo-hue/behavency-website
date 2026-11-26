@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react'
 import './HoldsBack.css'
 
-/* "What holds managers back" (mobile), in two versions of the same section:
-     variant="split"  — version 1: the flow splits into two columns side by side ("In their hands" | "What holds them back")
+/* "Что мешает руководителям" (mobile), in two versions of the same section:
+     variant="split"  — version 1: the flow splits into two columns side by side ("In their hands" | "Что им мешает")
      variant="focus"  — version 2: one focused column, only what holds managers back, with bars; "In their hands" is a note
    The flow builds row by row as it scrolls into view (nothing moves for people who turn off motion). */
 
@@ -19,8 +19,8 @@ const I = {
   file: <svg viewBox="0 0 24 24" {...sv}><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /><path d="M14 2v4a2 2 0 0 0 2 2h4M8 13h8M8 17h5" /></svg>,
 }
 
-const HANDS = [['target', 'Setting priorities'], ['check', 'Following through'], ['chat', 'A team that speaks up']]
-const BACK = [['layers', 'Too many priorities', 28], ['hourglass', 'Slow approvals', 22], ['lock', 'Decisions made without them', 17]]
+const HANDS = [['target', 'Расстановка приоритетов'], ['check', 'Following through'], ['chat', 'Открытость в команде']]
+const BACK = [['layers', 'Слишком много приоритетов', 28], ['hourglass', 'Долгие согласования', 22], ['lock', 'Решения принимают без них', 17]]
 const OF = 42
 
 export default function HoldsBack({ variant = 'split' }) {
@@ -63,15 +63,15 @@ export default function HoldsBack({ variant = 'split' }) {
   }, [focus])
 
   return (
-    <section className={`hb hb--${variant}`} id={focus ? 'holds-back-2' : 'holds-back'} aria-label="What holds managers back">
-      <p className="hb-eyebrow">What holds managers back</p>
-      <h2 className="hb-title">Your managers know what slows them down. <em>Now you will too.</em></h2>
-      <p className="hb-sub">Not everything is in a manager’s hands. Managers tell us what gets in the way of doing their job well. Seen across all of them, it gives you a picture your organisation doesn’t have today.</p>
+    <section className={`hb hb--${variant}`} id={focus ? 'holds-back-2' : 'holds-back'} aria-label="Что мешает руководителям">
+      <p className="hb-eyebrow">Что мешает руководителям</p>
+      <h2 className="hb-title">Ваши руководители знают, что их тормозит. <em>Теперь узнаете и вы.</em></h2>
+      <p className="hb-sub">Не всё в руках руководителя. Руководители сами рассказывают нам, что мешает им хорошо работать. Сложите все ответы — и увидите картину, которой у вашей организации сегодня нет.</p>
 
       <div className="hb-flow" ref={flow}>
         <div className="hb-start">
           <span className="hb-hex">{I.list}</span>
-          <span className="hb-start-t"><b>Your managers answer</b><small>about their team and the organisation</small></span>
+          <span className="hb-start-t"><b>Ваши руководители отвечают</b><small>о своей команде и организации</small></span>
           <span className="hb-faces">
             <span className="hb-face f1">AK</span><span className="hb-face f2">MP</span><span className="hb-face f3">LS</span><span className="hb-face f4">DT</span><span className="hb-face more">+38</span>
           </span>
@@ -93,20 +93,20 @@ export default function HoldsBack({ variant = 'split' }) {
           )}
           <div className="hb-branch">
             <div className="hb-chain">
-              <span className="hb-flag hb-flag--amber">{focus ? 'What holds them back ' : 'What holds them back'}{focus && <em>· example</em>}</span>
+              <span className="hb-flag hb-flag--amber">{focus ? 'Что им мешает ' : 'Что им мешает'}{focus && <em>· пример</em>}</span>
               {BACK.map(([ic, t, n]) => (
                 <div key={t} className="hb-item">
                   <span className="hb-ico hb-ico--amber">{I[ic]}</span>{t}
-                  <span className="hb-count">{n} of {OF}</span>
+                  <span className="hb-count">{n} из {OF}</span>
                   {focus && <span className="hb-bar" style={{ '--p': `${((n / OF) * 100).toFixed(1)}%` }} aria-hidden="true"><i /></span>}
                 </div>
               ))}
-              <div className="hb-result"><div className="hb-card"><span className="hb-ico hb-ico--amber">{I.file}</span><span>A barriers report for leadership<small>which obstacles hold back the most managers</small></span></div></div>
+              <div className="hb-result"><div className="hb-card"><span className="hb-ico hb-ico--amber">{I.file}</span><span>Отчёт о барьерах для руководства<small>какие препятствия встречаются у руководителей чаще всего</small></span></div></div>
             </div>
           </div>
         </div>
       </div>
-      {focus && <p className="hb-note"><span className="hb-ico hb-ico--blue">{I.sprout}</span><span>{'Skill gaps go to training. Organisational barriers go to leadership. So you don’t spend training budget on problems training can’t fix.'}</span></p>}
+      {focus && <p className="hb-note"><span className="hb-ico hb-ico--blue">{I.sprout}</span><span>{'Пробелы в навыках закрывает обучение. Организационные барьеры — задача руководства. И бюджет на обучение не уходит на то, что обучением не исправить.'}</span></p>}
     </section>
   )
 }

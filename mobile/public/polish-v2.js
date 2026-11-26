@@ -1,11 +1,11 @@
 // Polish layer for the v2 phone site:
-// 1) hide the duplicate (half-broken) "What holds managers back" variant
+// 1) hide the duplicate (half-broken) "Что мешает руководителям" variant
 // 2) one shared style for the small labels above section titles
-// 5) one dark colour (navy) for "How it runs", contact and footer
+// 5) one dark colour (navy) for "Как это проходит", contact and footer
 // Remove this file and its <script> tag to undo all three.
 (function () {
   const CSS = `
-  /* 1: keep only the complete "What holds managers back" section */
+  /* 1: keep only the complete "Что мешает руководителям" section */
   section.hb--split { display: none !important; }
 
   /* 2: unified section label */
@@ -56,7 +56,7 @@
   :root .nav-burger span:nth-child(2) { top: 22px !important; }
   :root .nav-burger span:nth-child(3) { top: 27px !important; }
   :root .hr-tabs button { min-height: 41px; }
-  /* R20: Measure "3 months" in the Measure green; R25: "What holds them back · example" spacing */
+  /* R20: Measure "3 months" in the Measure green; R25: "Что им мешает · пример" spacing */
   :root .ms-step b { background: none !important; color: #14a07c !important; -webkit-text-fill-color: #14a07c !important; }
   :root .hb-flag em { margin-left: 0 !important; }
 
@@ -66,7 +66,7 @@
   :root .bh-clients { padding-bottom: 52px !important; }
 
 
-  /* same list style for "Explore the five sources" and the six areas */
+  /* same list style for "Изучите пять источников" and the six areas */
   :root .id-name, :root .nbm-ar-name { font: 600 16px/1.2 Inter, Arial, sans-serif !important; letter-spacing: -.014em !important; }
   /* dashboard: a gap shows as a short red bar */
   .pf-track i.pf-gap { background: linear-gradient(90deg, #f0566e, #e8294a) !important; }
@@ -184,15 +184,15 @@
   // the right side of every row is its key number
   function dash() {
     const kp = [...document.querySelectorAll('#platform .pf-kpi span')].find((x) => x.textContent.trim() === 'Journeys');
-    if (kp) { kp.textContent = 'In training'; kp.classList.add('pf-kpi-dev'); }
-    const lh = document.querySelector('#platform .pf-list-head h4'); if (lh) lh.textContent = 'What needs attention';
-    const sm = document.querySelector('#platform .pf-kpi .pf-small'); if (sm) sm.textContent = 'Improved';
+    if (kp) { kp.textContent = 'На обучении'; kp.classList.add('pf-kpi-dev'); }
+    const lh = document.querySelector('#platform .pf-list-head h4'); if (lh) lh.textContent = 'Что требует внимания';
+    const sm = document.querySelector('#platform .pf-kpi .pf-small'); if (sm) sm.textContent = 'Есть рост';
     const lk = document.querySelector('#platform .pf-list-head a'); if (lk) { lk.removeAttribute('href'); lk.setAttribute('aria-disabled', 'true'); lk.tabIndex = -1; }
     const rows = [...document.querySelectorAll('#platform .pf-rows .pf-row')]; if (rows.length < 3 || rows[0].dataset.v2) return;
     const D = [
-      { ini: 'SL', name: 'Sofia L.', sub: 'Gap: Focus & Prioritisation', chip: '35%', cls: 'pf-chip--red', type: 'gap', w: 35 },
-      { ini: '', name: 'Slow approvals', sub: 'Barrier', chip: '22 of 35', cls: 'pf-chip--amber', type: 'barrier' },
-      { ini: 'HN', name: 'Hanna N.', sub: 'Clarity & Alignment: 41% → 72%', chip: '↑ +0 pts', cls: 'pf-chip--green pf-delta', type: 'up', delta: 31 },
+      { ini: 'SL', name: 'Sofia L.', sub: 'Пробел: Фокус и приоритеты', chip: '35%', cls: 'pf-chip--red', type: 'gap', w: 35 },
+      { ini: '', name: 'Долгие согласования', sub: 'Барьер', chip: '22 из 35', cls: 'pf-chip--amber', type: 'barrier' },
+      { ini: 'HN', name: 'Hanna N.', sub: 'Ясность и согласованность: 41% → 72%', chip: '↑ +0 п. п.', cls: 'pf-chip--green pf-delta', type: 'up', delta: 31 },
     ];   rows.slice(0, 3).forEach((r, i) => {
       const d = D[i]; r.dataset.v2 = '1';
       const ini = r.querySelector('.pf-ini'); if (ini) ini.textContent = d.ini;
@@ -205,8 +205,8 @@
       if (d.type === 'up') {
         if (tr) tr.remove(); r.classList.remove('pf-row--bar');
         const sub = who && who.querySelector('span');
-        if (sub) sub.innerHTML = 'Clarity &amp; Alignment: 41% <span class="hn-arr">→</span> <b class="hn-to">41%</b>';
-        chip.innerHTML = '<span class="hn-up">↑</span> +0 pts';
+        if (sub) sub.innerHTML = 'Ясность и согласованность: 41% <span class="hn-arr">→</span> <b class="hn-to">41%</b>';
+        chip.innerHTML = '<span class="hn-up">↑</span> +0 п. п.';
         const io = new IntersectionObserver((es) => { if (!es[0].isIntersecting) return; io.disconnect();
           setTimeout(() => {
             r.classList.add('hn-run');                       // arrow slides in, new score turns green
@@ -214,7 +214,7 @@
             setTimeout(() => { const t0 = performance.now(), dur = 1100;
               const step = (now) => { const k = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - k, 3);
                 const v = Math.round(d.delta * e);
-                chip.innerHTML = '<span class="hn-up">↑</span> +' + v + ' pts';
+                chip.innerHTML = '<span class="hn-up">↑</span> +' + v + ' п. п.';
                 if (to) to.textContent = (41 + v) + '%';
                 if (k < 1) requestAnimationFrame(step); else chip.classList.add('pf-pop'); };
               requestAnimationFrame(step); }, 350);

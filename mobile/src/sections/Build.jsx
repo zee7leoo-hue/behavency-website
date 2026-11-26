@@ -43,14 +43,14 @@ export default function Build() {
   return (
     <section ref={ref} className={`bd ${seen ? 'is-in' : ''}`} id="build">
       <div className="bd-in">
-        <h2 className="bd-title rv" style={{ '--i': 0 }}>Turn insights into <em>targeted development</em></h2>
-        <div className="bd-eyebrow rv" style={{ '--i': 1 }}><em>03</em><i aria-hidden="true" /><b>Build</b><u aria-hidden="true" /><span>Develop the right capabilities</span></div>
-        <p className="bd-text rv" style={{ '--i': 2 }}>We match each manager’s priorities to programmes from our library, and every programme comes with a Masterplan to apply it at work.</p>
+        <h2 className="bd-title rv" style={{ '--i': 0 }}>От выводов — <em>к точечному развитию</em></h2>
+        <div className="bd-eyebrow rv" style={{ '--i': 1 }}><em>03</em><i aria-hidden="true" /><b>Build</b><u aria-hidden="true" /><span>Развить нужные навыки</span></div>
+        <p className="bd-text rv" style={{ '--i': 2 }}>Мы подбираем программы из нашей библиотеки под приоритеты каждого руководителя. К каждой программе есть мастер-план, чтобы применить её в работе.</p>
       </div>
 
       <div className="bd-show rv" style={{ '--i': 3 }}>
         <div className="bd-clip">
-          {seen && <iframe ref={frame} onLoad={fit} className="bd-frame" title="How a priority becomes a programme and a Masterplan" srcDoc={showcaseHtml} scrolling="no" tabIndex={-1} />}
+          {seen && <iframe ref={frame} onLoad={fit} className="bd-frame" title="Как приоритет становится программой и мастер-планом" srcDoc={showcaseHtml} scrolling="no" tabIndex={-1} />}
         </div>
       </div>
     </section>

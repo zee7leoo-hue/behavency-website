@@ -49,7 +49,7 @@ function Title({ x, y, children, size = 30, anchor = 'start' }) {
 export function JourneyCards() {
   return (
     <img className="hero__ref-img" src={journeyCardsImg} width="950" height="427"
-      alt="Identify: reveal strengths and gaps. Engage: build shared commitment. Develop: build the right capabilities. Measure: prove the impact." />
+      alt="Identify: найти сильные стороны и зоны роста. Engage: build shared commitment. Develop: build the right capabilities. Measure: prove the impact." />
   )
 }
 

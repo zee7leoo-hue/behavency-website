@@ -12,14 +12,14 @@ const roles = [
   },
   {
     title: 'Managers & Participants',
-    body: "This isn't another survey you'll never see the results of. The assessment feeds directly into your own report, your own development priorities, and your own programme. It's about you — not about ticking a box.",
-    detail: 'Line Managers, Mid Managers, Team Leads',
+    body: "Это не очередной опрос, результатов которого вы так и не увидите. Оценка сразу превращается в ваш личный отчёт, ваши приоритеты развития и вашу программу. Это про вас, а не для галочки.",
+    detail: 'Линейные руководители, руководители среднего звена, руководители групп',
     color: '#0F766E',
   },
   {
     title: 'Leadership & Boards',
-    body: 'You need to know whether your management layer is fit for where the organisation is going. And whether the money spent on development last year made any difference. Behavency gives you an organisational view that makes both questions answerable.',
-    detail: 'CEOs, CHROs, Executive Teams, Investors',
+    body: 'Вам нужно понять, готово ли управленческое звено к тому, куда движется компания. И дали ли что-нибудь деньги, вложенные в развитие в прошлом году. Behavency показывает картину по всей организации — и на оба вопроса появляется ответ.',
+    detail: 'Генеральные директора, HR-директора, топ-менеджмент, инвесторы',
     color: '#6D28D9',
   },
 ]
@@ -34,7 +34,7 @@ export default function ForWho() {
           initial={{ opacity: 0, y: 32 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
           <p className="caption" style={{ marginBottom: 16 }}>Who it's for</p>
           <h2 className="headline">
-            Three different people.<br/>
+            Три разных человека.<br/>
             <em>One connected system.</em>
           </h2>
         </motion.div>

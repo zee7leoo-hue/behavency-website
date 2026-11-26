@@ -71,15 +71,15 @@ export function GameCardC() {
     return () => { timers.forEach(clearTimeout); if (loop) clearInterval(loop) }
   }, [play])
   return (
-    <article ref={card} className={`xc-ecard xc-game${play ? ' xc-play' : ''}`} aria-label="01 – The Game">
+    <article ref={card} className={`xc-ecard xc-game${play ? ' xc-play' : ''}`} aria-label="01 — Игра">
 
         <div className="xc-txt">
-          <span className="xc-label xc-small"><i>01</i><span className="xc-ln"></span><b>The Game</b></span>
-          <h3>A game that makes participants <em>feel their own blind spots.</em></h3>
-          <p>Numbers on a report don’t always convince people. In the game, participants meet some of the same areas from their assessment, this time in action, in a real group situation.</p><ul className="xc-ticks"><li>Fully facilitated, learning by doing</li><li>Works for remote and in-person teams</li><li>Tailored to your team’s focus areas</li></ul>
+          <span className="xc-label xc-small"><i>01</i><span className="xc-ln"></span><b>Игра</b></span>
+          <h3>Игра, в которой участники <em>натыкаются на слепые зоны.</em></h3>
+          <p>Цифры в отчёте убеждают не всех. В игре участники снова встречают некоторые области из своей оценки — но уже в деле, в настоящей групповой ситуации.</p><ul className="xc-ticks"><li>Всё с фасилитатором, учимся на практике</li><li>Для удалённых и очных команд</li><li>Под приоритетные области вашей команды</li></ul>
         </div>
         <div className="xc-panel">
-          <span className="xc-tag" style={{ left: '22px', top: '22px' }}><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>45 min</span><span className="xc-tag" style={{ left: '22px', bottom: '22px' }}><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>12–100 people</span><span className="xc-tag" style={{ right: '22px', bottom: '22px' }}><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Online</span><svg className="tc-bg" aria-hidden="true" viewBox="0 0 886 620" preserveAspectRatio="none">
+          <span className="xc-tag" style={{ left: '22px', top: '22px' }}><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>45 мин</span><span className="xc-tag" style={{ left: '22px', bottom: '22px' }}><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>12–100 человек</span><span className="xc-tag" style={{ right: '22px', bottom: '22px' }}><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Онлайн</span><svg className="tc-bg" aria-hidden="true" viewBox="0 0 886 620" preserveAspectRatio="none">
               <path d="M470 0C650 70 720 250 886 300V0Z" fill="rgba(178,128,255,.30)"/>
               <path d="M600 0C720 120 760 220 886 240V0Z" fill="rgba(200,160,255,.18)"/>
               <path d="M886 330C760 400 640 540 520 620H886Z" fill="rgba(170,120,255,.26)"/>
@@ -98,8 +98,8 @@ export function GameCardC() {
               <div className="tc-ghost g2"></div><div className="tc-ghost g1"></div>
               <div className="tc-card">
                 <div className="tc-brand"><svg className="tc-logo" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#6a2be0"/><path d="M13.6 4.8 7.4 13.2h4.3l-1.3 6 6.2-8.4h-4.3z" fill="#fff"/></svg><span>Behavency</span></div>
-                <span className="tc-pill">Various tasks</span>
-                <div className="tc-title">Team Challenge</div>
+                <span className="tc-pill">Разные задания</span>
+                <div className="tc-title">Командное испытание</div>
                 <div className="tc-tiles" data-hl={hl}><span className="tc-hl"></span>
                   <span className="tc-t t1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" ><circle cx="12" cy="8.2" r="3.3"/><path d="M6.2 20.2a5.8 5.8 0 0 1 11.6 0z"/><circle cx="5.4" cy="9.8" r="2.4"/><path d="M1.6 18.6a4.2 4.2 0 0 1 4.9-4"/><circle cx="18.6" cy="9.8" r="2.4"/><path d="M22.4 18.6a4.2 4.2 0 0 0-4.9-4"/></svg></span><span className="tc-t t2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"><circle cx="11" cy="13" r="8.2"/><circle cx="11" cy="13" r="4.4"/><circle cx="11" cy="13" r="1" fill="currentColor"/><path d="M11 13 19 5M16.2 4.6l-.2 3.4 3.4-.2M19 5l2.2-2.2"/></svg><svg className="tc-chk" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12.5l4.2 4.2L19 7"/></svg></span><span className="tc-t t3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" ><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.1V16.5h5v-.6c0-.8.4-1.5 1.1-2.1A6 6 0 0 0 12 3z"/></svg></span>
                 </div>
@@ -130,15 +130,15 @@ export function ReflectCardC() {
     return () => clearInterval(t)
   }, [live])
   return (
-    <article ref={card} className={`xc-ecard xc-refl${play ? ' xc-play' : ''}`} aria-label="02 – The Reflection">
+    <article ref={card} className={`xc-ecard xc-refl${play ? ' xc-play' : ''}`} aria-label="02 — Разбор">
 
         <div className="xc-txt">
-          <span className="xc-label xc-small"><i>02</i><span className="xc-ln"></span><b>The Reflection</b></span>
-          <h3>The game is only <em>the beginning.</em></h3>
-          <p>In a facilitated conversation, the team looks back at what happened, and the facilitator helps turn those moments into insights they recognise in themselves and in how they work together.</p><ul className="xc-ticks"><li>Facilitator-led — yours or a Behavency expert</li><li>Structured, guided reflection</li><li>Linked to your results</li></ul>
+          <span className="xc-label xc-small"><i>02</i><span className="xc-ln"></span><b>Разбор</b></span>
+          <h3>Игра — это только <em>начало.</em></h3>
+          <p>Команда вместе с фасилитатором вспоминает, что произошло. Он помогает превратить эти моменты в выводы, в которых люди узнают себя и свою совместную работу.</p><ul className="xc-ticks"><li>Ведёт фасилитатор — ваш или эксперт Behavency</li><li>Структурированный разбор с фасилитатором</li><li>Опирается на ваши результаты</li></ul>
         </div>
         <div className="xc-panel">
-          <span className="xc-tag" style={{ left: '22px', top: '22px' }}><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>~90 min</span><div className={`vcall${live ? ' xc-live' : ''}`} ref={call} aria-hidden="true">
+          <span className="xc-tag" style={{ left: '22px', top: '22px' }}><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>~90 мин</span><div className={`vcall${live ? ' xc-live' : ''}`} ref={call} aria-hidden="true">
             
             <div className="vwin">
               <div className="vgrid">
@@ -147,11 +147,11 @@ export function ReflectCardC() {
                 <span className={`vt${speak === 2 ? ' xc-speaking' : ''}`}><img alt="" src={IMG[8]} style={{ objectPosition: '50% 40%' }} /><i className="xc-wave"><i></i><i></i><i></i><i></i><i></i></i></span>
                 <span className={`vt${speak === 3 ? ' xc-speaking' : ''}`}><img alt="" src={IMG[9]} style={{ objectPosition: '50% 40%' }} /><i className="xc-wave"><i></i><i></i><i></i><i></i><i></i></i></span>
               </div>
-              <span className={`vt xc-fac${speak === 4 ? ' xc-speaking' : ''}`}><img alt="" src={IMG[10]} style={{ objectPosition: '50% 25%' }} /><b className="xc-pill"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="7.5" r="4.5"/><path d="M3.5 21a8.5 8.5 0 0 1 17 0z"/></svg>Facilitator</b><i className="xc-wave"><i></i><i></i><i></i><i></i><i></i></i></span>
+              <span className={`vt xc-fac${speak === 4 ? ' xc-speaking' : ''}`}><img alt="" src={IMG[10]} style={{ objectPosition: '50% 25%' }} /><b className="xc-pill"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="7.5" r="4.5"/><path d="M3.5 21a8.5 8.5 0 0 1 17 0z"/></svg>Фасилитатор</b><i className="xc-wave"><i></i><i></i><i></i><i></i><i></i></i></span>
               <div className="vctrl"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="7" width="12" height="10" rx="2"/><path d="m15 11 6-3v8l-6-3"/></svg></span><span className="xc-end"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 9c-3.4 0-6.6.9-9 2.6-.6.4-.8 1.2-.5 1.9l1 2c.3.6 1 .9 1.7.7l3-1c.6-.2 1-.8 1-1.4v-1.6c1.8-.5 3.8-.5 5.6 0v1.6c0 .6.4 1.2 1 1.4l3 1c.7.2 1.4-.1 1.7-.7l1-2c.3-.7.1-1.5-.5-1.9C18.6 9.9 15.4 9 12 9z"/></svg></span><span className="xc-ppl"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14a6.5 6.5 0 0 1 3.5 6"/></svg></span></div>
             </div>
-            <div className="gcard xc-ins"><b>Team insights</b><div className="ibars"><i></i><i></i><i></i><i></i><i></i></div></div>
-            <div className="gcard xc-top"><b>Key topics</b><span className="xc-on"></span><span className="xc-on"></span><span></span></div>
+            <div className="gcard xc-ins"><b>Выводы для команды</b><div className="ibars"><i></i><i></i><i></i><i></i><i></i></div></div>
+            <div className="gcard xc-top"><b>Ключевые темы</b><span className="xc-on"></span><span className="xc-on"></span><span></span></div>
           </div>
         </div>
       
@@ -187,12 +187,12 @@ export function ReportCardC() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [play])
   return (
-    <article ref={card} className={`xc-ecard xc-rep${play ? ' xc-play' : ''}`} aria-label="03 – Insight Report">
+    <article ref={card} className={`xc-ecard xc-rep${play ? ' xc-play' : ''}`} aria-label="03 — Аналитический отчёт">
 
         <div className="xc-txt">
-          <span className="xc-label xc-small"><i>03</i><span className="xc-ln"></span><b>Insight Report</b></span>
-          <h3>Turn the experience into <em>actionable insight.</em></h3>
-          <p>After the game, the team receives a concise report showing how they played, along with practical tips for strengthening the behaviours explored in the game, in their everyday work.</p><ul className="xc-ticks"><li>Results for each behaviour explored</li><li>Practical tips for everyday work</li><li>Easy to talk through as a team</li></ul>
+          <span className="xc-label xc-small"><i>03</i><span className="xc-ln"></span><b>Аналитический отчёт</b></span>
+          <h3>От опыта — <em>к практическим выводам.</em></h3>
+          <p>После игры команда получает короткий отчёт о том, как она сыграла, и практические советы: как закрепить в повседневной работе поведение, которое проявилось в игре.</p><ul className="xc-ticks"><li>Результаты по каждому поведению из игры</li><li>Практические советы на каждый день</li><li>Удобно обсудить всей командой</li></ul>
         </div>
         <div className="xc-panel trp" aria-hidden="true">
           
@@ -208,18 +208,18 @@ export function ReportCardC() {
                 <div className="tr-left">
                   <span className="tr-blob b1"></span><span className="tr-blob b2"></span><span className="tr-blob b3"></span>
                   <span className="tr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round"><path d="M6 18v-3M11.5 18v-6.5M17 18V7"/></svg></span>
-                  <strong>Team<br />Insight Report</strong><small>Team Alpha · 12 participants</small>
+                  <strong>Аналитический отчёт<br />команды</strong><small>Team Alpha · 12 участников</small>
                 </div>
                 <div className="tr-right">
-                  <span className="tr-dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Download PDF</span>
-                  <div className="tr-row metric"><span>Focus &amp; Prioritisation</span><i style={{ '--v': '64%', '--col': 'linear-gradient(90deg,#f4a21c,#f8c544)' }}></i><em>{vals[0]}%</em></div>
-                  <div className="tr-row metric"><span>Trust &amp; Inclusion</span><i style={{ '--v': '78%', '--col': 'linear-gradient(90deg,#1ea14a,#38c46c)' }}></i><em>{vals[1]}%</em></div>
-                  <div className="tr-row metric"><span>Collaboration &amp; Influence</span><i style={{ '--v': '41%', '--col': 'linear-gradient(90deg,#e8554f,#f2706b)' }}></i><em>{vals[2]}%</em></div>
+                  <span className="tr-dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Скачать PDF</span>
+                  <div className="tr-row metric"><span>Фокус и приоритеты</span><i style={{ '--v': '64%', '--col': 'linear-gradient(90deg,#f4a21c,#f8c544)' }}></i><em>{vals[0]}%</em></div>
+                  <div className="tr-row metric"><span>Доверие и инклюзивность</span><i style={{ '--v': '78%', '--col': 'linear-gradient(90deg,#1ea14a,#38c46c)' }}></i><em>{vals[1]}%</em></div>
+                  <div className="tr-row metric"><span>Сотрудничество и влияние</span><i style={{ '--v': '41%', '--col': 'linear-gradient(90deg,#e8554f,#f2706b)' }}></i><em>{vals[2]}%</em></div>
                 </div>
                 <div className="tr-take">
                   <svg className="tr-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.1V16.5h5v-.6c0-.8.4-1.5 1.1-2.1A6 6 0 0 0 12 3z"/></svg>
-                  <i></i><b>Practice tip</b><i></i>
-                  <p>Before you start, agree who does what and how you’ll keep each other updated.</p>
+                  <i></i><b>Совет для практики</b><i></i>
+                  <p>Перед стартом договоритесь, кто что делает и как вы будете держать друг друга в курсе.</p>
                 </div>
               </div>
             </div></div>

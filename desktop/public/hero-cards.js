@@ -2,10 +2,10 @@
 // Replaces the old single picture + its text layer inside .hc-cards.
 (function () {
   const CARDS = [
-    ['identify', 'Identify', 'Reveal strengths<br>and gaps.', '#018ffd'],
-    ['engage', 'Engage', 'Create shared<br>commitment.', '#9c23fe'],
-    ['build', 'Build', 'Develop the right<br>capabilities.', '#fe8a03'],
-    ['measure', 'Measure', 'Show what<br>changed.', '#02ca2a'],
+    ['identify', 'Identify', 'Найти сильные стороны<br>и зоны роста.', '#018ffd'],
+    ['engage', 'Engage', 'Сделать развитие<br>общим делом.', '#9c23fe'],
+    ['build', 'Build', 'Развить нужные<br>навыки.', '#fe8a03'],
+    ['measure', 'Measure', 'Показать, что<br>изменилось.', '#02ca2a'],
   ];
   const CSS = `
   .hc-cards .hc-cards-art, .hc-cards .hc-cards-ui, .hc-cards .hc-ct { display: none !important; }

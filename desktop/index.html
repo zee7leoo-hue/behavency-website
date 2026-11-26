@@ -1,19 +1,21 @@
 <!doctype html>
-<html lang="en-GB">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <!-- Base page style the approved design was made with (body text 14px, images never wider than their box). -->
     <style id="base">:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- page title, Google description and the preview shown when the site is shared (from the 26 Nov upload folder) -->
-    <title>Behavency — Manager assessment and development</title>
+    <title>Behavency — оценка и развитие руководителей</title>
+    <!-- ru branch (Russian test site): keep it out of search engines; take this line out when Russian goes to the main site -->
+    <meta name="robots" content="noindex, nofollow">
     <meta name="description" content="Manager assessment and development: 360° feedback, a team game and tailored training for managers and teams, then re-assessment to show what changed.">
     <link rel="canonical" href="https://www.behavency.com/">
     <link rel="icon" type="image/png" href="/logo-behavency.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.behavency.com/">
     <meta property="og:site_name" content="Behavency">
-    <meta property="og:title" content="Behavency — Manager assessment and development">
+    <meta property="og:title" content="Behavency — оценка и развитие руководителей">
     <meta property="og:description" content="Manager assessment and development: 360° feedback, a team game and tailored training for managers and teams, then re-assessment to show what changed.">
     <meta property="og:image" content="https://www.behavency.com/social-preview.jpg">
     <meta property="og:image:width" content="1200">
@@ -114,11 +116,14 @@
     <script src="/howitruns-desktop.js"></script>
     <script src="/hero-cards.js"></script>
     <script src="/packages-v2.js"></script>
+    <script src="/ru-headings.js"></script>
     <script src="/video-modal.js"></script>
     <script src="/studio-try.js"></script>
     <!-- 27 Nov: the few heading rules heading style C does not cover ("What's at stake" title and cards) -->
     <link rel="stylesheet" href="/font-standard.css" />
     <!-- 26 Nov upload folder: heading style C, the last stylesheet on the page -->
     <link rel="stylesheet" id="type-c-css" href="/type-c.css" />
+      <!-- Russian-only layout fixes, after heading style C (as in the Russian link) -->
+    <link rel="stylesheet" href="/ru-fixes.css" />
   </body>
 </html>
