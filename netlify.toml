@@ -34,3 +34,17 @@
   from = "/m/login"
   to = "https://app.behavency.com/login"
   status = 302
+
+# behavency.me (a domain alias of this site) goes to the same page on www.behavency.com, permanently (27 Nov).
+# The pages the edge function handles (home, /about, ...) are sent on by device.js itself, because it runs first.
+[[redirects]]
+  from = "https://behavency.me/*"
+  to = "https://www.behavency.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.behavency.me/*"
+  to = "https://www.behavency.com/:splat"
+  status = 301
+  force = true

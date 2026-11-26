@@ -5,6 +5,8 @@ export default async (request, context) => {
   if (request.method !== 'GET' && request.method !== 'HEAD') return context.next() // form posts pass straight through
 
   const url = new URL(request.url)
+  // behavency.me (domain alias) goes to the same page on www.behavency.com, permanently; netlify.toml does the other pages
+  if (/(^|\.)behavency\.me$/i.test(url.hostname)) return Response.redirect(`https://www.behavency.com${url.pathname}${url.search}`, 301)
   const asked = url.searchParams.get('view')
   let choice = asked || context.cookies.get('bhv_view') || 'auto'
   if (asked === 'mobile' || asked === 'desktop') {
