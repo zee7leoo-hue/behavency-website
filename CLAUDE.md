@@ -53,7 +53,7 @@ these rules to it; say so in the summary if the link uses fonts these rules don'
 ## Russian test site: branch `ru` (from 27 Nov)
 
 - **`ru`**: the Russian desktop + mobile site, for testing only. Netlify builds it as a branch deploy at
-  `https://ru--behavency-website.netlify.app` (branch deploys for `ru` are switched on in Netlify). It never touches
+  `https://ru--behavency-website.netlify.app` (branch deploys for `ru` were switched on in Netlify on 27 Nov: Project configuration → Developer settings → Branches and deploy contexts). It never touches
   behavency.com. "Deploy" still means `main` (English); Russian work is committed and pushed to `ru` only
   (`git push origin ru`), never merged into `dev` or `main` until the user asks to bring Russian to the main site
   (then it gets a language switcher).
