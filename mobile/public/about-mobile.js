@@ -104,7 +104,7 @@
   const open = () => {
     if (window.bhvCloseRecruit) window.bhvCloseRecruit();
     pab.classList.add('open'); document.documentElement.classList.add('pab-lock'); pab.scrollTop = 0;
-    if (location.hash !== '#about') history.pushState({ about: 1 }, '', '#about');
+    if ((window.bhvH ? bhvH() : location.hash) !== '#about') history.pushState({ about: 1 }, '', '#about');
   };
   const close = () => { pab.classList.remove('open'); document.documentElement.classList.remove('pab-lock'); };
   window.bhvCloseAbout = () => { if (pab && pab.classList.contains('open')) close(); };
@@ -113,11 +113,11 @@
     if (!pab) {
       const st = document.createElement('style'); st.id = 'about-mobile'; st.textContent = CSS; document.head.appendChild(st);
       const t = document.createElement('div'); t.innerHTML = HTML; pab = t.firstElementChild; document.body.appendChild(pab);
-      pab.addEventListener('click', (e) => { if (e.target.closest('[data-close]')) { if (location.hash === '#about') history.back(); else close(); } });
-      addEventListener('popstate', () => { if (location.hash !== '#about') close(); else open(); });
+      pab.addEventListener('click', (e) => { if (e.target.closest('[data-close]')) { if ((window.bhvH ? bhvH() : location.hash) === '#about') history.back(); else close(); } });
+      addEventListener('popstate', () => { if ((window.bhvH ? bhvH() : location.hash) !== '#about') close(); else open(); });
       const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('shown'); io.unobserve(e.target); } }), { root: pab, rootMargin: '0px 0px -6% 0px' });
       pab.querySelectorAll('.pab-rise').forEach((el, i) => { el.style.transitionDelay = (i < 3 ? i * 90 : 0) + 'ms'; io.observe(el); });
-      if (location.hash === '#about') open();
+      if ((window.bhvH ? bhvH() : location.hash) === '#about') open();
     }
     // menu: the same items as the desktop (The journey with its four stages, Programmes, Recruitment, Packages, About, Log in).
     // The site's own old links are hidden. React may redraw the menu, so this re-checks.

@@ -8,7 +8,7 @@
     if (!el) return;
     if (window.bhvCloseAbout) window.bhvCloseAbout();
     el.classList.add('open'); el.scrollTop = 0; document.documentElement.classList.add('rcp-lock');
-    if (location.hash.indexOf('recruitment') < 0) history.pushState({ rcp: 1 }, '', location.pathname + location.search + '#recruitment');
+    if ((window.bhvH ? bhvH() : location.hash).indexOf('recruitment') < 0) history.pushState({ rcp: 1 }, '', location.pathname + location.search + '#recruitment');
     if (window.bhvMarkNav) window.bhvMarkNav();
   };
   const close = () => {
@@ -18,12 +18,12 @@
   };
   window.bhvOpenRecruit = open; window.bhvCloseRecruit = close;
   window.bhvRecruitOpen = () => !!(el && el.classList.contains('open'));
-  addEventListener('popstate', () => { if (!/recruitment/.test(location.hash)) close(); });
+  addEventListener('popstate', () => { if (!/recruitment/.test((window.bhvH ? bhvH() : location.hash))) close(); });
   const mount = () => {
     if (!document.body) return setTimeout(mount, 100);
     const st = document.createElement('style'); st.id = 'recruitment-page'; st.textContent = CSS; document.head.appendChild(st);
     const t = document.createElement('div'); t.innerHTML = HTML; el = t.firstElementChild; document.body.appendChild(el);
-    if (/recruitment/.test(location.hash)) setTimeout(open, 600);
+    if (/recruitment/.test((window.bhvH ? bhvH() : location.hash))) setTimeout(open, 600);
   };
   mount();
 })();

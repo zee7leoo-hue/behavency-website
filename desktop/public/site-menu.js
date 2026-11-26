@@ -291,11 +291,11 @@
   function openAbout() {
     if (window.bhvCloseRecruit) window.bhvCloseRecruit();
     abp.classList.add('open'); document.documentElement.classList.add('abp-lock'); abp.scrollTop = 0;
-    if (location.hash.indexOf('about') < 0) history.pushState({ about: 1 }, '', location.pathname + location.search + '#about' + (location.hash.match(/v=\w+/) ? '&' + location.hash.match(/v=\w+/)[0] : ''));
+    if ((window.bhvH ? bhvH() : location.hash).indexOf('about') < 0) history.pushState({ about: 1 }, '', location.pathname + location.search + '#about' + ((window.bhvH ? bhvH() : location.hash).match(/v=\w+/) ? '&' + (window.bhvH ? bhvH() : location.hash).match(/v=\w+/)[0] : ''));
     mark();
   }
   function closeAbout() { if (!abp || !abp.classList.contains('open')) return; abp.classList.remove('open'); document.documentElement.classList.remove('abp-lock'); mark(); }
-  addEventListener('popstate', () => { if (!/about/.test(location.hash)) closeAbout(); });
+  addEventListener('popstate', () => { if (!/about/.test((window.bhvH ? bhvH() : location.hash))) closeAbout(); });
   window.bhvCloseAbout = () => closeAbout(); window.bhvMarkNav = () => mark();
 
   function nineteen() {
@@ -356,7 +356,7 @@
   }
   setInterval(modelOrder, 400);
   if (window.BHV_MODELTRY) {
-    const m = location.hash.match(/mv=([a-d])/); const mv = m ? m[1] : 'a';
+    const m = (window.bhvH ? bhvH() : location.hash).match(/mv=([a-d])/); const mv = m ? m[1] : 'a';
     document.documentElement.classList.add('mv-' + mv);
     const names = { a: 'A · Wider box', b: 'B · Wider + bigger circles', c: 'C · Nearly full width', d: 'D · Wider, white box' };
     const bar = document.createElement('div'); bar.className = 'mv-bar';
@@ -429,7 +429,7 @@
     addEventListener('scroll', mark, { passive: true }); mark();
     nineteen(); setTimeout(nineteen, 2000);
     addStudio(); setTimeout(addStudio, 1500); setTimeout(addStudio, 4000);
-    if (/about/.test(location.hash)) openAbout();
+    if (/about/.test((window.bhvH ? bhvH() : location.hash))) openAbout();
     return true;
   }
   const t = setInterval(() => { if (document.querySelector('#contact') && build()) clearInterval(t); }, 400);

@@ -7,18 +7,18 @@
   const open = () => {
     if (!el) return;
     el.classList.add('open'); el.scrollTop = 0; document.documentElement.classList.add('prc-lock');
-    if (location.hash !== '#recruitment') history.pushState({ rcp: 1 }, '', '#recruitment');
+    if ((window.bhvH ? bhvH() : location.hash) !== '#recruitment') history.pushState({ rcp: 1 }, '', '#recruitment');
   };
   const close = () => { if (!el) return; el.classList.remove('open'); document.documentElement.classList.remove('prc-lock'); };
   window.bhvOpenRecruit = open; window.bhvCloseRecruit = close;
-  addEventListener('popstate', () => { if (location.hash !== '#recruitment') close(); else open(); });
+  addEventListener('popstate', () => { if ((window.bhvH ? bhvH() : location.hash) !== '#recruitment') close(); else open(); });
   const mount = () => {
     if (!document.body) return setTimeout(mount, 100);
     if (!document.querySelector('link[data-prc-font]')) { const l = document.createElement('link'); l.rel = 'stylesheet'; l.href = "/m/fonts/gf-0b1b4d9d.css"; l.setAttribute('data-prc-font', ''); document.head.appendChild(l); }
     const st = document.createElement('style'); st.id = 'recruitment-mobile'; st.textContent = CSS; document.head.appendChild(st);
     const t = document.createElement('div'); t.innerHTML = HTML; el = t.firstElementChild; document.body.appendChild(el);
-    el.addEventListener('click', (e) => { if (e.target.closest('[data-close]')) { if (location.hash === '#recruitment') history.back(); else close(); } });
-    if (location.hash === '#recruitment') setTimeout(open, 600);
+    el.addEventListener('click', (e) => { if (e.target.closest('[data-close]')) { if ((window.bhvH ? bhvH() : location.hash) === '#recruitment') history.back(); else close(); } });
+    if ((window.bhvH ? bhvH() : location.hash) === '#recruitment') setTimeout(open, 600);
   };
   mount();
 })();

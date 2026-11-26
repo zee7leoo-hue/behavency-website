@@ -4,9 +4,10 @@ This repo holds both Behavency websites, published together by Netlify on one ad
 
 - **`desktop/`**: the desktop site (Vite + React). Served at the root.
 - **`mobile/`**: the phone site (Vite + React, plus the design scripts in `mobile/public/`). Built into `/m/`.
-- **`netlify/edge-functions/device.js`**: on the home page, phones get the mobile site and everything else the
-  desktop site, on the same address. `?view=mobile` / `?view=desktop` / `?view=auto` override it for 30 days.
-- **`scripts/build-site.sh`** + **`netlify.toml`**: the build Netlify runs (desktop at `/`, mobile in `/m/`).
+- **`netlify/edge-functions/device.js`**: on the home page and on `/about`, `/recruitment`, `/privacy`, `/programmes`, phones get
+  the mobile site and everything else the desktop site, on the same address. `?view=mobile` / `?view=desktop` / `?view=auto` override it for 30 days.
+- **`scripts/build-site.sh`** + **`netlify.toml`**: the build Netlify runs (desktop at `/`, mobile in `/m/`); `netlify.toml` also
+  caches the font files and sends `/login` to `app.behavency.com/login`.
 
 It is edited from two places: a Windows PC and a phone.
 

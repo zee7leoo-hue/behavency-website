@@ -1,10 +1,22 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Behavency — Mobile</title>
-    <meta name="description" content="Behavency helps organizations assess manager and team effectiveness, identify real development needs, and prove that development worked." />
+    <!-- page title, Google description and the preview shown when the site is shared (from the 26 Nov upload folder) -->
+    <title>Behavency — Manager assessment and development</title>
+    <meta name="description" content="Manager assessment and development: 360° feedback, a team game and tailored training for managers and teams, then re-assessment to show what changed.">
+    <link rel="canonical" href="https://behavency.com/">
+    <link rel="icon" type="image/png" href="/logo-behavency.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://behavency.com/">
+    <meta property="og:site_name" content="Behavency">
+    <meta property="og:title" content="Behavency — Manager assessment and development">
+    <meta property="og:description" content="Manager assessment and development: 360° feedback, a team game and tailored training for managers and teams, then re-assessment to show what changed.">
+    <meta property="og:image" content="https://behavency.com/social-preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
     <!-- base page styles of the "Phone Site Final" design page, so the site renders exactly like it -->
     <style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
     <!-- start the fonts of the first screen straight away (they are the same files the font styles below use) -->
@@ -16,6 +28,59 @@
     <link rel="preload" href="/fonts/files/playfairdisplay-v40-nuFkD-vYSZviVYUb_rj3ij__anPXDTnogkk7.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/files/plusjakartasans-v12-LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2" as="font" type="font/woff2" crossorigin />
     <link href="/fonts/gf-ee6d6d12.css" rel="stylesheet" />
+    <!-- real addresses for the pop-up pages (/about, /recruitment, /privacy, /programmes) and their tab titles (from the 26 Nov upload folder) -->
+    <script>window.BHV_TITLES={"":"Behavency — Manager assessment and development","about":"About Behavency — who we are","recruitment":"Recruitment — Behavency","programmes":"Programmes for managers and teams — Behavency","privacy":"Privacy Policy — Behavency"};(function () {
+  if (!/^https?:$/.test(location.protocol)) return;
+  // the phone version lives under /m/ (one upload folder for both, 26 Nov)
+  var BASE = /^\/m(\/|$)/.test(location.pathname) ? '/m/' : '/';
+  var OPEN = { about: '.abp.open, .pab.open', recruitment: '.rcp.open, .prc.open', privacy: '.pvp.open', programmes: '.bc, .tm.tm-page' };
+  var STATE = { about: { about: 1 }, recruitment: { rcp: 1 }, privacy: { pvp: 1 } };
+  var seg = function () { var s = location.pathname.replace(/\/+$/, '').split('/').pop().replace(/\.html$/, ''); return OPEN[s] ? s : ''; };
+  window.bhvH = function () { var s = seg(); return s && s !== 'programmes' ? '#' + s + (location.hash ? '&' + location.hash.slice(1) : '') : location.hash; };
+
+  var push = history.pushState.bind(history), repl = history.replaceState.bind(history);
+  var clean = function (url) {
+    if (url == null || url === '') return url;
+    var u = new URL(url, location.href), m = u.hash.match(/^#(about|recruitment|privacy)(?:&|$)/);
+    if (m) return BASE + m[1] + u.search;
+    if (seg() && u.pathname === location.pathname) return BASE + u.search + u.hash;
+    return url;
+  };
+  history.pushState = function (s, t, url) { return push(s, t, clean(url)); };
+  history.replaceState = function (s, t, url) { return repl(s, t, clean(url)); };
+
+  // arriving straight at a page: put the home page underneath, so Back and the page's close button stay on the site
+  var first = seg();
+  if (first) {
+    repl(null, '', BASE + location.search);
+    if (first === 'programmes') {
+      var t = setInterval(function () {
+        if (window.bhvOpenProgrammes && document.readyState === 'complete' && document.querySelector('#contact')) { clearInterval(t); setTimeout(window.bhvOpenProgrammes, 400); }
+      }, 300);
+      setTimeout(function () { clearInterval(t); }, 20000);
+    } else push(STATE[first], '', BASE + first + location.search);
+  }
+
+  // the full programme list gets /programmes while it is open
+  var wrapped = false;
+  var wrap = function () {
+    if (wrapped || !window.bhvOpenProgrammes) return;
+    wrapped = true; var openList = window.bhvOpenProgrammes;
+    window.bhvOpenProgrammes = function () { var r = openList.apply(this, arguments); repl(history.state, '', BASE + 'programmes' + location.search); return r; };
+  };
+  var w = setInterval(function () { wrap(); if (wrapped) clearInterval(w); }, 200);
+  setTimeout(function () { clearInterval(w); }, 20000);
+
+  // a page closed without Back (menu link, close button): the address goes back to the home page
+  var seen = {};
+  setInterval(function () {
+    var T = window.BHV_TITLES; if (T) { var tt = T[seg()] || T['']; if (document.title !== tt) document.title = tt; }
+    var s = seg(); if (!s) return;
+    var open = !!document.querySelector(OPEN[s]);
+    if (open) { seen[s] = 1; return; }
+    if (seen[s]) { seen[s] = 0; repl(history.state, '', BASE + location.search + location.hash); }
+  }, 500);
+})();</script>
   </head>
   <body>
     <!-- Netlify Forms reads this hidden copy of the contact form at deploy time; the real form is in src/ContactForm.jsx (used in the contact section and the hero popup) -->

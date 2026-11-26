@@ -71,8 +71,8 @@
     if (window.bhvCloseRecruit) window.bhvCloseRecruit();
     document.querySelectorAll('.bc, .bc-dim, .bc-panel, .tm.tm-page, .tm-dim, .tm-sheet').forEach((n) => n.remove());
     document.documentElement.classList.remove('tm-lock'); document.documentElement.style.overflow = '';
-    const h = location.hash.replace(/(about|recruitment)&?/g, '');
-    if (h !== location.hash) history.replaceState(null, '', location.pathname + location.search + (h === '#' ? '' : h));
+    const h = (window.bhvH ? bhvH() : location.hash).replace(/(about|recruitment)&?/g, '');
+    if (h !== (window.bhvH ? bhvH() : location.hash)) history.replaceState(null, '', location.pathname + location.search + (h === '#' ? '' : h));
   };
   // closes the open page(s) the same way the Back button does, then runs `then`
   const leave = (then, depth = 0) => {

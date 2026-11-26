@@ -18,8 +18,15 @@ export default async (request, context) => {
   const isPhone = /iPhone|iPod|Android.+Mobile|Windows Phone|BlackBerry|Opera Mini|IEMobile|Mobile Safari/i.test(ua) && !/iPad|Tablet/i.test(ua)
   const mobile = choice === 'mobile' || (choice === 'auto' && isPhone)
 
-  // returning a URL serves that page at the same address (no redirect)
-  return mobile ? new URL('/m/index.html', request.url) : context.next()
+  // returning a URL serves that page at the same address (no redirect): the home page, or one of the pages with
+  // their own address (/about, /recruitment, /privacy, /programmes), each built for both sites
+  const page = url.pathname.replace(/^\/+|\/+$/g, '').replace(/\.html$/, '')
+  const file = PAGES.includes(page) ? `${page}.html` : 'index.html'
+  return mobile ? new URL(`/m/${file}`, request.url) : context.next()
 }
 
-export const config = { path: ['/', '/index.html'] }
+const PAGES = ['about', 'recruitment', 'privacy', 'programmes']
+
+export const config = {
+  path: ['/', '/index.html', '/about', '/about.html', '/recruitment', '/recruitment.html', '/privacy', '/privacy.html', '/programmes', '/programmes.html'],
+}

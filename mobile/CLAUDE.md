@@ -44,3 +44,13 @@ On the phone site, links inside `public/` scripts and `src/assets/*.html` use `/
 `index.html` uses `/fonts/...` and Vite adds the `/m/`.
 `index.html` also preloads the first screen's font files (`/fonts/files/...`, Vite adds the `/m/`); keep that list to
 files the page itself uses. Font files are cached for a year by the `/m/fonts/files/*` rule in the shared `netlify.toml`.
+
+## Page addresses, titles and share preview (always keep)
+
+From the 26 Nov upload folder: `index.html` has the page title, Google description, canonical address, tab icon
+(`/logo-behavency.png`, our full logo) and the share preview (`public/social-preview.jpg`, 1200×630), plus the address
+script (`window.BHV_TITLES`) that gives the pop-up pages real addresses: `/about`, `/recruitment`, `/privacy`,
+`/programmes`. The build writes those four pages (`about.html` etc.) from `index.html` with their own title and
+description: the texts are in `vite.config.js` (`addressPages`). A design update that brings a new `index.html` head
+must keep these. The folder's own phone/desktop switch (by screen width, with `/m/` addresses) is NOT used: phones get
+the phone site at the same address through `netlify/edge-functions/device.js`, which also knows the four pages.

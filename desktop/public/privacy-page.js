@@ -117,19 +117,19 @@
   const open = () => {
     if (!el) return;
     el.classList.add('open'); el.scrollTop = 0; document.documentElement.classList.add('pvp-lock');
-    if (location.hash !== '#privacy') history.pushState({ pvp: 1 }, '', location.pathname + location.search + '#privacy');
+    if ((window.bhvH ? bhvH() : location.hash) !== '#privacy') history.pushState({ pvp: 1 }, '', location.pathname + location.search + '#privacy');
   };
   const close = () => { if (!el) return; el.classList.remove('open'); document.documentElement.classList.remove('pvp-lock'); };
   window.bhvOpenPrivacy = open;
-  addEventListener('popstate', () => { if (location.hash !== '#privacy') close(); else open(); });
+  addEventListener('popstate', () => { if ((window.bhvH ? bhvH() : location.hash) !== '#privacy') close(); else open(); });
   const mount = () => {
     if (!document.body) return setTimeout(mount, 100);
     const st = document.createElement('style'); st.id = 'privacy-page'; st.textContent = CSS; document.head.appendChild(st);
     const t = document.createElement('div'); t.innerHTML = HTML; el = t.firstElementChild; document.body.appendChild(el);
     // column names on each cell, used by the phone card layout
     el.querySelectorAll('table').forEach((tb) => { const heads = [...tb.querySelectorAll('tr:first-child th')].map((h) => h.textContent.trim()); tb.querySelectorAll('tr').forEach((tr) => [...tr.children].forEach((c, i) => { if (c.tagName === 'TD' && heads[i]) c.setAttribute('data-label', heads[i]); })); });
-    el.addEventListener('click', (e) => { if (e.target.closest('[data-close]')) { if (location.hash === '#privacy') history.back(); else close(); } });
-    if (location.hash === '#privacy') setTimeout(open, 600);
+    el.addEventListener('click', (e) => { if (e.target.closest('[data-close]')) { if ((window.bhvH ? bhvH() : location.hash) === '#privacy') history.back(); else close(); } });
+    if ((window.bhvH ? bhvH() : location.hash) === '#privacy') setTimeout(open, 600);
   };
   mount();
 })();
