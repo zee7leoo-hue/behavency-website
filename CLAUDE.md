@@ -19,6 +19,26 @@ It is edited from two places: a Windows PC and a phone.
   user asks about the build, the deploy or how visitors are sent to each site.
 - After a change, tell the user which files changed, so they can see the other site was not touched.
 
+## Heading fonts (always follow, both sites, every language)
+
+The user is standardising the heading fonts (English first; Georgian and Russian follow the same rules). Use these
+rules for any heading you create or change:
+
+1. **Section titles** (the big heading of each section, page titles, pop-up titles): `"Source Serif 4"`, weight 600,
+   letter-spacing about `-0.02em`, dark navy. The highlighted key words: `"Source Serif 4"` italic, weight 400, in the
+   section's colour. No decorative underlines or swooshes under titles.
+2. **Phone**: section titles 40px; a long title is made slightly smaller so it never takes more than 4 lines.
+3. **Card titles** (cards, steps): `"Source Serif 4"`, weight 600.
+4. **List items, small labels, buttons and normal text**: `"Inter"`. Small labels: Inter 600, capitals, wide spacing.
+5. **`"Playfair Display"` stays only for**: the logo, the phone top headline ("Most managers don't know where they're
+   falling short."), and the "Stage 1 of 4 · Identify" stage openers.
+6. **No other fonts** (no Plus Jakarta Sans, no Arial). In new font stacks use only the generic fallbacks:
+   `"Source Serif 4", serif` and `"Inter", sans-serif`.
+
+All three fonts are already self-hosted (see "Fonts come from the site itself" in `desktop/CLAUDE.md` / `mobile/CLAUDE.md`).
+When a design link is copied "exactly", the link's own fonts are copied as they are unless the user asks to apply
+these rules to it; say so in the summary if the link uses fonts these rules don't allow.
+
 ## Branches
 
 - **`dev`**: the working branch. Every change is saved here. Nothing deploys from it.
