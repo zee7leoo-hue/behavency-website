@@ -93,6 +93,8 @@
     if (m) {
       const head = block.querySelector('.isx-cast-h'), lead = block.querySelector('.isx-lead'); if (!head || !lead) return false;
       grid = document.createElement('div'); grid.className = 'sxt-grid sxt-mob'; head.before(grid); cueAfter = lead;
+      // 26 Nov: all text first (intro + the three points), then the tap prompt and the characters
+      const pts = block.querySelector('.isx-pts'); if (pts) { grid.before(pts); cueAfter = pts; }
     } else {
       const old = block.querySelector('.chars'), list = block.querySelector('ul'); if (!old || !list) return false;
       grid = document.createElement('div'); grid.className = 'sxt-grid'; old.replaceWith(grid); cueAfter = list;

@@ -462,10 +462,6 @@
   html, body { background: transparent !important; }
   .ist { display: none !important; }
 </style>
-<style id="font-standard">/* heading font standard (27 Nov): titles Source Serif 4 600, highlighted words italic 400 (the logo keeps Playfair) */
-.ist h3, .wel h3, .m-head h2 { font-family: "Source Serif 4", serif !important; font-weight: 600 !important; letter-spacing: -0.02em !important; color: #0f1b3d !important; }
-.ist h3 em, .wel h3 em, .m-head h2 em { font-family: "Source Serif 4", serif !important; font-style: italic !important; font-weight: 400 !important; }
-</style>
 </head>
 <body>
 <section class="ist" id="interview-studio">
@@ -958,5 +954,12 @@
   addEventListener('message', (e) => { if (e.data && e.data.sxt === 'close') closePractice(); });
 })();
 </script>
+<style id="type-c">/* 26 Nov: heading style C - titles in Source Serif 4 600 (navy), coloured phrase italic 400, small labels Inter 600 with 0.16em spacing. Sizes unchanged. */
+  .ist h3, .wel h3 { font-family: "Source Serif 4", Georgia, serif !important; font-weight: 600 !important; letter-spacing: -.02em !important; color: #0a1236 !important; }
+  .ist h3 em, .wel h3 em { font-family: "Source Serif 4", Georgia, serif !important; font-style: italic !important; font-weight: 400 !important; letter-spacing: -.01em !important; }
+  .ist .eye, .ist .ist-when, .wel .w-when, .m-eb { font-family: Inter, sans-serif !important; font-weight: 600 !important; letter-spacing: .16em !important; }
+  .ch b { font-weight: 600 !important; }
+  button { font-family: inherit; }
+</style>
 </body>
 </html>

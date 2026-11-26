@@ -1,0 +1,182 @@
+/* 26 Nov: heading style "C" for the phone site.
+   One place for all heading typography. Loaded last on the page (after every other stylesheet and script),
+   so these rules win. Only fonts, weights, sizes, spacing and title colours change here - no texts, no layout.
+   Exceptions kept on purpose: the logo, the hero headline ("Most managers don't know where they're falling short."),
+   and the "Stage N of 4" stage openers. */
+
+/* ---------- 1. Section titles: Source Serif 4, weight 600, navy, 40px on 41px lines ---------- */
+:root body .wn-title,
+:root body .pf-title,
+:root body .id-title,
+:root body #interview-studio h2,
+:root body .nbm-title,
+:root body .rs-title,
+:root body .hb-title,
+:root body .hb--focus .hb-title,
+:root body .eg-title,
+:root body .bd-title,
+:root body .jn-title,
+:root body .tm .tm-h,
+:root body .tm-h,
+:root body .ms-title,
+:root body .hm-title,
+:root body .pz-ttl,
+:root body .pk-title,
+:root body .cm-end h2 {
+  font-family: "Source Serif 4", Georgia, serif !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  font-size: 40px !important;
+  line-height: 41px !important;
+  letter-spacing: -.02em !important;
+  font-optical-sizing: none;
+  font-variation-settings: "opsz" 30;
+  white-space: normal !important;
+  word-spacing: 0;
+}
+/* navy for every title on a light background (the "What's at stake" title stays white on its dark band) */
+:root body .pf-title, :root body .id-title, :root body #interview-studio h2, :root body .nbm-title, :root body .rs-title,
+:root body .hb-title, :root body .eg-title, :root body .bd-title, :root body .jn-title, :root body .tm .tm-h, :root body .tm-h,
+:root body .ms-title, :root body .hm-title, :root body .pz-ttl, :root body .pk-title, :root body .cm-end h2 {
+  color: #0a1236 !important;
+  -webkit-text-fill-color: #0a1236 !important;
+}
+/* the coloured key phrase: Source Serif 4 italic, weight 400, same size, colour of its section stays as it was */
+:root body .wn-title em, :root body .pf-title em, :root body .id-title em, :root body #interview-studio h2 em,
+:root body .nbm-title em, :root body .rs-title em, :root body .hb-title em, :root body .eg-title em, :root body .bd-title em,
+:root body .jn-title em, :root body .tm .tm-h em, :root body .tm-h em, :root body .ms-title em, :root body .ms-title span,
+:root body .hm-title em, :root body .hm-title span, :root body .pz-ttl em, :root body .pk-title em, :root body .cm-end h2 em {
+  font-family: "Source Serif 4", Georgia, serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  font-size: 1em !important;
+  line-height: 41px !important;
+  letter-spacing: -.01em !important;
+  white-space: normal !important;
+}
+/* the em/span inherits the navy "fill" from the title above - give each key phrase its own colour back */
+:root body .pf-title em { -webkit-text-fill-color: #1fa9a6 !important; }
+:root body .id-title em { -webkit-text-fill-color: #1d6fe0 !important; }
+:root body #interview-studio h2 em { -webkit-text-fill-color: #2f6fdb !important; }
+:root body .rs-title em { -webkit-text-fill-color: #2f6fdb !important; }
+:root body .hb-title em { -webkit-text-fill-color: #1a9082 !important; }
+:root body .eg-title em { -webkit-text-fill-color: #6a2fd8 !important; }
+:root body .bd-title em { -webkit-text-fill-color: #f26a1b !important; }
+:root body .jn-title em { -webkit-text-fill-color: #ff9a2c !important; }
+:root body .tm .tm-h em, :root body .tm-h em { -webkit-text-fill-color: #ef7a1a !important; color: #ef7a1a !important; }
+:root body .ms-title span, :root body .ms-title em, :root body .hm-title span, :root body .hm-title em { -webkit-text-fill-color: #14a07c !important; }
+:root body #how-it-runs .pz-ttl em { -webkit-text-fill-color: #c2650f !important; }
+:root body #different .pz-ttl em { -webkit-text-fill-color: #1a8a7a !important; }
+:root body .pk-title em { -webkit-text-fill-color: #0e9a80 !important; }
+:root body .cm-end h2 em { -webkit-text-fill-color: #1a8a7a !important; color: #1a8a7a !important; }
+
+/* "One framework. Six areas of effectiveness." - the second line becomes the coloured italic (was upright, gradient fill) */
+:root body .nbm-title em {
+  display: block;
+  background: none !important;
+  color: #2672e8 !important;
+  -webkit-text-fill-color: #2672e8 !important;
+  padding-bottom: 0;
+}
+/* "We measure whether development actually happens." - the italic line is now the same size as the rest */
+:root body .hm-title { margin-right: 0 !important; }
+:root body .hm-title span, :root body .ms-title span { display: inline !important; margin: 0 !important; }
+/* "Training for the gaps that matter." - its small label grey like all other labels */
+:root body .tm .tm-eye { color: #3a4364 !important; }
+/* Engage title: the hand-drawn swoosh under "experience it." is removed - the coloured italic is enough */
+:root body .eg-title .eg-swoosh { display: none !important; }
+
+/* ---------- 1b. Sub-page main titles (About, Recruitment, Programmes, Privacy): Source Serif 600, 36px on 39px ---------- */
+:root body .pab-ttl,
+:root body .prc .h:not(.sm),
+:root body .tm .tm-ch,
+:root body .pvp h1 {
+  font-family: "Source Serif 4", Georgia, serif !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  font-size: 36px !important;
+  line-height: 39px !important;
+  letter-spacing: -.02em !important;
+  font-optical-sizing: none;
+  font-variation-settings: "opsz" 30;
+  color: #0a1236 !important;
+  -webkit-text-fill-color: #0a1236 !important;
+}
+/* smaller titles inside the sub-pages and the two pop-ups keep their size, but get the same font and weight */
+:root body .pab-who h2, :root body .pab-team h2, :root body .pab-end h2,
+:root body .prc .h.sm, :root body .tm .tm-gh, :root body .pvp h2,
+:root body .cm h2, :root body .cm-done b {
+  font-family: "Source Serif 4", Georgia, serif !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  letter-spacing: -.02em !important;
+  color: #0a1236 !important;
+}
+:root body .pab-ttl em, :root body .pab-who h2 em, :root body .pab-team h2 em, :root body .pab-end h2 em,
+:root body .prc .h span, :root body .prc .h em, :root body .tm .tm-ch em, :root body .pvp h1 em, :root body .cm h2 em {
+  font-family: "Source Serif 4", Georgia, serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  letter-spacing: -.01em !important;
+}
+:root body .pab-ttl em { -webkit-text-fill-color: #1a8a7a !important; }
+:root body .tm .tm-ch em { -webkit-text-fill-color: #ef7a1a !important; }
+:root body .cm h2 em { color: #1a8a7a !important; }
+
+/* ---------- 3. Card titles: Source Serif 4 weight 600 (was 700 / Playfair) ---------- */
+:root body #mtl h3,
+:root body .pk2-name, :root body .pk2-aname,
+:root body .pab-pp b, :root body .pab-sy b,
+:root body .prc .list b, :root body .prc .tl-st h3, :root body .prc .swipe h3, :root body .prc .fact b, :root body .prc .stats b,
+:root body .prc .end b, :root body .prc .opt-h b, :root body .prc .nums b, :root body .prc details.acc summary,
+:root body #measure h3, :root body .tm .tm-end p {
+  font-weight: 600 !important;
+}
+/* "Why now" cards: "Our managers are overloaded." - weight 600, coloured word italic 400 like the titles */
+:root body #why-now span:has(> em) { font-weight: 600 !important; }
+:root body #why-now span > em { font-weight: 400 !important; }
+
+/* Engage cards (01 The Game / 02 The Reflection / 03 Insight Report): title like the Measure cards, 24px on 28px, weight 600.
+   The glowing underline goes; the underlined words become the coloured italic (purple / blue / green as on the desktop site). */
+:root body .egx .nc-h, :root body .nc-h {
+  font-family: "Source Serif 4", Georgia, serif !important;
+  font-weight: 600 !important;
+  font-size: 24px !important;
+  line-height: 28px !important;
+  letter-spacing: -.02em !important;
+}
+:root body .nc-h u {
+  font-style: italic;
+  font-weight: 400;
+  text-decoration: none;
+  color: #6d3fd1;
+}
+:root body .nc-h u::after, :root body .egx .nc-h u::after, :root body .egx .nc-h--b u::after { display: none !important; content: none !important; }
+:root body .nc-h--b u { color: #1f56c9; }
+:root body .nc--rep .nc-h u, :root body .nc:has(.nc-tag--g) .nc-h u { color: #13855b; }
+/* their small labels ("01 – The Game") were Plus Jakarta Sans - now Inter 600 */
+:root body .nc-tag i { font-family: Inter, sans-serif !important; font-weight: 600 !important; }
+
+/* Engage "The results" sub-titles and the 45 min / 90 min figures: Inter 600 (were Plus Jakarta Sans 800) */
+:root body .px-res h4, :root body .egm-stat b {
+  font-family: Inter, sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 16.4px !important;
+  line-height: 1.25 !important;
+  letter-spacing: -.01em !important;
+}
+:root body .egm-stat span { font-family: Inter, sans-serif !important; }
+
+/* ---------- 4. Small labels: Inter 600 capitals, one letter-spacing for the whole site (0.16em, the most common) ---------- */
+:root body .ueb, :root body .pz-eb, :root body .isx-eb, :root body .isx-when, :root body .mtl-when,
+:root body .pk2-label, :root body .pk2-k, :root body .pk2-tag, :root body .pk-eyebrow, :root body .hb-eyebrow, :root body .wn-eyebrow,
+:root body .cm-end .eb, :root body .pab-eb, :root body .pab-ago, :root body .prc .pill, :root body .prc .tl-when,
+:root body .pvp-eb, :root body .tm .tm-eye, :root body .tm .tm-ceye, :root body .egm-how {
+  font-family: Inter, sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: .16em !important;
+  text-transform: uppercase !important;
+}
+
+/* ---------- 5. No Arial: buttons with text use the page font ---------- */
+button { font-family: inherit; }

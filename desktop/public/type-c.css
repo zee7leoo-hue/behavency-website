@@ -1,0 +1,180 @@
+/* 26 Nov: heading style "C" for the desktop site.
+   One place for all heading typography. Loaded last on the page (after every other stylesheet and script),
+   so these rules win. Only fonts, weights, sizes, spacing and title colours change here - no texts, no layout.
+   Exceptions kept on purpose: the logo and the "Stage N of 4" stage openers (Playfair). */
+
+/* ---------- 1. Section titles: Source Serif 4, weight 600, navy, about -0.02em ---------- */
+:root body #identify h2.identify__headline,
+:root body section.bmodel h2.bmodel__headline,
+:root body .wm .wm-h2,
+:root body #two-gaps .hb-h2,
+:root body h2.bx-title,
+:root body h2.bx-h,
+:root body section.bs-section h2.bs-heading,
+:root body h2.dv3-title,
+:root body .bq .bq-h, :root body .bq-c .bq-h,
+:root body h2.ms-title,
+:root body h2.hm-title,
+:root body h2.hz-ttl,
+:root body h2.different__headline,
+:root body #packages h2.headline,
+:root body .cm-end h2,
+:root body #platform h1,
+:root body .ist h3 {
+  font-family: "Source Serif 4", Georgia, serif !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  letter-spacing: -.02em !important;
+  color: #0a1236 !important;
+  -webkit-text-fill-color: #0a1236 !important;
+}
+/* one size for the big section titles (54px on a 1440 screen, a little smaller on narrow screens) */
+:root body #identify h2.identify__headline,
+:root body section.bmodel h2.bmodel__headline,
+:root body .wm .wm-h2,
+:root body #two-gaps .hb-h2,
+:root body h2.bx-title,
+:root body section.bs-section h2.bs-heading,
+:root body .bq .bq-h, :root body .bq-c .bq-h,
+:root body h2.hz-ttl,
+:root body h2.different__headline,
+:root body #packages h2.headline,
+:root body .cm-end h2 {
+  font-size: clamp(38px, 3.75vw, 54px) !important;
+  line-height: 1.12 !important;
+}
+/* Engage: "They've seen the score. Now let them experience it." was 73px with a purple swoosh - now the same size as the
+   other titles, no swoosh; the purple words stay as the coloured italic */
+:root body h2.bx-title { line-height: 1.08 !important; }
+:root body .bx-underline { display: none !important; }
+
+/* the coloured key phrase: Source Serif 4 italic, weight 400; its colour stays as it was */
+:root body #identify h2.identify__headline em,
+:root body section.bmodel h2.bmodel__headline .bmodel__headline--teal,
+:root body section.bmodel h2.bmodel__headline .bmodel__headline--italic,
+:root body .wm .wm-h2 i,
+:root body #two-gaps .hb-h2 em,
+:root body h2.bx-title .bx-em,
+:root body section.bs-section h2.bs-heading em,
+:root body h2.dv3-title em,
+:root body .bq .bq-h em, :root body .bq-c .bq-h em,
+:root body h2.ms-title em,
+:root body h2.hm-title em,
+:root body h2.hz-ttl em,
+:root body h2.different__headline em,
+:root body #packages h2.headline em,
+:root body .cm-end h2 em,
+:root body #platform h1 em,
+:root body .ist h3 em,
+:root body .sx-title em,
+:root body .hc-title-em {
+  font-family: "Source Serif 4", Georgia, serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  letter-spacing: -.01em !important;
+}
+/* the key phrase would otherwise take the navy "fill" of its title - give each its own colour back */
+:root body section.bmodel h2.bmodel__headline .bmodel__headline--teal,
+:root body section.bmodel h2.bmodel__headline .bmodel__headline--italic { -webkit-text-fill-color: #0b8de6 !important; }
+:root body .wm .wm-h2 i { -webkit-text-fill-color: #2f6fdb !important; }
+:root body #two-gaps .hb-h2 em { -webkit-text-fill-color: #1a9082 !important; }
+:root body h2.dv3-title em { -webkit-text-fill-color: #f28a1e !important; }
+:root body .bq .bq-h em, :root body .bq-c .bq-h em { -webkit-text-fill-color: #ef7a1a !important; }
+:root body h2.ms-title em, :root body h2.hm-title em { -webkit-text-fill-color: #14a07c !important; }
+:root body h2.hz-ttl em { -webkit-text-fill-color: #e0761c !important; }
+:root body h2.different__headline em { -webkit-text-fill-color: #1a8a7a !important; }
+:root body #packages h2.headline em { -webkit-text-fill-color: #189184 !important; }
+:root body .cm-end h2 em { -webkit-text-fill-color: #1a8a7a !important; color: #1a8a7a !important; }
+:root body #platform h1 em { -webkit-text-fill-color: #189184 !important; }
+:root body .ist h3 em { -webkit-text-fill-color: #2f6fdb !important; color: #2f6fdb !important; }
+
+/* Hero: "Your managers want to lead well. Most don't know where they're falling short." - same lines and positions,
+   weight 600 instead of 700, the teal part italic 400 */
+:root body .hc-title-main { font-weight: 600 !important; letter-spacing: -.02em !important; }
+:root body .hc-title-em { letter-spacing: -.02em !important; }
+
+/* ---------- 1b. Sub-page main titles (About, Recruitment, Programmes, Privacy) and the pop-up titles ---------- */
+:root body .abp .hero h1,
+:root body .rcp h1,
+:root body .bc .bc-h,
+:root body .pvp h1 {
+  font-family: "Source Serif 4", Georgia, serif !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  font-size: 54px !important;
+  line-height: 1.1 !important;
+  letter-spacing: -.02em !important;
+  color: #0a1236 !important;
+  -webkit-text-fill-color: #0a1236 !important;
+}
+/* smaller titles inside the sub-pages and pop-ups keep their size but get the same font and weight */
+:root body .abp .who h2, :root body .abp .team h2, :root body .abp .abp-end h2,
+:root body .rcp h2, :root body .bc .bc-gh, :root body .pvp h2,
+:root body .cm h2, :root body .cm-done b {
+  font-family: "Source Serif 4", Georgia, serif !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  letter-spacing: -.02em !important;
+  color: #0a1236 !important;
+  -webkit-text-fill-color: #0a1236 !important;
+}
+:root body .abp .hero h1 em, :root body .abp .who h2 em, :root body .abp .team h2 em, :root body .abp .abp-end h2 em,
+:root body .rcp h1 em, :root body .rcp h2 em, :root body .bc .bc-h em, :root body .cm h2 em {
+  font-family: "Source Serif 4", Georgia, serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  letter-spacing: -.01em !important;
+}
+:root body .abp .hero h1 em, :root body .abp .who h2 em, :root body .abp .team h2 em, :root body .abp .abp-end h2 em,
+:root body .cm h2 em { -webkit-text-fill-color: #1a8a7a !important; color: #1a8a7a !important; }
+:root body .rcp h1 em, :root body .rcp h2 em { -webkit-text-fill-color: #15935e !important; }
+:root body .bc .bc-h em { -webkit-text-fill-color: #ef7a1a !important; }
+
+/* ---------- 3. Card titles: Source Serif 4 weight 600 at their own size (no Playfair, no Inter 700) ---------- */
+:root body .bq .bq-ct,
+:root body .rcp .step h3, :root body .rcp .flow h3, :root body .rcp .pcard h3,
+:root body .rcp .list b, :root body .rcp .fact b, :root body .rcp .end-row p,
+:root body .abp .people .pp b, :root body .abp .tl-year b, :root body .rcp .step span,
+:root body .bc .bc-end p,
+:root body .pk2-name, :root body .pk2-aname,
+:root body .ms-card-title {
+  font-family: "Source Serif 4", Georgia, serif !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+}
+:root body .bq .bq-ct, :root body .rcp .step h3, :root body .rcp .flow h3, :root body .abp .people .pp b, :root body .rcp .list b { letter-spacing: -.01em !important; }
+/* Engage cards (The Game / The Reflection / Insight Report): Source Serif 600, a step smaller than the section titles */
+:root body .xc-ecard h3 {
+  font-family: "Source Serif 4", Georgia, serif !important;
+  font-weight: 600 !important;
+  font-size: clamp(28px, 2.2vw, 32px) !important;
+  line-height: 1.15 !important;
+  letter-spacing: -.02em !important;
+  color: #0a1236 !important;
+}
+:root body .xc-ecard h3 em {
+  font-family: "Source Serif 4", Georgia, serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  letter-spacing: -.01em !important;
+}
+
+/* ---------- 4. Small labels: Inter 600 capitals, one letter-spacing for the whole site (0.16em, the most common) ---------- */
+:root body .ist .eye, :root body .ist .ist-when, :root body .bmodel__ey-text, :root body .wm-eye, :root body .hb-eyebrow,
+:root body .bq .bq-eye, :root body .bq-eye, :root body .bq .bq-cfor, :root body .hm-label, :root body .hz-eb, :root body .hz-when,
+:root body .different__caption, :root body #packages p.caption, :root body .pk2-label, :root body .pk2-k,
+:root body .cm-end .eb, :root body .rcp .eb, :root body .rcp .flow em, :root body .rcp .step em,
+:root body .abp .who .eye, :root body .abp .team .eye, :root body .abp .tl-year small, :root body .abp .tl-step .later,
+:root body .pvp-eb, :root body .bc-eye, :root body #platform .eyebrow {
+  font-family: Inter, sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: .16em !important;
+  text-transform: uppercase !important;
+}
+
+/* ---------- 5. No Arial: buttons with text use the page font ---------- */
+button { font-family: inherit; }
+:root body .identify__source-desc { font-family: Inter, sans-serif !important; }
+
+/* Identify keeps its own 50px: at 54px "them." would drop onto a sixth line beside the five sources list */
+:root body #identify h2.identify__headline { font-size: clamp(36px, 3.5vw, 50px) !important; }

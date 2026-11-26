@@ -35,6 +35,11 @@ rules for any heading you create or change:
 6. **No other fonts** (no Plus Jakarta Sans, no Arial). In new font stacks use only the generic fallbacks:
    `"Source Serif 4", serif` and `"Inter", sans-serif`.
 
+Where the rules live (27 Nov): the upload folder's "heading style C" files, copied as they are:
+`desktop/public/type-c.css`, `mobile/public/type-c.css` + `mobile/public/type-c.js` (linked last in each `index.html`;
+the script fits long phone titles into 4 lines, down to 34px). The few rules style C does not cover are in
+`desktop/public/font-standard.css` ("What's at stake" title and cards). A new upload with a newer style C replaces those files.
+
 All three fonts are already self-hosted (see "Fonts come from the site itself" in `desktop/CLAUDE.md` / `mobile/CLAUDE.md`).
 When a design link is copied "exactly", the link's own fonts are copied as they are unless the user asks to apply
 these rules to it; say so in the summary if the link uses fonts these rules don't allow.
