@@ -88,7 +88,7 @@ export const LEVELS = [
       },
       {
         "id": "capacity",
-        "name": "Focus & Prioritization",
+        "name": "Focus & Prioritisation",
         "icon": "org",
         "practices": [
           {
@@ -345,7 +345,7 @@ export const LEVELS = [
       },
       {
         "id": "capacity",
-        "name": "Focus & Prioritization",
+        "name": "Focus & Prioritisation",
         "icon": "org",
         "practices": [
           {
@@ -577,7 +577,7 @@ export const LEVELS = [
       },
       {
         "id": "capacity",
-        "name": "Focus & Prioritization",
+        "name": "Focus & Prioritisation",
         "icon": "org",
         "practices": [
           {

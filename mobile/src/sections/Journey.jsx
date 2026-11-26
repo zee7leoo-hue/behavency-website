@@ -18,7 +18,6 @@ const Users = (p) => (<svg viewBox="0 0 24 24" {...sv} {...p}><circle cx="9" cy=
 const Group = (p) => (<svg viewBox="0 0 24 24" {...sv} {...p}><circle cx="12" cy="7" r="3.2" /><circle cx="4.8" cy="9.4" r="2.4" /><circle cx="19.2" cy="9.4" r="2.4" /><path d="M6.2 20.5v-1a5 5 0 0 1 5-5h1.6a5 5 0 0 1 5 5v1M1.6 18.4v-.6a3.3 3.3 0 0 1 3.1-3.3M22.4 18.4v-.6a3.3 3.3 0 0 0-3.1-3.3" /></svg>)
 const Layers = (p) => (<svg viewBox="0 0 24 24" {...sv} {...p}><path d="M12 2.8 2.6 7.6 12 12.4l9.4-4.8z" /><path d="m2.6 12 9.4 4.8 9.4-4.8M2.6 16.4l9.4 4.8 9.4-4.8" /></svg>)
 const PlayBox = (p) => (<svg viewBox="0 0 24 24" {...sv} {...p}><rect x="2.5" y="5" width="19" height="14" rx="2.6" /><path d="M10 9v6l5-3z" fill="currentColor" /></svg>)
-const Globe = (p) => (<svg viewBox="0 0 24 24" {...sv} {...p}><circle cx="12" cy="12" r="9.5" /><path d="M2.5 12h19M12 2.5c2.6 2.6 3.9 5.8 3.9 9.5S14.6 18.9 12 21.5c-2.6-2.6-3.9-5.8-3.9-9.5S9.4 5.1 12 2.5z" /></svg>)
 const Calendar = (p) => (<svg viewBox="0 0 24 24" {...sv} {...p}><rect x="3" y="4.5" width="18" height="16.5" rx="2.6" /><path d="M3 9.5h18M8 2.5v4M16 2.5v4M7.5 13.5h.01M12 13.5h.01M16.5 13.5h.01M7.5 17h.01M12 17h.01M16.5 17h.01" /></svg>)
 const Pin = (p) => (<svg viewBox="0 0 24 24" {...sv} {...p}><path d="M12 21.5c-4-4.4-6.6-7.8-6.6-11.2a6.6 6.6 0 0 1 13.2 0c0 3.4-2.6 6.8-6.6 11.2z" /><circle cx="12" cy="10.2" r="2.5" /></svg>)
 
@@ -26,9 +25,9 @@ const CARDS = [
   { key: 'e', bg: elearningBg, Icon: Laptop, title: 'E-learning', desc: 'Flexible and self-paced, so teams can learn anytime, anywhere.',
     feats: [{ Icon: PlayBox, t: ['Practical,', 'real-world', 'learning'] }, { Icon: Layers, t: ['Flexible', 'and', 'self-paced'] }, { Icon: Group, t: ['For individuals', 'and teams'] }] },
   { key: 'i', bg: inpersonBg, Icon: Chat, title: 'In-person', desc: 'Hands-on, expert-led sessions that build stronger team dynamics.',
-    feats: [{ Icon: Users, t: ['On-site', 'with your team'] }, { Icon: Globe, t: ['Multiple', 'languages'] }, { Icon: Pin, t: ['Flexible', 'location'] }] },
+    feats: [{ Icon: Users, t: ['On-site', 'with your team'] }, { Icon: Pin, t: ['Flexible', 'location'] }] },
   { key: 'l', bg: liveBg, Icon: Users, title: 'Live online', desc: 'Interactive, expert-led sessions with your team, anywhere.',
-    feats: [{ Icon: Globe, t: ['Multiple', 'languages'] }, { Icon: Calendar, t: ['Flexible', 'scheduling'] }, { Icon: Users, t: ['Teams of', '12–25'] }] },
+    feats: [{ Icon: Calendar, t: ['Flexible', 'scheduling'] }, { Icon: Users, t: ['Teams of', '12–25'] }] },
   { key: 'b', bg: blendedBg, Icon: Layers, title: 'Blended', desc: 'Digital learning and live sessions, combined.', blend: true,
     feats: [{ Icon: Laptop, t: ['Digital', 'learning'] }, { Icon: Users, t: ['Expert-led', 'sessions'] }] },
 ]

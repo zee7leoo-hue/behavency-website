@@ -1,5 +1,7 @@
 import React from 'react'
 import nestle from '../assets/logos/nestle.png'
+import bayer from '../assets/logos/bayer.png'
+import heineken from '../assets/logos/heineken.png'
 import lego from '../assets/logos/lego.png'
 import cocacola from '../assets/logos/cocacola.png'
 import ey from '../assets/logos/ey.png'
@@ -22,6 +24,8 @@ import './Clients.css'
 
 const LOGOS = [
   { src: nestle, alt: 'Nestlé', h: 24 },
+  { src: bayer, alt: 'Bayer', h: 24 },
+  { src: heineken, alt: 'Heineken', h: 15 },
   { src: lego, alt: 'LEGO', h: 24 },
   { src: cocacola, alt: 'Coca-Cola', h: 24 },
   { src: ey, alt: 'EY', h: 24 },

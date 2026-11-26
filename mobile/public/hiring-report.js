@@ -39,7 +39,7 @@
   `;
   const ZONE = { s: ['Strong', '#14a07c', '#1a7f5c', '#e3f6ee'], m: ['Medium', '#f0a020', '#9a5b0b', '#fdf1dc'], d: ['Development', '#e5484d', '#b4232a', '#fde7e8'] };
   const ROWS = [
-    ['Clarity & Alignment', 64, 'm', '#e3f6ee', '#14a07c'], ['Trust & Inclusion', 63, 'm', '#fdf1dc', '#e0761c'], ['Focus & Prioritization', 25, 'd', '#efe9fc', '#7a4bd6'],
+    ['Clarity & Alignment', 64, 'm', '#e3f6ee', '#14a07c'], ['Trust & Inclusion', 63, 'm', '#fdf1dc', '#e0761c'], ['Focus & Prioritisation', 25, 'd', '#efe9fc', '#7a4bd6'],
     ['Execution & Accountability', 57, 'm', '#e8f0fd', '#2f6fdb'], ['Collaboration & Influence', 86, 's', '#fde7ef', '#d6336c'], ['Learning & Adaptability', 80, 's', '#efe9fc', '#6a5ae0'],
   ];
   const HTML = `<div class="hrx" data-hrx="1" role="img" aria-label="Example candidate report: Elias T., Managerial Profile results for six areas"><div class="hrx-page">

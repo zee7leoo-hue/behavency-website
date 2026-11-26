@@ -123,6 +123,10 @@
   /* dashboard: no "Live" badge; "View all" and the dropdown arrow are part of the picture, not links */
   :root #platform .pf-live { display: none !important; }
   :root #platform .pf-list-head a { pointer-events: none !important; cursor: default !important; }
+  /* 25 Nov: they also no longer LOOK like links/buttons: quiet grey, like the rest of the example picture */
+  :root #platform .pf-list-head a { color: #8a90a3 !important; font-weight: 500 !important; text-decoration: none !important; }
+  :root #platform .pf-list-head a svg { opacity: .6; }
+  :root .nc-rep-top em { border-color: transparent !important; padding: 0 !important; opacity: .75; font-weight: 600 !important; pointer-events: none; }
   :root #platform .pf-kpis { grid-template-columns: 102px 104px 106px !important; }
   :root #platform .pf-kpi div .pf-kpi-dev { white-space: nowrap; font-size: 9.4px; letter-spacing: -.01em; line-height: 1.2; margin-top: 2px; }
 
@@ -186,7 +190,7 @@
     const lk = document.querySelector('#platform .pf-list-head a'); if (lk) { lk.removeAttribute('href'); lk.setAttribute('aria-disabled', 'true'); lk.tabIndex = -1; }
     const rows = [...document.querySelectorAll('#platform .pf-rows .pf-row')]; if (rows.length < 3 || rows[0].dataset.v2) return;
     const D = [
-      { ini: 'SL', name: 'Sofia L.', sub: 'Gap: Focus & Prioritization', chip: '35%', cls: 'pf-chip--red', type: 'gap', w: 35 },
+      { ini: 'SL', name: 'Sofia L.', sub: 'Gap: Focus & Prioritisation', chip: '35%', cls: 'pf-chip--red', type: 'gap', w: 35 },
       { ini: '', name: 'Slow approvals', sub: 'Barrier', chip: '22 of 35', cls: 'pf-chip--amber', type: 'barrier' },
       { ini: 'HN', name: 'Hanna N.', sub: 'Clarity & Alignment: 41% → 72%', chip: '↑ +0 pts', cls: 'pf-chip--green pf-delta', type: 'up', delta: 31 },
     ];   rows.slice(0, 3).forEach((r, i) => {

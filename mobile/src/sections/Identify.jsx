@@ -11,17 +11,17 @@ const SOURCES = [
   {
     num: '01', name: 'Managerial Profile', tone: 'blue', icon: <IconUser />,
     modal: {
-      intro: 'The starting point of every Behavency programme. The manager reflects on their own behaviour across the six areas of the Behavency model — not as a test, but as a structured act of self-awareness.',
-      examines: 'The manager\'s own perception of how they lead, communicate, delegate, and hold accountability across six defined behavioural areas.',
-      reveals: 'Where a manager believes they are strong — and where they sense gaps. The baseline against which all other data is measured.',
-      matters: 'Self-awareness is the foundation of development. Without it, external feedback has no anchor. The Managerial Profile gives the manager a clear starting position before they hear from anyone else.',
+      intro: 'The starting point of every Behavency programme. Through everyday management situations, it shows how the manager actually tends to act across the six areas of the Behavency model.',
+      examines: 'The choices the manager makes when there are two ways to handle a work situation, in setting direction, building trust, prioritising, delivering, working with others and developing people.',
+      reveals: 'Which of the six areas are clear strengths, which are still developing, and which should come first in the manager’s development.',
+      matters: 'Development works best when it is aimed at the right things. The profile gives a clear first picture of how the manager works, before the views of colleagues are added.',
     },
   },
   {
     num: '02', name: '360° Feedback', tone: 'violet', icon: <IconUsers />,
     modal: {
-      intro: 'Those who work closest to the manager — direct reports, peers, and their own manager — rate the same six behavioural areas independently. Their combined picture sits alongside the manager\'s own.',
-      examines: 'How the manager\'s behaviour is experienced by the people around them, using the same six-area framework as the self-assessment.',
+      intro: 'Those who work closest to the manager — direct reports, peers, and their own manager — rate the same six behavioural areas independently. Each group\'s view sits alongside the manager\'s own.',
+      examines: 'How the manager\'s behaviour is experienced by the people around them, using the same 30 behaviours the manager rates for themselves.',
       reveals: 'The gap between how a manager sees themselves and how others experience them. This gap — large or small — is where the most important development conversations begin.',
       matters: 'Blind spots are invisible by definition. 360° data makes them visible, giving the manager something concrete to work with rather than vague impressions.',
     },
@@ -29,28 +29,28 @@ const SOURCES = [
   {
     num: '03', name: 'Workplace Effectiveness Survey', tone: 'teal', icon: <IconBars />,
     modal: {
-      intro: 'This survey explores how the broader organisation enables or hinders the manager\'s effectiveness. It captures the experiences of people who work across the organisation, highlighting structural, cultural, and contextual factors that influence performance.',
-      examines: 'How the organisation\'s systems, processes, culture and environment help or block the manager from being effective.',
+      intro: 'This survey explores how the broader organisation enables or hinders the manager\'s effectiveness. The manager describes what in their environment helps or blocks their work: authority, resources, priorities, information, procedures and work with other units.',
+      examines: 'How the organisation\'s systems, processes, resources and working conditions help or block the manager from being effective.',
       reveals: 'Patterns and barriers outside the manager\'s direct control, providing essential context for development and a more complete picture of their effectiveness.',
-      matters: 'Managerial effectiveness is shaped not only by individual behaviour, but also by the environment. Understanding organisational enablers and blockers leads to more relevant development and better, more sustainable results.',
+      matters: 'Managerial effectiveness is shaped not only by individual behaviour, but also by the environment. Understanding organisational barriers leads to more relevant development and better, more sustainable results.',
     },
   },
   {
     num: '04', name: 'Resilience to Change', tone: 'amber', icon: <IconZap />,
     modal: {
-      intro: 'A psychometric assessment that examines how a manager responds when circumstances change, under pressure, or when facing ambiguity. The results are not scored high or low — they reveal a pattern.',
-      examines: 'The individual\'s characteristic response to change: what they default to, what they resist, and how their reactions affect the people around them.',
-      reveals: 'Behavioural tendencies that may be invisible in stable conditions but become significant drivers of team experience during periods of uncertainty or transformation.',
-      matters: 'Organisations are rarely stable. A manager\'s resilience profile tells you how they will show up when it matters most — and where they may need support to lead effectively through change.',
+      intro: 'A psychometric assessment that examines how a manager responds when circumstances change, under pressure, or when facing ambiguity. There is no single high or low score: the result is a profile across six elements.',
+      examines: 'The individual\'s characteristic response to change across six elements: realism, positive self-view, flexible thinking, flexible communication, organisation and initiative.',
+      reveals: 'Which of these qualities the manager draws on most and which they use less: tendencies that may stay invisible in stable conditions but matter during periods of uncertainty or transformation.',
+      matters: 'Organisations are rarely stable. A manager\'s resilience profile shows how they tend to respond when it matters most — and where they may need support to lead effectively through change.',
     },
   },
   {
     num: '05', name: 'Structured Interview', tone: 'lilac', icon: <IconChat />,
     modal: {
-      intro: 'A one-to-one conversation led by a Behavency assessor or a trained HR professional, using the assessment data as its foundation. It gives the manager space to contextualise what the data shows and add nuance that numbers alone cannot capture.',
-      examines: 'The manager\'s own interpretation of their assessment results, their development history, and the organisational context in which they operate.',
-      reveals: 'Qualitative depth that enriches quantitative data — uncovering intent, circumstance, and readiness for development that would otherwise remain hidden.',
-      matters: 'Data without dialogue is incomplete. The structured interview ensures that the assessment leads to a development conversation, not just a report.',
+      intro: 'A one-to-one conversation, led by a Behavency assessor or a trained HR professional, that explores the same six areas through real examples from the manager\'s work. It is held without looking at the questionnaire results, so it adds an independent view.',
+      examines: 'Concrete situations from the manager\'s day-to-day work: what they did, why, and what happened next.',
+      reveals: 'The context and intent behind the behaviour, in the manager\'s own examples. It is compared with the questionnaires only afterwards.',
+      matters: 'Numbers show what happens; a conversation shows why. Because the interview is held independently, comparing the two afterwards gives a far more reliable picture.',
     },
   },
 ]

@@ -8,7 +8,7 @@
   .cm { position: relative; width: min(560px, 100%); max-height: calc(100vh - 48px); overflow-y: auto; background: #fff; border-radius: 22px; padding: 36px 36px 30px; box-shadow: 0 40px 90px -30px rgba(15,20,60,.5); font-family: Inter, Arial, sans-serif; color: #15171c; text-align: left; transform: translateY(12px); transition: transform .3s cubic-bezier(.22,1,.36,1); }
   .cm-ov.open .cm { transform: none; }
   .cm * { box-sizing: border-box; }
-  .cm h2 { margin: 0; padding-right: 44px; font: 400 32px/1.15 "Playfair Display", Georgia, serif; letter-spacing: -.01em; }
+  .cm h2 { margin: 0 0 22px; padding-right: 44px; font: 400 32px/1.15 "Playfair Display", Georgia, serif; letter-spacing: -.01em; }
   .cm h2 em { font-style: italic; color: #1a8a7a; }
   .cm-lead { margin: 10px 0 22px; font: 400 15.5px/1.55 Inter, sans-serif; color: #4a5160; }
   .cm-x { position: absolute; top: 14px; right: 14px; width: 38px; height: 38px; border-radius: 50%; border: 0; background: #f3f2f8; color: #3a4364; cursor: pointer; display: grid; place-items: center; }
@@ -31,11 +31,14 @@
   .cm-send { width: 100%; margin-top: 4px; padding: 14px; border: 0; border-radius: 12px; background: #1f2f5c; color: #fff; font: 600 15.5px/1 Inter, sans-serif; cursor: pointer; }
   .cm-send:hover { background: #18254b; }
   .cm-note { margin: 12px 0 0; font: 400 12.5px/1.5 Inter, sans-serif; color: #7a8093; text-align: center; }
+  .cm-note a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
   .cm-done { text-align: center; padding: 30px 6px 10px; }
   .cm-done b { display: block; font: 400 28px/1.2 "Playfair Display", Georgia, serif; }
   .cm-done p { margin: 10px 0 0; font: 400 15.5px/1.55 Inter, sans-serif; color: #4a5160; }
   @media (max-width: 560px) { .cm { padding: 30px 20px 24px; } .cm-row { grid-template-columns: 1fr; gap: 0; } }
 
+  /* computers: one even row of tap-to-select chips (no tick boxes); a tick shows when chosen */
+  @media (min-width: 561px) { .cm { width: min(600px, 100%); } .cm-chips { flex-wrap: nowrap; gap: 6px; } .cm .cm-chip { position: relative; flex: 1 1 auto; justify-content: center; gap: 5px; padding: 10px 8px; font-size: 14px; white-space: nowrap; } .cm .cm-chip input { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; } .cm .cm-chip:has(input:checked) { background: #1f2f5c; border-color: #1f2f5c; color: #fff; } .cm .cm-chip:has(input:checked)::before { content: "\\2713"; font-weight: 700; } }
   /* light closing line instead of the dark contact block */
   .cm-end { padding: 96px 24px 104px; text-align: center; font-family: Inter, Arial, sans-serif; }
   .cm-end .eb { display: inline-flex; align-items: center; gap: 12px; font: 600 13px/1 Inter, sans-serif; letter-spacing: .16em; text-transform: uppercase; color: #6b7280; }
@@ -50,8 +53,7 @@
   const X = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
   const FORM = `<form class="cm-form">
       <h2 id="cm-title">Let’s talk about <em>your people.</em></h2>
-      <p class="cm-lead">Tell us about your organisation and where you want to start. We’ll walk you through what Behavency would look like for you.</p>
-      <div class="cm-row">
+            <div class="cm-row">
         <label for="cm-name">Name<input id="cm-name" name="name" type="text" autocomplete="name" required></label>
         <label for="cm-email">Work email<input id="cm-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required></label>
       </div>
@@ -61,22 +63,25 @@
           <option value="">Select…</option><option>HR Director / CHRO</option><option>L&amp;D / OD Professional</option><option>Recruiter / Talent Acquisition</option><option>CEO / Leadership</option><option>Consultant / Partner</option><option>Other</option>
         </select></label>
       </div>
-      <label for="cm-size">How many managers?<select id="cm-size" name="managers">
+      <div class="cm-row">
+        <label for="cm-phone">Phone <span class="cm-opt">(optional)</span><input id="cm-phone" name="phone" type="tel" autocomplete="tel"></label>
+        <label for="cm-size">How many managers?<select id="cm-size" name="managers">
         <option value="">Select…</option><option>Under 20</option><option>20–50</option><option>50–150</option><option>150+</option>
       </select></label>
+      </div>
       <fieldset class="cm-int">
         <legend>What are you interested in?</legend>
         <div class="cm-chips">
           <label class="cm-chip"><input type="checkbox" name="interest" value="Assessment">Assessment</label>
           <label class="cm-chip"><input type="checkbox" name="interest" value="Team game">Team game</label>
           <label class="cm-chip"><input type="checkbox" name="interest" value="Training">Training</label>
-          <label class="cm-chip"><input type="checkbox" name="interest" value="The full journey">The full journey</label>
+          <label class="cm-chip"><input type="checkbox" name="interest" value="Full journey">Full journey</label>
           <label class="cm-chip"><input type="checkbox" name="interest" value="Recruitment">Recruitment</label>
         </div>
       </fieldset>
       <label for="cm-msg">What are you trying to achieve? <span class="cm-opt">(optional)</span><textarea id="cm-msg" name="message" rows="4"></textarea></label>
       <button type="submit" class="cm-send">Send message</button>
-      <p class="cm-note">We use your details only to reply to you. Or e-mail us at info@behavency.com</p>
+      <p class="cm-note">We use your details only to reply to you (<a href="#privacy" class="cm-priv">Privacy Policy</a>). Or e-mail us at <a href="mailto:info@behavency.com">info@behavency.com</a></p>
     </form>`;
   const HTML = `<div class="cm-ov" role="dialog" aria-modal="true" aria-labelledby="cm-title"><div class="cm"><button type="button" class="cm-x" aria-label="Close">${X}</button><div class="cm-body">${FORM}</div></div></div>`;
   const END = `<section class="cm-end" id="contact" data-cm="1">
@@ -90,16 +95,25 @@
     last = document.activeElement;
     const body = ov.querySelector('.cm-body'); if (!body.querySelector('form')) body.innerHTML = FORM;
     ov.classList.add('open'); document.documentElement.classList.add('cm-lock');
+    if (!cmStep) { history.pushState({ cmOpen: 1 }, ''); cmStep = true; }
     setTimeout(() => { const f = ov.querySelector('#cm-name'); if (f) f.focus(); }, 60);
   };
-  const close = () => { ov.classList.remove('open'); document.documentElement.classList.remove('cm-lock'); if (last && last.focus) last.focus(); };
+  const close = (fromBack) => {
+    ov.classList.remove('open'); document.documentElement.classList.remove('cm-lock'); if (last && last.focus) last.focus();
+    if (cmStep) { cmStep = false; if (!fromBack && history.state && history.state.cmOpen) history.back(); }
+  };
+  let cmStep = false;
+  addEventListener('popstate', () => { if (cmStep && ov && ov.classList.contains('open')) close(true); });
   window.bhvOpenContact = () => { if (ov) open(); };
   function mount() {
     if (!document.body) return;
     if (!ov) {
       const st = document.createElement('style'); st.id = 'contact-modal'; st.textContent = CSS; document.head.appendChild(st);
       const t = document.createElement('div'); t.innerHTML = HTML; ov = t.firstElementChild; document.body.appendChild(ov);
-      ov.addEventListener('click', (e) => { if (e.target === ov || e.target.closest('.cm-x')) close(); });
+      ov.addEventListener('click', (e) => {
+        if (e.target === ov || e.target.closest('.cm-x')) close();
+        if (e.target.closest('.cm-priv')) { e.preventDefault(); close(); setTimeout(() => { if (window.bhvOpenPrivacy) window.bhvOpenPrivacy(); }, 350); }
+      });
       ov.addEventListener('submit', (e) => {
         e.preventDefault();
         ov.querySelector('.cm-body').innerHTML = '<div class="cm-done"><b>Thank you.</b><p>We’ll be in touch soon.</p></div>';

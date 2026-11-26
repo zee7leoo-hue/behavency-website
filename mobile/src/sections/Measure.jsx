@@ -13,7 +13,7 @@ const ROWS = [
   { a: 'Execution &', b: 'Accountability', from: 51, to: 79, up: 28, f: 0.484, t: 0.750 },
   { a: 'Collaboration &', b: 'Influence', from: 58, to: 81, up: 23, f: 0.551, t: 0.769 },
   { a: 'Trust &', b: 'Inclusion', from: 69, to: 85, up: 16, f: 0.655, t: 0.807 },
-  { a: 'Focus &', b: 'Prioritization', from: 55, to: 67, up: 12, f: 0.522, t: 0.636 },
+  { a: 'Focus &', b: 'Prioritisation', from: 55, to: 67, up: 12, f: 0.522, t: 0.636 },
   { a: 'Learning &', b: 'Adaptability', from: 72, to: 76, up: 4, f: 0.684, t: 0.722 },
 ]
 

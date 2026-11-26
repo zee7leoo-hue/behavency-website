@@ -24,7 +24,17 @@
   .pvp table { width: 100%; border-collapse: collapse; min-width: 520px; }
   .pvp th, .pvp td { text-align: left; vertical-align: top; padding: 12px 14px; font: 400 14.5px/1.5 Inter, sans-serif; color: #3f4560; border-top: 1px solid #efedf5; }
   .pvp th { font-weight: 600; color: #15173d; background: #f6f5fb; border-top: 0; font-size: 13.5px; }
-  @media (max-width: 600px) { .pvp table { min-width: 0; } .pvp th, .pvp td { padding: 10px 9px; font-size: 13px; } .pvp th { font-size: 12.5px; } }
+  /* phones (25 Nov): each table row becomes a small card, each cell with its column name above it, so nothing is cut off */
+  @media (max-width: 600px) {
+    .pvp-tw { overflow: visible; border: 0; background: none; border-radius: 0; }
+    .pvp table, .pvp tbody, .pvp tr, .pvp td { display: block; width: 100%; min-width: 0; }
+    .pvp tr:first-child { display: none; }
+    .pvp tr { background: #fff; border: 1px solid #e8e5f0; border-radius: 14px; padding: 6px 14px; margin-top: 10px; }
+    .pvp td { border-top: 1px solid #f1eff6; padding: 9px 0; font-size: 14px; }
+    .pvp td:first-child { border-top: 0; font-weight: 600; color: #15173d; }
+    .pvp td[data-label]::before { content: attr(data-label); display: block; margin-bottom: 2px; font: 600 11.5px/1.3 Inter, sans-serif; letter-spacing: .04em; text-transform: uppercase; color: #8a8fa3; }
+    .pvp td:first-child::before { display: none; }
+  }
   .pvp-x { margin-top: 48px; padding-top: 18px; border-top: 1px solid #e8e5f0; font-size: 14px !important; color: #6b7088 !important; }
   `;
   const back = '<button type="button" class="pvp-back" data-close><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Back</button>';
@@ -35,14 +45,14 @@
 
     <h2>Who we are</h2>
     <p>Behavency is a product of OGI Europe Kft. OGI Europe Kft. decides how and why your personal data on this website is used, so it is the <b>data controller</b> under the EU General Data Protection Regulation (GDPR).</p>
-    <ul><li><b>Company:</b> OGI Europe Kft.</li><li><b>Address:</b> Üllői út 101/4, 1091 Budapest, Hungary</li><li><b>E-mail for privacy questions:</b> info@behavency.com</li></ul>
+    <ul><li><b>Company:</b> OGI Europe Kft.</li><li><b>Address:</b> Üllői út 101/4, 1091 Budapest, Hungary</li><li><b>E-mail for privacy questions:</b> <a href="mailto:info@behavency.com">info@behavency.com</a></li></ul>
     <p>This policy explains what we collect when you visit behavency.com or contact us, why, and what rights you have.</p>
 
     <h2>What we collect</h2>
     <div class="pvp-tw"><table>
       <tr><th>Where</th><th>What</th><th>Required?</th></tr>
-      <tr><td>Request a demo / contact form</td><td>Name, work e-mail, organisation, your role, your message</td><td>Name, e-mail, organisation and role: yes. Message: no</td></tr>
-      <tr><td>E-mail to info@behavency.com</td><td>Whatever you write to us, and your e-mail address</td><td>–</td></tr>
+      <tr><td>Request a demo / contact form</td><td>Name, work e-mail, organisation, your role, phone number, number of managers, what you are interested in, your message</td><td>Name, e-mail, organisation and role: yes. Phone, number of managers, interests and message: no</td></tr>
+      <tr><td>E-mail to <a href="mailto:info@behavency.com">info@behavency.com</a></td><td>Whatever you write to us, and your e-mail address</td><td>–</td></tr>
       <tr><td>Log in</td><td>The link takes you to our platform at app.behavency.com; the website itself collects nothing when you click it</td><td>–</td></tr>
       <tr><td>Every visit</td><td>Technical data your browser sends: IP address, browser and device type, pages visited, time of visit</td><td>Collected automatically by our hosting provider</td></tr>
     </table></div>
@@ -60,7 +70,7 @@
     <h2>Who we share it with</h2>
     <p>We share your data only with service providers that help us run the website and answer you, and only as much as they need. They work on our instructions under a data processing agreement.</p>
     <ul>
-      <li><b>E-mail:</b> messages from the contact form and e-mails to info@behavency.com arrive in our company e-mail inbox, provided by Google Workspace (Google).</li>
+      <li><b>E-mail:</b> messages from the contact form and e-mails to <a href="mailto:info@behavency.com">info@behavency.com</a> arrive in our company e-mail inbox, provided by Google Workspace (Google).</li>
       <li><b>Website hosting:</b> DigitalOcean.</li>
       <li><b>Analytics:</b> Google Analytics (Google), only after you agree in the cookie banner.</li>
     </ul>
@@ -91,7 +101,7 @@
       <li>show you the data we hold about you, and give you a copy</li><li>correct data that is wrong</li><li>delete your data</li><li>limit how we use it</li>
       <li>send it to you or another company in a usable format</li><li>stop using it, where we rely on our legitimate interest</li><li>withdraw a consent you gave, at any time</li>
     </ul>
-    <p>Write to info@behavency.com. We answer within one month.</p>
+    <p>Write to <a href="mailto:info@behavency.com">info@behavency.com</a>. We answer within one month.</p>
     <p>If you think we handle your data wrongly, you can complain to the Hungarian data protection authority, the <b>Nemzeti Adatvédelmi és Információszabadság Hatóság (NAIH)</b>, or to the authority in the EU country where you live.</p>
 
     <h2>Security, children and changes</h2>
@@ -99,7 +109,7 @@
       <li><b>Security:</b> We protect your data with technical and organisational measures, such as encrypted connections and limited access for staff who need it.</li>
       <li><b>Children:</b> The website is meant for businesses. We do not knowingly collect data from children.</li>
       <li><b>Changes:</b> We may update this policy. The date at the top shows the latest version.</li>
-      <li><b>Questions:</b> info@behavency.com, or OGI Europe Kft., Üllői út 101/4, 1091 Budapest, Hungary.</li>
+      <li><b>Questions:</b> <a href="mailto:info@behavency.com">info@behavency.com</a>, or OGI Europe Kft., Üllői út 101/4, 1091 Budapest, Hungary.</li>
     </ul>
     <p class="pvp-x">This policy covers the Behavency website. Data on the Behavency platform (app.behavency.com) is described in the platform’s own privacy notice.</p>
   </div></div>`;
@@ -116,6 +126,8 @@
     if (!document.body) return setTimeout(mount, 100);
     const st = document.createElement('style'); st.id = 'privacy-page'; st.textContent = CSS; document.head.appendChild(st);
     const t = document.createElement('div'); t.innerHTML = HTML; el = t.firstElementChild; document.body.appendChild(el);
+    // column names on each cell, used by the phone card layout
+    el.querySelectorAll('table').forEach((tb) => { const heads = [...tb.querySelectorAll('tr:first-child th')].map((h) => h.textContent.trim()); tb.querySelectorAll('tr').forEach((tr) => [...tr.children].forEach((c, i) => { if (c.tagName === 'TD' && heads[i]) c.setAttribute('data-label', heads[i]); })); });
     el.addEventListener('click', (e) => { if (e.target.closest('[data-close]')) { if (location.hash === '#privacy') history.back(); else close(); } });
     if (location.hash === '#privacy') setTimeout(open, 600);
   };

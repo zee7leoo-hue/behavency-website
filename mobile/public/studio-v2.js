@@ -8,8 +8,8 @@ function mount(){
   const list=document.querySelector('#identify .id-list'); if(!list)return false;
   const st=document.createElement('style');st.id='studio-v2';st.textContent=CSS;document.head.appendChild(st);
   const t=document.createElement('div');t.innerHTML=HTML;list.after(t.firstElementChild);
-  const cf=document.createElement('p');cf.className='id-conf';cf.textContent='Individual results are visible only to the facilitator.';list.after(cf);
-  const cs=document.createElement('style');cs.textContent='#identify .id-conf{margin:14px 30px 0;font:400 13.5px/1.5 Inter,sans-serif;color:#6b7286}';document.head.appendChild(cs);
+  const cf=document.createElement('p');cf.className='id-conf';cf.innerHTML='<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Assessment data is stored in the EU and handled under GDPR.';list.after(cf);
+  const cs=document.createElement('style');cs.textContent='#identify .id-conf{margin:14px 30px 0;font:400 13.5px/1.5 Inter,sans-serif;color:#6b7286}#identify .id-explore{margin-top:26px!important}#identify .isx-ist{margin-top:42px!important}';document.head.appendChild(cs);
   init();return true;
 }
 function init(){

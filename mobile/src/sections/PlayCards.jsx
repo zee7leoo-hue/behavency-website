@@ -64,7 +64,7 @@ export function GameCard() {
 /* ───────── card 3: the insight report ───────── */
 export function InsightCard() {
   const rows = [
-    { l: 'Focus & Prioritization', v: 78, c: 'g', Icon: Target },
+    { l: 'Focus & Prioritisation', v: 78, c: 'g', Icon: Target },
     { l: 'Trust & Inclusion', v: 64, c: 'o', Icon: Users },
     { l: 'Collaboration & Influence', v: 42, c: 'r', Icon: Net },
   ]

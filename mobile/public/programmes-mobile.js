@@ -3,7 +3,7 @@
 (function () {
   const M = (window.BHV_SITE || 'desk') === 'mob';
   const AREAS = {
-    C: ['Clarity & Alignment', '#2f6fdb'], T: ['Trust & Inclusion', '#0f9a83'], F: ['Focus & Prioritization', '#d9731a'],
+    C: ['Clarity & Alignment', '#2f6fdb'], T: ['Trust & Inclusion', '#0f9a83'], F: ['Focus & Prioritisation', '#d9731a'],
     E: ['Execution & Accountability', '#7a4bd6'], Co: ['Collaboration & Influence', '#cf3f74'], L: ['Learning & Adaptability', '#3c8f2f'],
   };
   const AUD = { l: 'Line managers', m: 'Managers of managers', lm: 'Line managers & managers of managers', lmt: 'Managers & teams', t: 'Teams' };
@@ -439,6 +439,7 @@
       groupsOf(lv).map(([k, n, items]) => `<div class="tm-cgrp"><h2 class="tm-cgh">${n}<span class="tm-count">${items.length}</span></h2><div class="tm-rows">${items.map((p) => rowC(p, short(p))).join('')}</div></div>`).join('');
     return chips(lv, false) + groupsOf(lv).map(([k, n, items]) => `<div class="tm-grp"><h2 class="tm-gh">${n}<span class="tm-count">${items.length}</span></h2><div class="tm-xlist">${items.map((p) => rowD(p)).join('')}</div></div>`).join('');
   }
+  window.bhvOpenProgrammes = () => openCatalogue('all'); // 25 Nov: the menu and footer open the full list too
   function openCatalogue(lv = 'all') {
     if (V === 'b' && lv === 'all') lv = ''; // B starts with the three levels closed
     const pg = el(`<div class="tm tm-page" role="dialog" aria-modal="true" aria-label="Programmes">${catHead()}<div class="tm-res">${catBody(lv)}${NOTE}</div><div class="tm-end"><p>Not sure which programmes fit?<span>We’ll match them to your managers’ results.</span></p><button type="button" class="tm-cta" data-cm-open>Request a demo</button></div></div>`);

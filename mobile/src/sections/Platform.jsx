@@ -31,6 +31,7 @@ export default function Platform() {
         <span className="pf-qrow" style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '9px 0', borderTop: '1px solid #e3e6ef', borderBottom: '1px solid #e3e6ef' }}><b style={{ flex: 'none', width: 26, fontSize: 12, fontWeight: 700, letterSpacing: '.14em', color: '#1fa9a6', fontFamily: 'Inter,Arial,sans-serif' }}>03</b><span style={{ fontSize: '15.5px', fontWeight: 500, color: '#0a1236', lineHeight: 1.3 }}>What did the training change?</span></span>
       </p>
       <p className="pf-sub pf-close rv" style={{ '--i': 2, marginTop: 12, fontWeight: 600, color: '#0a1236' }}>Behavency answers all three, in one connected journey.</p>
+      <p className="pf-sub rv" style={{ '--i': 2, marginTop: 6, marginBottom: 14, color: '#5a6278' }}>Every manager, every stage and every result in one dashboard: who is where in the journey, what needs your attention, and what has improved.</p>
 
       <div className="pf-card rv" style={{ '--i': 3 }}>
         <div className="pf-card-head">

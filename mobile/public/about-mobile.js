@@ -28,6 +28,18 @@
   .pab-sy h3 { margin-top: 6px !important; font: 600 16.4px/1.3 Inter, sans-serif; letter-spacing: -.012em; color: #0f1b3d; }
   .pab-sy p { margin-top: 4px !important; font: 400 14.6px/21px Inter, sans-serif; color: #4a5170; }
   .pab-team { margin-top: 40px; padding-top: 30px; border-top: 1px solid #eceaf3; }
+  /* 25 Nov: "Our vision" and "Who we are", between the story and the team */
+  .pab-who { margin-top: 40px; padding-top: 30px; border-top: 1px solid #eceaf3; }
+  .pab-who + .pab-who { margin-top: 34px; padding-top: 0; border-top: 0; }
+  .pab-in > .pab-who:first-child { margin-top: 4px; padding-top: 0; border-top: 0; }
+  .pab-sep { margin: 40px 0 32px; border-top: 1px solid #eceaf3; }
+  .pab-who h2 { margin-top: 14px !important; font: 700 26px/30px "Source Serif 4", Georgia, serif; letter-spacing: -.025em; color: #0b1138; font-variation-settings: "opsz" 30; }
+  .pab-who h2 { text-wrap: balance; }
+  .pab-who h2 em { font-style: italic; font-weight: 500; color: #1a8a7a; }
+  .pab-who p { margin-top: 14px !important; font: 400 15.6px/23.5px Inter, sans-serif; color: #1c2540; }
+  .pab-pp em { display: block; width: 28px; height: 3px; border-radius: 3px; background: #1a8a7a; margin: 10px 0 0; }
+  .pab-pp:nth-child(even) em { margin-left: auto; }
+  .pab-pp i { display: block; margin-top: 7px; font: 400 13.6px/1.4 Inter, sans-serif; font-style: normal; color: #3d4560; }
   .pab-eb { display: flex; align-items: center; gap: 12px; font: 600 11.6px/1.2 Inter, sans-serif; letter-spacing: .16em; text-transform: uppercase; color: #3a4364; }
   .pab-eb::before { content: ""; width: 24px; height: 1.5px; background: currentColor; opacity: .5; }
   .pab-team h2 { margin-top: 14px !important; font: 700 30px/33px "Source Serif 4", Georgia, serif; letter-spacing: -.03em; color: #0b1138; font-variation-settings: "opsz" 30; }
@@ -66,10 +78,15 @@
     ['1 year later', '2023', 'Work on Behavency begins', 'We bring it all into one journey: the assessments, the team game, our trainers and programmes.'],
     ['3 years later', '2026', 'Behavency launches', 'Identify, Engage, Build and Measure, in one place.'],
   ];
-  const TEAM = [['vlad', 'Vlad Plaskov', 'Co-Founder & CEO'], ['slava', 'Slava Turiashvili', 'Co-Founder & CTO'], ['vadim', 'Vadim Neander', 'Chief Methodologist'], ['eric', 'Eric Renard', 'Development Director'], ['keith', 'Keith Parker', 'Lead Facilitator'], ['ashraf', 'Ashraf Hussain', 'Experience Designer']];
+  const TEAM = [['vlad', 'Vlad Plaskov', 'Co-Founder & CEO'], ['slava', 'Slava Turiashvili', 'Co-Founder & CTO'], ['eric', 'Eric Renard', 'Development Director'], ['vadim', 'Vadim Neander', 'Chief Methodologist'], ['keith', 'Keith Parker', 'Lead Facilitator'], ['ashraf', 'Ashraf Hussain', 'Experience Designer']];
+  // 25 Nov: one line per person, under the job title
+  const LINE = {"vlad":"Leads the company and the idea behind the journey.","slava":"Built the platform that connects every step.","vadim":"Keeps the method grounded in research: the six areas, the questionnaires and how results are read.","eric":"Turns the method into programmes managers can use at work.","keith":"Brings the sessions to life, from the team game to the reflection.","ashraf":"Designs how every step looks and feels, for managers, teams and HR."};
   const HTML = `<div class="pab" role="dialog" aria-modal="true" aria-label="About Behavency">
-    <div class="pab-bar"><button type="button" class="pab-back" data-close><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Back to the journey</button></div>
+    <div class="pab-bar"><button type="button" class="pab-back" data-close><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Back to the site</button></div>
     <main class="pab-in">
+      <div class="pab-who"><div class="pab-eb pab-rise">Our vision</div><h2 class="pab-rise">Managers and teams, <em>pulling the same way</em></h2><p class="pab-rise">We’d like every manager to know how they really come across, every team to know what is expected of it, and every organisation to see what gets in the way. When those three line up, people stop working around each other and start working together. That is what we built Behavency for: helping managers and their teams find common ground, and making it last.</p></div>
+      <div class="pab-who"><div class="pab-eb pab-rise">Who we are</div><h2 class="pab-rise">Built by people who <em>do this work</em></h2><p class="pab-rise">Behavency is made by OGI Europe. Since 2007 we have trained managers and their teams in more than 30 countries, and along the way we have learned what helps people change and what doesn’t. Behavency puts that experience into one journey.</p><p class="pab-rise">It is built by methodologists, assessors, HR specialists, trainers and technology experts working side by side. The six-area model and the questionnaires come from our methodologists, the programmes and workshops from our trainers and facilitators, and the platform that connects every step from our technology team. For HR, that means one partner and one method, from the first assessment to showing what has changed.</p></div>
+      <div class="pab-sep"></div>
       <span class="pab-pill pab-rise">Our story</span>
       <h1 class="pab-ttl pab-rise">Why does training fail <em>on Monday morning?</em></h1>
       <p class="pab-lead pab-rise">For years we watched good training fade by Monday. So we built a way to make the change stick, and to show it.</p>
@@ -78,7 +95,7 @@
         <div class="pab-eb pab-rise">The team</div>
         <h2 class="pab-rise">The minds <em>behind Behavency</em></h2>
         <p class="pab-lead pab-rise">Nineteen years in training rooms, one clear method, and a platform that holds it together.</p>
-        <div class="pab-stack">${TEAM.map(([f, n, r]) => `<div class="pab-pp pab-rise"><img src="team/${f}.jpg" alt="${n}" width="132" height="132" loading="lazy"><div><b>${n}</b><span>${r}</span></div></div>`).join('')}</div>
+        <div class="pab-stack">${TEAM.map(([f, n, r]) => `<div class="pab-pp pab-rise"><img src="team/${f}.jpg" alt="${n}" width="132" height="132" loading="lazy"><div><b>${n}</b><span>${r}</span><em></em><i>${LINE[f]}</i></div></div>`).join('')}</div>
       </div>
       <div class="pab-end pab-rise"><h2>Want to see it <em>for your managers?</em></h2><button type="button" class="pab-cta" data-cm-open>Request a demo</button></div>
     </main>
@@ -109,14 +126,14 @@
       const closeMenu = () => { const bg = document.querySelector('.nav-burger[aria-expanded="true"]'); if (bg) bg.click(); };
       const goTo = (el) => { closeMenu(); if (el) setTimeout(() => scrollTo({ top: el.getBoundingClientRect().top + scrollY - 64, behavior: 'smooth' }), 120); };
       const mk = (cls, text, onClick, href) => { const a = document.createElement('a'); a.className = 'pab-item ' + cls; a.textContent = text; a.href = href || '#'; if (onClick) a.addEventListener('click', (e) => { e.preventDefault(); onClick(); }); return a; };
-      const j = mk('pab-journey', 'The journey', null);
+      const j = mk('pab-journey', 'How it works', null);
       const sub = document.createElement('div'); sub.className = 'pab-sub';
-      ['Identify', 'Engage', 'Build', 'Measure'].forEach((n, i) => { const c = ['#2f6fdb', '#7a4bd6', '#e0761c', '#14a07c'][i]; const s2 = mk('pab-stage', '', () => goTo(document.querySelectorAll('.bpc')[i])); s2.innerHTML = '<i style="color:' + c + '">0' + (i + 1) + '</i>' + n; sub.appendChild(s2); });
+      ['Identify', 'Engage', 'Build', 'Measure'].forEach((n, i) => { const c = ['#2f6fdb', '#7a4bd6', '#e0761c', '#14a07c'][i]; const s2 = mk('pab-stage', '', () => goTo(document.querySelectorAll('.bpc')[i]), '#' + n.toLowerCase()); s2.innerHTML = '<i style="color:' + c + '">0' + (i + 1) + '</i>' + n; sub.appendChild(s2); });
       j.addEventListener('click', (e) => { e.preventDefault(); j.classList.toggle('open'); });
       const items = [j, sub,
-        mk('', 'Programmes', () => goTo(document.querySelector('.tm'))),
+        mk('', 'Programmes', () => { closeMenu(); if (window.bhvOpenProgrammes) { if (window.bhvLeave) window.bhvLeave(window.bhvOpenProgrammes); else window.bhvOpenProgrammes(); } else goTo(document.querySelector('.tm')); }, '#programmes'),
         mk('', 'Recruitment', () => { closeMenu(); if (window.bhvOpenRecruit) window.bhvOpenRecruit(); }, '#recruitment'),
-        mk('', 'Packages', () => goTo(document.querySelector('#packages'))),
+        mk('', 'Packages', () => goTo(document.querySelector('#packages')), '#packages'),
         mk('pab-about', 'About', () => { closeMenu(); open(); }, '#about'),
         mk('pab-login', 'Log in', null, 'https://app.behavency.com/login')];
       items.forEach((it) => menu.insertBefore(it, cta));
