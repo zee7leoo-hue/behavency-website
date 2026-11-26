@@ -10,3 +10,10 @@
   color: #fff !important;
 }
 :root:not(#fs):not(#fs) body :is(.sx-q, .sx-q .sx-accent) { font-family: "Source Serif 4", serif !important; font-weight: 600 !important; }
+
+/* Engage ("They've seen the score. Now let them experience it."): the whole Engage block is drawn scaled down
+   (transform: scale(var(--bx-s)), 0.88 on a 1440 screen, about 0.79 on 1920), so its title looked smaller than every
+   other section title. Its size is divided by that scale, so on screen it is the same size as the others. */
+:root:not(#fs):not(#fs) body h2.bx-title.bx-title {
+  font-size: calc(clamp(38px, 3.75vw, 54px) / var(--bx-s, 1)) !important;
+}
