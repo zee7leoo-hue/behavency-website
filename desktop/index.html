@@ -27,9 +27,11 @@
     <style id="hc-nofl">/* old hero picture never shows; the four cards come from hero-cards.js */ .hc-cards .hc-cards-art, .hc-cards .hc-cards-ui, .hc-cards .hc-ct { display: none !important; }</style>
     <style id="hero-a">/* 24 Nov, option A: headline 10% smaller; paragraph and buttons move up by the space saved */ @media (min-width: 901px) { .hc-title-main { font-size: calc(3.72cqw * .9); line-height: calc(3.625cqw * .9); } .hc-title-em { font-size: calc(3.68cqw * .9); line-height: calc(3.6875cqw * .9); margin-top: calc(.3cqw * .9); } .hc-sub { top: 32.8cqw; } .hc-btn { top: 41.55cqw; } .hc-link { top: 43.025cqw; } }</style>
     <style id="nav-wide">/* 24 Nov: menu bar lines up with the page content edges; Log in + Request a demo sit at the right edge, clearly apart from the menu */ @media (min-width: 901px) { header.nav .nav__inner { max-width: none !important; padding-left: 13.05vw !important; padding-right: 12.4vw !important; } header.nav .nav__actions { margin-left: auto !important; } header.nav .sm-login { margin-right: 26px; } header.nav .nav__logo { font-size: 17px !important; gap: 8px; margin-right: 28px; } header.nav .nav__logo img { height: 25px !important; width: auto !important; } }</style>
+    <style id="hide-download">/* 24 Nov: "Download overview" hidden until the PDF is final - delete this line to bring it back */ .hc-link { display: none !important; }</style>
+    <style id="build-pills">/* 24 Nov: "Multiple languages" taken out of the Live online and In-person chips; this covers the empty last chip that is part of the picture */ .dv3-info:has(> .dv3-info-ico--live)::after, .dv3-info:has(> .dv3-info-ico--inperson)::after { content: ""; position: absolute; top: calc(var(--u) * 650); height: calc(var(--u) * 58); border-radius: calc(var(--u) * 16); } .dv3-info:has(> .dv3-info-ico--live)::after { left: calc(var(--u) * 1383); width: calc(var(--u) * 138); background: rgb(252, 247, 253); } .dv3-info:has(> .dv3-info-ico--inperson)::after { left: calc(var(--u) * 1395); width: calc(var(--u) * 134); background: rgb(253, 250, 254); }</style>
     <!-- Netlify Forms reads this hidden copy of the "contact" form at deploy time; the "Request a demo" pop-up (public/contact-modal.js) is sent as this form by src/netlifyContact.js -->
     <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
-      <input name="name" /><input name="email" /><input name="organization" /><input name="role" /><input name="managers" /><input name="interest" /><textarea name="message"></textarea><input name="bot-field" />
+      <input name="name" /><input name="email" /><input name="phone" /><input name="organization" /><input name="role" /><input name="managers" /><input name="interest" /><textarea name="message"></textarea><input name="bot-field" />
     </form>
     <div id="root"></div>
     <!-- Settings read by the add-on scripts below: desktop site, final stage style ("r5" = light tint), site menu, clean page (no mock-up bars). -->
@@ -47,5 +49,8 @@
     <script src="/privacy-page.js"></script>
     <script src="/howitruns-desktop.js"></script>
     <script src="/hero-cards.js"></script>
+    <script src="/packages-v2.js"></script>
+    <script src="/video-modal.js"></script>
+    <script src="/studio-try.js"></script>
   </body>
 </html>

@@ -73,8 +73,8 @@ export const teamFactorsList =  [
   ]
  },
  {
- id: 'capacity', title: 'Focus and Prioritization',
- wheelTitle: <>Focus &<br/>Prioritization</>,
+ id: 'capacity', title: 'Focus and Prioritisation',
+ wheelTitle: <>Focus &<br/>Prioritisation</>,
  color: '#a78bfa',
  symptoms: ["Teams become overloaded.", "Efforts are scattered across too many tasks.", "Important work loses focus."],
  competencies: [
@@ -82,7 +82,7 @@ export const teamFactorsList =  [
    'Setting priorities',
    'Effective effort distribution'
    ],
- keyCompetencies: ["Decision making", "Critical thinking", "Prioritization", "Resource management", "Problem solving", "Management judgment"],
+ keyCompetencies: ["Decision making", "Critical thinking", "Prioritisation", "Resource management", "Problem solving", "Management judgment"],
  trainings: [
  { name: "Effective Goal Setting", audience: ['line'] },
  { name: "Developing Critical Thinking Skills", audience: ['mid'] },

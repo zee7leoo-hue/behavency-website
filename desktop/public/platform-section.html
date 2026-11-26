@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=01ba8c70-bd07-48f9-8a02-870737553ee7
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Behavency Platform Split</title>
 <link rel="stylesheet" href="/fonts/gf-54528e04.css">
@@ -265,6 +268,9 @@ h1 em {
   .row > :nth-child(2), .row > :nth-child(4) { display: none; }
   .tools { display: none; }
 }
+  /* 25 Nov: one line saying it is all in one dashboard */
+  .intro .dashline { margin: 10px 0 0; max-width: 440px; font: 400 clamp(14.5px, 1.1vw, 16px)/1.55 var(--sans); color: #5a6278; }
+  @media (max-width: 960px) { .intro .dashline { margin-inline: auto; text-align: left; } }
 </style>
 </head>
 <body>
@@ -347,6 +353,7 @@ h1 em {
         <li><b>03</b><span>What did the training change?</span></li>
       </ol>
       <p class="close">Behavency answers all three, in one connected journey.</p>
+      <p class="dashline">Every manager, every stage and every result in one dashboard: who is where in the journey, what needs your attention, and what has improved.</p>
     </div>
   </div>
 </section>

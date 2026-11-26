@@ -539,7 +539,7 @@
         if ((cs.backgroundColor !== 'rgba(0, 0, 0, 0)' && cs.backgroundColor !== 'transparent') || cs.backgroundImage !== 'none') e.style.setProperty('background', 'transparent', 'important');
       });
     });
-    const hd = findHeader(); if (hd) { hd.style.setProperty('background', 'rgba(253, 252, 254, .98)', 'important'); hd.querySelectorAll('*').forEach((e) => { if (e.matches('a, button, img, svg') || e.closest('a, button, svg')) return; if (e.getBoundingClientRect().width > 300) e.style.setProperty('background', 'transparent', 'important'); }); }
+    const hd = findHeader(); if (hd) { hd.style.setProperty('background', 'rgba(246, 245, 252, .98)', 'important'); hd.style.setProperty('border-bottom', '1px solid rgba(20, 35, 75, .08)', 'important'); hd.querySelectorAll('*').forEach((e) => { if (e.matches('a, button, img, svg') || e.closest('a, button, svg')) return; if (e.getBoundingClientRect().width > 300) e.style.setProperty('background', 'transparent', 'important'); }); }
   }
   let header = null;
   function findHeader() {

@@ -576,7 +576,7 @@ export default function BehaviouralModel() {
               aria-labelledby="bv-wheel-title bv-wheel-description"
             >
               <title id="bv-wheel-title">Six dimensions of effectiveness</title>
-              <desc id="bv-wheel-description">Interactive wheel featuring Clarity and Alignment, Trust and Inclusion, Focus and Prioritization, Execution and Accountability, Collaboration and Influence, and Learning and Adaptability.</desc>
+              <desc id="bv-wheel-description">Interactive wheel featuring Clarity and Alignment, Trust and Inclusion, Focus and Prioritisation, Execution and Accountability, Collaboration and Influence, and Learning and Adaptability.</desc>
               <defs>
                 <linearGradient id="g-clarity" x1="0" y1="0" x2="0.2" y2="1">
                   <stop offset="0%" stopColor="#2cc27b" />

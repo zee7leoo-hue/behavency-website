@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Laptop, Users, MessageCircle, Layers, Globe, CalendarDays, MapPin, ChevronRight } from 'lucide-react'
+import { Laptop, Users, MessageCircle, Layers, CalendarDays, MapPin, ChevronRight } from 'lucide-react'
 import './DeliverySectionV3.css'
 import bgElearning from '../assets/delivery/elearning.webp'
 import bgLive from '../assets/delivery/live.webp'
@@ -31,9 +31,8 @@ const STAGES = {
     bg: bgLive, icon: Users, iconPos: [1102, 556, 83, 76], textX: 1206, titleY: 567, descY: [600, 626],
     tfs: 27.8, dfs: 18.5, title: 'Live online', desc: ['Interactive, expert-led sessions', 'with your team, anywhere.'],
     pills: [
-      { x: 1098, w: 132, icon: Globe, a: 'Multiple', b: 'languages', tx: 1150 },
-      { x: 1236, w: 142, icon: CalendarDays, a: 'Flexible', b: 'scheduling', tx: 1289 },
-      { x: 1384, w: 136, icon: Users, a: 'Teams', b: '12–25', tx: 1443 },
+      { x: 1098, w: 132, icon: CalendarDays, a: 'Flexible', b: 'scheduling', tx: 1151 },
+      { x: 1236, w: 142, icon: Users, a: 'Teams', b: '12–25', tx: 1289 },
     ],
     pillY: 655,
   },
@@ -42,8 +41,7 @@ const STAGES = {
     tfs: 26.9, dfs: 17, title: 'In-person', desc: ['Hands-on, expert-led sessions', 'that build stronger team dynamics.'],
     pills: [
       { x: 1076, w: 164, icon: Users, a: 'On-site', b: 'with your team', tx: 1136 },
-      { x: 1250, w: 140, icon: Globe, a: 'Multiple', b: 'languages', tx: 1309 },
-      { x: 1398, w: 132, icon: MapPin, a: 'Flexible', b: 'location', tx: 1460 },
+      { x: 1250, w: 140, icon: MapPin, a: 'Flexible', b: 'location', tx: 1309 },
     ],
     pillY: 655,
   },
@@ -83,9 +81,8 @@ const SCREEN_TEXT = {
     { t: 'Team exercise', x: 1343, y: 309.0, w: 79, r: -2.1, k: 6, s: 13.2, wt: 600, c: '#0d1740' },
     { t: 'Group reflection', x: 1341, y: 336.8, w: 89, r: -1.7, k: 6, s: 13.2, wt: 600, c: '#0d1740' },
     { t: 'Next steps', x: 1338, y: 363.7, w: 59, r: -1.1, k: 6, s: 13.2, wt: 600, c: '#0d1740' },
-    { t: 'Multiple languages', x: 1334, y: 407.9, w: 108, r: -0.3, k: 6, s: 13.2, wt: 600, c: '#0d1740' },
-    { t: 'Flexible scheduling', x: 1331, y: 437.7, w: 108, r: 0.1, k: 6, s: 13.2, wt: 600, c: '#0d1740' },
-    { t: 'Teams 12–25', x: 1329, y: 467.8, w: 75, r: 0.6, k: 6, s: 13.2, wt: 600, c: '#0d1740' },
+    { t: 'Flexible scheduling', x: 1334, y: 407.9, w: 108, r: -0.3, k: 6, s: 13.2, wt: 600, c: '#0d1740' },
+    { t: 'Teams 12–25', x: 1331, y: 437.7, w: 75, r: 0.1, k: 6, s: 13.2, wt: 600, c: '#0d1740' },
   ],
 }
 
@@ -104,7 +101,7 @@ export default function DeliverySectionV3() {
         <svg className="dv3-svg" viewBox="0 0 1600 820" preserveAspectRatio="none" aria-hidden="true">
           {Object.entries(SCREEN_TEXT).map(([id, items]) => (
             <g key={id} className={`dv3-svg-stage${active === id ? ' is-on' : ''}`}>
-              {id === 'live' && [[Globe, 1311.5, 403.5], [CalendarDays, 1308.5, 433.5], [Users, 1305, 463.5]].map(([Ic, cx, cy]) => (
+              {id === 'live' && [[CalendarDays, 1311.5, 403.5], [Users, 1308.5, 433.5]].map(([Ic, cx, cy]) => (
                 <Ic key={cy} x={cx - 9.5} y={cy - 9.5} width={19} height={19} stroke="#5a3fc8" strokeWidth={1.8} />
               ))}
               {items.map((it) => (

@@ -212,7 +212,7 @@ export function ReportCardC() {
                 </div>
                 <div className="tr-right">
                   <span className="tr-dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Download PDF</span>
-                  <div className="tr-row metric"><span>Focus &amp; Prioritization</span><i style={{ '--v': '64%', '--col': 'linear-gradient(90deg,#f4a21c,#f8c544)' }}></i><em>{vals[0]}%</em></div>
+                  <div className="tr-row metric"><span>Focus &amp; Prioritisation</span><i style={{ '--v': '64%', '--col': 'linear-gradient(90deg,#f4a21c,#f8c544)' }}></i><em>{vals[0]}%</em></div>
                   <div className="tr-row metric"><span>Trust &amp; Inclusion</span><i style={{ '--v': '78%', '--col': 'linear-gradient(90deg,#1ea14a,#38c46c)' }}></i><em>{vals[1]}%</em></div>
                   <div className="tr-row metric"><span>Collaboration &amp; Influence</span><i style={{ '--v': '41%', '--col': 'linear-gradient(90deg,#e8554f,#f2706b)' }}></i><em>{vals[2]}%</em></div>
                 </div>

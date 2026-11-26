@@ -138,12 +138,12 @@ export const factorsList = [
  ]
  },
  {
- id: 'capacity', title: 'Focus & Prioritization',
+ id: 'capacity', title: 'Focus & Prioritisation',
  
   color: '#8b5cf6',
  symptoms: ["Teams become overwhelmed.", "Efforts are spread too thin across too many tasks.", "High-impact work loses focus."],
  competencies: ["Separate the truly important from the secondary", "Make sound decisions on priorities and trade-offs", "Allocate resources effectively", "Focus attention on the highest-impact tasks", "Shield teams from unnecessary complexity and overload"],
- keyCompetencies: ["Decision Making", "Critical Thinking", "Prioritization", "Resource Management", "Problem Solving", "Managerial Judgment"],
+ keyCompetencies: ["Decision Making", "Critical Thinking", "Prioritisation", "Resource Management", "Problem Solving", "Managerial Judgment"],
  trainings: [
  { name: "Effective Goal Setting", audience: ['line']  },
  { name: "Critical Thinking", audience: ['mid']  },

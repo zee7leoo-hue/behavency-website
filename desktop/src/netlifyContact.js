@@ -24,6 +24,7 @@ window.addEventListener('submit', async (e) => {
     'form-name': 'contact',
     name: fd.get('name') || '',
     email: fd.get('email') || '',
+    phone: fd.get('phone') || '',
     organization: fd.get('org') || '',
     role: fd.get('role') || '',
     managers: fd.get('managers') || '',

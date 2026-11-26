@@ -11,6 +11,16 @@
   const choice0 = read();
   window.gtag('consent', 'default', { analytics_storage: choice0 === 'all' ? 'granted' : 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
 
+  // Google Analytics 4 (25 Nov): loaded only after "Accept all", and only on behavency.com (not on preview links).
+  const GA_ID = 'G-TR5G2JJ0YP';
+  let gaOn = false;
+  const loadGA = () => {
+    if (gaOn || !/(^|.)behavency.com$/i.test(location.hostname)) return;
+    gaOn = true;
+    const sc = document.createElement('script'); sc.async = true; sc.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID; document.head.appendChild(sc);
+    window.gtag('js', new Date()); window.gtag('config', GA_ID, { anonymize_ip: true });
+  };
+  if (choice0 === 'all') loadGA();
   const CSS = `
   .ck { position: fixed; z-index: 9995; left: 24px; bottom: 24px; width: min(460px, calc(100vw - 32px)); background: #fff; color: #15173d; border-radius: 18px; padding: 20px 22px 18px;
     box-shadow: 0 24px 60px -20px rgba(15,20,60,.4), 0 0 0 1px rgba(20,35,75,.08); font-family: Inter, Arial, sans-serif; text-align: left;
@@ -36,7 +46,7 @@
   const hide = () => { if (el) el.classList.remove('on'); };
   const decide = (v) => {
     save(v);
-    window.gtag('consent', 'update', { analytics_storage: v === 'all' ? 'granted' : 'denied' });
+    window.gtag('consent', 'update', { analytics_storage: v === 'all' ? 'granted' : 'denied' }); if (v === 'all') loadGA();
     hide();
   };
   window.bhvCookieSettings = () => show();

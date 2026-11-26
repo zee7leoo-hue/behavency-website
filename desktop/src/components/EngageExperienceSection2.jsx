@@ -524,10 +524,10 @@ export default function EngageExperienceSection2() {
         <div className="bx-grid">
           <div className="bx-left">
             <StagePill num="02" title="Engage" sub="Create shared commitment" tone="green" />
-            <h1 className="bx-title">
+            <h2 className="bx-title">
               They’ve seen<br />the score.<br />Now let them<br />
               <span className="bx-em">experience it.</span>
-            </h1>
+            </h2>
             <svg className="bx-underline" viewBox="0 0 540 40" preserveAspectRatio="none" aria-hidden="true">
               <path d="M2 36 C140 14 330 2 536 12" fill="none" stroke="url(#bx-ul)" strokeWidth="3.4" strokeLinecap="round" />
               <defs><linearGradient id="bx-ul" x1="0" x2="1"><stop offset="0" stopColor="#1fae3c" stopOpacity=".15" /><stop offset=".3" stopColor="#1fae3c" /><stop offset=".85" stopColor="#1fae3c" /><stop offset="1" stopColor="#1fae3c" stopOpacity=".25" /></linearGradient></defs>

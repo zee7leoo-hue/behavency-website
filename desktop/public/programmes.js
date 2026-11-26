@@ -4,7 +4,7 @@
 (function () {
   const M = (window.BHV_SITE || 'desk') === 'mob';
   const AREAS = {
-    C: ['Clarity & Alignment', '#2f6fdb'], T: ['Trust & Inclusion', '#0f9a83'], F: ['Focus & Prioritization', '#d9731a'],
+    C: ['Clarity & Alignment', '#2f6fdb'], T: ['Trust & Inclusion', '#0f9a83'], F: ['Focus & Prioritisation', '#d9731a'],
     E: ['Execution & Accountability', '#7a4bd6'], Co: ['Collaboration & Influence', '#cf3f74'], L: ['Learning & Adaptability', '#3c8f2f'],
   };
   const AUD = { l: 'Line managers', m: 'Managers of managers', lm: 'Line managers & managers of managers', lmt: 'Managers & teams', t: 'Teams' };
@@ -387,6 +387,7 @@
     return html || '<p class="bc-empty">No programmes for this combination yet. Try “All” or another area.</p>';
   }
 
+  window.bhvOpenProgrammes = () => openList(); // 25 Nov: the menu and footer open the full list too
   function openList() {
     let lv = 'all', area = '';
     const NOTE_HTML = '<p class="bc-note"><b>Also available:</b> one-to-one coaching for managers of managers, and team coaching with the manager.</p>';

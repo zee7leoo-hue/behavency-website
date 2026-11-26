@@ -7,6 +7,8 @@ import './ClientLogos.css'
 
 const LOGOS = [
   { file: 'nestle', name: 'Nestlé', h: 34 },
+  { file: 'bayer', name: 'Bayer', h: 34 },
+  { file: 'heineken', name: 'Heineken', h: 22 },
   { file: 'lego', name: 'LEGO', h: 34 },
   { file: 'cocacola', name: 'Coca-Cola', h: 34 },
   { file: 'ey', name: 'EY', h: 34 },

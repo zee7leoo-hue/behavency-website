@@ -117,10 +117,9 @@ export default function SituationSection({ id = 'situation', variant = 'wave' })
         <span className="sx-eyebar" aria-hidden="true" />
         <h2 className="sx-title">The risk you can <em>see</em>{' '}<br /><em>coming.</em></h2>
         <p className="sx-sub">
-          When plans keep changing, line managers and{' '}<br />
-          managers of managers carry the weight. If they lose their{' '}<br />
-          footing, teams lose direction — long before it{' '}<br />
-          shows in the numbers.
+          Most management gaps stay invisible for a long time.{' '}<br />
+          Teams work around them every day, and the organisation{' '}<br />
+          only notices when the results drop.
         </p>
         <p className="sx-note">
           You can’t control the uncertainty. You can{' '}<br />

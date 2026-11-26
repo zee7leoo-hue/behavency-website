@@ -21,7 +21,7 @@ Desktop changes are saved here, in `zee7leoo-hue/behavency-website`, folder `des
 
 `public/contact-modal.js` (the "Request a demo" pop-up) only shows "Thank you" and sends nothing. `src/netlifyContact.js`
 (imported in `src/main.jsx`) catches its submit and posts it as the Netlify "contact" form (`org` is sent as
-`organization`; `managers` and the ticked `interest` boxes too). Keep it and the hidden `<form name="contact">` in
+`organization`; `phone`, `managers` and the ticked `interest` boxes too). Keep it and the hidden `<form name="contact">` in
 `index.html`. If a design update changes the pop-up's form (class `cm-form`, field names, `.cm-body`/`.cm-send`),
 update `src/netlifyContact.js` to match. The mobile site has its own copy of the same file.
 

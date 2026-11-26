@@ -4,7 +4,7 @@ import './TwoGapsSection.css'
 /* "Two kinds of gaps" — Not every problem is the manager's. */
 
 const MANAGER_ROWS = [
-  { label: 'Focus & Prioritization', zone: 'Development zone', tone: 'dev' },
+  { label: 'Focus & Prioritisation', zone: 'Development zone', tone: 'dev' },
   { label: 'Execution & Accountability', zone: 'Medium zone', tone: 'med' },
   { label: 'Trust & Inclusion', zone: 'Medium zone', tone: 'med' },
 ]

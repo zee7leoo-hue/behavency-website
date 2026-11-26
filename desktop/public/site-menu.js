@@ -6,7 +6,11 @@
 (function () {
   const C = ['#2f6fdb', '#7a4bd6', '#e0761c', '#14a07c'];
   const css = `
-  #identify .identify__source { padding-top: 16px !important; padding-bottom: 16px !important; }
+  #identify .identify__source { padding-top: 12px !important; padding-bottom: 12px !important; }
+  /* 24 Nov: Identify a little tighter so heading + intro + five sources fit one 1440x900 screen */
+  section#identify { padding-top: 76px !important; }
+  #identify .identify__headline { margin-bottom: 22px !important; }
+  #identify .identify__intro { margin-bottom: 30px !important; }
   #identify .ist-link { margin-top: 4px; }
   section.bq, .bq-c { background: transparent !important; border-color: transparent !important; }
   .bmodel__inner { max-width: 1440px !important; padding: 72px 56px !important; justify-content: space-between !important; column-gap: 56px !important; background: transparent !important; box-shadow: none !important; }
@@ -46,6 +50,8 @@
   /* the panel starts right under the word (padding = invisible bridge), so moving the mouse down never closes it */
   .sm-panel { position: absolute; top: 100%; left: -16px; padding-top: 10px; opacity: 0; transform: translateY(-4px); pointer-events: none; transition: opacity .16s, transform .16s; }
   .sm-dd.open .sm-panel { opacity: 1; transform: none; pointer-events: auto; }
+  /* 25 Nov: keyboard (Tab) on a stage link shows the drop-down, so the focused link is visible */
+  .sm-dd:has(.sm-panel a:focus-visible) .sm-panel { opacity: 1; transform: none; pointer-events: auto; }
   .sm-box { min-width: 220px; background: #fff; border-radius: 14px; box-shadow: 0 0 0 1px rgba(20,35,75,.06), 0 20px 50px -18px rgba(30,25,80,.25); padding: 8px; }
   .sm-box a { display: flex; align-items: center; gap: 12px; padding: 11px 12px; border-radius: 9px; color: #0f1b3d; text-decoration: none; font: 500 15px/1.2 Inter, sans-serif; cursor: pointer; }
   .sm-box a:hover { background: #f5f2fc; }
@@ -79,6 +85,46 @@
   .abp .tl-step h3 { font: 600 23px/1.25 "Source Serif 4", Georgia, serif; margin: 10px 0 0; }
   .abp .tl-step p { font: 400 16px/1.65 Inter, sans-serif; color: #4f5770; margin: 12px 0 0; }
   .abp .team { background: #fbfaff; padding: 100px 0 40px; }
+  /* 25 Nov: "Our vision" and "Who we are", between the story and the team */
+  /* 25 Nov (user's "1 vision" design): vision + who we are open the page, thin line between them; the story follows */
+  .abp .who { position: relative; overflow: hidden; padding: 70px 0 0; }
+  .abp .who-grid { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding-bottom: 64px; border-bottom: 1px solid #e6e9ef; }
+  .abp .who-grid > div:first-child { padding-right: 60px; border-right: 1px solid #e6e9ef; }
+  .abp .who-grid > div:last-child { padding-left: 60px; }
+  .abp .who .eye { display: flex; align-items: center; gap: 12px; font: 600 12.5px/1 Inter, sans-serif; letter-spacing: .24em; text-transform: uppercase; color: #1a8a7a; }
+  .abp .who .eye::after { content: ""; width: 30px; height: 2px; border-radius: 2px; background: currentColor; }
+  .abp .story { position: relative; overflow: clip; } /* clip, not hidden: hidden stopped the year box from following the scroll */
+  .abp .abp-blob { position: absolute; border-radius: 50%; background: #e4f3ee; pointer-events: none; }
+  .abp .abp-blob--tr { width: 420px; height: 300px; right: -130px; top: -170px; }
+  .abp .abp-blob--bl { width: 520px; height: 300px; left: -200px; bottom: -150px; }
+  .abp .story .w { position: relative; }
+  .abp .hero { padding: 80px 0 60px; }
+  .abp .tl-year { background: #eaf5f1 !important; box-shadow: 0 0 0 1px rgba(26,138,122,.10), 0 30px 60px -40px rgba(20,90,80,.30) !important; }
+  .abp .tl-year small { color: #1a8a7a !important; }
+  .abp .tl-year span { background: #1a8a7a !important; }
+  .abp .who h2 { font: 500 34px/1.15 "Playfair Display", Georgia, serif; letter-spacing: -.01em; margin: 16px 0 0; color: #0f1b3d; }
+  .abp .who h2 { text-wrap: balance; }
+  .abp .who h2 em { font-style: italic; color: #1a8a7a; }
+  .abp .who p { font: 400 17px/1.7 Inter, sans-serif; color: #4f5770; margin: 18px 0 0; }
+  /* 25 Nov (user's "team" design): 3 x 2 grid, photo left, name / role / short green line / one line; thin lines between */
+  .abp .team { background: transparent !important; }
+  .abp .team .eye, .abp .team h2 em { color: #1a8a7a; }
+  .abp .people { grid-template-columns: repeat(3, 1fr) !important; gap: 0 !important; margin-top: 60px !important; }
+  .abp .people .pp { display: flex; align-items: flex-start; gap: 26px; text-align: left; padding: 0 30px; border-left: 1px solid #e6e9ef; }
+  .abp .people .pp:nth-child(3n+1) { border-left: 0; padding-left: 0; }
+  .abp .people .pp:nth-child(3n) { padding-right: 0; }
+  .abp .people .pp:nth-child(n+4) { margin-top: 30px; padding-top: 30px; box-shadow: 0 -1px 0 #e6e9ef; }
+  .abp .people .pp:nth-child(n+4) .ph { margin-top: 0; }
+  .abp .team .w { max-width: 1340px; }
+  .abp .people .pp { gap: 22px !important; }
+  .abp .people .pp .ph { flex: none; width: 120px; height: 120px; margin: 0; }
+  .abp .people .pp b { white-space: nowrap; }
+  .abp .people .pp-tx { min-width: 0; padding-top: 10px; }
+  .abp .people .pp b { margin-top: 0; font: 700 22px/1.2 "Playfair Display", Georgia, serif; letter-spacing: -.01em; color: #0f1b3d; }
+  .abp .people .pp span { margin-top: 6px; font: 400 15px/1.35 Inter, sans-serif; color: #2f3b63; }
+  .abp .people .pp em { display: block; width: 32px; height: 3px; border-radius: 3px; background: #1a8a7a; margin: 16px 0 0; }
+  .abp .people .pp i { margin: 16px 0 0 !important; max-width: none !important; font-size: 15px !important; line-height: 1.6 !important; color: #2f3753 !important; }
+  .abp .pp i { display: block; font: 400 13.5px/1.45 Inter, sans-serif; font-style: normal; color: #4f5770; margin: 10px auto 0; max-width: 170px; }
   .abp .abp-end { text-align: center; padding: 20px 0 110px; }
   .abp .abp-end .w { border-top: 1px solid #ebe7f4; padding-top: 70px; }
   .abp .abp-end h2 { font: 500 42px/1.12 "Playfair Display", Georgia, serif; letter-spacing: -.01em; margin: 0; color: #0f1b3d; }
@@ -192,9 +238,16 @@
     ['2023', 'Work on Behavency begins', 'We bring it all into one journey: the assessments, the team game, our trainers and programmes.', '1 year later'],
     ['2026', 'Behavency launches', 'Identify, Engage, Build and Measure, in one place.', '3 years later'],
   ];
-  const TEAM = [['vlad', 'Vlad Plaskov', 'Co-Founder & CEO'], ['slava', 'Slava Turiashvili', 'Co-Founder & CTO'], ['vadim', 'Vadim Neander', 'Chief Methodologist'], ['eric', 'Eric Renard', 'Development Director'], ['keith', 'Keith Parker', 'Lead Facilitator'], ['ashraf', 'Ashraf Hussain', 'Experience Designer']];
+  const TEAM = [['vlad', 'Vlad Plaskov', 'Co-Founder & CEO'], ['slava', 'Slava Turiashvili', 'Co-Founder & CTO'], ['eric', 'Eric Renard', 'Development Director'], ['vadim', 'Vadim Neander', 'Chief Methodologist'], ['keith', 'Keith Parker', 'Lead Facilitator'], ['ashraf', 'Ashraf Hussain', 'Experience Designer']];
+  // 25 Nov: one line per person, under the job title
+  const LINE = {"vlad":"Leads the company and the idea behind the journey.","slava":"Built the platform that connects every step.","vadim":"Keeps the method grounded in research: the six areas, the questionnaires and how results are read.","eric":"Turns the method into programmes managers can use at work.","keith":"Brings the sessions to life, from the team game to the reflection.","ashraf":"Designs how every step looks and feels, for managers, teams and HR."};
   const aboutPage = `
   <div class="abp" role="dialog" aria-label="About Behavency">
+    <div class="who"><i class="abp-blob abp-blob--tr"></i><div class="w who-grid">
+      <div><div class="eye">Our vision</div><h2>Managers and teams, <em>pulling the same way</em></h2><p>We’d like every manager to know how they really come across, every team to know what is expected of it, and every organisation to see what gets in the way. When those three line up, people stop working around each other and start working together. That is what we built Behavency for: helping managers and their teams find common ground, and making it last.</p></div>
+      <div><div class="eye">Who we are</div><h2>Built by people who <em>do this work</em></h2><p>Behavency is made by OGI Europe. Since 2007 we have trained managers and their teams in more than 30 countries, and along the way we have learned what helps people change and what doesn’t. Behavency puts that experience into one journey.</p><p>It is built by methodologists, assessors, HR specialists, trainers and technology experts working side by side. The six-area model and the questionnaires come from our methodologists, the programmes and workshops from our trainers and facilitators, and the platform that connects every step from our technology team. For HR, that means one partner and one method, from the first assessment to showing what has changed.</p></div>
+    </div></div>
+    <div class="story"><i class="abp-blob abp-blob--bl"></i>
     <div class="w hero"><span class="pill">Our story</span>
       <h1>Why does training fail<br><em>on Monday morning?</em></h1>
       <p>For years we watched good training fade by Monday. So we built a way to make the change stick, and to show it.</p></div>
@@ -202,16 +255,17 @@
       <div class="tl-year"><small>Founded</small><b>2007</b><span></span></div>
       <div class="tl-steps">${STEPS.map(([y, h, p, l], i) => `<div class="tl-step" data-y="${y}" data-l="${l || 'Founded'}"><div class="dot">${i + 1}</div>${l ? `<div class="later">${l}</div>` : ''}<div class="yr">${y}</div><h3>${h}</h3><p>${p}</p></div>`).join('')}</div>
     </div>
+    </div>
     <div class="team"><div class="w">
       <div class="eye">The team</div>
       <h2>The minds <em>behind Behavency</em></h2>
       <p class="tl2">Nineteen years in training rooms, one clear method, and a platform that holds it together.</p>
-      <div class="people">${TEAM.map(([f, n, r]) => `<div class="pp"><div class="ph"><img src="team/${f}.jpg" alt="${n}"></div><b>${n}</b><span>${r}</span></div>`).join('')}</div>
+      <div class="people">${TEAM.map(([f, n, r]) => `<div class="pp"><div class="ph"><img src="team/${f}.jpg" alt="${n}"></div><div class="pp-tx"><b>${n}</b><span>${r}</span><em></em><i>${LINE[f]}</i></div></div>`).join('')}</div>
     </div></div>
     <div class="abp-end"><div class="w">
       <h2>Want to see it <em>for your managers?</em></h2>
       <button class="abp-cta" type="button" data-cm-open>Request a demo</button>
-      <button class="back" type="button" data-close>← Back to the journey</button>
+      <button class="back" type="button" data-close>← Back to the site</button>
     </div></div>
   </div>`;
 
@@ -260,7 +314,7 @@
   function confLine() {   // 23 Nov (R8): one quiet line under the five sources
     const list = document.querySelector('#identify .identify__sources');
     if (!list || document.querySelector('.id-conf')) return;
-    const p = document.createElement('p'); p.className = 'id-conf'; p.textContent = 'Individual results are visible only to the facilitator.';
+    const p = document.createElement('p'); p.className = 'id-conf'; p.innerHTML = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Assessment data is stored in the EU and handled under GDPR.';
     list.after(p);
   }
   function no40() {   // "40+ programmes linked to..." -> "Programmes linked to..."
@@ -343,11 +397,11 @@
 
     nav = document.createElement('nav'); nav.className = 'sm-nav'; nav.setAttribute('aria-label', 'Main');
     nav.innerHTML = `
-      <div class="sm-dd"><button type="button" data-k="journey" aria-expanded="false" aria-haspopup="true">The journey ${chev}</button>
+      <div class="sm-dd"><button type="button" data-k="journey" aria-expanded="false" aria-haspopup="true">How it works ${chev}</button>
         <div class="sm-panel"><div class="sm-box">
-          ${['Identify', 'Engage', 'Build', 'Measure'].map((n, i) => `<a data-stage="${i}" style="--k:${C[i]}"><i>0${i + 1}</i>${n}</a>`).join('')}
+          ${['Identify', 'Engage', 'Build', 'Measure'].map((n, i) => `<a href="#${n.toLowerCase()}" data-stage="${i}" style="--k:${C[i]}"><i>0${i + 1}</i>${n}</a>`).join('')}
         </div></div></div>
-      <a data-k="programmes">Programmes</a><a data-k="recruitment">Recruitment</a><a data-k="packages">Packages</a><a data-k="about">About</a>`;
+      <a href="#programmes" data-k="programmes">Programmes</a><a href="#recruitment" data-k="recruitment">Recruitment</a><a href="#packages" data-k="packages">Packages</a><a href="#about" data-k="about">About</a>`;
     links.classList.add('sm-hidden');
     links.parentNode.insertBefore(nav, links.nextSibling);
     // Log in: opens the app's own login page (user name and password are asked there)
@@ -360,10 +414,13 @@
     document.addEventListener('click', (e) => { if (!dd.contains(e.target)) setOpen(false); });
     nav.addEventListener('click', (e) => {
       const b = e.target.closest('[data-k],[data-stage],[data-go]'); if (!b) return;
+      if (b.tagName === 'A') e.preventDefault(); // 25 Nov: real links (href) for keyboard and search engines; the page itself decides what happens
       if (b.dataset.k === 'journey') { setOpen(!dd.classList.contains('open')); return; }
       setOpen(false);
       if (b.dataset.k === 'about') return openAbout();
       if (b.dataset.k === 'recruitment') { closeAbout(); return window.bhvOpenRecruit && window.bhvOpenRecruit(); }
+      // 25 Nov: Programmes opens the full list of programmes (same as "See all programmes")
+      if (b.dataset.k === 'programmes' && window.bhvOpenProgrammes) return window.bhvLeave ? window.bhvLeave(window.bhvOpenProgrammes) : (closeAbout(), window.bhvCloseRecruit && window.bhvCloseRecruit(), window.bhvOpenProgrammes());
       if (b.dataset.stage) return go(stageEl(+b.dataset.stage));
       if (b.dataset.go) return go(document.querySelector(b.dataset.go));
       const map = { programmes: '.bq-c, .bq', hiring: '#hiring', packages: '#packages' };

@@ -15,7 +15,7 @@ const ROWS = [
   { label: ['Execution & Accountability'], before: 51, after: 79, d: 28, y: 380, bw: 99, aw: 153 },
   { label: ['Collaboration & Influence'], before: 58, after: 81, d: 23, y: 430, bw: 112, aw: 156 },
   { label: ['Trust & Inclusion'], before: 69, after: 85, d: 16, y: 480, bw: 133, aw: 164 },
-  { label: ['Focus & Prioritization'], before: 55, after: 67, d: 12, y: 530, bw: 106, aw: 129 },
+  { label: ['Focus & Prioritisation'], before: 55, after: 67, d: 12, y: 530, bw: 106, aw: 129 },
   { label: ['Learning & Adaptability'], before: 72, after: 76, d: 4, y: 580, bw: 139, aw: 147 },
 ]
 
