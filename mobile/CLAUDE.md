@@ -48,7 +48,7 @@ files the page itself uses. Font files are cached for a year by the `/m/fonts/fi
 ## Page addresses, titles and share preview (always keep)
 
 From the 26 Nov upload folder: `index.html` has the page title, Google description, canonical address, tab icon
-(`/logo-behavency.png`, our full logo) and the share preview (`public/social-preview.jpg`, 1200×630), plus the address
+(`/logo-behavency.png`, our full logo); the canonical address, share address and share picture use https://www.behavency.com/ (the primary domain in Netlify) and the share preview (`public/social-preview.jpg`, 1200×630), plus the address
 script (`window.BHV_TITLES`) that gives the pop-up pages real addresses: `/about`, `/recruitment`, `/privacy`,
 `/programmes`. The build writes those four pages (`about.html` etc.) from `index.html` with their own title and
 description: the texts are in `vite.config.js` (`addressPages`). A design update that brings a new `index.html` head

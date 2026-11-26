@@ -32,8 +32,8 @@ function addressPages() {
         s = swap(s, `<title>${HOME.title}</title>`, `<title>${p.title}</title>`, 1)
         s = swap(s, `content="${HOME.title}"`, `content="${p.title}"`, 1)
         s = swap(s, `content="${HOME.description}"`, `content="${p.description}"`, 2)
-        s = swap(s, 'href="https://behavency.com/"', `href="https://behavency.com/${slug}"`, 1)
-        s = swap(s, 'content="https://behavency.com/"', `content="https://behavency.com/${slug}"`, 1)
+        s = swap(s, 'href="https://www.behavency.com/"', `href="https://www.behavency.com/${slug}"`, 1)
+        s = swap(s, 'content="https://www.behavency.com/"', `content="https://www.behavency.com/${slug}"`, 1)
         // the phone site sits in its own folder: scripts linked by a bare name load from that folder at any address
         if (base !== '/') s = s.replace(/src="([\w.-]+\.js)"/g, (m, n) => (fs.existsSync(path.join(outDir, n)) ? `src="${base}${n}"` : m))
         fs.writeFileSync(path.join(outDir, `${slug}.html`), s)
